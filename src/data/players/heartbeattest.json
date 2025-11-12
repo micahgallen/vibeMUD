@@ -1,0 +1,15 @@
+{
+  "id": "heartbeattest",
+  "type": "player",
+  "name": "Heartbeattest",
+  "passwordHash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+  "hp": 100,
+  "maxHp": 100,
+  "level": 1,
+  "currentRoom": "test_room",
+  "inventory": [
+    "torch_001"
+  ],
+  "createdAt": "2025-11-12T16:00:17.098Z",
+  "modifiedAt": "2025-11-12T16:00:17.098Z"
+}

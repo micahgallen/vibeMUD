@@ -1,0 +1,14 @@
+{
+  "id": "dagger_001",
+  "type": "item",
+  "name": "Steel Dagger",
+  "definition": "steel_dagger",
+  "location": {
+    "type": "container",
+    "owner": "chest_001"
+  },
+  "durability": 80,
+  "damage": 5,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:32:41.843Z"
+}

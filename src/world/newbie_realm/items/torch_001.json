@@ -1,0 +1,17 @@
+{
+  "id": "torch_001",
+  "type": "item",
+  "name": "Burnt-Out Torch",
+  "definition": "torch",
+  "location": {
+    "type": "inventory",
+    "owner": "heartbeattest"
+  },
+  "description": "This torch has burned out completely. It might be refuelable.",
+  "isLit": false,
+  "fuelRemaining": 0,
+  "heartbeatHandler": "item_torch_heartbeat",
+  "heartbeatInterval": 10,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T16:00:22.108Z"
+}

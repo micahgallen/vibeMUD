@@ -1,0 +1,12 @@
+{
+  "name": "vibemud-prototype",
+  "version": "0.2.0",
+  "description": "vibeMUD engine prototype - The Wumpy and Grift MUD",
+  "main": "src/core/EntityManager.js",
+  "scripts": {
+    "start": "node src/core/server.js"
+  },
+  "keywords": ["mud", "entity-manager", "lpmud", "vibemud", "wumpy"],
+  "author": "",
+  "license": "MIT"
+}

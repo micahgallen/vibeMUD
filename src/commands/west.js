@@ -1,0 +1,57 @@
+/**
+ * west command
+ * Move west
+ */
+
+module.exports = {
+  id: "west",
+  name: "west",
+  aliases: ["w"],
+  category: "movement",
+  description: "Move west",
+  usage: "west",
+  help: "Move to the room to the west.",
+  requiresLogin: true,
+
+  execute: function(session, args, entityManager, colors) {
+    const direction = 'west';
+    const player = session.player;
+    const currentRoom = entityManager.get(player.currentRoom);
+
+    if (!currentRoom) {
+      session.sendLine(colors.red + 'Error: You are in an invalid location!' + colors.reset);
+      return;
+    }
+
+    if (!currentRoom.exits || !currentRoom.exits[direction]) {
+      session.sendLine('You cannot go that way.');
+      return;
+    }
+
+    const targetRoomId = currentRoom.exits[direction];
+    const targetRoom = entityManager.get(targetRoomId);
+
+    if (!targetRoom) {
+      session.sendLine(colors.red + 'Error: That exit leads nowhere!' + colors.reset);
+      return;
+    }
+
+    // Notify others in current room
+    entityManager.notifyRoom(player.currentRoom,
+      colors.cyan + `${player.name} leaves ${direction}.` + colors.reset,
+      player.id);
+
+    // Move player
+    player.currentRoom = targetRoomId;
+    entityManager.markDirty(player.id);
+
+    // Notify others in new room
+    entityManager.notifyRoom(targetRoomId,
+      colors.cyan + `${player.name} arrives.` + colors.reset,
+      player.id);
+
+    // Show new room - use look command
+    const lookCommand = require('./look.js');
+    lookCommand.execute(session, '', entityManager, colors);
+  }
+};

@@ -1,0 +1,17 @@
+{
+  "id": "test_room",
+  "type": "room",
+  "name": "Test Room",
+  "description": "A simple test room for demonstrating EntityManager",
+  "items": [
+    "apple_001"
+  ],
+  "containers": [
+    "chest_001"
+  ],
+  "exits": {
+    "north": "healing_fountain"
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:25:00.000Z"
+}

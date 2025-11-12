@@ -1,0 +1,14 @@
+{
+  "id": "rat_001",
+  "type": "npc",
+  "definition": "monster",
+  "name": "a scurrying rat",
+  "description": "A mangy rat with beady eyes. It looks like it might wander off at any moment.",
+  "currentRoom": "test_room",
+  "hp": 10,
+  "maxHp": 10,
+  "wanders": true,
+  "heartbeatInterval": 15,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

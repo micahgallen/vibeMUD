@@ -1,0 +1,14 @@
+{
+  "id": "apple_001",
+  "type": "item",
+  "name": "Red Apple",
+  "definition": "apple",
+  "location": {
+    "type": "room",
+    "room": "test_room"
+  },
+  "quantity": 5,
+  "isConsumable": true,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:49:24.347Z"
+}

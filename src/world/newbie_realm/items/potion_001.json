@@ -1,0 +1,13 @@
+{
+  "id": "potion_001",
+  "type": "item",
+  "name": "Health Potion",
+  "definition": "health_potion",
+  "location": {
+    "type": "container",
+    "owner": "chest_001"
+  },
+  "quantity": 3,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:14:35.674Z"
+}

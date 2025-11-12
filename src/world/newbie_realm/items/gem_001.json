@@ -1,0 +1,13 @@
+{
+  "id": "gem_001",
+  "type": "item",
+  "name": "Ruby Gem",
+  "definition": "ruby_gem",
+  "location": {
+    "type": "inventory",
+    "owner": "alice"
+  },
+  "value": 100,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:14:35.674Z"
+}

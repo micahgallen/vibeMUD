@@ -1,0 +1,14 @@
+{
+  "id": "alice",
+  "type": "player",
+  "name": "Alice",
+  "hp": 50,
+  "maxHp": 50,
+  "level": 5,
+  "currentRoom": "test_room",
+  "inventory": [
+    "gem_001"
+  ],
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

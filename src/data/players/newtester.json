@@ -1,0 +1,13 @@
+{
+  "id": "newtester",
+  "type": "player",
+  "name": "Newtester",
+  "passwordHash": "13d249f2cb4127b40cfa757866850278793f814ded3c587fe5889e889a7a9f6c",
+  "hp": 100,
+  "maxHp": 100,
+  "level": 1,
+  "currentRoom": "test_room",
+  "inventory": [],
+  "createdAt": "2025-11-12T15:25:46.718Z",
+  "modifiedAt": "2025-11-12T15:25:46.718Z"
+}

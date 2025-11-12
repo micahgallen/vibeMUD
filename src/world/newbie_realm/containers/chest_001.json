@@ -1,0 +1,19 @@
+{
+  "id": "chest_001",
+  "type": "container",
+  "name": "Treasure Chest",
+  "definition": "treasure_chest",
+  "location": {
+    "type": "room",
+    "room": "test_room"
+  },
+  "isOpen": true,
+  "isLocked": false,
+  "inventory": [
+    "potion_001",
+    "dagger_001"
+  ],
+  "capacity": 20,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T15:32:39.137Z"
+}
