@@ -30,12 +30,12 @@ const Command = {
           return;
         }
 
-        const convertedCapname = colors.convertTagsToAnsi(rawValue);
+        const convertedCapname = colors.parseColorTags(rawValue);
         const visibleCapnameLength = colors.visibleLength(convertedCapname);
 
         // Basic validation for capname
         if (visibleCapnameLength < 3 || visibleCapnameLength > 30) { // Adjusted visible length limit
-          session.sendLine(colors.error('Capname must be between 3 and 30 visible characters long (color tags are ignored for length).'));
+          session.sendLine(colors.error('Capname must be between 3 and 30 visible characters long (color tags like <red> are ignored for length).'));
           return;
         }
         // Further validation (e.g., disallowed characters, profanity) can be added here
