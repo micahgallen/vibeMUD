@@ -1,8 +1,8 @@
-# vibeMUD Prototype
+# vibeMUD Engine
 
 **Simple Object Architecture - The Wumpy and Grift MUD**
 
-This is the vibeMUD engine prototype demonstrating the core concept of unified entity management. This codebase is being used to develop "The Wumpy and Grift" MUD, ported from /home/micah/wumpy.
+This is the vibeMUD engine - a fully functional LPmud-inspired MUD server demonstrating the core concept of unified entity management. This codebase is being used to develop "The Wumpy and Grift" MUD, ported from /home/micah/wumpy.
 
 ## The Core Idea
 
@@ -326,19 +326,24 @@ entityManager.move('sword_001', {
 
 ---
 
-## Scaling This Up
+## Current Features
 
-To integrate into the full MUD:
+**Fully Implemented**:
 
-1. **Keep definitions separate**: `world/` stays as-is (templates)
-2. **Use EntityManager for instances**: All runtime objects tracked
-3. **Update commands**: Replace manual tracking with `entityManager.move()`
-4. **Add heartbeat**: Auto-save every second
-5. **Gradual migration**: Run alongside old system, validate they agree
+1. ✅ **Unified Entity Management**: All objects tracked by single EntityManager
+2. ✅ **Heartbeat System**: Objects can have periodic behavior (auto-save, NPC AI, etc.)
+3. ✅ **Telnet Server**: Multi-player connections with session management
+4. ✅ **Modular Commands**: 16 commands with automatic loading
+5. ✅ **Prototypal Inheritance**: Object definitions with instance overrides
+6. ✅ **Auto-Save**: Dirty tracking with periodic saves every second
+7. ✅ **Player Authentication**: Secure password hashing with SHA-256
+8. ✅ **Location System**: Rooms, inventories, and containers with unified move()
 
-**Timeline**: 4-5 weeks
-**Risk**: Low (can run in parallel)
-**Benefit**: Permanent fix to consistency bugs
+**In Development**:
+- Combat system
+- Magic/spell system
+- Guild system
+- World content (porting from /home/micah/wumpy)
 
 ---
 
