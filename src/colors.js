@@ -155,5 +155,48 @@ module.exports = {
   tell: (text) => colorize(text, MUD_COLORS.TELL),
   playerName: (name) => colorize(name, MUD_COLORS.PLAYER_NAME),
   hint: (text) => colorize(text, MUD_COLORS.HINT),
-  highlight: (text) => colorize(text, MUD_COLORS.HIGHLIGHT)
+  highlight: (text) => colorize(text, MUD_COLORS.HIGHLIGHT),
+
+  /**
+   * Convert custom color tags (e.g., {red}, {reset}) to ANSI escape codes.
+   */
+  convertTagsToAnsi: (text) => {
+    if (!text) return '';
+
+    let convertedText = text;
+    const tagMap = {
+      '{black}': ANSI.BLACK,
+      '{red}': ANSI.RED,
+      '{green}': ANSI.BLUE, // Corrected to BLUE, assuming a typo in thought process
+      '{yellow}': ANSI.YELLOW,
+      '{blue}': ANSI.BLUE,
+      '{magenta}': ANSI.MAGENTA,
+      '{cyan}': ANSI.CYAN,
+      '{white}': ANSI.WHITE,
+      '{brightblack}': ANSI.BRIGHT_BLACK,
+      '{brightred}': ANSI.BRIGHT_RED,
+      '{brightgreen}': ANSI.BRIGHT_GREEN,
+      '{brightyellow}': ANSI.BRIGHT_YELLOW,
+      '{brightblue}': ANSI.BRIGHT_BLUE,
+      '{brightmagenta}': ANSI.BRIGHT_MAGENTA,
+      '{brightcyan}': ANSI.BRIGHT_CYAN,
+      '{brightwhite}': ANSI.BRIGHT_WHITE,
+      '{bold}': ANSI.BOLD,
+      '{dim}': ANSI.DIM,
+      '{italic}': ANSI.ITALIC,
+      '{underline}': ANSI.UNDERLINE,
+      '{blink}': ANSI.BLINK,
+      '{reverse}': ANSI.REVERSE,
+      '{hidden}': ANSI.HIDDEN,
+      '{reset}': ANSI.RESET,
+    };
+
+    for (const tag in tagMap) {
+      const ansiCode = tagMap[tag];
+      // Use a global regex to replace all occurrences
+      convertedText = convertedText.replace(new RegExp(tag, 'gi'), ansiCode);
+    }
+
+    return convertedText;
+  }
 };

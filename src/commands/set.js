@@ -21,25 +21,28 @@ const Command = {
 
     const parts = args.split(' ');
     const property = parts[0] ? parts[0].toLowerCase() : '';
-    const value = parts.slice(1).join(' ').trim();
+    const rawValue = parts.slice(1).join(' ').trim();
 
     switch (property) {
       case 'capname':
-        if (!value) {
+        if (!rawValue) {
           session.sendLine(colors.highlight('Usage: set capname <new_capname>'));
           return;
         }
 
+        const convertedCapname = colors.convertTagsToAnsi(rawValue);
+        const visibleCapnameLength = colors.visibleLength(convertedCapname);
+
         // Basic validation for capname
-        if (value.length < 3 || value.length > 100) {
-          session.sendLine(colors.error('Capname must be between 3 and 100 characters long.'));
+        if (visibleCapnameLength < 3 || visibleCapnameLength > 30) { // Adjusted visible length limit
+          session.sendLine(colors.error('Capname must be between 3 and 30 visible characters long (color tags are ignored for length).'));
           return;
         }
         // Further validation (e.g., disallowed characters, profanity) can be added here
 
-        session.player.capname = value;
+        session.player.capname = convertedCapname;
         entityManager.markDirty(session.player.id);
-        session.sendLine(colors.success(`Your capname has been set to: ${value}`));
+        session.sendLine(colors.success(`Your capname has been set to: ${convertedCapname}`));
         break;
 
       default:
