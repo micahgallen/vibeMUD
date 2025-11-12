@@ -3,6 +3,8 @@
  * Move north
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
   id: "north",
   name: "north",
@@ -38,7 +40,7 @@ module.exports = {
 
     // Notify others in current room
     entityManager.notifyRoom(player.currentRoom,
-      colors.info(`${player.name} leaves ${direction}.`),
+      colors.info(`${getDisplayName(player)} leaves ${direction}.`),
       player.id);
 
     // Move player
@@ -47,7 +49,7 @@ module.exports = {
 
     // Notify others in new room
     entityManager.notifyRoom(targetRoomId,
-      colors.info(`${player.name} arrives.`),
+      colors.info(`${getDisplayName(player)} arrives.`),
       player.id);
 
     // Show new room - use look command
