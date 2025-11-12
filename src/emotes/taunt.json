@@ -2,12 +2,33 @@
   "id": "taunt",
   "name": "taunt",
   "aliases": [],
-  "description": "Hurl Monty Python insults at the world",
-  "usage": "taunt",
+  "description": "Hurl Monty Python insults",
+  "usage": "taunt [player]",
   "definition": "emote",
   "targetRequired": false,
   "rotatingMessages": 5,
   "messages": {
+    "firstPerson": [
+      "You taunt {target}: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
+      "You taunt {target}: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
+      "You shout at {target}: \"Go and boil your bottom, you son of a silly person!\"",
+      "You wave rudely at {target}: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
+      "You warn {target}: \"Go away or I shall taunt you again!\""
+    ],
+    "secondPerson": [
+      "{actor} taunts you: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
+      "{actor} taunts you: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
+      "{actor} shouts at you: \"Go and boil your bottom, you son of a silly person!\"",
+      "{actor} waves rudely at you: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
+      "{actor} warns you: \"Go away or I shall taunt you again!\""
+    ],
+    "thirdPerson": [
+      "{actor} taunts {target}: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
+      "{actor} taunts {target}: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
+      "{actor} shouts at {target}: \"Go and boil your bottom, you son of a silly person!\"",
+      "{actor} waves rudely at {target}: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
+      "{actor} warns {target}: \"Go away or I shall taunt you again!\""
+    ],
     "untargeted": [
       "I don't want to talk to you no more, you empty-headed animal food trough water!",
       "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",

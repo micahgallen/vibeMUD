@@ -3,11 +3,32 @@
   "name": "yomama",
   "aliases": ["yourmom"],
   "description": "Hurl classic yo mama jokes",
-  "usage": "yomama",
+  "usage": "yomama [player]",
   "definition": "emote",
   "targetRequired": false,
   "rotatingMessages": 5,
   "messages": {
+    "firstPerson": [
+      "You tell {target}: \"Yo mama so fat, when she sat on a rainbow, Skittles popped out!\"",
+      "You tell {target}: \"Yo mama so old, her birth certificate says 'expired'!\"",
+      "You tell {target}: \"Yo mama so poor, ducks throw bread at her!\"",
+      "You tell {target}: \"Yo mama so ugly, when she tried to join an ugly contest they said 'Sorry, no professionals'!\"",
+      "You tell {target}: \"Yo mama so fat, she has her own area code!\""
+    ],
+    "secondPerson": [
+      "{actor} tells you: \"Yo mama so fat, when she sat on a rainbow, Skittles popped out!\"",
+      "{actor} tells you: \"Yo mama so old, her birth certificate says 'expired'!\"",
+      "{actor} tells you: \"Yo mama so poor, ducks throw bread at her!\"",
+      "{actor} tells you: \"Yo mama so ugly, when she tried to join an ugly contest they said 'Sorry, no professionals'!\"",
+      "{actor} tells you: \"Yo mama so fat, she has her own area code!\""
+    ],
+    "thirdPerson": [
+      "{actor} tells {target}: \"Yo mama so fat, when she sat on a rainbow, Skittles popped out!\"",
+      "{actor} tells {target}: \"Yo mama so old, her birth certificate says 'expired'!\"",
+      "{actor} tells {target}: \"Yo mama so poor, ducks throw bread at her!\"",
+      "{actor} tells {target}: \"Yo mama so ugly, when she tried to join an ugly contest they said 'Sorry, no professionals'!\"",
+      "{actor} tells {target}: \"Yo mama so fat, she has her own area code!\""
+    ],
     "untargeted": [
       "Yo mama so fat, when she sat on a rainbow, Skittles popped out!",
       "Yo mama so old, her birth certificate says 'expired'!",
