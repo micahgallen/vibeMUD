@@ -1,0 +1,18 @@
+{
+  "id": "big_bird",
+  "type": "npc",
+  "name": "Big Bird",
+  "description": "A giant, yellow bird is standing here, looking around with a friendly, yet slightly vacant expression.",
+  "keywords": ["bird", "big bird"],
+  "currentRoom": "sesame_street_01",
+  "level": 5,
+  "hp": 100,
+  "maxHp": 100,
+  "dialogue": [
+    "Have you seen my friend, Mr. Snuffleupagus?",
+    "It's a beautiful day to be on Sesame Street!",
+    "I love to sing and dance!"
+  ],
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

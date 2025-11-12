@@ -1,0 +1,33 @@
+{
+  "id": "yellow_wumpy",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Yellow Wumpy",
+  "description": "A cheerfully yellow creature bounces here with the manic energy of someone who has consumed their body weight in sugar. Its smile is wide, unwavering, and just a touch unsettling in its permanence.",
+  "keywords": ["wumpy", "yellow", "yellow wumpy", "creature"],
+  "currentRoom": "sesame_street_03",
+  "level": 1,
+  "hp": 20,
+  "maxHp": 20,
+  "wanders": true,
+  "heartbeatInterval": 30,
+  "dialogue": [
+    "WUMP WUMP WUMP!!!",
+    "The Yellow Wumpy vibrates with barely contained enthusiasm!",
+    "Hi! HI! Are you gonna kick me? That sounds FUN!",
+    "The Yellow Wumpy does a little dance that defies several laws of physics."
+  ],
+  "emote_triggers": {
+    "kick": {
+      "effect": "despawn",
+      "message_delay": 2,
+      "messages": [
+        "The wumpy goes sailing through the air with a satisfying *thwump* sound!",
+        "The wumpy looks hurt and confused.",
+        "With a sad 'wump', it waddles away and disappears into the distance."
+      ]
+    }
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

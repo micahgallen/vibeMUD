@@ -1,0 +1,12 @@
+{
+  "id": "arena_lounge",
+  "type": "room",
+  "name": "The Pit Fighter's Lounge",
+  "description": "You've descended into what can only be described as 'aggressively atmospheric.' The walls are covered in chalk tally marks of dubious accuracy, and the floor bears scuff marks from nervous pacing. A battered equipment rack leans against one wall like it's given up on life but hasn't figured out how to quit. Through a southern archway, you can hear the distant echoes of enthusiastic violence and the occasional disappointed 'wump.' A faded sign on the wall reads: 'MANAGEMENT NOT RESPONSIBLE FOR DIGNITY LOSS, WUMPY-RELATED INJURIES, OR SUDDEN REALIZATIONS ABOUT YOUR LIFE CHOICES.'",
+  "exits": {
+    "north": "bar",
+    "south": "arena_main"
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

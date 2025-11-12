@@ -1,0 +1,33 @@
+{
+  "id": "blue_wumpy",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Blue Wumpy",
+  "description": "A melancholic blue creature sits here, contemplating the existential weight of being a kickable entity in an uncaring universe. It occasionally sighs with the resignation of someone who has read too much philosophy.",
+  "keywords": ["wumpy", "blue", "blue wumpy", "creature"],
+  "currentRoom": "sesame_street_02",
+  "level": 1,
+  "hp": 20,
+  "maxHp": 20,
+  "wanders": true,
+  "heartbeatInterval": 30,
+  "dialogue": [
+    "Wump... *sigh*",
+    "The Blue Wumpy stares into the middle distance, questioning its life choices.",
+    "Is this all there is? Just... wumping?",
+    "The Blue Wumpy seems to be writing poetry in its head. Terrible poetry."
+  ],
+  "emote_triggers": {
+    "kick": {
+      "effect": "despawn",
+      "message_delay": 2,
+      "messages": [
+        "The wumpy goes sailing through the air with a satisfying *thwump* sound!",
+        "The wumpy looks hurt and confused.",
+        "With a sad 'wump', it waddles away and disappears into the distance."
+      ]
+    }
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

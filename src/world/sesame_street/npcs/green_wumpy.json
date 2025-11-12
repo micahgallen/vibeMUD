@@ -1,0 +1,33 @@
+{
+  "id": "green_wumpy",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Green Wumpy",
+  "description": "A verdant green creature lurks here with the calculating eyes of a small, fuzzy accountant. It appears to be taking mental notes on everything you do, possibly for a report it will file with upper management.",
+  "keywords": ["wumpy", "green", "green wumpy", "creature"],
+  "currentRoom": "sesame_street_north",
+  "level": 1,
+  "hp": 20,
+  "maxHp": 20,
+  "wanders": true,
+  "heartbeatInterval": 30,
+  "dialogue": [
+    "Wump. *scribbles in imaginary notebook*",
+    "The Green Wumpy judges you silently. You feel like you've disappointed it somehow.",
+    "According to my calculations, you owe me seventeen wumps.",
+    "The Green Wumpy taps its foot impatiently, though you're not sure what it's waiting for."
+  ],
+  "emote_triggers": {
+    "kick": {
+      "effect": "despawn",
+      "message_delay": 2,
+      "messages": [
+        "The wumpy goes sailing through the air with a satisfying *thwump* sound!",
+        "The wumpy looks hurt and confused.",
+        "With a sad 'wump', it waddles away and disappears into the distance."
+      ]
+    }
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

@@ -46,7 +46,8 @@ class EntityManager {
     // Load from src/data/ (runtime save data - players only) and src/world/ (static world content)
     const locations = [
       { base: this.dataDir, types: ['players'] }, // Runtime save data (players only)
-      { base: path.join(__dirname, '../world/newbie_realm'), types: ['items', 'containers', 'rooms', 'npcs'] } // Static world content
+      { base: path.join(__dirname, '../world/newbie_realm'), types: ['items', 'containers', 'rooms', 'npcs'] }, // Newbie realm
+      { base: path.join(__dirname, '../world/sesame_street'), types: ['items', 'containers', 'rooms', 'npcs'] } // Sesame Street realm
     ];
 
     for (const location of locations) {

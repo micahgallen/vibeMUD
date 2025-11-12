@@ -4,13 +4,18 @@
   "name": "Cyberslayer",
   "hp": 100,
   "maxHp": 100,
+  "isAdmin": true,
   "level": 1,
   "currentRoom": "test_room",
   "inventory": [
+    "apple_001",
     "apple_001",
     "apple_001"
   ],
   "createdAt": "2025-11-12T15:22:13.603Z",
   "modifiedAt": "2025-11-12T15:28:17.968Z",
-  "passwordHash": "2bda9b4dfbabfdb17cd74d827768da5198ae2b8155002a494524bbeaf6f5cdba"
+  "passwordHash": "2bda9b4dfbabfdb17cd74d827768da5198ae2b8155002a494524bbeaf6f5cdba",
+  "tauntIndex": 0,
+  "yomamaIndex": 3,
+  "insultIndex": 4
 }

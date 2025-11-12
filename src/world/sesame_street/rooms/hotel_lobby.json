@@ -1,0 +1,12 @@
+{
+  "id": "hotel_lobby",
+  "type": "room",
+  "name": "The Snuggly Sleeper Hotel - Lobby",
+  "description": "The lobby achieves heights of aggressive comfort with overstuffed armchairs that seem to have opinions about your posture. A reception desk of suspicious grandeur dominates the room, staffed by a brass bell that expects you to work for your service. Faded photographs on the walls show previous guests, all smiling with the desperate intensity of people trying to convince themselves they're having a good time.",
+  "exits": {
+    "east": "sesame_street_03",
+    "west": "hotel_room_01"
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

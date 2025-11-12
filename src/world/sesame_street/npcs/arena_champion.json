@@ -1,0 +1,36 @@
+{
+  "id": "arena_champion",
+  "type": "npc",
+  "name": "Gronk the Wumpy Gladiator",
+  "description": "Before you stands a Wumpy like no other - a towering, battle-scarred specimen whose fur is matted with what you desperately hope is just dried mud. Gronk wears a grotesque suit of armor fashioned entirely from the bones of other Wumpies, held together with what appears to be sinew and deeply questionable life choices. A necklace of tiny Wumpy skulls (color-coded: red, blue, yellow, green, purple) rattles against their chest like the world's most disturbing wind chime. Their eyes hold the thousand-yard stare of someone who's not just kicked Wumpies, but has climbed to the top of the Wumpy food chain through sheer cannibalistic determination. A championship belt reading 'WUMPIE DIVISION CHAMPION - 47 CONSECUTIVE WINS (AND MEALS)' hangs around their waist. Despite the horrifying aesthetic, they seem... surprisingly articulate?",
+  "keywords": ["gronk", "champion", "warrior", "fighter", "gladiator", "undefeated", "wumpy", "cannibal"],
+  "currentRoom": "arena_main",
+  "level": 6,
+  "hp": 65,
+  "maxHp": 65,
+  "abilities": {
+    "str": 18,
+    "dex": 14,
+    "con": 16,
+    "int": 10,
+    "wis": 12,
+    "cha": 8
+  },
+  "ac": 16,
+  "equippedWeapon": {
+    "name": "+1 Battle Axe",
+    "damage": "1d8+1",
+    "damageType": "physical"
+  },
+  "dialogue": [
+    "Forty-seven wins. You know what that means? Forty-seven dinners. Though I've had to explain to my mother that 'eating your own kind' is actually a very competitive career path.",
+    "The thing about Wumpies is, we're surprisingly nutritious. High in protein, low in self-preservation instincts. It's like nature designed us to be consumed.",
+    "I used to have dreams of being a baker. Now I just have dreams about being chased by sentient pastries shaped like the Wumpies I've eaten. Therapy is expensive.",
+    "You want to test the combat system? Sure. Just... try not to stare at the bone armor. Yes, that femur is from Yellow Wumpy. No, we weren't friends. Well, not CLOSE friends.",
+    "Between you and me? The necklace is getting heavy. I've been considering switching to a nice belt, but the skulls really tie the whole 'cannibal gladiator' aesthetic together.",
+    "People ask if I feel bad about the whole 'eating my own species' thing. I tell them it's not personal, it's just business. Delicious, Wumpy-flavored business.",
+    "You look ready. Or at least, you look less appetizing than most Wumpies. That's a compliment in my culture. We're very food-motivated."
+  ],
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

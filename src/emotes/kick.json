@@ -1,0 +1,14 @@
+{
+  "id": "kick",
+  "name": "kick",
+  "aliases": [],
+  "description": "Kick something or someone",
+  "usage": "kick <target>",
+  "definition": "emote",
+  "targetRequired": true,
+  "messages": {
+    "firstPerson": "You kick {target}!",
+    "secondPerson": "{actor} kicks you!",
+    "thirdPerson": "{actor} kicks {target}!"
+  }
+}

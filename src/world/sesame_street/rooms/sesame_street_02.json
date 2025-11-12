@@ -1,0 +1,12 @@
+{
+  "id": "sesame_street_02",
+  "type": "room",
+  "name": "Sesame Street - Mid-South",
+  "description": "The street widens here into a pleasant boulevard lined with suspiciously perfect lampposts that have never seen a burned-out bulb. Colorful hopscotch squares are chalked onto the pavement with geometrical precision that suggests either obsessive dedication or the work of a very exacting child. You can hear the distant sound of a kazoo having an identity crisis.",
+  "exits": {
+    "north": "sesame_street_01",
+    "south": "sesame_street_south"
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

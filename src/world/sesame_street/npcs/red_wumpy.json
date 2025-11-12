@@ -1,0 +1,33 @@
+{
+  "id": "red_wumpy",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Red Wumpy",
+  "description": "A small, round, aggressively red creature waddles here with the confidence of someone who has never considered the consequences of their actions. Its tiny feet make satisfying 'plap plap' sounds on the pavement.",
+  "keywords": ["wumpy", "red", "red wumpy", "creature"],
+  "currentRoom": "sesame_street_south",
+  "level": 1,
+  "hp": 20,
+  "maxHp": 20,
+  "wanders": true,
+  "heartbeatInterval": 30,
+  "dialogue": [
+    "Wump wump!",
+    "The Red Wumpy eyes you suspiciously, as if you owe it money.",
+    "It waddles in a small circle, clearly having forgotten what it was doing.",
+    "*wump*"
+  ],
+  "emote_triggers": {
+    "kick": {
+      "effect": "despawn",
+      "message_delay": 2,
+      "messages": [
+        "The Red Wumpy goes sailing through the air with a satisfying *thwump* sound!",
+        "The Red Wumpy looks hurt and confused.",
+        "With a sad 'wump', it waddles away and disappears into the distance."
+      ]
+    }
+  },
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

@@ -64,6 +64,16 @@ module.exports = {
   },
 
   /**
+   * Notify target entity of emote (for NPC trigger responses)
+   */
+  _notifyTargetEntity: function(emoteName, actor, target, entityManager) {
+    // Check if target is an NPC with emote trigger handling
+    if (target.type === 'npc' && typeof target.onEmoteReceived === 'function') {
+      target.onEmoteReceived(emoteName, actor, entityManager);
+    }
+  },
+
+  /**
    * Execute the emote
    * Uses instance data from the JSON file (this.messages, this.targetRequired, etc.)
    */
@@ -128,13 +138,30 @@ module.exports = {
         s.player.id !== player.id
       );
 
-      target = playersInRoom.find(s =>
+      const playerTarget = playersInRoom.find(s =>
         s.player.name.toLowerCase().startsWith(targetName)
       );
 
-      if (!target) {
-        session.sendLine(colors.error(`You don't see '${targetName}' here.`));
-        return;
+      if (playerTarget) {
+        target = playerTarget;
+      } else {
+        // Check for NPCs in the room
+        const npcsInRoom = Array.from(entityManager.objects.values()).filter(obj =>
+          obj.type === 'npc' &&
+          obj.currentRoom === room.id
+        );
+
+        const npcTarget = npcsInRoom.find(npc =>
+          npc.name.toLowerCase().startsWith(targetName)
+        );
+
+        if (npcTarget) {
+          // Create a pseudo-session object for NPC
+          target = { player: npcTarget, isNPC: true };
+        } else {
+          session.sendLine(colors.error(`You don't see '${targetName}' here.`));
+          return;
+        }
       }
     }
 
@@ -156,8 +183,8 @@ module.exports = {
         session.sendLine('');
       }
 
-      // Message to target (second person)
-      if (secondPersonMsg) {
+      // Message to target (second person) - only if target is a player with session
+      if (secondPersonMsg && !target.isNPC && target.sendLine) {
         const targetMsg = secondPersonMsg.replace('{actor}', colors.playerName(player.name));
         target.sendLine('');
         target.sendLine(colors.emote(targetMsg));
@@ -185,6 +212,9 @@ module.exports = {
           s.sendLine('');
         });
       }
+
+      // Notify target entity if it has emote trigger handling
+      this._notifyTargetEntity(this.name, player, targetPlayer, entityManager);
 
     } else {
       // Untargeted emote
