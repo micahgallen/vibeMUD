@@ -33,6 +33,37 @@ class CommandDispatcher {
   }
 
   /**
+   * Reload all commands (clears require cache first)
+   */
+  reloadCommands() {
+    const commandsDir = path.join(__dirname, '../commands');
+    const files = fs.readdirSync(commandsDir).filter(f => f.endsWith('.js'));
+
+    // Clear require cache for all command files
+    for (const file of files) {
+      const filePath = path.join(commandsDir, file);
+      delete require.cache[require.resolve(filePath)];
+    }
+
+    // Clear existing commands (but keep emotes)
+    const emotesToKeep = new Map();
+    for (const [name, cmd] of this.commands.entries()) {
+      if (cmd.definition === 'emote') {
+        emotesToKeep.set(name, cmd);
+      }
+    }
+    this.commands.clear();
+    for (const [name, emote] of emotesToKeep.entries()) {
+      this.commands.set(name, emote);
+    }
+
+    // Reload commands
+    this.loadCommands();
+
+    return files.length;
+  }
+
+  /**
    * Load all emotes from src/emotes/
    * Emotes use prototypal inheritance from lib/emote.js
    */
@@ -85,6 +116,40 @@ class CommandDispatcher {
     }
 
     console.log(`✅ Loaded ${loadedCount} emotes\n`);
+  }
+
+  /**
+   * Reload all emotes (clears require cache first)
+   */
+  reloadEmotes() {
+    const emotesDir = path.join(__dirname, '../emotes');
+
+    if (!fs.existsSync(emotesDir)) {
+      return 0;
+    }
+
+    // Clear require cache for emote definition
+    const emotePath = path.join(__dirname, '../lib/emote.js');
+    delete require.cache[require.resolve(emotePath)];
+
+    // Clear existing emotes (but keep regular commands)
+    const commandsToKeep = new Map();
+    for (const [name, cmd] of this.commands.entries()) {
+      if (cmd.definition !== 'emote') {
+        commandsToKeep.set(name, cmd);
+      }
+    }
+    this.commands.clear();
+    for (const [name, command] of commandsToKeep.entries()) {
+      this.commands.set(name, command);
+    }
+
+    // Reload emotes
+    this.loadEmotes();
+
+    // Count loaded emotes
+    const files = fs.readdirSync(emotesDir).filter(f => f.endsWith('.json'));
+    return files.length;
   }
 
   /**
