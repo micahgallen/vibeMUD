@@ -12,6 +12,8 @@
  * - Lifecycle hooks: beforeExecute, afterExecute for custom behavior
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
   type: "emote",
   category: "social",
@@ -115,7 +117,7 @@ module.exports = {
           // Notify room (if self message has room variant)
           const selfRoomMsg = this._getMessage('selfRoom', player, entityManager);
           if (selfRoomMsg) {
-            const roomMsg = selfRoomMsg.replace('{actor}', player.name);
+            const roomMsg = selfRoomMsg.replace('{actor}', getDisplayName(player));
             entityManager.notifyRoom(room.id, colors.emote(roomMsg), player.id);
           }
         } else {
@@ -187,7 +189,7 @@ module.exports = {
 
       // Message to actor (first person)
       if (firstPersonMsg) {
-        const actorMsg = firstPersonMsg.replace('{target}', colors.playerName(targetPlayer.name));
+        const actorMsg = firstPersonMsg.replace('{target}', colors.playerName(getDisplayName(targetPlayer)));
         session.sendLine('');
         session.sendLine(colors.emote(actorMsg));
         session.sendLine('');
@@ -195,7 +197,7 @@ module.exports = {
 
       // Message to target (second person) - only if target is a player with session
       if (secondPersonMsg && !target.isNPC && target.sendLine) {
-        const targetMsg = secondPersonMsg.replace('{actor}', colors.playerName(player.name));
+        const targetMsg = secondPersonMsg.replace('{actor}', colors.playerName(getDisplayName(player)));
         target.sendLine('');
         target.sendLine(colors.emote(targetMsg));
         target.sendLine('');
@@ -204,8 +206,8 @@ module.exports = {
       // Message to room (third person)
       if (thirdPersonMsg) {
         const roomMsg = thirdPersonMsg
-          .replace('{actor}', player.name)
-          .replace('{target}', targetPlayer.name);
+          .replace('{actor}', getDisplayName(player))
+          .replace('{target}', getDisplayName(targetPlayer));
 
         // Notify everyone except actor and target
         const othersInRoom = Array.from(entityManager.sessions.values()).filter(s =>
@@ -243,7 +245,7 @@ module.exports = {
       // Message to room
       const untargetedRoomMsg = this._getMessage('untargetedRoom', player, entityManager);
       if (untargetedRoomMsg) {
-        const roomMsg = untargetedRoomMsg.replace('{actor}', player.name);
+        const roomMsg = untargetedRoomMsg.replace('{actor}', getDisplayName(player));
         entityManager.notifyRoom(room.id, colors.emote(roomMsg), player.id);
       }
     }
