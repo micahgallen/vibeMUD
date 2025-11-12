@@ -34,7 +34,7 @@ module.exports = {
     // 30% chance to speak (if dialogue exists)
     if (this.dialogue && this.dialogue.length > 0 && Math.random() < 0.3) {
       const randomLine = this.dialogue[Math.floor(Math.random() * this.dialogue.length)];
-      entityManager.notifyRoom(this.currentRoom, `\x1b[33m${randomLine}\x1b[0m`);
+      entityManager.notifyRoom(this.currentRoom, `\x1b[36m${this.name} says, "\x1b[33m${randomLine}\x1b[36m"\x1b[0m`);
       console.log(`  💬 ${this.name} says: "${randomLine}"`);
       return;
     }
