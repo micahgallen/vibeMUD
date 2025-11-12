@@ -5,7 +5,7 @@
   "hp": 100,
   "maxHp": 100,
   "level": 1,
-  "currentRoom": "test_room",
+  "currentRoom": "arena_main",
   "inventory": [
     "dagger_001",
     "gem_001"

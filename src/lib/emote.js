@@ -151,9 +151,19 @@ module.exports = {
           obj.currentRoom === room.id
         );
 
-        const npcTarget = npcsInRoom.find(npc =>
-          npc.name.toLowerCase().startsWith(targetName)
-        );
+        const npcTarget = npcsInRoom.find(npc => {
+          const nameLower = npc.name.toLowerCase();
+          // Check if name starts with target
+          if (nameLower.startsWith(targetName)) return true;
+          // Check if any keyword matches
+          if (npc.keywords && Array.isArray(npc.keywords)) {
+            return npc.keywords.some(keyword =>
+              keyword.toLowerCase() === targetName ||
+              keyword.toLowerCase().startsWith(targetName)
+            );
+          }
+          return false;
+        });
 
         if (npcTarget) {
           // Create a pseudo-session object for NPC
