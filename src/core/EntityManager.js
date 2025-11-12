@@ -47,7 +47,8 @@ class EntityManager {
     const locations = [
       { base: this.dataDir, types: ['players'] }, // Runtime save data (players only)
       { base: path.join(__dirname, '../world/newbie_realm'), types: ['items', 'containers', 'rooms', 'npcs'] }, // Newbie realm
-      { base: path.join(__dirname, '../world/sesame_street'), types: ['items', 'containers', 'rooms', 'npcs'] } // Sesame Street realm
+      { base: path.join(__dirname, '../world/sesame_street'), types: ['items', 'containers', 'rooms', 'npcs'] }, // Sesame Street realm
+      { base: path.join(__dirname, '../world/reality_street'), types: ['items', 'containers', 'rooms', 'npcs'] } // Reality Street realm
     ];
 
     for (const location of locations) {
@@ -398,7 +399,8 @@ class EntityManager {
 
     const realmPaths = [
       { base: path.join(__dirname, '../world/newbie_realm/npcs'), realm: 'newbie_realm' },
-      { base: path.join(__dirname, '../world/sesame_street/npcs'), realm: 'sesame_street' }
+      { base: path.join(__dirname, '../world/sesame_street/npcs'), realm: 'sesame_street' },
+      { base: path.join(__dirname, '../world/reality_street/npcs'), realm: 'reality_street' }
     ];
 
     for (const { base, realm } of realmPaths) {
@@ -463,7 +465,8 @@ class EntityManager {
 
     const realmPaths = [
       { base: path.join(__dirname, '../world/newbie_realm/rooms'), realm: 'newbie_realm' },
-      { base: path.join(__dirname, '../world/sesame_street/rooms'), realm: 'sesame_street' }
+      { base: path.join(__dirname, '../world/sesame_street/rooms'), realm: 'sesame_street' },
+      { base: path.join(__dirname, '../world/reality_street/rooms'), realm: 'reality_street' }
     ];
 
     for (const { base, realm } of realmPaths) {
