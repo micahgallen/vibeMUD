@@ -1,0 +1,33 @@
+{
+  "id": "insult",
+  "name": "insult",
+  "aliases": ["mock"],
+  "description": "Hurl rotating insults at someone",
+  "usage": "insult <player>",
+  "definition": "emote",
+  "targetRequired": true,
+  "rotatingMessages": 5,
+  "messages": {
+    "firstPerson": [
+      "You call {target} a scruffy-looking nerf herder!",
+      "You tell {target} they have the brain capacity of a goldfish!",
+      "You inform {target} that you've seen smarter rocks!",
+      "You declare that {target} couldn't pour water out of a boot with instructions on the heel!",
+      "You announce that {target}'s elevator doesn't go to the top floor!"
+    ],
+    "secondPerson": [
+      "{actor} calls you a scruffy-looking nerf herder!",
+      "{actor} tells you that you have the brain capacity of a goldfish!",
+      "{actor} informs you that they've seen smarter rocks!",
+      "{actor} declares that you couldn't pour water out of a boot with instructions on the heel!",
+      "{actor} announces that your elevator doesn't go to the top floor!"
+    ],
+    "thirdPerson": [
+      "{actor} calls {target} a scruffy-looking nerf herder!",
+      "{actor} tells {target} they have the brain capacity of a goldfish!",
+      "{actor} informs {target} that they've seen smarter rocks!",
+      "{actor} declares that {target} couldn't pour water out of a boot with instructions on the heel!",
+      "{actor} announces that {target}'s elevator doesn't go to the top floor!"
+    ]
+  }
+}
