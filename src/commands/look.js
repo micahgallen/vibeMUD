@@ -4,6 +4,8 @@
  * Formatting styled after "The Wumpy and Grift"
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
   id: "look",
   name: "look",
@@ -116,7 +118,7 @@ module.exports = {
     );
 
     if (playersInRoom.length > 0) {
-      const playerNames = playersInRoom.map(p => colors.playerName(p.capname || p.name));
+      const playerNames = playersInRoom.map(p => colors.playerName(getDisplayName(p)));
       output.push('\n' + colors.info('Also here: ') + playerNames.join(', '));
     }
 

@@ -4,6 +4,8 @@
  * Ported from legacy Wumpy implementation with table-based display
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
   id: "who",
   name: "who",
@@ -61,7 +63,7 @@ module.exports = {
       }
 
       // Display name with indicator if it's you
-      const displayName = (player.capname || player.name) + (player.id === session.player.id ? ' (you)' : '');
+      const displayName = getDisplayName(player) + (player.id === session.player.id ? ' (you)' : '');
       const paddedName = colors.pad(colors.playerName(displayName), 25);
 
       // Format level
