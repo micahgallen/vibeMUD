@@ -45,8 +45,18 @@ module.exports = {
     const room = entityManager.get(this.currentRoom);
     if (!room || !room.exits || Object.keys(room.exits).length === 0) return;
 
+    // Filter exits to only include rooms that allow wandering NPCs
     const exits = Object.keys(room.exits);
-    const randomExit = exits[Math.floor(Math.random() * exits.length)];
+    const validExits = exits.filter(exit => {
+      const destRoom = entityManager.get(room.exits[exit]);
+      // Allow if room doesn't exist (shouldn't happen) or doesn't have preventWandering flag
+      return destRoom && !destRoom.preventWandering;
+    });
+
+    // No valid exits to wander to
+    if (validExits.length === 0) return;
+
+    const randomExit = validExits[Math.floor(Math.random() * validExits.length)];
     const newRoomId = room.exits[randomExit];
     const newRoom = entityManager.get(newRoomId);
 
