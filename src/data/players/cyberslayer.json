@@ -6,18 +6,18 @@
   "maxHp": 100,
   "isAdmin": true,
   "level": 1,
-  "gold": 436,
-  "charisma": 10,
-  "currentRoom": "general_store",
+  "currentRoom": "sesame_street_south",
   "inventory": [
     "apple_001",
     "apple_001",
-    "apple_001_1762985383128_fh3kymvrr"
+    "apple_001",
+    "apple_001"
   ],
   "createdAt": "2025-11-12T15:22:13.603Z",
   "modifiedAt": "2025-11-12T15:28:17.968Z",
   "passwordHash": "2bda9b4dfbabfdb17cd74d827768da5198ae2b8155002a494524bbeaf6f5cdba",
-  "tauntIndex": 1,
+  "tauntIndex": 0,
   "yomamaIndex": 3,
-  "insultIndex": 4
+  "insultIndex": 4,
+  "capname": "\u001b[31mCYBER\u001b[34mslayer"
 }
