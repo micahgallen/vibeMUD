@@ -3,10 +3,9 @@
   "type": "room",
   "definition": "room",
   "name": "Southern End of Sesame Street",
-  "description": "The cheerful yellow bricks of Sesame Street begin here, though they seem to fade uncertainly toward the south where shadows gather with intent. The air smells of fresh-baked cookies and optimism, fighting a losing battle against something darker just beyond your peripheral vision. A faded welcome sign cheerfully insists this is 'The Friendliest Street in America!' - the exclamation point looks nervous.",
+  "description": "The cheerful yellow bricks of Sesame Street begin here, creating a welcoming terminus adorned with a slightly faded welcome sign that cheerfully insists this is 'The Friendliest Street in America!' The exclamation point maintains unwavering optimism despite years of weather. The air smells of fresh-baked cookies and the kind of hope that refuses to acknowledge complexity. This is where the adventure properly begins.",
   "exits": {
-    "north": "sesame_street_02",
-    "south": "test_room"
+    "north": "sesame_street_02"
   },
   "npcs": ["red_wumpy"],
   "heartbeatInterval": 60,
