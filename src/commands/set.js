@@ -31,8 +31,8 @@ const Command = {
         }
 
         // Basic validation for capname
-        if (value.length < 3 || value.length > 50) {
-          session.sendLine(colors.error('Capname must be between 3 and 50 characters long.'));
+        if (value.length < 3 || value.length > 100) {
+          session.sendLine(colors.error('Capname must be between 3 and 100 characters long.'));
           return;
         }
         // Further validation (e.g., disallowed characters, profanity) can be added here
