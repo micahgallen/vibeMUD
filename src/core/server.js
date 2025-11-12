@@ -23,6 +23,9 @@ const networkDriver = new NetworkDriver(PORT);
 const commandDispatcher = new CommandDispatcher();
 const loginHandler = new LoginHandler(entityManager, colors);
 
+// Make commandDispatcher globally accessible for hotloading
+global.commandDispatcher = commandDispatcher;
+
 /**
  * Initialize the game world
  */
