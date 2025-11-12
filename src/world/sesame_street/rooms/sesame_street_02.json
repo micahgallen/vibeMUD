@@ -3,10 +3,11 @@
   "type": "room",
   "definition": "room",
   "name": "Sesame Street - Mid-South",
-  "description": "The street widens here into a pleasant boulevard lined with suspiciously perfect lampposts that have never seen a burned-out bulb. Colorful hopscotch squares are chalked onto the pavement with geometrical precision that suggests either obsessive dedication or the work of a very exacting child. You can hear the distant sound of a kazoo having an identity crisis.",
+  "description": "The street widens here into a pleasant boulevard lined with suspiciously perfect lampposts that have never seen a burned-out bulb. Colorful hopscotch squares are chalked onto the pavement with geometrical precision that suggests either obsessive dedication or the work of a very exacting child. To the east, you can hear the gentle splashing of a fountain accompanied by enthusiastic counting. You can hear the distant sound of a kazoo having an identity crisis.",
   "exits": {
     "north": "sesame_street_01",
-    "south": "sesame_street_south"
+    "south": "sesame_street_south",
+    "east": "counts_fountain"
   },
   "npcs": ["blue_wumpy"],
   "heartbeatInterval": 60,

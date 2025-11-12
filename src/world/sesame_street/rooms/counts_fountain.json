@@ -7,7 +7,7 @@
   "items": [],
   "containers": [],
   "exits": {
-    "south": "sesame_street_north"
+    "west": "sesame_street_02"
   },
   "heartbeatInterval": 5,
   "healAmount": 5,
