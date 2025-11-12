@@ -80,7 +80,17 @@ module.exports = {
     }
 
     session.sendLine('');
-    session.sendLine(colors.bright + target.name + colors.reset);
+
+    // Display name with appropriate color based on type
+    if (target.type === 'npc') {
+      session.sendLine(colors.npcName(target.name));
+    } else if (target.type === 'item') {
+      session.sendLine(colors.objectName(target.name));
+    } else if (target.type === 'container') {
+      session.sendLine(colors.objectName(target.name));
+    } else {
+      session.sendLine(colors.highlight(target.name));
+    }
 
     if (target.description) {
       session.sendLine(target.description);
@@ -106,7 +116,7 @@ module.exports = {
 
     if (target.type === 'container') {
       const status = target.isOpen ? 'open' : 'closed';
-      session.sendLine(colors.magenta + `Status: ${status}` + colors.reset);
+      session.sendLine(colors.magenta(`Status: ${status}`));
 
       if (target.isOpen && target.inventory && target.inventory.length > 0) {
         session.sendLine('');
