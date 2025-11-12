@@ -50,6 +50,30 @@ module.exports = {
       );
     }
 
+    // Check NPCs in room
+    if (!target) {
+      target = Array.from(entityManager.objects.values()).find(obj => {
+        if (obj.type !== 'npc' || obj.currentRoom !== player.currentRoom) {
+          return false;
+        }
+
+        // Check name
+        if (obj.name.toLowerCase().includes(targetName)) {
+          return true;
+        }
+
+        // Check keywords
+        if (obj.keywords && Array.isArray(obj.keywords)) {
+          return obj.keywords.some(keyword =>
+            keyword.toLowerCase() === targetName ||
+            keyword.toLowerCase().startsWith(targetName)
+          );
+        }
+
+        return false;
+      });
+    }
+
     if (!target) {
       session.sendLine('You don\'t see that here.');
       return;
@@ -93,6 +117,19 @@ module.exports = {
             session.sendLine(`  ${item.name}`);
           }
         });
+      }
+    }
+
+    if (target.type === 'npc') {
+      if (target.level !== undefined) {
+        session.sendLine(colors.info(`Level: ${target.level}`));
+      }
+      if (target.hp !== undefined && target.maxHp !== undefined) {
+        const hpPercent = Math.round((target.hp / target.maxHp) * 100);
+        let hpColor = colors.success;
+        if (hpPercent < 30) hpColor = colors.error;
+        else if (hpPercent < 60) hpColor = colors.warning;
+        session.sendLine(hpColor(`Health: ${target.hp}/${target.maxHp}`));
       }
     }
 
