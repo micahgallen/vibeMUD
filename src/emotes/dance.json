@@ -1,0 +1,18 @@
+{
+  "id": "dance",
+  "name": "dance",
+  "aliases": ["boogie"],
+  "description": "Dance around joyfully",
+  "usage": "dance [player]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You dance with yourself! Party of one!",
+    "selfRoom": "{actor} dances alone, lost in their own world.",
+    "firstPerson": "You dance with {target}!",
+    "secondPerson": "{actor} pulls you into a dance!",
+    "thirdPerson": "{actor} dances with {target}.",
+    "untargeted": "You dance around joyfully!",
+    "untargetedRoom": "{actor} dances around joyfully!"
+  }
+}

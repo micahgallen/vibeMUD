@@ -33,6 +33,61 @@ class CommandDispatcher {
   }
 
   /**
+   * Load all emotes from src/emotes/
+   * Emotes use prototypal inheritance from lib/emote.js
+   */
+  loadEmotes() {
+    const emotesDir = path.join(__dirname, '../emotes');
+
+    // Check if emotes directory exists
+    if (!fs.existsSync(emotesDir)) {
+      console.log('No emotes directory found, skipping emote loading\n');
+      return;
+    }
+
+    const files = fs.readdirSync(emotesDir).filter(f => f.endsWith('.json'));
+
+    if (files.length === 0) {
+      console.log('No emotes found\n');
+      return;
+    }
+
+    console.log(`Loading ${files.length} emotes...`);
+    let loadedCount = 0;
+
+    for (const file of files) {
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(emotesDir, file), 'utf8'));
+
+        if (data.definition === 'emote') {
+          // Load the emote definition (behavior template)
+          const emoteDef = require('../lib/emote.js');
+
+          // Create instance with prototypal inheritance
+          const emote = Object.create(emoteDef);
+          Object.assign(emote, data);
+
+          // Register as a command
+          this.commands.set(emote.name, emote);
+
+          // Register aliases
+          if (emote.aliases && emote.aliases.length > 0) {
+            for (const alias of emote.aliases) {
+              this.commands.set(alias, emote);
+            }
+          }
+
+          loadedCount++;
+        }
+      } catch (error) {
+        console.error(`  ⚠️  Failed to load emote ${file}:`, error.message);
+      }
+    }
+
+    console.log(`✅ Loaded ${loadedCount} emotes\n`);
+  }
+
+  /**
    * Get a command by name or alias
    */
   getCommand(name) {
@@ -51,7 +106,7 @@ class CommandDispatcher {
     }
 
     const [commandName, ...argParts] = input.split(' ');
-    const args = argParts.join(' ');
+    const args = argParts.join(' '); // Keep as string for backwards compatibility
 
     const cmd = this.getCommand(commandName);
 
@@ -65,7 +120,7 @@ class CommandDispatcher {
     try {
       cmd.execute(session, args, entityManager, colors);
     } catch (error) {
-      session.sendLine(colors.red + `Error executing command: ${error.message}` + colors.reset);
+      session.sendLine(colors.error(`Error executing command: ${error.message}`));
       console.error(`Command error (${cmd.name}):`, error);
     }
 

@@ -1,0 +1,18 @@
+{
+  "id": "hug",
+  "name": "hug",
+  "aliases": ["embrace"],
+  "description": "Give someone a warm hug",
+  "usage": "hug <player>",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You wrap your arms around yourself. A little self-love never hurt anyone.",
+    "selfRoom": "{actor} hugs themselves. Aww.",
+    "firstPerson": "You give {target} a warm hug.",
+    "secondPerson": "{actor} gives you a warm hug!",
+    "thirdPerson": "{actor} gives {target} a warm hug.",
+    "untargeted": "You open your arms invitingly.",
+    "untargetedRoom": "{actor} opens their arms, looking for a hug."
+  }
+}

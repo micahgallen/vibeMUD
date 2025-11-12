@@ -30,6 +30,9 @@ async function init() {
   // Load commands
   commandDispatcher.loadCommands();
 
+  // Load emotes (social commands)
+  commandDispatcher.loadEmotes();
+
   // Load all game objects
   console.log('Loading entities...');
   entityManager.loadAll();

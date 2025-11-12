@@ -1,0 +1,18 @@
+{
+  "id": "bow",
+  "name": "bow",
+  "aliases": ["curtsy"],
+  "description": "Take a bow",
+  "usage": "bow [player]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You bow to your own reflection. Narcissistic much?",
+    "selfRoom": "{actor} bows to themselves.",
+    "firstPerson": "You bow respectfully to {target}.",
+    "secondPerson": "{actor} bows respectfully to you.",
+    "thirdPerson": "{actor} bows respectfully to {target}.",
+    "untargeted": "You take a deep bow.",
+    "untargetedRoom": "{actor} takes a deep bow."
+  }
+}

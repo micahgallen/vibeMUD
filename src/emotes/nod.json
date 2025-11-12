@@ -1,0 +1,18 @@
+{
+  "id": "nod",
+  "name": "nod",
+  "aliases": ["agree"],
+  "description": "Nod in agreement",
+  "usage": "nod [player]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You nod to yourself knowingly.",
+    "selfRoom": "{actor} nods to themselves.",
+    "firstPerson": "You nod at {target}.",
+    "secondPerson": "{actor} nods at you.",
+    "thirdPerson": "{actor} nods at {target}.",
+    "untargeted": "You nod in agreement.",
+    "untargetedRoom": "{actor} nods in agreement."
+  }
+}

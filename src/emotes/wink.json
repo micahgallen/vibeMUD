@@ -1,0 +1,18 @@
+{
+  "id": "wink",
+  "name": "wink",
+  "aliases": [],
+  "description": "Wink playfully",
+  "usage": "wink [player]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You wink at yourself. Smooth.",
+    "selfRoom": "{actor} winks at themselves.",
+    "firstPerson": "You wink playfully at {target}.",
+    "secondPerson": "{actor} winks playfully at you.",
+    "thirdPerson": "{actor} winks playfully at {target}.",
+    "untargeted": "You wink mischievously.",
+    "untargetedRoom": "{actor} winks mischievously."
+  }
+}

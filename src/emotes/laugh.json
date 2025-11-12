@@ -1,0 +1,18 @@
+{
+  "id": "laugh",
+  "name": "laugh",
+  "aliases": ["lol", "giggle", "chuckle"],
+  "description": "Laugh heartily",
+  "usage": "laugh [player]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "self": "You laugh at yourself. At least you have a sense of humor!",
+    "selfRoom": "{actor} laughs at themselves.",
+    "firstPerson": "You laugh at {target}.",
+    "secondPerson": "{actor} laughs at you.",
+    "thirdPerson": "{actor} laughs at {target}.",
+    "untargeted": "You laugh heartily.",
+    "untargetedRoom": "{actor} laughs heartily."
+  }
+}
