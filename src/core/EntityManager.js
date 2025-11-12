@@ -384,6 +384,139 @@ class EntityManager {
   }
 
   // ========================================
+  // Hot Reload Methods
+  // ========================================
+
+  /**
+   * Reload all NPCs from disk, updating existing ones or adding new ones
+   * Preserves current location and state for existing NPCs
+   */
+  reloadNPCs() {
+    console.log('🔄 Hot-reloading NPCs...');
+    let reloaded = 0;
+    let added = 0;
+
+    const realmPaths = [
+      { base: path.join(__dirname, '../world/newbie_realm/npcs'), realm: 'newbie_realm' },
+      { base: path.join(__dirname, '../world/sesame_street/npcs'), realm: 'sesame_street' }
+    ];
+
+    for (const { base, realm } of realmPaths) {
+      if (!fs.existsSync(base)) continue;
+
+      const files = fs.readdirSync(base).filter(f => f.endsWith('.json'));
+
+      for (const file of files) {
+        const filePath = path.join(base, file);
+        const data = fs.readFileSync(filePath, 'utf8');
+        const instanceData = JSON.parse(data);
+
+        const existingNpc = this.get(instanceData.id);
+
+        // Load definition if specified
+        let npc;
+        if (instanceData.definition) {
+          // Clear cached definition to force reload
+          delete require.cache[require.resolve(`../lib/${instanceData.definition}.js`)];
+          const definition = this.loadDefinition(instanceData.definition);
+          if (definition) {
+            npc = Object.create(definition);
+            Object.assign(npc, instanceData);
+          } else {
+            npc = instanceData;
+          }
+        } else {
+          npc = instanceData;
+        }
+
+        if (existingNpc) {
+          // Preserve current location and any runtime state
+          npc.currentRoom = existingNpc.currentRoom;
+          npc.hp = existingNpc.hp;
+          reloaded++;
+        } else {
+          added++;
+        }
+
+        this.objects.set(npc.id, npc);
+
+        // Re-enable heartbeat if needed
+        if (npc.heartbeatInterval && (npc.heartbeatHandler || typeof npc.heartbeat === 'function')) {
+          this.heartbeats.delete(npc.id); // Remove old heartbeat
+          this.enableHeartbeat(npc.id, npc.heartbeatInterval);
+        }
+      }
+    }
+
+    console.log(`  ✅ Reloaded ${reloaded} NPC(s), added ${added} new NPC(s)`);
+    return { reloaded, added };
+  }
+
+  /**
+   * Reload all rooms from disk, updating descriptions and properties
+   * Preserves items and NPCs in rooms
+   */
+  reloadRooms() {
+    console.log('🔄 Hot-reloading rooms...');
+    let reloaded = 0;
+    let added = 0;
+
+    const realmPaths = [
+      { base: path.join(__dirname, '../world/newbie_realm/rooms'), realm: 'newbie_realm' },
+      { base: path.join(__dirname, '../world/sesame_street/rooms'), realm: 'sesame_street' }
+    ];
+
+    for (const { base, realm } of realmPaths) {
+      if (!fs.existsSync(base)) continue;
+
+      const files = fs.readdirSync(base).filter(f => f.endsWith('.json'));
+
+      for (const file of files) {
+        const filePath = path.join(base, file);
+        const data = fs.readFileSync(filePath, 'utf8');
+        const instanceData = JSON.parse(data);
+
+        const existingRoom = this.get(instanceData.id);
+
+        // Load definition if specified
+        let room;
+        if (instanceData.definition) {
+          // Clear cached definition to force reload
+          delete require.cache[require.resolve(`../lib/${instanceData.definition}.js`)];
+          const definition = this.loadDefinition(instanceData.definition);
+          if (definition) {
+            room = Object.create(definition);
+            Object.assign(room, instanceData);
+          } else {
+            room = instanceData;
+          }
+        } else {
+          room = instanceData;
+        }
+
+        if (existingRoom) {
+          // Preserve items array (things on the floor)
+          room.items = existingRoom.items || [];
+          reloaded++;
+        } else {
+          added++;
+        }
+
+        this.objects.set(room.id, room);
+
+        // Re-enable heartbeat if needed
+        if (room.heartbeatInterval && (room.heartbeatHandler || typeof room.heartbeat === 'function')) {
+          this.heartbeats.delete(room.id); // Remove old heartbeat
+          this.enableHeartbeat(room.id, room.heartbeatInterval);
+        }
+      }
+    }
+
+    console.log(`  ✅ Reloaded ${reloaded} room(s), added ${added} new room(s)`);
+    return { reloaded, added };
+  }
+
+  // ========================================
   // Utility Methods
   // ========================================
 
