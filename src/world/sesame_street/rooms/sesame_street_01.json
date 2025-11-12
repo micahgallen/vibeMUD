@@ -1,6 +1,7 @@
 {
   "id": "sesame_street_01",
   "type": "room",
+  "definition": "room",
   "name": "Sesame Street - Central Plaza",
   "description": "You stand at the heart of Sesame Street, where the pavement radiates an almost aggressive friendliness. The sun shines with the dedication of someone being paid overtime. A general store beckons to the east with promises of commerce, while to the west, a tavern offers refuge from sobriety. The street continues both north and south, maintaining its commitment to being relentlessly pleasant.",
   "exits": {
@@ -9,6 +10,8 @@
     "east": "general_store",
     "west": "bar"
   },
+  "npcs": ["big_bird"],
+  "heartbeatInterval": 60,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }

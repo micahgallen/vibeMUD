@@ -1,11 +1,14 @@
 {
   "id": "arena_main",
   "type": "room",
+  "definition": "room",
   "name": "The Wumpie Colosseum",
   "description": "Welcome to the Thunderdome, but for significantly rounder participants. The arena floor is a circle of packed dirt that's seen more action than a soap opera writers' room. Suspicious stains pattern the ground in abstract art that would make Jackson Pollock uncomfortable. Wooden benches surround the fighting pit - currently empty, because apparently watching other people's poor decisions isn't as popular as making your own. A betting board tracks victories with the kind of detail usually reserved for tax audits. In the center of it all stands the Arena Champion, looking like someone who's gotten very good at their job and slightly concerned about what that says about them as a person.",
   "exits": {
     "north": "arena_lounge"
   },
+  "npcs": ["arena_champion"],
+  "heartbeatInterval": 60,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }

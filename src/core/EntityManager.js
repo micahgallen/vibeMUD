@@ -510,7 +510,8 @@ class EntityManager {
     let count = 0;
 
     for (const obj of this.objects.values()) {
-      if (obj.heartbeatHandler && obj.heartbeatInterval) {
+      // Support both old handler pattern and new definition-based heartbeat function
+      if (obj.heartbeatInterval && (obj.heartbeatHandler || typeof obj.heartbeat === 'function')) {
         this.enableHeartbeat(obj.id, obj.heartbeatInterval);
         count++;
       }

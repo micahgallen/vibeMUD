@@ -1,6 +1,7 @@
 {
   "id": "sesame_street_03",
   "type": "room",
+  "definition": "room",
   "name": "Sesame Street - Mid-North",
   "description": "Here the street achieves peak wholesomeness, with window boxes overflowing with flowers that bloom in defiance of season, logic, and botanical taxonomy. A fire hydrant painted to look like a smiling dalmatian sits at the curb, somehow both charming and vaguely unsettling. The pavement sparkles as if someone has been aggressively power-washing away anything that might constitute reality.",
   "exits": {
@@ -8,6 +9,8 @@
     "south": "sesame_street_01",
     "west": "hotel_lobby"
   },
+  "npcs": ["yellow_wumpy"],
+  "heartbeatInterval": 60,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }
