@@ -13,7 +13,7 @@ const Command = {
   usage: 'capname',
   requiresLogin: true,
   
-  execute: function(command, session) {
+  execute: function(session, args, entityManager, colors) {
     if (!session.player) {
       session.sendLine('You are not logged in.');
       return;
