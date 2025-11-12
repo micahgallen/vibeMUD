@@ -1,148 +1,221 @@
 # vibeMUD Engine
 
-**Simple Object Architecture - The Wumpy and Grift MUD**
+**LPmud-inspired MUD server for "The Wumpy and Grift"**
 
-This is the vibeMUD engine - a fully functional LPmud-inspired MUD server demonstrating the core concept of unified entity management. This codebase is being used to develop "The Wumpy and Grift" MUD, ported from /home/micah/wumpy.
+A fully functional text-based multiplayer game server built on the "Simple Object Architecture" principle.
 
-## The Core Idea
+## Core Philosophy
 
 ```
-Everything is an object
+Everything is an Object
 Every object has an ID
 One manager tracks them all
 One move() function handles all location changes
 ```
 
-**That's it. That's the entire architecture.**
+**Key Concepts**:
+- **Definitions** (.js files): Behavior and functions - reusable templates
+- **Instances** (.json files): Data only - specific objects in the world
+- **Prototypal inheritance**: Instances inherit from definitions
+- **Data-driven**: Configuration over code
 
 ---
 
 ## Quick Start
 
-### Option 1: Run the Demo Script
-
 ```bash
-# Navigate to prototype directory
-cd /home/micah/entity-manager-prototype
+# Install dependencies
+npm install
 
-# Run the demo
-node demo.js
-```
-
-### Option 2: Run the Server and Play
-
-```bash
-# Start the server
+# Start the MUD server
 npm start
 
-# In another terminal, connect via telnet
+# In another terminal, connect
 telnet localhost 4000
 
-# Or use any MUD client (TinTin++, MUSHclient, etc.)
+# Or use a MUD client (TinTin++, MUSHclient, etc.)
 ```
 
-**Available Commands**:
-- `look` (or `l`) - Look at your surroundings
-- `inventory` (or `i`) - Check your inventory
-- `get <item>` - Pick up an item from room or open container
-- `drop <item>` - Drop an item on the floor
-- `put <item> in <container>` - Put item in a container
-- `open <container>` - Open a container
-- `close <container>` - Close a container
-- `save` - Manually save game state
-- `help` - Show command list
-- `quit` - Exit (saves automatically)
+Create a character and explore! The server runs on port 4000.
 
 ---
 
-## What's Included
-
-### Files
+## Directory Structure
 
 ```
-entity-manager-prototype/
-├── EntityManager.js          # Core engine (~350 lines)
-├── demo.js                   # Demo script
-├── server.js                 # Telnet MUD server (~500 lines)
-├── README.md                 # This file
-└── data/objects/             # Runtime object instances
-    ├── players/
-    │   └── alice.json        # Player object
-    ├── items/
-    │   ├── sword_001.json    # Item in inventory
-    │   ├── potion_001.json   # Item in inventory
-    │   └── gem_001.json      # Item in room
-    ├── containers/
-    │   └── chest_001.json    # Container object
-    └── rooms/
-        └── test_room.json    # Room object
-```
+src/
+├── core/                   # Engine Infrastructure
+│   ├── server.js           # Main server loop
+│   ├── EntityManager.js    # Object lifecycle, heartbeats
+│   ├── Session.js          # Player connections
+│   ├── NetworkDriver.js    # Telnet protocol
+│   ├── CommandDispatcher.js # Command routing
+│   ├── LoginHandler.js     # Authentication
+│   └── colors.js           # ANSI color utilities
+│
+├── lib/                    # Object Definitions (behavior)
+│   ├── monster.js          # Base monster template
+│   ├── torch.js            # Torch with burning heartbeat
+│   ├── room.js             # Base room
+│   └── healing_room.js     # Room with healing heartbeat
+│
+├── commands/               # Command Definitions
+│   ├── look.js             # Look at surroundings
+│   ├── get.js              # Pick up items
+│   ├── drop.js             # Drop items
+│   ├── inventory.js        # Check inventory
+│   ├── north.js, south.js, east.js, west.js  # Movement
+│   ├── open.js, close.js   # Container interaction
+│   ├── put.js              # Put items in containers
+│   ├── examine.js          # Detailed examination
+│   ├── help.js             # Command list
+│   ├── who.js              # Online players
+│   ├── save.js             # Manual save
+│   └── quit.js             # Exit game
+│
+├── systems/                # Game-Wide Rules (planned)
+│   ├── combat.js           # Combat mechanics
+│   ├── magic.js            # Magic system
+│   ├── economy.js          # Currency/trading
+│   └── guilds/             # Guild systems
+│       ├── warriors/
+│       └── mages/
+│
+├── spells/                 # Universal Spells (planned)
+│   ├── fireball.js
+│   └── heal.js
+│
+├── world/                  # Game World (instances)
+│   └── newbie_realm/
+│       ├── rooms/          # Room instances
+│       ├── npcs/           # NPC instances
+│       ├── items/          # Item instances
+│       └── containers/     # Container instances
+│
+├── data/                   # Runtime Save Data
+│   └── players/            # Player save files (ONLY)
+│
+├── utils/
+│   └── password.js         # SHA-256 password hashing
+│
+├── banner.js               # Welcome screen
+└── colors.js               # Color system
 
-### Sample Objects
+docs/
+├── SYSTEM_DESIGN.md        # Detailed architecture docs
+└── design_quick.md         # Quick reference guide
 
-**Player (alice.json)**:
-- Has 2 items in inventory (sword, potion)
-- Located in test_room
-
-**Items**:
-- `sword_001` - In Alice's inventory
-- `potion_001` - In Alice's inventory
-- `gem_001` - In test_room (on floor)
-
-**Container (chest_001.json)**:
-- Empty chest
-- Located in test_room
-
-**Room (test_room.json)**:
-- Contains gem_001 (on floor)
-- Contains chest_001 (container)
-
----
-
-## What the Demo Does
-
-The `demo.js` script demonstrates:
-
-1. **Load all objects** from JSON files
-2. **Validate initial state** (check consistency)
-3. **Move sword** from Alice → chest
-4. **Move gem** from room → Alice
-5. **Move potion** from Alice → chest
-6. **Validate final state** (prove no duplication)
-7. **Save all changes** back to JSON files
-
-### Expected Output
-
-```
-═══ STEP 1: Load All Objects ═══
-✓ Loaded 1 players
-✓ Loaded 3 items
-✓ Loaded 1 containers
-✓ Loaded 1 rooms
-✅ Loaded 6 total objects
-
-═══ STEP 4: Move Sword (alice → chest) ═══
-🔄 Moving sword_001 (item)
-   From: {"type":"inventory","owner":"alice"}
-   To:   {"type":"container","owner":"chest_001"}
-   - Removed from alice's inventory
-   + Added to chest_001's inventory
-   ✓ Move complete
-
-... (more moves) ...
-
-═══ STEP 10: Validate Final Consistency ═══
-🔍 Validating consistency...
-  ✅ All validation checks passed
-
-✅ All items accounted for
-✅ No duplication detected
-✅ All references valid
+demo.js                     # Demonstration script
+package.json
 ```
 
 ---
 
-## The Key Function
+## How It Works
+
+### Definitions vs Instances
+
+**Definition** (`src/lib/monster.js`) - Behavior template:
+```javascript
+module.exports = {
+  type: "npc",
+  hp: 10,
+  maxHp: 10,
+
+  heartbeat: function(entityManager) {
+    if (!this.wanders) return;
+    // Wandering AI logic using 'this' for instance data
+  }
+};
+```
+
+**Instance** (`src/world/newbie_realm/npcs/rat_001.json`) - Data only:
+```json
+{
+  "id": "rat_001",
+  "definition": "monster",
+  "name": "a scurrying rat",
+  "currentRoom": "test_room",
+  "wanders": true,
+  "heartbeatInterval": 15
+}
+```
+
+The instance inherits the `heartbeat()` function from the monster definition via prototypal inheritance.
+
+### Loading Process
+
+```javascript
+loadObject(file) {
+  const data = JSON.parse(fs.readFileSync(file));
+
+  if (data.definition) {
+    const def = require(`./lib/${data.definition}.js`);
+    const obj = Object.create(def);      // Prototype chain
+    Object.assign(obj, data);            // Merge instance data
+    return obj;
+  }
+
+  return data;
+}
+```
+
+### Saving Process
+
+```javascript
+saveObject(obj) {
+  const dataOnly = {};
+  for (const [key, val] of Object.entries(obj)) {
+    if (typeof val !== 'function') {
+      dataOnly[key] = val;               // Skip functions
+    }
+  }
+  fs.writeFileSync(file, JSON.stringify(dataOnly, null, 2));
+}
+```
+
+**Important**: Only players are saved at runtime. World content (rooms, NPCs, items) is loaded from `src/world/` as static content.
+
+---
+
+## Core Systems
+
+### EntityManager
+
+The heart of the engine:
+
+```javascript
+class EntityManager {
+  objects = new Map();           // All game objects
+  dirtyObjects = new Set();      // Need saving
+  heartbeats = new Map();        // Active heartbeats
+  sessions = new Map();          // Player connections
+
+  // Object lifecycle
+  loadAll()                      // Load all objects from disk
+  get(id)                        // Retrieve any object by ID
+  register(obj)                  // Add new object
+  move(objectId, newLocation)    // Universal move function
+
+  // Heartbeats
+  tick()                         // Execute heartbeats
+  enableHeartbeat(id, interval)  // Register heartbeat
+  initializeHeartbeats()         // Start all heartbeats
+
+  // Notifications
+  notifyPlayer(playerId, msg)    // Send message to player
+  notifyRoom(roomId, msg, exclude) // Notify room occupants
+
+  // Persistence
+  markDirty(id)                  // Mark for saving
+  saveDirty()                    // Save modified objects
+  validate()                     // Check consistency
+}
+```
+
+### The move() Function
+
+**The key to preventing item duplication bugs:**
 
 ```javascript
 // Move anything anywhere with ONE function
@@ -165,181 +238,224 @@ entityManager.move('potion_001', {
 });
 ```
 
-**EntityManager automatically**:
-- ✓ Removes item from old location
-- ✓ Updates item.location metadata
-- ✓ Adds item to new location
-- ✓ Updates all parent arrays (inventories)
-- ✓ Marks all affected objects dirty
-- ✓ Validates consistency
+**Automatically handles**:
+1. Remove from old location
+2. Update location field
+3. Add to new location
+4. Update parent inventories
+5. Mark affected objects dirty
 
 **No duplication possible.**
 
----
+### Object Location System
 
-## How It Works
+All objects use a unified location descriptor:
 
-### Object Structure
+```javascript
+// In player/NPC inventory
+{ "type": "inventory", "owner": "player_id" }
 
-Every object is just a JSON file with:
-- `id` - Unique identifier
-- `type` - What kind of object (player, item, container, room)
-- `location` - Where it currently is
-- Other properties specific to its type
+// In a container
+{ "type": "container", "owner": "chest_001" }
 
-Example item:
-```json
-{
-  "id": "sword_001",
-  "type": "item",
-  "name": "Iron Sword",
-  "location": {
-    "type": "inventory",
-    "owner": "alice"
-  },
-  "durability": 100
+// On the floor in a room
+{ "type": "room", "room": "tavern" }
+```
+
+### Heartbeat System
+
+Time-based events execute per-object at configurable intervals:
+
+```javascript
+// Main loop (1 second ticks)
+setInterval(() => {
+  entityManager.tick();        // Execute heartbeats
+  entityManager.saveDirty();   // Auto-save every second
+}, 1000);
+
+// Per-object intervals
+tick() {
+  for (const [id, hb] of this.heartbeats) {
+    if (now - hb.lastTick >= hb.interval * 1000) {
+      const obj = this.get(id);
+
+      // Call object's heartbeat function
+      if (obj.heartbeat && typeof obj.heartbeat === 'function') {
+        obj.heartbeat(this);
+      }
+
+      hb.lastTick = now;
+    }
+  }
 }
 ```
 
-### The EntityManager
+**Example**: Torch burns down over time (see `src/lib/torch.js`)
+
+### Command System
+
+Commands are modular JavaScript files:
 
 ```javascript
-class EntityManager {
-  objects = new Map();     // All objects in memory
-  dirtyObjects = new Set(); // Objects that need saving
+// src/commands/look.js
+module.exports = {
+  id: "look",
+  name: "look",
+  aliases: ["l"],
+  category: "basic",
+  description: "Look at your surroundings",
+  usage: "look",
+  requiresLogin: true,
 
-  loadAll()                 // Load from disk
-  get(id)                   // Get any object
-  move(id, location)        // THE KEY FUNCTION
-  validate()                // Check consistency
-  saveDirty()              // Save changes
-}
+  execute: function(session, args, entityManager, colors) {
+    const player = session.player;
+    const room = entityManager.get(player.currentRoom);
+
+    session.sendLine(colors.roomName(room.name));
+    session.sendLine(room.description);
+
+    // ... show exits, items, NPCs, other players
+  }
+};
 ```
 
-### Why This Works
-
-**Single Source of Truth**:
-- Object's `location` field is always correct
-- Parent's inventory arrays always match
-- Impossible to have inconsistency
-
-**Automatic Updates**:
-- Move one thing → everything else updates
-- No manual tracking
-- No bugs possible
+Commands are automatically loaded at server startup.
 
 ---
 
-## Testing Consistency
+## Development Workflow
 
-The demo validates that:
+### Adding a New Item
 
-1. **No Duplicates**: Each item appears in exactly ONE location
-2. **Valid References**: Every inventory entry points to a real object
-3. **Matching State**: Item location matches parent's inventory
-
-**Before refactor (current MUD)**:
-- Item duplication bugs ❌
-- Location metadata out of sync ❌
-- Manual tracking required ❌
-
-**After refactor (this prototype)**:
-- No duplication possible ✅
-- Location always correct ✅
-- Automatic tracking ✅
-
----
-
-## Modifying the Demo
-
-Want to test more scenarios?
-
-### Add a New Move
-
-```javascript
-// In demo.js, add:
-em.move('sword_001', {
-  type: 'room',
-  room: 'test_room'
-});
-// Drops sword on floor
-```
-
-### Add a New Object
-
-```javascript
-// Create data/objects/items/shield_001.json
+```bash
+# Create JSON file in src/world/[realm]/items/
+# Example: src/world/newbie_realm/items/shield_001.json
 {
   "id": "shield_001",
   "type": "item",
-  "name": "Iron Shield",
-  "location": {
-    "type": "inventory",
-    "owner": "alice"
+  "name": "Wooden Shield",
+  "location": { "type": "room", "room": "test_room" },
+  "defense": 2
+}
+```
+
+### Adding a New Monster
+
+```bash
+# Create JSON file in src/world/[realm]/npcs/
+{
+  "id": "goblin_001",
+  "definition": "monster",
+  "name": "a goblin warrior",
+  "currentRoom": "dark_cave",
+  "hp": 25,
+  "maxHp": 25,
+  "wanders": true,
+  "heartbeatInterval": 20
+}
+```
+
+The monster inherits behavior from `src/lib/monster.js`.
+
+### Adding a New Command
+
+```bash
+# Create src/commands/mycommand.js
+module.exports = {
+  id: "mycommand",
+  name: "mycommand",
+  aliases: ["mc"],
+  category: "basic",
+  description: "Does something cool",
+  requiresLogin: true,
+
+  execute: function(session, args, entityManager, colors) {
+    // Implementation
+    // Use entityManager.move() for location changes
+    // Use colors.* for colored output
+  }
+};
+```
+
+Server auto-loads on startup.
+
+### Adding a New Room
+
+```bash
+# Create JSON file in src/world/[realm]/rooms/
+{
+  "id": "dark_cave",
+  "type": "room",
+  "name": "A Dark Cave",
+  "description": "Damp walls glisten in the dim light. Water drips from stalactites above.",
+  "exits": {
+    "north": "forest_path",
+    "east": "underground_lake"
   }
 }
-
-// Then: node demo.js
-// It will automatically load and track it
 ```
 
-### Test Edge Cases
+### Adding Dynamic Behavior
 
-```javascript
-// Try moving to invalid location
-em.move('sword_001', {
-  type: 'inventory',
-  owner: 'nonexistent_player'
-});
-// Will create reference to nonexistent player
-// Validation will catch it!
-```
+```bash
+# Create definition in src/lib/myobject.js
+module.exports = {
+  type: "item",
 
----
+  heartbeat: function(entityManager) {
+    // This function is inherited by all instances
+    // Called periodically based on heartbeatInterval
+    console.log(`${this.name} heartbeat triggered`);
+  }
+};
 
-## Comparison to Current System
-
-### Current MUD (Complex)
-
-```javascript
-// Put sword in chest requires:
-1. InventoryManager.removeItem(player, sword)
-2. ContainerManager.addItem(chest, sword)
-3. Update sword.location manually (OFTEN FORGOTTEN!)
-4. PlayerDB.savePlayer(player)
-5. ContainerManager.saveState()
-
-// Result: 5 steps, easy to forget step 3, causes duplication bug
-```
-
-### EntityManager (Simple)
-
-```javascript
-// Put sword in chest requires:
-entityManager.move('sword_001', {
-  type: 'container',
-  owner: 'chest_001'
-});
-
-// Result: 1 step, everything automatic, no bugs possible
+# Set heartbeatInterval in instance JSON
+{
+  "id": "magic_item_001",
+  "definition": "myobject",
+  "name": "Glowing Crystal",
+  "heartbeatInterval": 30,
+  "location": { "type": "room", "room": "wizard_tower" }
+}
 ```
 
 ---
 
-## Current Features
+## Architecture Hierarchy
 
-**Fully Implemented**:
+```
+CORE (infrastructure)
+  ↓
+SYSTEMS (game rules)
+  ↓
+LIB (object behaviors)
+  ↓
+WORLD (instances)
+```
 
-1. ✅ **Unified Entity Management**: All objects tracked by single EntityManager
-2. ✅ **Heartbeat System**: Objects can have periodic behavior (auto-save, NPC AI, etc.)
-3. ✅ **Telnet Server**: Multi-player connections with session management
-4. ✅ **Modular Commands**: 16 commands with automatic loading
-5. ✅ **Prototypal Inheritance**: Object definitions with instance overrides
-6. ✅ **Auto-Save**: Dirty tracking with periodic saves every second
-7. ✅ **Player Authentication**: Secure password hashing with SHA-256
-8. ✅ **Location System**: Rooms, inventories, and containers with unified move()
+**Example**:
+- **Core**: EntityManager, Session, NetworkDriver
+- **Systems**: `systems/economy.js` - "Gold = 10 silver, 5% tax"
+- **Lib**: `lib/shop.js` - "I can buy/sell using economy system"
+- **World**: `world/tavern/shops/bobs_shop.json` - "I'm Bob's shop, swords cost 100gp"
 
-**In Development**:
+---
+
+## Current Status
+
+**✅ Fully Implemented**:
+- Unified entity management
+- Heartbeat system with per-object intervals
+- Telnet multiplayer server
+- 16 modular commands
+- Prototypal inheritance (definitions + instances)
+- Auto-save with dirty tracking
+- Player authentication (SHA-256 password hashing)
+- Location system (rooms, inventories, containers)
+- Session management
+- ANSI color system
+
+**🚧 In Development**:
 - Combat system
 - Magic/spell system
 - Guild system
@@ -347,69 +463,121 @@ entityManager.move('sword_001', {
 
 ---
 
-## Try It Out
+## Key Features
+
+- **Single source of truth**: One `move()` for all location changes
+- **Dirty tracking**: Only save what changed
+- **Heartbeats**: Time-based events per object
+- **Sessions**: Real-time player notifications
+- **Validation**: Check world consistency
+- **Auto-save**: Every second via heartbeat
+- **Modular**: Systems are independent
+- **AI-friendly**: Easy JSON instance creation
+- **No duplication bugs**: Impossible by design
+
+---
+
+## Testing
 
 ```bash
-# Run the demo
+# Run the demo script
 node demo.js
 
-# Check the results
-cat data/objects/players/alice.json
-cat data/objects/containers/chest_001.json
-cat data/objects/items/sword_001.json
+# Start the server
+npm start
 
-# Run again (idempotent - loads saved state)
-node demo.js
+# Connect with telnet
+telnet localhost 4000
 
-# Reset to initial state
-git checkout data/objects/
+# Or use any MUD client
+```
+
+### Validation
+
+The system includes consistency checks:
+- Every object ID is unique
+- Every item appears in exactly ONE location
+- Every reference points to a real object
+- Parent inventories match child locations
+
+Run `entityManager.validate()` to check.
+
+---
+
+## Example Session
+
+```
+$ telnet localhost 4000
+Connected to localhost.
+
+==============================================================
+     Welcome to The Wumpy and Grift
+==============================================================
+
+Enter your character name: alice
+Password: ****
+
+Welcome back, Alice!
+Type "help" for a list of commands.
+
+> look
+
+Test Room
+=========
+A simple test room for demonstrating EntityManager
+
+Exits: north
+
+a scurrying rat is here.
+
+You see Red Apple here.
+
+> get apple
+You pick up Red Apple.
+
+> inventory
+You are carrying:
+  Red Apple
+
+> north
+[Movement to next room...]
 ```
 
 ---
 
-## Key Takeaways
+## Performance
 
-✅ **Simple**: One manager, one move function
-✅ **Elegant**: Clean object model, easy to understand
-✅ **Correct**: No duplication bugs possible
-✅ **Scalable**: Handles thousands of objects
-✅ **Maintainable**: AI can reason about the system
-✅ **Testable**: Easy to validate consistency
+- **Scales to thousands of objects**
+- **Heartbeats are efficient** (only active objects tick)
+- **Dirty tracking minimizes disk writes**
+- **In-memory Map for O(1) lookups**
 
-**This is the vibe.**
+For larger scales, add database layer (same architecture applies).
 
 ---
 
-## Next Steps
+## Documentation
 
-If this prototype convinces you:
-
-1. Review `REFACTOR_PLAN.md` in main repo
-2. Discuss timeline with team
-3. Start Phase 1: Build full EntityManager
-4. Migrate gradually over 4-5 weeks
-5. Remove old systems
-6. Ship it! 🚀
+- `CLAUDE.md` - Instructions for AI assistants working on this codebase
+- `docs/SYSTEM_DESIGN.md` - Detailed architecture documentation
+- `docs/design_quick.md` - Quick reference guide
 
 ---
 
-## Questions?
+## Philosophy
 
-- **Q**: Is this production-ready?
-  **A**: No, this is a proof-of-concept. Full implementation needs more error handling, logging, etc.
+This is a **MUD**, not an MMO:
+- World is defined in files, not dynamically created
+- Players are saved at runtime in `src/data/players/`
+- World content lives in `src/world/` as static templates
+- Focus on depth, not scale
 
-- **Q**: Can this handle my MUD's scale?
-  **A**: Yes. Tested with thousands of objects. If you need millions, add database layer later.
-
-- **Q**: What about NPCs, spells, etc?
-  **A**: Same pattern. Everything is an object with an ID and location. Manager tracks them all.
-
-- **Q**: How do rooms work?
-  **A**: Rooms are objects too. Players/NPCs have `currentRoom` pointing to room ID.
-
-- **Q**: What about equipped items?
-  **A**: Location can be `{ type: 'equipped', owner: 'alice', slot: 'mainHand' }`. Same move() function.
+**The vibe**: LPmud-inspired, text-based, nostalgic, but modern architecture.
 
 ---
 
-**Architecture Reference**: `/home/micah/wumpy/docs/systems/persistence/SIMPLE_OBJECT_ARCHITECTURE.md`
+## Credits
+
+Built for "The Wumpy and Grift" MUD. Porting content from `/home/micah/wumpy`.
+
+Powered by the Simple Object Architecture concept.
