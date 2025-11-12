@@ -1,6 +1,7 @@
 {
   "id": "big_bird",
   "type": "npc",
+  "definition": "monster",
   "name": "Big Bird",
   "description": "A giant, yellow bird is standing here, looking around with a friendly, yet slightly vacant expression.",
   "keywords": ["bird", "big bird"],
@@ -8,6 +9,8 @@
   "level": 5,
   "hp": 100,
   "maxHp": 100,
+  "wanders": false,
+  "heartbeatInterval": 45,
   "dialogue": [
     "Have you seen my friend, Mr. Snuffleupagus?",
     "It's a beautiful day to be on Sesame Street!",
