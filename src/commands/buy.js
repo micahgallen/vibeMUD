@@ -3,6 +3,8 @@
  * Purchase items from a shop
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
   id: "buy",
   name: "buy",
@@ -153,7 +155,7 @@ module.exports = {
 
     // Notify room
     entityManager.notifyRoom(room.id,
-      colors.dim(`${player.name} buys ${itemTemplate.name}.`),
+      colors.dim(`${getDisplayName(player)} buys ${itemTemplate.name}.`),
       player.id
     );
   }
