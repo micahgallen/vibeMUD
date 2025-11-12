@@ -41,9 +41,9 @@ module.exports = {
         type: 'room',
         room: player.currentRoom
       });
-      session.sendLine(colors.yellow + `You drop ${item.name}.` + colors.reset);
+      session.sendLine(colors.warning(`You drop ${item.name}.`));
     } catch (error) {
-      session.sendLine(colors.red + `Error: ${error.message}` + colors.reset);
+      session.sendLine(colors.error(`Error: ${error.message}`));
     }
   }
 };

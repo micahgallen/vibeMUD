@@ -19,7 +19,7 @@ module.exports = {
     const currentRoom = entityManager.get(player.currentRoom);
 
     if (!currentRoom) {
-      session.sendLine(colors.red + 'Error: You are in an invalid location!' + colors.reset);
+      session.sendLine(colors.error('Error: You are in an invalid location!'));
       return;
     }
 
@@ -32,13 +32,13 @@ module.exports = {
     const targetRoom = entityManager.get(targetRoomId);
 
     if (!targetRoom) {
-      session.sendLine(colors.red + 'Error: That exit leads nowhere!' + colors.reset);
+      session.sendLine(colors.error('Error: That exit leads nowhere!'));
       return;
     }
 
     // Notify others in current room
     entityManager.notifyRoom(player.currentRoom,
-      colors.cyan + `${player.name} leaves ${direction}.` + colors.reset,
+      colors.info(`${player.name} leaves ${direction}.`),
       player.id);
 
     // Move player
@@ -47,7 +47,7 @@ module.exports = {
 
     // Notify others in new room
     entityManager.notifyRoom(targetRoomId,
-      colors.cyan + `${player.name} arrives.` + colors.reset,
+      colors.info(`${player.name} arrives.`),
       player.id);
 
     // Show new room - use look command

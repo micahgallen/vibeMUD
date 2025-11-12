@@ -61,9 +61,9 @@ module.exports = {
         type: 'inventory',
         owner: player.id
       });
-      session.sendLine(colors.green + `You pick up ${item.name}.` + colors.reset);
+      session.sendLine(colors.success(`You pick up ${item.name}.`));
     } catch (error) {
-      session.sendLine(colors.red + `Error: ${error.message}` + colors.reset);
+      session.sendLine(colors.error(`Error: ${error.message}`));
     }
   }
 };

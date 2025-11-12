@@ -27,13 +27,13 @@ module.exports = {
       session.sendLine('');
       session.sendLine(colors.bright + cmd.name.toUpperCase() + colors.reset);
       session.sendLine('');
-      session.sendLine(colors.cyan + 'Usage:' + colors.reset + ` ${cmd.usage}`);
+      session.sendLine(colors.info('Usage:') + ` ${cmd.usage}`);
       session.sendLine('');
       session.sendLine(cmd.help);
 
       if (cmd.aliases && cmd.aliases.length > 0) {
         session.sendLine('');
-        session.sendLine(colors.yellow + 'Aliases:' + colors.reset + ` ${cmd.aliases.join(', ')}`);
+        session.sendLine(colors.warning('Aliases:') + ` ${cmd.aliases.join(', ')}`);
       }
       session.sendLine('');
       return;

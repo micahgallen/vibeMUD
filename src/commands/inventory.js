@@ -25,7 +25,7 @@ module.exports = {
     if (items.length === 0) {
       session.sendLine('You are not carrying anything.');
     } else {
-      session.sendLine(colors.green + 'You are carrying:' + colors.reset);
+      session.sendLine(colors.success('You are carrying:'));
       items.forEach(item => {
         const quantity = item.quantity ? ` (x${item.quantity})` : '';
         session.sendLine(`  ${item.name}${quantity}`);

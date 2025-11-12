@@ -47,6 +47,6 @@ module.exports = {
     container.isOpen = true;
     container.modifiedAt = new Date().toISOString();
     entityManager.markDirty(container.id);
-    session.sendLine(colors.green + `You open ${container.name}.` + colors.reset);
+    session.sendLine(colors.success(`You open ${container.name}.`));
   }
 };

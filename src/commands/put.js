@@ -59,9 +59,9 @@ module.exports = {
         type: 'container',
         owner: container.id
       });
-      session.sendLine(colors.green + `You put ${item.name} in ${container.name}.` + colors.reset);
+      session.sendLine(colors.success(`You put ${item.name} in ${container.name}.`));
     } catch (error) {
-      session.sendLine(colors.red + `Error: ${error.message}` + colors.reset);
+      session.sendLine(colors.error(`Error: ${error.message}`));
     }
   }
 };

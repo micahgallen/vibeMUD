@@ -67,16 +67,16 @@ module.exports = {
     // Show additional details
     if (target.type === 'item') {
       if (target.durability !== undefined) {
-        session.sendLine(colors.cyan + `Durability: ${target.durability}%` + colors.reset);
+        session.sendLine(colors.info(`Durability: ${target.durability}%`));
       }
       if (target.damage !== undefined) {
-        session.sendLine(colors.red + `Damage: ${target.damage}` + colors.reset);
+        session.sendLine(colors.error(`Damage: ${target.damage}`));
       }
       if (target.value !== undefined) {
-        session.sendLine(colors.yellow + `Value: ${target.value} gold` + colors.reset);
+        session.sendLine(colors.warning(`Value: ${target.value} gold`));
       }
       if (target.quantity !== undefined && target.quantity > 1) {
-        session.sendLine(colors.green + `Quantity: ${target.quantity}` + colors.reset);
+        session.sendLine(colors.success(`Quantity: ${target.quantity}`));
       }
     }
 

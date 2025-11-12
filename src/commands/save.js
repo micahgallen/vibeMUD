@@ -17,9 +17,9 @@ module.exports = {
     try {
       const count = entityManager.dirtyObjects.size;
       entityManager.saveDirty();
-      session.sendLine(colors.green + `Game saved! (${count} objects saved)` + colors.reset);
+      session.sendLine(colors.success(`Game saved! (${count} objects saved)`));
     } catch (error) {
-      session.sendLine(colors.red + `Error saving: ${error.message}` + colors.reset);
+      session.sendLine(colors.error(`Error saving: ${error.message}`));
     }
   }
 };
