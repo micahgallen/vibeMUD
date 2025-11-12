@@ -1,0 +1,26 @@
+{
+  "id": "taunt",
+  "name": "taunt",
+  "aliases": [],
+  "description": "Hurl Monty Python insults at the world",
+  "usage": "taunt",
+  "definition": "emote",
+  "targetRequired": false,
+  "rotatingMessages": 5,
+  "messages": {
+    "untargeted": [
+      "I don't want to talk to you no more, you empty-headed animal food trough water!",
+      "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
+      "Go and boil your bottoms, sons of a silly person!",
+      "I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!",
+      "Go away or I shall taunt you again!"
+    ],
+    "untargetedRoom": [
+      "{actor} hurls insults at everyone: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
+      "{actor} taunts: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
+      "{actor} shouts: \"Go and boil your bottoms, sons of a silly person!\"",
+      "{actor} waves rudely: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
+      "{actor} warns: \"Go away or I shall taunt you again!\""
+    ]
+  }
+}

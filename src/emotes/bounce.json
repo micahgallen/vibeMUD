@@ -1,0 +1,16 @@
+{
+  "id": "bounce",
+  "name": "bounce",
+  "aliases": [],
+  "description": "Bounce around energetically",
+  "usage": "bounce [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You bounce excitedly around {target}!",
+    "secondPerson": "{actor} bounces around you with alarming enthusiasm!",
+    "thirdPerson": "{actor} bounces around {target} like an overexcited puppy.",
+    "untargeted": "You bounce around like a hyperactive pogo stick that discovered espresso.",
+    "untargetedRoom": "{actor} bounces around with the energy of someone who drank all the potions."
+  }
+}

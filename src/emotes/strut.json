@@ -1,0 +1,16 @@
+{
+  "id": "strut",
+  "name": "strut",
+  "aliases": [],
+  "description": "Strut around confidently",
+  "usage": "strut [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You strut confidently around {target}, showing off.",
+    "secondPerson": "{actor} struts around you with exaggerated confidence. Are they showing off?",
+    "thirdPerson": "{actor} struts around {target} like a peacock in full display.",
+    "untargeted": "You strut around with the confidence of a peacock wearing sunglasses.",
+    "untargetedRoom": "{actor} struts around like they own the place. The swagger is real."
+  }
+}

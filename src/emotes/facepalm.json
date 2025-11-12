@@ -1,0 +1,16 @@
+{
+  "id": "facepalm",
+  "name": "facepalm",
+  "aliases": ["fpalm"],
+  "description": "Slap your forehead in exasperation",
+  "usage": "facepalm [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You facepalm dramatically while staring at {target}.",
+    "secondPerson": "{actor} facepalms dramatically while staring directly at you. What did you do?",
+    "thirdPerson": "{actor} facepalms dramatically while staring at {target}.",
+    "untargeted": "You slap your palm against your forehead with an audible *smack*. Why? Just... why?",
+    "untargetedRoom": "{actor} slaps their palm against their forehead. The sound echoes with disappointment."
+  }
+}

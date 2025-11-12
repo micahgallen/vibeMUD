@@ -1,0 +1,16 @@
+{
+  "id": "spin",
+  "name": "spin",
+  "aliases": ["twirl"],
+  "description": "Spin around dramatically",
+  "usage": "spin [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You spin around {target} like a majestic tornado of questionable grace.",
+    "secondPerson": "{actor} spins around you. You're getting dizzy just watching.",
+    "thirdPerson": "{actor} spins around {target} in dizzying circles.",
+    "untargeted": "You spin around and around until the room spins too. Or was it spinning already?",
+    "untargetedRoom": "{actor} spins around dramatically. They're going to regret that in about 3... 2... 1..."
+  }
+}

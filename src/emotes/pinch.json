@@ -1,0 +1,16 @@
+{
+  "id": "pinch",
+  "name": "pinch",
+  "aliases": [],
+  "description": "Pinch someone",
+  "usage": "pinch [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You pinch {target} playfully.",
+    "secondPerson": "{actor} pinches you playfully.",
+    "thirdPerson": "{actor} pinches {target} playfully.",
+    "untargeted": "You pinch yourself to make sure you're not dreaming. Nope, still here.",
+    "untargetedRoom": "{actor} pinches themselves to make sure they're not dreaming. Nope, still here."
+  }
+}

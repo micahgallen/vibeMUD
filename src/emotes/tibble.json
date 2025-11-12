@@ -1,0 +1,16 @@
+{
+  "id": "tibble",
+  "name": "tibble",
+  "aliases": [],
+  "description": "Perform a mysterious tibble dance",
+  "usage": "tibble [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You tibble at {target} with great significance.",
+    "secondPerson": "{actor} tibbles at you. You have no idea what that means, but you feel honored.",
+    "thirdPerson": "{actor} tibbles at {target}. The air crackles with confusion.",
+    "untargeted": "You tibble mysteriously. You're not sure what that means, but it feels right.",
+    "untargetedRoom": "{actor} tibbles mysteriously. Nobody knows what that means, but they're all impressed."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "grin",
+  "name": "grin",
+  "aliases": [],
+  "description": "Grin",
+  "usage": "grin [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You grin at {target}.",
+    "secondPerson": "{actor} grins at you.",
+    "thirdPerson": "{actor} grins at {target}.",
+    "untargeted": "You grin like a Cheshire cat who just got away with something.",
+    "untargetedRoom": "{actor} grins like a Cheshire cat who just got away with something."
+  }
+}

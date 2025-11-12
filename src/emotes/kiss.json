@@ -1,17 +1,16 @@
 {
   "id": "kiss",
   "name": "kiss",
-  "aliases": ["smooch"],
-  "description": "Give someone a kiss",
-  "usage": "kiss <player>",
+  "aliases": [],
+  "description": "Blow a kiss",
+  "usage": "kiss [target]",
   "definition": "emote",
-  "targetRequired": true,
-  "usageMessage": "Kiss who? You need to specify a target!",
+  "targetRequired": false,
   "messages": {
-    "self": "You blow yourself a kiss in an imaginary mirror. Mwah!",
-    "selfRoom": "{actor} blows themselves a kiss.",
-    "firstPerson": "You give {target} a kiss.",
-    "secondPerson": "{actor} gives you a kiss!",
-    "thirdPerson": "{actor} gives {target} a kiss."
+    "firstPerson": "You blow a kiss to {target}.",
+    "secondPerson": "{actor} blows a kiss to you.",
+    "thirdPerson": "{actor} blows a kiss to {target}.",
+    "untargeted": "You blow a kiss into the air. It lands on someone's cheek with a soft *smack*.",
+    "untargetedRoom": "{actor} blows a kiss into the air. It lands on someone's cheek with a soft *smack*."
   }
 }

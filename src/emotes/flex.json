@@ -1,0 +1,16 @@
+{
+  "id": "flex",
+  "name": "flex",
+  "aliases": [],
+  "description": "Flex your muscles",
+  "usage": "flex [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You flex for {target}.",
+    "secondPerson": "{actor} flexes for you.",
+    "thirdPerson": "{actor} flexes for {target}.",
+    "untargeted": "You flex your muscles, which are surprisingly well-defined for a text-based adventurer.",
+    "untargetedRoom": "{actor} flexes their muscles, which are surprisingly well-defined for a text-based adventurer."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "tickle",
+  "name": "tickle",
+  "aliases": [],
+  "description": "Tickle someone until they giggle",
+  "usage": "tickle [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You tickle {target} mercilessly! Hehehehe!",
+    "secondPerson": "{actor} tickles you mercilessly! You can't help but giggle!",
+    "thirdPerson": "{actor} tickles {target} until they're gasping for air!",
+    "untargeted": "You tickle yourself. That's... not how tickling works, but okay.",
+    "untargetedRoom": "{actor} tries to tickle themselves. Science has proven this doesn't work, but they're trying anyway."
+  }
+}

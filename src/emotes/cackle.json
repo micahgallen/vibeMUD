@@ -1,0 +1,16 @@
+{
+  "id": "cackle",
+  "name": "cackle",
+  "aliases": [],
+  "description": "Cackle like a villain",
+  "usage": "cackle [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You cackle maniacally at {target}.",
+    "secondPerson": "{actor} cackles maniacally at you.",
+    "thirdPerson": "{actor} cackles maniacally at {target}.",
+    "untargeted": "You cackle like a villain who just remembered they left the oven on.",
+    "untargetedRoom": "{actor} cackles like a villain who just remembered they left the oven on."
+  }
+}

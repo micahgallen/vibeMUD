@@ -1,18 +1,16 @@
 {
   "id": "nod",
   "name": "nod",
-  "aliases": ["agree"],
+  "aliases": [],
   "description": "Nod in agreement",
-  "usage": "nod [player]",
+  "usage": "nod [target]",
   "definition": "emote",
   "targetRequired": false,
   "messages": {
-    "self": "You nod to yourself knowingly.",
-    "selfRoom": "{actor} nods to themselves.",
-    "firstPerson": "You nod at {target}.",
-    "secondPerson": "{actor} nods at you.",
+    "firstPerson": "You nod at {target} in agreement.",
+    "secondPerson": "{actor} nods at you knowingly.",
     "thirdPerson": "{actor} nods at {target}.",
-    "untargeted": "You nod in agreement.",
-    "untargetedRoom": "{actor} nods in agreement."
+    "untargeted": "You nod sagely, like a bobblehead philosopher contemplating the meaning of lunch.",
+    "untargetedRoom": "{actor} nods sagely, as if they just figured out something profound."
   }
 }

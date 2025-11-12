@@ -1,0 +1,16 @@
+{
+  "id": "groan",
+  "name": "groan",
+  "aliases": [],
+  "description": "Groan",
+  "usage": "groan [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You groan at {target}.",
+    "secondPerson": "{actor} groans at you.",
+    "thirdPerson": "{actor} groans at {target}.",
+    "untargeted": "You groan with the weight of the world on your shoulders, or maybe you just ate too much cheese.",
+    "untargetedRoom": "{actor} groans with the weight of the world on their shoulders, or maybe you just ate too much cheese."
+  }
+}

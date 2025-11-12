@@ -1,0 +1,16 @@
+{
+  "id": "yawn",
+  "name": "yawn",
+  "aliases": [],
+  "description": "Yawn widely and contagiously",
+  "usage": "yawn [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You yawn dramatically in {target}'s general direction.",
+    "secondPerson": "{actor} yawns dramatically at you. Are you that boring?",
+    "thirdPerson": "{actor} yawns dramatically at {target}. Ouch.",
+    "untargeted": "You yawn so wide a small bird could fly in. Better cover your mouth next time.",
+    "untargetedRoom": "{actor} yawns widely. It's contagious. You feel sleepy just watching."
+  }
+}

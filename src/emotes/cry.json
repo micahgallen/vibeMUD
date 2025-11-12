@@ -1,18 +1,16 @@
 {
   "id": "cry",
   "name": "cry",
-  "aliases": ["weep", "sob"],
-  "description": "Cry sadly",
-  "usage": "cry [player]",
+  "aliases": [],
+  "description": "Cry dramatically",
+  "usage": "cry [target]",
   "definition": "emote",
   "targetRequired": false,
   "messages": {
-    "self": "You cry into your hands. There, there.",
-    "selfRoom": "{actor} cries into their hands.",
     "firstPerson": "You cry on {target}'s shoulder.",
     "secondPerson": "{actor} cries on your shoulder.",
     "thirdPerson": "{actor} cries on {target}'s shoulder.",
-    "untargeted": "You burst into tears.",
-    "untargetedRoom": "{actor} bursts into tears."
+    "untargeted": "You cry a single, dramatic tear. It's probably not real.",
+    "untargetedRoom": "{actor} cries a single, dramatic tear. It's probably not real."
   }
 }

@@ -1,0 +1,16 @@
+{
+  "id": "funkychicken",
+  "name": "funkychicken",
+  "aliases": ["funkchicken", "chicken"],
+  "description": "Do the funky chicken dance",
+  "usage": "funkychicken [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You do the funky chicken dance around {target}! *bawk bawk*",
+    "secondPerson": "{actor} does the funky chicken dance around you! *bawk bawk* You're not sure how to react.",
+    "thirdPerson": "{actor} does the funky chicken dance around {target}! *bawk bawk*",
+    "untargeted": "You flap your arms and do the funky chicken with reckless abandon! *bawk bawk*",
+    "untargetedRoom": "{actor} flaps their arms and does the funky chicken! *bawk bawk* It's magnificent!"
+  }
+}

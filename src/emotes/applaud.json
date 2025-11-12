@@ -1,0 +1,16 @@
+{
+  "id": "applaud",
+  "name": "applaud",
+  "aliases": [],
+  "description": "Applaud enthusiastically",
+  "usage": "applaud [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You applaud {target}.",
+    "secondPerson": "{actor} applauds you.",
+    "thirdPerson": "{actor} applauds {target}.",
+    "untargeted": "You applaud with the enthusiasm of someone who just saw a dog walk on its hind legs.",
+    "untargetedRoom": "{actor} applauds with the enthusiasm of someone who just saw a dog walk on its hind legs."
+  }
+}

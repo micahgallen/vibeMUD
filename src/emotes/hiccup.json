@@ -1,0 +1,16 @@
+{
+  "id": "hiccup",
+  "name": "hiccup",
+  "aliases": [],
+  "description": "Hiccup",
+  "usage": "hiccup [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You hiccup at {target}.",
+    "secondPerson": "{actor} hiccups at you.",
+    "thirdPerson": "{actor} hiccups at {target}.",
+    "untargeted": "You hiccup with a tiny, adorable squeak.",
+    "untargetedRoom": "{actor} hiccups with a tiny, adorable squeak."
+  }
+}

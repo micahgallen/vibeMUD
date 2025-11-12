@@ -1,0 +1,16 @@
+{
+  "id": "salute",
+  "name": "salute",
+  "aliases": [],
+  "description": "Salute formally",
+  "usage": "salute [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You salute {target} with crisp military precision.",
+    "secondPerson": "{actor} salutes you formally. Should you salute back?",
+    "thirdPerson": "{actor} gives {target} a crisp military salute.",
+    "untargeted": "You snap off a crisp salute to absolutely nobody. You look mildly ridiculous.",
+    "untargetedRoom": "{actor} salutes the empty air with military precision. Respect."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "poke",
+  "name": "poke",
+  "aliases": [],
+  "description": "Poke someone annoyingly",
+  "usage": "poke [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You poke {target} repeatedly. Poke, poke, poke!",
+    "secondPerson": "{actor} pokes you. Poke, poke, poke! Hey, cut that out!",
+    "thirdPerson": "{actor} pokes {target} repeatedly. This might escalate.",
+    "untargeted": "You poke the air in front of you. It's not very effective.",
+    "untargetedRoom": "{actor} pokes the air mysteriously. Are they practicing?"
+  }
+}

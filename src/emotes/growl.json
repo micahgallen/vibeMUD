@@ -1,0 +1,16 @@
+{
+  "id": "growl",
+  "name": "growl",
+  "aliases": [],
+  "description": "Growl menacingly",
+  "usage": "growl [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You growl at {target}.",
+    "secondPerson": "{actor} growls at you.",
+    "thirdPerson": "{actor} growls at {target}.",
+    "untargeted": "You growl menacingly, or maybe you're just hungry.",
+    "untargetedRoom": "{actor} growls menacingly, or maybe they're just hungry."
+  }
+}

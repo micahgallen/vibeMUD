@@ -1,0 +1,16 @@
+{
+  "id": "woo",
+  "name": "woo",
+  "aliases": ["woohoo"],
+  "description": "Express excitement enthusiastically",
+  "usage": "woo [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You woo enthusiastically at {target}!",
+    "secondPerson": "{actor} woos enthusiastically at you!",
+    "thirdPerson": "{actor} woos enthusiastically at {target}!",
+    "untargeted": "You throw your hands in the air and woo like you just don't care!",
+    "untargetedRoom": "{actor} throws their hands in the air and woos like they just don't care!"
+  }
+}

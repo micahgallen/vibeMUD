@@ -2,17 +2,15 @@
   "id": "shrug",
   "name": "shrug",
   "aliases": [],
-  "description": "Shrug your shoulders",
-  "usage": "shrug [player]",
+  "description": "Shrug in a noncommittal fashion",
+  "usage": "shrug [target]",
   "definition": "emote",
   "targetRequired": false,
   "messages": {
-    "self": "You shrug at your own confusion.",
-    "selfRoom": "{actor} shrugs at themselves, looking puzzled.",
-    "firstPerson": "You shrug at {target}.",
-    "secondPerson": "{actor} shrugs at you.",
-    "thirdPerson": "{actor} shrugs at {target}.",
-    "untargeted": "You shrug helplessly.",
-    "untargetedRoom": "{actor} shrugs helplessly."
+    "firstPerson": "You shrug at {target}. Not your problem, apparently.",
+    "secondPerson": "{actor} shrugs at you unhelpfully.",
+    "thirdPerson": "{actor} shrugs at {target} with casual indifference.",
+    "untargeted": "You shrug with the nonchalance of someone who knows nothing and cares even less.",
+    "untargetedRoom": "{actor} shrugs with magnificent indifference."
   }
 }

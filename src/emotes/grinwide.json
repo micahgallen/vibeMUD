@@ -1,0 +1,16 @@
+{
+  "id": "grinwide",
+  "name": "grinwide",
+  "aliases": ["widegrin"],
+  "description": "Grin widely like a Cheshire cat",
+  "usage": "grinwide [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You flash {target} your widest, most enthusiastic grin.",
+    "secondPerson": "{actor} flashes you a grin so wide it might be legally considered a threat.",
+    "thirdPerson": "{actor} grins widely at {target} with alarming enthusiasm.",
+    "untargeted": "You grin widely, showing all your teeth like a Cheshire cat on caffeine.",
+    "untargetedRoom": "{actor} grins widely, showing all their teeth. It's slightly unsettling."
+  }
+}

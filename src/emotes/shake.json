@@ -1,0 +1,16 @@
+{
+  "id": "shake",
+  "name": "shake",
+  "aliases": ["headshake"],
+  "description": "Shake your head in disagreement",
+  "usage": "shake [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You shake your head at {target} disapprovingly.",
+    "secondPerson": "{actor} shakes their head at you. Shame! Shame!",
+    "thirdPerson": "{actor} shakes their head disappointedly at {target}.",
+    "untargeted": "You shake your head slowly, like a disappointed parent at a science fair volcano that won't erupt.",
+    "untargetedRoom": "{actor} shakes their head in disappointment. Somebody done goofed."
+  }
+}

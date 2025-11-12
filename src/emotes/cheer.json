@@ -1,0 +1,16 @@
+{
+  "id": "cheer",
+  "name": "cheer",
+  "aliases": [],
+  "description": "Cheer loudly",
+  "usage": "cheer [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You cheer for {target}.",
+    "secondPerson": "{actor} cheers for you.",
+    "thirdPerson": "{actor} cheers for {target}.",
+    "untargeted": "You cheer with the force of a thousand suns, or at least a very excited hamster.",
+    "untargetedRoom": "{actor} cheers with the force of a thousand suns, or at least a very excited hamster."
+  }
+}

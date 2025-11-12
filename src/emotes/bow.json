@@ -1,18 +1,16 @@
 {
   "id": "bow",
   "name": "bow",
-  "aliases": ["curtsy"],
-  "description": "Take a bow",
-  "usage": "bow [player]",
+  "aliases": [],
+  "description": "Bow gracefully",
+  "usage": "bow [target]",
   "definition": "emote",
   "targetRequired": false,
   "messages": {
-    "self": "You bow to your own reflection. Narcissistic much?",
-    "selfRoom": "{actor} bows to themselves.",
-    "firstPerson": "You bow respectfully to {target}.",
-    "secondPerson": "{actor} bows respectfully to you.",
-    "thirdPerson": "{actor} bows respectfully to {target}.",
-    "untargeted": "You take a deep bow.",
-    "untargetedRoom": "{actor} takes a deep bow."
+    "firstPerson": "You bow to {target}.",
+    "secondPerson": "{actor} bows to you.",
+    "thirdPerson": "{actor} bows to {target}.",
+    "untargeted": "You bow with the grace of a penguin on a skateboard.",
+    "untargetedRoom": "{actor} bows with the grace of a penguin on a skateboard."
   }
 }

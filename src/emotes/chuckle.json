@@ -1,0 +1,16 @@
+{
+  "id": "chuckle",
+  "name": "chuckle",
+  "aliases": [],
+  "description": "Chuckle softly",
+  "usage": "chuckle [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You chuckle at {target}.",
+    "secondPerson": "{actor} chuckles at you.",
+    "thirdPerson": "{actor} chuckles at {target}.",
+    "untargeted": "You chuckle softly, like a grandfather who just told a terrible joke.",
+    "untargetedRoom": "{actor} chuckles softly, like a grandfather who just told a terrible joke."
+  }
+}

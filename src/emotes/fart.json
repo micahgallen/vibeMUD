@@ -1,0 +1,16 @@
+{
+  "id": "fart",
+  "name": "fart",
+  "aliases": [],
+  "description": "Let one rip",
+  "usage": "fart [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You fart in {target}'s general direction.",
+    "secondPerson": "{actor} farts in your general direction.",
+    "thirdPerson": "{actor} farts in {target}'s general direction.",
+    "untargeted": "You let out a small, apologetic toot.",
+    "untargetedRoom": "{actor} lets out a small, apologetic toot."
+  }
+}

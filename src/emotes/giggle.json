@@ -1,0 +1,16 @@
+{
+  "id": "giggle",
+  "name": "giggle",
+  "aliases": [],
+  "description": "Giggle",
+  "usage": "giggle [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You giggle at {target}.",
+    "secondPerson": "{actor} giggles at you.",
+    "thirdPerson": "{actor} giggles at {target}.",
+    "untargeted": "You giggle like a schoolgirl who just passed a note in class.",
+    "untargetedRoom": "{actor} giggles like a schoolgirl who just passed a note in class."
+  }
+}

@@ -3,16 +3,14 @@
   "name": "wave",
   "aliases": [],
   "description": "Wave at someone",
-  "usage": "wave [player]",
+  "usage": "wave [target]",
   "definition": "emote",
   "targetRequired": false,
   "messages": {
-    "self": "You wave at yourself in an imaginary mirror.",
-    "selfRoom": "{actor} waves at themselves awkwardly.",
-    "firstPerson": "You wave at {target}.",
-    "secondPerson": "{actor} waves at you.",
+    "firstPerson": "You wave at {target} cheerfully.",
+    "secondPerson": "{actor} waves at you cheerfully.",
     "thirdPerson": "{actor} waves at {target}.",
-    "untargeted": "You wave hello.",
-    "untargetedRoom": "{actor} waves hello."
+    "untargeted": "You wave enthusiastically at everyone and no one in particular.",
+    "untargetedRoom": "{actor} waves enthusiastically like they're trying to flag down a ship."
   }
 }

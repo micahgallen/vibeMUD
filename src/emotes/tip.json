@@ -1,0 +1,16 @@
+{
+  "id": "tip",
+  "name": "tip",
+  "aliases": [],
+  "description": "Tip your hat",
+  "usage": "tip [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You tip your hat to {target}.",
+    "secondPerson": "{actor} tips their hat to you.",
+    "thirdPerson": "{actor} tips their hat to {target}.",
+    "untargeted": "You tip your hat politely.",
+    "untargetedRoom": "{actor} tips their hat politely."
+  }
+}

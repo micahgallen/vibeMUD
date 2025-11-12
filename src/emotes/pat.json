@@ -1,0 +1,16 @@
+{
+  "id": "pat",
+  "name": "pat",
+  "aliases": [],
+  "description": "Pat someone on the head or shoulder",
+  "usage": "pat [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You pat {target} reassuringly. There, there.",
+    "secondPerson": "{actor} pats you reassuringly. You feel slightly better.",
+    "thirdPerson": "{actor} pats {target} reassuringly.",
+    "untargeted": "You pat yourself on the back for a job well done. Good job, you!",
+    "untargetedRoom": "{actor} pats themselves on the back. Self-encouragement is important!"
+  }
+}

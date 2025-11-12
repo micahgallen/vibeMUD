@@ -1,0 +1,16 @@
+{
+  "id": "wobble",
+  "name": "wobble",
+  "aliases": [],
+  "description": "Wobble around unsteadily",
+  "usage": "wobble [target]",
+  "definition": "emote",
+  "targetRequired": false,
+  "messages": {
+    "firstPerson": "You wobble dramatically in the direction of {target}.",
+    "secondPerson": "{actor} wobbles dramatically in your direction. You might want to catch them.",
+    "thirdPerson": "{actor} wobbles dramatically toward {target}.",
+    "untargeted": "You wobble around like a Weeble that forgot it's not supposed to fall down.",
+    "untargetedRoom": "{actor} wobbles around unsteadily. Should someone call a healer?"
+  }
+}

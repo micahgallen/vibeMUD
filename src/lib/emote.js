@@ -5,12 +5,63 @@
  * Emotes use prototypal inheritance:
  * - This file defines the behavior (execute function)
  * - Individual emote JSON files provide data (messages, target requirements)
+ *
+ * Advanced Features:
+ * - Dynamic messages: Messages can be arrays that cycle based on player state
+ * - Player state tracking: Emotes can maintain state like tauntIndex
+ * - Lifecycle hooks: beforeExecute, afterExecute for custom behavior
  */
 
 module.exports = {
   type: "emote",
   category: "social",
   requiresLogin: true,
+
+  /**
+   * Get a message from the messages object
+   * Handles both static strings and dynamic arrays
+   */
+  _getMessage: function(messageKey, player, entityManager) {
+    const msg = this.messages[messageKey];
+
+    if (!msg) return null;
+
+    // If message is an array, select based on player state
+    if (Array.isArray(msg)) {
+      // Initialize player state if needed
+      const stateKey = this.stateKey || `${this.id}Index`;
+      if (typeof player[stateKey] === 'undefined') {
+        player[stateKey] = 0;
+        entityManager.markDirty(player.id);
+      }
+
+      // Get message at current index
+      const index = player[stateKey] % msg.length;
+      return msg[index];
+    }
+
+    // Static string message
+    return msg;
+  },
+
+  /**
+   * Update player state after emote execution
+   * Used for rotating messages (like taunt)
+   */
+  _updateState: function(player, entityManager) {
+    if (!this.rotatingMessages) return;
+
+    const stateKey = this.stateKey || `${this.id}Index`;
+
+    // Initialize if needed
+    if (typeof player[stateKey] === 'undefined') {
+      player[stateKey] = 0;
+    }
+
+    // Increment and wrap
+    player[stateKey] = (player[stateKey] + 1) % this.rotatingMessages;
+    entityManager.markDirty(player.id);
+  },
 
   /**
    * Execute the emote
@@ -23,6 +74,11 @@ module.exports = {
     if (!room) {
       session.sendLine(colors.error('You are nowhere. The void swallows your emotions.'));
       return;
+    }
+
+    // Call beforeExecute hook if defined
+    if (this.beforeExecute && typeof this.beforeExecute === 'function') {
+      this.beforeExecute(session, args, entityManager, colors);
     }
 
     // Parse target if provided
@@ -40,18 +96,26 @@ module.exports = {
     if (targetName) {
       // Check for self-emote
       if (targetName === 'self' || targetName === 'me' || targetName === player.name.toLowerCase()) {
-        if (this.messages.self) {
+        const selfMsg = this._getMessage('self', player, entityManager);
+        if (selfMsg) {
           session.sendLine('');
-          session.sendLine(colors.emote(this.messages.self));
+          session.sendLine(colors.emote(selfMsg));
           session.sendLine('');
 
           // Notify room (if self message has room variant)
-          if (this.messages.selfRoom) {
-            const roomMsg = this.messages.selfRoom.replace('{actor}', player.name);
+          const selfRoomMsg = this._getMessage('selfRoom', player, entityManager);
+          if (selfRoomMsg) {
+            const roomMsg = selfRoomMsg.replace('{actor}', player.name);
             entityManager.notifyRoom(room.id, colors.emote(roomMsg), player.id);
           }
         } else {
           session.sendLine(colors.error(`You can't ${this.name} yourself.`));
+        }
+
+        // Update state and call afterExecute
+        this._updateState(player, entityManager);
+        if (this.afterExecute && typeof this.afterExecute === 'function') {
+          this.afterExecute(session, args, entityManager, colors);
         }
         return;
       }
@@ -79,57 +143,77 @@ module.exports = {
       // Targeted emote
       const targetPlayer = target.player;
 
+      // Get dynamic messages
+      const firstPersonMsg = this._getMessage('firstPerson', player, entityManager);
+      const secondPersonMsg = this._getMessage('secondPerson', player, entityManager);
+      const thirdPersonMsg = this._getMessage('thirdPerson', player, entityManager);
+
       // Message to actor (first person)
-      const actorMsg = this.messages.firstPerson
-        .replace('{target}', colors.playerName(targetPlayer.name));
-      session.sendLine('');
-      session.sendLine(colors.emote(actorMsg));
-      session.sendLine('');
+      if (firstPersonMsg) {
+        const actorMsg = firstPersonMsg.replace('{target}', colors.playerName(targetPlayer.name));
+        session.sendLine('');
+        session.sendLine(colors.emote(actorMsg));
+        session.sendLine('');
+      }
 
       // Message to target (second person)
-      const targetMsg = this.messages.secondPerson
-        .replace('{actor}', colors.playerName(player.name));
-      target.sendLine('');
-      target.sendLine(colors.emote(targetMsg));
-      target.sendLine('');
+      if (secondPersonMsg) {
+        const targetMsg = secondPersonMsg.replace('{actor}', colors.playerName(player.name));
+        target.sendLine('');
+        target.sendLine(colors.emote(targetMsg));
+        target.sendLine('');
+      }
 
       // Message to room (third person)
-      const roomMsg = this.messages.thirdPerson
-        .replace('{actor}', player.name)
-        .replace('{target}', targetPlayer.name);
+      if (thirdPersonMsg) {
+        const roomMsg = thirdPersonMsg
+          .replace('{actor}', player.name)
+          .replace('{target}', targetPlayer.name);
 
-      // Notify everyone except actor and target
-      const othersInRoom = Array.from(entityManager.sessions.values()).filter(s =>
-        s.state === 'playing' &&
-        s.player &&
-        s.player.currentRoom === room.id &&
-        s.player.id !== player.id &&
-        s.player.id !== targetPlayer.id
-      );
+        // Notify everyone except actor and target
+        const othersInRoom = Array.from(entityManager.sessions.values()).filter(s =>
+          s.state === 'playing' &&
+          s.player &&
+          s.player.currentRoom === room.id &&
+          s.player.id !== player.id &&
+          s.player.id !== targetPlayer.id
+        );
 
-      othersInRoom.forEach(s => {
-        s.sendLine('');
-        s.sendLine(colors.emote(roomMsg));
-        s.sendLine('');
-      });
+        othersInRoom.forEach(s => {
+          s.sendLine('');
+          s.sendLine(colors.emote(roomMsg));
+          s.sendLine('');
+        });
+      }
 
     } else {
       // Untargeted emote
-      if (!this.messages.untargeted) {
+      const untargetedMsg = this._getMessage('untargeted', player, entityManager);
+
+      if (!untargetedMsg) {
         session.sendLine(colors.error(`The ${this.name} emote requires a target.`));
         return;
       }
 
       // Message to actor
       session.sendLine('');
-      session.sendLine(colors.emote(this.messages.untargeted));
+      session.sendLine(colors.emote(untargetedMsg));
       session.sendLine('');
 
       // Message to room
-      if (this.messages.untargetedRoom) {
-        const roomMsg = this.messages.untargetedRoom.replace('{actor}', player.name);
+      const untargetedRoomMsg = this._getMessage('untargetedRoom', player, entityManager);
+      if (untargetedRoomMsg) {
+        const roomMsg = untargetedRoomMsg.replace('{actor}', player.name);
         entityManager.notifyRoom(room.id, colors.emote(roomMsg), player.id);
       }
+    }
+
+    // Update state for rotating messages
+    this._updateState(player, entityManager);
+
+    // Call afterExecute hook if defined
+    if (this.afterExecute && typeof this.afterExecute === 'function') {
+      this.afterExecute(session, args, entityManager, colors);
     }
   }
 };
