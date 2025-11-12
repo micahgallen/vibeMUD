@@ -1,6 +1,7 @@
 {
   "id": "torch_001",
   "type": "item",
+  "itemType": "light",
   "name": "Burnt-Out Torch",
   "definition": "torch",
   "location": {
@@ -10,6 +11,7 @@
   "description": "This torch has burned out completely. It might be refuelable.",
   "isLit": false,
   "fuelRemaining": 0,
+  "value": 10,
   "heartbeatHandler": "item_torch_heartbeat",
   "heartbeatInterval": 10,
   "createdAt": "2025-11-12T10:00:00Z",

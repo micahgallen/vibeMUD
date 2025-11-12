@@ -9,6 +9,7 @@
   "level": 5,
   "hp": 100,
   "maxHp": 100,
+  "charisma": 14,
   "wanders": false,
   "heartbeatInterval": 45,
   "is_merchant": true,
