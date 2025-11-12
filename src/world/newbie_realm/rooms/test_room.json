@@ -10,8 +10,8 @@
     "chest_001"
   ],
   "exits": {
-    "north": "healing_fountain",
-    "south": "sesame_street_south"
+    "north": "sesame_street_south",
+    "south": "healing_fountain"
   },
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T15:25:00.000Z"

@@ -7,7 +7,7 @@
   "items": [],
   "containers": [],
   "exits": {
-    "south": "test_room"
+    "north": "test_room"
   },
   "heartbeatInterval": 5,
   "createdAt": "2025-11-12T10:00:00Z",

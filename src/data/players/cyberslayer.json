@@ -6,7 +6,7 @@
   "maxHp": 100,
   "isAdmin": true,
   "level": 1,
-  "currentRoom": "test_room",
+  "currentRoom": "healing_fountain",
   "inventory": [
     "apple_001",
     "apple_001",
