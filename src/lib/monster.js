@@ -27,11 +27,19 @@ module.exports = {
   wanders: true,
 
   /**
-   * Wandering heartbeat - NPC moves randomly between rooms
+   * Wandering heartbeat - NPC moves randomly between rooms or speaks dialogue
    * This function is inherited by all monsters that have wanders: true
    */
   heartbeat: function(entityManager) {
     if (!this.wanders) return;
+
+    // 30% chance to speak instead of wandering (if dialogue exists)
+    if (this.dialogue && this.dialogue.length > 0 && Math.random() < 0.3) {
+      const randomLine = this.dialogue[Math.floor(Math.random() * this.dialogue.length)];
+      entityManager.notifyRoom(this.currentRoom, `\x1b[33m${randomLine}\x1b[0m`);
+      console.log(`  💬 ${this.name} says: "${randomLine}"`);
+      return;
+    }
 
     const room = entityManager.get(this.currentRoom);
     if (!room || !room.exits || Object.keys(room.exits).length === 0) return;
