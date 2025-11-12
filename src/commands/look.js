@@ -116,7 +116,7 @@ module.exports = {
     );
 
     if (playersInRoom.length > 0) {
-      const playerNames = playersInRoom.map(p => colors.playerName(p.name));
+      const playerNames = playersInRoom.map(p => colors.playerName(p.capname || p.name));
       output.push('\n' + colors.info('Also here: ') + playerNames.join(', '));
     }
 

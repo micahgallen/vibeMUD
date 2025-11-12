@@ -61,7 +61,7 @@ module.exports = {
       }
 
       // Display name with indicator if it's you
-      const displayName = player.name + (player.id === session.player.id ? ' (you)' : '');
+      const displayName = (player.capname || player.name) + (player.id === session.player.id ? ' (you)' : '');
       const paddedName = colors.pad(colors.playerName(displayName), 25);
 
       // Format level
