@@ -25,7 +25,7 @@ module.exports = {
       }
 
       session.sendLine('');
-      session.sendLine(colors.bright + cmd.name.toUpperCase() + colors.reset);
+      session.sendLine(colors.highlight(cmd.name.toUpperCase()));
       session.sendLine('');
       session.sendLine(colors.info('Usage:') + ` ${cmd.usage}`);
       session.sendLine('');
@@ -52,7 +52,7 @@ module.exports = {
     for (const [category, title] of Object.entries(categories)) {
       const cmdsInCategory = commands.filter(cmd => cmd.category === category);
       if (cmdsInCategory.length > 0) {
-        session.sendLine(colors.bright + `=== ${title} ===` + colors.reset);
+        session.sendLine(colors.highlight(`=== ${title} ===`));
         cmdsInCategory.forEach(cmd => {
           const aliases = cmd.aliases && cmd.aliases.length > 0 ? ` (${cmd.aliases.join(', ')})` : '';
           const padding = ' '.repeat(Math.max(0, 20 - cmd.name.length - aliases.length));

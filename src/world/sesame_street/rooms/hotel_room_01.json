@@ -6,6 +6,7 @@
   "exits": {
     "east": "hotel_lobby"
   },
+  "preventWandering": true,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }

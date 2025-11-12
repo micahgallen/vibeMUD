@@ -27,17 +27,36 @@ module.exports = {
   wanders: true,
 
   /**
-   * Wandering heartbeat - NPC moves randomly between rooms
-   * This function is inherited by all monsters that have wanders: true
+   * Heartbeat - NPC speaks dialogue or wanders between rooms
+   * This function is inherited by all monsters
    */
   heartbeat: function(entityManager) {
+    // 30% chance to speak (if dialogue exists)
+    if (this.dialogue && this.dialogue.length > 0 && Math.random() < 0.3) {
+      const randomLine = this.dialogue[Math.floor(Math.random() * this.dialogue.length)];
+      entityManager.notifyRoom(this.currentRoom, `\x1b[36m${this.name} says, "\x1b[33m${randomLine}\x1b[36m"\x1b[0m`);
+      console.log(`  💬 ${this.name} says: "${randomLine}"`);
+      return;
+    }
+
+    // Only wander if wanders is true
     if (!this.wanders) return;
 
     const room = entityManager.get(this.currentRoom);
     if (!room || !room.exits || Object.keys(room.exits).length === 0) return;
 
+    // Filter exits to only include rooms that allow wandering NPCs
     const exits = Object.keys(room.exits);
-    const randomExit = exits[Math.floor(Math.random() * exits.length)];
+    const validExits = exits.filter(exit => {
+      const destRoom = entityManager.get(room.exits[exit]);
+      // Allow if room doesn't exist (shouldn't happen) or doesn't have preventWandering flag
+      return destRoom && !destRoom.preventWandering;
+    });
+
+    // No valid exits to wander to
+    if (validExits.length === 0) return;
+
+    const randomExit = validExits[Math.floor(Math.random() * validExits.length)];
     const newRoomId = room.exits[randomExit];
     const newRoom = entityManager.get(newRoomId);
 

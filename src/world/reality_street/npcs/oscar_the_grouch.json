@@ -1,0 +1,31 @@
+{
+  "id": "oscar_the_grouch",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Oscar the Grouch",
+  "description": "A disheveled green creature peers out from his trash can with the weary disdain of someone who's seen civilization and found it wanting. His fur is the color of week-old disappointment, and his eyes hold the kind of cynicism that comes from watching idealism die a thousand small deaths. He seems permanently annoyed by your existence, though to be fair, he appears to be annoyed by existence in general. The trash can around him bears the scars of a thousand slammed lids.",
+  "keywords": ["oscar", "grouch", "green", "creature"],
+  "currentRoom": "test_room",
+  "level": 8,
+  "hp": 150,
+  "maxHp": 150,
+  "wanders": false,
+  "preventWandering": true,
+  "heartbeatInterval": 60,
+  "dialogue": [
+    "Beat it! Can't you see I'm trying to be miserable in peace?",
+    "Oh great, another adventurer. Just what this alley needed - more foot traffic.",
+    "You know what I love? Nothing. Absolutely nothing. Now scram.",
+    "Reality Street's motto: 'Where dreams come to develop realistic expectations.'",
+    "I've been grouchy since before grouchy was a personality disorder. It's called being a pioneer.",
+    "You want cheerful? Go back to the sunny side of the street. We specialize in honest disappointment here.",
+    "I ain't homeless, I'm a trash connoisseur. There's a difference.",
+    "The only thing worse than people bothering me is people NOT bothering me. Wait, no, the first thing is worse.",
+    "You think you're tough coming down here? I've lived in garbage longer than you've been alive.",
+    "Go ahead, judge my lifestyle. I'll be over here, happy in my trash, while you chase your delusions.",
+    "What? No, I don't have any quests for you. This isn't that kind of alley.",
+    "Every day I wake up in trash, and somehow YOU'RE the thing that bothers me most."
+  ],
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

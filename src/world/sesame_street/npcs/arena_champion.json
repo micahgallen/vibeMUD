@@ -1,6 +1,7 @@
 {
   "id": "arena_champion",
   "type": "npc",
+  "definition": "monster",
   "name": "Gronk the Wumpy Gladiator",
   "description": "Before you stands a Wumpy like no other - a towering, battle-scarred specimen whose fur is matted with what you desperately hope is just dried mud. Gronk wears a grotesque suit of armor fashioned entirely from the bones of other Wumpies, held together with what appears to be sinew and deeply questionable life choices. A necklace of tiny Wumpy skulls (color-coded: red, blue, yellow, green, purple) rattles against their chest like the world's most disturbing wind chime. Their eyes hold the thousand-yard stare of someone who's not just kicked Wumpies, but has climbed to the top of the Wumpy food chain through sheer cannibalistic determination. A championship belt reading 'WUMPIE DIVISION CHAMPION - 47 CONSECUTIVE WINS (AND MEALS)' hangs around their waist. Despite the horrifying aesthetic, they seem... surprisingly articulate?",
   "keywords": ["gronk", "champion", "warrior", "fighter", "gladiator", "undefeated", "wumpy", "cannibal"],
@@ -8,6 +9,8 @@
   "level": 6,
   "hp": 65,
   "maxHp": 65,
+  "wanders": false,
+  "heartbeatInterval": 60,
   "abilities": {
     "str": 18,
     "dex": 14,

@@ -1,0 +1,16 @@
+{
+  "id": "counts_fountain",
+  "type": "room",
+  "definition": "healing_room",
+  "name": "Count von Count's Numerical Fountain",
+  "description": "A magnificent fountain dominates this small plaza, its waters arranged in precisely counted tiers. Each stream flows with mathematical precision while a plaque reads 'Vun healthy point! Two healthy points! THREE HEALTHY POINTS! Ah ah ah!' The air shimmers with an obsessive dedication to enumeration that somehow translates into restorative properties. Between the compulsive counting and the therapeutic waters, you feel remarkably refreshed.",
+  "items": [],
+  "containers": [],
+  "exits": {
+    "south": "sesame_street_north"
+  },
+  "heartbeatInterval": 5,
+  "healAmount": 5,
+  "createdAt": "2025-11-12T10:00:00Z",
+  "modifiedAt": "2025-11-12T10:00:00Z"
+}

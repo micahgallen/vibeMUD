@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { getDisplayName } = require('../utils/playerDisplay');
 
 module.exports = {
   id: "deleteplayer",
@@ -59,7 +60,7 @@ module.exports = {
     }
 
     session.sendLine('');
-    session.sendLine(colors.warning(`⚠️  Deleting player '${targetPlayer.name}' (${targetPlayer.id})...`));
+    session.sendLine(colors.warning(`⚠️  Deleting player '${getDisplayName(targetPlayer)}' (${targetPlayer.id})...`));
 
     // Step 1: Disconnect if online
     const targetSession = entityManager.sessions.get(targetPlayer.id);
@@ -115,7 +116,7 @@ module.exports = {
     }
 
     session.sendLine('');
-    session.sendLine(colors.success(`✅ Player '${targetPlayer.name}' has been permanently deleted.`));
+    session.sendLine(colors.success(`✅ Player '${getDisplayName(targetPlayer)}' has been permanently deleted.`));
     session.sendLine('');
   }
 };

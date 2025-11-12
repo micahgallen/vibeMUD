@@ -1,0 +1,80 @@
+# Capname Feature Implementation Plan
+
+## Objective
+Implement a new feature that allows players to set a "capname," which will serve as their display name throughout the MUD. This feature will include a `capname` command to view the current capname and integrate with the existing `set` command to allow players to set and modify their capname, including case adjustments.
+
+## Phase 1: Data Model and Persistence
+
+1.  **Analyze Player Data Structure:**
+    *   Review `src/data/players/*.json` to understand the current player data schema.
+    *   Examine `src/core/Session.js` and `src/core/EntityManager.js` to understand how player data is loaded, managed, and saved.
+
+2.  **Modify Player Data Model:**
+    *   Add a new field, `capname`, to the player's data structure. This field will store the player's chosen display name.
+    *   Ensure `capname` is initialized (e.g., to `null` or the player's `username` by default) when a new player is created or an existing player's data is loaded without a `capname` field.
+    *   Update the player saving mechanism (likely in `EntityManager` or `Session`) to persist the `capname` field.
+
+## Phase 2: `capname` Command Implementation
+
+1.  **Create New Command File:**
+    *   Create `src/commands/capname.js`.
+
+2.  **Define Command Metadata:**
+    *   Export an object with `id`, `name`, `aliases` (e.g., `['capname', 'displayname']`), `category`, `description`, `usage`, and `requiresLogin: true`.
+
+3.  **Implement `execute` Function:**
+    *   In the `execute` function, retrieve the player's `capname` from their `session.player` object.
+    *   If `capname` is set, send a message to the player displaying their current capname.
+    *   If `capname` is not set, inform the player that they haven't set a capname yet and how to do so (e.g., "You have not set a capname. Use `set capname <name>` to set one.").
+
+## Phase 3: Integrate `capname` into `set` Command
+
+1.  **Locate `set` Command:**
+    *   Identify the file for the `set` command, likely `src/commands/set.js`.
+
+2.  **Modify `set` Command's `execute` Function:**
+    *   Add logic to parse arguments for the `set` command.
+    *   If the command is `set capname <new_capname>`:
+        *   **Validation:** Implement validation for `new_capname` (e.g., minimum/maximum length, disallowed characters, profanity filter if desired). Provide appropriate error messages for invalid input.
+        *   **Case Adjustment:** Store the `new_capname` exactly as provided by the user, preserving their chosen casing. The display logic will then use this exact string.
+        *   **Update Player Data:** Set `session.player.capname` to the validated `new_capname`.
+        *   **Persistence:** Mark the player object as "dirty" (if a dirty-tracking system is in place) or explicitly trigger a save of the player's data.
+        *   **Confirmation:** Send a confirmation message to the player (e.g., "Your capname has been set to: <new_capname>").
+    *   Ensure existing `set` functionalities are not broken.
+
+## Phase 4: Display Name Integration
+
+1.  **Identify Display Locations:**
+    *   Search the codebase for instances where `player.name` or `player.username` is used for display purposes. Key areas include:
+        *   `src/commands/look.js` (when looking at other players)
+        *   `src/commands/who.js`
+        *   Any chat or communication system (e.g., `say`, `tell` commands, if they exist)
+        *   System messages (e.g., "PlayerName enters the room").
+
+2.  **Modify Display Logic:**
+    *   In each identified location, modify the code to prioritize `player.capname` for display. If `player.capname` is `null` or undefined, fall back to `player.username`.
+    *   Example: `player.capname || player.username`
+
+## Phase 5: Testing
+
+1.  **Unit Tests:**
+    *   **`capname` Command Tests:**
+        *   Test `capname` when no capname is set.
+        *   Test `capname` when a capname is set.
+    *   **`set` Command Tests (for capname):**
+        *   Test `set capname ValidName` to ensure it updates and persists.
+        *   Test `set capname` with invalid inputs (too short, too long, disallowed characters).
+        *   Test `set capname` with various casing (e.g., "MyName", "myname", "MYNAME") and verify the casing is preserved.
+        *   Test setting, then unsetting (if applicable, e.g., `set capname clear`).
+
+2.  **Manual End-to-End Testing:**
+    *   Log in with a new player.
+    *   Execute `capname` command.
+    *   Execute `set capname MyCoolName`.
+    *   Execute `capname` again to confirm.
+    *   Have another player `look` at the test player and verify the capname is displayed.
+    *   Execute `who` command and verify the capname is displayed.
+    *   Log out and log back in to verify persistence of the capname.
+    *   Test with different casing for the capname.
+    *   Test with invalid capnames to ensure validation works.
+    *   Verify that if `capname` is not set, the original username is displayed.

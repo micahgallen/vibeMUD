@@ -1,7 +1,9 @@
 {
   "id": "dagger_001",
   "type": "item",
+  "itemType": "weapon",
   "name": "Steel Dagger",
+  "description": "A well-balanced steel dagger with a sharp edge.",
   "definition": "steel_dagger",
   "location": {
     "type": "container",
@@ -9,6 +11,7 @@
   },
   "durability": 80,
   "damage": 5,
+  "value": 40,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T15:32:41.843Z"
 }

@@ -7,6 +7,7 @@
     "east": "sesame_street_03",
     "west": "hotel_room_01"
   },
+  "preventWandering": true,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }

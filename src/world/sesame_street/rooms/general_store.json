@@ -1,7 +1,7 @@
 {
   "id": "general_store",
   "type": "room",
-  "definition": "room",
+  "definition": "shop",
   "name": "Hooper's General Store",
   "description": "The store interior radiates an almost weaponized coziness, with wooden shelves stacked floor to ceiling with everything from birdseed to broadswords. A brass bell above the door jingles cheerfully whenever someone enters, having long since achieved sentience and a disturbing enthusiasm for its job. The scent of fresh cookies mingles with machine oil and existential dread in a way that somehow works.",
   "exits": {
@@ -9,6 +9,92 @@
   },
   "npcs": ["shopkeeper"],
   "heartbeatInterval": 60,
+  "preventWandering": true,
+
+  "isShop": true,
+  "merchantName": "Mr. Hooper",
+  "keeperTemper": "polite",
+
+  "keeperGold": 2000,
+  "bankGold": 10000,
+  "maxKeeperGold": 3000,
+  "minKeeperGold": 1000,
+  "usesBank": true,
+
+  "openHours": [[6, 22]],
+
+  "buyRate": 1.1,
+  "sellRate": 0.6,
+
+  "useDynamicPricing": true,
+  "pricingStat": "charisma",
+  "pricingStatDivisor": 70,
+  "pricingStatFloor": 0.85,
+  "pricingStatCeiling": 1.15,
+
+  "buyTypes": ["weapon", "armor", "food", "potion", "gem", "item", "tool", "light"],
+
+  "tradeWith": {
+    "notAlignment": [],
+    "onlyAlignment": [],
+    "notGuild": [],
+    "onlyGuild": [],
+    "notRace": [],
+    "onlyRace": [],
+    "minLevel": 1,
+    "maxLevel": 999
+  },
+
+  "merchandise": [
+    {
+      "itemId": "apple_001",
+      "price": 5,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "torch_001",
+      "price": 15,
+      "stock": 8,
+      "maxStock": 10
+    },
+    {
+      "itemId": "dagger_001",
+      "price": 50,
+      "stock": 3,
+      "maxStock": 5
+    },
+    {
+      "itemId": "potion_001",
+      "price": 75,
+      "stock": 5,
+      "maxStock": 8
+    }
+  ],
+
+  "messages": {
+    "greeting": "Welcome to Hooper's! We have everything you need and several things you don't!",
+    "noSuchItem": "I don't have that in stock right now. Check back later!",
+    "noSuchItemToSell": "You don't seem to have that item.",
+    "cantAfford": "I'm afraid you don't have enough gold for that, friend.",
+    "shopCantAfford": "Business has been slow lately. I can't afford to buy that from you right now.",
+    "noSellItem": "I appreciate the offer, but I don't deal in that sort of thing.",
+    "itemWorthless": "I'm sorry, but that item has no value.",
+    "itemBroken": "I won't buy broken items. Try getting it repaired first!",
+    "noSell": "That's not something I can buy from you.",
+    "successBuy": "That'll be %d gold. Thank you for your business!",
+    "successSell": "I'll give you %d gold for that. Pleasure doing business!",
+    "closed": "Sorry, we're closed for the evening. Come back tomorrow!",
+    "notOpen": "We're not open yet. Come back after 6 AM!",
+    "noTrade": "I'm afraid I can't do business with you."
+  },
+
+  "restockEnabled": true,
+  "restockInterval": 600,
+  "lastRestock": 0,
+
+  "greetNewArrivals": true,
+
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"
 }
