@@ -1,0 +1,26 @@
+{
+  "id": "yomama",
+  "name": "yomama",
+  "aliases": ["yourmom"],
+  "description": "Hurl classic yo mama jokes",
+  "usage": "yomama",
+  "definition": "emote",
+  "targetRequired": false,
+  "rotatingMessages": 5,
+  "messages": {
+    "untargeted": [
+      "Yo mama so fat, when she sat on a rainbow, Skittles popped out!",
+      "Yo mama so old, her birth certificate says 'expired'!",
+      "Yo mama so poor, ducks throw bread at her!",
+      "Yo mama so ugly, when she tried to join an ugly contest they said 'Sorry, no professionals'!",
+      "Yo mama so fat, she has her own area code!"
+    ],
+    "untargetedRoom": [
+      "{actor} shouts: \"Yo mama so fat, when she sat on a rainbow, Skittles popped out!\"",
+      "{actor} hollers: \"Yo mama so old, her birth certificate says 'expired'!\"",
+      "{actor} yells: \"Yo mama so poor, ducks throw bread at her!\"",
+      "{actor} proclaims: \"Yo mama so ugly, when she tried to join an ugly contest they said 'Sorry, no professionals'!\"",
+      "{actor} announces: \"Yo mama so fat, she has her own area code!\""
+    ]
+  }
+}
