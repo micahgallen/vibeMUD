@@ -1,0 +1,79 @@
+# Chat Command Implementation Plan
+
+## Objective
+Implement a global chat command with `chat <message>`, `chat on/off` toggles, a persistent chat log, and a `chat replay` command.
+
+## Phase 1: Core Chat Command (`chat <message>`)
+
+### 1.1 Create `src/commands/chat.js`
+*   Define the command structure: `id`, `name`, `aliases` (e.g., `['c']`), `category`, `description`, `usage`, `requiresLogin`, and an `execute` function.
+*   The `execute` function will:
+    *   Parse the input string to extract the message.
+    *   Format the message using ANSI colors: `<bold><blue>(<magenta>CHAT<blue>) (player's capname): (message)`. Utilize `src/colors.js` for color codes.
+    *   Retrieve all active player sessions from `EntityManager`.
+    *   Iterate through active sessions and send the formatted message to players who have `chatEnabled` set to `true`.
+    *   Call a dedicated logging function (see Phase 3) to append the message with a timestamp to `src/data/chat.log`.
+
+### 1.2 Integrate `chat.js`
+*   Ensure `src/core/CommandDispatcher.js` loads and registers the new `chat.js` command.
+
+## Phase 2: Chat Toggle (`chat on/off`)
+
+### 2.1 Player State Management
+*   Add a `chatEnabled` boolean property to the player object (e.g., within `Session.js`'s player data structure), defaulting to `true`.
+*   Ensure this `chatEnabled` state is persisted when a player saves their character. This will likely involve modifying the player data loading and saving logic in `src/core/Session.js` or `src/core/EntityManager.js`.
+
+### 2.2 Modify `src/commands/chat.js`
+*   Update the `execute` function to handle `chat on` and `chat off` sub-commands:
+    *   If the input is `chat on`, set the current player's `session.player.chatEnabled = true`. Send a confirmation message to the player.
+    *   If the input is `chat off`, set the current player's `session.player.chatEnabled = false`. Send a confirmation message to the player.
+    *   When broadcasting a chat message, check `recipientSession.player.chatEnabled` before sending the message to that player.
+
+## Phase 3: Chat Log File
+
+### 3.1 Log File Management
+*   Create a new file `src/data/chat.log`.
+*   Implement a helper function (e.g., `logChatMessage(message)`) that:
+    *   Generates a timestamp (e.g., `YYYY-MM-DD HH:MM:SS`).
+    *   Formats the log entry: `[TIMESTAMP] <player_capname>: <message>`.
+    *   Appends this formatted entry to `src/data/chat.log` using Node.js `fs.appendFileSync`. This function should be called from the `chat` command's `execute` method when a message is broadcast.
+
+## Phase 4: Chat Replay Command (`chat replay`)
+
+### 4.1 Modify `src/commands/chat.js`
+*   Add `replay` as another sub-command handler within the `execute` function.
+*   When `chat replay` is issued:
+    *   Read the last 10 lines from `src/data/chat.log`.
+    *   Send these lines to the requesting player.
+    *   Implement error handling for cases where `chat.log` does not exist or contains fewer than 10 lines.
+
+## Phase 5: Refinements and Testing
+
+### 5.1 Error Handling
+*   Add robust error handling for file operations (e.g., `chat.log` not found, write errors).
+*   Handle invalid command syntax (e.g., `chat` without a message, `chat invalid_subcommand`).
+
+### 5.2 ANSI Colors
+*   Ensure the color utility (`src/colors.js`) is correctly imported and used for consistent output.
+
+### 5.3 Player Capname
+*   Verify that the player's capitalized name is correctly retrieved for display in chat messages.
+
+### 5.4 Testing
+*   **Manual Testing:**
+    *   Start the MUD server.
+    *   Connect multiple telnet clients.
+    *   Test `chat <message>` from different players and observe global broadcast.
+    *   Verify entries in `src/data/chat.log`.
+    *   Test `chat off` for a player, then `chat <message>` from another player, and confirm the first player does not receive the message.
+    *   Test `chat on` for the player, then `chat <message>` again, and confirm reception.
+    *   Test `chat replay` and verify the last 10 messages are displayed.
+    *   Test scenarios with an empty `chat.log` or a log with fewer than 10 entries for `chat replay`.
+    *   Test invalid `chat` commands.
+
+## Files to be modified/created:
+*   `src/commands/chat.js` (new file)
+*   `src/core/CommandDispatcher.js` (modification)
+*   `src/core/Session.js` (modification for player state persistence)
+*   `src/data/chat.log` (new file, created by the system/logging function)
+*   Potentially `src/utils/chatLogger.js` (new file, if a separate utility is preferred for logging)
