@@ -132,6 +132,7 @@ class LoginHandler {
       level: 1,
       currentRoom: 'test_room', // TODO: Change to sesame_street_south when Sesame Street content is ported
       inventory: [],
+      chatEnabled: true, // New property for chat functionality
       createdAt: new Date().toISOString(),
       modifiedAt: new Date().toISOString()
     };
