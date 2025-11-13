@@ -410,6 +410,11 @@ module.exports = {
       price = buyPrice;
     }
 
+    // Enforce minimum of 1 copper unless item explicitly has value: 0
+    if (baseValue > 0 && price < 1) {
+      price = 1;
+    }
+
     return { price, reason: 'ok' };
   },
 
@@ -520,8 +525,25 @@ module.exports = {
       }
     }
 
-    // Could optionally add item to shop's inventory here
-    // For now, we assume items sold to shop are "absorbed"
+    // Check if this item matches any merchandise - if so, add to stock
+    if (this.merchandise && Array.isArray(this.merchandise)) {
+      // Get the item's template ID (check prototype chain)
+      let templateId = null;
+      if (item.__proto__ && item.__proto__.id) {
+        templateId = item.__proto__.id;
+      } else if (item.templateId) {
+        templateId = item.templateId;
+      }
+
+      // Find matching merchandise entry
+      if (templateId) {
+        const merch = this.merchandise.find(m => m.itemId === templateId);
+        if (merch && merch.stock !== -1) {
+          // Increase stock (shop bought it back)
+          merch.stock = (merch.stock || 0) + 1;
+        }
+      }
+    }
 
     entityManager.markDirty(this.id);
     return { success: true, reason: 'ok' };

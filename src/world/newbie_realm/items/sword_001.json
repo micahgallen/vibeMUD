@@ -1,14 +1,12 @@
 {
   "id": "sword_001",
   "type": "item",
+  "definition": "weapon",
   "name": "Iron Sword",
-  "definition": "iron_sword",
-  "location": {
-    "type": "inventory",
-    "owner": "testplayer"
-  },
+  "description": "A sturdy iron blade with a leather-wrapped hilt.",
+  "value": 50,
+  "weight": 3.5,
+  "damage": "1d8",
   "durability": 100,
-  "isEquipped": false,
-  "createdAt": "2025-11-12T10:00:00Z",
-  "modifiedAt": "2025-11-12T15:21:26.174Z"
+  "maxDurability": 100
 }

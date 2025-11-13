@@ -10,6 +10,10 @@
     "east": "general_store",
     "west": "bar"
   },
+  "fixtures": [
+    "sesame_street_welcome_sign",
+    "sesame_street_map_sign"
+  ],
   "npcs": ["big_bird"],
   "heartbeatInterval": 60,
   "createdAt": "2025-11-12T10:00:00Z",

@@ -5,10 +5,19 @@
   "hp": 100,
   "maxHp": 100,
   "level": 1,
-  "currentRoom": "test_room",
+  "currentRoom": "general_store",
   "inventory": [],
   "createdAt": "2025-11-12T15:21:25.701Z",
   "modifiedAt": "2025-11-12T15:29:05.224Z",
   "passwordHash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
-  "capname": "\u001b[31mT\u001b[1mE\u001b[0m\u001b[33mS\u001b[1mT\u001b[32mP\u001b[0m\u001b[32mL\u001b[36m\u001b[1mA\u001b[0m\u001b[36mY\u001b[34m\u001b[1mE\u001b[0m\u001b[34mR\u001b[0m"
+  "capname": "\u001b[31mT\u001b[1mE\u001b[0m\u001b[33mS\u001b[1mT\u001b[32mP\u001b[0m\u001b[32mL\u001b[36m\u001b[1mA\u001b[0m\u001b[36mY\u001b[34m\u001b[1mE\u001b[0m\u001b[34mR\u001b[0m",
+  "purse": {
+    "coins": {
+      "platinum": 0,
+      "gold": 6,
+      "silver": 5,
+      "copper": 0
+    }
+  },
+  "bankAccount": 0
 }

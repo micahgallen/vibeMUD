@@ -38,8 +38,15 @@ module.exports = {
       }
     }
 
-    // Normal item drop
-    const itemName = lowerArgs;
+    // Check if dropping a quantity of an item (e.g., "drop 2 apple")
+    const quantityMatch = lowerArgs.match(/^(\d+)\s+(.+)$/);
+    let dropQuantity = null;
+    let itemName = lowerArgs;
+
+    if (quantityMatch) {
+      dropQuantity = parseInt(quantityMatch[1], 10);
+      itemName = quantityMatch[2];
+    }
 
     // Find item in player inventory
     const item = Array.from(entityManager.objects.values()).find(obj =>
@@ -54,13 +61,42 @@ module.exports = {
       return;
     }
 
-    // Move item to room
+    // Handle stack splitting if quantity specified and item is stackable
     try {
-      entityManager.move(item.id, {
-        type: 'room',
-        room: player.currentRoom
-      });
-      session.sendLine(colors.warning(`You drop ${item.name}.`));
+      if (dropQuantity && item.stackable && item.quantity > 1) {
+        if (dropQuantity >= item.quantity) {
+          // Dropping entire stack
+          entityManager.move(item.id, {
+            type: 'room',
+            room: player.currentRoom
+          });
+          session.sendLine(colors.warning(`You drop ${item.getDisplayName()}.`));
+        } else if (dropQuantity < 1) {
+          session.sendLine('You must drop at least 1.');
+          return;
+        } else {
+          // Split the stack
+          const splitStack = item.split(dropQuantity, entityManager);
+          if (splitStack) {
+            // Move the split stack to the room
+            entityManager.move(splitStack.id, {
+              type: 'room',
+              room: player.currentRoom
+            });
+            session.sendLine(colors.warning(`You drop ${splitStack.getDisplayName()}.`));
+          } else {
+            session.sendLine(colors.error('Unable to split that item.'));
+          }
+        }
+      } else {
+        // Drop entire item/stack
+        entityManager.move(item.id, {
+          type: 'room',
+          room: player.currentRoom
+        });
+        const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
+        session.sendLine(colors.warning(`You drop ${displayName}.`));
+      }
     } catch (error) {
       session.sendLine(colors.error(`Error: ${error.message}`));
     }

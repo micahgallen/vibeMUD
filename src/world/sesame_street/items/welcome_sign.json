@@ -3,10 +3,6 @@
   "definition": "signs",
   "name": "Welcome Sign",
   "description": "A cheerful painted sign with bright letters. You could READ it.",
-  "location": {
-    "type": "room",
-    "room": "sesame_street_01"
-  },
   "signTitle": "Welcome to Sesame Street!",
   "signContent": [
     "Can you tell me how to get,",
@@ -27,6 +23,7 @@
   ],
   "signType": "text",
   "canTake": false,
-  "createdAt": "2025-11-12T19:00:00Z",
-  "modifiedAt": "2025-11-12T19:00:00Z"
+  "type": "item",
+  "weight": 15.0,
+  "value": 0
 }

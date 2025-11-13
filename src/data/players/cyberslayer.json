@@ -6,20 +6,18 @@
   "maxHp": 100,
   "isAdmin": true,
   "level": 1,
-  "currentRoom": "counting_house",
+  "currentRoom": "sesame_street_02",
   "inventory": [
-    "apple_001",
-    "apple_001",
-    "apple_001",
-    "apple_001",
-    "coins_copper_1763040930195_vz413215b"
+    "apple_001_1763057166400_szmnze0r0",
+    "apple_001_1763057304387_rphwq7tt0",
+    "apple_001_1763057440247_a208h0pca"
   ],
   "purse": {
     "coins": {
-      "platinum": 0,
-      "gold": 9,
-      "silver": 8,
-      "copper": 0
+      "platinum": 3,
+      "gold": 5,
+      "silver": 7,
+      "copper": 7
     }
   },
   "bankAccount": 7150,

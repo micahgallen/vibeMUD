@@ -3,9 +3,7 @@
   "type": "room",
   "name": "Reality Street - Dark Alleyway Entrance",
   "description": "The cheerful facade of Sesame Street ends here, abruptly and without apology. A narrow alleyway stretches before you, its walls weeping with damp and decorated with stains that inspire uncomfortable questions. The pavement transitions from sun-worn optimism to oil-slicked cynicism within a single step. Somewhere in the shadows, something metal drips with the patience of entropy itself. The darkness ahead doesn't so much invite you in as dare you to prove you belong. A battered trash can sits against one wall, its lid occasionally clanking with what you hope is just the wind.",
-  "items": [
-    "apple_001"
-  ],
+  "items": [],
   "containers": [
     "chest_001"
   ],

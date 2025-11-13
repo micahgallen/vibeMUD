@@ -1,17 +1,10 @@
 {
   "id": "potion_001",
   "type": "item",
-  "itemType": "potion",
+  "definition": "consumable",
   "name": "Health Potion",
   "description": "A small vial of red liquid that restores health when consumed.",
-  "definition": "health_potion",
-  "location": {
-    "type": "container",
-    "owner": "chest_001"
-  },
-  "quantity": 3,
   "value": 50,
-  "healAmount": 25,
-  "createdAt": "2025-11-12T10:00:00Z",
-  "modifiedAt": "2025-11-12T15:14:35.674Z"
+  "weight": 0.5,
+  "healAmount": 25
 }

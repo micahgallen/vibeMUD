@@ -75,13 +75,39 @@ module.exports = {
       return;
     }
 
-    // Move item to player inventory
+    // Check if item is stackable and player has an existing stack
     try {
-      entityManager.move(item.id, {
-        type: 'inventory',
-        owner: player.id
-      });
-      session.sendLine(colors.success(`You pick up ${item.name}.`));
+      let stacked = false;
+      if (item.stackable && item.canStackWith) {
+        // Look for existing stack in player inventory
+        const existingStack = Array.from(entityManager.objects.values()).find(obj =>
+          obj.type === 'item' &&
+          obj.location?.type === 'inventory' &&
+          obj.location?.owner === player.id &&
+          obj.id !== item.id &&
+          item.canStackWith(obj)
+        );
+
+        if (existingStack) {
+          // Stack with existing item
+          const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
+          const success = existingStack.stackWith(item, entityManager);
+          if (success) {
+            session.sendLine(colors.success(`You pick up ${displayName}.`));
+            stacked = true;
+          }
+        }
+      }
+
+      // If not stacked, move item to inventory normally
+      if (!stacked) {
+        entityManager.move(item.id, {
+          type: 'inventory',
+          owner: player.id
+        });
+        const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
+        session.sendLine(colors.success(`You pick up ${displayName}.`));
+      }
     } catch (error) {
       session.sendLine(colors.error(`Error: ${error.message}`));
     }

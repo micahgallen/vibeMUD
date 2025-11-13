@@ -9,6 +9,7 @@ const Currency = require('../systems/currency');
 module.exports = {
   type: 'item',
   itemType: 'currency',
+  stackable: true,
 
   /**
    * Get display name with quantity

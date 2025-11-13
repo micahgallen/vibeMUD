@@ -125,12 +125,11 @@ module.exports = {
       return;
     }
 
-    // Remove item from player's inventory
-    entityManager.move(itemToSell.id, { type: 'void' }); // Move to void (deleted)
-    const itemIndex = player.inventory.indexOf(itemToSell.id);
-    if (itemIndex > -1) {
-      player.inventory.splice(itemIndex, 1);
-    }
+    // Store item display name before destroying it
+    const soldItemName = itemToSell.name;
+
+    // Destroy the item instance (shop absorbs it or adds to stock)
+    entityManager.destroy(itemToSell.id);
 
     // Add money to player's purse
     const paymentCoins = Currency.breakdown(price);
@@ -138,7 +137,7 @@ module.exports = {
 
     // Success messages
     const paymentDisplay = Currency.format(paymentCoins);
-    session.sendLine(colors.success(`You sell ${itemToSell.name} for ${paymentDisplay}.`));
+    session.sendLine(colors.success(`You sell ${soldItemName} for ${paymentDisplay}.`));
 
     if (keeper) {
       // Replace price placeholder and remove "gold" suffix if present
@@ -150,11 +149,8 @@ module.exports = {
 
     // Notify room
     entityManager.notifyRoom(room.id,
-      colors.dim(`${getDisplayName(player)} sells ${itemToSell.name}.`),
+      colors.dim(`${getDisplayName(player)} sells ${soldItemName}.`),
       player.id
     );
-
-    // Delete the item object
-    entityManager.objects.delete(itemToSell.id);
   }
 };
