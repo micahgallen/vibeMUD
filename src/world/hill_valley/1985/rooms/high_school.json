@@ -1,0 +1,22 @@
+{
+    "id":  "high_school",
+    "name":  "Hill Valley High School",
+    "description":  "The imposing red-brick facade of Hill Valley High School stands as a monument to teenage angst, budding romances, and, famously, the very spot where a timid George McFly found his courage and delivered a legendary punch to the perpetually menacing Biff Tannen. The echoes of lockers slamming, school bells ringing, and perhaps even a faint \u0027Hey, McFly!\u0027 seem to linger in the air.",
+    "exits":  {
+                  "west":  "holts_diner"
+              },
+    "tags":  [
+                 "school",
+                 "story_event"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

@@ -1,0 +1,22 @@
+{
+    "id":  "holts_diner",
+    "name":  "Holts Diner",
+    "description":  "Step into Holts Diner, a vibrant blast from the past where the aroma of fresh coffee and sizzling burgers fills the air. The chrome gleams, the jukebox plays a familiar tune, and the booths are filled with locals, perpetually buzzing with the latest gossip about the Hill Valley High football team. It\u0027s the kind of place where you might overhear a life-changing conversation, or perhaps even witness a pivotal moment in someone\u0027s past... or future.",
+    "exits":  {
+                  "north":  "courthouse_square",
+                  "east":  "high_school"
+              },
+    "tags":  [
+                 "restaurant"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

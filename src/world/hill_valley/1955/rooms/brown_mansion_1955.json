@@ -1,0 +1,22 @@
+{
+    "id":  "brown_mansion_1955",
+    "name":  "Brown Mansion",
+    "description":  "The imposing, slightly overgrown Brown Mansion. A place where strange lights flicker in the dead of night and peculiar noises echo from within. It\u0027s the home of the town\u0027s most brilliant—and perhaps most unhinged—inventor, Dr. Emmett Brown. You can almost smell the ozone and burning rubber from his latest, undoubtedly groundbreaking, experiment.",
+    "exits":  {
+                  "north":  "texaco_1955"
+              },
+    "tags":  [
+                 "residential",
+                 "story_event"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

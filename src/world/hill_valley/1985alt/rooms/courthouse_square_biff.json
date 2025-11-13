@@ -1,0 +1,23 @@
+{
+    "id":  "courthouse_square_biff",
+    "name":  "Courthouse Square (1985A)",
+    "description":  "This is heavy. You\u0027re standing in what\u0027s left of Courthouse Square, but it\u0027s a twisted, nightmarish version of the place you remember. Graffiti is scrawled over every surface like angry scars, and the air hangs thick with the smell of decay and desperation. The iconic courthouse? It\u0027s a blackened, hollowed-out shell, the clock tower frozen forever at 10:04 PM, a silent testament to the night everything changed. This isn\u0027t just a town square anymore; it\u0027s a graveyard of memories, a place where hope checked out a long, long time ago.",
+    "exits":  {
+                  "north":  "biff_tower",
+                  "south":  "lyon_estates_slum"
+              },
+    "tags":  [
+                 "ruins",
+                 "landmark"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

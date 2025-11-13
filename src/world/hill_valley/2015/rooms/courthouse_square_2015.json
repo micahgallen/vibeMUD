@@ -1,0 +1,25 @@
+{
+    "id":  "courthouse_square_2015",
+    "name":  "Courthouse Square Plaza (2015)",
+    "description":  "This is heavy! The Courthouse Square of 2015 is a dazzling, chaotic symphony of the future. Kids on neon-glowing hoverboards zip past at dangerous speeds, weaving between holographic advertisements that flicker to life, trying to sell you everything from self-lacing sneakers to dehydrated pizza. The old, familiar clock tower stands proudly in the center, its clock face finally fixed, a stoic monument to a simpler time amidst the technological overload. The air hums with the gentle whir of flying cars overhead, a constant reminder that you\u0027re a long way from home. It\u0027s the Hill Valley you know, but turned up to eleven.",
+    "exits":  {
+                  "north":  "library_2015",
+                  "south":  "cafe_80s",
+                  "east":  "hover_tex",
+                  "west":  "holomemorial"
+              },
+    "tags":  [
+                 "landmark",
+                 "future"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

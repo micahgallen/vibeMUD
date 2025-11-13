@@ -1,0 +1,21 @@
+{
+    "id":  "lyon_estates_slum",
+    "name":  "Lyon Estates Slums",
+    "description":  "Whoa, this is not the Lyon Estates you were expecting. The gateway is gone, replaced by a grim, chain-link fence topped with barbed wire. This once-idyllic suburban dream is now a desolate slum, a prison for the people Biff hasn\u0027t outright crushed. Decrepit houses lean against each other like tired old men, and the silence is only broken by the wind whistling through broken windows. Biff\u0027s goons patrol the streets, their shadows long and menacing. It\u0027s a stark reminder that in this timeline, the future isn\u0027t just unwritten—it\u0027s been scribbled over by a madman.",
+    "exits":  {
+                  "north":  "courthouse_square_biff"
+              },
+    "tags":  [
+                 "slum"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

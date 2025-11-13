@@ -1,0 +1,22 @@
+{
+    "id":  "library",
+    "name":  "Hill Valley Library",
+    "description":  "A hushed sanctuary of knowledge, the Hill Valley Library stands as a testament to bygone eras. Rows upon rows of dusty tomes and ancient records line the shelves, each whispering tales from the town\u0027s very founding. You might half-expect to find a young George McFly poring over a sci-fi novel, or perhaps even a hidden compartment leading to a secret laboratory.",
+    "exits":  {
+                  "south":  "courthouse_square"
+              },
+    "tags":  [
+                 "building",
+                 "research"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}
