@@ -22,7 +22,31 @@ module.exports = {
     }
 
     const player = session.player;
+
+    // Check if player is a ghost
+    if (player.isGhost) {
+      session.sendLine(colors.error('You are a ghost and cannot pick up items until you respawn!'));
+      return;
+    }
+
     const itemName = args.toLowerCase().trim();
+
+    // Special handling for looting your own corpse
+    if (itemName.includes('corpse') || itemName === 'all') {
+      const myCorpse = Array.from(entityManager.objects.values()).find(obj =>
+        obj.type === 'container' &&
+        obj.location?.type === 'room' &&
+        obj.location?.room === player.currentRoom &&
+        obj.ownerId === player.id &&
+        obj.ownerType === 'player'
+      );
+
+      if (myCorpse && myCorpse.inventory && myCorpse.inventory.length > 0) {
+        // Loot your own corpse - transfer all items and destroy corpse
+        this.handleLootOwnCorpse(session, myCorpse, entityManager, colors);
+        return;
+      }
+    }
 
     // Special handling for coins
     if (itemName === 'coins' || itemName.endsWith(' coins') || itemName.endsWith(' coin')) {
@@ -170,6 +194,45 @@ module.exports = {
       // Notify room
       entityManager.notifyRoom(player.currentRoom,
         colors.dim(`${player.name} picks up some coins.`),
+        player.id);
+
+    } catch (error) {
+      session.sendLine(colors.error(`Error: ${error.message}`));
+    }
+  },
+
+  /**
+   * Handle looting your own corpse
+   * Transfers all items and despawns the corpse
+   */
+  handleLootOwnCorpse: function(session, corpse, entityManager, colors) {
+    const player = session.player;
+
+    try {
+      // Count items
+      const itemCount = corpse.inventory.length;
+
+      // Transfer all items to player's inventory
+      for (const itemId of [...corpse.inventory]) {
+        entityManager.move(itemId, {
+          type: 'inventory',
+          owner: player.id
+        });
+      }
+
+      // Remove corpse from world
+      entityManager.disableHeartbeat(corpse.id);
+      entityManager.removeFromLocation(corpse);
+      entityManager.objects.delete(corpse.id);
+
+      // Notify player
+      session.sendLine(colors.success(`You reclaim your possessions from ${corpse.name}.`));
+      session.sendLine(colors.info(`You recovered ${itemCount} item${itemCount !== 1 ? 's' : ''}.`));
+      session.sendLine(colors.dim(`The corpse crumbles to dust.`));
+
+      // Notify room
+      entityManager.notifyRoom(player.currentRoom,
+        colors.dim(`${player.name} reclaims their possessions from ${corpse.name}, which crumbles to dust.`),
         player.id);
 
     } catch (error) {

@@ -7,7 +7,7 @@
   "level": 1,
   "gold": 100,
   "charisma": 10,
-  "currentRoom": "reality_street_east_02",
+  "currentRoom": "teleport_booth",
   "inventory": [
     "dagger_001",
     "gem_001"

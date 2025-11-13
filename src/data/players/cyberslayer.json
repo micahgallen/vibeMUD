@@ -2,21 +2,26 @@
   "id": "cyberslayer",
   "type": "player",
   "name": "Cyberslayer",
-  "hp": 77,
+  "hp": 100,
   "maxHp": 100,
   "isAdmin": true,
   "level": 1,
-  "currentRoom": "sesame_street_02",
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "ac": 0,
+  "currentRoom": "sesame_street_01",
   "inventory": [
-    "apple_001_1763057166400_szmnze0r0",
-    "apple_001_1763057304387_rphwq7tt0",
-    "apple_001_1763057440247_a208h0pca"
+    "torch_001_1763062373740_pbxgmdnaa",
+    "potion_001_1763062376359_601xkkfzh",
+    "dagger_001_1763062402635_oq8jwt8i6",
+    "dagger_001_1763062775332_apsl1ztml"
   ],
   "purse": {
     "coins": {
       "platinum": 3,
-      "gold": 5,
-      "silver": 7,
+      "gold": 3,
+      "silver": 5,
       "copper": 7
     }
   },
@@ -27,5 +32,6 @@
   "tauntIndex": 0,
   "yomamaIndex": 3,
   "insultIndex": 4,
-  "capname": "\u001b[31m\u001b[1mCyBeR\u001b[34mSLAYER\u001b[0m"
+  "capname": "\u001b[31m\u001b[1mCyBeR\u001b[34mSLAYER\u001b[0m",
+  "isDead": false
 }

@@ -26,6 +26,13 @@ module.exports = {
     }
 
     const player = session.player;
+
+    // Check if player is a ghost
+    if (player.isGhost) {
+      session.sendLine(colors.error('You are a ghost and cannot give items until you respawn!'));
+      return;
+    }
+
     const parts = args.trim().split(/\s+/);
 
     if (parts.length < 2) {

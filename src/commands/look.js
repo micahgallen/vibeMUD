@@ -1,6 +1,6 @@
 /**
  * look command
- * Look at your surroundings
+ * Look at your surroundings or examine a specific target
  * Formatting styled after "The Wumpy and Grift"
  */
 
@@ -11,12 +11,19 @@ module.exports = {
   name: "look",
   aliases: ["l"],
   category: "basic",
-  description: "Look at your surroundings",
-  usage: "look",
-  help: "Shows the room you're in, along with any items, containers, and other players present.",
+  description: "Look at your surroundings or examine something",
+  usage: "look [target]",
+  help: "Shows the room you're in, along with any items, containers, and other players present. If you specify a target, shows detailed information about that item, NPC, or container.",
   requiresLogin: true,
 
   execute: function(session, args, entityManager, colors) {
+    // If args provided, examine the target in detail
+    if (args && args.trim().length > 0) {
+      const examineCommand = require('./examine.js');
+      return examineCommand.execute(session, args, entityManager, colors);
+    }
+
+    // Otherwise show the room
     const player = session.player;
     const room = entityManager.get(player.currentRoom);
 
@@ -101,10 +108,13 @@ module.exports = {
       output.push('');
       containersInRoom.forEach(container => {
         let display = 'You see ' + colors.objectName(container.name);
-        if (container.isLocked) {
-          display += colors.dim(' (locked)');
-        } else if (container.isOpen) {
-          display += colors.dim(' (open)');
+        // Only show container status if not explicitly hidden (e.g., corpses)
+        if (!container.hideContainerStatus) {
+          if (container.isLocked) {
+            display += colors.dim(' (locked)');
+          } else if (container.isOpen) {
+            display += colors.dim(' (open)');
+          }
         }
         display += ' here.';
         output.push(display);
@@ -120,7 +130,10 @@ module.exports = {
     );
 
     if (playersInRoom.length > 0) {
-      const playerNames = playersInRoom.map(p => colors.playerName(getDisplayName(p)));
+      const playerNames = playersInRoom.map(p => {
+        const name = colors.playerName(getDisplayName(p));
+        return p.isGhost ? name + colors.dim(' (ghost)') : name;
+      });
       output.push('\n' + colors.info('Also here: ') + playerNames.join(', '));
     }
 

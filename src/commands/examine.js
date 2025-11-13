@@ -10,7 +10,7 @@ module.exports = {
   category: "basic",
   description: "Examine an item or container closely",
   usage: "examine <thing>",
-  help: "Provides detailed information about an item or container, including stats like durability, damage, value, and contents.",
+  help: "Provides detailed information about an item or container, including stats like durability, damage, value, and contents. Note: 'look <thing>' does the same thing.",
   requiresLogin: true,
 
   execute: function(session, args, entityManager, colors) {
@@ -115,8 +115,11 @@ module.exports = {
     }
 
     if (target.type === 'container') {
-      const status = target.isOpen ? 'open' : 'closed';
-      session.sendLine(colors.magenta(`Status: ${status}`));
+      // Only show status if not explicitly hidden (e.g., corpses)
+      if (!target.hideContainerStatus) {
+        const status = target.isOpen ? 'open' : 'closed';
+        session.sendLine(colors.magenta(`Status: ${status}`));
+      }
 
       if (target.isOpen && target.inventory && target.inventory.length > 0) {
         session.sendLine('');

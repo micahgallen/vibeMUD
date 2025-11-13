@@ -73,9 +73,10 @@ module.exports = {
       // Format realm
       const paddedRealm = colors.pad(colors.colorize(realm, colors.MUD_COLORS.ROOM_NAME), 30);
 
-      // Status (for future expansion: ghost mode, afk, etc.)
-      const status = 'Active';
-      const paddedStatus = colors.pad(colors.colorize(status, colors.MUD_COLORS.SUCCESS), 15);
+      // Status (show ghost mode or active)
+      const status = player.isGhost ? 'Ghost' : 'Active';
+      const statusColor = player.isGhost ? colors.MUD_COLORS.DIM : colors.MUD_COLORS.SUCCESS;
+      const paddedStatus = colors.pad(colors.colorize(status, statusColor), 15);
 
       output.push(
         paddedName +

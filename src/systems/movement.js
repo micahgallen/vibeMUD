@@ -16,6 +16,13 @@ const { getDisplayName } = require('../utils/playerDisplay');
  */
 function movePlayer(session, direction, entityManager, colors) {
   const player = session.player;
+
+  // Check if player is a ghost
+  if (player.isGhost) {
+    session.sendLine(colors.error('You are a ghost and cannot move until you respawn!'));
+    return false;
+  }
+
   const currentRoom = entityManager.get(player.currentRoom);
 
   if (!currentRoom) {

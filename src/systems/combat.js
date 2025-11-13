@@ -369,7 +369,14 @@ function handleDeath(deadId, killerId, entityManager) {
 
   console.log(`  💀 ${dead.name} was slain by ${killer ? killer.name : 'unknown'}`);
 
-  // TODO: Phase 2 - Create corpse, handle respawn
+  // Phase 2: Create corpse and handle respawn
+  createCorpse(dead, room, entityManager);
+
+  if (dead.type === 'player') {
+    handlePlayerDeath(dead, entityManager);
+  } else if (dead.type === 'npc') {
+    handleNPCDeath(dead, entityManager);
+  }
 }
 
 /**
@@ -406,6 +413,223 @@ function shouldContinueCombat(encounter, entityManager) {
   }
 
   return true;
+}
+
+/**
+ * Create a corpse from a dead entity
+ * @param {object} dead - The dead entity
+ * @param {string} roomId - The room where death occurred
+ * @param {object} entityManager - The entity manager
+ * @returns {string} - The corpse ID
+ */
+function createCorpse(dead, roomId, entityManager) {
+  // Load corpse definition
+  const corpseDef = require('../lib/corpse');
+
+  // Generate unique corpse ID
+  const corpseId = `corpse_${dead.id}_${Date.now()}`;
+
+  // Create corpse object with prototypal inheritance
+  const corpse = Object.create(corpseDef);
+  Object.assign(corpse, {
+    id: corpseId,
+    name: `the corpse of ${dead.name}`,
+    description: dead.type === 'player'
+      ? `The lifeless body of ${dead.name} lies here.`
+      : `The remains of ${dead.name} lie here.`,
+    location: { type: 'room', room: roomId },
+    inventory: [],
+    createdAt: Date.now(),
+    heartbeatInterval: 60, // Check for decay every 60 seconds
+    ownerType: dead.type, // Track if this was a player or NPC corpse
+    ownerId: dead.id // Original entity ID for respawn
+  });
+
+  // Register corpse
+  entityManager.objects.set(corpseId, corpse);
+
+  // Transfer inventory to corpse
+  if (dead.inventory && dead.inventory.length > 0) {
+    for (const itemId of [...dead.inventory]) {
+      try {
+        entityManager.move(itemId, {
+          type: 'container',
+          owner: corpseId
+        });
+        console.log(`  💀 Moved ${itemId} to corpse`);
+      } catch (error) {
+        console.error(`  ⚠️  Failed to move ${itemId} to corpse:`, error.message);
+      }
+    }
+  }
+
+  // Enable decay heartbeat
+  entityManager.enableHeartbeat(corpseId, 60);
+
+  // Notify room
+  if (roomId) {
+    entityManager.notifyRoom(roomId,
+      `\x1b[90m${corpse.name} lies here.\x1b[0m`);
+  }
+
+  console.log(`  💀 Created corpse: ${corpseId} in ${roomId}`);
+
+  return corpseId;
+}
+
+/**
+ * Handle player death - turn into ghost and schedule respawn
+ * @param {object} player - The dead player
+ * @param {object} entityManager - The entity manager
+ */
+function handlePlayerDeath(player, entityManager) {
+  // Set ghost state
+  player.isGhost = true;
+  player.isDead = false; // Clear isDead, they're now a ghost
+  player.hp = 0; // Keep HP at 0 until respawn
+  entityManager.markDirty(player.id);
+
+  // Notify player
+  entityManager.notifyPlayer(player.id,
+    `\x1b[31m\n${'='.repeat(60)}\n` +
+    `You have died!\n` +
+    `You will respawn in 30 seconds...\n` +
+    `${'='.repeat(60)}\x1b[0m\n`);
+
+  console.log(`  👻 ${player.name} became a ghost`);
+
+  // Schedule respawn after 30 seconds
+  setTimeout(() => {
+    respawnPlayer(player.id, entityManager);
+  }, 30000);
+}
+
+/**
+ * Handle NPC death - despawn and schedule respawn
+ * @param {object} npc - The dead NPC
+ * @param {object} entityManager - The entity manager
+ */
+function handleNPCDeath(npc, entityManager) {
+  // Store respawn data before despawning
+  const respawnData = {
+    id: npc.id,
+    definition: npc.definition,
+    currentRoom: npc.currentRoom,
+    hp: npc.maxHp,
+    level: npc.level,
+    // Store any other essential properties
+    ...JSON.parse(JSON.stringify(npc)) // Deep clone
+  };
+
+  // Disable heartbeat
+  if (entityManager.heartbeats.has(npc.id)) {
+    entityManager.disableHeartbeat(npc.id);
+  }
+
+  // Remove NPC from game
+  entityManager.objects.delete(npc.id);
+
+  console.log(`  💀 Despawned NPC: ${npc.id}`);
+
+  // Schedule respawn after 5 minutes
+  setTimeout(() => {
+    respawnNPC(respawnData, entityManager);
+  }, 300000); // 5 minutes
+}
+
+/**
+ * Respawn a player at the respawn point
+ * @param {string} playerId - The player ID
+ * @param {object} entityManager - The entity manager
+ */
+function respawnPlayer(playerId, entityManager) {
+  const player = entityManager.get(playerId);
+
+  if (!player) {
+    console.warn(`Cannot respawn: player ${playerId} not found`);
+    return;
+  }
+
+  // Remove ghost state
+  delete player.isGhost;
+
+  // Restore HP to full
+  player.hp = player.maxHp;
+
+  // Teleport to respawn point (Count von Count's healing fountain)
+  const respawnRoom = 'counts_fountain';
+  player.currentRoom = respawnRoom;
+
+  entityManager.markDirty(playerId);
+
+  // Notify player
+  entityManager.notifyPlayer(playerId,
+    `\x1b[32m\n${'='.repeat(60)}\n` +
+    `You have been resurrected!\n` +
+    `${'='.repeat(60)}\x1b[0m\n`);
+
+  // Notify respawn room
+  entityManager.notifyRoom(respawnRoom,
+    `\x1b[36m${player.name} materializes from the void.\x1b[0m`,
+    playerId);
+
+  console.log(`  ✨ ${player.name} respawned at ${respawnRoom}`);
+
+  // Auto-look at new location
+  const lookCommand = require('../commands/look.js');
+  const session = Array.from(entityManager.sessions.values()).find(s =>
+    s.player && s.player.id === playerId
+  );
+
+  if (session) {
+    const colors = require('../core/colors');
+    lookCommand.execute(session, '', entityManager, colors);
+  }
+}
+
+/**
+ * Respawn an NPC at its original location
+ * @param {object} respawnData - The NPC respawn data
+ * @param {object} entityManager - The entity manager
+ */
+function respawnNPC(respawnData, entityManager) {
+  // Check if NPC already exists (shouldn't happen, but safety check)
+  if (entityManager.objects.has(respawnData.id)) {
+    console.warn(`Cannot respawn: NPC ${respawnData.id} already exists`);
+    return;
+  }
+
+  // Load definition if available
+  let npc = respawnData;
+  if (respawnData.definition) {
+    try {
+      const definition = require(`../lib/${respawnData.definition}`);
+      npc = Object.create(definition);
+      Object.assign(npc, respawnData);
+    } catch (error) {
+      console.warn(`Could not load definition ${respawnData.definition}, using raw data`);
+    }
+  }
+
+  // Reset to full HP
+  npc.hp = npc.maxHp;
+  delete npc.isDead;
+
+  // Register NPC
+  entityManager.objects.set(npc.id, npc);
+
+  // Re-enable heartbeat if NPC had one
+  if (npc.heartbeatInterval) {
+    entityManager.enableHeartbeat(npc.id, npc.heartbeatInterval);
+  }
+
+  // Notify room
+  if (npc.currentRoom) {
+    entityManager.notifyRoom(npc.currentRoom,
+      `\x1b[36m${npc.name} appears.\x1b[0m`);
+  }
+
+  console.log(`  ✨ NPC respawned: ${npc.id} at ${npc.currentRoom}`);
 }
 
 module.exports = {

@@ -22,6 +22,13 @@ module.exports = {
     }
 
     const player = session.player;
+
+    // Check if player is a ghost
+    if (player.isGhost) {
+      session.sendLine(colors.error('You are a ghost and cannot drop items until you respawn!'));
+      return;
+    }
+
     const lowerArgs = args.toLowerCase().trim();
 
     // Check if this is a coin drop command (e.g., "10 gold", "5 silver coins")

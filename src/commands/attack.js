@@ -18,6 +18,12 @@ module.exports = {
   execute: function(session, args, entityManager, colors) {
     const player = session.player;
 
+    // Check if player is a ghost
+    if (player.isGhost) {
+      session.sendLine(colors.error('You are a ghost and cannot fight until you respawn!'));
+      return;
+    }
+
     // Check if already in combat
     if (player.combat) {
       session.sendLine(colors.error('You are already in combat!'));
