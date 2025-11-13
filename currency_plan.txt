@@ -13,12 +13,29 @@ Implement a **multi-denomination currency system** that:
 
 ## 🧩 OVERVIEW
 
-We’ll introduce:
+We'll introduce:
 
 *   A **`Currency` utility object** (defines denominations, conversion rates, and helper functions).
 *   A **`Purse` definition** (behavior for a player's coin container).
-*   Integration into the **Player object** (easy access to the player’s purse).
-*   Commands: `coins`, `deposit`, `withdraw`, `give`, etc.
+*   A **`Coin` item definition** (physical coins that exist in the world).
+*   A **hybrid digital/physical system** (purses for entities, items only when dropped).
+*   Integration into the **Player object** (easy access to the player's purse).
+*   Commands: `coins`, `deposit`, `withdraw`, `give`, `drop`, `get`, etc.
+
+### 💎 Hybrid Digital/Physical Design
+
+**Digital (Purse) - Default for all entities:**
+- Players, NPCs, and corpses all have digital purses
+- All entity-to-entity transfers are purse-to-purse
+- Auto-converts to optimal denominations
+- Has weight (encourages banking)
+
+**Physical (Coin Items) - Only when:**
+- Explicitly dropped to room floor with `drop <amount> <type>`
+- Placed as world content (treasure in rooms)
+- When picked up with `get coins`, items are destroyed and value added to purse
+
+**Key principle:** Players never have coin items in inventory - coins are either in their purse (data) or on the ground (items).
 
 ---
 
@@ -352,8 +369,28 @@ Later, the same `Currency` utility can easily power:
 *   **Shops and vendors**
 *   **Quest rewards**
 *   **Guild fees and dues**
-*   **Bank accounts** (store more coins safely)
-*   **Weight calculations** (coins weigh something)
+*   **Bank accounts** (store more coins safely) - **REQUIRED FEATURE**
+*   **Weight calculations** (coins weigh something) - **REQUIRED FEATURE**
+
+## 🏦 7. Banking System (Required)
+
+**Purpose**: Central bank where players can deposit money for safe storage without weight burden.
+
+**Storage Locations:**
+1. **Purse** (on player) - Digital, auto-converts, HAS WEIGHT
+2. **Bank Account** (NPC/building) - Digital, no weight, safe storage
+3. **Ground/containers** - Physical coin items
+
+**Commands:**
+- `balance` - Check bank account
+- `deposit <amount> <type>` - Purse → Bank
+- `withdraw <amount> <type>` - Bank → Purse
+
+**Weight Mechanics:**
+- Coins in purse count toward player encumbrance
+- Heavy purses slow movement or limit carrying capacity
+- Encourages banking excess wealth
+- Creates risk/reward for carrying large amounts
 
 ---
 

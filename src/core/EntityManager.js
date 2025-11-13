@@ -83,6 +83,11 @@ class EntityManager {
             obj = instanceData;
           }
 
+          // Initialize purse for players and NPCs
+          if (obj.type === 'player' || obj.type === 'npc') {
+            this.initializePurse(obj);
+          }
+
           this.objects.set(obj.id, obj);
         }
 
@@ -517,6 +522,84 @@ class EntityManager {
 
     console.log(`  ✅ Reloaded ${reloaded} room(s), added ${added} new room(s)`);
     return { reloaded, added };
+  }
+
+  // ========================================
+  // Purse and Currency Methods
+  // ========================================
+
+  /**
+   * Initialize purse for a player or NPC
+   * Adds purse property and helper methods
+   */
+  initializePurse(entity) {
+    const Currency = require('../systems/currency');
+
+    // Initialize purse if it doesn't exist
+    if (!entity.purse) {
+      entity.purse = {
+        coins: entity.type === 'player' ?
+          { ...Currency.startingMoney } :  // Players get starting money
+          Currency.empty()                  // NPCs start with empty purse
+      };
+    } else if (!entity.purse.coins) {
+      // Purse exists but no coins property
+      entity.purse.coins = entity.type === 'player' ?
+        { ...Currency.startingMoney } :
+        Currency.empty();
+    }
+
+    // Add bank account for players
+    if (entity.type === 'player' && entity.bankAccount === undefined) {
+      entity.bankAccount = 0; // Bank balance in copper
+    }
+
+    // Add helper methods to entity
+    entity.getCoins = function() {
+      return this.purse.coins;
+    };
+
+    entity.addCoins = function(coins, entityManager) {
+      this.purse.coins = Currency.add(this.purse.coins, coins);
+      if (entityManager) {
+        entityManager.markDirty(this.id);
+      }
+    };
+
+    entity.removeCoins = function(coins, entityManager) {
+      this.purse.coins = Currency.subtract(this.purse.coins, coins);
+      if (entityManager) {
+        entityManager.markDirty(this.id);
+      }
+    };
+
+    entity.hasCoins = function(coins) {
+      return Currency.hasEnough(this.purse.coins, coins);
+    };
+
+    entity.getCoinValue = function() {
+      return Currency.totalValue(this.purse.coins);
+    };
+
+    entity.displayPurse = function() {
+      return `Your purse contains ${Currency.format(this.purse.coins)}.`;
+    };
+  }
+
+  /**
+   * Find a player by name (case-insensitive)
+   * Only searches online players
+   */
+  findPlayerByName(name) {
+    const lowerName = name.toLowerCase();
+    for (const session of this.sessions.values()) {
+      if (session.state === 'playing' &&
+          session.player &&
+          session.player.name.toLowerCase() === lowerName) {
+        return session.player;
+      }
+    }
+    return null;
   }
 
   // ========================================

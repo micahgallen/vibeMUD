@@ -7,7 +7,7 @@
   "level": 1,
   "gold": 100,
   "charisma": 10,
-  "currentRoom": "sesame_street_01",
+  "currentRoom": "reality_street_east_02",
   "inventory": [
     "dagger_001",
     "gem_001"
@@ -15,7 +15,7 @@
   "createdAt": "2025-11-12T15:21:45.935Z",
   "modifiedAt": "2025-11-12T15:28:42.436Z",
   "passwordHash": "e42e7a4431c5b4a8d6a785280d11bea081f43ba15ca1fd39a8a62d1a161a2f1f",
-  "tauntIndex": 3,
+  "tauntIndex": 4,
   "yomamaIndex": 4,
   "insultIndex": 1,
   "capname": "\u001b[37m\u001b[1mT\u001b[30me\u001b[0m\u001b[31mX\u001b[30m\u001b[1ma\u001b[37mN\u001b[0m"
