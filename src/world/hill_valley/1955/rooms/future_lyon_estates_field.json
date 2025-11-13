@@ -1,0 +1,22 @@
+{
+    "id":  "future_lyon_estates_field",
+    "name":  "Empty Field (Future Lyon Estates Site)",
+    "description":  "Just an empty, unassuming field for now, but a large billboard proudly proclaims \u0027Lyon Estates – Coming Soon!\u0027. It\u0027s a glimpse into a future that hasn\u0027t quite arrived yet, a blank canvas waiting for suburban dreams to be built. You can almost hear the distant hum of lawnmowers and the faint cries of children playing, a future that feels both inevitable and incredibly far away.",
+    "exits":  {
+                  "north":  "brown_mansion_1955"
+              },
+    "tags":  [
+                 "field",
+                 "future_landmark"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

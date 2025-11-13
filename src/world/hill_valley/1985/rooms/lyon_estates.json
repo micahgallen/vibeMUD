@@ -1,0 +1,22 @@
+{
+    "id":  "lyon_estates",
+    "name":  "Lyon Estates",
+    "description":  "Welcome to Lyon Estates, a picture-perfect slice of 1980s suburbia. Rows of identical tract homes, each with its manicured lawn and two-car garage, stretch out in a seemingly endless grid. This is the quintessential American dream, where every house looks the same, and every family has a station wagon. Somewhere within this meticulously planned landscape lies the humble abode of the McFly family, a place where ordinary lives are about to become anything but.",
+    "exits":  {
+                  "west":  "brown_mansion",
+                  "north":  "twin_pines_mall"
+              },
+    "tags":  [
+                 "residential"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

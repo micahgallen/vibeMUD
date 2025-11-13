@@ -1,0 +1,22 @@
+{
+    "id":  "twin_pines_transit_hub",
+    "name":  "Twin Pines Transit Hub",
+    "description":  "Roads? Where we\u0027re going, we don\u0027t need roads! Welcome to the Twin Pines Transit Hub, the beating heart of Hill Valley\u0027s transportation network. Gleaming maglev trains and sleek, aerodynamic hovercars glide in and out of crystalline tubes suspended high above the ground, their destinations flashing on holographic departure boards. The air crackles with the energy of a thousand journeys beginning and ending at once. It\u0027s a place of constant motion, a dizzying ballet of automated vehicles and hurried commuters, all orchestrated with a futuristic precision that\u0027s both awe-inspiring and a little bit terrifying. Don\u0027t get left behind!",
+    "exits":  {
+                  "south":  "lyon_estates_skygate"
+              },
+    "tags":  [
+                 "transport",
+                 "time_travel_site"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}

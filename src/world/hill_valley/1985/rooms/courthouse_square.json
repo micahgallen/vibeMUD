@@ -1,0 +1,25 @@
+{
+    "id":  "courthouse_square",
+    "name":  "Hill Valley Courthouse Square",
+    "description":  "The bustling heart of Hill Valley, where time seems to stand still, quite literally, with the grand courthouse clock perpetually frozen at 10:04 PM. Surrounding the square are quaint, historic shops, each holding a whisper of the past, and perhaps, a secret or two. You can almost hear the faint echo of a skateboard, or the distant rumble of a souped-up DeLorean.",
+    "exits":  {
+                  "north":  "library",
+                  "south":  "holts_diner",
+                  "east":  "bank",
+                  "west":  "texaco"
+              },
+    "tags":  [
+                 "landmark",
+                 "central"
+             ],
+    "type":  "room",
+    "items":  [
+
+              ],
+    "containers":  [
+
+                   ],
+    "npcs":  [
+
+             ]
+}
