@@ -537,16 +537,26 @@ class EntityManager {
 
     // Initialize purse if it doesn't exist
     if (!entity.purse) {
-      entity.purse = {
-        coins: entity.type === 'player' ?
-          { ...Currency.startingMoney } :  // Players get starting money
-          Currency.empty()                  // NPCs start with empty purse
-      };
+      if (entity.type === 'player') {
+        // Players get starting money (auto-converted to optimal denominations)
+        const startingValue = Currency.totalValue(Currency.startingMoney);
+        entity.purse = {
+          coins: Currency.breakdown(startingValue)
+        };
+      } else {
+        // NPCs start with empty purse
+        entity.purse = {
+          coins: Currency.empty()
+        };
+      }
     } else if (!entity.purse.coins) {
       // Purse exists but no coins property
-      entity.purse.coins = entity.type === 'player' ?
-        { ...Currency.startingMoney } :
-        Currency.empty();
+      if (entity.type === 'player') {
+        const startingValue = Currency.totalValue(Currency.startingMoney);
+        entity.purse.coins = Currency.breakdown(startingValue);
+      } else {
+        entity.purse.coins = Currency.empty();
+      }
     }
 
     // Add bank account for players
