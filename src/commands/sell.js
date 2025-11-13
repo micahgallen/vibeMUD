@@ -4,6 +4,7 @@
  */
 
 const { getDisplayName } = require('../utils/playerDisplay');
+const Currency = require('../systems/currency');
 
 module.exports = {
   id: "sell",
@@ -131,18 +132,16 @@ module.exports = {
       player.inventory.splice(itemIndex, 1);
     }
 
-    // Add gold to player
-    if (!player.gold) {
-      player.gold = 0;
-    }
-    player.gold += price;
-    entityManager.markDirty(player.id);
+    // Add money to player's purse
+    const paymentCoins = Currency.breakdown(price);
+    player.addCoins(paymentCoins, entityManager);
 
     // Success messages
-    session.sendLine(colors.success(`You sell ${itemToSell.name} for ${price} gold.`));
+    const paymentDisplay = Currency.format(paymentCoins);
+    session.sendLine(colors.success(`You sell ${itemToSell.name} for ${paymentDisplay}.`));
 
     if (keeper) {
-      const message = room.messages?.successSell?.replace('%d', price) || `I'll give you ${price} gold for that.`;
+      const message = room.messages?.successSell?.replace('%d', paymentDisplay) || room.messages?.successSell?.replace('%s', paymentDisplay) || `I'll give you ${paymentDisplay} for that.`;
       session.sendLine(colors.npc(`${keeper.name} says: "${message}"`));
       session.sendLine(colors.npc(`${keeper.name} says: "${room.getKeeperReaction('success')}"`));
     }

@@ -4,6 +4,7 @@
  */
 
 const { getDisplayName } = require('../utils/playerDisplay');
+const Currency = require('../systems/currency');
 
 module.exports = {
   id: "buy",
@@ -108,9 +109,11 @@ module.exports = {
       return;
     }
 
-    // Check if player has enough gold
-    if (!player.gold || player.gold < price) {
-      session.sendLine(colors.warning(room.messages?.cantAfford || "You don't have enough gold."));
+    // Check if player has enough money in purse
+    const playerCopper = Currency.totalValue(player.purse?.coins || {});
+    if (playerCopper < price) {
+      const priceCoins = Currency.breakdown(price);
+      session.sendLine(colors.warning(`You need ${Currency.format(priceCoins)} but only have ${Currency.format(player.purse.coins)}.`));
       if (keeper) {
         session.sendLine(colors.npc(`${keeper.name} says: "${room.getKeeperReaction('broke')}"`));
       }
@@ -135,9 +138,9 @@ module.exports = {
       return;
     }
 
-    // Deduct gold from player
-    player.gold -= price;
-    entityManager.markDirty(player.id);
+    // Deduct money from player's purse
+    const paymentCoins = Currency.breakdown(price);
+    player.removeCoins(paymentCoins, entityManager);
 
     // Add item to player's inventory
     if (!player.inventory) {
@@ -146,10 +149,11 @@ module.exports = {
     player.inventory.push(newItemId);
 
     // Success messages
-    session.sendLine(colors.success(`You buy ${itemTemplate.name} for ${price} gold.`));
+    const priceDisplay = Currency.format(paymentCoins);
+    session.sendLine(colors.success(`You buy ${itemTemplate.name} for ${priceDisplay}.`));
 
     if (keeper) {
-      const message = room.messages?.successBuy?.replace('%d', price) || `That'll be ${price} gold. Thank you!`;
+      const message = room.messages?.successBuy?.replace('%d', priceDisplay) || room.messages?.successBuy?.replace('%s', priceDisplay) || `That'll be ${priceDisplay}. Thank you!`;
       session.sendLine(colors.npc(`${keeper.name} says: "${message}"`));
     }
 

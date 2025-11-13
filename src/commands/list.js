@@ -3,6 +3,8 @@
  * Shows merchandise available for purchase in a shop
  */
 
+const Currency = require('../systems/currency');
+
 module.exports = {
   id: "list",
   name: "list",
@@ -72,12 +74,14 @@ module.exports = {
       // Get the actual item object for details
       const itemObj = entityManager.get(item.itemId);
       const itemName = itemObj ? itemObj.name : item.itemId;
-      const paddedName = itemName.padEnd(35);
-      const paddedStock = String(item.stock).padStart(8);
+      const paddedName = itemName.padEnd(30);
+      const paddedStock = String(item.stock).padStart(6);
       const price = item.price || 0;
-      const paddedPrice = String(price).padStart(6);
+      const priceCoins = Currency.breakdown(price);
+      const priceDisplay = Currency.format(priceCoins);
+      const paddedPrice = priceDisplay.padStart(20);
 
-      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(paddedPrice + 'g')}`);
+      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(paddedPrice)}`);
     });
 
     output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
