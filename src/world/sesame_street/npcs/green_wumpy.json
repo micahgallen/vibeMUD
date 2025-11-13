@@ -11,6 +11,21 @@
   "maxHp": 20,
   "wanders": true,
   "heartbeatInterval": 30,
+  "territory": [
+    "sesame_street_south",
+    "sesame_street_01",
+    "sesame_street_02",
+    "sesame_street_03",
+    "sesame_street_north",
+    "bar",
+    "general_store",
+    "counts_fountain",
+    "hotel_lobby",
+    "hotel_room_01",
+    "arena_main",
+    "arena_lounge",
+    "teleport_booth"
+  ],
   "dialogue": [
     "Wump. *scribbles in imaginary notebook*",
     "The Green Wumpy judges you silently. You feel like you've disappointed it somehow.",

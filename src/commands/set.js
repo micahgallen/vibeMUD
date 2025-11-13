@@ -45,8 +45,66 @@ const Command = {
         session.sendLine(colors.success(`Your capname has been set to: ${convertedCapname}`));
         break;
 
+      case 'tpenter':
+        if (!rawValue) {
+          session.sendLine(colors.highlight('Usage: set tpenter <message>'));
+          session.sendLine(colors.hint('Use {name} as a placeholder for your name.'));
+          session.sendLine(colors.hint('Example: set tpenter {name} materializes from the void!'));
+          return;
+        }
+
+        const convertedTpEnter = colors.parseColorTags(rawValue);
+        const visibleTpEnterLength = colors.visibleLength(convertedTpEnter);
+
+        if (visibleTpEnterLength > 200) {
+          session.sendLine(colors.error('Teleport enter message must be 200 visible characters or less.'));
+          return;
+        }
+
+        if (!convertedTpEnter.includes('{name}')) {
+          session.sendLine(colors.error('Teleport enter message must include {name} placeholder.'));
+          return;
+        }
+
+        session.player.tpEnterMessage = convertedTpEnter;
+        entityManager.markDirty(session.player.id);
+
+        const previewEnter = convertedTpEnter.replace('{name}', session.player.name);
+        session.sendLine(colors.success('Your teleport enter message has been set to:'));
+        session.sendLine(colors.info(previewEnter));
+        break;
+
+      case 'tpexit':
+        if (!rawValue) {
+          session.sendLine(colors.highlight('Usage: set tpexit <message>'));
+          session.sendLine(colors.hint('Use {name} as a placeholder for your name.'));
+          session.sendLine(colors.hint('Example: set tpexit {name} vanishes in a puff of smoke!'));
+          return;
+        }
+
+        const convertedTpExit = colors.parseColorTags(rawValue);
+        const visibleTpExitLength = colors.visibleLength(convertedTpExit);
+
+        if (visibleTpExitLength > 200) {
+          session.sendLine(colors.error('Teleport exit message must be 200 visible characters or less.'));
+          return;
+        }
+
+        if (!convertedTpExit.includes('{name}')) {
+          session.sendLine(colors.error('Teleport exit message must include {name} placeholder.'));
+          return;
+        }
+
+        session.player.tpExitMessage = convertedTpExit;
+        entityManager.markDirty(session.player.id);
+
+        const previewExit = convertedTpExit.replace('{name}', session.player.name);
+        session.sendLine(colors.success('Your teleport exit message has been set to:'));
+        session.sendLine(colors.info(previewExit));
+        break;
+
       default:
-        session.sendLine(colors.warning('Unknown property to set. Currently supported: capname.'));
+        session.sendLine(colors.warning('Unknown property to set. Currently supported: capname, tpenter, tpexit.'));
         session.sendLine(colors.highlight('Usage: set <property> <value>'));
         break;
     }
