@@ -56,6 +56,12 @@ module.exports = {
           const cmdCount = global.commandDispatcher.reloadCommands();
           session.sendLine(colors.success(`✅ Reloaded ${cmdCount} command file(s)`));
           session.sendLine(colors.hint('All commands are now updated.'));
+          // Broadcast to all players
+          for (const s of entityManager.sessions.values()) {
+            if (s.player && s.state === 'playing' && s.player.id !== session.player.id) {
+              s.sendLine(colors.system('[SYSTEM] Commands have been reloaded by an administrator.'));
+            }
+          }
           break;
 
         case 'emotes':
@@ -64,6 +70,12 @@ module.exports = {
           const emoteCount = global.commandDispatcher.reloadEmotes();
           session.sendLine(colors.success(`✅ Reloaded ${emoteCount} emote file(s)`));
           session.sendLine(colors.hint('All emotes are now updated.'));
+          // Broadcast to all players
+          for (const s of entityManager.sessions.values()) {
+            if (s.player && s.state === 'playing' && s.player.id !== session.player.id) {
+              s.sendLine(colors.system('[SYSTEM] Emotes have been reloaded by an administrator.'));
+            }
+          }
           break;
 
         case 'npcs':
@@ -72,6 +84,12 @@ module.exports = {
           const npcResult = entityManager.reloadNPCs();
           session.sendLine(colors.success(`✅ Reloaded ${npcResult.reloaded} NPC(s), added ${npcResult.added} new NPC(s)`));
           session.sendLine(colors.hint('NPC definitions, dialogue, and behaviors updated.'));
+          // Broadcast to all players
+          for (const s of entityManager.sessions.values()) {
+            if (s.player && s.state === 'playing' && s.player.id !== session.player.id) {
+              s.sendLine(colors.system('[SYSTEM] NPCs have been reloaded by an administrator.'));
+            }
+          }
           break;
 
         case 'rooms':
@@ -80,6 +98,12 @@ module.exports = {
           const roomResult = entityManager.reloadRooms();
           session.sendLine(colors.success(`✅ Reloaded ${roomResult.reloaded} room(s), added ${roomResult.added} new room(s)`));
           session.sendLine(colors.hint('Room descriptions and properties updated.'));
+          // Broadcast to all players
+          for (const s of entityManager.sessions.values()) {
+            if (s.player && s.state === 'playing' && s.player.id !== session.player.id) {
+              s.sendLine(colors.system('[SYSTEM] Rooms have been reloaded by an administrator.'));
+            }
+          }
           break;
 
         case 'all':
@@ -95,6 +119,12 @@ module.exports = {
           session.sendLine(colors.info(`   ${npcResultAll.reloaded + npcResultAll.added} NPC(s)`));
           session.sendLine(colors.info(`   ${roomResultAll.reloaded + roomResultAll.added} room(s)`));
           session.sendLine(colors.hint('All content is now updated.'));
+          // Broadcast to all players
+          for (const s of entityManager.sessions.values()) {
+            if (s.player && s.state === 'playing' && s.player.id !== session.player.id) {
+              s.sendLine(colors.system('[SYSTEM] All game content has been reloaded by an administrator.'));
+            }
+          }
           break;
 
         default:
