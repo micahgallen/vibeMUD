@@ -130,6 +130,10 @@ class LoginHandler {
       hp: 100,
       maxHp: 100,
       level: 1,
+      strength: 10,
+      dexterity: 10,
+      constitution: 10,
+      ac: 0,
       currentRoom: 'test_room', // TODO: Change to sesame_street_south when Sesame Street content is ported
       inventory: [],
       chatEnabled: true, // New property for chat functionality
@@ -158,6 +162,21 @@ class LoginHandler {
     session.player = player;
     session.state = 'playing';
     delete session.tempPassword;
+
+    // Clean up stale combat state
+    // Combat encounters are ephemeral and don't persist across restarts
+    // If player has combat state but the encounter doesn't exist, clear it
+    if (player.combat) {
+      const combatId = player.combat.combatId;
+      const encounter = this.entityManager.get(combatId);
+
+      if (!encounter) {
+        // Combat encounter no longer exists - clear stale state
+        console.log(`  🧹 Clearing stale combat state for ${player.name}`);
+        delete player.combat;
+        this.entityManager.markDirty(player.id);
+      }
+    }
 
     // Register session for heartbeat notifications
     this.entityManager.registerSession(player.id, session);

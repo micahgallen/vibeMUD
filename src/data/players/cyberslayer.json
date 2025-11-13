@@ -2,22 +2,30 @@
   "id": "cyberslayer",
   "type": "player",
   "name": "Cyberslayer",
-  "hp": 100,
+  "hp": 77,
   "maxHp": 100,
   "isAdmin": true,
   "level": 1,
-  "currentRoom": "sesame_street_north",
+  "currentRoom": "sesame_street_02",
   "inventory": [
-    "apple_001",
-    "apple_001",
-    "apple_001",
-    "apple_001"
+    "apple_001_1763057166400_szmnze0r0",
+    "apple_001_1763057304387_rphwq7tt0",
+    "apple_001_1763057440247_a208h0pca"
   ],
+  "purse": {
+    "coins": {
+      "platinum": 3,
+      "gold": 5,
+      "silver": 7,
+      "copper": 7
+    }
+  },
+  "bankAccount": 7150,
   "createdAt": "2025-11-12T15:22:13.603Z",
-  "modifiedAt": "2025-11-12T15:28:17.968Z",
+  "modifiedAt": "2025-11-13T10:00:00.000Z",
   "passwordHash": "2bda9b4dfbabfdb17cd74d827768da5198ae2b8155002a494524bbeaf6f5cdba",
   "tauntIndex": 0,
   "yomamaIndex": 3,
   "insultIndex": 4,
-  "capname": "\u001b[31mCYBER\u001b[34mslayer"
+  "capname": "\u001b[31m\u001b[1mCyBeR\u001b[34mSLAYER\u001b[0m"
 }

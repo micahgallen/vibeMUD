@@ -3,6 +3,8 @@
  * Shows merchandise available for purchase in a shop
  */
 
+const Currency = require('../systems/currency');
+
 module.exports = {
   id: "list",
   name: "list",
@@ -61,26 +63,27 @@ module.exports = {
 
     // Build the display
     let output = [];
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push(colors.roomName('  ' + (room.name || "Shop")));
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push('');
-    output.push(colors.colorize(' #   Item                                    Stock    Price', colors.ANSI.WHITE));
-    output.push(colors.line(55, '─', colors.MUD_COLORS.CYAN));
+    output.push(colors.colorize(' #   Item                               Stock      Price', colors.ANSI.WHITE));
+    output.push(colors.line(78, '-', colors.MUD_COLORS.CYAN));
 
     merchandise.forEach((item, index) => {
       // Get the actual item object for details
       const itemObj = entityManager.get(item.itemId);
       const itemName = itemObj ? itemObj.name : item.itemId;
-      const paddedName = itemName.padEnd(35);
-      const paddedStock = String(item.stock).padStart(8);
+      const paddedName = itemName.padEnd(34);
+      const paddedStock = String(item.stock).padStart(9);
       const price = item.price || 0;
-      const paddedPrice = String(price).padStart(6);
+      const priceCoins = Currency.breakdown(price);
+      const priceDisplay = Currency.format(priceCoins);
 
-      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(paddedPrice + 'g')}`);
+      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(priceDisplay)}`);
     });
 
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push(colors.hint("Type 'buy <number>' to purchase an item"));
     output.push(colors.hint("Type 'value <item>' to see what the shop will pay for your items"));
 

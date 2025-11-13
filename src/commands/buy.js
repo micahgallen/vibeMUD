@@ -4,6 +4,7 @@
  */
 
 const { getDisplayName } = require('../utils/playerDisplay');
+const Currency = require('../systems/currency');
 
 module.exports = {
   id: "buy",
@@ -108,48 +109,64 @@ module.exports = {
       return;
     }
 
-    // Check if player has enough gold
-    if (!player.gold || player.gold < price) {
-      session.sendLine(colors.warning(room.messages?.cantAfford || "You don't have enough gold."));
+    // Check if player has enough money in purse
+    const playerCopper = Currency.totalValue(player.purse?.coins || {});
+    if (playerCopper < price) {
+      const priceCoins = Currency.breakdown(price);
+      session.sendLine(colors.warning(`You need ${Currency.format(priceCoins)} but only have ${Currency.format(player.purse.coins)}.`));
       if (keeper) {
         session.sendLine(colors.npc(`${keeper.name} says: "${room.getKeeperReaction('broke')}"`));
       }
       return;
     }
 
-    // Create a new instance of the item
-    const newItemId = `${itemTemplate.id}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const newItem = Object.create(itemTemplate);
-    Object.assign(newItem, {
-      id: newItemId,
-      location: { type: 'inventory', owner: player.id }
-    });
+    // Check if player already has a stackable item of the same template
+    let existingStack = null;
+    if (itemTemplate.stackable && player.inventory && player.inventory.length > 0) {
+      for (const itemId of player.inventory) {
+        const item = entityManager.get(itemId);
+        // Check if they share the same prototype (same template)
+        if (item && item.__proto__ === itemTemplate) {
+          existingStack = item;
+          break;
+        }
+      }
+    }
 
-    // Register the new item
-    entityManager.objects.set(newItemId, newItem);
-
-    // Process the transaction
+    // Process the transaction first
     if (!room.purchaseItem(selectedItem.itemId, price, entityManager)) {
       session.sendLine("Error: Transaction failed.");
-      entityManager.objects.delete(newItemId);
       return;
     }
 
-    // Deduct gold from player
-    player.gold -= price;
-    entityManager.markDirty(player.id);
+    // Deduct money from player's purse
+    const paymentCoins = Currency.breakdown(price);
+    player.removeCoins(paymentCoins, entityManager);
 
-    // Add item to player's inventory
-    if (!player.inventory) {
-      player.inventory = [];
+    // Either stack with existing item or clone a new instance
+    let newItemId;
+    if (existingStack) {
+      // Stack with existing item
+      existingStack.quantity = (existingStack.quantity || 1) + 1;
+      entityManager.markDirty(existingStack.id);
+      newItemId = existingStack.id;
+    } else {
+      // Clone a new instance from the template
+      const newInstance = entityManager.clone(itemTemplate.id, {
+        location: { type: 'inventory', owner: player.id },
+        quantity: itemTemplate.stackable ? 1 : undefined
+      });
+      newItemId = newInstance.id;
     }
-    player.inventory.push(newItemId);
 
     // Success messages
-    session.sendLine(colors.success(`You buy ${itemTemplate.name} for ${price} gold.`));
+    const priceDisplay = Currency.format(paymentCoins);
+    session.sendLine(colors.success(`You buy ${itemTemplate.name} for ${priceDisplay}.`));
 
     if (keeper) {
-      const message = room.messages?.successBuy?.replace('%d', price) || `That'll be ${price} gold. Thank you!`;
+      // Replace price placeholder and remove "gold" suffix if present
+      let message = room.messages?.successBuy || `That'll be ${priceDisplay}. Thank you for your business!`;
+      message = message.replace('%d gold', priceDisplay).replace('%s gold', priceDisplay).replace('%d', priceDisplay).replace('%s', priceDisplay);
       session.sendLine(colors.npc(`${keeper.name} says: "${message}"`));
     }
 

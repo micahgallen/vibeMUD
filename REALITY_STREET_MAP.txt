@@ -1,0 +1,347 @@
+================================================================================
+                        REALITY STREET - COMPLETE MAP
+================================================================================
+
+LEGEND:
+  [ROOM]  = Room location
+  ---     = Connection (horizontal)
+  |       = Connection (vertical)
+  X       = BROKEN CONNECTION (one-way or mismatch)
+  *       = Dead end (single exit only)
+  ?       = Missing exit
+  /\      = Diagonal connection
+
+================================================================================
+                          DARK ALLEY (NORTH ENTRANCE)
+================================================================================
+
+         [sesame_street_north]
+                  |
+            (BROKEN EXIT!)
+                  |
+           [dark_alley_01]*
+            (Oscar's trash)
+                  |
+                east
+                  |
+           [dark_alley_02]
+                  |
+                east
+                  |
+           [dark_alley_03]
+                  |
+                east
+                  |
+           [dark_alley_04]
+                  |
+                north
+                  |
+================================================================================
+                       REALITY STREET MAIN LOOP
+================================================================================
+
+                         NORTH SIDE
+    [Precinct]*           [Deli]*
+         |                   |
+    north_02            north_04
+         |                   |
+    +----+----+----+----+----+----+
+    |                             |
+north_01                     north_04----[park_n3]
+    |                             |       (one-way!)
+    |                          east_01
+    |                             |
+                               east_02----[Bodega]*
+                                  |
+                               east_03----[park_lm4]
+                                  |
+                               east_04----[Clinic]*
+                                  |
+                               east_05
+                                  |
+                               east_06
+                                  |
+                              (southeast corner)
+
+
+                WEST SIDE                    EAST SIDE
+            [Laundromat]*
+                 |
+             west_02
+                 |
+             west_03----[park_lm1]
+                 |
+             west_04----[Pawnshop]*
+                 |
+             west_05
+                 |
+             west_06----[Payphone]*
+                 |
+            (SW corner)
+
+
+                        SOUTH SIDE - COMPLEX AREA
+                    *** MAJOR CONNECTION ISSUES ***
+
+           west_06                  east_06
+               |                        |
+               +----south_01            |
+               |         |              |
+               |    (connections?)      |
+         south_03----X----?        south_02
+          (outer)    |              (inner)
+               |     |                  |
+          southeast  X             northwest
+               |     |                  |
+         south_04----+            south_04
+          (outer)                  (inner - different room!)
+
+         NOTE: south_01, south_02, south_03, south_04 form a confused tangle
+               with mismatched connections. See detailed analysis below.
+
+
+                        SOUTHERN EXTENSION
+                         (from south_03)
+                               |
+                             south
+                               |
+                         south_05
+                               |
+                            south
+                               |
+                         condemned_01
+                               |
+                             east
+                               |
+                         condemned_02
+                               |
+                             east
+                               |
+                         condemned_03
+                               |
+                            south
+                               |
+                         school_entrance
+                               |
+                            south
+                               |
+                         school_hallway
+                          /    |    \
+                        /      |      \
+                  west/      south     \east
+                     /        |         \
+            classroom_01*  office    classroom_02*
+                           |
+                         south
+                           |
+                        storage*
+
+
+================================================================================
+                    HIGHLAND PARK (4x4 GRID INSIDE LOOP)
+================================================================================
+
+        NORTHWEST         NORTH          NORTHEAST
+         [park_n1]----[park_n2]----[park_n3]
+             |            |            |
+             |            |            |\
+             |            |            | (southwest diagonal
+         UPPER-W      UPPER-C      UPPER-E    to north_04)
+         [park_un1]---[park_un2]---[park_un3]---[park_un4]
+             |            |            |            |
+             |            |            |            |
+        CENTRAL-W    FOUNTAIN    CENTRAL-E     CENTRAL-E
+         [park_lm1]---[park_lm2]---[park_lm3]---[park_lm4]
+             |            |            |            |
+          (gate to       |            |         (gate to
+          west_03)       |            |         east_03)
+             |            |            |            |
+          SOUTH-W     SOUTH-C       SOUTH-C    SOUTH-E
+         [park_s1]----[park_s2]----[park_s3]----[park_s4]
+                    (playground)
+
+
+================================================================================
+                        DETAILED CONNECTION ANALYSIS
+================================================================================
+
+SOUTHEAST CORNER ISSUE (The Main Problem):
+-------------------------------------------
+
+The southeast corner has FOUR "south" rooms that should form a clean corner
+but instead create a confusing tangle:
+
+  reality_street_south_01 (inner, borders park)
+  reality_street_south_02 (inner, borders park)
+  reality_street_south_03 (OUTER corner - southwest)
+  reality_street_south_04 (OUTER corner - southeast)
+
+CURRENT BROKEN CONFIGURATION:
+
+  south_01 exits: east->south_03, west->west_06
+  south_02 exits: west->south_04, east->east_06
+  south_03 exits: north->west_06, east->south_01, southeast->south_04
+  south_04 exits: north->east_06, west->south_02, northwest->south_03
+
+PROBLEMS:
+
+1. south_01 goes EAST to south_03 (should be continuous along south edge)
+   but south_03 goes EAST to south_01 (they point at each other!)
+
+2. south_02 goes WEST to south_04 (should be continuous)
+   but south_04 goes WEST to south_02 (they point at each other!)
+
+3. south_01 and south_02 should be ADJACENT along the south park border
+   but there's NO connection between them!
+
+4. east_06 should connect WEST to south_02 (it does)
+   but south_04 claims east_06 goes north to IT (mismatch!)
+
+5. south_05 (extension) connects north to south_03, but south_03
+   has NO south exit back!
+
+
+================================================================================
+                           ALL ISSUES SUMMARY
+================================================================================
+
+CRITICAL ISSUES:
+----------------
+1. [dark_alley_01] - BROKEN EXIT south to "sesame_street_north" (doesn't exist)
+
+ONE-WAY EXITS:
+--------------
+2. [park_n3] -> southwest to [reality_street_north_04] (no return)
+3. [reality_street_south_01] -> east to [south_03] (no return west)
+4. [reality_street_south_02] -> west to [south_04] (no return east)
+5. [reality_street_south_04] -> north to [east_06] (but east_06 has no south)
+6. [reality_street_south_05] -> north to [south_03] (no return south)
+
+DIRECTIONAL MISMATCHES:
+-----------------------
+7. [reality_street_south_03] -> east to [south_01]
+   but [south_01] -> west to [west_06] (not back to south_03!)
+
+8. [reality_street_south_04] -> west to [south_02]
+   but [south_02] -> east to [east_06] (not back to south_04!)
+
+DEAD ENDS (info only):
+----------------------
+- Buildings: precinct, deli, bodega, clinic, laundromat, pawnshop, payphone
+- School rooms: classroom_01, classroom_02, storage
+  (These are intentional endpoint rooms)
+
+
+================================================================================
+                              RECOMMENDED FIXES
+================================================================================
+
+FILE: /home/micah/entity-manager-prototype/src/world/reality_street/rooms/
+
+FIX 1: dark_alley_01.json
+--------------------------
+ISSUE: Exit south points to non-existent "sesame_street_north"
+FIX: Change exit to point to correct Sesame Street room ID
+     (Requires knowing the correct Sesame Street entrance room ID)
+
+FIX 2: reality_street_north_04.json
+------------------------------------
+ISSUE: park_n3 has one-way diagonal connection here
+FIX: Add "northeast": "park_n3" to exits
+
+FIX 3: reality_street_east_06.json
+-----------------------------------
+ISSUE: Should connect south to the corner
+FIX: Add "south": "reality_street_south_04" to exits
+
+FIX 4-8: SOUTHEAST CORNER RESTRUCTURE
+--------------------------------------
+The southeast corner needs complete restructuring. Here's the CORRECT layout:
+
+        east_05
+           |
+        east_06 (SE corner)
+           |
+    +------+------+
+    |             |
+ south_02      south_04 (OUTER)
+    |             |
+ south_01      south_03 (OUTER)
+    |             |
+ west_06       south_05
+                  |
+              condemned_01
+
+CORRECT EXIT STRUCTURE:
+
+reality_street_east_06.json:
+  "exits": {
+    "north": "reality_street_east_05",
+    "west": "reality_street_south_02",
+    "south": "reality_street_south_04"
+  }
+
+reality_street_south_01.json:
+  "exits": {
+    "east": "reality_street_south_02",
+    "west": "reality_street_west_06",
+    "north": "park_s2"  (add park access if intended)
+  }
+
+reality_street_south_02.json:
+  "exits": {
+    "west": "reality_street_south_01",
+    "east": "reality_street_east_06",
+    "north": "park_s3"  (add park access if intended)
+  }
+
+reality_street_south_03.json:
+  "exits": {
+    "north": "reality_street_west_06",
+    "east": "reality_street_south_04",
+    "south": "reality_street_south_05"
+  }
+
+reality_street_south_04.json:
+  "exits": {
+    "north": "reality_street_east_06",
+    "west": "reality_street_south_03"
+  }
+
+reality_street_south_05.json:
+  "exits": {
+    "north": "reality_street_south_03",
+    "south": "condemned_01"
+  }
+
+reality_street_west_06.json:
+  "exits": {
+    "north": "reality_street_west_05",
+    "east": "reality_street_south_01",
+    "south": "reality_street_south_03",
+    "west": "payphone"
+  }
+
+
+================================================================================
+                                 SUMMARY
+================================================================================
+
+TOTAL ROOMS: 56
+TOTAL ISSUES: 8 (1 critical, 5 one-way, 2 mismatches)
+
+SOUTHEAST CORNER: The primary problem area with circular references and
+                  mismatched connections between south_01, south_02,
+                  south_03, and south_04.
+
+The street loop mostly works correctly, but the southeast corner where
+inner and outer sections meet is completely confused with rooms pointing
+at each other in ways that don't match the described layout.
+
+The park (16 rooms) is correctly connected internally.
+The dark alley (4 rooms) is correctly connected internally.
+The condemned building (3 rooms) is correctly connected.
+The school (6 rooms) is correctly connected.
+All peripheral buildings have correct single exits.
+
+================================================================================

@@ -1,0 +1,416 @@
+---
+
+## 🪙 GOAL
+
+Implement a **multi-denomination currency system** that:
+
+1. Uses **different coin types** (e.g., copper, silver, gold, platinum).
+2. Stores coins in a dedicated **`Purse` object** associated with the player.
+3. **Auto-converts** coins to the **largest possible denomination** when adding/removing currency.
+4. Supports **display, transfer, and trade** operations cleanly.
+
+---
+
+## 🧩 OVERVIEW
+
+We'll introduce:
+
+*   A **`Currency` utility object** (defines denominations, conversion rates, and helper functions).
+*   A **`Purse` definition** (behavior for a player's coin container).
+*   A **`Coin` item definition** (physical coins that exist in the world).
+*   A **hybrid digital/physical system** (purses for entities, items only when dropped).
+*   Integration into the **Player object** (easy access to the player's purse).
+*   Commands: `coins`, `deposit`, `withdraw`, `give`, `drop`, `get`, etc.
+
+### 💎 Hybrid Digital/Physical Design
+
+**Digital (Purse) - Default for all entities:**
+- Players, NPCs, and corpses all have digital purses
+- All entity-to-entity transfers are purse-to-purse
+- Auto-converts to optimal denominations
+- Has weight (encourages banking)
+
+**Physical (Coin Items) - Only when:**
+- Explicitly dropped to room floor with `drop <amount> <type>`
+- Placed as world content (treasure in rooms)
+- When picked up with `get coins`, items are destroyed and value added to purse
+
+**Key principle:** Players never have coin items in inventory - coins are either in their purse (data) or on the ground (items).
+
+---
+
+## 🧱 1. Currency Definitions
+
+Create a new directory `src/systems/` if it doesn't exist.
+Create a module `src/systems/currency.js` that defines the denominations and logic:
+
+```js
+// src/systems/currency.js
+const Currency = {
+  denominations: [
+    { name: 'platinum', value: 1000 },
+    { name: 'gold',     value: 100 },
+    { name: 'silver',   value: 10 },
+    { name: 'copper',   value: 1 }
+  ],
+
+  // Convert all coin amounts into a single integer value (in copper)
+  totalValue: function(coins) {
+    return (coins.copper || 0) +
+           (coins.silver || 0) * 10 +
+           (coins.gold || 0) * 100 +
+           (coins.platinum || 0) * 1000;
+  },
+
+  // Convert a raw value into denominations
+  breakdown: function(value) {
+    const coins = { platinum: 0, gold: 0, silver: 0, copper: 0 };
+    let remainingValue = value;
+    for (const denom of this.denominations) {
+      coins[denom.name] = Math.floor(remainingValue / denom.value);
+      remainingValue %= denom.value;
+    }
+    return coins;
+  },
+
+  // Add two coin sets and return an auto-converted result
+  add: function(a, b) {
+    const total = this.totalValue(a) + this.totalValue(b);
+    return this.breakdown(total);
+  },
+
+  subtract: function(a, b) {
+    const total = this.totalValue(a) - this.totalValue(b);
+    if (total < 0) throw new Error("Not enough funds");
+    return this.breakdown(total);
+  },
+
+  format: function(coins) {
+    return Object.entries(coins)
+      .filter(([_, amount]) => amount > 0)
+      .map(([name, amount]) => `${amount} ${name}`)
+      .join(", ") || "no coins";
+  }
+};
+
+module.exports = Currency;
+```
+
+This keeps **all denomination math centralized and consistent**.
+
+---
+
+## 👝 2. The Purse Definition
+
+Create a new definition file `src/lib/purse.js`. This will define the behavior for a player's purse object. The actual coin data will reside in the player's instance data.
+
+```js
+// src/lib/purse.js
+const Currency = require('../systems/currency');
+
+module.exports = {
+  /**
+   * Adds coins to this purse.
+   * The 'coins' property is expected to exist on the instance object.
+   * @param {object} coinsToAdd - An object like { copper: 10, silver: 1 }
+   */
+  addCoins: function(coinsToAdd) {
+    this.coins = Currency.add(this.coins || {}, coinsToAdd);
+  },
+
+  /**
+   * Removes coins from this purse.
+   * The 'coins' property is expected to exist on the instance object.
+   * @param {object} coinsToRemove - An object like { copper: 5 }
+   */
+  removeCoins: function(coinsToRemove) {
+    this.coins = Currency.subtract(this.coins || {}, coinsToRemove);
+  },
+
+  /**
+   * Gets the total value of coins in this purse in copper.
+   * The 'coins' property is expected to exist on the instance object.
+   * @returns {number} Total value in copper.
+   */
+  getTotalValue: function() {
+    return Currency.totalValue(this.coins || {});
+  },
+
+  /**
+   * Returns a formatted string of the purse's contents.
+   * The 'coins' property is expected to exist on the instance object.
+   * @returns {string} Formatted coin string.
+   */
+  displayContents: function() {
+    return `Your purse contains ${Currency.format(this.coins || {})}.`;
+  }
+};
+```
+
+---
+
+## 🧍‍♂️ 3. Integration into Player Object
+
+Player objects are loaded from JSON files (e.g., `src/data/players/*.json`) and managed by `EntityManager`. We need to ensure that:
+
+1.  Player JSON files include a `purse` object with initial `coins`.
+2.  The `EntityManager` mixes the `src/lib/purse.js` definition into the player's `purse` object when loading.
+3.  The `Player` object (or the object representing the player in `EntityManager`) has convenient methods to interact with their purse.
+
+**Step 3.1: Update Player JSON Structure**
+
+Modify existing player JSON files (e.g., `src/data/players/testplayer.json`) to include a `purse` property:
+
+```json
+// Example: src/data/players/testplayer.json
+{
+  "id": "testplayer",
+  "name": "TestPlayer",
+  "description": "A player for testing purposes.",
+  "currentRoom": "newbie_realm/rooms/test_room",
+  "inventory": [],
+  "purse": {
+    "coins": {
+      "copper": 0,
+      "silver": 0,
+      "gold": 0,
+      "platinum": 0
+    }
+  },
+  "definition": "player" // Assuming a 'player' definition exists or will be created
+}
+```
+*Note: A `player` definition in `src/lib/` might be needed if not already present, to define base player behaviors.*
+
+**Step 3.2: Modify `EntityManager` to mix in `purse.js` definition**
+
+Locate `src/core/EntityManager.js`. When an object is loaded, if it has a `purse` property, ensure the `src/lib/purse.js` definition is mixed into `object.purse`.
+
+```js
+// src/core/EntityManager.js (conceptual change)
+// Inside the loadObject or similar method where definitions are mixed in:
+
+// ... existing code ...
+
+if (object.purse) {
+  const purseDefinition = require('../lib/purse'); // Load the purse definition
+  Object.assign(object.purse, purseDefinition); // Mix in purse methods
+  // Ensure 'this' context for purse methods refers to object.purse
+  for (const key in purseDefinition) {
+    if (typeof purseDefinition[key] === 'function') {
+      object.purse[key] = purseDefinition[key].bind(object.purse);
+    }
+  }
+}
+
+// ... existing code ...
+```
+
+**Step 3.3: Add convenience methods to the Player object**
+
+The `EntityManager` likely returns the player object. We need to add `getCoins`, `addCoins`, `removeCoins` methods directly to the player object for easier access. This can be done in `EntityManager` after loading, or in `LoginHandler` when a player session is established.
+
+```js
+// src/core/EntityManager.js (conceptual change, or similar place where player object is augmented)
+// After loading and mixing in definitions for the player object:
+
+// Add player-level currency methods
+player.getCoins = function() {
+  return this.purse.coins;
+};
+
+player.addCoins = function(coins) {
+  this.purse.addCoins(coins);
+  this.markDirty(this.id); // Mark player as dirty for persistence
+};
+
+player.removeCoins = function(coins) {
+  this.purse.removeCoins(coins);
+  this.markDirty(this.id); // Mark player as dirty for persistence
+};
+```
+
+---
+
+## 💬 4. Commands for Interaction
+
+### `/coins` or `money`
+
+Create `src/commands/coins.js`:
+
+```js
+// src/commands/coins.js
+const { getDisplayName } = require('../utils/playerDisplay'); // Assuming this exists
+
+module.exports = {
+  id: 'coins',
+  name: 'coins',
+  aliases: ['money', 'cash'],
+  category: 'Player',
+  description: 'Displays the coins in your purse.',
+  usage: 'coins',
+  requiresLogin: true,
+  execute: function(player, args, entityManager) {
+    player.send(player.purse.displayContents());
+  }
+};
+```
+
+### `/give <player> <amount> <denomination>`
+
+Create `src/commands/give.js`. This command will require a helper function to find players by name.
+
+```js
+// src/commands/give.js
+const Currency = require('../systems/currency');
+const { getDisplayName } = require('../utils/playerDisplay'); // Assuming this exists
+
+module.exports = {
+  id: 'give',
+  name: 'give',
+  aliases: [],
+  category: 'Player',
+  description: 'Gives coins to another player.',
+  usage: 'give <player_name> <amount> <denomination>',
+  requiresLogin: true,
+  execute: function(player, args, entityManager) {
+    const parts = args.split(/\s+/);
+    if (parts.length !== 3) {
+      return player.send("Usage: give <player_name> <amount> <denomination>");
+    }
+
+    const targetName = parts[0];
+    const amountStr = parts[1];
+    const denomName = parts[2].toLowerCase();
+
+    const amount = parseInt(amountStr, 10);
+    if (isNaN(amount) || amount <= 0) {
+      return player.send("Amount must be a positive number.");
+    }
+
+    const denomination = Currency.denominations.find(d => d.name === denomName || d.name + 's' === denomName);
+    if (!denomination) {
+      return player.send(`Invalid denomination: ${denomName}. Valid denominations are: ${Currency.denominations.map(d => d.name).join(', ')}.`);
+    }
+
+    // Find the target player
+    const targetPlayer = entityManager.findPlayerByName(targetName); // This function needs to be implemented
+    if (!targetPlayer) {
+      return player.send("That player isn't here.");
+    }
+
+    if (targetPlayer.id === player.id) {
+      return player.send("You cannot give coins to yourself.");
+    }
+
+    const coinsToGive = {};
+    coinsToGive[denomination.name] = amount;
+
+    try {
+      player.removeCoins(coinsToGive);
+      targetPlayer.addCoins(coinsToGive);
+
+      player.send(`You give ${Currency.format(coinsToGive)} to ${getDisplayName(targetPlayer)}.`);
+      targetPlayer.send(`${getDisplayName(player)} gives you ${Currency.format(coinsToGive)}.`);
+
+      entityManager.markDirty(player.id); // Mark both players dirty for persistence
+      entityManager.markDirty(targetPlayer.id);
+
+    } catch (error) {
+      player.send(error.message);
+    }
+  }
+};
+```
+
+**Step 4.1: Implement `findPlayerByName` in `EntityManager`**
+
+Add a method to `src/core/EntityManager.js` to find a player by name. This will iterate through active player sessions.
+
+```js
+// src/core/EntityManager.js (conceptual change)
+// Add this method to the EntityManager class/object:
+
+findPlayerByName: function(name) {
+  const lowerName = name.toLowerCase();
+  for (const session of this.sessions.values()) { // Assuming sessions are stored here
+    if (session.state === 'playing' && session.player && session.player.name.toLowerCase() === lowerName) {
+      return session.player;
+    }
+  }
+  return null;
+},
+```
+
+---
+
+## ⚖️ 5. Auto-Conversion Example
+
+If a player has:
+
+```js
+{ copper: 95, silver: 0, gold: 0, platinum: 0 }
+```
+
+and gains 15 copper, `Currency.add()` will auto-convert:
+
+```
+{ copper: 110 } → { copper: 0, silver: 1, gold: 1 }
+```
+
+This keeps purses clean and readable.
+
+---
+
+## 🧾 6. Economy Integration Later
+
+Later, the same `Currency` utility can easily power:
+
+*   **Shops and vendors**
+*   **Quest rewards**
+*   **Guild fees and dues**
+*   **Bank accounts** (store more coins safely) - **REQUIRED FEATURE**
+*   **Weight calculations** (coins weigh something) - **REQUIRED FEATURE**
+
+## 🏦 7. Banking System (Required)
+
+**Purpose**: Central bank where players can deposit money for safe storage without weight burden.
+
+**Storage Locations:**
+1. **Purse** (on player) - Digital, auto-converts, HAS WEIGHT
+2. **Bank Account** (NPC/building) - Digital, no weight, safe storage
+3. **Ground/containers** - Physical coin items
+
+**Commands:**
+- `balance` - Check bank account
+- `deposit <amount> <type>` - Purse → Bank
+- `withdraw <amount> <type>` - Bank → Purse
+
+**Weight Mechanics:**
+- Coins in purse count toward player encumbrance
+- Heavy purses slow movement or limit carrying capacity
+- Encourages banking excess wealth
+- Creates risk/reward for carrying large amounts
+
+---
+
+## 🧠 7. Optional Enhancements
+
+*   **Purse weight limit** – players must store excess coins in a bank.
+*   **Alternate currencies** (factions, regions, or gems).
+*   **Coin minting system** (rare coins, collectible currency).
+*   **Banking system** (for safe storage, interest, transfers).
+
+---
+
+## ✅ Summary
+
+| Component      | Purpose                                                  |
+| -------------- | -------------------------------------------------------- |
+| `Currency`     | Handles math, conversion, formatting                     |
+| `Purse`        | Definition for coin container behavior                   |
+| Player Object  | Integrates purse data and provides coin interaction methods |
+| Commands       | Let players view, give, and spend money                  |
+| Future systems | Use the same interface for vendors, guilds, banks        |
+
+---

@@ -1,17 +1,10 @@
 {
   "id": "apple_001",
   "type": "item",
-  "itemType": "food",
+  "definition": "consumable",
   "name": "Red Apple",
   "description": "A crisp red apple, perfect for a quick snack.",
-  "definition": "apple",
-  "location": {
-    "type": "room",
-    "room": "test_room"
-  },
-  "quantity": 5,
   "value": 3,
-  "isConsumable": true,
-  "createdAt": "2025-11-12T10:00:00Z",
-  "modifiedAt": "2025-11-12T15:49:24.347Z"
+  "weight": 0.2,
+  "healAmount": 5
 }

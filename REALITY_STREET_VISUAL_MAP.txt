@@ -1,0 +1,230 @@
+================================================================================
+                    REALITY STREET - VISUAL ASCII MAP
+================================================================================
+
+LEGEND: [====] Street    [....] Park    [****] Building    X = Problem
+
+
+                    FROM SESAME STREET (BROKEN LINK!)
+                              |
+                              X (sesame_street_north doesn't exist)
+                              |
+    DARK ALLEY:    [dark_alley_01]---[dark_alley_02]---[dark_alley_03]---[dark_alley_04]
+                      (Oscar)                                                   |
+                                                                                |
+
+================================================================================
+
+    [Precinct]                                              [Deli]
+        *                                                      *
+        |                                                      |
+    +---------------------------------------------------------------+
+    | north_01 -------- north_02 -------- north_03 -------- north_04|
+    |                                                            |   |
+    |  [....park_n1.......park_n2.......park_n3..........]      |   |
+    |  [................................................]      /    |
+    |  [....park_un1......park_un2......park_un3.....un4]     /     |
+west_01 [...............FOUNTAIN........................]    /   east_01
+    |   [....park_lm1.....park_lm2......park_lm3....lm4.]   /       |
+west_02 [...............(center)........................]  /     east_02---[Bodega]
+    *   [...............................................] /          |          *
+[Laundry]  [....park_s1.......park_s2.......park_s3...s4]        east_03
+    |   [...............(playground)...................]           |
+west_03 [...................................................]   east_04---[Clinic]
+    |   [...................................................]      |          *
+    |   [....................................................]   east_05
+west_04 [.........................................................]  |
+    *                                                                 |
+[Pawnshop]                                                         east_06
+    |                                                                 |
+west_05                                                               |
+    |                                                                 |
+    |             *** PROBLEM AREA - SEE DETAIL BELOW ***             |
+west_06                                                               |
+    *                                                                 |
+[Payphone]                                                            |
+    |                                                                 |
+    +---------------------------------------------------------------+
+
+
+================================================================================
+           SOUTHEAST CORNER DETAIL - CURRENT BROKEN CONFIGURATION
+================================================================================
+
+This is where the problems are concentrated. The "inner" south street rooms
+(south_01, south_02) should connect along the park border, while "outer"
+corner rooms (south_03, south_04) form the actual street corner with
+diagonal shortcuts.
+
+INTENDED LAYOUT (what descriptions suggest):
+
+        east_05                           Legend:
+           |                              ====== Inner south (park border)
+        east_06 (corner)                  ------ Outer corner extensions
+           |
+    +------+------+
+    |             |
+    |          south_04 (OUTER SE corner)
+    |             |
+south_02       south_03 (OUTER SW corner)
+    |             |
+south_01       south_05 (extension)
+    |             |
+west_06      condemned_01
+
+
+CURRENT BROKEN CONNECTIONS (from validation):
+
+[east_06] "Southeast Corner"
+  north -> east_05  (OK)
+  west -> south_02  (OK)
+  (MISSING: south -> ???)
+
+[south_01] "South Side" (INNER, by park)
+  east -> south_03  (WRONG - should go to south_02!)
+  west -> west_06   (OK)
+  (MISSING: north -> park?)
+
+[south_02] "South Side" (INNER, by park)
+  west -> south_04  (WRONG - should go to south_01!)
+  east -> east_06   (OK)
+  (MISSING: north -> park?)
+
+[south_03] "Southwest Outer Corner"
+  north -> west_06     (OK)
+  east -> south_01     (creates circular reference with south_01!)
+  southeast -> south_04 (OK as diagonal)
+  (MISSING: south -> south_05)
+
+[south_04] "Southeast Outer Corner"
+  north -> east_06     (but east_06 doesn't go south to here!)
+  west -> south_02     (creates circular reference with south_02!)
+  northwest -> south_03 (OK as diagonal)
+
+[south_05] "Southern Extension"
+  north -> south_03    (but south_03 has no south exit!)
+  south -> condemned_01 (OK)
+
+
+PROBLEMS IDENTIFIED:
+
+1. CIRCULAR REFERENCE: south_01 <--> south_03 point at each other
+2. CIRCULAR REFERENCE: south_02 <--> south_04 point at each other
+3. MISSING LINK: south_01 and south_02 should be adjacent but aren't connected
+4. MISSING LINK: east_06 doesn't connect south to south_04
+5. MISSING LINK: south_03 doesn't connect south to south_05
+
+
+================================================================================
+              CORRECTED SOUTHEAST CORNER - RECOMMENDED FIX
+================================================================================
+
+FIXED LAYOUT:
+
+        east_05
+           |
+        east_06 (SE CORNER)
+        |     |
+        |     +----south (NEW)
+        |               |
+     west            south_04 (OUTER SE)
+        |               |
+    +---+               +---west (NEW)
+    |                       |
+south_02 (INNER)        south_03 (OUTER SW)
+    |                       |
+   west                   south
+    |                       |
+south_01 (INNER)        south_05 (extension)
+    |                       |
+   west                   south
+    |                       |
+west_06 <---south (NEW)  condemned_01
+
+
+CORRECTED EXIT DEFINITIONS:
+
+reality_street_east_06.json (SE CORNER):
+  exits: {
+    north: "reality_street_east_05",
+    west: "reality_street_south_02",
+    south: "reality_street_south_04"  // ADD THIS
+  }
+
+reality_street_south_01.json (INNER south, west section):
+  exits: {
+    east: "reality_street_south_02",  // CHANGE from south_03
+    west: "reality_street_west_06"
+  }
+
+reality_street_south_02.json (INNER south, east section):
+  exits: {
+    west: "reality_street_south_01",  // CHANGE from south_04
+    east: "reality_street_east_06"
+  }
+
+reality_street_south_03.json (OUTER SW corner):
+  exits: {
+    north: "reality_street_west_06",
+    east: "reality_street_south_04",  // CHANGE from south_01
+    south: "reality_street_south_05",  // ADD THIS
+    southeast: "reality_street_south_04"  // keep diagonal
+  }
+
+reality_street_south_04.json (OUTER SE corner):
+  exits: {
+    north: "reality_street_east_06",  // keep (east_06 needs south back)
+    west: "reality_street_south_03",  // CHANGE from south_02
+    northwest: "reality_street_south_03"  // keep diagonal
+  }
+
+reality_street_south_05.json (extension):
+  exits: {
+    north: "reality_street_south_03",
+    south: "condemned_01"
+  }
+  // south_03 now has matching south exit
+
+reality_street_west_06.json (SW CORNER):
+  exits: {
+    north: "reality_street_west_05",
+    east: "reality_street_south_01",
+    south: "reality_street_south_03",
+    west: "payphone"
+  }
+  // Already correct
+
+
+================================================================================
+                         OTHER FIXES NEEDED
+================================================================================
+
+1. reality_street_north_04.json
+   ADD: "northeast": "park_n3"  (to match park_n3's southwest exit)
+
+2. dark_alley_01.json
+   CHANGE: "south": "sesame_street_north"
+   TO: (whatever the correct Sesame Street room ID is)
+
+
+================================================================================
+                    SCHOOL & CONDEMNED BUILDING (OK)
+================================================================================
+
+These are correctly connected:
+
+south_05 -> condemned_01 -> condemned_02 -> condemned_03
+                                               |
+                                          school_entrance
+                                               |
+                                          school_hallway
+                                          /    |    \
+                                  classroom  office  classroom
+                                              |
+                                           storage
+
+
+All peripheral buildings (precinct, deli, bodega, clinic, laundromat,
+pawnshop, payphone) correctly have single exits back to the street.
+
+================================================================================

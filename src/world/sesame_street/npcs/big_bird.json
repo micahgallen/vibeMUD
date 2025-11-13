@@ -11,6 +11,9 @@
   "maxHp": 100,
   "wanders": false,
   "heartbeatInterval": 45,
+  "inventorySpawns": [
+    { "template": "apple_001", "quantity": 3 }
+  ],
   "dialogue": [
     "Have you seen my friend, Mr. Snuffleupagus?",
     "It's a beautiful day to be on Sesame Street!",

@@ -26,7 +26,14 @@ module.exports = {
   type: 'npc',
   hp: 20,
   maxHp: 20,
+  level: 1,
   wanders: true,
+
+  // Default combat stats (can be overridden in NPC JSON)
+  strength: 10,
+  dexterity: 10,
+  constitution: 10,
+  ac: 0,                  // Armor class (lower is better)
 
   // Default behavior probabilities (can be overridden in NPC JSON)
   emoteChance: 0.33,      // 33% chance to emote
@@ -104,6 +111,12 @@ module.exports = {
 
     // Wander action
     if (selectedAction !== 'wander') return;
+
+    // Don't wander if in combat
+    if (this.combat) {
+      console.log(`  ⚔️  ${this.name} cannot wander - in combat`);
+      return;
+    }
 
     const room = entityManager.get(this.currentRoom);
     if (!room || !room.exits || Object.keys(room.exits).length === 0) return;

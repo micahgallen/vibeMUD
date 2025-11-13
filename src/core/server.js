@@ -124,6 +124,12 @@ function setupNetworkCallbacks() {
   // Handle disconnections
   networkDriver.onDisconnect = (session) => {
     if (session.player) {
+      // Clean up combat if player was in combat
+      if (session.player.combat) {
+        const combat = require('../systems/combat');
+        combat.disengage(session.player.id, entityManager);
+      }
+
       entityManager.unregisterSession(session.player.id);
       entityManager.saveDirty();
     }

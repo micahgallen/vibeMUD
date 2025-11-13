@@ -69,7 +69,8 @@ module.exports = {
       for (const objId of room.objects) {
         const obj = entityManager.get(objId);
         if (obj) {
-          output.push('You see ' + colors.objectName(obj.name) + ' here.');
+          const displayName = obj.getDisplayName ? obj.getDisplayName() : obj.name;
+          output.push('You see ' + colors.objectName(displayName) + ' here.');
         }
       }
     }
@@ -84,7 +85,8 @@ module.exports = {
     if (itemsInRoom.length > 0) {
       output.push('');
       itemsInRoom.forEach(item => {
-        output.push('You see ' + colors.objectName(item.name) + ' here.');
+        const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
+        output.push('You see ' + colors.objectName(displayName) + ' here.');
       });
     }
 

@@ -4,7 +4,10 @@
  * Any room can be a shop by referencing this definition or having shop properties
  *
  * Based on CircleMUD shop system with vibeMUD enhancements
+ * Integrated with vibeMUD currency system (copper-based)
  */
+
+const Currency = require('../systems/currency');
 
 module.exports = {
   type: 'room',
@@ -19,6 +22,7 @@ module.exports = {
   /**
    * Items available for purchase
    * Array of objects: { itemId: string, price: number, stock: number, maxStock: number }
+   * price: Price in copper (base currency)
    * stock: -1 means infinite (produced by shop)
    */
   merchandise: [],
@@ -51,14 +55,14 @@ module.exports = {
   pricingStatCeiling: 1.25,   // Maximum multiplier (25% markup max)
 
   /**
-   * Shop finances
-   * Shopkeeper has limited gold on hand and a bank account
+   * Shop finances (all values in copper)
+   * Shopkeeper has limited money on hand and a bank account
    */
-  keeperGold: 1000,           // Gold currently available to shopkeeper
-  bankGold: 5000,             // Gold in the bank
-  maxKeeperGold: 2000,        // Max gold keeper holds before depositing to bank
-  minKeeperGold: 500,         // Min gold before withdrawing from bank
-  usesBank: true,             // If true, excess gold goes to bank
+  keeperCopper: 10000,         // Copper currently available to shopkeeper (100 gold equivalent)
+  bankCopper: 50000,           // Copper in the bank (500 gold equivalent)
+  maxKeeperCopper: 20000,      // Max copper keeper holds before depositing to bank
+  minKeeperCopper: 5000,       // Min copper before withdrawing from bank
+  usesBank: true,              // If true, excess money goes to bank
 
   /**
    * Shop hours
@@ -94,12 +98,6 @@ module.exports = {
   keeperTemper: 'polite',
 
   /**
-   * Shop currency (default: 'gold')
-   * Could be extended for barter systems, faction currency, etc.
-   */
-  currency: 'gold',
-
-  /**
    * Merchant name (if different from room NPC)
    * Used for flavor text in buy/sell interactions
    */
@@ -108,19 +106,20 @@ module.exports = {
   /**
    * Customizable shop messages
    * Override these for unique shop personalities
+   * Use %s as placeholder for formatted currency (e.g., "5 gold, 10 silver")
    */
   messages: {
     greeting: 'Welcome to my shop! Type "list" to see what I have for sale.',
     noSuchItem: "I don't have that item.",
     noSuchItemToSell: "You don't have that item.",
-    cantAfford: "You don't have enough gold for that!",
+    cantAfford: "You don't have enough money for that!",
     shopCantAfford: "I can't afford to buy that from you right now.",
     noSellItem: "I don't buy that sort of thing.",
     itemWorthless: "That thing is worthless!",
     itemBroken: "I won't buy broken items. Get it repaired first!",
     noSell: "I'm sorry, but that item cannot be sold.",
-    successBuy: "That'll be %d gold. Thank you for your business!",
-    successSell: "I'll give you %d gold for that.",
+    successBuy: "That'll be %s. Thank you for your business!",
+    successSell: "I'll give you %s for that.",
     closed: "Sorry, we're closed right now. Come back later!",
     notOpen: "We're not open yet. Come back later!",
     noTrade: "I don't do business with your kind.",
@@ -162,25 +161,25 @@ module.exports = {
   },
 
   /**
-   * Manage banking - move gold between keeper and bank account
+   * Manage banking - move copper between keeper and bank account
    */
   _manageBanking: function(entityManager) {
     let needsSave = false;
 
-    // Deposit excess gold to bank
-    if (this.keeperGold > this.maxKeeperGold) {
-      const excess = this.keeperGold - this.maxKeeperGold;
-      this.bankGold += excess;
-      this.keeperGold = this.maxKeeperGold;
+    // Deposit excess copper to bank
+    if (this.keeperCopper > this.maxKeeperCopper) {
+      const excess = this.keeperCopper - this.maxKeeperCopper;
+      this.bankCopper += excess;
+      this.keeperCopper = this.maxKeeperCopper;
       needsSave = true;
     }
 
     // Withdraw from bank if running low
-    if (this.keeperGold < this.minKeeperGold && this.bankGold > 0) {
-      const needed = this.minKeeperGold - this.keeperGold;
-      const withdrawal = Math.min(needed, this.bankGold);
-      this.keeperGold += withdrawal;
-      this.bankGold -= withdrawal;
+    if (this.keeperCopper < this.minKeeperCopper && this.bankCopper > 0) {
+      const needed = this.minKeeperCopper - this.keeperCopper;
+      const withdrawal = Math.min(needed, this.bankCopper);
+      this.keeperCopper += withdrawal;
+      this.bankCopper -= withdrawal;
       needsSave = true;
     }
 
@@ -411,6 +410,11 @@ module.exports = {
       price = buyPrice;
     }
 
+    // Enforce minimum of 1 copper unless item explicitly has value: 0
+    if (baseValue > 0 && price < 1) {
+      price = 1;
+    }
+
     return { price, reason: 'ok' };
   },
 
@@ -448,9 +452,10 @@ module.exports = {
       return { price: null, message };
     }
 
+    const priceCoins = Currency.breakdown(result.price);
     return {
       price: result.price,
-      message: `I'll give you ${result.price} ${this.currency} for that.`
+      message: `I'll give you ${Currency.format(priceCoins)} for that.`
     };
   },
 
@@ -471,7 +476,7 @@ module.exports = {
   /**
    * Process a purchase transaction (player buying from shop)
    * @param {string} itemId - The item ID
-   * @param {number} price - The agreed-upon price
+   * @param {number} price - The agreed-upon price in copper
    * @param {object} entityManager - Entity manager
    * @returns {boolean} Success
    */
@@ -487,8 +492,8 @@ module.exports = {
       merch.stock--;
     }
 
-    // Add gold to shopkeeper
-    this.keeperGold += price;
+    // Add copper to shopkeeper
+    this.keeperCopper += price;
 
     entityManager.markDirty(this.id);
     return true;
@@ -497,31 +502,48 @@ module.exports = {
   /**
    * Process a sale transaction (player selling to shop)
    * @param {object} item - The item object
-   * @param {number} price - The agreed-upon price
+   * @param {number} price - The agreed-upon price in copper
    * @param {object} entityManager - Entity manager
    * @returns {{success: boolean, reason: string}}
    */
   sellItemToShop: function(item, price, entityManager) {
-    // Check if shop has enough gold (keeper + bank)
-    const totalGold = this.keeperGold + (this.usesBank ? this.bankGold : 0);
-    if (totalGold < price) {
+    // Check if shop has enough copper (keeper + bank)
+    const totalCopper = this.keeperCopper + (this.usesBank ? this.bankCopper : 0);
+    if (totalCopper < price) {
       return { success: false, reason: 'shopCantAfford' };
     }
 
-    // Deduct gold from keeper (withdraw from bank if needed)
-    if (this.keeperGold >= price) {
-      this.keeperGold -= price;
+    // Deduct copper from keeper (withdraw from bank if needed)
+    if (this.keeperCopper >= price) {
+      this.keeperCopper -= price;
     } else {
-      const fromKeeper = this.keeperGold;
+      const fromKeeper = this.keeperCopper;
       const fromBank = price - fromKeeper;
-      this.keeperGold = 0;
+      this.keeperCopper = 0;
       if (this.usesBank) {
-        this.bankGold -= fromBank;
+        this.bankCopper -= fromBank;
       }
     }
 
-    // Could optionally add item to shop's inventory here
-    // For now, we assume items sold to shop are "absorbed"
+    // Check if this item matches any merchandise - if so, add to stock
+    if (this.merchandise && Array.isArray(this.merchandise)) {
+      // Get the item's template ID (check prototype chain)
+      let templateId = null;
+      if (item.__proto__ && item.__proto__.id) {
+        templateId = item.__proto__.id;
+      } else if (item.templateId) {
+        templateId = item.templateId;
+      }
+
+      // Find matching merchandise entry
+      if (templateId) {
+        const merch = this.merchandise.find(m => m.itemId === templateId);
+        if (merch && merch.stock !== -1) {
+          // Increase stock (shop bought it back)
+          merch.stock = (merch.stock || 0) + 1;
+        }
+      }
+    }
 
     entityManager.markDirty(this.id);
     return { success: true, reason: 'ok' };
@@ -581,11 +603,11 @@ module.exports = {
   },
 
   /**
-   * Get the total value of the shop (merchandise + gold)
-   * @returns {number} Total shop value
+   * Get the total value of the shop (merchandise + copper)
+   * @returns {number} Total shop value in copper
    */
   getTotalValue: function() {
-    let total = this.keeperGold + (this.usesBank ? this.bankGold : 0);
+    let total = this.keeperCopper + (this.usesBank ? this.bankCopper : 0);
 
     if (this.merchandise) {
       for (const merch of this.merchandise) {
@@ -597,4 +619,5 @@ module.exports = {
 
     return total;
   }
+
 };

@@ -4,6 +4,7 @@
  */
 
 const { getDisplayName } = require('../utils/playerDisplay');
+const Currency = require('../systems/currency');
 
 module.exports = {
   id: "sell",
@@ -124,36 +125,32 @@ module.exports = {
       return;
     }
 
-    // Remove item from player's inventory
-    entityManager.move(itemToSell.id, { type: 'void' }); // Move to void (deleted)
-    const itemIndex = player.inventory.indexOf(itemToSell.id);
-    if (itemIndex > -1) {
-      player.inventory.splice(itemIndex, 1);
-    }
+    // Store item display name before destroying it
+    const soldItemName = itemToSell.name;
 
-    // Add gold to player
-    if (!player.gold) {
-      player.gold = 0;
-    }
-    player.gold += price;
-    entityManager.markDirty(player.id);
+    // Destroy the item instance (shop absorbs it or adds to stock)
+    entityManager.destroy(itemToSell.id);
+
+    // Add money to player's purse
+    const paymentCoins = Currency.breakdown(price);
+    player.addCoins(paymentCoins, entityManager);
 
     // Success messages
-    session.sendLine(colors.success(`You sell ${itemToSell.name} for ${price} gold.`));
+    const paymentDisplay = Currency.format(paymentCoins);
+    session.sendLine(colors.success(`You sell ${soldItemName} for ${paymentDisplay}.`));
 
     if (keeper) {
-      const message = room.messages?.successSell?.replace('%d', price) || `I'll give you ${price} gold for that.`;
+      // Replace price placeholder and remove "gold" suffix if present
+      let message = room.messages?.successSell || `I'll give you ${paymentDisplay} for that.`;
+      message = message.replace('%d gold', paymentDisplay).replace('%s gold', paymentDisplay).replace('%d', paymentDisplay).replace('%s', paymentDisplay);
       session.sendLine(colors.npc(`${keeper.name} says: "${message}"`));
       session.sendLine(colors.npc(`${keeper.name} says: "${room.getKeeperReaction('success')}"`));
     }
 
     // Notify room
     entityManager.notifyRoom(room.id,
-      colors.dim(`${getDisplayName(player)} sells ${itemToSell.name}.`),
+      colors.dim(`${getDisplayName(player)} sells ${soldItemName}.`),
       player.id
     );
-
-    // Delete the item object
-    entityManager.objects.delete(itemToSell.id);
   }
 };

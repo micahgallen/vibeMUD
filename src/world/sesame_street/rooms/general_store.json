@@ -15,10 +15,10 @@
   "merchantName": "Mr. Hooper",
   "keeperTemper": "polite",
 
-  "keeperGold": 2000,
-  "bankGold": 10000,
-  "maxKeeperGold": 3000,
-  "minKeeperGold": 1000,
+  "keeperCopper": 200000,
+  "bankCopper": 1000000,
+  "maxKeeperCopper": 300000,
+  "minKeeperCopper": 100000,
   "usesBank": true,
 
   "openHours": [[6, 22]],
@@ -82,8 +82,8 @@
     "itemWorthless": "I'm sorry, but that item has no value.",
     "itemBroken": "I won't buy broken items. Try getting it repaired first!",
     "noSell": "That's not something I can buy from you.",
-    "successBuy": "That'll be %d gold. Thank you for your business!",
-    "successSell": "I'll give you %d gold for that. Pleasure doing business!",
+    "successBuy": "That'll be %s. Thank you for your business!",
+    "successSell": "I'll give you %s for that. Pleasure doing business!",
     "closed": "Sorry, we're closed for the evening. Come back tomorrow!",
     "notOpen": "We're not open yet. Come back after 6 AM!",
     "noTrade": "I'm afraid I can't do business with you."

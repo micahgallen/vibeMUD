@@ -1,0 +1,53 @@
+{
+  "id": "counting_house",
+  "type": "room",
+  "definition": "bank",
+  "name": "Count von Count's Counting House",
+  "description": "The interior of this establishment is dominated by an enormous abacus that spans an entire wall, its beads clicking with obsessive regularity. Behind a mahogany counter carved with gothic numerals, banking transactions are conducted with mathematical precision. 'Vun deposit! Two deposits! THREE DEPOSITS! Ah ah ah!' echoes periodically from the back office, accompanied by theatrical thunder and lightning that somehow doesn't affect the gas lamps. A sign reads 'ALL TRANSACTIONS THOROUGHLY COUNTED - SATISFACTION GUARANTEED OR YOUR MONEY BACK (after we count it seventeen times).' The air smells faintly of ledger paper and the kind of numerical obsession that borders on the supernatural.",
+  "exits": {
+    "east": "sesame_street_02"
+  },
+  "items": [],
+  "isBank": true,
+  "services": {
+    "deposit": true,
+    "withdraw": true,
+    "balance": true,
+    "transfer": false
+  },
+  "depositFee": 0.0,
+  "withdrawFee": 0.0,
+  "minimumFee": 0,
+  "maxBalance": null,
+  "minDeposit": 1,
+  "minWithdraw": 1,
+  "openHours": null,
+  "accessRestrictions": {
+    "minLevel": 0,
+    "maxLevel": 999,
+    "allowedGuilds": [],
+    "bannedGuilds": [],
+    "allowedRaces": [],
+    "bannedRaces": []
+  },
+  "tellerPersonality": "friendly",
+  "tellerName": "Count von Count",
+  "messages": {
+    "greeting": "Velcome to my Counting House! Vun service! Two services! THREE SERVICES AVAILABLE! Ah ah ah! *thunder rumbles* You can check your BALANCE, make a DEPOSIT, or make a VITHDRAVEL!",
+    "noAccess": "I'm sorry, but ze numbers say you cannot bank here! *sad thunder*",
+    "closed": "Ze Counting House is closed! Come back ven ze numbers are more favorable! Ah ah ah!",
+    "depositSuccess": "Von-derful! I have counted your coins and deposited zem! %s! *lightning flashes* Ah ah ah!",
+    "withdrawSuccess": "Here you are! I have counted zem THREE times to be sure! %s! *thunder rumbles*",
+    "balanceCheck": "Your balance is %s! Such beautiful numbers! Ah ah ah!",
+    "insufficientFunds": "Oh no! Ze numbers do not add up! You do not have enough coins in your account! *disappointed thunder*",
+    "insufficientPurse": "You do not have enough coins in your purse! Perhaps you should VITHDRAVEL some first? Ah ah ah!",
+    "amountTooLow": "Zat amount is too small to count properly! Minimum is %s!",
+    "accountFull": "Your account cannot hold zat much! Maximum balance is %s! Even I cannot count zat high!",
+    "invalidAmount": "I cannot count zat! Please specify a valid number! Numbers are my LIFE! Ah ah ah!",
+    "emptyAccount": "Your account is empty! Zero coins! Vun of my least favorite numbers! *sad thunder*",
+    "serviceFee": "(A counting fee of %s has been applied. Counting is hard vork! Ah ah ah!)"
+  },
+  "securityLevel": 10,
+  "createdAt": "2025-11-13T10:00:00Z",
+  "modifiedAt": "2025-11-13T10:00:00Z"
+}

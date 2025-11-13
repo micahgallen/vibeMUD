@@ -1,13 +1,9 @@
 {
   "id": "gem_001",
   "type": "item",
+  "definition": "item",
   "name": "Ruby Gem",
-  "definition": "ruby_gem",
-  "location": {
-    "type": "inventory",
-    "owner": "alice"
-  },
+  "description": "A brilliant red ruby that catches the light beautifully.",
   "value": 100,
-  "createdAt": "2025-11-12T10:00:00Z",
-  "modifiedAt": "2025-11-12T15:14:35.674Z"
+  "weight": 0.1
 }

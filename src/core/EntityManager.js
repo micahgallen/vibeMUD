@@ -11,7 +11,16 @@ const path = require('path');
 
 class EntityManager {
   constructor(dataDir = null) {
-    this.objects = new Map(); // id → object
+    // NEW: Separate storage for templates vs instances
+    this.templates = new Map(); // id → template (static blueprints from world files)
+    this.instances = new Map(); // id → instance (runtime objects, can be destroyed)
+    this.players = new Map(); // id → player
+    this.rooms = new Map(); // id → room
+    this.definitions = new Map(); // name → definition (cached lib/*.js files)
+
+    // LEGACY: Keep this.objects for backward compatibility during migration
+    this.objects = new Map(); // id → object (will be phased out)
+
     this.dirtyObjects = new Set(); // IDs of objects that need saving
     // Default to src/data relative to this file's location
     this.dataDir = dataDir || path.join(__dirname, '../data');
@@ -20,16 +29,111 @@ class EntityManager {
   }
 
   // ========================================
+  // Lifecycle Methods (clone/destroy)
+  // ========================================
+
+  /**
+   * Clone a template to create a runtime instance
+   * @param {string} templateId - ID of the template to clone
+   * @param {object} overrides - Properties to set on instance (e.g., location)
+   * @returns {object} The new instance
+   */
+  clone(templateId, overrides = {}) {
+    const template = this.templates.get(templateId) || this.objects.get(templateId);
+    if (!template) {
+      throw new Error(`Template ${templateId} not found`);
+    }
+
+    // Generate unique instance ID
+    const instanceId = `${templateId}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+    // Create instance with prototypal inheritance
+    const instance = Object.create(template);
+    Object.assign(instance, {
+      id: instanceId,
+      createdAt: new Date().toISOString(),
+      modifiedAt: new Date().toISOString(),
+      isInstance: true,
+      quantity: template.stackable ? 1 : undefined,
+      ...overrides
+    });
+
+    // Register the instance in both new and legacy maps
+    this.instances.set(instanceId, instance);
+    this.objects.set(instanceId, instance); // Legacy compatibility
+
+    // Add to location if specified
+    if (instance.location) {
+      this.addToLocation(instance);
+    }
+
+    console.log(`✨ Cloned ${templateId} → ${instanceId}`);
+    return instance;
+  }
+
+  /**
+   * Destroy an instance completely
+   * @param {string} instanceId - ID of instance to destroy
+   * @returns {boolean} True if destroyed, false if not found
+   */
+  destroy(instanceId) {
+    const instance = this.instances.get(instanceId) || this.objects.get(instanceId);
+    if (!instance) {
+      console.warn(`Cannot destroy ${instanceId}: not found`);
+      return false;
+    }
+
+    // Can't destroy templates (only instances)
+    if (!instance.isInstance) {
+      throw new Error(`Cannot destroy template ${instanceId}. Templates are immortal.`);
+    }
+
+    // Remove from current location
+    this.removeFromLocation(instance);
+
+    // Remove from all storage maps
+    this.instances.delete(instanceId);
+    this.objects.delete(instanceId); // Legacy compatibility
+
+    // Remove from dirty tracking
+    this.dirtyObjects.delete(instanceId);
+
+    // Remove heartbeat if any
+    if (this.heartbeats.has(instanceId)) {
+      this.heartbeats.delete(instanceId);
+    }
+
+    console.log(`🗑️  Destroyed ${instanceId}`);
+    return true;
+  }
+
+  /**
+   * Get a template by ID
+   * @param {string} templateId - Template ID
+   * @returns {object|null} The template object
+   */
+  getTemplate(templateId) {
+    return this.templates.get(templateId);
+  }
+
+  // ========================================
   // Loading
   // ========================================
 
   /**
-   * Load a definition from src/lib/
+   * Load a definition from src/lib/ (with caching)
    */
   loadDefinition(definitionName) {
+    // Return cached definition if already loaded
+    if (this.definitions.has(definitionName)) {
+      return this.definitions.get(definitionName);
+    }
+
     try {
       const defPath = path.join(__dirname, '../lib', `${definitionName}.js`);
-      return require(defPath);
+      const definition = require(defPath);
+      this.definitions.set(definitionName, definition);
+      return definition;
     } catch (error) {
       console.warn(`  ⚠️  Definition '${definitionName}' not found`);
       return null;
@@ -39,6 +143,7 @@ class EntityManager {
   /**
    * Load all objects from disk
    * Supports prototypal inheritance via "definition" field
+   * NEW: Separates templates (world items) from instances (player inventory)
    */
   loadAll() {
     console.log('📂 Loading all objects...');
@@ -65,24 +170,45 @@ class EntityManager {
         for (const file of files) {
           const filePath = path.join(dir, file);
           const data = fs.readFileSync(filePath, 'utf8');
-          const instanceData = JSON.parse(data);
+          const jsonData = JSON.parse(data);
 
           let obj;
-          if (instanceData.definition) {
+          if (jsonData.definition) {
             // Load definition and create object with prototypal inheritance
-            const definition = this.loadDefinition(instanceData.definition);
+            const definition = this.loadDefinition(jsonData.definition);
             if (definition) {
               obj = Object.create(definition);
-              Object.assign(obj, instanceData);
+              Object.assign(obj, jsonData);
             } else {
               // Fallback if definition not found
-              obj = instanceData;
+              obj = jsonData;
             }
           } else {
-            // No definition, use instance data directly
-            obj = instanceData;
+            // No definition, use data directly
+            obj = jsonData;
           }
 
+          // Initialize purse for players and NPCs
+          if (obj.type === 'player' || obj.type === 'npc') {
+            this.initializePurse(obj);
+          }
+
+          // Store in appropriate map based on type and source
+          if (type === 'players') {
+            // Players go into players map
+            this.players.set(obj.id, obj);
+          } else if (type === 'rooms') {
+            // Rooms go into rooms map
+            this.rooms.set(obj.id, obj);
+          } else if (type === 'items') {
+            // Items from world files are TEMPLATES
+            this.templates.set(obj.id, obj);
+          } else if (type === 'npcs' || type === 'containers') {
+            // NPCs and containers for now go in templates
+            this.templates.set(obj.id, obj);
+          }
+
+          // LEGACY: Also store in objects map for backward compatibility
           this.objects.set(obj.id, obj);
         }
 
@@ -90,7 +216,107 @@ class EntityManager {
       }
     }
 
-    console.log(`✅ Loaded ${this.objects.size} total objects\n`);
+    const totalNew = this.templates.size + this.players.size + this.rooms.size + this.instances.size;
+    console.log(`✅ Loaded ${this.objects.size} total objects (${this.templates.size} templates, ${this.instances.size} instances, ${this.players.size} players, ${this.rooms.size} rooms)\n`);
+
+    // Spawn NPC starting inventories
+    console.log('🎒 Spawning NPC inventories...');
+    let npcInventoryCount = 0;
+    for (const npc of this.objects.values()) {
+      if ((npc.type === 'npc' || npc.type === 'monster') && npc.inventorySpawns) {
+        this.spawnNPCInventory(npc);
+        npcInventoryCount++;
+      }
+    }
+    if (npcInventoryCount > 0) {
+      console.log(`  ✓ Spawned inventory for ${npcInventoryCount} NPCs\n`);
+    }
+
+    // Spawn room fixtures
+    console.log('🏛️  Spawning room fixtures...');
+    let fixtureCount = 0;
+    for (const room of this.rooms.values()) {
+      if (room.fixtures) {
+        fixtureCount += this.spawnRoomFixtures(room);
+      }
+    }
+    if (fixtureCount > 0) {
+      console.log(`  ✓ Spawned ${fixtureCount} fixtures\n`);
+    }
+  }
+
+  /**
+   * Spawn starting inventory for an NPC
+   * @param {object} npc - The NPC instance
+   */
+  spawnNPCInventory(npc) {
+    if (!npc.inventorySpawns || !Array.isArray(npc.inventorySpawns)) {
+      return;
+    }
+
+    // Initialize inventory if needed
+    if (!npc.inventory) {
+      npc.inventory = [];
+    }
+
+    for (const spawn of npc.inventorySpawns) {
+      const quantity = spawn.quantity || 1;
+
+      for (let i = 0; i < quantity; i++) {
+        // Clone item into NPC's inventory
+        const item = this.clone(spawn.template, {
+          location: { type: 'inventory', owner: npc.id }
+        });
+
+        // Auto-equip if specified
+        if (spawn.equip) {
+          if (item.definition === 'weapon' || item.__proto__.definition === 'weapon') {
+            npc.equippedWeapon = item.id;
+            item.isEquipped = true;
+            this.markDirty(item.id);
+          } else if (item.definition === 'armor' || item.__proto__.definition === 'armor') {
+            if (!npc.equippedArmor) {
+              npc.equippedArmor = {};
+            }
+            const slot = item.slot || 'body';
+            npc.equippedArmor[slot] = item.id;
+            item.isEquipped = true;
+            this.markDirty(item.id);
+          }
+        }
+      }
+    }
+
+    this.markDirty(npc.id);
+  }
+
+  /**
+   * Spawn permanent fixtures in a room
+   * @param {object} room - The room instance
+   * @returns {number} Number of fixtures spawned
+   */
+  spawnRoomFixtures(room) {
+    if (!room.fixtures || !Array.isArray(room.fixtures)) {
+      return 0;
+    }
+
+    let count = 0;
+    for (const templateId of room.fixtures) {
+      const template = this.getTemplate(templateId);
+      if (!template) {
+        console.warn(`  ⚠️  Fixture template ${templateId} not found for room ${room.id}`);
+        continue;
+      }
+
+      this.clone(templateId, {
+        location: { type: 'room', room: room.id },
+        isFixture: true,
+        canTake: false
+      });
+      count++;
+    }
+
+    return count;
   }
 
   /**
@@ -271,12 +497,13 @@ class EntityManager {
       ids.add(obj.id);
     }
 
-    // Check 2: Every item appears in exactly one location
+    // Check 2: Every item INSTANCE appears in exactly one location
+    // (Templates don't have locations, so skip them)
     const itemLocations = new Map();
 
     for (const obj of this.objects.values()) {
-      if (obj.type === 'item') {
-        // Count how many locations reference this item
+      if (obj.type === 'item' && obj.isInstance) {
+        // Only validate instances, not templates
         let locationCount = 0;
 
         // Check if it's in its declared location
@@ -303,12 +530,12 @@ class EntityManager {
 
         itemLocations.set(obj.id, locationCount);
 
-        if (locationCount === 0) {
-          console.error(`  ❌ Item ${obj.id} has location but isn't in any inventory/container/room`);
+        if (locationCount === 0 && obj.location) {
+          console.error(`  ❌ Item instance ${obj.id} has location but isn't in any inventory/container/room`);
           errors++;
         }
         else if (locationCount > 1) {
-          console.error(`  ❌ Item ${obj.id} appears in ${locationCount} locations (DUPLICATION BUG!)`);
+          console.error(`  ❌ Item instance ${obj.id} appears in ${locationCount} locations (DUPLICATION BUG!)`);
           errors++;
         }
       }
@@ -517,6 +744,94 @@ class EntityManager {
 
     console.log(`  ✅ Reloaded ${reloaded} room(s), added ${added} new room(s)`);
     return { reloaded, added };
+  }
+
+  // ========================================
+  // Purse and Currency Methods
+  // ========================================
+
+  /**
+   * Initialize purse for a player or NPC
+   * Adds purse property and helper methods
+   */
+  initializePurse(entity) {
+    const Currency = require('../systems/currency');
+
+    // Initialize purse if it doesn't exist
+    if (!entity.purse) {
+      if (entity.type === 'player') {
+        // Players get starting money (auto-converted to optimal denominations)
+        const startingValue = Currency.totalValue(Currency.startingMoney);
+        entity.purse = {
+          coins: Currency.breakdown(startingValue)
+        };
+      } else {
+        // NPCs start with empty purse
+        entity.purse = {
+          coins: Currency.empty()
+        };
+      }
+    } else if (!entity.purse.coins) {
+      // Purse exists but no coins property
+      if (entity.type === 'player') {
+        const startingValue = Currency.totalValue(Currency.startingMoney);
+        entity.purse.coins = Currency.breakdown(startingValue);
+      } else {
+        entity.purse.coins = Currency.empty();
+      }
+    }
+
+    // Add bank account for players
+    if (entity.type === 'player' && entity.bankAccount === undefined) {
+      entity.bankAccount = 0; // Bank balance in copper
+    }
+
+    // Add helper methods to entity
+    entity.getCoins = function() {
+      return this.purse.coins;
+    };
+
+    entity.addCoins = function(coins, entityManager) {
+      this.purse.coins = Currency.add(this.purse.coins, coins);
+      if (entityManager) {
+        entityManager.markDirty(this.id);
+      }
+    };
+
+    entity.removeCoins = function(coins, entityManager) {
+      this.purse.coins = Currency.subtract(this.purse.coins, coins);
+      if (entityManager) {
+        entityManager.markDirty(this.id);
+      }
+    };
+
+    entity.hasCoins = function(coins) {
+      return Currency.hasEnough(this.purse.coins, coins);
+    };
+
+    entity.getCoinValue = function() {
+      return Currency.totalValue(this.purse.coins);
+    };
+
+    entity.displayPurse = function() {
+      return `Your purse contains ${Currency.format(this.purse.coins)}.`;
+    };
+  }
+
+  /**
+   * Find a player by name (case-insensitive)
+   * Only searches online players
+   */
+  findPlayerByName(name) {
+    const lowerName = name.toLowerCase();
+    for (const session of this.sessions.values()) {
+      if (session.state === 'playing' &&
+          session.player &&
+          session.player.name.toLowerCase() === lowerName) {
+        return session.player;
+      }
+    }
+    return null;
   }
 
   // ========================================
