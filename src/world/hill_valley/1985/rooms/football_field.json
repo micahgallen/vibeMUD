@@ -1,0 +1,12 @@
+{
+  "id": "football_field",
+  "name": "High School Football Field",
+  "description": "This is the High School Football Field, a vast expanse of meticulously manicured grass where young men in brightly colored uniforms engage in ritualized combat for the entertainment of their elders. The bleachers, a monument to uncomfortable seating, are where the town gathers on Friday nights, collectively suspending disbelief that the fate of the universe might, just might, hinge on the trajectory of an oddly shaped ball. It's a place of fleeting glory, dashed hopes, and the occasional spilled soda. The grass, however, remains stoically indifferent to it all.",
+  "exits": {
+    "west": "high_school",
+    "south": "oak_park_cemetery"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

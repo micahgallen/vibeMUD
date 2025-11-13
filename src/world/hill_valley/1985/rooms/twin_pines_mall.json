@@ -1,22 +1,13 @@
 {
-    "id":  "twin_pines_mall",
-    "name":  "Twin Pines Mall",
-    "description":  "The Twin Pines Mall, a sprawling monument to consumerism, gleams under the Hill Valley sky. Its bright neon signs hum with an electric energy, illuminating a vast parking lot that seems to stretch to the horizon. This isn\u0027t just any mall; it\u0027s a place where dreams are bought and sold, where teenagers loiter, and where, under the cloak of night, extraordinary events involving plutonium, a DeLorean, and a bolt of lightning might just unfold. Or perhaps, it\u0027s the Lone Pine Mall now, depending on how history played out.",
-    "exits":  {
-                  "south":  "lyon_estates"
-              },
-    "tags":  [
-                 "shopping",
-                 "time_travel_site"
-             ],
-    "type":  "room",
-    "items":  [
-
-              ],
-    "containers":  [
-
-                   ],
-    "npcs":  [
-
-             ]
+  "id": "twin_pines_mall",
+  "name": "Twin Pines Mall",
+  "description": "The Twin Pines Mall is a cathedral of consumerism, a sprawling monument to the 1980s, a decade that, in retrospect, was mostly about shoulder pads and questionable economic theories. Within its climate-controlled confines, a bewildering array of shops offer goods and services that are, for the most part, utterly superfluous to the continued functioning of the universe. It's a place where people wander, often aimlessly, in search of something they didn't know they needed, only to find they still don't. The air hums with Muzak and the faint, collective sigh of wallets being emptied. It is, of course, also a nexus of temporal anomalies, but nobody ever notices.",
+  "exits": {
+    "north": "lyon_estates",
+    "east": "mall_parking"
+  },
+  "tags": [
+    "shopping",
+    "time_travel_site"
+  ]
 }

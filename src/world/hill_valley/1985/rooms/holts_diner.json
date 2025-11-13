@@ -1,22 +1,13 @@
 {
-    "id":  "holts_diner",
-    "name":  "Holts Diner",
-    "description":  "Step into Holts Diner, a vibrant blast from the past where the aroma of fresh coffee and sizzling burgers fills the air. The chrome gleams, the jukebox plays a familiar tune, and the booths are filled with locals, perpetually buzzing with the latest gossip about the Hill Valley High football team. It\u0027s the kind of place where you might overhear a life-changing conversation, or perhaps even witness a pivotal moment in someone\u0027s past... or future.",
-    "exits":  {
-                  "north":  "courthouse_square",
-                  "east":  "high_school"
-              },
-    "tags":  [
-                 "restaurant"
-             ],
-    "type":  "room",
-    "items":  [
-
-              ],
-    "containers":  [
-
-                   ],
-    "npcs":  [
-
-             ]
+  "id": "holts_diner",
+  "name": "Holts Diner",
+  "description": "Holts Diner is less a building and more a temporal anomaly, a pocket universe where the coffee is always lukewarm, the pie is always apple, and the gossip is always, always, about someone else. The air is thick with the ghosts of a thousand conversations, the clatter of cutlery, and the faint, existential dread of another Tuesday morning. Here, the universe conspires to ensure that every local secret, no matter how mundane or utterly devastating, will eventually find its way onto a Formica tabletop. It is the beating, greasy heart of Hill Valley.",
+  "exits": {
+    "north": "courthouse_square",
+    "south": "main_st_south",
+    "east": "first_st"
+  },
+  "tags": [
+    "restaurant"
+  ]
 }

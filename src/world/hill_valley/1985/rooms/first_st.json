@@ -1,0 +1,13 @@
+{
+  "id": "first_st",
+  "name": "First Street",
+  "description": "First Street, despite its rather definitive name, is not actually the first street, nor is it particularly concerned with being first at anything. It's a modest thoroughfare, lined with shops that seem to exist in a state of perpetual, low-grade surprise that anyone actually walks in. The storefronts gaze blankly across at the square, like old men watching a particularly uninteresting game of chess. Here, the pursuit of commerce is less a roaring engine of capitalism and more a gentle hum of mild disappointment.",
+  "exits": {
+    "west": "holts_diner",
+    "east": "main_st_west",
+    "south": "court_alley"
+  },
+  "tags": [
+    "shopping"
+  ]
+}

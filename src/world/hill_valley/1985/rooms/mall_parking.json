@@ -1,0 +1,12 @@
+{
+  "id": "mall_parking",
+  "name": "Mall Parking Lot",
+  "description": "The Mall Parking Lot is a vast, flat expanse of asphalt, a monument to the internal combustion engine and the human desire to acquire things. The faded paint lines, like ancient hieroglyphs, once dictated order, but now merely suggest a vague sense of direction. It's a place where cars, those magnificent beasts of burden, are temporarily abandoned by their owners, who then venture into the retail labyrinth. On occasion, it transforms into a stage for events of dubious merit, like car washes or bake sales, reminding everyone that even in the most mundane of spaces, life, uh, finds a way.",
+  "exits": {
+    "west": "twin_pines_mall",
+    "south": "biffs_garage"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}
