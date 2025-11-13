@@ -1,0 +1,11 @@
+{
+  "id": "laundromat",
+  "type": "room",
+  "name": "Wash-O-Mat 24-Hour Laundromat",
+  "description": "You step into a laundromat that exists in that liminal space where time moves differently, measured in wash cycles and the slow rotation of industrial dryers. Two rows of machines line the walls - washers on one side, dryers on the other - humming and tumbling with mechanical persistence. The air is thick with the scent of detergent, fabric softener, and that particular damp warmth that comes from constant moisture evaporation. Fluorescent lights cast everything in that flat illumination that makes 2am and 2pm feel identical. A few people occupy the space - someone reading a paperback while their clothes tumble, someone else folding with the precise movements of ritual, another person sleeping in a chair because sometimes a warm laundromat is the best option available. A bulletin board by the door displays community notices, lost pet flyers, and someone offering to wash, dry, and fold for $10 a load. A change machine stands against one wall, its 'OUT OF ORDER' sign suggesting optimism about eventual repair. The tile floor shows patterns worn by years of foot traffic between machines and folding tables. The door east leads back to Reality Street.",
+  "exits": {
+    "east": "reality_street_west_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

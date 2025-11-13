@@ -1,0 +1,12 @@
+{
+  "id": "dark_alley_02",
+  "type": "room",
+  "name": "Reality Street - Dark Alleyway",
+  "description": "The alley commits more fully to its aesthetic here. The pavement has developed artistic cracks that suggest a municipal budget with competing priorities. Cardboard boxes have been arranged with the careful deliberation of someone creating either a bedroom or a statement about housing policy - possibly both. The walls are tagged with symbols that either mean something profound or were drawn by someone who found a spray can and an opinion. A puddle reflects the sky with more optimism than the surroundings warrant. The alley continues east deeper into shadow, while west leads back toward the fading light of Sesame Street.",
+  "exits": {
+    "west": "dark_alley_01",
+    "east": "dark_alley_03"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

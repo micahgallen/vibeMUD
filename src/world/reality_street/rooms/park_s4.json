@@ -1,0 +1,13 @@
+{
+  "id": "park_s4",
+  "type": "room",
+  "name": "Highland Park - Southeast Section",
+  "description": "The southeast corner of Highland Park represents nature's most successful counteroffensive against urban planning. Here, trees grow closer together, their branches creating a canopy that filters sunlight into green-tinted shadows. Undergrowth that would be called 'overgrown' by municipal standards has created something approaching actual woodland - bushes, ferns, and plants whose names are probably in a field guide somewhere. A narrow path winds through this section, worn by feet that prefer this wilder route. Someone has tied a rope to a sturdy branch, its end frayed from use as an improvised swing. To the east and south, Reality Street is visible through the fence. The park continues north and west toward more manicured (relatively speaking) sections.",
+  "exits": {
+    "north": "park_lm4",
+    "west": "park_s3",
+    "northwest": "park_lm3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

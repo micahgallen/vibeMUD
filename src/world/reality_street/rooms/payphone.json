@@ -1,0 +1,11 @@
+{
+  "id": "payphone",
+  "type": "room",
+  "name": "Payphone Alcove",
+  "description": "You stand in a shallow alcove that houses one of the last remaining payphones in the area - a monument to pre-cellular communication that refuses to admit obsolescence. The phone itself dangles from its armored cord with the persistence of technology that's survived every attempt at removal. The metal housing is covered in stickers, graffiti, and scratched phone numbers whose purposes range from legitimate to questionable to 'probably illegal.' Someone has etched 'FOR A GOOD TIME CALL' followed by what appears to be an incomplete phone number, suggesting even vandalism gave up partway through. The phone book, if it can still be called that, hangs from a chain - its pages swollen from rain exposure, torn from use, and marked with annotations in multiple hands. A small shelf beneath the phone holds ancient business cards for bail bondsmen, taxi services, and lawyers who advertise on bus benches. The alcove itself provides minimal shelter from weather and no privacy from the street, its walls bearing the patina of decades of hurried conversations and desperate calls. To the east, Reality Street continues its urban existence.",
+  "exits": {
+    "east": "reality_street_west_06"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

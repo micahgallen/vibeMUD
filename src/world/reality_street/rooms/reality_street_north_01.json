@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_north_01",
+  "type": "room",
+  "name": "Reality Street - North Corner",
+  "description": "You stand at the northern corner where the dark alleyway surrenders its inhabitants to Reality Street proper. The street stretches east and west along the northern edge of what might charitably be called a city block. Cracked pavement spreads before you like a map of municipal neglect, each pothole a monument to budget meetings past. To the south, through a sagging chain-link fence, you can glimpse the interior of Highland Park - grass that's given up on being a lawn and trees that lean with casual indifference. A flickering streetlight above casts intermittent illumination, as if it too is reconsidering its life choices. The street continues east, while south leads back into the relative comfort of the alley's shadows.",
+  "exits": {
+    "south": "dark_alley_04",
+    "east": "reality_street_north_02",
+    "west": "reality_street_west_01"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

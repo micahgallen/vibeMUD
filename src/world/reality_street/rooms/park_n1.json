@@ -1,0 +1,13 @@
+{
+  "id": "park_n1",
+  "type": "room",
+  "name": "Highland Park - Northwest Section",
+  "description": "You stand in the northwest corner of Highland Park, where grass has reached a philosophical compromise with the concept of 'lawn' - it grows, yes, but with an independence that suggests municipal maintenance is more theoretical than actual. A park bench nearby has weathered into a state that could be called 'distressed' if you were selling it in a catalog, or 'concerning' if you were planning to sit on it. The slats show the kind of wear that speaks to years of use by people seeking respite from the surrounding urban reality. To the north, the chain-link fence separates you from Reality Street. South and east, the park continues its gentle sprawl.",
+  "exits": {
+    "south": "park_un1",
+    "east": "park_n2",
+    "southeast": "park_un2"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

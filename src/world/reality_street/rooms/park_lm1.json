@@ -1,0 +1,16 @@
+{
+  "id": "park_lm1",
+  "type": "room",
+  "name": "Highland Park - Central West Section",
+  "description": "The central western section of Highland Park opens up here with a view toward the park's most prominent feature - to the east, you can clearly see a fountain that has passed through functional, decorative, and is now approaching 'architectural archaeology.' The area around you shows the kind of wear that speaks to this being a throughway - grass trampled into dirt paths, evidence that people cut across here rather than following whatever route the planners intended. To the west, a gate in the chain-link fence provides the main western entrance to the park, leading out to Reality Street. The park continues in multiple directions, all offering variations on urban green space theme.",
+  "exits": {
+    "north": "park_un1",
+    "south": "park_s1",
+    "east": "park_lm2",
+    "west": "reality_street_west_03",
+    "northeast": "park_un2",
+    "southeast": "park_s2"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

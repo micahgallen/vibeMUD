@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_north_04",
+  "type": "room",
+  "name": "Reality Street - Northeast Corner",
+  "description": "The northern section of Reality Street curves toward the east here, marking the corner where the street begins its turn southward. To the north, a corner deli announces itself with a sun-faded awning that might once have been blue, or possibly green - time and weather have rendered it philosophically ambiguous. The smell of old coffee and newer regret drifts from its doorway. To the south, Highland Park continues its quiet struggle against entropy, visible through the chain-link fence. The street continues west along the northern edge and south along the eastern side, offering you the choice of which direction to witness urban decline.",
+  "exits": {
+    "west": "reality_street_north_03",
+    "south": "reality_street_east_01",
+    "north": "deli"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

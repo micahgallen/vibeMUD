@@ -1,0 +1,11 @@
+{
+  "id": "clinic",
+  "type": "room",
+  "name": "Free Clinic - Waiting Room",
+  "description": "You stand in the waiting room of a community health clinic that operates on the principle that healthcare should be available even when budgets suggest otherwise. Plastic chairs in various states of structural contemplation line the walls, occupied by a cross-section of humanity united in the experience of needing medical attention and lacking better options. A reception window protected by plexiglass frames a harried-looking administrator who's mastered the art of compassionate efficiency. The walls display posters about diseases you probably don't want to think about, nutrition advice that assumes access to fresh vegetables, and flyers for services offered when funding allows. A small TV mounted in the corner plays daytime programming with the sound off, its closed captions providing inadvertent comedy. The fluorescent lights hum with institutional persistence, and the smell is that particular medical-grade antiseptic trying very hard to project competence and cleanliness. A sign by the door reads 'WALK-INS WELCOME' in letters that have faded but remain technically true. The door west leads back to Reality Street.",
+  "exits": {
+    "west": "reality_street_east_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

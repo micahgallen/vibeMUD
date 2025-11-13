@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_north_02",
+  "type": "room",
+  "name": "Reality Street - North Side",
+  "description": "Reality Street continues its journey along the northern perimeter here, the cracked sidewalk bordered by buildings that have seen better decades. To the north, a police precinct station looms with the kind of architectural authority that suggests someone once cared about law and order - the bars on the windows suggest they still do, just differently now. The building's facade bears the stains of time and perhaps a few things that don't bear thinking about. To the south, a chain-link fence separates you from Highland Park, where nature and neglect have reached an uneasy détente. The street continues east and west, its surface decorated with the abstract art of oil stains and discarded hopes.",
+  "exits": {
+    "west": "reality_street_north_01",
+    "east": "reality_street_north_03",
+    "north": "precinct"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

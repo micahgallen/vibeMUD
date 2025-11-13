@@ -1,0 +1,16 @@
+{
+  "id": "sesame_street_map_sign",
+  "definition": "signs",
+  "name": "Sesame Street Map Sign",
+  "description": "A wooden sign post with a detailed map of Sesame Street carved into it. You could READ it to see the layout.",
+  "location": {
+    "type": "room",
+    "room": "sesame_street_01"
+  },
+  "signTitle": "Map of Sesame Street",
+  "signContent": "sesame_street/map.txt",
+  "signType": "map",
+  "canTake": false,
+  "createdAt": "2025-11-12T19:00:00Z",
+  "modifiedAt": "2025-11-12T19:00:00Z"
+}

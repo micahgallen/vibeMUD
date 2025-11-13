@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_north_03",
+  "type": "room",
+  "name": "Reality Street - North Side",
+  "description": "The northern stretch of Reality Street maintains its commitment to urban authenticity here. The pavement bears the scars of countless winters and the kind of repairs that suggest 'good enough' was the governing philosophy. To the south, the chain-link fence separates you from Highland Park's interior - you can see the tops of overgrown trees and what might be a fountain, though whether it's functioning is a question best answered by the optimistic. Graffiti on a nearby wall reads 'CORNHOLIO WAS HERE' in surprisingly artistic lettering, suggesting that even vandalism has standards. The street continues its circuit east and west, each direction promising more of the same studied decay.",
+  "exits": {
+    "west": "reality_street_north_02",
+    "east": "reality_street_north_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

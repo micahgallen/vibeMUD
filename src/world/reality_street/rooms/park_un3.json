@@ -1,0 +1,17 @@
+{
+  "id": "park_un3",
+  "type": "room",
+  "name": "Highland Park - Upper East-Central Section",
+  "description": "The upper east-central portion of Highland Park maintains its character here, where someone's attempt at planting flowers has resulted in a wild garden that's decided to interpret the assignment creatively. What were probably once neat rows of municipal approved blooms have evolved into an enthusiastic tangle of whatever seeds found purchase. It's actually more beautiful for the chaos, suggesting that nature has better aesthetic sense than bureaucracy. A wooden park bench faces this accidental garden, one of its slats missing in a way that creates an ergonomic challenge. The park continues in multiple directions.",
+  "exits": {
+    "north": "park_n3",
+    "south": "park_lm3",
+    "east": "park_un4",
+    "west": "park_un2",
+    "northwest": "park_n2",
+    "southwest": "park_lm2",
+    "southeast": "park_lm4"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

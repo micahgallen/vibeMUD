@@ -1,0 +1,12 @@
+{
+  "id": "school_entrance",
+  "type": "room",
+  "name": "Highland High School - Rear Entrance",
+  "description": "You stand at the main entrance to Highland High School, where a chain-link fence and gate mark the boundary between Reality Street and institutional territory. The building itself looms with that particular architectural confidence of structures built during decades that believed in public education funding. A sign near the gate reads 'HIGHLAND HIGH SCHOOL - Home of the Fighting Wumpies' with a mascot that appears to be having an identity crisis. The entrance leads into a hallway visible through glass doors - institutional fluorescence and yellow-beige walls promise the standard educational experience. A faded sign warns 'ALL VISITORS MUST REPORT TO MAIN OFFICE' in letters that suggest this rule is more aspirational than enforced. The air carries that distinctive school smell: floor wax, cafeteria food, teenage body spray, and old textbooks. West leads back to Reality Street. South leads deeper into the school.",
+  "exits": {
+    "west": "reality_street_south_05",
+    "south": "school_hallway"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

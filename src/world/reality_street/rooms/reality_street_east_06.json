@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_east_06",
+  "type": "room",
+  "name": "Reality Street - Southeast Corner",
+  "description": "The eastern section of Reality Street bends toward the south here, marking the corner where the street begins its turn westward. The pavement curves with the geometry of urban planning meeting geographical necessity, decorated with the usual assortment of stains, cracks, and the occasional weed growing through with admirable determination. To the west, the park fence finally begins to curve as well, following the contour of the block. You can glimpse the southern edge of Highland Park, where overgrown grass meets scattered playground equipment in various states of structural contemplation. The street continues north along the eastern edge and west along the southern side.",
+  "exits": {
+    "north": "reality_street_east_05",
+    "west": "reality_street_south_02",
+    "south": "reality_street_south_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

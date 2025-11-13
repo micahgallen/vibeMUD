@@ -1,0 +1,12 @@
+{
+  "id": "condemned_02",
+  "type": "room",
+  "name": "Condemned Building - Central Hall",
+  "description": "The central hall of the condemned building stretches before you, a corridor of institutional decay lit by whatever daylight manages to penetrate the boarded windows. The floor tiles, once probably a cheerful pattern, now form a broken mosaic where missing pieces create abstract art through absence. Doors line both sides of the hall, most sealed or leading to rooms too dangerous or too boring to warrant exploration. One door hangs at an angle that violates Euclidean principles, its hinges surrendered to rust and gravity. The ceiling tiles show the creative possibilities of water damage - stains in shapes that invite Rorschach interpretation, missing sections revealing pipes and ductwork that look like industrial intestines. Someone has drawn arrows on the walls in fluorescent paint, creating a navigation system whose logic is known only to its creator. A shopping cart sits abandoned mid-hall, filled with blankets and plastic bags in a way that suggests someone's entire life compressed to portable size. The hall continues east and west, while uncertainty pervades all other directions.",
+  "exits": {
+    "west": "condemned_01",
+    "east": "condemned_03"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

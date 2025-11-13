@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_east_01",
+  "type": "room",
+  "name": "Reality Street - East Side",
+  "description": "Reality Street runs north and south here along the eastern edge of the block, its cracked pavement bearing witness to decades of vehicular passage and municipal indifference. To the west, through the ever-present chain-link fence, Highland Park sprawls with the determination of nature refusing to admit defeat. A few scraggly trees reach toward the sky as if petitioning for better circumstances. The street itself is decorated with the usual urban ornamentation: faded crosswalk paint, mysterious stains, and the occasional cigarette butt arranged in patterns that might be accidental or might be art.",
+  "exits": {
+    "north": "reality_street_north_04",
+    "south": "reality_street_east_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

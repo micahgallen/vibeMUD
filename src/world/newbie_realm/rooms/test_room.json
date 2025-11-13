@@ -11,7 +11,8 @@
   ],
   "npcs": ["oscar_the_grouch"],
   "exits": {
-    "south": "sesame_street_north"
+    "south": "sesame_street_north",
+    "north": "dark_alley_01"
   },
   "heartbeatInterval": 90,
   "createdAt": "2025-11-12T10:00:00Z",

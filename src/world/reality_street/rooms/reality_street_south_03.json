@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_south_03",
+  "type": "room",
+  "name": "Reality Street - Southwest Outer Corner",
+  "description": "Reality Street begins to turn here at the southwestern outer corner of the block, the pavement curving with the practiced geometry of urban planning. The area feels slightly more desolate here, further from the main thoroughfares and closer to the buildings that have given up on facades. To the north, the street continues along the western edge. To the east lies the inner section that borders the park, while further east the southern perimeter continues. A few pieces of windblown trash have accumulated in the corner where the street turns, creating an accidental installation art piece titled 'Municipal Entropy.'",
+  "exits": {
+    "north": "reality_street_west_06",
+    "east": "reality_street_south_04",
+    "south": "reality_street_south_05"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_west_05",
+  "type": "room",
+  "name": "Reality Street - West Side",
+  "description": "Reality Street continues along the western edge here, the pavement bearing the accumulated marks of traffic and time. To the east, Highland Park's southern section is visible through the chain-link fence - this area appears slightly wilder than the northern sections, as if nature has been more successful in its reconquest here. You can see overgrown grass, scattered benches in various states of structural contemplation, and what might be playground equipment or might be abstract sculpture depending on your level of optimism. The street continues north and south, offering more of the same urban authenticity in either direction.",
+  "exits": {
+    "north": "reality_street_west_04",
+    "south": "reality_street_west_06"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

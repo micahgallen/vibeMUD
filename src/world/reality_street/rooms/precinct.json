@@ -1,0 +1,11 @@
+{
+  "id": "precinct",
+  "type": "room",
+  "name": "Police Precinct - Lobby",
+  "description": "You stand in the lobby of what the sign outside optimistically calls a 'Community Policing Center' and everyone else calls 'the precinct.' Fluorescent lights hum overhead with the frequency of institutional inevitability, casting everything in that particular shade of light that makes everyone look either guilty or exhausted - sometimes both. A bulletin board displays wanted posters, community notices, and a flyer for a neighborhood watch program that may or may not still exist. Behind bulletproof glass, a desk sergeant sits with the expression of someone who's seen everything twice and wasn't impressed the first time. The walls are painted that specific shade of beige that suggests 'we bought whatever was cheapest' was the governing aesthetic. A few plastic chairs line one wall, their orange color faded to a philosophical question. The door south leads back to Reality Street.",
+  "exits": {
+    "south": "reality_street_north_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "school_classroom_01",
+  "type": "room",
+  "name": "Highland High School - Classroom",
+  "description": "You enter a classroom that embodies every educational space that's given up on inspiring and settled for containing. Desks arranged in rows show decades of student commentary - names carved, declarations etched, phone numbers and crude drawings forming an unauthorized historical record. The teacher's desk at the front sits behind a lectern that's achieved monument status through sheer persistence. A chalkboard spans the front wall, its surface bearing ghostly traces of lessons past and current - 'HOMEWORK PG 147-151' shares space with 'CORNHOLIO' and what appears to be an impressively detailed anatomical diagram of questionable accuracy. Motivational posters line the walls, their messages ('READING IS POWER', 'MATH: IT'S EVERYWHERE') undermined by their faded colors and peeling corners. A window offers a view of the parking lot and condemned building beyond. The institutional clock on the wall ticks with the relentless marking of time that schools perfect. A bookshelf holds textbooks arranged by height rather than subject. The air smells of dry erase markers, teenage anxiety, and that specific scent of spaces where learning is mandatory. East leads back to the hallway.",
+  "exits": {
+    "east": "school_hallway"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

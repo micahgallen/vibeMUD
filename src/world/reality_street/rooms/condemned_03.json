@@ -1,0 +1,11 @@
+{
+  "id": "condemned_03",
+  "type": "room",
+  "name": "Condemned Building - Back Exit",
+  "description": "The eastern end of the condemned building terminates here in what was probably once a loading area or back exit. A large window opening (frame removed entirely) looks out onto an overgrown lot strewn with debris and urban vegetation reclaiming territory. The room shows signs of temporary occupation - cigarette butts arranged in social circles, beer cans stacked in a pyramid, graffiti covering every surface. A backpack slumps in one corner, possibly forgotten or possibly stashed for later retrieval. The air smells of concrete dust, old smoke, and abandonment. This is as far into the building as you can safely go. West leads back into the condemned building's interior.",
+  "exits": {
+    "west": "condemned_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

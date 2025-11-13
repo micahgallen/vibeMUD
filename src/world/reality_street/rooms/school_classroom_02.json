@@ -1,0 +1,11 @@
+{
+  "id": "school_classroom_02",
+  "type": "room",
+  "name": "Highland High School - Classroom",
+  "description": "This classroom distinguishes itself from its siblings through the subtle variations that make institutional spaces unique despite best efforts at standardization. The desks here are arranged in a semi-circle, suggesting a teacher who once believed in discussion-based learning before reality taught otherwise. A TV on a rolling cart sits in one corner, its VCR flashing 12:00 in a eternal present tense, ready to show educational videos on tapes that predate current students. The walls display student work - essays pinned with the kind of enthusiasm that suggests 'everyone gets displayed' policies. A periodic table poster curls at one corner, its elements arranged with the confidence of pre-2010 chemistry. The teacher's desk shows signs of occupancy - coffee mug rings, scattered papers, a small plant that's somehow surviving institutional conditions. A window overlooks the parking lot. The institutional clock maintains its relentless temporal accounting. The floor shows the traffic patterns of a semester - paths worn between door and desk, desk and pencil sharpener. West leads back to the hallway.",
+  "exits": {
+    "west": "school_hallway"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

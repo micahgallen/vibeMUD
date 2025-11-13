@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_west_03",
+  "type": "room",
+  "name": "Reality Street - West Side",
+  "description": "Reality Street maintains its western border here, the pavement showing the kind of wear that comes from being a throughway between more interesting destinations. To the east, a gate in the chain-link fence provides the main western entrance to Highland Park - this section offering a view of what might be the park's central area where you can glimpse the top of what appears to be a fountain or monument, though whether it's functional is a question best answered by the optimistic. Graffiti on a nearby wall reads 'WASH ME' despite being a building, not a vehicle, suggesting someone had opinions about maintenance standards. The street continues north and south.",
+  "exits": {
+    "north": "reality_street_west_02",
+    "south": "reality_street_west_04",
+    "east": "park_lm1"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

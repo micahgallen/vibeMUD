@@ -1,0 +1,12 @@
+{
+  "id": "condemned_01",
+  "type": "room",
+  "name": "Condemned Building - Entrance",
+  "description": "You stand at the entrance of a condemned building that wears official closure like a suggestion rather than a rule. Plywood boards cover most windows, each marked with orange stickers declaring 'DANGER - NO TRESPASSING - CITY ORDER #4721.' Someone has helpfully spray-painted 'TOO LATE' beneath one sign. The main doors are chained, but a side entrance shows evidence of determined ingress - jimmied lock, bent frame, the kind of wear pattern that speaks to regular if unauthorized use. Inside, the entrance hall stretches into dimness, its floor littered with debris that ranges from construction materials to the detritus of temporary occupation. Graffiti covers every surface in layers - tags over tags over tags, creating an archaeological record of every kid who's used this place as clubhouse, dare, or shelter. The walls show water damage in patterns that suggest the roof has opinions about remaining waterproof. A faded building directory on one wall lists former tenants: offices, small businesses, dreams that relocated or dissolved. The air smells of old water damage, spray paint, and abandonment. North leads back to Reality Street. East leads deeper into the condemned structure.",
+  "exits": {
+    "north": "reality_street_south_05",
+    "east": "condemned_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

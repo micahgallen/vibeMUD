@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_west_01",
+  "type": "room",
+  "name": "Reality Street - Northwest Corner",
+  "description": "Reality Street curves here at the northwestern corner, connecting the northern and western edges of the block with the kind of geometry that suggests someone once understood urban planning. The pavement shows the stress patterns typical of a corner - cracks radiating from the curve like the lines on a palm reader's diagram, each one telling a story of weight, time, and deferred maintenance. To the east lies the northern stretch of the street, while south continues along the western edge. Through gaps in the chain-link fence to the southeast, Highland Park's northern section is visible, trees and grass maintaining their optimistic existence despite aesthetic obstacles.",
+  "exits": {
+    "east": "reality_street_north_01",
+    "south": "reality_street_west_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

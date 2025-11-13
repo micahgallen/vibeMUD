@@ -1,0 +1,15 @@
+{
+  "id": "park_s3",
+  "type": "room",
+  "name": "Highland Park - South-Central Section",
+  "description": "The south-central portion of Highland Park continues here with a mixture of planned space and natural reclamation. A concrete pad that might have once been a basketball court or picnic area now serves as whatever people need it to be - hopscotch grid chalk-drawn by optimistic children, skateboard practice ground judging by the scrape marks, or just a flat surface in a world that's mostly hills and potholes. Around its edges, grass has begun pushing through cracks in determined green fingers, suggesting that concrete's victory was always temporary. A park bench nearby leans at an angle that makes sitting an adventure in applied physics. The park continues north, east, and west, while south leads toward Reality Street.",
+  "exits": {
+    "north": "park_lm3",
+    "east": "park_s4",
+    "west": "park_s2",
+    "northwest": "park_lm2",
+    "northeast": "park_lm4"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

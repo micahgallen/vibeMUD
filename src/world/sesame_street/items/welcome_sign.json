@@ -1,0 +1,32 @@
+{
+  "id": "sesame_street_welcome_sign",
+  "definition": "signs",
+  "name": "Welcome Sign",
+  "description": "A cheerful painted sign with bright letters. You could READ it.",
+  "location": {
+    "type": "room",
+    "room": "sesame_street_01"
+  },
+  "signTitle": "Welcome to Sesame Street!",
+  "signContent": [
+    "Can you tell me how to get,",
+    "How to get to Sesame Street?",
+    "",
+    "Welcome, traveler! You've found your way to the friendliest",
+    "street in all the realms. Here you'll find:",
+    "",
+    "  - Hooper's General Store (east from here)",
+    "  - The Furry Arms Tavern (west from here)",
+    "  - The Snuggly Sleeper Hotel (north, then west)",
+    "  - Count's Fountain for healing (south, then east)",
+    "  - The Wumpie Colosseum for pit fighting (west, south, south)",
+    "",
+    "Check the MAP SIGN for a detailed layout of the area.",
+    "",
+    "Enjoy your stay, and remember: Be kind to the Wumpies!"
+  ],
+  "signType": "text",
+  "canTake": false,
+  "createdAt": "2025-11-12T19:00:00Z",
+  "modifiedAt": "2025-11-12T19:00:00Z"
+}

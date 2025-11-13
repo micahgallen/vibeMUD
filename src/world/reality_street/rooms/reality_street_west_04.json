@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_west_04",
+  "type": "room",
+  "name": "Reality Street - West Side",
+  "description": "The western section of Reality Street continues here, bordered by establishments that have learned to coexist with economic uncertainty. To the west, a pawn shop displays its wares behind security glass that suggests experience has been an expensive teacher. A hand-painted sign advertises 'CASH 4 GOLD' with the kind of enthusiasm that comes from desperation meeting opportunity. The shop's window is a museum of other people's former treasures - guitars, jewelry, electronics, each item telling a story of need outweighing sentimentality. To the east, Highland Park remains accessible through the fence. The street runs north and south.",
+  "exits": {
+    "north": "reality_street_west_03",
+    "south": "reality_street_west_05",
+    "west": "pawnshop"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

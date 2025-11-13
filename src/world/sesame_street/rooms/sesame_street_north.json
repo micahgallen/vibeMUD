@@ -6,7 +6,7 @@
   "description": "The street reaches its northern terminus, where the relentless cheerfulness begins to waver at the edges. A bright red telephone booth stands to the east like a portal to anywhere else, its chrome gleaming with promises of escape and adventure. To the north, the pavement transitions from optimistic yellow brick to something darker and more honest - the entrance to Reality Street, where Sesame Street's facade finally admits defeat. The buildings seem to lean in conspiratorially, as if warning you about what lies ahead.",
   "exits": {
     "south": "sesame_street_03",
-    "north": "test_room",
+    "north": "dark_alley_01",
     "east": "teleport_booth"
   },
   "npcs": ["green_wumpy"],

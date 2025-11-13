@@ -1,0 +1,18 @@
+{
+  "id": "park_lm3",
+  "type": "room",
+  "name": "Highland Park - Central East Section",
+  "description": "The central eastern section of Highland Park spreads around you, offering a view west toward the fountain that serves as this space's gravitational center. The grass here has been worn into patterns by feet - paths radiating from the fountain like spokes on a wheel, evidence of human traffic that followed desire rather than design. A park bench sits here, its green paint faded to a color that might be called 'institutional jade' or 'municipal exhaustion.' Someone has carved 'MIKE + SARAH 4EVER' into the backrest, though whether Mike and Sarah achieved their forever is lost to time. The park continues in all directions.",
+  "exits": {
+    "north": "park_un3",
+    "south": "park_s3",
+    "east": "park_lm4",
+    "west": "park_lm2",
+    "northwest": "park_un2",
+    "northeast": "park_un4",
+    "southwest": "park_s2",
+    "southeast": "park_s4"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

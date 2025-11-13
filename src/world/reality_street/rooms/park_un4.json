@@ -1,0 +1,14 @@
+{
+  "id": "park_un4",
+  "type": "room",
+  "name": "Highland Park - Upper East Section",
+  "description": "The upper eastern section of Highland Park stretches here toward the border with Reality Street, visible to the east through the deteriorating chain-link fence. This area shows signs of teenage occupation - a makeshift skateboard ramp constructed from plywood and hope leans against a tree, its surface decorated with stickers and graffiti declaring allegiance to bands that may or may not still exist. Empty soda cans have been arranged in a pyramid with more care than they probably deserved. A basketball without much air left in it sits forlornly beneath a tree, as if waiting for someone to remember it exists. The park continues west and south.",
+  "exits": {
+    "south": "park_lm4",
+    "west": "park_un3",
+    "northwest": "park_n3",
+    "southwest": "park_lm3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

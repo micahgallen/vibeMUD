@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_south_02",
+  "type": "room",
+  "name": "Reality Street - South Side",
+  "description": "The southern stretch of Reality Street continues here, its surface a testament to the philosophy of 'repair when absolutely necessary, not before.' To the north, the park fence continues its patient decay, offering multiple unofficial entrances to those willing to navigate around the sharper metal edges. Highland Park's southern section is visible through the gaps - overgrown grass, scattered benches, and the occasional tree that's decided to thrive despite municipal indifference. The street runs east and west, while north provides access to the park's interior.",
+  "exits": {
+    "west": "reality_street_south_01",
+    "east": "reality_street_east_06"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "deli",
+  "type": "room",
+  "name": "Corner Deli",
+  "description": "You step into a corner deli that exists in the space between convenience store and cultural institution. The narrow aisles are packed with everything from emergency groceries to items whose purpose is mysterious but probably essential to someone. A deli counter along one wall displays sandwiches under heat lamps that suggest 'fresh' is a relative term but 'edible' is probably still accurate. The smell is a complex mixture of coffee that's been sitting too long, something frying, and cleaning products applied with optimism. Behind the counter, a proprietor watches with the careful attention of someone who's learned to assess intent quickly. A small lottery ticket display spins slowly by the register, each ticket a small investment in improbable hope. The floor tiles show patterns worn by decades of feet, creating paths between door, counter, and coolers. Security cameras in every corner suggest lessons learned. The door south leads back to Reality Street.",
+  "exits": {
+    "south": "reality_street_north_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

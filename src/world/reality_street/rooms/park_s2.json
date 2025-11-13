@@ -1,0 +1,15 @@
+{
+  "id": "park_s2",
+  "type": "room",
+  "name": "Highland Park - South-Central Section",
+  "description": "The south-central section of Highland Park opens up here, where playground equipment stands as a monument to either optimism or liability concerns - it's hard to tell which. A swing set with three swings (one missing its seat entirely) creaks in the wind with the sound of metal that's forgotten lubrication. A slide that was probably bright primary colors in some optimistic decade has faded to a shade that might be called 'institutional grey' or 'the color of lowered expectations.' Despite the equipment's questionable structural integrity, the ground beneath shows signs of recent use - compressed earth where feet have landed, patterns in the dirt suggesting children who don't let decay interfere with play. To the north, the fountain is visible. Reality Street lies to the south through gaps in the fence.",
+  "exits": {
+    "north": "park_lm2",
+    "east": "park_s3",
+    "west": "park_s1",
+    "northwest": "park_lm1",
+    "northeast": "park_lm3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

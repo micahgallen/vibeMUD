@@ -1,0 +1,15 @@
+{
+  "id": "park_un1",
+  "type": "room",
+  "name": "Highland Park - Upper West Section",
+  "description": "The upper western section of Highland Park continues its patient existence here, where grass and scattered wildflowers have created an accidental meadow that's more authentic than any planned landscaping could achieve. A few pigeons patrol the area with the confidence of longtime residents, pecking at breadcrumbs and other offerings left by the humans who share this space. To the west, the chain-link fence marks the border with Reality Street, its gaps offering glimpses of the street beyond. The park continues in multiple directions, paths worn into the grass by feet rather than planning.",
+  "exits": {
+    "north": "park_n1",
+    "south": "park_lm1",
+    "east": "park_un2",
+    "northeast": "park_n2",
+    "southeast": "park_lm2"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

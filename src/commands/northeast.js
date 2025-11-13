@@ -1,0 +1,59 @@
+/**
+ * northeast command
+ * Move northeast
+ */
+
+const { getDisplayName } = require('../utils/playerDisplay');
+
+module.exports = {
+  id: "northeast",
+  name: "northeast",
+  aliases: ["ne"],
+  category: "movement",
+  description: "Move northeast",
+  usage: "northeast",
+  help: "Move to the room to the northeast.",
+  requiresLogin: true,
+
+  execute: function(session, args, entityManager, colors) {
+    const direction = 'northeast';
+    const player = session.player;
+    const currentRoom = entityManager.get(player.currentRoom);
+
+    if (!currentRoom) {
+      session.sendLine(colors.error('Error: You are in an invalid location!'));
+      return;
+    }
+
+    if (!currentRoom.exits || !currentRoom.exits[direction]) {
+      session.sendLine('You cannot go that way.');
+      return;
+    }
+
+    const targetRoomId = currentRoom.exits[direction];
+    const targetRoom = entityManager.get(targetRoomId);
+
+    if (!targetRoom) {
+      session.sendLine(colors.error('Error: That exit leads nowhere!'));
+      return;
+    }
+
+    // Notify others in current room
+    entityManager.notifyRoom(player.currentRoom,
+      colors.info(`${getDisplayName(player)} leaves ${direction}.`),
+      player.id);
+
+    // Move player
+    player.currentRoom = targetRoomId;
+    entityManager.markDirty(player.id);
+
+    // Notify others in new room
+    entityManager.notifyRoom(targetRoomId,
+      colors.info(`${getDisplayName(player)} arrives.`),
+      player.id);
+
+    // Show new room - use look command
+    const lookCommand = require('./look.js');
+    lookCommand.execute(session, '', entityManager, colors);
+  }
+};

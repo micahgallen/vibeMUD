@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_south_04",
+  "type": "room",
+  "name": "Reality Street - Southeast Outer Corner",
+  "description": "The southeastern outer corner of Reality Street curves here, marking where the southern perimeter meets the outer edges of the block. The pavement shows the accumulated stress of corner-turning traffic over the years, with cracks radiating outward like a map of structural compromise. To the north lies the street section bordering the eastern side of the park, while west leads along the southern stretch. The corner itself is marked by a street sign that's achieved a philosophical angle, leaning as if contemplating the meaning of directional authority. A fire hydrant stands nearby, its paint suggesting it was once red, or possibly orange - time has rendered it ambiguous.",
+  "exits": {
+    "north": "reality_street_east_06",
+    "west": "reality_street_south_03"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

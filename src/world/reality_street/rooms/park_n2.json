@@ -1,0 +1,15 @@
+{
+  "id": "park_n2",
+  "type": "room",
+  "name": "Highland Park - North Section",
+  "description": "The northern section of Highland Park spreads around you with the determination of nature refusing to read the room. Trees that were planted in some optimistic decade past now lean at angles that suggest they've made peace with imperfection. Their branches create patches of shade that shift across the ground like slow-moving thoughts. A path, once paved but now more concept than reality, winds through this section, its edges blurred by encroaching grass and the occasional dandelion that's achieved philosophical significance. To the north lies Reality Street, visible through gaps in the fence. The park continues in all other directions.",
+  "exits": {
+    "south": "park_un2",
+    "east": "park_n3",
+    "west": "park_n1",
+    "southwest": "park_un1",
+    "southeast": "park_un3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

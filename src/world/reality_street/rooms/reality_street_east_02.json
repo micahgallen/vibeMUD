@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_east_02",
+  "type": "room",
+  "name": "Reality Street - East Side",
+  "description": "The eastern stretch of Reality Street continues here, flanked by urban infrastructure in various states of surrender. To the east, a neighborhood bodega advertises itself with hand-painted signs in windows protected by bars that suggest optimism tempered with experience. The store's neon 'OPEN' sign flickers with the rhythm of something that's forgotten how to quit. To the west, another gap in the fence provides access to Highland Park's interior, where you can hear the distant sounds of life continuing despite aesthetic obstacles. The street runs north and south, offering more of the same in either direction.",
+  "exits": {
+    "north": "reality_street_east_01",
+    "south": "reality_street_east_03",
+    "east": "bodega"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

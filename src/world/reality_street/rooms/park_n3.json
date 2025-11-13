@@ -1,0 +1,14 @@
+{
+  "id": "park_n3",
+  "type": "room",
+  "name": "Highland Park - Northeast Section",
+  "description": "The northeast section of Highland Park maintains its existence here with the quiet dignity of public space that's learned to lower its expectations. A small cluster of trees provides shade and the illusion of privacy, their trunks carved with initials and declarations that form an archaeological record of teenage emotion spanning decades. Some have weathered into illegibility, while others remain defiantly clear - 'MIKE + SARAH 4EVER' sits above 'CORNHOLIO' in a timeline of human expression. To the north, Reality Street is visible through the fence. The park continues south and west, while east draws you toward the park's edge.",
+  "exits": {
+    "south": "park_un3",
+    "west": "park_n2",
+    "southwest": "park_un2",
+    "southeast": "park_un4"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

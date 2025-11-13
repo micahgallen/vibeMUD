@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_east_05",
+  "type": "room",
+  "name": "Reality Street - East Side",
+  "description": "Reality Street continues its southward journey along the eastern perimeter, the pavement here achieving a certain abstract quality through the artistic arrangement of potholes and patch jobs. To the west, Highland Park remains visible through the increasingly creative gaps in the fence - some cut, some rusted through, all serving the same purpose of allowing access to those who need it. The park's southern section looks slightly wilder here, as if this is where nature staged its most successful counterattack against urban planning. The street runs north and south, while west offers entry to the park.",
+  "exits": {
+    "north": "reality_street_east_04",
+    "south": "reality_street_east_06"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

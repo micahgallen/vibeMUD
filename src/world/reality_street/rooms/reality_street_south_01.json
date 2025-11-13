@@ -1,0 +1,12 @@
+{
+  "id": "reality_street_south_01",
+  "type": "room",
+  "name": "Reality Street - South Side",
+  "description": "Reality Street runs east and west here along the southern edge of the block, the pavement bearing the accumulated weight of years and traffic. To the north, Highland Park's southern boundary is marked by the ever-present chain-link fence, this section showing particular creativity in its deterioration - gaps both cut and rusted creating multiple points of access. Through the fence you can see what appears to be a playground area, its equipment achieving a certain tragic dignity through weathering and time. The street continues east and west along the southern perimeter, while north leads into the park's interior.",
+  "exits": {
+    "east": "reality_street_south_02",
+    "west": "reality_street_west_06"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

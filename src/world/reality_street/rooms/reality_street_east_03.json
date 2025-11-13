@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_east_03",
+  "type": "room",
+  "name": "Reality Street - East Side",
+  "description": "Reality Street maintains its eastward border here, the pavement showing the kind of wear that comes from years of low-priority maintenance schedules. To the west, a gate in the chain-link fence provides the main eastern entrance to Highland Park - through it you can glimpse park benches that have achieved a certain dignity through sheer survival, and grass that's decided 'lawn' was always an arbitrary concept anyway. The buildings to the east lean slightly inward, as if sharing secrets or structural concerns. Graffiti on a nearby wall declares 'REALITY BITES' in fading spray paint, which feels both on-brand and unnecessarily literal.",
+  "exits": {
+    "north": "reality_street_east_02",
+    "south": "reality_street_east_04",
+    "west": "park_lm4"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

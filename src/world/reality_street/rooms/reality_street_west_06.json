@@ -1,0 +1,14 @@
+{
+  "id": "reality_street_west_06",
+  "type": "room",
+  "name": "Reality Street - Southwest Corner",
+  "description": "The western section of Reality Street curves here at the southwestern corner, where the street begins its turn eastward along the southern edge of the block. The corner itself has achieved a certain character through accumulated urban decay - faded crosswalk paint, mysterious stains that raise questions better left unasked, and a payphone alcove to the west that stands as a monument to pre-cellular communication. The phone itself dangles from its cord with the persistence of technology that refuses to admit obsolescence. To the east, Highland Park's southern edge is visible through gaps in the fence. The street continues north along the western side and east along the southern stretch.",
+  "exits": {
+    "north": "reality_street_west_05",
+    "east": "reality_street_south_01",
+    "south": "reality_street_south_03",
+    "west": "payphone"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

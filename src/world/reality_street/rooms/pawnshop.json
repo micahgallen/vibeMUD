@@ -1,0 +1,11 @@
+{
+  "id": "pawnshop",
+  "type": "room",
+  "name": "Cash 4 Gold Pawn Shop",
+  "description": "You enter a pawn shop that serves as an archaeological site of economic necessity and broken promises. Behind security glass, the walls display a museum of former treasures - guitars that once accompanied dreams of stardom, jewelry that marked occasions now marked by need, electronics that represent the cutting edge of some past decade, tools that suggest abandoned projects or abandoned trades. Each item tells a story of the moment when sentiment became secondary to rent, medicine, or food. The proprietor watches from behind the bulletproof counter with the expression of someone who's heard every hard luck story twice and maintains professional skepticism as a survival strategy. A handwritten price list advertises what they're buying: 'GOLD - BEST PRICES', 'TOOLS - FAIR OFFERS', 'ELECTRONICS - DEPENDS ON CONDITION', 'YOUR GRANDMOTHER'S RING - SORRY BUT PROBABLY NOT MUCH.' The lighting is strategic - bright on the merchandise, dim in the corners, creating an atmosphere that's half retail, half confessional. A security camera in each corner suggests experience has been an expensive teacher. The door east leads back to Reality Street.",
+  "exits": {
+    "east": "reality_street_west_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

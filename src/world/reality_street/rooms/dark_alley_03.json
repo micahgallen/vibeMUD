@@ -1,0 +1,12 @@
+{
+  "id": "dark_alley_03",
+  "type": "room",
+  "name": "Reality Street - Dark Alleyway",
+  "description": "You've reached the philosophically ambiguous center of the alley, where it's neither one place nor the other - a liminal space that reeks of existential uncertainty and old beer. A fire escape zigzags up the building like a bureaucrat's workflow diagram, its rusted joints creaking in the wind. The ground is littered with cigarette butts forming constellations that tell stories of nervous waiting and contemplative nicotine consumption. Somewhere above, a window air conditioner drips with the persistence of inevitability. The alley continues east and west, each direction promising its own brand of urban authenticity.",
+  "exits": {
+    "west": "dark_alley_02",
+    "east": "dark_alley_04"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "school_hallway",
+  "type": "room",
+  "name": "Highland High School - Main Hallway",
+  "description": "The main hallway of Highland High School stretches in multiple directions with the architectural confidence of a building constructed during a decade that believed in the future. Lockers line both walls in that particular shade of metal that might once have been blue, gray, or a color that existed only in institutional paint catalogs. Most are dented from years of use and abuse, their combination locks showing the wear patterns of thousands of fumbled attempts. The floor is polished linoleum in a pattern designed to hide scuff marks - it hasn't succeeded. Bulletin boards display a mixture of official notices ('STANDARDIZED TESTING APRIL 15-19'), sports schedules featuring teams with optimistic records, and flyers for clubs that may or may not still meet. The ceiling tiles show the occasional water stain and the fluorescent lights hum with that frequency that's somehow both constant and irritating. The air carries competing scents: floor cleaner fighting body spray, both losing to whatever the cafeteria is serving. Doors lead to various destinations - classrooms, offices, and spaces whose purposes are labeled but unclear.",
+  "exits": {
+    "north": "school_entrance",
+    "east": "school_classroom_02",
+    "west": "school_classroom_01",
+    "south": "school_office"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

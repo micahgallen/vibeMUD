@@ -1,0 +1,12 @@
+{
+  "id": "dark_alley_04",
+  "type": "room",
+  "name": "Reality Street - Alleyway Exit",
+  "description": "The alley finally surrenders to openness here, yielding to what could generously be described as a 'city block' and more accurately described as 'urban planning's surrender to entropy.' The transition is marked by a faded street sign hanging at an angle that suggests either artistic intent or structural failure. Ahead to the north lies Reality Street proper, its cracked pavement stretching into the distance. The buildings that line the street lean inward with the posture of people at a very long meeting, and through gaps between them you can glimpse what might once have been a park. The alley retreats westward into comfortable darkness, while the harsh reality of the street awaits to the north.",
+  "exits": {
+    "west": "dark_alley_03",
+    "north": "reality_street_north_01"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

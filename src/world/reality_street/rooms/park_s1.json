@@ -1,0 +1,13 @@
+{
+  "id": "park_s1",
+  "type": "room",
+  "name": "Highland Park - Southwest Section",
+  "description": "The southwest section of Highland Park shows signs of nature winning its long game against municipal planning. The grass here grows taller, wilder, interspersed with plants that were definitely not in any official landscaping plan - dandelions achieving philosophical significance, patches of clover creating natural quilts, even some Queen Anne's lace that wandered in from somewhere and decided to stay. A fallen tree branch lies where it fell, slowly being reclaimed by moss and mushrooms in a process that's either decay or renaissance depending on your perspective. To the west, Reality Street is visible through the fence. The park continues north and east.",
+  "exits": {
+    "north": "park_lm1",
+    "east": "park_s2",
+    "northeast": "park_lm2"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

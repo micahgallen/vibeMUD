@@ -1,0 +1,18 @@
+{
+  "id": "park_un2",
+  "type": "room",
+  "name": "Highland Park - Upper Central Section",
+  "description": "The upper central section of Highland Park opens up here, offering a view toward what appears to be the park's heart - you can glimpse a structure to the south that might be a fountain, monument, or architectural surrender to gravity, depending on perspective and optimism level. The grass here shows signs of use - paths worn by feet, patches where picnic blankets have compressed the earth, circles where someone once started but didn't finish landscaping project. A discarded newspaper flutters past, its headlines already ancient history. The park continues in all cardinal directions, each promising its own variation on urban green space.",
+  "exits": {
+    "north": "park_n2",
+    "south": "park_lm2",
+    "east": "park_un3",
+    "west": "park_un1",
+    "northwest": "park_n1",
+    "northeast": "park_n3",
+    "southwest": "park_lm1",
+    "southeast": "park_lm3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

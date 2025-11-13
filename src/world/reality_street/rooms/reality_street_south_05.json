@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_south_05",
+  "type": "room",
+  "name": "Reality Street - Southern Extension",
+  "description": "Reality Street extends further south here, branching away from the main block into territory that feels increasingly forgotten by municipal planning. The pavement quality degrades noticeably, as if the city's maintenance budget ran out partway through this section and everyone just decided to live with the consequences. To the south, a condemned building looms with plywood boards and warning signs. To the east, Highland High School sits behind a chain-link fence, its institutional architecture suggesting educational aspirations that may have peaked decades ago. The street continues north back toward the main block.",
+  "exits": {
+    "north": "reality_street_south_03",
+    "south": "condemned_01",
+    "east": "school_entrance"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

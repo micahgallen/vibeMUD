@@ -1,0 +1,18 @@
+{
+  "id": "park_lm2",
+  "type": "room",
+  "name": "Highland Park - The Fountain",
+  "description": "You stand at the heart of Highland Park, where a fountain serves as the area's architectural anchor and philosophical centerpiece. The fountain itself is a monument to optimism meeting reality - constructed in what was probably the 70s judging by the concrete brutalism, it features a central column that once spouted water and now just... exists. The basin is dry except for collected rainwater and the dreams of better funding. Every surface is covered in graffiti, some artistic ('CORNHOLIO WAS HERE' in surprisingly elegant script), some declarative ('REALITY BITES'), and some just tags declaring territorial presence. Around the fountain's base, someone has left flowers - wilted but genuine - suggesting this space still means something to someone. The park spreads in all directions from this central point.",
+  "exits": {
+    "north": "park_un2",
+    "south": "park_s2",
+    "east": "park_lm3",
+    "west": "park_lm1",
+    "northwest": "park_un1",
+    "northeast": "park_un3",
+    "southwest": "park_s1",
+    "southeast": "park_s3"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

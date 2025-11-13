@@ -1,0 +1,11 @@
+{
+  "id": "school_storage",
+  "type": "room",
+  "name": "Highland High School - Storage Room",
+  "description": "You've entered a storage room that serves as the archaeological site of educational initiatives past. Metal shelves climb to the ceiling, packed with the accumulated detritus of decades of teaching - textbooks from editions ago, teaching aids that predate digital everything, boxes labeled with years that suggest the Carter administration. A stack of filmstrips sits next to overhead projector transparencies, both technologies that students would now need explained. Boxes marked 'YEARBOOKS 1987' sit next to ones marked 'SCIENCE FAIR MATERIALS' next to ones whose labels have faded to illegibility. The room smells of old paper, dust, and that particular mustiness that comes from enclosed spaces full of slowly decomposing educational materials. A few desks and chairs are stacked in one corner, awaiting either repair or disposal - probably the latter, possibly neither. Science lab equipment that might be vintage or might be just old sits on one shelf - beakers, a microscope missing key components, a skeleton model that's achieved creepy through age. The single light bulb provides illumination that's more atmospheric than functional. North leads back to the principal's office, which suddenly seems almost welcoming by comparison.",
+  "exits": {
+    "north": "school_office"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

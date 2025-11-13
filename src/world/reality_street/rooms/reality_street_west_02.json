@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_west_02",
+  "type": "room",
+  "name": "Reality Street - West Side",
+  "description": "The western stretch of Reality Street continues its patient existence here, flanked by urban infrastructure in various states of philosophical acceptance. To the west, a 24-hour laundromat announces itself with a flickering neon sign that's achieved a certain hypnotic rhythm in its malfunctioning - ON, off, ON, off, like a mechanical heartbeat. The sound of industrial washers hums through the door, accompanied by the scent of detergent and damp resignation. To the east, Highland Park is accessible through another convenient gap in the fence, offering passage to those seeking grass and questionable benches. The street continues north and south.",
+  "exits": {
+    "north": "reality_street_west_01",
+    "south": "reality_street_west_03",
+    "west": "laundromat"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

@@ -1,0 +1,113 @@
+================================================================================
+                     SESAME STREET AREA MAP
+================================================================================
+
+                        [HR1]
+                          |
+                      (w) | (e)
+                          |
+                        [HL]
+                          |
+                      (w) | (e)
+                          |
+         [TB] -------- [MdN] -------- (Main Street continues)
+           |     (e)     |
+       (s) |         (n) | (s)
+           |             |
+    [Reality Street] - [NE]
+       (test_room)       |
+        (Oscar)      (n) | (s)
+                         |
+                       [CP] -------- [GS]
+                    (w) | (e)    (e)   |
+                        |              | (w)
+                      [BAR]            |
+                        |              |
+                    (n) | (s)          |
+                        |              |
+                      [AL]             |
+                        |              |
+                    (n) | (s)          |
+                        |              |
+                      [AM]           [CF]
+                                 (e) | (w)
+                                     |
+                                   [MS]
+                                     |
+                                 (n) | (s)
+                                     |
+                                   [SE]
+
+================================================================================
+LEGEND
+================================================================================
+
+Main Street (North to South):
+  [Reality St] - Reality Street - Dark Alleyway (Oscar the Grouch)
+  [NE]    - Northern End (Green Wumpy)
+  [MdN]   - Mid-North (Yellow Wumpy)
+  [CP]    - Central Plaza (Big Bird) - MAIN HUB
+  [MS]    - Mid-South (Blue Wumpy)
+  [SE]    - Southern End (Red Wumpy) - WELCOME SIGN
+
+East Branches:
+  [TB]    - Teleport Booth (dimensional travel)
+  [GS]    - General Store (Hooper's - Shopkeeper)
+  [CF]    - Count's Fountain (HEALING ROOM - restores 5 HP/5 sec)
+
+West Branches:
+  [HL]    - Hotel Lobby (The Snuggly Sleeper)
+  [HR1]   - Hotel Room 01
+  [BAR]   - Furry Arms Tavern (Bartender, Purple Wumpy)
+  [AL]    - Arena Lounge (pre-combat area)
+  [AM]    - Arena Main / Wumpie Colosseum (Arena Champion)
+
+Direction Indicators:
+  (n) = north    (s) = south    (e) = east    (w) = west
+  |   = vertical connection
+  --- = horizontal connection
+
+Dead Ends (single exit):
+  - Southern End [SE] - only north
+  - Hotel Room 01 [HR1] - only east
+  - Teleport Booth [TB] - only south
+  - General Store [GS] - only west
+  - Count's Fountain [CF] - only west
+  - Arena Main [AM] - only north
+
+================================================================================
+CONNECTIVITY ISSUES FOUND
+================================================================================
+
+CRITICAL - DIRECTIONAL MISMATCH:
+  [TB] Teleport Booth -> sesame_street_north
+    - Teleport Booth has EXIT: south -> sesame_street_north
+    - Northern End has EXIT: east -> teleport_booth
+    - PROBLEM: You exit SOUTH from booth but it's EAST of Northern End
+    - EXPECTED: Either booth should be "west" or Northern End should be "west"
+    - CURRENT: Going south from booth, you cannot return via going north
+    - FIX NEEDED: Change sesame_street_north exit to "west" or booth to "west"
+
+All other connections are bidirectional and spatially consistent.
+
+================================================================================
+MAP NOTES
+================================================================================
+
+Entry Points:
+  - Primary: Reality Street connects south to Northern End
+  - Future: Teleport Booth (quest-based travel to other realms)
+
+Special Rooms:
+  - Count's Fountain: Auto-healing every 5 seconds
+  - General Store: Full merchant system with dynamic pricing
+  - Arena: Combat practice area
+
+Navigation:
+  - Main Street: Clear north-south corridor (6 rooms)
+  - East Side: Commerce and healing
+  - West Side: Social and combat areas
+
+Total Rooms: 13 (plus Reality Street connection to newbie_realm)
+
+================================================================================

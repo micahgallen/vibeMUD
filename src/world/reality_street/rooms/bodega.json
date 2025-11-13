@@ -1,0 +1,11 @@
+{
+  "id": "bodega",
+  "type": "room",
+  "name": "Neighborhood Bodega",
+  "description": "You enter a neighborhood bodega that occupies the cultural space between store and community hub. Every surface is utilized - shelves climb to the ceiling packed with products in multiple languages, suggesting a customer base as diverse as the inventory. Behind bulletproof glass, a clerk watches a small TV while somehow remaining aware of everything happening in the store, a skill developed through necessity and practice. The floor space is a maze of endcaps, displays, and strategic placement - milk in the back to force customers past everything else, chips at eye level, lottery tickets by the register where hope is always on sale. Hand-written signs advertise specials in marker on cardboard: 'BEER 2 FOR $5', 'LOTTO WINNER HERE LAST WEEK', 'NO LOITERING NO EXCEPTIONS.' A cat of uncertain ownership sleeps on the counter, unbothered by commerce. The air smells like coffee, cleaning supplies, and that specific bodega scent that's part corner store, part local institution. The door west leads back to Reality Street.",
+  "exits": {
+    "west": "reality_street_east_02"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

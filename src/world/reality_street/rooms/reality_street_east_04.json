@@ -1,0 +1,13 @@
+{
+  "id": "reality_street_east_04",
+  "type": "room",
+  "name": "Reality Street - East Side",
+  "description": "The eastern section of Reality Street presses onward here with the determination of infrastructure that doesn't know how to quit. To the east, a small clinic announces itself with a faded red cross and a sign promising 'WALK-INS WELCOME' - the promise itself worn thin by time but still technically accurate. A few plastic chairs visible through the window suggest a waiting room where hope and resignation share cramped quarters. To the west, the park fence continues its gentle decay, gaps offering glimpses of greenery that's learned to thrive on neglect. The street continues north and south along its established route.",
+  "exits": {
+    "north": "reality_street_east_03",
+    "south": "reality_street_east_05",
+    "east": "clinic"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}

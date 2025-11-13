@@ -1,0 +1,12 @@
+{
+  "id": "school_office",
+  "type": "room",
+  "name": "Highland High School - Principal's Office",
+  "description": "You stand in the principal's office, a space that exists at the intersection of authority and exhaustion. A desk dominates the room, its surface buried under papers in stacks that suggest organizational systems beyond comprehension - or possibly chaos pretending to be system. Behind the desk, filing cabinets line the wall, each drawer labeled with categories like 'DISCIPLINE', 'ATTENDANCE', 'PARENT CORRESPONDENCE' - an archive of institutional struggles. Diplomas and certificates on the walls announce qualifications earned in decades past, their frames slightly crooked in a way that suggests straightening them stopped being a priority. A coffee maker sits on a small table, its pot showing stains that speak to constant use and infrequent cleaning. The institutional chairs facing the desk have that particular quality of being uncomfortable enough to discourage lingering but not so uncomfortable as to inspire complaints. A window overlooks the school grounds with a view that's probably meant to be supervisory but feels more like surveillance. A small flag on a stand adds patriotic credibility. The air smells of old coffee, paper, and the specific anxiety that accumulates in spaces where disciplinary decisions are made. North leads back to the hallway. South accesses a storage area.",
+  "exits": {
+    "north": "school_hallway",
+    "south": "school_storage"
+  },
+  "createdAt": "2025-11-12T20:00:00Z",
+  "modifiedAt": "2025-11-12T20:00:00Z"
+}
