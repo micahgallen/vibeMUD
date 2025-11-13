@@ -11,6 +11,9 @@
   "maxHp": 65,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "wanderChance": 0,
   "dialogue": [
     "Best prices on Reality Street! Also worst prices. Also ONLY prices. It's a monopoly situation.",
     "What are you SELLING today? I mean... how can I help you? Same thing, really.",

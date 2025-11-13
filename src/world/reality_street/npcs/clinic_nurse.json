@@ -11,6 +11,9 @@
   "maxHp": 65,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.35,
+  "dialogueChance": 0.65,
+  "wanderChance": 0,
   "dialogue": [
     "Take a number. And by 'number' I mean a seat. We're out of numbers. Budget cuts.",
     "Yes, we're AWARE the waiting room is full. That's WHY it's called a WAITING room. Revolutionary concept.",

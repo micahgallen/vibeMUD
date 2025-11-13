@@ -12,6 +12,9 @@
   "wanders": false,
   "preventWandering": true,
   "heartbeatInterval": 30,
+  "emoteChance": 0.25,
+  "dialogueChance": 0.75,
+  "wanderChance": 0,
   "dialogue": [
     "Beat it! Can't you see I'm trying to be miserable in peace?",
     "Oh great, another adventurer. Just what this alley needed - more foot traffic.",

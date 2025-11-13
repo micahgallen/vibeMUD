@@ -11,6 +11,9 @@
   "maxHp": 45,
   "wanders": false,
   "heartbeatInterval": 25,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "wanderChance": 0,
   "dialogue": [
     "Y'know what's... what's REALLY the condemned building? SOCIETY, man. We're ALL condemned. Deep.",
     "Spare some change? I'm saving up for... for... ...something important. Very important.",

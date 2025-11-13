@@ -11,6 +11,9 @@
   "maxHp": 55,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "wanderChance": 0,
   "dialogue": [
     "Did you hear about the Peterson kid? Dropped out of college. I KNEW it. I CALLED it.",
     "Three kids, two jobs, one nervous breakdown. And these whites are STILL not white. What's the POINT?",

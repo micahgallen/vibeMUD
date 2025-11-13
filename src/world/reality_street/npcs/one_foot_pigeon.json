@@ -11,6 +11,9 @@
   "maxHp": 12,
   "wanders": true,
   "heartbeatInterval": 20,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.20,
+  "wanderChance": 0.40,
   "territory": [
     "park_n1",
     "park_n2",

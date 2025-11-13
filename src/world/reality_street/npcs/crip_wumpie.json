@@ -11,6 +11,9 @@
   "maxHp": 80,
   "wanders": true,
   "heartbeatInterval": 25,
+  "emoteChance": 0.25,
+  "dialogueChance": 0.45,
+  "wanderChance": 0.30,
   "territory": [
     "reality_street_east_01",
     "reality_street_east_02",

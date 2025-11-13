@@ -11,6 +11,9 @@
   "maxHp": 75,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "wanderChance": 0,
   "dialogue": [
     "Fill out form 23-A. No, the BLUE one. Blue. BLUE. That's green. Never mind, close enough.",
     "Look, unless someone's actively dying RIGHT NOW, you're gonna have to take a number and wait.",

@@ -11,6 +11,9 @@
   "maxHp": 65,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.85,
+  "dialogueChance": 0.10,
+  "wanderChance": 0.05,
   "dialogue": [
     "You ever notice how pigeons are just rats that figured out flying? Changed my whole perspective on urban wildlife.",
     "The thing about silence... is that it's the only language everyone speaks but nobody understands."

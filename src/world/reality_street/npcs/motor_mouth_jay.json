@@ -11,6 +11,9 @@
   "maxHp": 50,
   "wanders": false,
   "heartbeatInterval": 25,
+  "emoteChance": 0.25,
+  "dialogueChance": 0.70,
+  "wanderChance": 0.05,
   "dialogue": [
     "Yo, you got a dollar? I ain't gonna lie to you--it's for weed. At least I'm honest, right?",
     "So I'm telling you, man, the government is DEFINITELY putting something in Slurpees. Why else would they taste so good at 2 AM?",

@@ -11,6 +11,9 @@
   "maxHp": 65,
   "wanders": true,
   "heartbeatInterval": 20,
+  "emoteChance": 0.45,
+  "dialogueChance": 0.30,
+  "wanderChance": 0.25,
   "territory": [
     "dark_alley_01",
     "dark_alley_02",

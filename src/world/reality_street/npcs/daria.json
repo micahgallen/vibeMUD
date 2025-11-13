@@ -11,6 +11,9 @@
   "maxHp": 70,
   "wanders": true,
   "heartbeatInterval": 30,
+  "emoteChance": 0.15,
+  "dialogueChance": 0.60,
+  "wanderChance": 0.25,
   "territory": [
     "school_hallway",
     "school_classroom_01",

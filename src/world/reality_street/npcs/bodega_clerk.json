@@ -11,6 +11,9 @@
   "maxHp": 70,
   "wanders": false,
   "heartbeatInterval": 30,
+  "emoteChance": 0.35,
+  "dialogueChance": 0.65,
+  "wanderChance": 0,
   "dialogue": [
     "You break it, you buy it. You touch it, you probably already broke it, so you buy it.",
     "No loitering! This isn't library. Library is three blocks that way.",
