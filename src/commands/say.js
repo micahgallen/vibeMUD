@@ -1,3 +1,5 @@
+const { getDisplayName } = require('../utils/playerDisplay');
+
 module.exports = {
     id: 'say',
     name: 'say',
@@ -20,7 +22,7 @@ module.exports = {
         }
 
         const message = args.trim();
-        const playerName = player.capname || player.name;
+        const playerName = getDisplayName(player);
         const formattedMessage = `${playerName} says: ${message}`;
 
         // Send message to the player who said it

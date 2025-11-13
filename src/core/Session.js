@@ -15,7 +15,9 @@ class Session {
   }
 
   sendLine(message = '') {
-    this.socket.write(message + '\r\n');
+    // Always append ANSI RESET code to prevent color bleeding between messages
+    const ANSI_RESET = '\x1b[0m';
+    this.socket.write(message + ANSI_RESET + '\r\n');
   }
 
   prompt() {
