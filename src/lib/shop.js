@@ -98,12 +98,6 @@ module.exports = {
   keeperTemper: 'polite',
 
   /**
-   * Shop currency (default: 'gold')
-   * Could be extended for barter systems, faction currency, etc.
-   */
-  currency: 'gold',
-
-  /**
    * Merchant name (if different from room NPC)
    * Used for flavor text in buy/sell interactions
    */
@@ -112,19 +106,20 @@ module.exports = {
   /**
    * Customizable shop messages
    * Override these for unique shop personalities
+   * Use %s as placeholder for formatted currency (e.g., "5 gold, 10 silver")
    */
   messages: {
     greeting: 'Welcome to my shop! Type "list" to see what I have for sale.',
     noSuchItem: "I don't have that item.",
     noSuchItemToSell: "You don't have that item.",
-    cantAfford: "You don't have enough gold for that!",
+    cantAfford: "You don't have enough money for that!",
     shopCantAfford: "I can't afford to buy that from you right now.",
     noSellItem: "I don't buy that sort of thing.",
     itemWorthless: "That thing is worthless!",
     itemBroken: "I won't buy broken items. Get it repaired first!",
     noSell: "I'm sorry, but that item cannot be sold.",
-    successBuy: "That'll be %d gold. Thank you for your business!",
-    successSell: "I'll give you %d gold for that.",
+    successBuy: "That'll be %s. Thank you for your business!",
+    successSell: "I'll give you %s for that.",
     closed: "Sorry, we're closed right now. Come back later!",
     notOpen: "We're not open yet. Come back later!",
     noTrade: "I don't do business with your kind.",

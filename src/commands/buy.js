@@ -153,7 +153,9 @@ module.exports = {
     session.sendLine(colors.success(`You buy ${itemTemplate.name} for ${priceDisplay}.`));
 
     if (keeper) {
-      const message = room.messages?.successBuy?.replace('%d', priceDisplay) || room.messages?.successBuy?.replace('%s', priceDisplay) || `That'll be ${priceDisplay}. Thank you!`;
+      // Replace price placeholder and remove "gold" suffix if present
+      let message = room.messages?.successBuy || `That'll be ${priceDisplay}. Thank you for your business!`;
+      message = message.replace('%d gold', priceDisplay).replace('%s gold', priceDisplay).replace('%d', priceDisplay).replace('%s', priceDisplay);
       session.sendLine(colors.npc(`${keeper.name} says: "${message}"`));
     }
 
