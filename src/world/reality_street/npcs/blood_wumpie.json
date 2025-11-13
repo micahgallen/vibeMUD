@@ -1,0 +1,42 @@
+{
+  "id": "blood_wumpie",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Blood Wumpie",
+  "description": "A small furry creature sporting an oversized red bandana tied with the kind of careful precision that suggests it was consulted from a mirror multiple times. His crimson vest hangs loosely over his diminutive frame, and he's affecting a walk that can only be described as 'aggressively casual.' The effect is somewhat undermined by his adorable button nose and the fact that he's approximately two feet tall. He keeps one paw tucked into his vest pocket in what he clearly believes is a threatening manner, though it mostly makes him look like he's holding his tummy.",
+  "keywords": ["blood", "wumpie", "red", "bandana", "gang"],
+  "currentRoom": "reality_street_west_03",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": true,
+  "heartbeatInterval": 45,
+  "territory": [
+    "reality_street_west_01",
+    "reality_street_west_02",
+    "reality_street_west_03",
+    "reality_street_west_04",
+    "reality_street_west_05",
+    "reality_street_west_06"
+  ],
+  "dialogue": [
+    "West side, BEST side! You ain't even know, homie!",
+    "Man, I was gonna clean my bandana today but then I got high...",
+    "You step to me? YOU step to ME? I'm two feet of pure fury, baby!",
+    "Yo, I'm bout to go to the store. Y'all want anything? I'm gettin' Sunny D.",
+    "This ain't no game, son. This is WEST SIDE! ...okay it's kinda a game but STILL.",
+    "I got ninety-nine problems and they ALL about this red bandana clashing with my fur.",
+    "Check it - last week I scared off a pigeon. A WHOLE pigeon. I'm a legend out here!",
+    "My crew so hard, we use the crosswalk. BOTH ways. Even when there ain't no cars.",
+    "You disrespectin' the west? Keep walkin' before I have to give you my SECOND-meanest look.",
+    "I'm harder than calculus, smoother than a fresh jar of Skippy, and twice as nutty.",
+    "East side? More like LEAST side, am I right? I'll be here all week.",
+    "Man, my mama told me not to gangbang but this bandana brings out my eyes.",
+    "I'd cross the street to fight you but that's technically enemy territory, so... stay blessed.",
+    "West side represent! We out here living that thug life... well, that 'slightly mischievous' life.",
+    "You lucky my parole officer - I mean, my den mother - told me to chill today.",
+    "I'm so gangsta, I returned a library book ONE DAY late. Didn't even pay the fine yet!"
+  ],
+  "createdAt": "2025-11-13T00:00:00Z",
+  "modifiedAt": "2025-11-13T00:00:00Z"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "crip_wumpie",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Crip Wumpie",
+  "description": "A diminutive furry figure draped in blue - a blue bandana, blue baggy jeans (rolled up several times because the shortest inseam available is still too long), and a blue jersey that could double as a dress on his compact frame. He's attempting to emanate 'ice cold' energy, but his fluffy ears and the way he occasionally bounces when he walks somewhat undermine the effect. His paws keep making peace signs at irregular intervals, and he's got the kind of swagger that suggests he learned it from watching BET on a thirteen-inch TV with poor reception.",
+  "keywords": ["crip", "wumpie", "blue", "bandana", "gang"],
+  "currentRoom": "reality_street_east_03",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": true,
+  "heartbeatInterval": 45,
+  "territory": [
+    "reality_street_east_01",
+    "reality_street_east_02",
+    "reality_street_east_03",
+    "reality_street_east_04",
+    "reality_street_east_05",
+    "reality_street_east_06"
+  ],
+  "dialogue": [
+    "East side till I die! Which hopefully ain't soon cause I got a dentist appointment Thursday.",
+    "Yo cuz, you seen my cousin? He about this tall... *holds paw at own height* ...wait.",
+    "I'm cool as the other side of the pillow. The REFRIGERATED side. In winter.",
+    "Blood Wumpie think he hard? Please. I saw him cry at The Lion King. TWICE.",
+    "We runnin' this block! Well, more like briskly walking it. Runnin' makes me wheeze.",
+    "Check it - I'm so blue, I make the sky look PINK in comparison. That's science.",
+    "West side? More like WORST side! *waits for laughter that doesn't come* Tough crowd.",
+    "Man, I threw up a gang sign once and threw out my shoulder. Street life is ROUGH.",
+    "You steppin' to me? Better check yourself before you WRECK yourself... that's from a song, right?",
+    "East side represent! We got the dopest... uh... the flyest... look, we got snacks, okay?",
+    "I'm harder than a frozen Snickers bar and cooler than the back of Dracula's neck.",
+    "My crew so tight, we share Netflix passwords. You can't break that bond!",
+    "Somebody told me west side got better graffiti. I was like 'pssh' but honestly it's pretty good.",
+    "I'm bout that action! Specifically, action figures. I collect 'em. Got a mint condition He-Man.",
+    "You lucky I'm in a good mood. Got my cheese fries AND they ain't forget my ranch.",
+    "East side life chose me. I tried to choose accounting but math is HARD, homie."
+  ],
+  "createdAt": "2025-11-13T00:00:00Z",
+  "modifiedAt": "2025-11-13T00:00:00Z"
+}

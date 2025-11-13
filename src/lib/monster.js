@@ -49,8 +49,14 @@ module.exports = {
     const exits = Object.keys(room.exits);
     const validExits = exits.filter(exit => {
       const destRoom = entityManager.get(room.exits[exit]);
-      // Allow if room doesn't exist (shouldn't happen) or doesn't have preventWandering flag
-      return destRoom && !destRoom.preventWandering;
+      if (!destRoom || destRoom.preventWandering) return false;
+
+      // If this NPC has a territory restriction, only allow wandering to rooms in that territory
+      if (this.territory && this.territory.length > 0) {
+        return this.territory.includes(room.exits[exit]);
+      }
+
+      return true;
     });
 
     // No valid exits to wander to
