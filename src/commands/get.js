@@ -38,6 +38,12 @@ module.exports = {
       obj.name.toLowerCase().includes(itemName)
     );
 
+    // If found item is a coin, route to coin handler
+    if (item && item.definition === 'coin') {
+      this.handleGetCoins(session, itemName, entityManager, colors);
+      return;
+    }
+
     // If not found in room, check open containers
     if (!item) {
       const openContainers = Array.from(entityManager.objects.values()).filter(obj =>
@@ -60,6 +66,12 @@ module.exports = {
 
     if (!item) {
       session.sendLine('You don\'t see that here.');
+      return;
+    }
+
+    // Double-check: if found item is a coin (from container), route to coin handler
+    if (item.definition === 'coin') {
+      this.handleGetCoins(session, itemName, entityManager, colors);
       return;
     }
 
