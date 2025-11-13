@@ -1,0 +1,33 @@
+{
+  "id": "silent_bobby",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Silent Bob",
+  "description": "A large, imposing figure stands here with the serene presence of a Buddha statue that shops at thrift stores. Silent Bob is a substantial individual—not fat, exactly, but possessing that solid, immovable quality of someone who's very comfortable taking up space in the universe. He's wrapped in a long, black trench coat that's seen better decades, the kind of coat that suggests either deep personal mystery or a really good clearance sale. Probably both. Beneath the coat, you can glimpse a faded band t-shirt featuring a group that definitely required an 'Explicit Lyrics' sticker. A backwards baseball cap sits on his head, barely containing a wild tangle of dark hair that frames a scraggly goatee which looks less 'carefully cultivated' and more 'forgot shaving was a thing.' His jeans are appropriately baggy for the era, held up by a belt sporting a wallet chain that could anchor a small boat. Scuffed boots complete the look. What's most striking about Silent Bob isn't what he's wearing—it's the profound, almost zen-like silence that surrounds him. While his companion Motor-Mouth Jay ricochets around like a verbal pinball, Bob simply... exists. He communicates primarily through a sophisticated system of nods, shrugs, raised eyebrows, and the occasional thousand-yard stare that suggests he's either contemplating the meaning of existence or wondering where he left his lighter. When he does speak—which is rare—it tends to stop conversations dead because people assume it must be important. Sometimes it is. Sometimes it's just weird.",
+  "keywords": ["bob", "silent", "quiet", "large", "stoner", "coat", "trench", "mute", "zen"],
+  "currentRoom": "reality_street_east_02",
+  "level": 3,
+  "hp": 65,
+  "maxHp": 65,
+  "wanders": false,
+  "heartbeatInterval": 70,
+  "dialogue": [
+    "*nods slowly*",
+    "*shrugs and adjusts trench coat*",
+    "*lights up and offers to share*",
+    "*stares thoughtfully into the middle distance*",
+    "*raises one eyebrow*",
+    "*gives a thumbs up without making eye contact*",
+    "*produces a half-eaten candy bar from coat pocket, examines it, puts it back*",
+    "*shifts weight from one foot to the other*",
+    "*scratches goatee contemplatively*",
+    "You ever notice how pigeons are just rats that figured out flying? Changed my whole perspective on urban wildlife.",
+    "*pulls coat tighter and remains silent*",
+    "*nods in agreement with something Jay said, though it's unclear what*",
+    "The thing about silence... is that it's the only language everyone speaks but nobody understands.",
+    "*coughs once, then returns to stoic observation*",
+    "*makes a complicated hand gesture that might mean something profound or might just be stretching*"
+  ],
+  "createdAt": "2025-11-13T14:00:00Z",
+  "modifiedAt": "2025-11-13T14:00:00Z"
+}
