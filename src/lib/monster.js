@@ -28,29 +28,82 @@ module.exports = {
   maxHp: 20,
   wanders: true,
 
+  // Default behavior probabilities (can be overridden in NPC JSON)
+  emoteChance: 0.33,      // 33% chance to emote
+  dialogueChance: 0.33,   // 33% chance to speak
+  wanderChance: 0.34,     // 34% chance to wander (sums to 1.0)
+
   /**
    * Heartbeat - NPC speaks dialogue, performs emotes, or wanders between rooms
+   * Uses weighted random selection based on configurable probabilities
    * This function is inherited by all monsters
    */
   heartbeat: function(entityManager) {
-    // 30% chance to perform a custom emote (if emoteActions exists)
-    if (this.emoteActions && this.emoteActions.length > 0 && Math.random() < 0.3) {
+    // Determine what actions are available
+    const hasEmotes = this.emoteActions && this.emoteActions.length > 0;
+    const hasDialogue = this.dialogue && this.dialogue.length > 0;
+    const canWander = this.wanders;
+
+    // Build weighted action list (only include actions that are available)
+    const actions = [];
+
+    // Use nullish coalescing (??) to allow 0 as a valid weight
+    if (hasEmotes) {
+      const weight = this.emoteChance ?? 0.33;
+      if (weight > 0) actions.push({ type: 'emote', weight });
+    }
+
+    if (hasDialogue) {
+      const weight = this.dialogueChance ?? 0.33;
+      if (weight > 0) actions.push({ type: 'dialogue', weight });
+    }
+
+    if (canWander) {
+      const weight = this.wanderChance ?? 0.34;
+      if (weight > 0) actions.push({ type: 'wander', weight });
+    }
+
+    // If no actions available or all weights are 0, do nothing
+    if (actions.length === 0) return;
+
+    // Normalize weights to sum to 1.0
+    const totalWeight = actions.reduce((sum, action) => sum + action.weight, 0);
+
+    // Safety check: if total weight is 0, do nothing
+    if (totalWeight === 0) return;
+
+    actions.forEach(action => action.normalizedWeight = action.weight / totalWeight);
+
+    // Weighted random selection
+    const roll = Math.random();
+    let cumulative = 0;
+    let selectedAction = null;
+
+    for (const action of actions) {
+      cumulative += action.normalizedWeight;
+      if (roll < cumulative) {
+        selectedAction = action.type;
+        break;
+      }
+    }
+
+    // Execute selected action
+    if (selectedAction === 'emote') {
       const randomEmote = this.emoteActions[Math.floor(Math.random() * this.emoteActions.length)];
       this.customEmote(randomEmote, null, entityManager);
       console.log(`  🎭 ${this.name} emotes: "${randomEmote}"`);
       return;
     }
 
-    // 30% chance to speak (if dialogue exists)
-    if (this.dialogue && this.dialogue.length > 0 && Math.random() < 0.3) {
+    if (selectedAction === 'dialogue') {
       const randomLine = this.dialogue[Math.floor(Math.random() * this.dialogue.length)];
       entityManager.notifyRoom(this.currentRoom, `\x1b[36m${this.name} says, "\x1b[33m${randomLine}\x1b[36m"\x1b[0m`);
       console.log(`  💬 ${this.name} says: "${randomLine}"`);
       return;
     }
 
-    // Only wander if wanders is true
-    if (!this.wanders) return;
+    // Wander action
+    if (selectedAction !== 'wander') return;
 
     const room = entityManager.get(this.currentRoom);
     if (!room || !room.exits || Object.keys(room.exits).length === 0) return;
