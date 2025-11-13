@@ -10,7 +10,7 @@
   "hp": 12,
   "maxHp": 12,
   "wanders": true,
-  "heartbeatInterval": 42,
+  "heartbeatInterval": 20,
   "territory": [
     "park_n1",
     "park_n2",
@@ -29,21 +29,32 @@
     "park_s4"
   ],
   "dialogue": [
-    "Coo coo... *hops aggressively toward a discarded french fry*",
-    "*poops on a bench with the precision of a sniper*",
+    "Coo coo...",
     "You think YOU got problems? I got ONE FOOT and I'm still here!",
-    "*pecks at the ground furiously* Somebody dropped a HALF a cheeto? HALF? The disrespect!",
+    "Somebody dropped a HALF a cheeto? HALF? The disrespect!",
     "This is MY bench. I lost my foot defendin' this bench. Show some respect.",
-    "*flaps wings dramatically* I survived a TAXI. What have YOU survived today?",
-    "Coo coo, cooooo... *sounds vaguely threatening*",
-    "*hops in a circle, marking territory* Mine. All mine. The whole park. Don't test me.",
-    "I seen things you people wouldn't believe. Attack pigeons on fire off the shoulder of Orion... *trails off* Wait, that ain't right.",
-    "*scratches head with stump* This move never gets old. Well, for ME it don't.",
+    "I survived a TAXI. What have YOU survived today?",
+    "Coo coo, cooooo...",
+    "Mine. All mine. The whole park. Don't test me.",
+    "I seen things you people wouldn't believe. Attack pigeons on fire off the shoulder of Orion... Wait, that ain't right.",
+    "This move never gets old. Well, for ME it don't.",
     "You got bread? No? Then keep walkin', two-feet.",
-    "*lands on railing, poops immediately* BOOM. Still got it.",
+    "BOOM. Still got it.",
     "Lost my foot in '92. Or was it '93? Time loses meaning when you're a pigeon.",
-    "Coo COO! *aggressively defends a pizza crust from an imaginary threat*",
-    "*hops closer* I can smell fear. And hot dogs. Mostly hot dogs."
+    "Coo COO!",
+    "I can smell fear. And hot dogs. Mostly hot dogs."
+  ],
+  "emoteActions": [
+    "hops aggressively toward a discarded french fry",
+    "poops on a bench with the precision of a sniper",
+    "pecks at the ground furiously",
+    "flaps his wings dramatically",
+    "sounds vaguely threatening",
+    "hops in a circle, marking his territory",
+    "scratches his head with his stump",
+    "lands on a railing and poops immediately",
+    "aggressively defends a pizza crust from an imaginary threat",
+    "hops closer, one-legged but menacing"
   ],
   "createdAt": "2025-11-13T13:00:00Z",
   "modifiedAt": "2025-11-13T13:00:00Z"

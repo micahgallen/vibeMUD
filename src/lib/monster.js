@@ -3,6 +3,8 @@
  * Base definition for wandering NPCs
  */
 
+const { getDisplayName } = require('../utils/playerDisplay');
+
 // Helper function for opposite directions
 function getOppositeDirection(direction) {
   const opposites = {
@@ -27,10 +29,18 @@ module.exports = {
   wanders: true,
 
   /**
-   * Heartbeat - NPC speaks dialogue or wanders between rooms
+   * Heartbeat - NPC speaks dialogue, performs emotes, or wanders between rooms
    * This function is inherited by all monsters
    */
   heartbeat: function(entityManager) {
+    // 30% chance to perform a custom emote (if emoteActions exists)
+    if (this.emoteActions && this.emoteActions.length > 0 && Math.random() < 0.3) {
+      const randomEmote = this.emoteActions[Math.floor(Math.random() * this.emoteActions.length)];
+      this.customEmote(randomEmote, null, entityManager);
+      console.log(`  🎭 ${this.name} emotes: "${randomEmote}"`);
+      return;
+    }
+
     // 30% chance to speak (if dialogue exists)
     if (this.dialogue && this.dialogue.length > 0 && Math.random() < 0.3) {
       const randomLine = this.dialogue[Math.floor(Math.random() * this.dialogue.length)];
@@ -84,10 +94,57 @@ module.exports = {
   },
 
   /**
+   * Perform a custom emote action
+   * Allows NPCs to perform free-form emotes like players
+   *
+   * @param {string} emoteText - The action text (e.g., "scratches his head")
+   * @param {object|null} target - Optional target (player or NPC)
+   * @param {object} entityManager - The entity manager
+   */
+  customEmote: function(emoteText, target, entityManager) {
+    const room = entityManager.get(this.currentRoom);
+    if (!room) return;
+
+    const npcName = getDisplayName(this);
+    const colors = require('../core/colors');
+
+    if (target) {
+      // Targeted emote
+      const targetName = getDisplayName(target);
+      const fullMessage = `${npcName} ${emoteText} at ${targetName}.`;
+
+      // Notify everyone in the room
+      entityManager.notifyRoom(room.id, colors.emote(fullMessage));
+
+      // If target is a player, send them a special message
+      const targetSession = Array.from(entityManager.sessions.values()).find(s =>
+        s.state === 'playing' &&
+        s.player &&
+        s.player.id === target.id
+      );
+
+      if (targetSession) {
+        targetSession.sendLine('');
+        targetSession.sendLine(colors.emote(`${npcName} ${emoteText} at you.`));
+        targetSession.sendLine('');
+      }
+
+      // Notify target NPC if it has emote trigger handling
+      if (target.type === 'npc' && typeof target.onEmoteReceived === 'function') {
+        target.onEmoteReceived('custom_emote', this, entityManager, emoteText);
+      }
+    } else {
+      // Untargeted emote
+      const fullMessage = `${npcName} ${emoteText}.`;
+      entityManager.notifyRoom(room.id, colors.emote(fullMessage));
+    }
+  },
+
+  /**
    * Handle emote received from a player
    * Checks emote_triggers configuration and executes appropriate response
    */
-  onEmoteReceived: function(emoteName, actor, entityManager) {
+  onEmoteReceived: function(emoteName, actor, entityManager, emoteText) {
     // Check if this NPC has emote triggers configured
     if (!this.emote_triggers || !this.emote_triggers[emoteName]) {
       return;
@@ -161,6 +218,14 @@ module.exports = {
             // Execute the emote (untargeted)
             emoteCmd.execute(npcSession, '', entityManager, require('../core/colors'));
           }
+        }
+        break;
+
+      case 'custom_emote':
+        // NPC responds with a custom emote action
+        if (trigger.custom_emote_text) {
+          const targetActor = trigger.target_actor ? actor : null;
+          this.customEmote(trigger.custom_emote_text, targetActor, entityManager);
         }
         break;
 

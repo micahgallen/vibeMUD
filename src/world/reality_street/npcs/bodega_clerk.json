@@ -10,7 +10,7 @@
   "hp": 70,
   "maxHp": 70,
   "wanders": false,
-  "heartbeatInterval": 60,
+  "heartbeatInterval": 30,
   "dialogue": [
     "You break it, you buy it. You touch it, you probably already broke it, so you buy it.",
     "No loitering! This isn't library. Library is three blocks that way.",

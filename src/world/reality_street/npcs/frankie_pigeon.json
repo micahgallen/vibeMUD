@@ -10,7 +10,7 @@
   "hp": 16,
   "maxHp": 16,
   "wanders": true,
-  "heartbeatInterval": 43,
+  "heartbeatInterval": 20,
   "territory": [
     "park_n1",
     "park_n2",

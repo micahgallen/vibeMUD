@@ -10,7 +10,7 @@
   "hp": 60,
   "maxHp": 60,
   "wanders": true,
-  "heartbeatInterval": 60,
+  "heartbeatInterval": 25,
   "territory": [
     "school_hallway",
     "school_classroom_01",

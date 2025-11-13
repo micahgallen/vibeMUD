@@ -10,7 +10,7 @@
   "hp": 80,
   "maxHp": 80,
   "wanders": true,
-  "heartbeatInterval": 45,
+  "heartbeatInterval": 25,
   "territory": [
     "reality_street_west_01",
     "reality_street_west_02",
