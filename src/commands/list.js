@@ -63,28 +63,27 @@ module.exports = {
 
     // Build the display
     let output = [];
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push(colors.roomName('  ' + (room.name || "Shop")));
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push('');
-    output.push(colors.colorize(' #   Item                                    Stock    Price', colors.ANSI.WHITE));
-    output.push(colors.line(55, '─', colors.MUD_COLORS.CYAN));
+    output.push(colors.colorize(' #   Item                               Stock      Price', colors.ANSI.WHITE));
+    output.push(colors.line(78, '-', colors.MUD_COLORS.CYAN));
 
     merchandise.forEach((item, index) => {
       // Get the actual item object for details
       const itemObj = entityManager.get(item.itemId);
       const itemName = itemObj ? itemObj.name : item.itemId;
-      const paddedName = itemName.padEnd(30);
-      const paddedStock = String(item.stock).padStart(6);
+      const paddedName = itemName.padEnd(34);
+      const paddedStock = String(item.stock).padStart(9);
       const price = item.price || 0;
       const priceCoins = Currency.breakdown(price);
       const priceDisplay = Currency.format(priceCoins);
-      const paddedPrice = priceDisplay.padStart(20);
 
-      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(paddedPrice)}`);
+      output.push(`${colors.objectName('[' + (index + 1).toString().padStart(2) + ']')} ${paddedName} ${colors.colorize(paddedStock, colors.ANSI.WHITE)}   ${colors.success(priceDisplay)}`);
     });
 
-    output.push(colors.line(55, '═', colors.MUD_COLORS.CYAN));
+    output.push(colors.line(78, '=', colors.MUD_COLORS.CYAN));
     output.push(colors.hint("Type 'buy <number>' to purchase an item"));
     output.push(colors.hint("Type 'value <item>' to see what the shop will pay for your items"));
 
