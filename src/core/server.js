@@ -14,6 +14,7 @@ const CommandDispatcher = require('./CommandDispatcher');
 const LoginHandler = require('./LoginHandler');
 const colors = require('./colors');
 const { getBanner } = require('../banner');
+const leveling = require('../systems/leveling');
 
 const PORT = 4000;
 
@@ -40,6 +41,37 @@ async function init() {
   console.log('Loading entities...');
   entityManager.loadAll();
   console.log(`Loaded ${entityManager.objects.size} entities`);
+
+  // Initialize XP for existing players (migration)
+  console.log('Initializing player stats...');
+  let playersInitialized = 0;
+  for (const player of entityManager.getByType('player')) {
+    let updated = false;
+
+    if (typeof player.xp !== 'number') {
+      player.xp = 0;
+      updated = true;
+    }
+
+    // Ensure all stats are present (backwards compatibility)
+    const stats = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'];
+    for (const stat of stats) {
+      if (typeof player[stat] !== 'number') {
+        player[stat] = 10;
+        updated = true;
+      }
+    }
+
+    if (updated) {
+      entityManager.markDirty(player.id);
+      playersInitialized++;
+    }
+  }
+
+  if (playersInitialized > 0) {
+    console.log(`Initialized ${playersInitialized} players with XP and stats`);
+    entityManager.saveDirty();
+  }
 
   // Validate world consistency
   const isValid = entityManager.validate();

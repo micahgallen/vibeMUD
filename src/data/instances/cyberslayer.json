@@ -1,0 +1,16 @@
+{
+  "equipped": {},
+  "instances": [
+    {
+      "id": "wooden_shield_001_1763161780985_7p4y8jg1s",
+      "createdAt": "2025-11-14T23:09:40.985Z",
+      "modifiedAt": "2025-11-14T23:09:40.985Z",
+      "isInstance": true,
+      "location": {
+        "type": "inventory",
+        "owner": "cyberslayer"
+      },
+      "templateId": "wooden_shield_001"
+    }
+  ]
+}

@@ -2,36 +2,23 @@
   "id": "cyberslayer",
   "type": "player",
   "name": "Cyberslayer",
-  "hp": 100,
-  "maxHp": 100,
+  "hp": 110,
+  "maxHp": 110,
   "isAdmin": true,
-  "level": 1,
+  "level": 2,
   "strength": 10,
   "dexterity": 10,
   "constitution": 10,
   "intelligence": 10,
   "wisdom": 10,
   "charisma": 10,
-  "currentRoom": "arena_main",
-  "equipped": {
-    "mainHand": "dagger_001_1763158080424_12733hkvc",
-    "chest": "leather_armor_001_1763158084881_ck6h5jbtc",
-    "shield": "wooden_shield_001_1763158117206_1lohnrzib"
-  },
-  "inventory": [
-    "sword_001_1763157955012_o7y91c9r7",
-    "leather_armor_001_1763157965847_q9dlvtu2z",
-    "dagger_001_1763158080424_12733hkvc",
-    "sword_001_1763158082467_cjnb46ete",
-    "leather_armor_001_1763158084881_ck6h5jbtc",
-    "wooden_shield_001_1763158117206_1lohnrzib"
-  ],
+  "currentRoom": "sesame_street_01",
   "purse": {
     "coins": {
-      "platinum": 2,
-      "gold": 7,
+      "platinum": 1,
+      "gold": 8,
       "silver": 7,
-      "copper": 8
+      "copper": 4
     }
   },
   "bankAccount": 7150,
@@ -43,5 +30,6 @@
   "insultIndex": 4,
   "capname": "\u001b[31m\u001b[1mCyBeR\u001b[34mSLAYER\u001b[0m",
   "isDead": false,
-  "chatEnabled": true
+  "chatEnabled": true,
+  "xp": 400
 }

@@ -4,6 +4,8 @@
  * Each combat encounter gets its own 2-second heartbeat that processes attacks in initiative order
  */
 
+const leveling = require('./leveling');
+
 // Dice rolling helper
 function d20() {
   return Math.floor(Math.random() * 20) + 1;
@@ -484,6 +486,12 @@ function handleDeath(deadId, killerId, entityManager) {
   }
 
   console.log(`  💀 ${dead.name} was slain by ${killer ? killer.name : 'unknown'}`);
+
+  // Award XP if killer is a player and victim is an NPC
+  if (killer && killer.type === 'player' && dead.type === 'npc') {
+    const xpReward = leveling.calculateXPReward(dead);
+    leveling.awardXP(killerId, xpReward, entityManager);
+  }
 
   // Phase 2: Create corpse and handle respawn
   createCorpse(dead, room, entityManager);

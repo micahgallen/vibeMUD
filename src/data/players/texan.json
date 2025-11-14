@@ -14,10 +14,7 @@
   "charisma": 10,
   "currentRoom": "arena_main",
   "equipped": {},
-  "inventory": [
-    "dagger_001",
-    "gem_001"
-  ],
+  "inventory": [],
   "purse": {
     "coins": {
       "platinum": 0,
@@ -33,5 +30,6 @@
   "tauntIndex": 2,
   "yomamaIndex": 4,
   "insultIndex": 1,
-  "capname": "\u001b[37m\u001b[1mT\u001b[30me\u001b[0m\u001b[31mX\u001b[30m\u001b[1ma\u001b[37mN\u001b[0m"
+  "capname": "\u001b[37m\u001b[1mT\u001b[30me\u001b[0m\u001b[31mX\u001b[30m\u001b[1ma\u001b[37mN\u001b[0m",
+  "xp": 0
 }

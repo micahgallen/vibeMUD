@@ -161,6 +161,7 @@ class LoginHandler {
       hp: 100,
       maxHp: 100,
       level: 1,
+      xp: 0,             // Experience points
       // D&D 5E ability scores (default 10 = average human)
       strength: 10,      // Melee damage, physical power
       dexterity: 10,     // AC, initiative, ranged attacks

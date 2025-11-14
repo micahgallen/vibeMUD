@@ -193,6 +193,12 @@ class EntityManager {
             this.initializePurse(obj);
           }
 
+          // Initialize inventory and equipped for players if not present
+          if (obj.type === 'player') {
+            if (!obj.inventory) obj.inventory = [];
+            if (!obj.equipped) obj.equipped = {};
+          }
+
           // Store in appropriate map based on type and source
           if (type === 'players') {
             // Players go into players map
@@ -242,6 +248,12 @@ class EntityManager {
     }
     if (fixtureCount > 0) {
       console.log(`  ✓ Spawned ${fixtureCount} fixtures\n`);
+    }
+
+    // Load player-owned instances
+    console.log('🎒 Loading player inventories...');
+    for (const player of this.players.values()) {
+      this.loadPlayerInstances(player.id);
     }
   }
 
@@ -585,6 +597,10 @@ class EntityManager {
     }
 
     this.dirtyObjects.clear();
+
+    // Also save all player-owned instances
+    this.saveInstances();
+
     console.log('  ✅ All changes saved\n');
   }
 
@@ -605,10 +621,187 @@ class EntityManager {
       fs.mkdirSync(dir, { recursive: true });
     }
 
+    // Create a copy without inventory/equipped (those are saved separately in instances file)
+    const playerData = {};
+    for (const key in obj) {
+      // Skip inventory and equipped - they're saved in instances file
+      if (key === 'inventory' || key === 'equipped') {
+        continue;
+      }
+      // Only save own properties
+      if (obj.hasOwnProperty(key)) {
+        playerData[key] = obj[key];
+      }
+    }
+
     const file = path.join(dir, `${obj.id}.json`);
-    fs.writeFileSync(file, JSON.stringify(obj, null, 2));
+    fs.writeFileSync(file, JSON.stringify(playerData, null, 2));
 
     console.log(`  ✓ Saved ${obj.id}`);
+  }
+
+  /**
+   * Save all instances that are in player inventories or equipped
+   */
+  saveInstances() {
+    const instancesToSave = new Map();
+    const equippedSlots = new Map(); // Track which slot each item is equipped in
+
+    // Find all instances that belong to players
+    for (const instance of this.instances.values()) {
+      if (!instance.location) continue;
+
+      // Check if instance is in a player's inventory or equipped
+      if (instance.location.type === 'inventory') {
+        const owner = this.get(instance.location.owner);
+        if (owner && owner.type === 'player') {
+          if (!instancesToSave.has(owner.id)) {
+            instancesToSave.set(owner.id, []);
+          }
+          instancesToSave.get(owner.id).push(instance);
+        }
+      }
+    }
+
+    // Also check equipped items and track which slot they're in
+    for (const player of this.players.values()) {
+      if (player.equipped) {
+        if (!equippedSlots.has(player.id)) {
+          equippedSlots.set(player.id, {});
+        }
+
+        for (const slot in player.equipped) {
+          const itemId = player.equipped[slot];
+          const item = this.get(itemId);
+          if (item && item.isInstance) {
+            // Track which slot this item is equipped in
+            equippedSlots.get(player.id)[itemId] = slot;
+
+            if (!instancesToSave.has(player.id)) {
+              instancesToSave.set(player.id, []);
+            }
+            // Add if not already in the list
+            if (!instancesToSave.get(player.id).some(i => i.id === itemId)) {
+              instancesToSave.get(player.id).push(item);
+            }
+          }
+        }
+      }
+    }
+
+    // Save instances for each player
+    const instancesDir = path.join(this.dataDir, 'instances');
+    if (!fs.existsSync(instancesDir)) {
+      fs.mkdirSync(instancesDir, { recursive: true });
+    }
+
+    for (const [playerId, instances] of instancesToSave.entries()) {
+      const playerEquipped = equippedSlots.get(playerId) || {};
+
+      const saveData = {
+        equipped: {},  // Map of slot -> itemId
+        instances: []   // Array of instance data
+      };
+
+      // Save equipped mappings (slot -> itemId)
+      for (const itemId in playerEquipped) {
+        const slot = playerEquipped[itemId];
+        saveData.equipped[slot] = itemId;
+      }
+
+      // Save instance data
+      saveData.instances = instances.map(instance => {
+        // Save only own properties, not inherited ones
+        const data = {};
+        for (const key in instance) {
+          if (instance.hasOwnProperty(key)) {
+            data[key] = instance[key];
+          }
+        }
+        // Make sure we save the template reference
+        if (instance.__proto__ && instance.__proto__.id) {
+          data.templateId = instance.__proto__.id;
+        }
+        return data;
+      });
+
+      const file = path.join(instancesDir, `${playerId}.json`);
+      fs.writeFileSync(file, JSON.stringify(saveData, null, 2));
+    }
+
+    if (instancesToSave.size > 0) {
+      const totalInstances = Array.from(instancesToSave.values()).reduce((sum, arr) => sum + arr.length, 0);
+      console.log(`  ✓ Saved ${totalInstances} instances for ${instancesToSave.size} players`);
+    }
+  }
+
+  /**
+   * Load instances for a player from disk
+   * @param {string} playerId - Player ID
+   */
+  loadPlayerInstances(playerId) {
+    const instancesDir = path.join(this.dataDir, 'instances');
+    const file = path.join(instancesDir, `${playerId}.json`);
+
+    if (!fs.existsSync(file)) {
+      return; // No saved instances for this player
+    }
+
+    try {
+      const data = fs.readFileSync(file, 'utf8');
+      const saveData = JSON.parse(data);
+
+      const player = this.get(playerId);
+
+      // Clear the player's inventory and equipped slots
+      // The instance file is the source of truth
+      if (player) {
+        player.inventory = [];
+        player.equipped = {};
+      }
+
+      // Handle both old format (array) and new format (object with equipped + instances)
+      const instancesData = Array.isArray(saveData) ? saveData : (saveData.instances || []);
+      const equippedData = saveData.equipped || {};
+
+      for (const instanceData of instancesData) {
+        const templateId = instanceData.templateId;
+        const template = this.templates.get(templateId);
+
+        if (!template) {
+          console.warn(`  ⚠️  Template ${templateId} not found for instance ${instanceData.id}`);
+          continue;
+        }
+
+        // Create instance with prototypal inheritance
+        const instance = Object.create(template);
+        Object.assign(instance, instanceData);
+        instance.isInstance = true;
+
+        // Register instance
+        this.instances.set(instance.id, instance);
+        this.objects.set(instance.id, instance); // Legacy compatibility
+
+        // Add to location if specified
+        if (instance.location) {
+          this.addToLocation(instance);
+        }
+      }
+
+      // Restore equipped items
+      if (player && equippedData) {
+        for (const slot in equippedData) {
+          const itemId = equippedData[slot];
+          if (this.get(itemId)) {
+            player.equipped[slot] = itemId;
+          }
+        }
+      }
+
+      console.log(`  ✓ Loaded ${instancesData.length} instances for ${playerId}`);
+    } catch (error) {
+      console.error(`  ⚠️  Error loading instances for ${playerId}:`, error.message);
+    }
   }
 
   // ========================================

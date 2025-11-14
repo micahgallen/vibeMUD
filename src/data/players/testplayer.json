@@ -6,7 +6,6 @@
   "maxHp": 100,
   "level": 1,
   "currentRoom": "general_store",
-  "inventory": [],
   "createdAt": "2025-11-12T15:21:25.701Z",
   "modifiedAt": "2025-11-12T15:29:05.224Z",
   "passwordHash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
@@ -19,5 +18,12 @@
       "copper": 0
     }
   },
-  "bankAccount": 0
+  "bankAccount": 0,
+  "xp": 0,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10
 }

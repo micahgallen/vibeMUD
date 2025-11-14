@@ -17,5 +17,15 @@
   "equipped": {},
   "chatEnabled": true,
   "createdAt": "2025-11-14T22:35:57.290Z",
-  "modifiedAt": "2025-11-14T22:35:57.290Z"
+  "modifiedAt": "2025-11-14T22:35:57.290Z",
+  "purse": {
+    "coins": {
+      "platinum": 0,
+      "gold": 6,
+      "silver": 5,
+      "copper": 0
+    }
+  },
+  "bankAccount": 0,
+  "xp": 0
 }

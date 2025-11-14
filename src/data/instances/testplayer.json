@@ -1,0 +1,39 @@
+{
+  "equipped": {},
+  "instances": [
+    {
+      "id": "sword_001_1763161288132_lle4xjk83",
+      "createdAt": "2025-11-14T23:01:28.132Z",
+      "modifiedAt": "2025-11-14T23:01:28.132Z",
+      "isInstance": true,
+      "location": {
+        "type": "inventory",
+        "owner": "testplayer"
+      },
+      "templateId": "sword_001"
+    },
+    {
+      "id": "leather_armor_001_1763161288132_n2lunwpu8",
+      "createdAt": "2025-11-14T23:01:28.132Z",
+      "modifiedAt": "2025-11-14T23:01:28.132Z",
+      "isInstance": true,
+      "location": {
+        "type": "inventory",
+        "owner": "testplayer"
+      },
+      "templateId": "leather_armor_001"
+    },
+    {
+      "id": "apple_001_1763161288132_vcryjj5gs",
+      "createdAt": "2025-11-14T23:01:28.132Z",
+      "modifiedAt": "2025-11-14T23:01:28.132Z",
+      "isInstance": true,
+      "quantity": 1,
+      "location": {
+        "type": "inventory",
+        "owner": "testplayer"
+      },
+      "templateId": "apple_001"
+    }
+  ]
+}

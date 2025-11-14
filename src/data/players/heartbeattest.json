@@ -7,9 +7,23 @@
   "maxHp": 100,
   "level": 1,
   "currentRoom": "test_room",
-  "inventory": [
-    "torch_001"
-  ],
+  "inventory": [],
   "createdAt": "2025-11-12T16:00:17.098Z",
-  "modifiedAt": "2025-11-12T16:00:17.098Z"
+  "modifiedAt": "2025-11-12T16:00:17.098Z",
+  "purse": {
+    "coins": {
+      "platinum": 0,
+      "gold": 6,
+      "silver": 5,
+      "copper": 0
+    }
+  },
+  "bankAccount": 0,
+  "xp": 0,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10
 }
