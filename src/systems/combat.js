@@ -114,14 +114,24 @@ function disengage(participantId, entityManager) {
   const combatId = participant.combat.combatId;
   const opponentId = participant.combat.opponent;
   const opponent = entityManager.get(opponentId);
+  const encounter = entityManager.get(combatId);
+
+  // Clear any pending disconnect timers
+  if (encounter?.disconnectTimers) {
+    for (const [pid, timeout] of encounter.disconnectTimers) {
+      clearTimeout(timeout);
+    }
+  }
 
   // Clear combat state from participant
   delete participant.combat;
+  delete participant.isDisconnected;
   entityManager.markDirty(participantId);
 
   // Clear combat state from opponent
   if (opponent && opponent.combat && opponent.combat.combatId === combatId) {
     delete opponent.combat;
+    delete opponent.isDisconnected;
     entityManager.markDirty(opponentId);
     entityManager.notifyPlayer(opponentId, `\x1b[33m${participant.name} has fled from combat!\x1b[0m`);
   }
@@ -141,6 +151,12 @@ function disengage(participantId, entityManager) {
 function processCombatRound(encounter, entityManager) {
   // Check if combat should continue
   if (!shouldContinueCombat(encounter, entityManager)) {
+    // Clean up disconnect timers before ending combat
+    if (encounter.disconnectTimers) {
+      for (const timeout of encounter.disconnectTimers.values()) {
+        clearTimeout(timeout);
+      }
+    }
     entityManager.disableHeartbeat(encounter.id);
     entityManager.objects.delete(encounter.id);
     return;
@@ -152,6 +168,12 @@ function processCombatRound(encounter, entityManager) {
 
     // Verify attacker is still valid and in combat
     if (!attacker || !attacker.combat || attacker.combat.combatId !== encounter.id) {
+      continue;
+    }
+
+    // Skip turn if attacker is disconnected (NPC pauses during player DC)
+    if (encounter.disconnectedParticipants?.has(attackerId)) {
+      console.log(`  ⏸️  ${attacker.name} skipped turn (disconnected)`);
       continue;
     }
 
@@ -176,6 +198,12 @@ function processCombatRound(encounter, entityManager) {
     if (defender.hp <= 0) {
       // Defender is dead - end combat
       handleDeath(defenderId, attackerId, entityManager);
+      // Clean up disconnect timers
+      if (encounter.disconnectTimers) {
+        for (const timeout of encounter.disconnectTimers.values()) {
+          clearTimeout(timeout);
+        }
+      }
       entityManager.disableHeartbeat(encounter.id);
       entityManager.objects.delete(encounter.id);
       return;

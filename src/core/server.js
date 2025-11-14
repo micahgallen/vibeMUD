@@ -124,13 +124,85 @@ function setupNetworkCallbacks() {
   // Handle disconnections
   networkDriver.onDisconnect = (session) => {
     if (session.player) {
-      // Clean up combat if player was in combat
-      if (session.player.combat) {
-        const combat = require('../systems/combat');
-        combat.disengage(session.player.id, entityManager);
+      const player = session.player;
+
+      // Handle combat disconnect with grace period
+      if (player.combat) {
+        const combatId = player.combat.combatId;
+        const encounter = entityManager.get(combatId);
+
+        if (encounter) {
+          // Mark player as disconnected
+          if (!encounter.disconnectedParticipants) {
+            encounter.disconnectedParticipants = new Set();
+          }
+          encounter.disconnectedParticipants.add(player.id);
+
+          // Mark player entity as disconnected for display purposes
+          player.isDisconnected = true;
+          entityManager.markDirty(player.id);
+
+          // Notify room of disconnect
+          if (player.currentRoom) {
+            entityManager.notifyRoom(player.currentRoom,
+              `\x1b[90m${player.name} has lost connection.\x1b[0m`,
+              player.id);
+          }
+
+          console.log(`  ⏱️  ${player.name} disconnected from combat, 120s grace period started`);
+
+          // Determine timeout based on opponent type
+          const opponent = entityManager.get(player.combat.opponent);
+          const isPvE = opponent && opponent.type === 'npc';
+          const graceTime = isPvE ? 120000 : 60000; // 2 min for PvE, 1 min for PvP
+
+          // Set timeout for auto-flee
+          const timeoutHandle = setTimeout(() => {
+            // Check if still disconnected
+            const stillOffline = !entityManager.sessions.has(player.id);
+
+            if (stillOffline && player.combat && player.combat.combatId === combatId) {
+              console.log(`  ⏱️  Combat timeout expired for ${player.name} - auto-fleeing`);
+
+              const combat = require('../systems/combat');
+              combat.disengage(player.id, entityManager);
+
+              // Clear disconnected flag
+              delete player.isDisconnected;
+              entityManager.markDirty(player.id);
+
+              // Notify opponent if online
+              if (opponent) {
+                entityManager.notifyPlayer(opponent.id,
+                  `\x1b[33m${player.name} has disconnected and fled from combat!\x1b[0m`);
+              }
+
+              // Save after auto-flee
+              entityManager.saveDirty();
+            }
+          }, graceTime);
+
+          // Store timeout handle for cleanup
+          if (!encounter.disconnectTimers) {
+            encounter.disconnectTimers = new Map();
+          }
+          encounter.disconnectTimers.set(player.id, timeoutHandle);
+        } else {
+          // Combat already ended, just clean up reference
+          delete player.combat;
+          entityManager.markDirty(player.id);
+        }
       }
 
-      entityManager.unregisterSession(session.player.id);
+      // Notify room of disconnect if not already notified (non-combat disconnect)
+      if (!player.combat && player.currentRoom) {
+        entityManager.notifyRoom(player.currentRoom,
+          `\x1b[90m${player.name} has lost connection.\x1b[0m`,
+          player.id);
+      }
+
+      // Unregister session (but player entity stays if in combat)
+      entityManager.unregisterSession(player.id);
       entityManager.saveDirty();
     }
   };

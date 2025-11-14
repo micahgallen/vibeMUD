@@ -12,7 +12,7 @@
   "intelligence": 10,
   "wisdom": 10,
   "charisma": 10,
-  "currentRoom": "general_store",
+  "currentRoom": "arena_main",
   "equipped": {
     "mainHand": "dagger_001_1763158080424_12733hkvc",
     "chest": "leather_armor_001_1763158084881_ck6h5jbtc",

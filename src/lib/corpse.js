@@ -23,22 +23,24 @@ module.exports = {
 
   /**
    * Heartbeat - corpse decay
-   * Corpses disappear after decayTime expires
+   * Corpses disappear after decayTime expires or when empty
    */
   heartbeat: function(entityManager) {
     // Check if corpse has expired
     const age = (Date.now() - this.createdAt) / 1000; // age in seconds
+    const isEmpty = !this.inventory || this.inventory.length === 0;
 
-    if (age >= this.decayTime) {
+    // Decay if expired OR if empty (looted clean)
+    if (age >= this.decayTime || isEmpty) {
       const room = this.location?.room;
 
       // Notify room of decay
       if (room) {
         entityManager.notifyRoom(room,
-          `\x1b[90m${this.name} decays into dust.\x1b[0m`);
+          `\x1b[90m${this.name} crumbles into dust.\x1b[0m`);
       }
 
-      // Drop all items to the room before decaying
+      // Drop all items to the room before decaying (if any remain)
       if (this.inventory && this.inventory.length > 0) {
         for (const itemId of [...this.inventory]) {
           const item = entityManager.get(itemId);
@@ -53,7 +55,7 @@ module.exports = {
       entityManager.disableHeartbeat(this.id);
       entityManager.objects.delete(this.id);
 
-      console.log(`  💀 Corpse decayed: ${this.id}`);
+      console.log(`  💀 Corpse ${isEmpty ? 'looted and ' : ''}decayed: ${this.id}`);
     }
   }
 };
