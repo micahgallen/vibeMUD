@@ -1,0 +1,16 @@
+{
+  "id": "holomemorial_library",
+  "type": "room",
+  "name": "Holomemorial Library (2015)",
+  "description": "A modern library with holographic archives and quiet reading pods.",
+  "exits": {
+    "south": "courthouse_plaza_2015",
+    "north": "high_tech_school_2015"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "research",
+    "future"
+  ]
+}

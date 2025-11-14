@@ -1,0 +1,18 @@
+{
+    "id":  "south_avenue_1955",
+    "definition": "room",
+    "name":  "South Avenue (1955)",
+    "description":  "South Avenue, a tranquil ribbon of asphalt, unfurls itself with an almost deliberate slowness, as if resisting the relentless march of time. Here, in the golden embrace of evening, families, those curious collections of individuals bound by genetics and a shared appreciation for synchronized strolling, emerge from their domiciles. They walk, they talk, they occasionally point at a particularly interesting cloud formation, all while unknowingly participating in a grand, cosmic ballet of suburban existence. One might ponder the philosophical implications of a perfectly manicured lawn, or the cosmic significance of a child's laughter echoing in the twilight. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of neighborly greetings and the relentless pursuit of domestic bliss.",
+    "exits":  {
+                  "east":  "oak_park_cemetery_1955",
+                  "north":  "holts_diner_1955",
+                  "south":  "future_lyon_site"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "residential"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

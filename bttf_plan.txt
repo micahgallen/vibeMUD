@@ -1,0 +1,47 @@
+Plan for "Hill Valley" Realm Implementation:
+
+1.  **Directory Structure:**
+    *   Create a new directory `src/world/hill_valley/`.
+    *   Inside `hill_valley/`, create subdirectories for each timeline: `1955/`, `1985/`, `1985alt/`, `2015/`.
+    *   Within each timeline directory, create `rooms/`, `npcs/`, and `items/` subdirectories.
+    *   Example: `src/world/hill_valley/1985/rooms/`
+
+2.  **Room JSON Files Generation:**
+    *   For each timeline, parse the corresponding map file (`hill_valley_1985_map.txt`, `hill_valley_1955_map.txt`, `hill_valley_1985alt_map.txt`, `hill_valley_2015_map.txt`) to identify room names and their connections.
+    *   Each unique room will correspond to a JSON file (e.g., `courthouse_square.json`).
+    *   Each room JSON file will have the following structure:
+        *   `id`: A unique ID (e.g., `hill_valley_1985_courthouse_square`).
+        *   `name`: The room name from the map.
+        *   `description`: A detailed description unique to the timeline, incorporating details from the map's "Key Notes" and general timeline context.
+        *   `exits`: An object mapping directions (e.g., `north`, `south`, `east`, `west`, `northeast`, `southwest`, `up`, `down`) to the `id` of the connected room.
+        *   `realm`: `hill_valley`.
+        *   `timeline`: `1955`, `1985`, `1985alt`, or `2015`.
+
+3.  **Room Layout and Connections:**
+    *   The core room layout (the graph of connections) will be consistent across all four timelines. This layout will be derived by carefully parsing the ASCII art maps.
+    *   Map symbols will be translated to MUD exit directions:
+        *   `|`: Vertical connection (north/south).
+        *   `-`: Horizontal connection (east/west).
+        *   `/`, `\`: Diagonal connections (northeast/southwest, northwest/southeast).
+        *   `====`, `----`: Represent longer roads/highways, implying direct connections between the named locations.
+
+4.  **Timeline-Specific Descriptions:**
+    *   The `description` field for each room will be unique to its timeline, reflecting the historical context, visual details, and atmosphere described in the map headers and "Key Notes" sections.
+
+5.  **Connection to the Rest of the MUD:**
+    *   The `hill_valley_1985` timeline will serve as the primary connection point to the rest of the MUD.
+    *   A suitable room within the `hill_valley_1985` timeline (e.g., `Twin Pines Mall` or `Lyon Estates Gate`) will be designated as the entry/exit point.
+    *   This will require adding an exit from this room to an existing room in another realm (e.g., `newbie_realm` or `reality_street`) and potentially adding a corresponding entry point in the other realm. This will be a separate step after the Hill Valley rooms are created.
+
+6.  **Initial Content (NPCs/Items):**
+    *   Initially, only the room structures and descriptions will be created. Placeholder `npcs/` and `items/` directories will be created for future content.
+
+7.  **Implementation Steps (High-Level):**
+    a.  Create the base directory structure: `src/world/hill_valley/` and its timeline-specific subdirectories (`1955/`, `1985/`, `1985alt/`, `2015/`) with `rooms/`, `npcs/`, `items/` inside each.
+    b.  Develop a parsing logic to interpret the ASCII maps into a structured room graph (room names and their connections).
+    c.  Iterate through each timeline (1955, 1985, 1985alt, 2015):
+        i.  For each room identified in the common graph, generate a unique `id` and `name`.
+        ii. Construct the `exits` object based on the parsed connections.
+        iii. Write a detailed `description` for the room, tailored to the specific timeline using the map's context.
+        iv. Save the room data as a JSON file in the appropriate `src/world/hill_valley/[timeline]/rooms/` directory.
+    d.  Document the specific room in `hill_valley_1985` that will serve as the teleport hub to the main MUD.

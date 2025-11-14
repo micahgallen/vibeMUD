@@ -1,0 +1,17 @@
+{
+    "id":  "oak_park_cemetery_1955",
+    "definition": "room",
+    "name":  "Oak Park Cemetery (1955)",
+    "description":  "Oak Park Cemetery, a tranquil expanse of meticulously maintained grief, stands as a testament to the human species' peculiar habit of tidying up after the inevitable. Here, amidst the silent sentinels of stone and the occasional burst of fresh flowers, one can almost hear the faint, ghostly whispers of countless untold stories, each a miniature universe of hopes, dreams, and the occasional misplaced umbrella. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of remembrance and the relentless pursuit of eternal rest. One might even ponder the philosophical implications of a well-trimmed hedge, or the cosmic significance of a single, fallen leaf.",
+    "exits":  {
+                  "north":  "football_field_1955",
+                  "west":  "south_avenue_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "quiet"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

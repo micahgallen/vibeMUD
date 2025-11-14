@@ -1,0 +1,15 @@
+{
+    "id": "old_mill_ruins",
+    "name": "Old Mill Ruins",
+    "description": "An old mill half-collapsed, its stones blackened by neglect.",
+    "exits": {
+        "west": "river_waste",
+        "north": "outskirts_1985a"
+    },
+    "tags": [
+        "ruins"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

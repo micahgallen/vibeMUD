@@ -1,0 +1,15 @@
+{
+    "id": "mall_ruins",
+    "name": "Mall Ruins",
+    "description": "The remains of what used to be a mall, now host to illicit trade and graffiti.",
+    "exits": {
+        "south": "biff_garage_1985a",
+        "west": "lyon_estates_slum"
+    },
+    "tags": [
+        "ruins"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

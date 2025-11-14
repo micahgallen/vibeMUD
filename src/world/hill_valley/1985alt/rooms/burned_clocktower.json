@@ -1,0 +1,15 @@
+{
+    "id": "burned_clocktower",
+    "name": "Burned Clocktower",
+    "description": "A skeletal clocktower that no longer keeps time; ash marks the surrounding square.",
+    "exits": {
+        "east": "courthouse_square_burned",
+        "south": "main_strip_1985a"
+    },
+    "tags": [
+        "ruins"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

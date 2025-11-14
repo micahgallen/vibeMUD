@@ -1,0 +1,15 @@
+{
+  "id": "restored_cemetery_2015",
+  "type": "room",
+  "name": "Restored Oak Park Cemetery (2015)",
+  "description": "A landscaped memorial area with plaques and digital memorial boards.",
+  "exits": {
+    "north": "skyplayground",
+    "west": "east_avenue_2015"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "quiet"
+  ]
+}

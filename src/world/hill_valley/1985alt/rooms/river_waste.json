@@ -1,0 +1,15 @@
+{
+    "id": "river_waste",
+    "name": "Contaminated River Bank",
+    "description": "The river is choked with pollution here; the air smells faintly of chemicals.",
+    "exits": {
+        "north": "pawn_row",
+        "east": "old_mill_ruins"
+    },
+    "tags": [
+        "hazard"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

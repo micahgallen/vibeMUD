@@ -1,0 +1,15 @@
+{
+    "id": "perimeter_road",
+    "name": "Perimeter Road",
+    "description": "A wide road circling the core of the city, heavily patrolled in places.",
+    "exits": {
+        "west": "outskirts_1985a",
+        "east": "biffco_tower"
+    },
+    "tags": [
+        "road"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

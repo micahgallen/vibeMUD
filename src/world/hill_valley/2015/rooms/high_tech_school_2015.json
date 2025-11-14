@@ -1,0 +1,16 @@
+{
+  "id": "high_tech_school_2015",
+  "type": "room",
+  "name": "Hill Valley High (Tech Campus) (2015)",
+  "description": "A technology-forward campus with glass wings and innovation labs.",
+  "exits": {
+    "south": "holomemorial_library",
+    "east": "skyplayground"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "school",
+    "future"
+  ]
+}

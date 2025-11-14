@@ -1,0 +1,17 @@
+{
+    "id":  "bank_1955",
+    "definition": "room",
+    "name":  "Bank (1955)",
+    "description":  "The Bank of 1955, a bastion of fiscal fortitude, stands with an almost defiant steadiness, its marble steps worn smooth by the relentless march of commerce and the occasional bewildered pigeon. A flag, a colorful testament to national pride and the inherent absurdity of symbolic representation, flutters bravely in front. Within its hallowed halls, the very air hums with the quiet desperation of numbers being shuffled, fortunes being made (and occasionally lost), and the faint, lingering scent of ambition and freshly printed money. One might ponder the philosophical implications of a system that assigns arbitrary value to shiny metals and printed paper, or the cosmic significance of a perfectly balanced ledger. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of financial manipulation and the relentless pursuit of economic stability.",
+    "exits":  {
+                  "west":  "courthouse_square_1955",
+                  "east":  "elm_avenue_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "finance"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

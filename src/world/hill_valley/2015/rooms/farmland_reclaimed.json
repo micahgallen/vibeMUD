@@ -1,0 +1,15 @@
+{
+  "id": "farmland_reclaimed",
+  "type": "room",
+  "name": "Reclaimed Farmland",
+  "description": "Former fields repurposed for green energy and community gardens.",
+  "exits": {
+    "north": "outskirts_future"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "rural",
+    "green"
+  ]
+}

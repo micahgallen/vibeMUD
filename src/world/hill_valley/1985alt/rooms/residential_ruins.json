@@ -1,0 +1,15 @@
+{
+    "id": "residential_ruins",
+    "name": "Residential Ruins",
+    "description": "Boarded houses and broken fences; a few stubborn lights still burn here at night.",
+    "exits": {
+        "north": "warehouse_quarter",
+        "east": "lyon_estates_slum"
+    },
+    "tags": [
+        "ruins"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

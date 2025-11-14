@@ -1,0 +1,16 @@
+{
+    "id": "courthouse_square_burned",
+    "name": "Courthouse Square (Burned)",
+    "description": "The courthouse stands blackened and cold; soot and graffiti cover the stone.",
+    "exits": {
+        "north": "main_strip_1985a",
+        "south": "lyon_estates_slum",
+        "east": "police_hq_1985a"
+    },
+    "tags": [
+        "ruins"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

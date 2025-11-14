@@ -1,0 +1,15 @@
+{
+    "id": "industrial_lane_1985a",
+    "name": "Industrial Lane",
+    "description": "Shuttered factories with broken windows; the hum of distant machines can be heard.",
+    "exits": {
+        "north": "reclaimed_park",
+        "east": "warehouse_quarter"
+    },
+    "tags": [
+        "industrial"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}
