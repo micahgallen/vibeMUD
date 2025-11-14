@@ -1,5 +1,7 @@
 {
   "id": "courthouse_square",
+  "type": "room",
+  "definition": "room",
   "name": "Courthouse Square",
   "description": "Courthouse Square is the sort of place that town planners dream of, shortly before they wake up screaming. It is the geographical, cultural, and gravitational center of Hill Valley. At its heart stands the courthouse, a building of immense civic pride and questionable architectural choices. Its most famous feature is the clock, which has been heroically stopped at 10:04 for as long as anyone can remember, a silent monument to a moment so significant that time itself decided to take a coffee break. It serves as a useful reminder that, no matter what happens, it's probably not 10:05 yet.",
   "exits": {

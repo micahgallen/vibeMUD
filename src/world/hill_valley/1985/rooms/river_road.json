@@ -1,5 +1,7 @@
 {
   "id": "river_road",
+  "type": "room",
+  "definition": "room",
   "name": "River Road",
   "description": "River Road is less a road and more a philosophical statement about the inevitability of things going downstream. It meanders alongside a river that, like all rivers, is in a hurry to get somewhere else, probably the sea, where it can finally relax and become part of something bigger. The trees, in their infinite arboreal wisdom, line the path, occasionally dropping leaves with a sigh that sounds suspiciously like 'So it goes.' This road leads to the countryside, a place where the houses are isolated, not because of social distancing, but because the universe decided to scatter them like forgotten dice. It's all very picturesque, in a 'don't think too hard about it' kind of way.",
   "exits": {

@@ -1,5 +1,7 @@
 {
   "id": "farmland",
+  "type": "room",
+  "definition": "room",
   "name": "Farmland",
   "description": "You have reached the Farmland, an area whose primary export is scenery. Fields, which are mostly just organized dirt, stretch out to a horizon that seems to be actively receding, as if it has better places to be. The farmhouses are punctuation marks in a long, rambling sentence about corn. Occasionally, a tractor will rumble past, a lumbering, diesel-powered beast of burden from a species that long ago decided that four wheels were better than two legs. It's all very peaceful, in a 'nothing is ever going to happen here' sort of way.",
   "exits": {

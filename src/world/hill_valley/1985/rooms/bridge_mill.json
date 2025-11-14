@@ -1,5 +1,7 @@
 {
   "id": "bridge_mill",
+  "type": "room",
+  "definition": "room",
   "name": "Bridge and Mill",
   "description": "Here stands a bridge made of stones that have seen more pointless arguments between ducks than a philosopher has seen pointless debates. It crosses a river that is, in the grand scheme of rivers, not terribly important, but is doing its best anyway. The adjacent mill, a relic from a time when people thought grinding grain was a growth industry, now slumps into a comfortable retirement of just... being there. It's the kind of quiet that isn't just an absence of noise, but a presence of something else, probably moss.",
   "exits": {

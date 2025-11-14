@@ -1,0 +1,26 @@
+{
+  "timeline": "1955",
+  "rooms": [
+    { "id": "courthouse_square_1955", "name": "Courthouse Square (1955)", "description": "A pristine town square; the courthouse clock proudly ticks above town.", "exits": { "north": "library_1955", "south": "holts_diner_1955", "east": "bank_1955", "west": "texaco_1955" }, "tags": ["landmark"] },
+    { "id": "library_1955", "name": "Hill Valley Library (1955)", "description": "A tidy library with polished wooden shelves and helpful librarians.", "exits": { "south": "courthouse_square_1955", "north": "high_school_1955" }, "tags": ["building"] },
+    { "id": "high_school_1955", "name": "Hill Valley High School (1955)", "description": "A newly painted high school bustling with students.", "exits": { "south": "library_1955", "east": "football_field_1955" }, "tags": ["school"] },
+    { "id": "football_field_1955", "name": "Football Field (1955)", "description": "Well-kept grass and wooden bleachers; the scoreboard shows last week's game.", "exits": { "west": "high_school_1955", "south": "oak_park_cemetery_1955" }, "tags": ["outdoor"] },
+    { "id": "oak_park_cemetery_1955", "name": "Oak Park Cemetery (1955)", "description": "A simpler, well-kept cemetery with fresh flowers in places.", "exits": { "north": "football_field_1955", "west": "south_avenue_1955" }, "tags": ["quiet"] },
+    { "id": "south_avenue_1955", "name": "South Avenue (1955)", "description": "A peaceful avenue with families walking in the evenings.", "exits": { "east": "oak_park_cemetery_1955", "north": "holts_diner_1955", "south": "future_lyon_site" }, "tags": ["residential"] },
+    { "id": "holts_diner_1955", "name": "Holts Diner (1955)", "description": "A gleaming counter diner with a jukebox and chrome stools.", "exits": { "north": "courthouse_square_1955", "south": "main_st_south_1955", "east": "first_st_1955" }, "tags": ["restaurant"] },
+    { "id": "first_st_1955", "name": "First Street (1955)", "description": "New shops with window displays showcasing the latest goods.", "exits": { "west": "holts_diner_1955", "east": "main_st_west_1955" }, "tags": ["shopping"] },
+    { "id": "main_st_west_1955", "name": "Main Street (West) (1955)", "description": "A tidy west side of Main Street with freshly painted signs.", "exits": { "west": "first_st_1955", "east": "texaco_1955" }, "tags": ["commerce"] },
+    { "id": "texaco_1955", "name": "Texaco Garage (1955)", "description": "A small, efficiently run gas station and service garage.", "exits": { "east": "courthouse_square_1955", "west": "main_st_west_1955", "south": "brown_mansion_1955" }, "tags": ["service"] },
+    { "id": "bank_1955", "name": "Bank (1955)", "description": "A steady bank with marble steps and a flag in front.", "exits": { "west": "courthouse_square_1955", "east": "elm_avenue_1955" }, "tags": ["finance"] },
+    { "id": "brown_mansion_1955", "name": "Brown Mansion (1955)", "description": "Dr. Emmett Brown's grand home, a place of odd inventions and eccentricities.", "exits": { "north": "texaco_1955", "south": "future_lyon_site" }, "tags": ["residential","story_event"] },
+    { "id": "future_lyon_site", "name": "Empty Field (Future Lyon Estates Site)", "description": "A large open field with a 'Coming Soon' sign for a future subdivision.", "exits": { "north": "brown_mansion_1955", "east": "river_road_1955" }, "tags": ["field"] },
+    { "id": "river_road_1955", "name": "River Road (1955)", "description": "A country road beside the river; families sometimes picnic near the bank.", "exits": { "west": "future_lyon_site", "north": "bridge_mill_1955" }, "tags": ["scenic"] },
+    { "id": "bridge_mill_1955", "name": "Bridge and Mill (1955)", "description": "An old mill and stone bridge; the structure creaks on windy days.", "exits": { "south": "river_road_1955", "north": "farmland_1955" }, "tags": ["scenic"] },
+    { "id": "farmland_1955", "name": "Farmland (1955)", "description": "Wheat and corn fields extend toward the horizon, farmhouses dotting the land.", "exits": { "south": "bridge_mill_1955" }, "tags": ["rural"] },
+    { "id": "lyon_estates_future_path", "name": "Country Lane Toward Future Subdivision", "description": "A quiet lane that will one day connect to suburban development.", "exits": { "north": "main_st_south_1955", "south": "twin_pines_future_site" }, "tags": ["path"] },
+    { "id": "twin_pines_future_site", "name": "Wooded Lot (Future Twin Pines Site)", "description": "A small wooded area with two young pine trees and scattered boulders.", "exits": { "north": "lyon_estates_future_path" }, "tags": ["wooded"] },
+    { "id": "main_st_south_1955", "name": "Main Street (South) (1955)", "description": "A quieter stretch of Main Street with a few small warehouses and storage sheds.", "exits": { "north": "holts_diner_1955", "east": "warehouse_row_1955" }, "tags": ["industrial"] },
+    { "id": "warehouse_row_1955", "name": "Warehouse Row (1955)", "description": "Small, utilitarian warehouses serving local businesses.", "exits": { "west": "main_st_south_1955", "north": "bank_1955" }, "tags": ["industrial"] },
+    { "id": "downtown_backalley_1955", "name": "Downtown Back Alley (1955)", "description": "A narrow alley behind the shops, useful for deliveries and quick shortcuts.", "exits": { "east": "first_st_1955", "south": "main_st_south_1955" }, "tags": ["alley"] }
+  ]
+}

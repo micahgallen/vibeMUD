@@ -1,5 +1,7 @@
 {
   "id": "suburban_lane",
+  "type": "room",
+  "definition": "room",
   "name": "Suburban Lane",
   "description": "Suburban Lane is a triumph of human aspiration over the cold, hard facts of the universe. Here, lawns are not merely grass; they are meticulously sculpted statements of intent, each blade a tiny soldier in the war against entropy. Mailboxes stand like silent, metallic sentinels, awaiting the daily pronouncements from the outside world, which usually consist of bills and junk mail. The distant sound of children, a faint, ethereal echo, serves as a reminder that even in this carefully constructed reality, chaos, in its most adorable form, still exists. It's all very orderly, and utterly meaningless.",
   "exits": {

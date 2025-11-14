@@ -1,5 +1,7 @@
 {
   "id": "biffs_garage",
+  "type": "room",
+  "definition": "room",
   "name": "Biff's Garage",
   "description": "Biff's Garage is less a place for automotive repair and more a museum dedicated to the principle of entropy. Tools, car parts, and mysterious greasy objects lie scattered in a way that suggests a small, localized Big Bang occurred and no one bothered to clean up. The air smells of ozone, regret, and cheap cigars. The 'reputation' it has is the sort that is spoken in hushed tones, usually involving phrases like 'I'm sure it'll buff out' and 'that'll be extra.' Biff's presence is a random, unpleasant variable, like a sudden rainstorm or a tax audit, only with more yelling.",
   "exits": {

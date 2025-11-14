@@ -1,5 +1,7 @@
 {
   "id": "high_school",
+  "type": "room",
+  "definition": "room",
   "name": "Hill Valley High School",
   "description": "Hill Valley High School, a brick edifice of enforced learning, stands as a testament to the human capacity for both hope and utter bewilderment. Within these walls, the youth of Hill Valley are subjected to the peculiar ritual of 'education,' a process designed to prepare them for a future that, statistically speaking, will involve a great deal of paperwork and a surprising lack of dragons. The air hums with the ghosts of forgotten algebra equations and the faint scent of adolescent angst. It is a place where dreams are both forged and, more often than not, quietly misplaced.",
   "exits": {

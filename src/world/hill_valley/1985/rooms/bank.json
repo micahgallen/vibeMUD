@@ -1,5 +1,7 @@
 {
   "id": "bank",
+  "type": "room",
+  "definition": "room",
   "name": "Hill Valley Bank",
   "description": "The Hill Valley Bank stands as a monument to the decidedly peculiar idea that little green pieces of paper are worth more than, say, a good sandwich or a sturdy pair of boots. Its doors, heavy with the crushing weight of financial responsibility, open into a room where perfectly ordinary people in ties perform the solemn ritual of moving imaginary numbers from one ledger to another. The tellers are polite in the way a guillotine is efficient.",
   "exits": {

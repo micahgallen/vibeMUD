@@ -1,5 +1,7 @@
 {
   "id": "elm_avenue",
+  "type": "room",
+  "definition": "room",
   "name": "Elm Avenue",
   "description": "Elm Avenue is an exercise in aggressive tidiness. The houses are spaced just so, the lawns are clipped with a terrifying precision, and the trees from which it presumably gets its name have the good grace to not drop their leaves in an untoward manner. It's a street that is perpetually holding its breath, leading towards the quiet desperation of residential life and the quiet commerce of shops that sell things you neither want nor need. It is, in short, dangerously normal.",
   "exits": {

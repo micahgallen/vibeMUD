@@ -1,5 +1,7 @@
 {
   "id": "warehouse_row",
+  "type": "room",
+  "definition": "room",
   "name": "Warehouse Row",
   "description": "Warehouse Row is where the universe stores its spare parts, its forgotten ideas, and the occasional misplaced sock. These nondescript buildings, each a monument to functional anonymity, stand shoulder to shoulder, their loading docks gaping like the mouths of silent, hungry beasts. Delivery trucks, those tireless metal beetles, scuttle in and out, ferrying goods of unknown purpose to destinations of even greater mystery. It's a place where the mundane takes on a cosmic significance, and the sheer volume of 'stuff' can make one ponder the true meaning of existence, or at least the efficiency of global logistics.",
   "exits": {

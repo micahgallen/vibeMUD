@@ -1,5 +1,7 @@
 {
   "id": "south_avenue",
+  "type": "room",
+  "definition": "room",
   "name": "South Avenue",
   "description": "South Avenue is a quiet, unassuming stretch of tarmac, a place where the most exciting event of the day is usually the mail delivery. The maple trees, in their infinite arboreal patience, stand sentinel over modest houses that have seen generations come and go, each leaving behind a faint, lingering scent of freshly baked cookies and existential ennui. Traffic here is 'low' in the way that a sloth's heart rate is 'low' – it exists, but barely. It's the kind of street where nothing ever happens, until, of course, it does.",
   "exits": {
