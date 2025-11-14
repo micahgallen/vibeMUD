@@ -1,0 +1,15 @@
+{
+  "id": "chain_mail_001",
+  "type": "item",
+  "definition": "armor",
+  "name": "Chain Mail",
+  "description": "Heavy interlocking metal rings that provide excellent protection at the cost of mobility.",
+  "value": 150,
+  "weight": 55,
+  "armorType": "heavy",
+  "baseAC": 16,
+  "maxDexBonus": 0,
+  "slot": "chest",
+  "durability": 150,
+  "maxDurability": 150
+}

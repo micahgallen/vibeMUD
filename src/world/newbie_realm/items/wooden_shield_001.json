@@ -1,0 +1,14 @@
+{
+  "id": "wooden_shield_001",
+  "type": "item",
+  "definition": "armor",
+  "name": "Wooden Shield",
+  "description": "A simple wooden shield reinforced with iron bands.",
+  "value": 10,
+  "weight": 6,
+  "armorType": "shield",
+  "baseAC": 2,
+  "slot": "shield",
+  "durability": 50,
+  "maxDurability": 50
+}

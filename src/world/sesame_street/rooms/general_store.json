@@ -65,10 +65,34 @@
       "maxStock": 5
     },
     {
+      "itemId": "sword_001",
+      "price": 100,
+      "stock": 2,
+      "maxStock": 4
+    },
+    {
       "itemId": "potion_001",
       "price": 75,
       "stock": 5,
       "maxStock": 8
+    },
+    {
+      "itemId": "leather_armor_001",
+      "price": 90,
+      "stock": 3,
+      "maxStock": 5
+    },
+    {
+      "itemId": "chain_mail_001",
+      "price": 300,
+      "stock": 1,
+      "maxStock": 2
+    },
+    {
+      "itemId": "wooden_shield_001",
+      "price": 20,
+      "stock": 4,
+      "maxStock": 6
     }
   ],
 

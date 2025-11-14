@@ -199,11 +199,11 @@ function executeAttack(attackerId, defenderId, entityManager) {
   }
 
   // Roll to hit
-  const hit = rollToHit(attacker, defender);
+  const hit = rollToHit(attacker, defender, entityManager);
 
   if (hit) {
     // Calculate damage
-    const damage = calculateDamage(attacker, defender);
+    const damage = calculateDamage(attacker, defender, entityManager);
 
     // Apply damage
     applyDamage(defenderId, damage, attackerId, entityManager);
@@ -273,36 +273,124 @@ function rollInitiative(id1, id2, entityManager) {
 
 /**
  * Calculate hit chance and determine if attack hits
- * Formula: d20 + attacker.dexterity + attacker.level >= 10 + defender.ac + defender.dexterity
+ * Formula: d20 + attacker.dexterity modifier + attacker.level >= defender's AC
  * @param {object} attacker - The attacker object
  * @param {object} defender - The defender object
+ * @param {object} entityManager - The entity manager (for equipment lookups)
  * @returns {boolean} - Whether the attack hits
  */
-function rollToHit(attacker, defender) {
+function rollToHit(attacker, defender, entityManager) {
   const attackRoll = d20();
-  const attackBonus = (attacker.dexterity || 10) + (attacker.level || 1);
+
+  // D&D 5E style: use dexterity modifier + proficiency/level bonus
+  const dexMod = Math.floor(((attacker.dexterity || 10) - 10) / 2);
+  const attackBonus = dexMod + (attacker.level || 1);
   const attackTotal = attackRoll + attackBonus;
 
-  const defenseValue = 10 + (defender.ac || 0) + (defender.dexterity || 10);
+  // Calculate defender's AC from equipped armor
+  const defenderAC = calculateAC(defender, entityManager);
 
-  return attackTotal >= defenseValue;
+  return attackTotal >= defenderAC;
 }
 
 /**
- * Calculate damage amount
- * Formula: 1d6 + attacker.strength + attacker.level
+ * Calculate AC from equipped armor
+ * @param {object} entity - The entity (player or NPC)
+ * @param {object} entityManager - The entity manager
+ * @returns {number} - Total AC
+ */
+function calculateAC(entity, entityManager) {
+  // NPCs without equipment use their ac property
+  if (entity.type === 'npc' && (!entity.equipped || Object.keys(entity.equipped).length === 0)) {
+    const dexMod = Math.floor(((entity.dexterity || 10) - 10) / 2);
+    return 10 + (entity.ac || 0) + dexMod;
+  }
+
+  // Calculate from equipped armor
+  if (!entity.equipped) {
+    const dexMod = Math.floor(((entity.dexterity || 10) - 10) / 2);
+    return 10 + dexMod; // Base AC with no armor
+  }
+
+  const entityDex = entity.dexterity || 10;
+  const dexMod = Math.floor((entityDex - 10) / 2);
+
+  // Start with base AC (10 + dex modifier for unarmored)
+  let totalAC = 10 + dexMod;
+
+  // Check for body armor (chest slot)
+  const chestArmorId = entity.equipped.chest;
+  if (chestArmorId) {
+    const armor = entityManager.get(chestArmorId);
+    if (armor && armor.itemType === 'armor' && !armor.broken) {
+      totalAC = armor.getAC ? armor.getAC(entityDex) : armor.baseAC;
+    }
+  }
+
+  // Add shield bonus if equipped
+  const shieldId = entity.equipped.shield;
+  if (shieldId) {
+    const shield = entityManager.get(shieldId);
+    if (shield && shield.itemType === 'armor' && !shield.broken) {
+      const shieldBonus = shield.getAC ? shield.getAC(entityDex) : 2;
+      totalAC += shieldBonus;
+    }
+  }
+
+  return totalAC;
+}
+
+/**
+ * Calculate damage amount from equipped weapon or unarmed
  * @param {object} attacker - The attacker object
  * @param {object} defender - The defender object (for future armor calculations)
+ * @param {object} entityManager - The entity manager
  * @returns {number} - Damage amount
  */
-function calculateDamage(attacker, defender) {
-  const baseDamage = d6();
-  const strengthBonus = Math.floor(((attacker.strength || 10) - 10) / 2); // D&D-style modifier
+function calculateDamage(attacker, defender, entityManager) {
+  const strengthMod = Math.floor(((attacker.strength || 10) - 10) / 2); // D&D-style modifier
   const levelBonus = (attacker.level || 1);
 
-  const totalDamage = Math.max(1, baseDamage + strengthBonus + levelBonus);
+  // Check for equipped weapon in main hand
+  let weaponDamage = '1d4'; // Unarmed default
+  if (attacker.equipped && attacker.equipped.mainHand) {
+    const weapon = entityManager.get(attacker.equipped.mainHand);
+    if (weapon && weapon.itemType === 'weapon' && !weapon.broken) {
+      weaponDamage = weapon.getDamage ? weapon.getDamage() : (weapon.damage || '1d4');
+    }
+  }
+
+  // Parse weapon damage (e.g., "1d6", "2d4", "1d8+2")
+  const baseDamage = parseDamageRoll(weaponDamage);
+
+  const totalDamage = Math.max(1, baseDamage + strengthMod + levelBonus);
 
   return totalDamage;
+}
+
+/**
+ * Parse and roll damage dice
+ * @param {string} diceStr - Damage dice string (e.g., "1d6", "2d4+3")
+ * @returns {number} - Rolled damage
+ */
+function parseDamageRoll(diceStr) {
+  // Parse format: XdY+Z or XdY
+  const match = diceStr.match(/(\d+)d(\d+)(?:\+(\d+))?/);
+
+  if (!match) {
+    return 1; // Default to 1 if parsing fails
+  }
+
+  const numDice = parseInt(match[1]);
+  const diceSize = parseInt(match[2]);
+  const bonus = match[3] ? parseInt(match[3]) : 0;
+
+  let total = bonus;
+  for (let i = 0; i < numDice; i++) {
+    total += Math.floor(Math.random() * diceSize) + 1;
+  }
+
+  return total;
 }
 
 /**

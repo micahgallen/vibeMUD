@@ -1,0 +1,15 @@
+{
+  "id": "leather_armor_001",
+  "type": "item",
+  "definition": "armor",
+  "name": "Leather Armor",
+  "description": "Supple leather armor that provides basic protection without restricting movement.",
+  "value": 45,
+  "weight": 10,
+  "armorType": "light",
+  "baseAC": 11,
+  "maxDexBonus": null,
+  "slot": "chest",
+  "durability": 100,
+  "maxDurability": 100
+}

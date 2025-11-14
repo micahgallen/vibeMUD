@@ -130,12 +130,16 @@ class LoginHandler {
       hp: 100,
       maxHp: 100,
       level: 1,
-      strength: 10,
-      dexterity: 10,
-      constitution: 10,
-      ac: 0,
+      // D&D 5E ability scores (default 10 = average human)
+      strength: 10,      // Melee damage, physical power
+      dexterity: 10,     // AC, initiative, ranged attacks
+      constitution: 10,  // HP, endurance
+      intelligence: 10,  // Arcane magic, knowledge
+      wisdom: 10,        // Divine magic, perception, insight
+      charisma: 10,      // Social interactions, some magic
       currentRoom: 'test_room', // TODO: Change to sesame_street_south when Sesame Street content is ported
       inventory: [],
+      equipped: {},      // Equipment slots (mainHand, offHand, chest, head, etc.)
       chatEnabled: true, // New property for chat functionality
       createdAt: new Date().toISOString(),
       modifiedAt: new Date().toISOString()

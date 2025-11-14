@@ -36,13 +36,24 @@ module.exports = {
     output.push(colors.info('Health: ') + hpColor(`${player.hp}/${player.maxHp}`) + ` ${hpBar} ${hpPercent}%`);
     output.push('');
 
+    // Ability Scores (D&D 5E)
+    output.push(colors.highlight('Ability Scores:'));
+    output.push(colors.line(60, '-'));
+    output.push(colors.info('  Strength:     ') + this.formatStat(player.strength || 10, colors));
+    output.push(colors.info('  Dexterity:    ') + this.formatStat(player.dexterity || 10, colors));
+    output.push(colors.info('  Constitution: ') + this.formatStat(player.constitution || 10, colors));
+    output.push(colors.info('  Intelligence: ') + this.formatStat(player.intelligence || 10, colors));
+    output.push(colors.info('  Wisdom:       ') + this.formatStat(player.wisdom || 10, colors));
+    output.push(colors.info('  Charisma:     ') + this.formatStat(player.charisma || 10, colors));
+    output.push('');
+
     // Combat Statistics
     output.push(colors.highlight('Combat Statistics:'));
     output.push(colors.line(60, '-'));
-    output.push(colors.info('  Strength:     ') + colors.colorize(player.strength || 10, colors.MUD_COLORS.SUCCESS));
-    output.push(colors.info('  Dexterity:    ') + colors.colorize(player.dexterity || 10, colors.MUD_COLORS.SUCCESS));
-    output.push(colors.info('  Constitution: ') + colors.colorize(player.constitution || 10, colors.MUD_COLORS.SUCCESS));
-    output.push(colors.info('  Armor Class:  ') + colors.colorize(player.ac || 0, colors.MUD_COLORS.INFO));
+
+    // Calculate AC from equipment
+    const totalAC = this.calculateTotalAC(player, entityManager);
+    output.push(colors.info('  Armor Class:  ') + colors.colorize(totalAC, colors.MUD_COLORS.INFO));
     output.push(colors.info('  Level:        ') + colors.colorize(player.level || 1, colors.MUD_COLORS.WARNING));
     output.push('');
 
@@ -94,5 +105,51 @@ module.exports = {
     const empty = width - filled;
 
     return '[' + '█'.repeat(filled) + '░'.repeat(empty) + ']';
+  },
+
+  /**
+   * Format ability score with modifier
+   */
+  formatStat: function(score, colors) {
+    const modifier = Math.floor((score - 10) / 2);
+    const modifierStr = modifier >= 0 ? `+${modifier}` : modifier.toString();
+    return colors.colorize(score, colors.MUD_COLORS.SUCCESS) + colors.dim(` (${modifierStr})`);
+  },
+
+  /**
+   * Calculate total AC from equipped armor
+   */
+  calculateTotalAC: function(player, entityManager) {
+    if (!player.equipped) {
+      const dexMod = Math.floor(((player.dexterity || 10) - 10) / 2);
+      return 10 + dexMod; // Base AC with no armor
+    }
+
+    const playerDex = player.dexterity || 10;
+    const dexMod = Math.floor((playerDex - 10) / 2);
+
+    // Start with base AC (10 + dex modifier for unarmored)
+    let totalAC = 10 + dexMod;
+
+    // Check for body armor (chest slot)
+    const chestArmorId = player.equipped.chest;
+    if (chestArmorId) {
+      const armor = entityManager.get(chestArmorId);
+      if (armor && armor.itemType === 'armor' && !armor.broken) {
+        totalAC = armor.getAC ? armor.getAC(playerDex) : armor.baseAC;
+      }
+    }
+
+    // Add shield bonus if equipped
+    const shieldId = player.equipped.shield;
+    if (shieldId) {
+      const shield = entityManager.get(shieldId);
+      if (shield && shield.itemType === 'armor' && !shield.broken) {
+        const shieldBonus = shield.getAC ? shield.getAC(playerDex) : 2;
+        totalAC += shieldBonus;
+      }
+    }
+
+    return totalAC;
   }
 };
