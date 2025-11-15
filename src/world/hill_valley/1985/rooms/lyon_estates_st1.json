@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/lyon_estates_st1",
+  "type": "room",
+  "name": "Lyon Estates Street",
+  "description": "A quiet street in Lyon Estates, lined with well-maintained 1950s homes. You are on a quiet, tree-lined street in Lyon Estates, where the houses, built in the late 50s, exude a comfortable, lived-in charm. Lawns are neatly trimmed, and the occasional tricycle or garden gnome hints at the domestic lives within. The air is still, carrying the faint scent of blooming flowers and the distant, almost imperceptible hum of suburban life. To the south, the entrance to Lyon Estates beckons, while to the north, the street continues its gentle curve.",
+  "exits": {
+    "south": "hill_valley/1985/lyon_estates",
+    "north": "hill_valley/1985/lyon_estates_st2"
+  },
+  "items": []
+}

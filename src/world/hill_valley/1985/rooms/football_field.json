@@ -5,8 +5,7 @@
   "name": "High School Football Field",
   "description": "A meticulously manicured stage for ritualized adolescent combat. This is the High School Football Field, a vast expanse of meticulously manicured grass where young men in brightly colored uniforms engage in ritualized combat for the entertainment of their elders. The bleachers, a monument to uncomfortable seating, are where the town gathers on Friday nights, collectively suspending disbelief that the fate of the universe might, just might, hinge on the trajectory of an oddly shaped ball. It's a place of fleeting glory, dashed hopes, and the occasional spilled soda, all under the indifferent gaze of the stoic grass.",
   "exits": {
-    "west": "hill_valley/1985/high_school",
-    "south": "hill_valley/1985/oak_park_cemetery"
+    "north": "hill_valley/1985/high_school"
   },
   "tags": [
     "outdoor"
