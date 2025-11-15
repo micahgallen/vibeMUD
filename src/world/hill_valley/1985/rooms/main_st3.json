@@ -1,12 +1,14 @@
 {
   "id": "hill_valley/1985/main_st3",
   "type": "room",
-  "name": "Main St",
-  "description": "You are on Main St. A lamppost flickers nearby, casting a warm glow on the sidewalk. The street continues to the east and west.",
+  "name": "Intersection of Main St and Hill St",
+      "description": "The intersection of Main Street and Hill Street, a hub of fading commerce. You are at the intersection of Main St and Hill St. Main St continues to the east and west, a ribbon of fading commerce. Hill St stretches to the south, disappearing into residential anonymity. A lamppost flickers nearby, casting a warm glow on the sidewalk, a small comfort in the encroaching gloom. Several businesses line this stretch, including the quaint Ask Mr. Foster Travel Service and the imposing Bank of America. Interspersed among them are numerous empty storefronts, their dusty windows reflecting the slow exodus of commerce from the downtown area to the suburban mall on the outskirts of town.",
   "exits": {
     "east": "hill_valley/1985/main_st2",
     "west": "hill_valley/1985/main_st4",
-    "south": "hill_valley/1985/hill_st"
+    "south": "hill_valley/1985/hill_st",
+    "northeast": "hill_valley/1985/ask_mr_foster_travel_service",
+    "north": "hill_valley/1985/bank_of_america"
   },
   "items": []
 }

@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/hill_st6",
   "type": "room",
   "name": "Hill St",
-  "description": "You are on Hill St. The sounds of distant traffic are muffled here. Hill St continues to the north and south.",
+  "description": "A quiet, almost serene stretch of Hill Street, far from the main thoroughfare. You are on Hill St. The sounds of distant traffic are muffled here, a welcome reprieve from the constant hum of modern life. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/hill_st5",
     "south": "hill_valley/1985/hill_st7"

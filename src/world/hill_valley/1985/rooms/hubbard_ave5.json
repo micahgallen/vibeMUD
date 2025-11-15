@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/hubbard_ave5",
   "type": "room",
   "name": "Hubbard Ave",
-  "description": "You are on Hubbard Ave. The street is quiet and unremarkable. The street continues to the north and south.",
+  "description": "An unremarkable stretch of Hubbard Avenue, where quiet reigns supreme. You are on Hubbard Ave. The street is quiet and unremarkable, a testament to the subtle art of blending in. Hubbard Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/hubbard_ave4",
     "south": "hill_valley/1985/hubbard_ave6"

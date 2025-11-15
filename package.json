@@ -6,7 +6,16 @@
   "scripts": {
     "start": "node src/core/server.js"
   },
-  "keywords": ["mud", "entity-manager", "lpmud", "vibemud", "wumpy"],
+  "keywords": [
+    "mud",
+    "entity-manager",
+    "lpmud",
+    "vibemud",
+    "wumpy"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^11.0.3"
+  }
 }

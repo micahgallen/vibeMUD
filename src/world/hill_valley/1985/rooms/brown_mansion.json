@@ -1,12 +1,11 @@
 {
-  "id": "brown_mansion",
+  "id": "hill_valley/1985/brown_mansion",
   "type": "room",
   "definition": "room",
   "name": "Brown Mansion Site",
-  "description": "This is not so much a lot as a statement by nature that it will, eventually, win. Weeds and un-neighborly trees have reclaimed the space where a mansion once dared to exist, a building that, according to local legend, burned down for reasons that probably involved insurance and an unhealthy amount of temporal paradoxes. The rumors aren't just strange; they're the kind of baroque, multi-generational gossip that small towns cultivate like prize-winning orchids. They say you can still hear the faint echo of a man yelling 'Great Scott!' if you stand here at the right time, which is usually after you've had a few drinks at Holts Diner.",
+  "description": "Nature's triumphant reclamation of a once-grand estate. This is not so much a lot as a statement by nature that it will, eventually, win. Weeds and un-neighborly trees have reclaimed the space where a mansion once dared to exist, a building that, according to local legend, burned down for reasons that probably involved insurance and an unhealthy amount of temporal paradoxes. The rumors aren't just strange; they're the kind of baroque, multi-generational gossip that small towns cultivate like prize-winning orchids. They say you can still hear the faint echo of a man yelling 'Great Scott!' if you stand here at the right time, which is usually after you've had a few drinks at Elmo's Rib Cafe.",
   "exits": {
-    "north": "texaco",
-    "east": "lyon_estates"
+    "east": "hill_valley/1985/lyon_estates"
   },
   "tags": [
     "ruins",

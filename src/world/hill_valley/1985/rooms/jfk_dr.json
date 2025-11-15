@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/jfk_dr",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "You are on John F. Kennedy Dr, at the intersection with Main St. To the north is Main St, and John F. Kennedy Dr continues to the south.",
+  "description": "The northern end of John F. Kennedy Drive, intersecting with Main Street. You are on John F. Kennedy Dr, at the intersection with Main St. To the north, Main St stretches out, a ribbon of fading commerce. John F. Kennedy Dr continues its quiet descent to the south, a testament to suburban sprawl. The air is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
   "exits": {
     "north": "hill_valley/1985/main_st5",
     "south": "hill_valley/1985/jfk_dr1"

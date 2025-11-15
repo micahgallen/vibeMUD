@@ -1,13 +1,13 @@
 {
-  "id": "lyon_estates",
+  "id": "hill_valley/1985/lyon_estates",
   "type": "room",
   "definition": "room",
   "name": "Lyon Estates",
-  "description": "Lyon Estates is a testament to the human desire for conformity, a sprawling suburban development where every house is a slightly different shade of beige, and every lawn is mowed to precisely the same height. It's a place where individuality goes to die a slow, comfortable death, replaced by the gentle hum of air conditioning units and the distant bark of a neighbor's dog. The McFly residence, a beacon of accidental historical significance, blends seamlessly into this tapestry of pleasant, predictable mediocrity. It's all very nice, and utterly terrifying.",
+  "description": "A sprawling suburban development, a monument to conformity and quiet despair. Lyon Estates is a testament to the human desire for conformity, a sprawling suburban development where every house is a slightly different shade of beige, and every lawn is mowed to precisely the same height. It's a place where individuality goes to die a slow, comfortable death, replaced by the gentle hum of air conditioning units and the distant bark of a neighbor's dog. The McFly residence, a beacon of accidental historical significance, blends seamlessly into this tapestry of pleasant, predictable mediocrity. It's all very nice, and utterly terrifying, in a way only true suburban bliss can be.",
   "exits": {
-    "west": "brown_mansion",
-    "south": "twin_pines_mall",
-    "east": "suburban_lane"
+    "west": "hill_valley/1985/brown_mansion",
+    "south": "hill_valley/1985/twin_pines_mall",
+    "east": "hill_valley/1985/suburban_lane"
   },
   "tags": [
     "residential"

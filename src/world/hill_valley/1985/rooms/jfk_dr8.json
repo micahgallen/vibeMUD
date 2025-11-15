@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/jfk_dr8",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "You are on John F. Kennedy Dr. The road is cracked and uneven here. The street continues to the north and south.",
+  "description": "A cracked and uneven stretch of John F. Kennedy Drive, showing signs of neglect. You are on John F. Kennedy Dr. The road is cracked and uneven here, a subtle metaphor for the slow decay of the American dream. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/jfk_dr7",
     "south": "hill_valley/1985/jfk_dr9"

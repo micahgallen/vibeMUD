@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/hubbard_ave3",
   "type": "room",
   "name": "Hubbard Ave",
-  "description": "You are on Hubbard Ave. A few kids are playing street hockey, and they pause to let you pass. The street continues to the north and south.",
+  "description": "A residential stretch of Hubbard Avenue, where childhood still briefly asserts itself. You are on Hubbard Ave. A few kids are playing street hockey, their shouts and laughter a fleeting counterpoint to the general weariness of the neighborhood. They pause, briefly, to let you pass, their eyes holding a mixture of curiosity and mild annoyance at the interruption. Hubbard Ave continues its quiet descent to the north and south, a testament to suburban sprawl. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/hubbard_ave2",
     "south": "hill_valley/1985/hubbard_ave4"

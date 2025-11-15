@@ -1,12 +1,12 @@
 {
-  "id": "library",
+  "id": "hill_valley/1985/library",
   "type": "room",
   "definition": "room",
   "name": "Hill Valley Library",
-  "description": "The Hill Valley Library is a quiet, unassuming building, much like a sleeping dragon that, if roused, could unleash a torrent of facts, figures, and surprisingly detailed accounts of local poultry farming. It houses not just books, but the accumulated wisdom, folly, and occasional misfilings of generations. The air here is thick with the scent of old paper, forgotten dreams, and the faint, metallic tang of knowledge. Every book is a universe, every shelf a galaxy, and the librarians are the silent, all-knowing navigators of this cosmic archive.",
+  "description": "A quiet, unassuming building, a repository of human knowledge and occasional misfilings. The Hill Valley Library is a quiet, unassuming building, much like a sleeping dragon that, if roused, could unleash a torrent of facts, figures, and surprisingly detailed accounts of local poultry farming. It houses not just books, but the accumulated wisdom, folly, and occasional misfilings of generations. The air here is thick with the scent of old paper, forgotten dreams, and the faint, metallic tang of knowledge. Every book is a universe, every shelf a galaxy, and the librarians are the silent, all-knowing navigators of this cosmic archive, quietly judging your overdue fines.",
   "exits": {
-    "south": "courthouse_square",
-    "north": "high_school"
+    "south": "hill_valley/1985/courthouse_square_north_parking_lot",
+    "north": "hill_valley/1985/high_school"
   },
   "tags": [
     "building",

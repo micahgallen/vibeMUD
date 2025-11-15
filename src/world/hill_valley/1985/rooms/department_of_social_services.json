@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/department_of_social_services",
+  "type": "room",
+  "name": "Department of Social Services",
+  "description": "A former courthouse, now a bureaucratic purgatory. This building, once the proud Hill Valley Courthouse, has seen better days. Its grand facade is now chipped and stained, the once-majestic columns marred by graffiti, and the windows are grimy, reflecting only the gray sky. A faded sign above the entrance, barely clinging to its hinges, reads 'Department of Social Services.' Inside, the air is thick with the smell of old paper, desperation, and the faint, metallic tang of broken dreams. It's a place where hope comes to die a slow, bureaucratic death.",
+  "exits": {
+    "northwest": "hill_valley/1985/courthouse_square_north_parking_lot",
+    "southwest": "hill_valley/1985/courthouse_square_south_parking_lot"
+  },
+  "items": []
+}

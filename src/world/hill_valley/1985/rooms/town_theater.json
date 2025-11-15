@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/town_theater",
+  "type": "room",
+  "name": "Town Theater",
+  "description": "A former theater, now a solemn house of worship. The grand facade of the Town Theater, once a thriving stage for community events in 1955, now bears a new sign: 'Assembly of Christ.' The marquee, stripped of its former glory, displays biblical verses in faded, peeling paint. Inside, the plush red seats have been replaced with simple wooden pews, and the stage, once home to local talent, now hosts a pulpit. The air, once filled with applause and laughter, now carries the solemn echoes of hymns and sermons, a testament to the changing spiritual landscape of Hill Valley. The only exit is to the west, leading back to Main St.",
+  "exits": {
+    "west": "hill_valley/1985/main_st"
+  },
+  "items": []
+}

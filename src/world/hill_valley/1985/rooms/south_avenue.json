@@ -1,13 +1,13 @@
 {
-  "id": "south_avenue",
+  "id": "hill_valley/1985/south_avenue",
   "type": "room",
   "definition": "room",
   "name": "South Avenue",
-  "description": "South Avenue is a quiet, unassuming stretch of tarmac, a place where the most exciting event of the day is usually the mail delivery. The maple trees, in their infinite arboreal patience, stand sentinel over modest houses that have seen generations come and go, each leaving behind a faint, lingering scent of freshly baked cookies and existential ennui. Traffic here is 'low' in the way that a sloth's heart rate is 'low' – it exists, but barely. It's the kind of street where nothing ever happens, until, of course, it does.",
+  "description": "A quiet, unassuming stretch of tarmac, where the most exciting event is usually the mail. South Avenue is a quiet, unassuming stretch of tarmac, a place where the most exciting event of the day is usually the mail delivery, a testament to the thrilling pace of suburban life. The maple trees, in their infinite arboreal patience, stand sentinel over modest houses that have seen generations come and go, each leaving behind a faint, lingering scent of freshly baked cookies and existential ennui. Traffic here is 'low' in the way that a sloth's heart rate is 'low' – it exists, but barely. It's the kind of street where nothing ever happens, until, of course, it does, usually involving a time-traveling DeLorean.",
   "exits": {
-    "east": "oak_park_cemetery",
-    "north": "holts_diner",
-    "south": "lyon_estates"
+    "east": "hill_valley/1985/oak_park_cemetery",
+    "north": "hill_valley/1985/elmos_rib_cafe",
+    "south": "hill_valley/1985/lyon_estates"
   },
   "tags": [
     "residential"

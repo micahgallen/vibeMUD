@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/maple_ave5",
   "type": "room",
   "name": "Maple Ave",
-  "description": "You are on Maple Ave. The street is well-maintained, with manicured lawns and flowerbeds. The street continues to the north and south.",
+  "description": "A well-maintained stretch of Maple Avenue, a bastion of suburban pride. You are on Maple Ave. The street is well-maintained, with manicured lawns and vibrant flowerbeds that stubbornly resist the encroaching weariness of the neighborhood. Maple Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/maple_ave4",
     "south": "hill_valley/1985/maple_ave6"

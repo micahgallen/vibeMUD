@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/jfk_dr6",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "You are on John F. Kennedy Dr. A group of teenagers are gathered on a nearby lawn, listening to music. The street continues to the north and south.",
+  "description": "A stretch of John F. Kennedy Drive, briefly enlivened by teenage activity. You are on John F. Kennedy Dr. A group of teenagers are gathered on a nearby lawn, their music a tinny counterpoint to the quiet hum of the neighborhood. They are a fleeting burst of energy in the otherwise languid afternoon. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/jfk_dr5",
     "south": "hill_valley/1985/jfk_dr7"

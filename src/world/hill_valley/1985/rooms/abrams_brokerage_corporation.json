@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/abrams_brokerage_corporation",
+  "type": "room",
+  "name": "Abrams Brokerage Corporation",
+  "description": "A bail bondsman's office, smelling faintly of desperation and stale coffee. The Abrams Brokerage Corporation office is a picture of 80s grit, where fluorescent lights hum over a cluttered desk. Behind a thick pane of bulletproof glass sits a burly man with a suspicious gaze, a silent arbiter of freedom for a price. The air conditioning is set to 'arctic blast,' doing little to dispel the faint scent of stale cigarettes and the unspoken anxieties of its clientele. This isn't about stocks; it's about getting people out of a bind, for a fee that always seems to be just out of reach.",
+  "exits": {
+    "south": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}

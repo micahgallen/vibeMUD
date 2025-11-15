@@ -2,10 +2,12 @@
   "id": "hill_valley/1985/first_st",
   "type": "room",
   "name": "First St",
-  "description": "You are on First St. Hill St is to the west and Hubbard Ave is to the east. This street connects the two main north-south arteries.",
+  "description": "A connecting street, bridging the gap between Hill and Hubbard. You are on First St, a utilitarian stretch of asphalt that serves as a vital, if uninspired, connector between the two main north-south arteries of Hill Valley. To the west, Hill St disappears into a residential haze, while to the east, First St continues its journey towards Hubbard Ave. To the north, the South Parking Lot of Courthouse Square looms, a stark reminder of what once was. To the south, the faded marquee of the Essex Theater promises a different kind of escape.",
   "exits": {
     "west": "hill_valley/1985/hill_st2",
-    "east": "hill_valley/1985/hubbard_ave2"
+    "east": "hill_valley/1985/first_st1",
+    "north": "hill_valley/1985/courthouse_square_south_parking_lot",
+    "south": "hill_valley/1985/essex_theater"
   },
   "items": []
 }

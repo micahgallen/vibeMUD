@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1985/elmos_rib_cafe",
+  "type": "room",
+  "definition": "room",
+  "name": "Elmo's Rib Cafe",
+  "description": "A local institution, serving up smoky ribs and 80s nostalgia. Elmo's Rib Cafe is a local institution, known for its smoky, tender ribs and a lively, if somewhat sticky, atmosphere. The air is thick with the aroma of barbecue sauce and sizzling meat, a welcome change from the usual Hill Valley fare. The decor is a charming mix of checkered tablecloths and neon signs, and the jukebox plays a steady stream of 80s hits, a soundtrack to a simpler, greasier time. This is the kind of place where everyone knows your name, or at least your usual order, and the only exit is to the west, leading back to the fading glory of Hubbard Ave.",
+  "exits": {
+    "west": "hill_valley/1985/hubbard_ave"
+  },
+  "tags": [
+    "restaurant"
+  ]
+}

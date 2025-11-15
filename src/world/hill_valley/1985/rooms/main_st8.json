@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/main_st8",
   "type": "room",
   "name": "Main St",
-  "description": "You are on Main St, nearing the western edge of the town square. The street continues to the east and west.",
+  "description": "Main Street, nearing the western edge of the town square, a place of quiet decline. You are on Main St, nearing the western edge of the town square. The street continues to the east and west, a ribbon of fading commerce. The air is thick with the scent of exhaust and the faint, lingering aroma of civic decline. The storefronts here are mostly empty, their dusty windows reflecting the slow exodus of commerce from the downtown area to the suburban mall on the outskirts of town.",
   "exits": {
     "east": "hill_valley/1985/main_st7",
     "west": "hill_valley/1985/main_st9"

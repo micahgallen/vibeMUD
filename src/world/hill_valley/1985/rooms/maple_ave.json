@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/maple_ave",
   "type": "room",
   "name": "Maple Ave",
-  "description": "You are on Maple Ave, at the intersection with Main St. To the north is Main St, and Maple Ave continues to the south.",
+  "description": "The northern end of Maple Avenue, intersecting with Main Street. You are on Maple Ave, at the intersection with Main St. To the north, Main St stretches out, a ribbon of fading commerce. Maple Ave continues its quiet descent to the south, disappearing into residential anonymity. The air is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
   "exits": {
     "north": "hill_valley/1985/main_st7",
     "south": "hill_valley/1985/maple_ave1"

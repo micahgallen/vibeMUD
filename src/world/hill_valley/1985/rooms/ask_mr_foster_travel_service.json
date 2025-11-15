@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/ask_mr_foster_travel_service",
+  "type": "room",
+  "name": "Ask Mr. Foster Travel Service",
+  "description": "A travel agency where dreams of escape go to gather dust. The 'Ask Mr. Foster Travel Service' office is a quaint, slightly dated establishment, a relic from a time when travel felt more glamorous and less like a logistical nightmare. Posters of exotic locales from decades past, now faded and curling at the edges, adorn the walls, promising adventures that seem increasingly out of reach in 1985 Hill Valley. A friendly, bespectacled woman sits behind a large wooden desk, surrounded by brochures and a rotary phone, a silent testament to a bygone era. The air smells of old paper and forgotten dreams of faraway places, a poignant reminder of what once was.",
+  "exits": {
+    "south": "hill_valley/1985/main_st3"
+  },
+  "items": []
+}

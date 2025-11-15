@@ -2,10 +2,11 @@
   "id": "hill_valley/1985/hill_st1",
   "type": "room",
   "name": "Hill St",
-  "description": "You are on Hill St. The road slopes gently downwards here. Hill St continues to the north and south.",
+  "description": "A gently sloping stretch of Hill Street, hinting at a quiet residential life. You are on Hill St. The road slopes gently downwards here, a subtle metaphor for the slow decline of the American dream. To the north, Hill St ascends towards Main Street, while to the south, it continues its quiet journey. To the east, the South Parking Lot of Courthouse Square sprawls, a testament to progress, or perhaps, a lack thereof. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
   "exits": {
     "north": "hill_valley/1985/hill_st",
-    "south": "hill_valley/1985/hill_st2"
+    "south": "hill_valley/1985/hill_st2",
+    "east": "hill_valley/1985/courthouse_square_south_parking_lot"
   },
   "items": []
 }
