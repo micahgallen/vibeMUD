@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hilldale_entrance",
+  "type": "room",
+  "name": "Hilldale Entrance",
+  "description": "The grand, if slightly ostentatious, entrance to Hilldale. You stand at the threshold of Hilldale, a neighborhood that screams 'affluence' with the subtle grace of a neon sign. Manicured lawns stretch towards meticulously maintained 1980s-style homes, each a monument to suburban aspiration. The air here is thick with the scent of freshly cut grass and the faint, lingering aroma of new money. To the west, the imposing Clayton Ravine Bridge looms, a gateway to less refined territories. To the east, the perfectly paved streets of Hilldale beckon, promising a life of quiet, comfortable conformity.",
+  "exits": {
+    "west": "hill_valley/1985/clayton_bridge",
+    "east": "hill_valley/1985/hilldale_st1"
+  },
+  "items": []
+}

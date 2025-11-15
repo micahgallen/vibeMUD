@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/main_st5",
+  "type": "room",
+  "name": "Intersection of Main St and John F. Kennedy Dr",
+  "description": "The intersection of Main Street and John F. Kennedy Drive, a hub of exhaust fumes and traffic. You are at the intersection of Main St and John F. Kennedy Dr. Main St continues its weary journey to the east and west, a ribbon of fading commerce. John F. Kennedy Dr stretches to the south, disappearing into the suburban sprawl. The smell of exhaust hangs heavy in the air, a testament to the relentless march of traffic that frequents this road, a constant reminder of the town's slow decline.",
+  "exits": {
+    "east": "hill_valley/1985/main_st4",
+    "west": "hill_valley/1985/main_st6",
+    "south": "hill_valley/1985/jfk_dr"
+  },
+  "items": []
+}

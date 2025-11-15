@@ -1,0 +1,18 @@
+{
+    "id":  "texaco_1955",
+    "definition": "room",
+    "name":  "Texaco Garage (1955)",
+    "description":  "The Texaco Garage of 1955, a beacon of internal combustion and mechanical mystery, stands as a testament to humanity's enduring love affair with the automobile. Here, amidst the faint aroma of gasoline and the rhythmic clanking of wrenches, a small, efficiently run operation ensures that the wheeled conveyances of Hill Valley continue their relentless, often pointless, journeys. One might ponder the philosophical implications of a machine designed to transport one from point A to point B, only to return to point A, or the cosmic significance of a perfectly inflated tire. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in oil changes and the subtle art of tire rotation.",
+    "exits":  {
+                  "east":  "courthouse_square_1955",
+                  "west":  "main_st_west_1955",
+                  "south":  "brown_mansion_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "service"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

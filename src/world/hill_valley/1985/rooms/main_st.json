@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/main_st",
+  "type": "room",
+  "name": "Intersection of Main St and Hubbard Ave",
+  "description": "The bustling intersection of Main Street and Hubbard Avenue. You are at the intersection of Main St and Hubbard Ave, a place where the past and present collide with a subtle, almost imperceptible, sigh. Main St continues its weary journey to the west, a ribbon of fading commerce. Hubbard Ave stretches to the south, disappearing into the suburban sprawl. The iconic clock tower looms in the distance, its hands perpetually stuck at 10:04, a silent monument to a moment so significant that time itself decided to take a coffee break. To the east, the Town Theater, now a church, stands as a testament to changing times.",
+  "exits": {
+    "west": "hill_valley/1985/main_st1",
+    "south": "hill_valley/1985/hubbard_ave",
+    "east": "hill_valley/1985/town_theater"
+  },
+  "items": []
+}

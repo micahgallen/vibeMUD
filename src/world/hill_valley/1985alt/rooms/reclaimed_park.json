@@ -1,0 +1,15 @@
+{
+    "id": "reclaimed_park",
+    "name": "Reclaimed Park",
+    "description": "A small park area where refuse has been pushed aside to make temporary camps.",
+    "exits": {
+        "north": "mall_ruins",
+        "east": "river_waste"
+    },
+    "tags": [
+        "camp"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

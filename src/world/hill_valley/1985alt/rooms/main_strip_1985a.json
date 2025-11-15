@@ -1,0 +1,17 @@
+{
+    "id": "main_strip_1985a",
+    "name": "Main Strip (1985A)",
+    "description": "A corrupt downtown strip lined with gaudy signs, pawn shops, and bars.",
+    "exits": {
+        "north": "biffco_tower",
+        "south": "courthouse_square_burned",
+        "east": "market_row_1985a",
+        "west": "pawn_row"
+    },
+    "tags": [
+        "commercial"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

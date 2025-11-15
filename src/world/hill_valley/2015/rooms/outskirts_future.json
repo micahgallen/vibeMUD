@@ -1,0 +1,15 @@
+{
+  "id": "outskirts_future",
+  "type": "room",
+  "name": "City Outskirts (2015)",
+  "description": "New development projects and green buffers mark the town's edge.",
+  "exits": {
+    "west": "river_edge_2015",
+    "south": "farmland_reclaimed"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "outskirt"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/river_rd2",
+  "type": "room",
+  "name": "River Road",
+  "description": "A bend in River Road, offering a glimpse of the river itself, murky and indifferent. You are on River Road, where a slight curve in the asphalt reveals a sliver of the river, its waters a murky brown, flowing with an indifferent current. The trees grow thicker here, their branches forming a canopy that filters the harsh afternoon sun, casting long, dappled shadows on the road. The air is heavy with the scent of river water and decaying leaves, a poignant reminder of time's relentless passage.",
+  "exits": {
+    "west": "hill_valley/1985/river_rd1",
+    "east": "hill_valley/1985/river_rd3"
+  },
+  "items": []
+}

@@ -1,0 +1,14 @@
+{
+    "id": "old_bank_vault",
+    "name": "Old Bank Vault",
+    "description": "An underground vault made of reinforced concrete; once prosperous, now pillaged.",
+    "exits": {
+        "up": "police_hq_1985a"
+    },
+    "tags": [
+        "underground"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

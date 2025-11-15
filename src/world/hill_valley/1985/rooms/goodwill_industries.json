@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/goodwill_industries",
+  "type": "room",
+  "name": "Goodwill Industries",
+  "description": "A repository of forgotten dreams and gently used necessities. Goodwill Industries is a treasure trove of forgotten dreams and gently used necessities, a place where the detritus of one person's life becomes another's potential treasure. Racks of clothes, shelves of mismatched dinnerware, and a corner filled with dusty electronics create a unique aroma of mothballs and possibility, a scent that speaks of countless untold stories. A few shoppers, with the determined glint of prospectors, rummage through the offerings, hoping to find a hidden gem amidst the flotsam and jetsam of consumer culture. The only exit is back out to Main St., where the cycle of acquisition and disposal continues.",
+  "exits": {
+    "south": "hill_valley/1985/main_st1"
+  },
+  "items": []
+}

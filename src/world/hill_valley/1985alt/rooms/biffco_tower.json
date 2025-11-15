@@ -1,0 +1,15 @@
+{
+    "id": "biffco_tower",
+    "name": "BiffCo Tower & Casino",
+    "description": "A towering, neon-soaked casino complex dominating the skyline.",
+    "exits": {
+        "south": "main_strip_1985a"
+    },
+    "tags": [
+        "landmark",
+        "casino"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

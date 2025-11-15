@@ -1,0 +1,16 @@
+{
+  "id": "main_skywalk",
+  "type": "room",
+  "name": "Main Skywalk",
+  "description": "An airy elevated walkway connecting shops, plazas, and transport nodes.",
+  "exits": {
+    "west": "cafe_80s",
+    "east": "mall_transit_hub",
+    "south": "warehouse_modern"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "path"
+  ]
+}

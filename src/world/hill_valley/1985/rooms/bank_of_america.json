@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/bank_of_america",
+  "type": "room",
+  "definition": "room",
+  "name": "Bank of America",
+  "description": "A temple of finance, where dreams are made and broken with equal efficiency. The Bank of America branch in Hill Valley is a modern, if somewhat sterile, establishment. The polished floors reflect the harsh fluorescent lights, and the hushed tones of transactions fill the air, punctuated by the rhythmic whir of money counters. Tellers in crisp uniforms efficiently handle deposits and withdrawals, their smiles as practiced as their counting. In glass-walled offices, loan officers discuss futures and finances, deciding who gets to chase their dreams and whose aspirations are, for now, politely declined. It's a place where money changes hands, dreams are financed, and sometimes, shattered.",
+  "exits": {
+    "south": "hill_valley/1985/main_st3"
+  },
+  "tags": [
+    "service",
+    "finance"
+  ]
+}

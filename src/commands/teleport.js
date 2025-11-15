@@ -35,6 +35,7 @@ module.exports = {
     // Validate room exists
     if (!targetRoom) {
       session.sendLine(colors.error(`Room '${targetRoomId}' does not exist.`));
+      session.sendLine(colors.hint('Example: teleport sesame_street_01'));
       return;
     }
 

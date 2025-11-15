@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/clayton_bridge",
+  "type": "room",
+  "definition": "room",
+  "name": "Clayton Ravine Bridge",
+  "description": "A formidable concrete structure spanning a deep chasm. The Clayton Ravine Bridge stands as a testament to municipal engineering, a stark concrete ribbon stretched across the yawning maw of Clayton Ravine. Below, the river glints with a deceptive innocence, far from the mundane concerns of Hill Valley. The air here is cooler, carrying the faint, metallic tang of damp concrete and the distant, unsettling whisper of the wind through the chasm. To the west, the River Road winds its way back towards the familiar, while to the east, the promise of the affluent Hilldale neighborhood beckons, a stark contrast to the raw nature of the ravine.",
+  "exits": {
+    "west": "hill_valley/1985/river_rd4",
+    "east": "hill_valley/1985/hilldale_entrance"
+  },
+  "tags": [
+    "scenic",
+    "landmark"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hubbard_ave6",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "A residential stretch of Hubbard Avenue, marked by an idling car. You are on Hubbard Ave. A car is parked on the side of the road, its engine idling, a silent sentinel in the quiet suburban afternoon. Hubbard Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/1985/hubbard_ave5",
+    "south": "hill_valley/1985/hubbard_ave7"
+  },
+  "items": []
+}

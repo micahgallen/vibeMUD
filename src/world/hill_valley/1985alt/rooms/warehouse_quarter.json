@@ -1,0 +1,15 @@
+{
+    "id": "warehouse_quarter",
+    "name": "Warehouse Quarter",
+    "description": "A dense cluster of warehouses now used for storage by various shady groups.",
+    "exits": {
+        "west": "industrial_lane_1985a",
+        "south": "pawn_row"
+    },
+    "tags": [
+        "industrial"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

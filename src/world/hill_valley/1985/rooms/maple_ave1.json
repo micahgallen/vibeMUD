@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave1",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "A charming, residential stretch of Maple Avenue. You are on Maple Ave. The street is lined with charming, single-family homes, their paint slightly faded, their gardens a mix of well-tended and slightly overgrown. Maple Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave",
+    "south": "hill_valley/1985/maple_ave2"
+  },
+  "items": []
+}

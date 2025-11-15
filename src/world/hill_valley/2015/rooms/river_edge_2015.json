@@ -1,0 +1,15 @@
+{
+  "id": "river_edge_2015",
+  "type": "room",
+  "name": "River Edge Promenade",
+  "description": "A manicured walkway along a cleaned river with fountains and benches.",
+  "exits": {
+    "west": "warehouse_modern",
+    "north": "restored_cemetery_2015"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "scenic"
+  ]
+}

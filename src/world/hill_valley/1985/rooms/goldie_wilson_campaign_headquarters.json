@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/goldie_wilson_campaign_headquarters",
+  "type": "room",
+  "name": "Goldie Wilson Campaign Headquarters",
+  "description": "A bustling hub of civic optimism and cheap coffee. The Goldie Wilson Campaign Headquarters is a hive of activity, buzzing with volunteers making phone calls and stapling posters with a fervor usually reserved for religious revivals. Banners proclaiming 'Goldie Wilson for Mayor' and 'A Man of the People' adorn the walls, slightly askew, much like the political landscape itself. The air is thick with optimism, cheap coffee, and the faint scent of ambition, a potent blend that fuels the democratic process. Goldie himself might even be here, shaking hands and charming constituents, a testament to the enduring, if sometimes naive, belief in progress.",
+  "exits": {
+    "south": "hill_valley/1985/main_st1"
+  },
+  "items": []
+}

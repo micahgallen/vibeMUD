@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/hill_st3",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A quieter stretch of Hill Street, hinting at residential life. You are on Hill St. The air here is a little quieter, away from the main thoroughfare, a brief respite from the subtle decay of downtown. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. To the east, the faded marquee of the Essex Theater promises a different kind of escape. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st2",
+    "south": "hill_valley/1985/hill_st4",
+    "east": "hill_valley/1985/essex_theater"
+  },
+  "items": []
+}

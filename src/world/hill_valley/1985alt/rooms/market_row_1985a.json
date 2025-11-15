@@ -1,0 +1,15 @@
+{
+    "id": "market_row_1985a",
+    "name": "Market Row",
+    "description": "Open-air stalls hawk salvage and black-market goods under flickering lights.",
+    "exits": {
+        "west": "main_strip_1985a",
+        "south": "police_hq_1985a"
+    },
+    "tags": [
+        "market"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

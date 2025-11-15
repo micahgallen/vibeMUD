@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/statler_toyota",
+  "type": "room",
+  "name": "Statler Toyota",
+  "description": "A gleaming showroom, promising a future that may or may not arrive. Inside Statler Toyota, the showroom gleams with the latest models, their chrome reflecting the harsh fluorescent lights, a stark contrast to the aging downtown outside. A friendly, if slightly pushy, salesman approaches you, his smile as polished as the cars. The scent of new car upholstery and ambition hangs in the air, a potent cocktail of consumerism and aspiration. A large banner proclaims 'Statler Toyota: Your Future is Now!', a promise that feels both exciting and vaguely threatening. The only exit is back out to Main St., where the future is decidedly less shiny.",
+  "exits": {
+    "south": "hill_valley/1985/main_st1"
+  },
+  "items": []
+}

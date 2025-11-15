@@ -1,0 +1,15 @@
+{
+    "id":  "biff_garage_1985a",
+    "type": "room",
+    "name":  "Biff\u0027s Garage (1985A)",
+    "description":  "A grimy garage serving as Biff\u0027s muscle headquarters and impound lot.",
+    "exits":  {
+                  "west":  "outskirts_1985a",
+                  "north":  "mall_ruins"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "service"
+             ]
+}
