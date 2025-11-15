@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_306",
+  "type": "room",
+  "name": "Hotel Room 306",
+  "description": "Someone's grandmother decorated this room, and she had strong opinions about what constitutes comfort. Floral patterns bloom across every surface—the curtains, the bedspread, the wallpaper, even the lampshades. Doilies protect furniture from the existential threat of direct contact. A rocking chair in the corner suggests contemplation and possibly knitting. The closet smells of mothballs and long-forgotten sachets. Framed needlepoint samples adorn the walls with messages like 'Home Sweet Home' and 'God Bless This Room.' It's aggressively cozy, the kind of cozy that implies you should eat more and are too thin.",
+  "exits": {
+    "east": "hotel_floor_3_hall_3"
+  },
+  "features": {
+    "florals": "Roses on the curtains, tulips on the bedspread, wildflowers on the wallpaper. If you stare long enough, you can smell spring pollen.",
+    "doilies": "Crocheted circles protect every horizontal surface from the dangers of modernity. Some have names embroidered in them: 'Ethel,' 'Mildred,' 'Prudence.'",
+    "rocking_chair": "Well-worn wood curved to the exact specifications of someone's grandmother. It creaks when you sit, a friendly greeting from the past.",
+    "needlepoint": "'Bless This Mess,' 'Home is Where the Heart Is,' 'If You Can Read This, Make Me Tea.' Grandma had a sense of humor."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

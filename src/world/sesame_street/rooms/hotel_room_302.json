@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_302",
+  "type": "room",
+  "name": "Hotel Room 302 - The Rear Window Suite",
+  "description": "The room's defining feature is an enormous window that overlooks the courtyard and neighboring building with alarming clarity. A telescope stands on a tripod by the window, ostensibly for stargazing but positioned at an angle that suggests more terrestrial interests. The walls are covered in framed black-and-white photographs of city scenes, windows, and people in candid moments. A leather armchair faces the window, worn in the seat from long sessions of sitting and... observing. The desk drawer contains a pair of binoculars and a notebook filled with detailed notes about bird migration patterns, which is definitely what they're for.",
+  "exits": {
+    "west": "hotel_floor_3_hall_1"
+  },
+  "features": {
+    "window": "Floor to ceiling glass providing an unobstructed view of several dozen other windows. Some have curtains. Some don't. The telescope is probably for astronomy.",
+    "telescope": "A serious piece of optical equipment pointed at a suspiciously convenient angle. The lens cap is gathering dust, suggesting frequent use.",
+    "armchair": "Leather worn smooth in the seat, positioned for optimal window viewing. The side table holds coffee rings and what might be surveillance schedules—bird watching schedules.",
+    "notebook": "Detailed observations about flight patterns, nesting behaviors, and 'the one with the red tie who waters plants at 6 PM.' Very detailed bird behaviors."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

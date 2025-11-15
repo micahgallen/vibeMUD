@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_3_hall_2",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 3 Deluxe Hallway",
+  "description": "Classical music drifts from hidden speakers, a string quartet interpretation of something that sounds expensive to know about. The hallway widens here, as if space itself is a luxury worth displaying. Doors 303 and 304 stand with the quiet confidence of portals that lead to Better Things. An oil painting of a fox hunt decorates the wall, the horses mid-leap, the dogs mid-bay, the fox presumably mid-regret. The carpet shows no signs of wear, suggesting either recent replacement or guests who levitate. Small tables at regular intervals hold tasteful arrangements of seasonal flowers.",
+  "exits": {
+    "north": "hotel_floor_3_hall_3",
+    "south": "hotel_floor_3_hall_1",
+    "east": "hotel_room_303",
+    "west": "hotel_room_304"
+  },
+  "features": {
+    "music": "Vivaldi, you think, though it could be Bach. Someone with a music degree made this choice. Someone who wears cufflinks.",
+    "painting": "An actual oil painting, not a print. Horses vault a fence with anatomical accuracy, pursued by gentlemen in red coats who've never worked a day.",
+    "flowers": "Seasonal blooms changed weekly, or possibly daily. The commitment to fresh flowers here borders on aggressive.",
+    "width": "The hallway is noticeably wider than Floor 2. Someone measured. Someone decided. Someone spent extra."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

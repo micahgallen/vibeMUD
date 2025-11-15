@@ -1,0 +1,48 @@
+{
+  "id": "lloyd_bartender",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Lloyd, the Ghostly Bartender",
+  "keywords": ["lloyd", "bartender", "barkeep", "ghost", "server"],
+  "description": "Lloyd stands behind an invisible bar with the posture of a man who takes his profession seriously, even in death. He wears a spotless white waiter's jacket over a burgundy vest, his black bow tie perfectly straight. His hair is slicked back with enough pomade to survive nuclear winter, parted with mathematical precision. His smile is professional, practiced, and doesn't quite reach his eyes—which are a little too bright, a little too knowing, a little too dead. He polishes glasses that aren't there with a cloth that might be, moving with the smooth efficiency of someone who has been serving drinks for far longer than any living person should. The temperature drops about ten degrees in his immediate vicinity, and there's a faint smell of bourbon and formaldehyde.",
+  "currentRoom": "hotel_floor_3_hall_4",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": true,
+  "heartbeatInterval": 40,
+  "emoteChance": 0.35,
+  "dialogueChance": 0.50,
+  "wanderChance": 0.15,
+  "territory": [
+    "hotel_floor_2_hall_4",
+    "hotel_floor_3_hall_4",
+    "hotel_floor_4_hall_3",
+    "hotel_rooftop"
+  ],
+  "emoteActions": [
+    "polishes an invisible glass with slow, methodical strokes",
+    "straightens his bow tie with mechanical precision",
+    "arranges bottles that aren't there with the care of a mother tucking in her children",
+    "wipes down an invisible bar with smooth, practiced movements",
+    "pours an elaborate cocktail for no one, tilting bottles that may or may not exist",
+    "checks his reflection in a mirror that isn't there, smoothing back his hair",
+    "sets down an invisible tumbler with an audible clink that shouldn't be possible",
+    "hums a tune from the 1920s, off-key, while organizing phantom glassware"
+  ],
+  "dialogue": [
+    "Lloyd sets down an invisible glass with a soft clink. 'Good evening. What will you be drinking? On the house, of course. Everything is on the house here. Forever.'",
+    "'Ah, a guest,' he says with practiced warmth that feels like ice. 'May I offer you a drink? Bourbon? Hair of the dog that bit you?'",
+    "His smile widens mechanically. 'Welcome back, friend. It's so good to see you again. You look like you could use a drink. Or twelve.'",
+    "Lloyd polishes an invisible tumbler with slow, methodical strokes, his eyes fixed on some distant point.",
+    "'Women,' he mutters to no one. 'Can't live with them, can't...' He trails off, straightening his bow tie.",
+    "The bartender arranges bottles that aren't there with the care of a mother tucking in her children.",
+    "Lloyd hums a tune from the 1920s, off-key, while making an elaborate cocktail for no one.",
+    "'The white man's burden,' he says conversationally to the empty air. 'Heavy stuff. Care for something stronger?'",
+    "'Going so soon? The night is young. Hell, the night is eternal here. Come back any time.'",
+    "Lloyd raises an empty glass in salute. 'Good luck with... everything. You'll be back. They always come back.'",
+    "'Last call was in 1975,' he says with a hollow laugh. 'But we're still serving.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

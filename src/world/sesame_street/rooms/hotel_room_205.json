@@ -1,0 +1,22 @@
+{
+  "id": "hotel_room_205",
+  "type": "room",
+  "name": "Hotel Room 205 - The Overlook Junior",
+  "description": "The room stretches before you with slightly more enthusiasm than the building's actual dimensions should allow. Twin beds sit against the far wall, positioned with mathematical precision, their matching quilts featuring geometric patterns in shades of orange and brown that scream 1970s with their inside voice. Between the beds, a nightstand holds a rotary telephone that hasn't rung in years but feels like it might, any moment now. The carpet's hexagonal pattern extends wall to wall, each hexagon perfectly aligned, creating a hypnotic effect when you've been staring at it too long. But the room's centerpiece is impossible to ignore: an antique IBM Selectric typewriter sits on the desk, surrounded by scattered papers like a paper snowstorm. Hundreds of pages. Maybe thousands. All containing the same sentence, typed over and over and over. 'All work and no play makes Jack a dull boy.' The typewriter is still warm. Someone was here. Someone is STILL here. The clacking of keys echoes in your memory, TAP-TAP-TAP-DING, even though the room is silent now. On the bathroom door, written in what you desperately hope is lipstick: REDRUM.",
+  "exits": {
+    "west": "hotel_floor_2_hall_3"
+  },
+  "features": {
+    "beds": "Twin beds with matching quilts, matching pillows, matching bedside lamps. The symmetry is soothing. Or unsettling. Probably both.",
+    "telephone": "A harvest gold rotary phone that connects to... somewhere. The dial has a resistance that suggests it's thinking about your call.",
+    "carpet": "Hexagons within hexagons, an M.C. Escher fever dream rendered in burgundy and gold. Step carefully, the pattern might not stay in two dimensions.",
+    "painting": "A hallway painted with such precise perspective that you briefly forget which hallway you're actually in.",
+    "typewriter": "An IBM Selectric, harvest gold, the ribbon nearly depleted from endless use. The keys are warm to the touch. Pages surround it—'All work and no play makes Jack a dull boy' repeated in perfect rows. Different fonts. Different spacings. Single-spaced, double-spaced, centered, justified. The same sentence exploring every possible permutation of monotony. The carriage is positioned mid-sentence. Ready to continue. Waiting.",
+    "papers": "Stacks and stacks of paper. On the desk. On the floor. On the bed. Each page identical except for the varying typography. Some pages have the sentence typed normally. Some have it ascending in a pyramid. Some spell it out in the shape of the words themselves. It's the work of someone with infinite time and diminishing sanity. It's a masterpiece of madness.",
+    "door": "The bathroom door is closed. Written on it in crimson letters: REDRUM. Hold up a mirror and it says something far more direct. The lipstick—it IS lipstick, right?—is still wet."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

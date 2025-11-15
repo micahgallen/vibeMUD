@@ -1,0 +1,12 @@
+{
+  "id": "classic_martini",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Classic Martini",
+  "description": "A pristine martini served in a chilled glass with geometric precision. The gin is so cold it's almost philosophical about its existence. A single olive speared on a pick rests at the bottom like a tiny green prophet. The drink is clear, cold, and carries the weight of a thousand noir films.",
+  "value": 35,
+  "weight": 1,
+  "healAmount": 1,
+  "alcoholic": true,
+  "alcoholStrength": 2
+}

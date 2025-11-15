@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_406",
+  "type": "room",
+  "name": "Hotel Room 406",
+  "description": "This room has achieved peak executive comfort, the kind of space designed for people who schedule vacations like business meetings. A massive desk dominates one wall, equipped with ergonomic chair, multiple monitors, and a phone with enough lines to run a small corporation. The bed is precisely firm, the kind mattress consultants recommend to people with excellent posture and 401(k)s. Blackout curtains seal the windows with such efficiency that time becomes a social construct you can ignore. A coffee maker sophisticated enough to require training sits ready for 4 AM productivity sessions. Everything suggests someone who takes work very seriously, possibly too seriously, and brings it to hotels because separation anxiety is for relationships, not spreadsheets.",
+  "exits": {
+    "east": "hotel_floor_4_hall_3"
+  },
+  "features": {
+    "desk": "Executive grade. The chair has more adjustments than most cars. The monitors await PowerPoint presentations about quarterly projections.",
+    "bed": "Orthopedic firmness supporting people who sleep exactly 7.5 hours because sleep consultants said so. Pillows arranged for optimal spinal alignment.",
+    "darkness": "Blackout curtains create a void where time doesn't exist. It could be noon or midnight. The room doesn't care. Neither should you.",
+    "coffee": "A machine capable of seventeen different brewing methods. It probably judges you for drinking it black. You drink it black anyway."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "delbert_grady",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Delbert Grady, the Caretaker",
+  "keywords": ["grady", "caretaker", "delbert", "ghost", "servant"],
+  "description": "Delbert Grady has the bearing of a gentleman's gentleman, a proper servant from a more civilized era. His tuxedo is impeccable, pressed with creases sharp enough to cut, his bow tie mathematically centered. His posture is military-straight, his hands clasped behind his back in the eternal ready position of the professional domestic. He speaks with refined diction, every word carefully chosen, every syllable properly enuncated. But there's something wrong with his eyes—they're too calm, too certain, the eyes of a man who has solved a problem through permanent means. His smile is polite, professional, and completely divorced from anything resembling human warmth. He smells faintly of furniture polish and old blood. When he moves, it's with the gliding efficiency of someone who knows this building intimately, who has cleaned its halls, who has corrected its problems.",
+  "currentRoom": "hotel_floor_4_hall_3",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": false,
+  "heartbeatInterval": 50,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "emoteActions": [
+    "examines a doorframe with white-gloved hands, checking for dust with the dedication of a man who knows what happens to things that disappoint",
+    "adjusts his bow tie with precise movements, then clasps his hands behind his back once more",
+    "stares down the hallway with the stillness of a wax figure, then blinks once, slowly",
+    "glides silently through the corridor, his footsteps making no sound on the carpet",
+    "straightens an already-straight picture frame with obsessive precision",
+    "stands perfectly still, hands clasped behind his back, watching with those too-calm eyes",
+    "polishes an invisible speck from his impeccable tuxedo jacket"
+  ],
+  "dialogue": [
+    "Grady inclines his head with practiced courtesy. 'Good evening. I am Delbert Grady, caretaker. I have always been the caretaker here.'",
+    "'Ah, sir,' he says with impeccable formality. 'Or madam. Forgive me. How may I be of service? I do so hate to see disorder.'",
+    "His smile is polite and terrible. 'Welcome. You look familiar, somehow. Have we met? Of course we have. We've always known each other.'",
+    "'My wife and daughters,' he says conversationally, 'they tried to prevent me from doing my duty. I corrected them, sir. I corrected them all.'",
+    "Grady stares down the hallway with the stillness of a wax figure, then speaks softly: 'Standards must be maintained.'",
+    "'The hotel,' he murmurs, 'has always been here. I have always been here. You have always been here. Don't you remember?'",
+    "'Of course, sir. Do consider what I've said about correcting things. Some problems require... permanent solutions.'",
+    "He bows slightly. 'I shall be here if you need me. I am always here. I have always been here.'",
+    "'Remember, sir,' his voice follows you down the hall, 'a good caretaker must sometimes... discipline his charges.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

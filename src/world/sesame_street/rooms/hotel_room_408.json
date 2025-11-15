@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_408",
+  "type": "room",
+  "name": "Hotel Room 408 - The Penthouse Jr.",
+  "description": "This room represents someone's ambition to compete with the actual penthouse while maintaining plausible deniability about the competition. It's large, but not quite penthouse large. Luxurious, but with a hint of 'we're trying our best.' A king bed sits on a raised platform, creating the illusion of elevation without actual stairs to climb. The sitting area features leather furniture that's genuine but not the kind with provenance. A wet bar offers mid-shelf bottles with aspirational placement. Windows provide excellent views, though you can tell they're slightly less excellent than the penthouse's. It's the kind of room for people who are successful enough to afford luxury but not quite successful enough to stop checking the price.",
+  "exits": {
+    "east": "hotel_floor_4_hall_4"
+  },
+  "features": {
+    "platform": "The bed sits six inches higher than necessary, creating drama without commitment. You feel important sleeping up there. Kind of.",
+    "leather": "Genuine but not exotic. Soft but not butter-soft. Comfortable but it won't brag about its comfort in architectural magazines.",
+    "bar": "Well-stocked with brands you recognize from commercials rather than auctions. Still good. Just not 'family legacy' good.",
+    "views": "Excellent windows showing Sesame Street below. Almost as good as the penthouse views. Almost. You're not bitter about it. Much."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_407",
+  "type": "room",
+  "name": "Hotel Room 407 - The Chateau",
+  "description": "The room has committed to French country luxury with the enthusiasm of someone who's never actually been to the French countryside. Toile wallpaper depicts pastoral scenes of shepherds and shepherdesses who've clearly never handled actual livestock. A four-poster bed draped in cream linens suggests Marie Antoinette might have slept here, if she'd had better security and different life choices. Provincial furniture in distressed white paint creates the impression of age without the inconvenience of actual antiquity. A clawfoot tub visible through an archway is positioned beneath a chandelier, because apparently the French bathe in formal lighting. Everything smells of lavender, rosemary, and the kind of Provence that exists more in catalogs than in actual geography.",
+  "exits": {
+    "west": "hotel_floor_4_hall_4"
+  },
+  "features": {
+    "toile": "Blue on cream depicting scenes of rural life imagined by people who've never been rural. The shepherds look suspiciously clean.",
+    "bed": "Four posts of carved wood draped in fabric that cascades with the confidence of textiles that know they're expensive.",
+    "furniture": "Provincial pieces distressed with intention rather than time. The aging is cosmetic, like everything else in here.",
+    "chandelier": "Positioned over the bathtub because luxury means questioning safety regulations. It's probably grounded. Probably."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

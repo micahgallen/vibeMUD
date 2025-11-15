@@ -1,0 +1,36 @@
+{
+  "id": "suspicious_celebrity",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Definitely Not A Famous Person",
+  "keywords": ["celebrity", "woman", "sunglasses", "incognito", "famous"],
+  "description": "She wears sunglasses indoors, in a hallway, at night, because that's what totally normal people who aren't trying to hide their identity do. A silk scarf covers her hair in the style of old Hollywood stars or people fleeing paparazzi or possibly both. Her designer handbag probably costs more than most people's kidneys on the black market. She moves with the practiced grace of someone who knows how to walk in heels that could double as weapons. When she speaks, her voice has that quality of being carefully casual, like an acting coach told her to 'just be natural' and she took extensive notes. She's definitely not famous. She just happens to look exactly like someone who would be famous and is hiding from fame.",
+  "currentRoom": "hotel_floor_4_hall_2",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": false,
+  "heartbeatInterval": 48,
+  "emoteChance": 0.50,
+  "dialogueChance": 0.50,
+  "emoteActions": [
+    "checks her phone, sees notifications, makes a small sound of distress, puts phone away",
+    "adjusts her scarf, ensuring maximum face coverage while somehow still looking glamorous",
+    "practices saying 'I'm nobody special' in the mirror of her compact—the delivery isn't quite convincing yet",
+    "pulls her sunglasses down slightly to peek around, then quickly pushes them back up",
+    "walks with practiced grace, each step perfectly measured and camera-ready",
+    "pretends to examine the wallpaper while clearly watching for paparazzi",
+    "adjusts her designer handbag with the casual elegance of someone who knows they're being photographed even when they're not"
+  ],
+  "dialogue": [
+    "She adjusts her sunglasses. 'Oh, hello. I'm just a regular person staying at this hotel for regular reasons.'",
+    "'Have we met? No? Good. I mean, I haven't met anyone. I'm very unmemorable.' She is extremely memorable.",
+    "A practiced smile that suggests media training. 'I'm definitely not who you think I am. Whoever you think I am.'",
+    "'Why do people keep staring?' she mutters, while wearing sunglasses indoors at night.",
+    "'Please don't post about seeing me. I mean, seeing... a person. Here. Who is definitely not me.'",
+    "She waves with practiced elegance, then immediately looks around to see if anyone was watching. You were watching.",
+    "'Remember: you saw nothing. No one. Just a perfectly average, totally forgettable person.' She is neither of those things."
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

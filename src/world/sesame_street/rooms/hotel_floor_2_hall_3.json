@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_2_hall_3",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 2 Hallway",
+  "description": "This section of hallway has acquired a personality, though not necessarily a pleasant one. The lights flicker here with slightly more conviction, as if practicing for a power outage. Doors 205 and 206 lurk on opposite walls, and you could swear 206's peephole is watching you back. A vending machine hums against the wall, its contents arranged in spirals that mock your late-night cravings. The ice machine next to it rumbles with the deep, meaningful sounds of mechanical digestion. The hallway stretches north to its final section and south back toward the elevator.",
+  "exits": {
+    "north": "hotel_floor_2_hall_4",
+    "south": "hotel_floor_2_hall_2",
+    "east": "hotel_room_205",
+    "west": "hotel_room_206"
+  },
+  "features": {
+    "vending_machine": "A humming monument to midnight hunger, filled with chips that expired in optimism and candy bars of suspicious providence.",
+    "ice_machine": "It groans. It rumbles. Occasionally it produces ice. More often it produces sounds that suggest it's considering a career change.",
+    "lights": "These particular fluorescents have developed a rhythm: steady, steady, flicker, steady, steady, FLICKER, darkness, steady.",
+    "wallpaper": "The pattern here seems to move when you're not looking directly at it, though that's clearly impossible. Clearly."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "hotel_floor_3",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 3 Deluxe",
+  "description": "The deluxe floor announces its superiority through slightly thicker carpet and wall sconces that actually work, most of them. The hallway is wider here, suggesting space is a luxury worth flaunting, and the doors sport golden number plates that catch the light with calculated elegance. Small tables bearing vases of flowers—real ones, though they look suspiciously perfect—punctuate the corridor at intervals that suggest someone consulted a book about feng shui. The air smells of lavender and ambition. Soft classical music drifts from hidden speakers, the kind that makes you feel you should be wearing better shoes. The elevator stands ready with polished elegance.",
+  "exits": {
+    "north": "hotel_floor_3_hall_1"
+  },
+  "features": {
+    "carpet": "Noticeably plusher than Floor 2's offering, with a pile deep enough to leave footprints. You are leaving footprints. Everyone can see your footprints.",
+    "sconces": "Frosted glass and brass fittings that glow with warm light, creating the impression that whoever stays here makes good life choices.",
+    "flowers": "Fresh flowers that bloom with mathematical precision. You suspect they're replaced on a schedule more regular than most people's sleep cycles.",
+    "tables": "Cherry wood occasional tables positioned at occasions. The craftsmanship suggests they cost more than they should.",
+    "music": "A string quartet rendering of something that sounds important. It makes you want to stand up straighter."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

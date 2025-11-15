@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_201",
+  "type": "room",
+  "name": "Hotel Room 201",
+  "description": "The room presents itself with all the enthusiasm of a Monday morning. A queen bed dominates the space, its quilt featuring a pattern of interlocking rings that might represent Olympic aspirations or just circles having a meeting. The nightstand holds a lamp with a shade slightly askew, casting light at an angle that suggests philosophical questioning. A dresser squats against one wall with drawers that stick just enough to make you work for your socks. The whole affair smells faintly of industrial-strength cleaning products and previous occupants' dreams.",
+  "exits": {
+    "east": "hotel_floor_2_hall_1"
+  },
+  "features": {
+    "bed": "The mattress achieves a firmness that could be described as 'educational.' The pillows, meanwhile, have strong opinions about neck support.",
+    "nightstand": "Particle board pretending to be wood, with a drawer containing a Gideon Bible and a takeout menu from 1987.",
+    "dresser": "Five drawers of varying cooperation levels. The third one down requires a specific wiggling technique known only to past guests.",
+    "tv": "A television of uncertain vintage sits in the corner, its remote control sticky for reasons you don't want to investigate."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

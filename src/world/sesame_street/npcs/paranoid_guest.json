@@ -1,0 +1,37 @@
+{
+  "id": "paranoid_guest",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Harold, the Paranoid Guest",
+  "keywords": ["harold", "guest", "man", "traveler", "paranoid"],
+  "description": "Harold is packing. Harold has been packing for three days. His suitcase is open on the bed, clothes thrown in haphazardly alongside toiletries, books, and what appears to be every towel from the bathroom. He's a middle-aged man in a rumpled business suit, tie loosened, hair standing at odd angles from running his hands through it. His eyes are bloodshot from lack of sleep, darting constantly to the corners of the room, to the door, to the window that he's covered with the bedspread. He clutches his room key in one hand like a talisman and his cell phone in the other, though the screen shows no signal. There are salt lines across the doorway. He's pushed the dresser against the wall to block something. He keeps muttering about checkout time, but he's been saying that since Tuesday. The 'Do Not Disturb' sign on his door is reinforced with duct tape.",
+  "currentRoom": "hotel_floor_4_hall_2",
+  "level": 3,
+  "hp": 50,
+  "maxHp": 50,
+  "wanders": false,
+  "heartbeatInterval": 30,
+  "emoteChance": 0.55,
+  "dialogueChance": 0.45,
+  "emoteActions": [
+    "shoves another item into his already-overfilled suitcase with frantic energy",
+    "checks the locks on the door for the fifteenth time, then checks them again",
+    "pulls back the bedspread covering the window, peers out, makes a strangled noise, and quickly re-covers it",
+    "clutches his suitcase like it's the only thing keeping him grounded in reality",
+    "adds another tally mark to the salt line across the doorway",
+    "peers nervously into the hallway, then slams the door and triple-locks it",
+    "tries his cell phone again, stares at the 'No Signal' message, nearly throws it in frustration"
+  ],
+  "dialogue": [
+    "Harold jumps at your approach. 'What? Who sent you? Did you see them? The twins? Tell me you saw them too. I'm not crazy. I'M NOT CRAZY.'",
+    "'Oh thank god, another real person,' he grabs your sleeve. 'You need to leave. We need to leave. Check out. Right now. Before it gets dark again.'",
+    "He peers past you into the hallway. 'Is the elevator safe? Don't use the elevator. Never use the elevator. Stairs. Always stairs. Except the stairs aren't safe either.'",
+    "'I just came here for a business conference,' he says to no one. 'Three nights. It was supposed to be THREE NIGHTS.'",
+    "'The hotel bar doesn't exist,' he mutters. 'I mean it does, but it doesn't. The bartender is... he's not... oh god.'",
+    "'Wait! Don't go!' He clutches his suitcase. 'Actually, do go. Get out. Tell people. Warn them. One star on TripAdvisor!'",
+    "'If I don't make it out,' he says dramatically, 'tell my wife... tell her I should have booked the Holiday Inn.'",
+    "Harold returns to his frantic packing, now adding the lamp to his suitcase. 'Checkout. Must checkout. Must leave.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

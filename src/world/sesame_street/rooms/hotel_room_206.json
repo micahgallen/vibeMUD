@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_206",
+  "type": "room",
+  "name": "Hotel Room 206",
+  "description": "A perfectly ordinary hotel room that's trying very hard to be unremarkable and almost succeeds. The bed is regulation hotel-firm, the pillows are regulation puffy, and the art on the walls depicts regulation seascapes of beaches you'll never visit. What makes the room interesting is what it's missing: no television, no telephone, no clock. Just a bed, a dresser, a chair, and a profound silence that fills the space like acoustic insulation. The window looks out onto an air shaft, providing a view of other windows, behind which other guests presumably lead lives of quiet desperation.",
+  "exits": {
+    "east": "hotel_floor_2_hall_3"
+  },
+  "features": {
+    "silence": "The absence of mechanical hums and electronic buzzing creates a void that your ears keep trying to fill with imaginary sounds.",
+    "window": "Overlooks the air shaft, a vertical canyon of brick and other people's bathroom windows. A pigeon on the ledge judges you silently.",
+    "simplicity": "No TV means you're left with your thoughts. No clock means time moves at its own pace. No phone means you're unreachable. This is either zen or a nightmare.",
+    "seascapes": "Three framed prints of beaches: one at dawn, one at noon, one at sunset. A complete narrative arc of sand."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

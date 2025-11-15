@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_403",
+  "type": "room",
+  "name": "Hotel Room 403 - The Gatsby",
+  "description": "The room bursts with the manic optimism of someone who believes money can indeed buy happiness and is willing to prove it with aggressive decoration. Gold. So much gold. Gold curtains, gold-trimmed furniture, gold leaf on the ceiling forming patterns that might be clouds or might be dollar signs depending on your current relationship with capitalism. A champagne bucket sits eternally ready, condensation beading on silver that's probably actually silver. The bed is canopied in silk, the kind of bed where affairs of state are conducted. Art deco furniture creates geometric patterns that dance across your vision like jazz made solid. Everything suggests parties that happened decades ago and might still be happening in parallel dimensions.",
+  "exits": {
+    "west": "hotel_floor_4_hall_2"
+  },
+  "features": {
+    "gold": "Everywhere. On everything. The room doesn't whisper wealth, it shouts it through a megaphone made of precious metals.",
+    "champagne": "Always ready, always chilled, the bucket sweating elegantly like it knows something you don't about celebrations.",
+    "bed": "Canopied in silk that cascades like frozen waterfalls of luxury. You could make decisions of tremendous consequence in this bed.",
+    "parties": "The room still vibrates with the echo of parties past. You can almost hear the laughter, smell the cigarettes, taste the champagne. Almost."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

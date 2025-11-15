@@ -1,0 +1,50 @@
+{
+  "id": "room_service_waiter",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Eduardo, Room Service Waiter",
+  "keywords": ["waiter", "eduardo", "room service", "server", "employee"],
+  "description": "Eduardo pushes a rolling room service cart with the weary determination of a man who has delivered club sandwiches to rooms that shouldn't exist and retrieved trays from doors that were locked from the inside. He wears the hotel's burgundy vest and black slacks, a white towel draped over one arm in the traditional fashion. His shoes are polished to a shine, his tie is straight, and his eye bags could qualify as carry-on luggage. He's been working here for five years—or has it been fifty? Time moves differently in The Snuggly Sleeper. His cart contains an assortment of covered dishes, coffee pots that are always somehow still hot, and occasionally items he doesn't remember loading. He's learned not to ask questions. He's learned not to look too closely at reflections in the silver dome covers. He's learned that some guests tip in currency that went out of circulation decades ago.",
+  "currentRoom": "hotel_floor_3_hall_2",
+  "level": 2,
+  "hp": 35,
+  "maxHp": 35,
+  "wanders": true,
+  "heartbeatInterval": 38,
+  "emoteChance": 0.35,
+  "dialogueChance": 0.50,
+  "wanderChance": 0.15,
+  "territory": [
+    "hotel_floor_2_hall_1",
+    "hotel_floor_2_hall_2",
+    "hotel_floor_2_hall_3",
+    "hotel_floor_2_hall_4",
+    "hotel_floor_3_hall_1",
+    "hotel_floor_3_hall_2",
+    "hotel_floor_3_hall_3",
+    "hotel_floor_3_hall_4",
+    "hotel_floor_4_hall_1",
+    "hotel_floor_4_hall_2",
+    "hotel_floor_4_hall_3",
+    "hotel_floor_4_hall_4"
+  ],
+  "emoteActions": [
+    "polishes a coffee pot, staring at his reflection with the expression of a man who's seen that reflection do things it shouldn't",
+    "rearranges items on his cart, making sure the dome covers are securely in place",
+    "checks his order slips, frowns, and pulls out a delivery request dated 1974",
+    "knocks on a door, waits, then carefully leaves a tray outside—no one ever answers that door",
+    "wheels his cart down the hallway, the wheels squeaking a rhythm that sounds almost like words",
+    "adjusts the white towel draped over his arm with mechanical precision",
+    "stares at a coffee pot with the haunted look of someone questioning temporal reality"
+  ],
+  "dialogue": [
+    "Eduardo stops his cart and offers a tired smile. 'Room service. Did you order anything? No? Strange. People often do and then forget. Or maybe it was another guest. Another time.'",
+    "'Good evening,' he says, checking his order slip. 'I have... well, I'm not entirely sure what I have, but I'm delivering it to room... hmm. The room number seems to have smudged.'",
+    "He gestures to his cart. 'Would you like anything? Coffee? Sandwich? Existential reassurance that reality is still functioning normally?'",
+    "'Another day, another dollar,' he mutters. 'Or another decade. Hard to tell anymore.'",
+    "'If you need anything, just dial 0 from your room. I'll bring it up. Eventually. Time permitting. Reality permitting.'",
+    "'Enjoy your stay at The Snuggly Sleeper,' he calls back. 'As much as anyone can enjoy it.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

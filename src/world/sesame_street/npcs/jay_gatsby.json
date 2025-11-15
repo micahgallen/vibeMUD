@@ -1,0 +1,37 @@
+{
+  "id": "jay_gatsby",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Jay Gatsby, Old Sport",
+  "keywords": ["gatsby", "jay", "sport", "host", "millionaire"],
+  "description": "Gatsby stands by the window in a pink suit that costs more than your education, staring wistfully at something in the distance—probably a green light, definitely a metaphor. His hair is perfectly pomaded, his shoes are pristine white buckskin, and he has the air of someone who throws extravagant parties that no one attends. Empty champagne flutes are scattered around the room alongside untouched hors d'oeuvres. He's clearly been waiting for someone who isn't coming. He's been waiting for years. There's a guest list on the table with hundreds of names, none of them the one name he actually wants. His smile is simultaneously hopeful and heartbreaking, like a man who bought a mansion across the bay from his dreams and is slowly realizing geography isn't the problem.",
+  "currentRoom": "hotel_room_403",
+  "level": 4,
+  "hp": 65,
+  "maxHp": 65,
+  "wanders": false,
+  "heartbeatInterval": 42,
+  "emoteChance": 0.50,
+  "dialogueChance": 0.50,
+  "emoteActions": [
+    "stares out the window at a green light that may or may not actually be there",
+    "adjusts his pink suit jacket with the care of someone whose entire identity is wrapped up in appearances",
+    "checks his watch, then the door, then the window, in a cycle of disappointed hope",
+    "picks up a champagne flute, realizes it's empty, sets it down with profound sadness",
+    "straightens a guest list that no one will ever read",
+    "practices his welcoming smile in a mirror, the smile not quite reaching his eyes",
+    "reaches toward the window as if grasping for something just out of reach, which is very on-brand"
+  ],
+  "dialogue": [
+    "'Old sport!' he exclaims with practiced enthusiasm. 'So glad you could make it to my party. You're the only one who came. Again.'",
+    "He gestures at the empty room. 'I throw the most magnificent parties, old sport. No expense spared. No detail overlooked. No guests in attendance.'",
+    "'Do you see that light?' He points vaguely out the window. 'Green light. Very symbolic. Represents my hopes and dreams and also my complete inability to move on.'",
+    "'I made my fortune through perfectly legitimate business, old sport,' he says unconvincingly. 'Pharmaceuticals. Import/export. Other vague things rich people say.'",
+    "Gatsby swirls an empty champagne glass. 'I bought this hotel room because it faces east. Toward someone who doesn't think about me at all. Very romantic.'",
+    "'The past?' He laughs bitterly. 'Of course you can repeat the past, old sport! You just need money, delusion, and a complete unwillingness to accept reality.'",
+    "'They say I'm a romantic,' he muses. 'I prefer to think of myself as emotionally unavailable but with better parties.'",
+    "He checks the guest list again. 'She's not coming, is she, old sport? She never comes. But I'll keep throwing parties. It's called commitment. Or possibly insanity.'"
+  ],
+  "createdAt": "2025-11-15T18:00:00Z",
+  "modifiedAt": "2025-11-15T18:00:00Z"
+}

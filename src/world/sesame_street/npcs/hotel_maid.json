@@ -1,0 +1,47 @@
+{
+  "id": "hotel_maid",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Consuela, the Hotel Maid",
+  "keywords": ["consuela", "maid", "housekeeper"],
+  "description": "Consuela pushes her cleaning cart with the determination of someone who has seen everything, judged most of it, and is professionally obligated to clean it anyway. Her uniform is pristine despite the nature of her work, her hair pulled back in a bun so tight it might be load-bearing. She wields a feather duster like a scepter and a bottle of industrial cleaner like a weapon. Her eyes miss nothing—not the carpet stain in 203, not the suspicious activities in 405, not your inadequate tip. She moves through the hallways with the authority of someone who knows where all the bodies are buried, metaphorically speaking, probably.",
+  "currentRoom": "hotel_floor_2_hall_3",
+  "level": 3,
+  "hp": 50,
+  "maxHp": 50,
+  "wanders": true,
+  "heartbeatInterval": 42,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.45,
+  "wanderChance": 0.15,
+  "territory": [
+    "hotel_floor_2_hall_1",
+    "hotel_floor_2_hall_2",
+    "hotel_floor_2_hall_3",
+    "hotel_floor_2_hall_4",
+    "hotel_floor_3_hall_1",
+    "hotel_floor_3_hall_2",
+    "hotel_floor_3_hall_3",
+    "hotel_floor_3_hall_4"
+  ],
+  "emoteActions": [
+    "scrubs at a carpet stain with the intensity of someone exorcising demons",
+    "inspects a door frame, tuts disapprovingly, and makes a note on her clipboard",
+    "rearranges items on her cart with geometric precision, each bottle at exactly 90 degrees",
+    "wields her feather duster like a weapon, attacking dust with extreme prejudice",
+    "sprays industrial cleaner on a surface and wipes it down with aggressive efficiency",
+    "straightens a crooked picture frame with a satisfied nod",
+    "examines a room with narrowed eyes, mentally cataloging every transgression against cleanliness"
+  ],
+  "dialogue": [
+    "Consuela glances up from her cart. 'You need fresh towels? Room service? Absolution?'",
+    "'Ah, another guest. Please, do not touch the decorative soaps. They are for looking, not for using.'",
+    "She eyes you critically. 'The 'Do Not Disturb' sign means I judge you from the hallway instead of the doorway.'",
+    "'I clean up after people who pay more per night than I make in a week,' she mutters to a dust bunny before eliminating it.",
+    "'Enjoy your stay. Try not to make too much of a mess, yes?'",
+    "She returns to her cart, already moving toward the next room's sins.",
+    "'Remember: checkout is at 11 AM. This is not a suggestion.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

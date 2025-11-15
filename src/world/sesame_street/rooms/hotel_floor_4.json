@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_4",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Penthouse Floor",
+  "description": "The penthouse floor has committed fully to the concept of luxury, though it may have consulted sources of questionable authority on what luxury actually means. The carpet is so plush it might legally qualify as a mattress. Crown molding swoops across the ceiling with baroque enthusiasm, gilded in what is definitely, probably, almost certainly gold. Crystal chandeliers hang at intervals, tinkling gently despite the complete absence of any breeze, which is either charming or mildly concerning depending on your relationship with the supernatural. The walls are papered in damask silk that costs more per square foot than most people's education. A marble staircase spirals upward to the rooftop, while the elevator stands ready with ostentatious brass doors. The whole affair smells of money, cedar, and unspoken NDAs.",
+  "exits": {
+    "up": "hotel_rooftop",
+    "north": "hotel_floor_4_hall_1"
+  },
+  "features": {
+    "carpet": "You could sleep on this carpet. You could raise a family on this carpet. The carpet has opinions about thread count.",
+    "molding": "Crown molding that suggests the room is wearing a very expensive hat. The gilt catches the light like it knows you're looking.",
+    "chandeliers": "Bohemian crystal that probably has a more interesting passport than you do. They tinkle mysteriously, as if sharing secrets.",
+    "wallpaper": "Silk damask in deep burgundy with a pattern of peacocks who look smug about being peacocks.",
+    "staircase": "Marble steps spiral upward with the confidence of architecture that knows it photographs well. Each step is veined like expensive cheese.",
+    "scent": "An olfactory cocktail of old money, new money, and the faint suggestion of money that asks you not to inquire about its origins."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

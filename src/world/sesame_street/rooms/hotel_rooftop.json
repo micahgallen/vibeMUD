@@ -1,0 +1,62 @@
+{
+  "id": "hotel_rooftop",
+  "definition": "shop",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Rooftop Lounge",
+  "description": "The rooftop lounge sprawls beneath an open sky with the casual confidence of a space that knows it's the best seat in the house. Sesame Street unfolds below in miniature splendor, a diorama of urban charm and friendly chaos. The lounge area clusters around a mahogany bar that gleams despite the elements, stocked with bottles that catch the light like captured sunsets. Low couches and chairs arrange themselves in conversational groupings, upholstered in weather-resistant fabrics that somehow still manage to feel luxurious. String lights crisscross overhead, waiting for evening to justify their existence. In the corner, a hot tub steams invitingly, its waters the temperature of a promise kept. The elevator stands discretely near the edge, its brass doors somehow both functional and decorative. The air carries scents of chlorine, good whiskey, and possibility. Marble stairs descend back to civilization.",
+  "exits": {
+    "down": "hotel_floor_4"
+  },
+  "npcs": ["rooftop_bartender"],
+  "isShop": true,
+  "merchantName": "Victor",
+  "keeperTemper": "polite",
+  "keeperCopper": 8000,
+  "bankCopper": 25000,
+  "merchandise": [
+    {
+      "itemId": "classic_martini",
+      "price": 35,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "dirty_martini",
+      "price": 38,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "vesper_martini",
+      "price": 42,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "cocktail_olives",
+      "price": 8,
+      "stock": -1,
+      "maxStock": -1
+    }
+  ],
+  "buyTypes": [],
+  "messages": {
+    "greeting": "Good evening. May I offer you something from our selection?",
+    "noSuchItem": "I'm afraid we don't serve that here.",
+    "noSellItem": "This is a cocktail bar, not a pawn shop. I don't purchase items.",
+    "cantAfford": "Perhaps you'd like to admire the view instead? It's free.",
+    "successBuy": "That will be %s. Enjoy responsibly."
+  },
+  "features": {
+    "bar": "The Rooftop Martini Bar stands ready to serve, its mahogany surface reflecting clouds and ambitions. Behind it, shelves of premium spirits wait with patient dignity.",
+    "view": "Sesame Street spreads out below like a pop-up book illustrated by someone with a generous budget and a sense of whimsy. You can see everything from up here: the transportation booths, the winding streets, the distant marketplace. Somewhere down there, life is happening at street level.",
+    "hot tub": "A generously sized hot tub bubbles with therapeutic enthusiasm, steam rising into the air like the ghost of relaxation itself. The water is precisely 104 degrees, as if someone is monitoring it with disturbing attention to detail.",
+    "furniture": "Deep cushioned seating arranged in intimate clusters, encouraging conversation or contemplative silence depending on your mood and the occupancy.",
+    "lights": "Edison bulbs strung on wire above, currently dim but ready to transform the space into magic hour at a moment's notice.",
+    "sky": "Above, the sky does whatever skies do—clouds drift, stars wait their turn, and the sun makes its opinions known about the time of day.",
+    "railing": "Wrought iron safety rails painted glossy black, sturdy enough to lean on while making important decisions or looking wistfully into the middle distance."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

@@ -6,6 +6,10 @@
   "exits": {
     "east": "hotel_lobby"
   },
+  "features": {
+    "mirror": "A wall-mounted mirror that reflects you with unflinching honesty. This is you at 3 AM. This is you with hotel lighting. This is truth.",
+    "wallpaper": "Endless clouds drifting across a beige sky. They look peaceful at first. Then you start to notice the faces. There are no faces. Are there? Stop looking at the wallpaper."
+  },
   "preventWandering": true,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"

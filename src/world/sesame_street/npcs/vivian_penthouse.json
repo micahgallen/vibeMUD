@@ -1,0 +1,37 @@
+{
+  "id": "vivian_penthouse",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Vivian, the Professional Companion",
+  "keywords": ["vivian", "woman", "lady", "escort", "girl"],
+  "description": "Vivian reclines on a velvet chaise lounge in expensive lingerie that costs more than most people's rent, surrounded by designer shopping bags with names you can't pronounce. Her hair is perfectly tousled in that 'I woke up like this (after three hours with a stylist)' way. She's clearly committed to playing the part of 'hooker with a heart of gold who gets rescued by a billionaire,' though she seems very aware of how absurd the whole premise is. There's champagne, strawberries, and what appears to be a contract with an hourly rate crossed out and replaced with 'THE WHOLE WEEK.' She keeps practicing her transformation from 'streetwalker' to 'society lady' in a mirror, complete with exaggerated posture changes.",
+  "currentRoom": "hotel_room_401",
+  "level": 4,
+  "hp": 65,
+  "maxHp": 65,
+  "wanders": false,
+  "heartbeatInterval": 45,
+  "emoteChance": 0.45,
+  "dialogueChance": 0.55,
+  "emoteActions": [
+    "practices her 'big mistake, huge' hand gesture, then laughs at herself",
+    "dramatically eats a strawberry while checking the price tag on a shopping bag",
+    "adjusts her lingerie and strikes a pose that screams 'male fantasy circa 1990'",
+    "counts a stack of bills, then fans herself with them like a Victorian lady",
+    "switches between her 'working girl' voice and her 'society lady' voice for comedic effect",
+    "holds up the crossed-out contract and giggles at the absurdity",
+    "practices walking in new designer heels, nearly falling, then recovering with exaggerated grace"
+  ],
+  "dialogue": [
+    "'So I'm a hooker, right?' she says matter-of-factly. 'But like, a NICE hooker. A hooker who reads! Very important distinction for the romance plot.'",
+    "'He hired me for the week,' she holds up the contract. 'Apparently that's how you find true love. I don't make the rules. Well, technically we negotiated the rules, but—'",
+    "'Big mistake. HUGE,' she practices. 'That's what you say to salespeople after a rich guy buys you an entire wardrobe. It's very empowering and not at all ironic.'",
+    "She gestures at her lingerie. 'This is my WORK outfit. Now I have designer dresses too! Character development through capitalism!'",
+    "'I want the fairy tale,' she says dreamily, then adds: 'You know, the one where sex work leads directly to marriage with a billionaire. Very realistic. Happens all the time.'",
+    "'People ask if I feel objectified,' she examines a shopping bag. 'And I say, have you SEEN these shoes? I'll objectify MYSELF for these shoes.'",
+    "'The opera is very classy,' she nods seriously. 'It proves I'm not JUST a lady of the evening. I'm a lady of the evening who appreciates CULTURE now.'",
+    "She laughs. 'Best part? Everyone pretends this is a wholesome love story. A businessman paying a prostitute to pretend to be his girlfriend. SO wholesome!'"
+  ],
+  "createdAt": "2025-11-15T16:00:00Z",
+  "modifiedAt": "2025-11-15T16:00:00Z"
+}

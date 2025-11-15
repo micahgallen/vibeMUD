@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_3_hall_1",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 3 Deluxe Hallway",
+  "description": "The deluxe hallway announces its superiority through carpet so plush your footsteps make no sound, creating an eerie sensation of floating through space. Wall sconces cast warm pools of light that suggest someone actually calculated optimal lumens per square foot. Doors 301 and 302 are framed in dark wood with brass hardware that gleams with recent polishing. A small mahogany table holds a vase of fresh orchids that bloom with the confidence of flowers that cost more than most people's car payments. The air carries hints of sandalwood and subtle wealth. The elevator waits to the south with dignified patience.",
+  "exits": {
+    "north": "hotel_floor_3_hall_2",
+    "south": "hotel_floor_3",
+    "east": "hotel_room_302",
+    "west": "hotel_room_301"
+  },
+  "features": {
+    "carpet": "Deep pile in a rich burgundy that feels like walking on accumulated privilege. Your feet sink in and briefly consider staying.",
+    "sconces": "Frosted glass and polished brass, each with a bulb that's warm without being garish. Someone thought about these lights. Someone cared.",
+    "orchids": "Purple phalaenopsis that shouldn't bloom this long without serious coaxing. The orchid care regimen here probably has its own budget.",
+    "table": "Mahogany with inlaid mother-of-pearl. It serves no functional purpose except to say 'we have tables we don't need.'"
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

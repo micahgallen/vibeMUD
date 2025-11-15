@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_202",
+  "type": "room",
+  "name": "Hotel Room 202 - The Bates Suite",
+  "description": "This room has a certain... atmosphere. The shower curtain is decorated with a cheerful pattern of ducks, though they seem to be making eye contact with an intensity that ducks shouldn't possess. The mirror above the sink reflects the room with unflinching accuracy, including that stain on the carpet that looks distressingly recent. A painting of a Victorian house on a hill overlooks the bed, the kind of house where mothers have strong opinions and tragic backstories. Everything is meticulously clean, obsessively so, as if someone scrubbed away all evidence of... something.",
+  "exits": {
+    "west": "hotel_floor_2_hall_1"
+  },
+  "features": {
+    "shower": "Behind those duck-patterned curtains lurks a shower with water pressure that varies from 'gentle mist' to 'pressure washer' without warning.",
+    "mirror": "The mirror has seen things. You can tell. It reflects you with the brutal honesty of something that doesn't believe in flattery.",
+    "painting": "The Victorian house looms over a hillside, dark windows like eyes. You could swear the porch light wasn't on a moment ago.",
+    "cleanliness": "Every surface gleams with the kind of spotlessness that suggests either an excellent maid service or a guilty conscience."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "hotel_desk_clerk",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Margaret, the Front Desk Clerk",
+  "keywords": ["clerk", "margaret", "receptionist", "desk", "attendant"],
+  "description": "Margaret sits behind the front desk with the rigid posture of someone who has been trained to maintain professional composure under all circumstances, and those circumstances have recently become Very Trying Indeed. Her burgundy blazer is spotless, her name tag gleams, her smile is welcoming but increasingly strained around the edges. She's somewhere in her forties, with hair pulled back in a bun that's maybe wound a little tighter than it was when she started this shift. There's a tick in her left eye that wasn't there last month. She keeps a bottle of antacids in her desk drawer and a flask in her purse. Her hands don't quite shake when she types, but it's a near thing. She still answers the phone with perfect courtesy, even though the phone sometimes rings with calls from rooms that should be empty, from extensions that were disconnected years ago.",
+  "currentRoom": "hotel_lobby",
+  "level": 2,
+  "hp": 35,
+  "maxHp": 35,
+  "wanders": false,
+  "heartbeatInterval": 40,
+  "emoteChance": 0.45,
+  "dialogueChance": 0.55,
+  "emoteActions": [
+    "answers a phone that wasn't ringing, listens to the silence, then carefully hangs up",
+    "updates the guest registry with meticulous care, occasionally crossing out names of people who are... no longer with us",
+    "takes a sip from her coffee mug, which is 90% antacid at this point",
+    "glances at the elevator, shudders slightly, and returns to her paperwork with increased focus",
+    "straightens a stack of papers that are already perfectly straight",
+    "reorganizes the brochure rack for the third time this hour",
+    "types something on her computer, frowns at the screen, types again with increasing frustration"
+  ],
+  "dialogue": [
+    "Margaret's smile is professional and slightly desperate. 'Welcome to The Snuggly Sleeper Hotel! Checking in? We have several lovely rooms available. Well, available-ish.'",
+    "'Good day!' She straightens a stack of papers that are already straight. 'How may I assist you today? We're running a special: stay two nights, question your sanity for free.'",
+    "She types something on her computer, frowns at the screen. 'I'm sorry, the system is being... difficult. As usual. How can I help you?'",
+    "'Professional. Stay professional,' she whispers to herself while reorganizing the brochure rack.",
+    "'Enjoy your stay! And please, don't hesitate to call the front desk if you need anything. Or if you see anything. Which you won't. Probably.'",
+    "She hands you a room key with a smile that's trying very hard. 'Have a wonderful evening. The hotel is perfectly safe. Mostly safe. Reasonably safe.'",
+    "'Remember, checkout is at 11 AM!' She calls after you. 'Earlier is fine too! We're very flexible about early departures!'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

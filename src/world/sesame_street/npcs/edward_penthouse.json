@@ -1,0 +1,37 @@
+{
+  "id": "edward_penthouse",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Edward, the Billionaire John",
+  "keywords": ["edward", "man", "businessman", "executive", "client"],
+  "description": "Edward stands by the penthouse window in a suit that costs more than most people's cars, holding scotch and staring pensively at the skyline like he's in a cologne commercial about emotionally stunted rich men. His hair is silver at the temples in that distinguished way that screams 'I can afford you.' He's clearly aware that he's living out a fantasy where paying a sex worker for a week somehow becomes a heartwarming romance, and he seems bemused by the whole thing. There's a bouquet of roses, a briefcase full of cash, and what appears to be a copy of 'How to Turn Your Prostitute Into Your Soulmate: A Guide for the Wealthy and Emotionally Constipated.' He keeps checking his watch as if measuring the cost-per-hour of falling in love.",
+  "currentRoom": "hotel_room_401",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": false,
+  "heartbeatInterval": 48,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "emoteActions": [
+    "checks his watch and calculates the hourly rate of this 'romance'",
+    "practices his 'I'm rich but emotionally damaged' brooding pose by the window",
+    "counts out bills while trying to look romantic instead of transactional",
+    "adjusts his tie and rehearses saying 'this is different from my usual arrangements'",
+    "swirls his scotch pensively, contemplating the ethics of buying companionship",
+    "picks up the roses and wonders if flowers make solicitation more romantic",
+    "reviews a mental checklist: expensive gifts, opera tickets, pretend it's not prostitution"
+  ],
+  "dialogue": [
+    "'I hired a hooker for the week,' he says casually. 'But I'm NICE to her, so it's basically a romance novel. That's how this works, right?'",
+    "'I'm a corporate raider. I destroy companies for profit,' he muses. 'But I'm tender with prostitutes I pay thousands of dollars. Complex character!'",
+    "He gestures with his scotch. 'The trick is to take your paid escort to the opera. Then it's CLASSY prostitution. Very important distinction.'",
+    "'I never treat anyone this well,' he says seriously. 'Except the other escorts. And my therapist. And my personal shopper. But emotionally? Just the hooker I hired.'",
+    "'They say you can't buy love,' he smirks, 'but you CAN rent it by the week and see what develops. It's like a lease with romantic options.'",
+    "He checks his Rolex. 'Best investment I ever made. Usually I just buy companies. Now I'm buying a human being's time and affection. Growth!'",
+    "'The arrangement is simple,' he explains. 'I pay her obscene amounts of money, buy her things, and we pretend we're falling in love instead of engaging in commerce.'",
+    "'I'm going to rescue her from sex work,' he announces proudly, 'by... paying her for sex work. The irony is not lost on me, but I'm too rich to care.'"
+  ],
+  "createdAt": "2025-11-15T16:00:00Z",
+  "modifiedAt": "2025-11-15T16:00:00Z"
+}

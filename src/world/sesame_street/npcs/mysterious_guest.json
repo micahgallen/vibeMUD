@@ -1,0 +1,34 @@
+{
+  "id": "mysterious_guest",
+  "type": "npc",
+  "definition": "monster",
+  "name": "The Guest in Room 307",
+  "keywords": ["guest", "man", "mysterious", "figure"],
+  "description": "He paces his hotel room with the studied casualness of someone who has practiced looking nonchalant. Dressed in a charcoal suit that costs more than most cars, he examines his phone with the kind of focus that suggests the phone contains either nuclear launch codes or very important memes. His shoes are polished to mirror brightness, his tie knotted with mathematical precision. A briefcase handcuffed to his wrist suggests either extremely important business or an extremely expensive fetish. He checks his watch frequently, as if time might decide to behave differently if monitored closely enough. When he thinks no one is looking, his expression shifts from 'successful business person' to 'deeply tired human,' but only for a moment.",
+  "currentRoom": "hotel_room_307",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": false,
+  "heartbeatInterval": 45,
+  "emoteChance": 0.60,
+  "dialogueChance": 0.40,
+  "emoteActions": [
+    "checks his watch, sighs, checks his phone, sighs, checks his watch again",
+    "paces exactly three steps left, three steps right, like a metronome in expensive shoes",
+    "adjusts his tie with mechanical precision, then immediately checks his phone again",
+    "shifts the briefcase from one hand to the other, the handcuff chain clinking softly",
+    "stares at his phone screen with the intensity of someone decoding ancient runes",
+    "taps his foot impatiently, checking his watch for the hundredth time",
+    "flinches at a sound, checks his phone reflexively even though it didn't ring"
+  ],
+  "dialogue": [
+    "He glances up briefly. 'Good day.' His attention returns immediately to his phone.",
+    "'Lovely weather.' He hasn't looked outside in hours. He doesn't know what the weather is doing.",
+    "He mutters something about 'the package' and 'the meeting' and 'why did I agree to this.'",
+    "'Indeed.' Whatever you said, his answer is 'indeed.' He has mastered the art of agreeing without listening.",
+    "A distracted wave as he returns to studying his phone with forensic intensity."
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

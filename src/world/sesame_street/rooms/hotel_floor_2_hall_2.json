@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_2_hall_2",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 2 Hallway",
+  "description": "The corridor continues its northward march with all the confidence of architecture that's been doing this for years. Doors 203 and 204 guard their respective walls, their brass number plates catching the fluorescent light with intermittent enthusiasm. A watercolor painting of a sailboat hangs slightly crooked on the wall, having long since given up on the concept of level. The carpet here shows a particularly enthusiastic worn patch where countless feet have pivoted, perhaps in confusion, possibly in despair. The hallway extends north and south, offering the illusion of choice.",
+  "exits": {
+    "north": "hotel_floor_2_hall_3",
+    "south": "hotel_floor_2_hall_1",
+    "east": "hotel_room_203",
+    "west": "hotel_room_204"
+  },
+  "features": {
+    "painting": "A sailboat on choppy waters beneath a sky of questionable meteorological validity. The signature in the corner reads like someone sneezed in cursive.",
+    "patch": "The worn spot in the carpet forms a shape eerily reminiscent of a screaming face, though that's probably just pareidolia. Probably.",
+    "doors": "203 and 204 mirror each other with the precision of doors that were installed by someone who actually used a level.",
+    "ceiling": "Water stains form constellation patterns. There's Orion. There's the Big Dipper. There's what might be a lawsuit."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

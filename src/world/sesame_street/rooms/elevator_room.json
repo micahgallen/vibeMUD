@@ -1,0 +1,45 @@
+{
+  "id": "elevator_room",
+  "type": "room",
+  "definition": "haunted_elevator",
+  "heartbeatInterval": 45,
+  "name": "Inside The Snuggly Sleeper Elevator",
+  "description": "The elevator's interior is a marvel of questionable taste. Art deco meets aggressive optimism in the form of gilded mirrors that make you look slightly better than you actually are. The floor is carpeted in a pattern that hypnotizes if you stare too long. A panel of gleaming buttons beckons from the wall, each labeled with a floor number and cryptic description. Soft muzak plays from hidden speakers, a instrumental version of a song you swear you've heard before but can't quite place. Sometimes the elevator shudders. Sometimes the mirrors show things that aren't there. Sometimes you hear water—vast amounts of water—rushing behind the walls. The hotel management assures you this is normal.",
+  "exits": {
+    "out": "hotel_lobby"
+  },
+  "features": {
+    "panel": "The brass panel gleams with well-polished buttons, each marking a different floor.",
+    "mirrors": "The mirrors are strategically positioned to make everyone look 15% more attractive. It's very kind of them.",
+    "sign": "                    THE SNUGGLY SLEEPER EXPRESS\n\n                 Operating Instructions:\n 1. Examine the buttons to see available floors.\n 2. Press the button for your desired floor.\n             Ex: 'press 1' or 'press lobby'",
+    "buttons": [
+      {
+        "number": 1,
+        "name": "Lobby",
+        "destination": "hotel_lobby"
+      },
+      {
+        "number": 2,
+        "name": "Floor 2 - Standard Rooms",
+        "destination": "hotel_floor_2"
+      },
+      {
+        "number": 3,
+        "name": "Floor 3 - Deluxe Rooms",
+        "destination": "hotel_floor_3"
+      },
+      {
+        "number": 4,
+        "name": "Floor 4 - Penthouse",
+        "destination": "hotel_floor_4"
+      },
+      {
+        "number": 5,
+        "name": "Rooftop Lounge",
+        "destination": "hotel_rooftop"
+      }
+    ]
+  },
+  "createdAt": "2025-11-15T00:00:00Z",
+  "modifiedAt": "2025-11-15T00:00:00Z"
+}

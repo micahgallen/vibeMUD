@@ -1,0 +1,20 @@
+{
+  "id": "hotel_floor_3_hall_4",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 3 Deluxe Hallway (End)",
+  "description": "The hallway concludes with a flourish rather than a whimper. The dead end wall hosts a baroque mirror in a gilded frame, reflecting the hallway back at itself in infinite regression. Doors 307 and 308 represent the pinnacle of Floor 3's ambitions, their wood stained dark and rich like expensive chocolate. A window with actual stained glass depicts a pastoral scene of shepherds and sheep, none of whom have ever stayed in a hotel. Below the window, a velvet settee offers seating for those who need to rest after the arduous journey down the hall. The carpet here is so thick you could lose small objects in it.",
+  "exits": {
+    "south": "hotel_floor_3_hall_3",
+    "east": "hotel_room_307",
+    "west": "hotel_room_308"
+  },
+  "features": {
+    "mirror": "Baroque gilded frame surrounding mercury glass that adds a vintage warmth to your reflection. You look better in this mirror. Everyone does.",
+    "settee": "Velvet upholstery in deep green, stuffed with something that makes it acceptably squishy. Two people could sit here, barely.",
+    "stained_glass": "Hand-crafted shepherds watch over improbably fluffy sheep beneath an impossible blue sky. Someone's idea of rustic charm.",
+    "infinite": "The mirror reflects the hallway which contains the mirror which reflects the hallway... you should probably stop staring."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

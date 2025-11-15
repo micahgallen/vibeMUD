@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_305",
+  "type": "room",
+  "name": "Hotel Room 305 - The Heartbreak Suite",
+  "description": "The room drips with nostalgia for an era that may never have existed. Art deco furniture in chrome and black leather creates geometric patterns that dance across your vision. The wallpaper depicts skyscrapers and zeppelins, champagne glasses and jazz instruments. A vintage record player sits on a sideboard, surrounded by vinyl albums in pristine condition. The bathroom features black and white hexagonal tiles and a clawfoot tub deep enough to drown your sorrows. Everything suggests the 1930s viewed through the rose-tinted glasses of the 1980s, creating a temporal paradox of style. Somewhere, a saxophone plays, though you can't identify the source.",
+  "exits": {
+    "west": "hotel_floor_3_hall_3"
+  },
+  "features": {
+    "furniture": "Chrome tubes bent into impossible angles supporting black leather that creaks with the voice of sophistication. Very uncomfortable, very stylish.",
+    "record_player": "A working Victrola with albums ranging from Billie Holiday to Chet Baker. The needle is probably worth more than the furniture.",
+    "wallpaper": "Metallic silver and black depicting a skyline that never was, filled with dirigibles and cocktails floating between buildings.",
+    "saxophone": "You definitely hear it. Sultry, smooth, impossibly melancholy. But there's no visible source. Maybe it's in your head. Maybe that's the point."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_204",
+  "type": "room",
+  "name": "Hotel Room 204 - The Fawlty",
+  "description": "This room bears the hallmarks of someone who's very nearly competent at maintenance. The wallpaper was hung upside-down, creating an inverted forest where trees grow from ceiling to floor like stalactites of vegetation. One leg of the bed is slightly shorter than the others, compensated for by a strategic placement of folded cardboard that's actually quite clever. The bathroom door doesn't quite latch unless you lift it slightly while closing, a quirk that becomes second nature after the third attempt. It's the kind of room that makes you appreciate the triumph of 'good enough.'",
+  "exits": {
+    "east": "hotel_floor_2_hall_2"
+  },
+  "features": {
+    "wallpaper": "An upside-down forest where birds fly into the ground and roots dangle from the sky. Surprisingly meditative once you accept it.",
+    "bed": "Three normal legs and one with a creative cardboard solution. Sleeps level. Mostly level. Acceptably level.",
+    "door": "Requires the lift-and-turn technique. Previous guests have left encouraging notes in pencil on the door frame: 'Lift!' 'UP!' 'You'll get it!'",
+    "maintenance": "Evidence of repairs done with enthusiasm if not expertise. The toilet handle is tied to the flush mechanism with what appears to be a shoelace. It works."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

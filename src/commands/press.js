@@ -40,6 +40,18 @@ module.exports = {
       return;
     }
 
+    // Special handling for elevator room buttons
+    if (currentRoom.id === 'elevator_room') {
+      await this.handleElevatorPress(player, input, currentRoom, session, entityManager, colors);
+      return;
+    }
+
+    // Special handling for hot tub room buttons
+    if (currentRoom.id === 'hot_tub_room') {
+      await this.handleHotTubPress(player, input, currentRoom, session, entityManager, colors);
+      return;
+    }
+
     // Otherwise, look for pressable objects in the current room
     const objectsInRoom = Array.from(entityManager.objects.values()).filter(obj =>
       obj.location?.type === 'room' &&
@@ -123,6 +135,201 @@ module.exports = {
 
     session.send(colors.success("Suddenly you are standing in a different booth.") + "\n\n");
     session.send(boothRoom.description + "\n");
+  },
+
+  /**
+   * Handle pressing buttons in the hot tub room
+   */
+  async handleHotTubPress(player, input, hotTubRoom, session, entityManager, colors) {
+    // Parse button input (remove "button" if present)
+    const buttonInput = input.replace(/^(button|buttons?)\s+/i, '').trim();
+
+    if (!hotTubRoom.features || !hotTubRoom.features.buttons) {
+      session.send("There are no buttons here.\n");
+      return;
+    }
+
+    const buttons = hotTubRoom.features.buttons;
+
+    // Find button by number or name
+    let button = null;
+    const buttonNum = parseInt(buttonInput);
+
+    if (!isNaN(buttonNum) && buttonNum > 0 && buttonNum <= buttons.length) {
+      button = buttons[buttonNum - 1];
+    } else {
+      // Try to match by name
+      button = buttons.find(b =>
+        b.name.toLowerCase() === buttonInput.toLowerCase() ||
+        b.name.toLowerCase().includes(buttonInput)
+      );
+    }
+
+    if (!button) {
+      session.send("There is no such button.\n");
+      return;
+    }
+
+    // Initialize activeEffects if not present
+    if (!hotTubRoom.activeEffects) {
+      hotTubRoom.activeEffects = {
+        jets: { active: false, startTime: 0 },
+        bubbles: { active: false, startTime: 0 },
+        steam: { active: false, startTime: 0 },
+        lights: { active: false }
+      };
+    }
+
+    // Handle button press based on effect type
+    const effectType = button.effect;
+
+    if (effectType === 'therapeutic_jets') {
+      if (hotTubRoom.activeEffects.jets.active) {
+        // Turn OFF
+        hotTubRoom.activeEffects.jets.active = false;
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the jets button.`);
+        await this.delay(500);
+        entityManager.notifyRoom(hotTubRoom.id, colors.info("The massage jets slowly wind down and shut off."));
+      } else {
+        // Turn ON
+        hotTubRoom.activeEffects.jets.active = true;
+        hotTubRoom.activeEffects.jets.startTime = Date.now();
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the jets button.`);
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The hot tub comes alive with a deep mechanical WHIRRRRR..."));
+        await this.delay(1200);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("Powerful jets of water erupt from all sides, pummeling everyone with therapeutic intensity!"));
+      }
+      entityManager.markDirty(hotTubRoom.id);
+    }
+    else if (effectType === 'bubble_mode') {
+      if (hotTubRoom.activeEffects.bubbles.active) {
+        // Turn OFF
+        hotTubRoom.activeEffects.bubbles.active = false;
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the bubbles button.`);
+        await this.delay(500);
+        entityManager.notifyRoom(hotTubRoom.id, colors.info("The bubbles gradually subside to a gentle fizz, then stop."));
+      } else {
+        // Turn ON
+        hotTubRoom.activeEffects.bubbles.active = true;
+        hotTubRoom.activeEffects.bubbles.startTime = Date.now();
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the bubbles button.`);
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("A soft gurgling rises from the depths..."));
+        await this.delay(1200);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("THOUSANDS of bubbles erupt from the bottom of the tub!"));
+      }
+      entityManager.markDirty(hotTubRoom.id);
+    }
+    else if (effectType === 'steam_boost') {
+      if (hotTubRoom.activeEffects.steam.active) {
+        // Turn OFF
+        hotTubRoom.activeEffects.steam.active = false;
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the steam button.`);
+        await this.delay(500);
+        entityManager.notifyRoom(hotTubRoom.id, colors.info("The steam generator shuts off, and the fog slowly dissipates."));
+      } else {
+        // Turn ON
+        hotTubRoom.activeEffects.steam.active = true;
+        hotTubRoom.activeEffects.steam.startTime = Date.now();
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the steam button.`);
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The water temperature increases ever so slightly..."));
+        await this.delay(1200);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("Steam begins to rise with dramatic purpose, clouding the air around you."));
+      }
+      entityManager.markDirty(hotTubRoom.id);
+    }
+    else if (effectType === 'chromotherapy') {
+      if (hotTubRoom.activeEffects.lights.active) {
+        // Turn OFF
+        hotTubRoom.activeEffects.lights.active = false;
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the lights button.`);
+        await this.delay(500);
+        entityManager.notifyRoom(hotTubRoom.id, colors.info("The chromotherapy lights fade out, returning the water to its natural color."));
+      } else {
+        // Turn ON
+        hotTubRoom.activeEffects.lights.active = true;
+        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the lights button.`);
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The underwater lights begin to pulse through a mesmerizing sequence..."));
+        await this.delay(1000);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("RED - allegedly promotes energy and vitality!"));
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("BLUE - supposedly calming and meditative!"));
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("GREEN - purportedly balancing and harmonious!"));
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("PURPLE - mysteriously spiritual and transcendent!"));
+        await this.delay(800);
+        entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The lights settle into a soothing, continuous cycle of colors."));
+      }
+      entityManager.markDirty(hotTubRoom.id);
+    }
+    else {
+      session.send("That button doesn't seem to do anything.\n");
+      return;
+    }
+
+    session.send("\n");
+  },
+
+  /**
+   * Handle pressing buttons in the elevator room
+   */
+  async handleElevatorPress(player, input, elevatorRoom, session, entityManager, colors) {
+    // Parse button input (remove "button" if present)
+    const buttonInput = input.replace(/^(button|buttons?)\s+/i, '').trim();
+
+    if (!elevatorRoom.features || !elevatorRoom.features.buttons) {
+      session.send("There are no buttons here.\n");
+      return;
+    }
+
+    const buttons = elevatorRoom.features.buttons;
+
+    // Find destination by number or name
+    let destination = null;
+    const buttonNum = parseInt(buttonInput);
+
+    if (!isNaN(buttonNum) && buttonNum > 0 && buttonNum <= buttons.length) {
+      destination = buttons[buttonNum - 1];
+    } else {
+      // Try to match by name
+      destination = buttons.find(b =>
+        b.name.toLowerCase() === buttonInput.toLowerCase() ||
+        b.name.toLowerCase().includes(buttonInput)
+      );
+    }
+
+    if (!destination) {
+      session.send("There is no such button.\n");
+      return;
+    }
+
+    // Elevator sequence with flavor
+    session.send(`You press the button for ${destination.name}.\n`);
+
+    await this.delay(800);
+    session.send(colors.info("The elevator doors slide shut with a soft hiss.") + "\n");
+
+    await this.delay(1500);
+    session.send(colors.warning("You feel a gentle lurch as the elevator begins to move.") + "\n");
+
+    await this.delay(1500);
+    session.send(colors.highlight("The elevator plays a soothing melody that's definitely trying too hard.") + "\n");
+
+    await this.delay(1200);
+    session.send(colors.info("With a soft ding, the elevator comes to a smooth stop.") + "\n");
+
+    await this.delay(800);
+
+    // Update the elevator room's exit to point to the destination
+    elevatorRoom.exits.out = destination.destination;
+    entityManager.markDirty('elevator_room');
+
+    session.send(colors.success("The brass doors slide open, revealing your destination.") + "\n\n");
+    session.send(elevatorRoom.description + "\n");
   },
 
   delay(ms) {

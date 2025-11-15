@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_404",
+  "type": "room",
+  "name": "Hotel Room 404 - Not Found",
+  "description": "The room exists in a state of quantum uncertainty, simultaneously present and absent. The walls are painted in a shade of beige so neutral it borders on transparent. Furniture occupies the space with minimum commitment—chairs that could be anywhere, a bed that might be a suggestion rather than furniture. The art on the walls depicts blank canvases in various sizes. A desk holds a computer that's never been turned on, its screen reflecting your face with the blank indifference of technology that's given up. The closet contains exactly nothing, not even hangers. It's not that the room is empty—emptiness implies the absence of something. This room exists in a state of never having had anything to be absent.",
+  "exits": {
+    "east": "hotel_floor_4_hall_2"
+  },
+  "features": {
+    "transparency": "The walls are so beige they achieve a kind of invisibility. You occasionally forget which room you're in. Sometimes you forget you're in a room at all.",
+    "furniture": "Exists technically. Functions minimally. Could vanish and you might not notice for hours.",
+    "art": "Frames containing blank canvases. Either profound commentary on modern art or someone forgot to finish painting. Possibly both.",
+    "nothing": "The room specializes in nothing. It's very good at it. Perhaps too good. You're starting to question whether you're really here."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

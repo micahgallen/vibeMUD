@@ -1,0 +1,46 @@
+{
+  "id": "hot_tub_room",
+  "definition": "hot_tub_room",
+  "type": "room",
+  "name": "Inside the Hot Tub",
+  "description": "You're immersed in perfectly heated water, your muscles relaxing despite any philosophical objections they might have had. The rooftop lounge spreads out around you, though from this vantage point everything is softened by rising steam. The Sesame Street skyline stretches beyond, a panorama of whimsy and questionable zoning decisions. Beside you, a waterproof control panel gleams with buttons promising various aquatic experiences. The chromotherapy lights are currently off, leaving the water its natural, unenhanced color. The distant sound of the martini bar mingles with the gentle hum of jets on standby.",
+  "exits": {
+    "out": "hotel_rooftop"
+  },
+  "heartbeatInterval": 45,
+  "features": {
+    "panel": "A waterproof control panel with backlit buttons, each promising a different sensory experience.",
+    "water": "Maintained at precisely 104 degrees through what you suspect is either advanced technology or a deal with benevolent thermal spirits.",
+    "lights": "Chromotherapy LEDs cycle through colors that supposedly have health benefits, though mostly they just make everyone look pleasantly alien.",
+    "jets": "Strategically positioned water jets, currently dormant but ready to massage at the press of a button.",
+    "sign": "                    HOT TUB CONTROLS\n\n              Available Functions:\n 1. Jets - Activate therapeutic massage jets\n 2. Bubbles - Increase bubble intensity\n 3. Steam - Boost steam production\n 4. Lights - Change chromotherapy sequence\n            Ex: 'press jets' or 'press 1'",
+    "buttons": [
+      {
+        "number": 1,
+        "name": "jets",
+        "effect": "therapeutic_jets",
+        "description": "Activate therapeutic massage jets"
+      },
+      {
+        "number": 2,
+        "name": "bubbles",
+        "effect": "bubble_mode",
+        "description": "Increase bubble intensity"
+      },
+      {
+        "number": 3,
+        "name": "steam",
+        "effect": "steam_boost",
+        "description": "Boost steam production"
+      },
+      {
+        "number": 4,
+        "name": "lights",
+        "effect": "chromotherapy",
+        "description": "Change chromotherapy sequence"
+      }
+    ]
+  },
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

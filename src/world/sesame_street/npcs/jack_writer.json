@@ -1,0 +1,41 @@
+{
+  "id": "jack_writer",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Jack Torrance, the Writer",
+  "keywords": ["jack", "writer", "man", "torrance", "author"],
+  "description": "Jack hunches over an ancient IBM Selectric typewriter with the intensity of a man possessed—which, let's be honest, he probably is. His corduroy jacket has seen better decades, his hair is unkempt in a way that suggests he's been running his hands through it repeatedly, and there's a manic gleam in his eyes that wasn't there when he checked in. The clacking of the typewriter keys fills the room like aggressive percussion, TAP-TAP-TAP-DING, over and over, hypnotic and horrible. Papers surround him in snowdrifts—hundreds of pages, all identical, all containing the same sentence repeated endlessly. He doesn't look up when you enter. He hasn't looked up in days. The typewriter has become an extension of his body, the sound of his madness made mechanical.",
+  "currentRoom": "hotel_room_205",
+  "level": 4,
+  "hp": 65,
+  "maxHp": 65,
+  "wanders": false,
+  "heartbeatInterval": 30,
+  "emoteChance": 0.45,
+  "dialogueChance": 0.55,
+  "emoteActions": [
+    "stares at the wall with bloodshot eyes, fingers still hovering over the keys",
+    "yanks the carriage return violently, the DING echoing through the room",
+    "crumples a page in his fist and tosses it toward an overflowing wastebasket",
+    "runs his hands through his hair frantically, leaving it standing on end",
+    "pounds the keys with increasing intensity, TAP-TAP-TAP-TAP-TAP",
+    "mutters numbers under his breath while typing the same sentence over and over",
+    "suddenly stops typing and listens to something no one else can hear",
+    "laughs bitterly and returns to his work with renewed manic energy"
+  ],
+  "dialogue": [
+    "Jack's fingers freeze over the keys. He turns slowly, eyes wild. 'What? WHAT? I'm WORKING here! Can't you see I'm WORKING?!'",
+    "Without looking up from his typewriter: 'All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no—' He glances at you. 'What.'",
+    "'Do you have any idea,' he says through gritted teeth, 'how hard it is to maintain creative flow when people keep INTERRUPTING?!'",
+    "TAP-TAP-TAP-TAP-DING. Jack yanks the carriage return and continues typing. TAP-TAP-TAP-TAP-DING.",
+    "Jack mutters to himself: 'All work and no play makes Jack a dull boy, all work and no play makes Jack a dull boy...'",
+    "He rips a page from the typewriter, glances at it with satisfaction, and adds it to a towering stack of identical pages.",
+    "Jack laughs suddenly, a sound like breaking glass, then resumes typing without missing a beat.",
+    "He stares at the wall for a long moment, then types furiously: 'ALL WORK AND NO PLAY MAKES JACK A DULL BOY' over and over.",
+    "'Yes, yes, FINE,' he waves you away dismissively. 'Just... GO. Let me work. I have so much work to do.'",
+    "Jack is already back to typing before you finish turning around. TAP-TAP-TAP-TAP-DING.",
+    "'You'll understand when you read it,' he calls after you. 'When it's finished. When it's PERFECT.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

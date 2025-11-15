@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_4_hall_3",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Penthouse Floor Hallway",
+  "description": "Here the hallway has achieved its final form of ostentatious elegance. Crown molding swoops across the ceiling in baroque curls of gold leaf that catch the light like a declaration of war on subtlety. Doors 405 and 406 feature hand-carved panels depicting scenes of classical mythology—Zeus turning into a swan, Athena springing fully armed from someone's headache, the usual. A grandfather clock of intimidating proportions stands against the wall, its pendulum swinging with the measured confidence of timepieces that outlive their owners. Small sculptures on pedestals punctuate the hallway at intervals: a bronze horse, a marble bust, a crystal orb that might be art or might be monitoring you.",
+  "exits": {
+    "north": "hotel_floor_4_hall_4",
+    "south": "hotel_floor_4_hall_2",
+    "east": "hotel_room_405",
+    "west": "hotel_room_406"
+  },
+  "features": {
+    "molding": "Gold leaf on plaster carved into swirls and flourishes that would make Versailles nod in approval. Possibly over the top. Definitely expensive.",
+    "carvings": "Hand-carved relief panels on each door depicting Greek myths. The craftsmanship is exquisite. Zeus looks particularly smug.",
+    "clock": "Mahogany case taller than most people, brass works visible through glass, chiming on the hour with sounds that make you consider your mortality.",
+    "sculptures": "Strategic placements of bronze, marble, and crystal on pedestals. Art, decoration, or surveillance equipment. Possibly all three."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

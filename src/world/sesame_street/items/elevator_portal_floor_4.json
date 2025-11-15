@@ -1,0 +1,11 @@
+{
+  "id": "elevator_portal_floor_4",
+  "definition": "elevator_portal",
+  "type": "elevator_portal",
+  "location": {
+    "type": "room",
+    "room": "hotel_floor_4"
+  },
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_3_hall_3",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 3 Deluxe Hallway",
+  "description": "A crystal chandelier hangs from the ceiling here, miniature by chandelier standards but still entirely unnecessary in a hallway. It catches the light and throws it around like a child with glitter, creating rainbow patterns on the walls that shift as you move. Doors 305 and 306 guard their respective walls with brass number plates that might actually be brass, not brass-colored metal having a identity crisis. A grandfather clock stands against the wall, ticking with the measured confidence of timepieces that predate quartz. The whole affair suggests someone's grandmother had opinions about proper decoration.",
+  "exits": {
+    "north": "hotel_floor_3_hall_4",
+    "south": "hotel_floor_3_hall_2",
+    "east": "hotel_room_305",
+    "west": "hotel_room_306"
+  },
+  "features": {
+    "chandelier": "Cut crystal that probably has a pedigree. It dangles from the ceiling like expensive jewelry on architecture.",
+    "clock": "Mahogany case, brass pendulum, Roman numerals. It chimes on the hour with a sound that makes you sit up straighter.",
+    "rainbows": "The chandelier's crystal creates shifting patterns of light on the walls, a free light show for the price of hallway passage.",
+    "brass": "The door numbers are solid brass, heavy enough to double as impromptu weapons. Not that you'd need to. Probably."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

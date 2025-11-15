@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_4_hall_1",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Penthouse Floor Hallway",
+  "description": "The penthouse hallway doesn't just suggest wealth, it performs wealth like a one-act play. The carpet achieves a thickness previously thought impossible outside of meadows. Crystal sconces line the walls at intervals calculated by someone with strong opinions about lumens and ambiance. Doors 401 and 402 are crafted from what appears to be actual mahogany, with brass hardware so polished you can see your reflection negotiating with your bank account. A console table of questionable necessity holds a fresh orchid arrangement that probably costs more than most people's monthly rent. The air smells of cedar, sandalwood, and money that doesn't need to ask how much things cost. The elevator waits to the south, its brass doors gleaming with capitalist enthusiasm.",
+  "exits": {
+    "north": "hotel_floor_4_hall_2",
+    "south": "hotel_floor_4",
+    "east": "hotel_room_402",
+    "west": "hotel_room_401"
+  },
+  "features": {
+    "carpet": "Pile so deep you could lose a small dog in it. Your footprints linger like accusations of insufficient net worth.",
+    "sconces": "Lead crystal and gold plate creating pools of warm light. Each fixture probably has a better insurance policy than you do.",
+    "console": "French Empire style, genuine marble top, legs carved by artisans who charged by the curl. It holds flowers. That's it. That's the job.",
+    "smell": "An olfactory declaration of success: rare woods, expensive perfumes, and the faint suggestion of Cuban cigars smoked in rooms where deals are made."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

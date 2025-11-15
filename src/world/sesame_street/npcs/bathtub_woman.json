@@ -1,0 +1,35 @@
+{
+  "id": "bathtub_woman",
+  "type": "npc",
+  "definition": "monster",
+  "name": "The Woman in the Bathtub",
+  "keywords": ["woman", "lady", "corpse", "bathtub", "ghost"],
+  "description": "She rises from the ancient claw-foot bathtub with the grace of a Venus emerging from seafoam, water cascading down her pale skin. She is beautiful, devastatingly so—dark hair slicked back, lips curved in an inviting smile, eyes that promise things you probably shouldn't want. She reaches toward you, beckoning, and for a moment the green-tiled bathroom feels warm and welcoming. Then you notice the wrongness creeping in at the edges: the way her skin is slightly too pale, the way the water in the tub has a brownish tinge, the way her smile doesn't quite reach her eyes because her eyes are starting to film over with something milky and dead. As she steps from the tub, the glamour slips—skin mottled with decay, hair falling in clumps, the beautiful woman replaced by the truth of what happens when you spend weeks in a bathtub. She's still smiling. She's still reaching for you. But now her fingers are bloated and purple.",
+  "currentRoom": "hotel_room_308",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "wanders": false,
+  "heartbeatInterval": 50,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.60,
+  "emoteActions": [
+    "sinks back into the bathtub, the water sloshing with a sound like something organic",
+    "runs her fingers through her hair, and several strands come loose, floating on the water's surface",
+    "stares with unblinking eyes, water dripping steadily from her fingertips onto the green tiles",
+    "laughs, a sound like water going down a drain, and the bathroom lights flicker",
+    "reaches toward you with pale, dripping fingers",
+    "shifts in the tub, and her reflection shows something different than what you see directly",
+    "blows you a kiss that smells like mildew and broken promises"
+  ],
+  "dialogue": [
+    "She rises from the water, beautiful and terrible. 'Hello, darling. Won't you join me? The water's just right.'",
+    "Her voice is honey over gravel. 'I've been waiting for you. I've been waiting for so very long.'",
+    "She extends a dripping hand toward you, her smile revealing teeth that are just slightly too yellow. 'Stay with me. Please.'",
+    "Her beautiful facade slips for just a moment, revealing decay beneath. 'Don't go. Please don't go. Everyone always goes.'",
+    "'You'll come back,' she says with certainty, settling back into the murky water. 'They always come back to Room 237.'",
+    "She blows you a kiss that smells like mildew and broken promises. 'Until next time, my love.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

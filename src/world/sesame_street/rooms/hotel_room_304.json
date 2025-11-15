@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_304",
+  "type": "room",
+  "name": "Hotel Room 304",
+  "description": "This room has committed to minimalism with the fervor of a recent convert. The bed is platform style, low to the ground, dressed in crisp white linens with nary a decorative pillow in sight. The walls are painted a pale grey that might be greige or might be grige. A single piece of abstract art hangs perfectly centered on one wall—three black lines on white canvas that either mean everything or nothing. The furniture is all clean lines and right angles, each piece positioned with geometric precision. It's the kind of room where clutter would look like a moral failing.",
+  "exits": {
+    "east": "hotel_floor_3_hall_2"
+  },
+  "features": {
+    "bed": "Platform frame in dark wood, white linens with hospital corners so crisp they could cut. Two pillows. Exactly two.",
+    "art": "Three lines. You've been staring at it for minutes. You still don't know if you get it. Maybe that's the point.",
+    "cleanliness": "Minimal surfaces means minimal places for dust to hide. Everything gleams with the purity of having nothing to hide behind.",
+    "emptiness": "The room feels like it's had a Marie Kondo intervention and everything that didn't spark joy was removed. Aggressively removed."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

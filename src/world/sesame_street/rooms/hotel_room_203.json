@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_203",
+  "type": "room",
+  "name": "Hotel Room 203",
+  "description": "Someone's attempt at feng shui has occurred in this room, though they may have been using a different 'feng shui' than traditional practitioners recognize. The bed points toward the bathroom at an aggressive angle. A chair sits precisely in the corner, facing the wall as if in timeout. The television has been moved to face the closet instead of the bed, perhaps so the clothes can watch something while you sleep. Despite these geometric peculiarities, the room is perfectly functional, if you don't mind feeling like you're living in a Rubik's cube.",
+  "exits": {
+    "west": "hotel_floor_2_hall_2"
+  },
+  "features": {
+    "bed": "Angled at exactly 37 degrees from square with the room. Sleeping on it feels like a subtle act of rebellion against Euclidean geometry.",
+    "chair": "A perfectly good chair that's been given a time-out in the corner. It seems resigned to its fate.",
+    "arrangement": "Everything in this room has been placed with great intention, though what that intention was remains a mystery.",
+    "closet": "Contains three wire hangers and the faint echo of better luggage than you brought."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

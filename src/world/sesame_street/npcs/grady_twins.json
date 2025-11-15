@@ -1,0 +1,42 @@
+{
+  "id": "grady_twins",
+  "type": "npc",
+  "definition": "monster",
+  "name": "The Grady Twins",
+  "keywords": ["twins", "girls", "sisters", "grady", "children"],
+  "description": "Two identical girls stand before you, holding hands. They wear matching blue dresses with white collars, white knee socks, and black Mary Jane shoes. Their blonde hair is cut in identical bobs, their pale faces expressionless. They are perfectly still, perfectly symmetrical, perfectly unsettling. They look about eight years old and absolutely nothing like eight-year-olds should look. Their eyes follow you with the unblinking intensity of porcelain dolls that have decided today is the day they stop pretending to be inanimate. The air around them feels colder, as if the laws of thermodynamics have taken one look at these two and decided to make an exception.",
+  "currentRoom": "hotel_floor_2_hall_3",
+  "level": 3,
+  "hp": 50,
+  "maxHp": 50,
+  "wanders": false,
+  "heartbeatInterval": 45,
+  "emoteChance": 0.50,
+  "dialogueChance": 0.50,
+  "emoteActions": [
+    "tilt their heads in perfect unison, mirror images of each other",
+    "squeeze each other's hands tighter, their knuckles turning white",
+    "skip in place, bouncing on their toes in perfect synchronization",
+    "giggle in stereo, a sound that makes the lightbulbs flicker",
+    "stand perfectly still, staring down the hallway at nothing you can see",
+    "blink simultaneously, their eyes closing and opening like synchronized dolls",
+    "turn their heads slowly in perfect synchronization to look at something behind them, then turn back",
+    "sway gently from side to side, still holding hands, moving as one entity"
+  ],
+  "dialogue": [
+    "'Hello,' they say in perfect unison, their voices like wind chimes in a funeral home. 'Come play with us.'",
+    "'We've been waiting for you. Forever and ever and ever.'",
+    "The twins stand perfectly still, holding hands, staring down the hallway at nothing you can see.",
+    "'Forever,' whispers one. 'And ever,' continues the other. 'And ever,' they finish together.",
+    "The girls giggle in stereo, a sound that makes the lightbulbs flicker.",
+    "They tilt their heads simultaneously, mirror images of each other.",
+    "'Why did you leave us? Come play with us. Come die with us.'",
+    "Without breaking eye contact with you, they slowly turn their heads in unison to look at something behind them, then turn back.",
+    "The twins begin to skip in place, bouncing on their toes in perfect synchronization, never breaking their handhold.",
+    "'Don't go. Stay and play with us. Forever and ever and ever.'",
+    "They wave goodbye in perfect synchronization, their movements unnaturally precise.",
+    "'We'll be here when you come back. We're always here.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

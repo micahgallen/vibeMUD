@@ -1,0 +1,11 @@
+{
+  "id": "hot_tub_rooftop",
+  "definition": "hot_tub",
+  "type": "hot_tub",
+  "location": {
+    "type": "room",
+    "room": "hotel_rooftop"
+  },
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

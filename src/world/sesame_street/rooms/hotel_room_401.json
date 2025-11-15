@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_401",
+  "type": "room",
+  "name": "Hotel Room 401 - The Presidential Suite",
+  "description": "The room sprawls across dimensions that suggest someone redrew the building plans while drinking expensive scotch. A California king bed dominates one section, dressed in linens that might be silk or might be liquid moonlight. The living area features furniture that appeared in architectural magazines and never let you forget it. A full bar gleams in one corner, stocked with bottles whose labels you can't pronounce. Floor-to-ceiling windows offer panoramic views of Sesame Street below, where regular people do regular things, blissfully unaware of your temporary elevation. The bathroom contains a tub large enough to swim laps, possibly also to host small parties.",
+  "exits": {
+    "east": "hotel_floor_4_hall_1"
+  },
+  "features": {
+    "bed": "So large it has its own zip code. The mattress is some kind of space-age memory foam that remembers you better than your mother.",
+    "furniture": "Italian leather sofas, Danish modern chairs, a coffee table that's definitely art. The mix shouldn't work but somehow achieves sophisticated eclecticism.",
+    "bar": "Stocked with aged scotch, vintage cognac, craft gins, and wines with years instead of prices. The glassware is crystal. Obviously.",
+    "bathroom": "Marble everything. The tub is practically a pool. Dual rainfall showers. A bidet with more buttons than your phone. Towels the size of carpets."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

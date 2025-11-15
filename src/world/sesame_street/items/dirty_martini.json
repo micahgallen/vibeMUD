@@ -1,0 +1,12 @@
+{
+  "id": "dirty_martini",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Dirty Martini",
+  "description": "A martini that's given up on pretense and embraced its briny nature. Olive brine clouds the gin like secrets in clear water, creating something that tastes like the ocean's slightly questionable cousin. Three olives float like tiny islands of salvation. This drink knows what it is and makes no apologies.",
+  "value": 38,
+  "weight": 1,
+  "healAmount": 1,
+  "alcoholic": true,
+  "alcoholStrength": 2
+}

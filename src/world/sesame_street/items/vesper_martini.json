@@ -1,0 +1,12 @@
+{
+  "id": "vesper_martini",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Vesper Martini",
+  "description": "A martini with delusions of grandeur, made with both gin AND vodka because apparently one clear spirit isn't enough. A thin curl of lemon peel twists on the surface like it's posing for a magazine. This is the drink of someone who introduces themselves with their full name and expects you to remember it. Shaken, not stirred, naturally.",
+  "value": 42,
+  "weight": 1,
+  "healAmount": 2,
+  "alcoholic": true,
+  "alcoholStrength": 3
+}

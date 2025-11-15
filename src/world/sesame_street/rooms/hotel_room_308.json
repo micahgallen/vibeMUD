@@ -1,0 +1,20 @@
+{
+  "id": "hotel_room_308",
+  "type": "room",
+  "name": "Hotel Room 308 - 'The Special Room'",
+  "description": "Room 308. Or as the staff nervously calls it when they think you're not listening, 'The 237.' The door opened more reluctantly than it should have, as if the room itself was having second thoughts about visitors. The main room is decorated in shades of orange and brown that were fashionable in 1974 and have achieved a sort of retro-nightmare aesthetic since. But it's the bathroom that draws your attention—the door is slightly ajar, and you can see green hexagonal tiles covering every surface, reflecting the light in ways that make your eyes hurt. There's a claw-foot bathtub, antique porcelain, deep enough to drown in. The water is running, though you didn't turn it on. Steam billows out, carrying with it the smell of perfume and decay. The mirror above the sink is fogged, but sometimes, in the condensation, words appear. Backwards, of course. Everything here is backwards. The number on the door was 308 from the outside, but there's a persistent feeling that you're actually in a different room entirely. A room that shouldn't exist. A room that exists anyway.",
+  "exits": {
+    "east": "hotel_floor_3_hall_4"
+  },
+  "features": {
+    "bathroom": "Green tiles. Everywhere. Hexagonal green tiles from floor to ceiling, like being inside a jade honeycomb. The bathtub sits in the center, a claw-foot monument to Victorian excess. The water is always running, hot enough to steam, and you never turned it on. You will never turn it off.",
+    "bathtub": "An antique claw-foot tub, deep and wide, filled with water that's been there far too long. The surface is still, then it ripples. Then something breaks the surface. Then you wish it hadn't.",
+    "mirror": "Fogged with steam. Always fogged. Sometimes words appear in the condensation. REDRUM. MURDER. Over and over. The message is clear, even if the medium is slightly wet.",
+    "tiles": "Green hexagons in glazed ceramic, installed with obsessive precision in 1974 and stained with things that won't quite wash out. They reflect light at wrong angles. They reflect things that aren't there. They reflect what you'll become if you stay too long.",
+    "bed": "Orange and brown bedspread in a geometric pattern that makes your eyes cross. Twin beds, naturally. There are wet footprints on the carpet leading from the bathroom. They weren't there a moment ago.",
+    "smell": "Perfume. Expensive perfume from decades past. And underneath it, something else. Something organic. Something that's been underwater too long."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

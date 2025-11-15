@@ -1,0 +1,36 @@
+{
+  "id": "rooftop_bartender",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Victor, the Rooftop Bartender",
+  "keywords": ["victor", "bartender", "barkeep"],
+  "description": "Victor stands behind the mahogany bar with the quiet confidence of someone who has heard every story twice and believes none of them. His vest is pressed to perfection, his bow tie sits at exactly 90 degrees, and his cocktail shaker moves with the precision of a surgeon. Silver hair swept back, eyes that miss nothing, and hands that can pour three drinks simultaneously while maintaining eye contact. He's the kind of bartender who knows what you need before you do, and judges you only slightly for it.",
+  "currentRoom": "hotel_rooftop",
+  "level": 3,
+  "hp": 50,
+  "maxHp": 50,
+  "wanders": false,
+  "heartbeatInterval": 40,
+  "emoteChance": 0.45,
+  "dialogueChance": 0.55,
+  "emoteActions": [
+    "polishes a glass to impossible clarity",
+    "adjusts the garnish tray with geometric precision",
+    "surveys the skyline with professional detachment",
+    "expertly shakes a cocktail without looking at it",
+    "arranges bottles on the back bar with mathematical precision",
+    "cuts a lemon twist with surgical accuracy",
+    "wipes down the mahogany bar with smooth, practiced strokes",
+    "checks the ice bin and nods with satisfaction"
+  ],
+  "dialogue": [
+    "'Good evening. What may I prepare for you?'",
+    "'Welcome to the Rooftop. The view pairs excellently with our martinis.'",
+    "'Ah, a discerning guest. Please, see what we're pouring tonight.'",
+    "'Do come again. Preferably when you can still walk straight.'",
+    "'Enjoy the evening. Responsibly, one hopes.'",
+    "'Until next time. The rooftop will be here.'"
+  ],
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

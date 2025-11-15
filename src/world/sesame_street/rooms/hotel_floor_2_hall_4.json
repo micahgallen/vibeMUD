@@ -1,0 +1,20 @@
+{
+  "id": "hotel_floor_2_hall_4",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 2 Hallway (Dead End)",
+  "description": "The hallway reaches its inevitable conclusion at a wall papered in the same hopeful beige as its siblings. Doors 207 and 208 represent the final frontier of Floor 2's ambitions, standing sentinel at the corridor's end. A window overlooks the street below, its view partially obscured by curtains that have faded from some color into an existential question. A fire extinguisher hangs on the wall with the quiet confidence of something that hopes it never has to prove its worth. The hallway extends only south from here, back toward civilization and the elevator.",
+  "exits": {
+    "south": "hotel_floor_2_hall_3",
+    "east": "hotel_room_207",
+    "west": "hotel_room_208"
+  },
+  "features": {
+    "window": "Smudged glass overlooks Sesame Street below, where pedestrians move about their business, blissfully unaware they're being watched by hotel guests.",
+    "curtains": "Once a color, now a concept. They hang with the resignation of fabric that has seen too many sunrises.",
+    "extinguisher": "Red, pressurized, and inspected last in a year you vaguely remember. The instruction label suggests several steps that seem optimistic during an actual fire.",
+    "wall": "The dead end wall sports a painting of a mountain range, as if to say 'You can't go this way, but imagine if you could.'"
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

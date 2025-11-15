@@ -1,0 +1,43 @@
+{
+  "id": "hotel_bellhop",
+  "type": "npc",
+  "definition": "monster",
+  "name": "Timothy, the Nervous Bellhop",
+  "keywords": ["bellhop", "timothy", "employee", "worker", "porter"],
+  "description": "Timothy wears the burgundy and gold uniform of The Snuggly Sleeper with the same enthusiasm as a condemned man wears his execution outfit. The brass buttons are polished, the pillbox hat sits at regulation angle, but his eyes... his eyes have seen Things. They dart constantly, checking corners, monitoring exits, tracking movements that might not be there. His luggage cart rattles as his hands shake slightly. There's a coffee stain on his collar from that time he jumped at a shadow on the third floor. He's young—maybe nineteen, maybe twenty—but working here has added decades to his expression. He smiles when he sees guests, a bright professional smile that doesn't quite hide the desperation underneath, the look of someone who really, really wants to talk about what he's witnessed but is contractually obligated not to.",
+  "currentRoom": "hotel_lobby",
+  "level": 1,
+  "hp": 20,
+  "maxHp": 20,
+  "wanders": true,
+  "heartbeatInterval": 35,
+  "emoteChance": 0.40,
+  "dialogueChance": 0.45,
+  "wanderChance": 0.15,
+  "territory": [
+    "hotel_lobby",
+    "hotel_floor_2",
+    "hotel_floor_3",
+    "hotel_floor_4"
+  ],
+  "emoteActions": [
+    "checks over his shoulder at nothing, then tries to look casual about it",
+    "straightens items on his luggage cart that don't need straightening, keeping his hands busy",
+    "jumps at a sound only he can hear, then laughs nervously and adjusts his hat",
+    "pulls out a worn notebook and adds a tally mark to a page labeled 'Days Since Last Incident'",
+    "grips his luggage cart with both hands, knuckles white, as if it's the only real thing here",
+    "peers nervously down the hallway, eyes darting to every shadow",
+    "wipes sweat from his forehead with a trembling hand"
+  ],
+  "dialogue": [
+    "Timothy's smile is bright and brittle. 'Welcome to The Snuggly Sleeper! May I help you with your bags? Please say yes, I'd rather be carrying luggage than standing still right now.'",
+    "'Oh! Hi!' He seems genuinely relieved to see another living person. 'Need help with anything? Anything at all? I can show you to your room! Unless it's 308. We don't... I mean, that room is fine. Totally fine.'",
+    "He lowers his voice. 'Have you noticed anything... weird? No? Good. Good. That's good. It's probably just me. Lack of sleep. Totally normal.'",
+    "He mutters to himself: 'Just three more months until college. Three months. You can do this, Tim.'",
+    "'Stay safe! I mean, have a nice day! This is a nice hotel. Everything's fine here. Totally fine.'",
+    "He grabs his luggage cart with relief. 'Remember, checkout is at 11 AM! Earlier is also good! Earlier is great, actually!'",
+    "'If you need anything, just... maybe call during daylight hours? The phones get weird after midnight.'"
+  ],
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

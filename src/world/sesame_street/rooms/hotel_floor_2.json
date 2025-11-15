@@ -1,0 +1,18 @@
+{
+  "id": "hotel_floor_2",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 2",
+  "description": "The hallway stretches with a confidence not entirely supported by the aging carpet, which features a pattern of swirls that may have been fashionable in some decade, possibly one that hasn't happened yet. Doors line both sides, numbered with brass plates that gleam with the determination of things that refuse to acknowledge tarnish. The walls are painted in a shade best described as 'hopeful beige,' adorned with landscape paintings of places that probably don't exist but seem pleasant enough. A faint smell of industrial-strength air freshener wages eternal war against older, more mysterious odors. The elevator stands ready with its brass doors gleaming.",
+  "exits": {
+    "north": "hotel_floor_2_hall_1"
+  },
+  "features": {
+    "carpet": "The carpet has achieved that perfect state of worn-in-ness where it's unclear if it was designed this way or if generations of footsteps have voted with their soles.",
+    "doors": "Each door looks precisely like its neighbors, creating a subtle psychological experiment in pattern recognition and mild panic.",
+    "paintings": "Generic landscapes of beaches, mountains, and one puzzling image that might be either a sunset or a very concerning medical diagram.",
+    "lights": "Fluorescent fixtures hum with the frequency of bees who've had too much coffee."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T12:00:00Z",
+  "modifiedAt": "2025-11-15T12:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_4_hall_2",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Penthouse Floor Hallway",
+  "description": "The hallway continues its demonstration of what happens when budget meets hubris and they become friends. A chandelier hangs overhead, not the miniature tasteful kind but a full-sized cascade of crystal that tinkles mysteriously despite perfect stillness. Doors 403 and 404 stand with the authority of portals that lead to Better Places, their brass numbers large enough to be read from space, or at least the street. An antique telephone sits on a side table, the kind with a rotary dial and a receiver heavy enough to qualify as a weapon. Mirrors in gilded frames reflect the hallway infinitely, creating the unsettling impression that you're being watched by yourself from multiple timelines.",
+  "exits": {
+    "north": "hotel_floor_4_hall_3",
+    "south": "hotel_floor_4_hall_1",
+    "east": "hotel_room_403",
+    "west": "hotel_room_404"
+  },
+  "features": {
+    "chandelier": "Bohemian crystal cascading in tiers like a frozen waterfall of light and expense. It probably has its own maintenance contract.",
+    "telephone": "An actual antique rotary phone connected to... somewhere. The dial has the resistance of old machinery that knows its worth.",
+    "mirrors": "Gilded baroque frames containing you, and you, and you, extending backward into infinity. Wave. They all wave back. Unsettling.",
+    "numbers": "Brass numbers on the doors large enough to be navigation aids. 403 and 404 gleam with the confidence of addresses in expensive neighborhoods."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

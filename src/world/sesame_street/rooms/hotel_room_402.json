@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_402",
+  "type": "room",
+  "name": "Hotel Room 402 - The Lost in Translation Suite",
+  "description": "The room glows with the quiet melancholy of expensive loneliness. Floor-to-ceiling windows overlook the city, the glass so clean it's practically invisible, creating the unsettling sensation of floating in space above Sesame Street. The furniture is all sleek lines and muted colors—greys, creams, the occasional splash of burgundy like a remembered feeling. A minibar holds Japanese whisky and American beer, a cultural détente in refrigerated form. The bed faces the windows, positioned for contemplative staring at city lights that twinkle like distant conversations you're not part of. A karaoke machine sits in the corner, its song list featuring power ballads and regrets. Everything is beautiful and nothing hurts, except it kind of does.",
+  "exits": {
+    "west": "hotel_floor_4_hall_1"
+  },
+  "features": {
+    "windows": "Panoramic views creating a fishbowl effect. You can see everything out there, but you're in here, separated by invisible glass and existential distance.",
+    "furniture": "Minimalist modern pieces that look like they were designed by someone who thinks about the concept of 'chair' more than the function of sitting.",
+    "minibar": "Japanese whisky next to American beer. Neither judges the other. They've both been there. They understand.",
+    "karaoke": "Song list includes 'More Than This,' 'Scarborough Fair,' and several songs about cities at night. The microphone waits patiently for your emotional breakdown."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

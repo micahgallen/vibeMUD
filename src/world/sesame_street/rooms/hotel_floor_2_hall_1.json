@@ -1,0 +1,21 @@
+{
+  "id": "hotel_floor_2_hall_1",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Floor 2 Hallway",
+  "description": "The hallway stretches north and south with the determined enthusiasm of a corridor that knows its purpose. Overhead, fluorescent lights hum a song that's been stuck in their head since installation. The carpet, decorated in swirls of burgundy and gold that were probably fashionable when people still used telegrams, shows the wear patterns of a thousand shuffling feet. Doors 201 and 202 face each other across the hall with the wary distance of neighbors who've heard things through the walls. A faint aroma of institutional potpourri battles valiantly against the ghosts of meals microwaved in rooms. The elevator waits patiently to the south.",
+  "exits": {
+    "north": "hotel_floor_2_hall_2",
+    "south": "hotel_floor_2",
+    "east": "hotel_room_202",
+    "west": "hotel_room_201"
+  },
+  "features": {
+    "lights": "The fluorescent tubes buzz with a frequency scientifically proven to exist just below conscious irritation.",
+    "carpet": "Each swirl in the pattern tells a story, mostly about vacuums that came close but not quite close enough.",
+    "doors": "Solid wood painted in hotel white, each with a brass number plate and a peephole positioned at awkward heights.",
+    "air": "The scent of lavender air freshener mingles with older, wiser smells that know the freshener is lying."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

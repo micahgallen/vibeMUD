@@ -50,7 +50,13 @@ module.exports = {
           aliases.some(alias => alias.toLowerCase() === targetName) ||
           targetName === 'booth' && obj.type === 'booth_portal' ||
           targetName === 'transporter' && obj.type === 'booth_portal' ||
-          targetName === 'transporter booth' && obj.type === 'booth_portal') {
+          targetName === 'transporter booth' && obj.type === 'booth_portal' ||
+          targetName === 'elevator' && obj.type === 'elevator_portal' ||
+          targetName === 'lift' && obj.type === 'elevator_portal' ||
+          targetName === 'hot tub' && obj.type === 'hot_tub' ||
+          targetName === 'hottub' && obj.type === 'hot_tub' ||
+          targetName === 'tub' && obj.type === 'hot_tub' ||
+          targetName === 'jacuzzi' && obj.type === 'hot_tub') {
         targetObject = obj;
         break;
       }

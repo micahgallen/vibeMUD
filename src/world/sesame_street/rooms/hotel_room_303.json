@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_303",
+  "type": "room",
+  "name": "Hotel Room 303 - The Grand Budapest",
+  "description": "The room explodes with color and pattern in a way that somehow works despite all probability. Walls papered in deep purple with gold filigree frame a bed dressed in pink and cream striped linens. The furniture is ornate without crossing into gaudy, each piece curved and carved with the enthusiasm of craftsmen who believed more was more. A tall armoire stands against one wall, its doors painted with scenes of mountain peaks and cable cars. The bathroom tiles form a geometric pattern that M.C. Escher would approve of. Everything is pristinely maintained, as if an army of fastidious staff descended after each guest's departure. A small pastry box sits on the desk, tied with string.",
+  "exits": {
+    "west": "hotel_floor_3_hall_2"
+  },
+  "features": {
+    "colors": "Purple, gold, pink, cream, and somehow it works. The color theory here operates on principles known only to visionaries and the mildly deranged.",
+    "armoire": "Hand-painted scenes of Alpine landscapes, cable cars ascending impossible heights. The interior smells of cedar and old-world craftsmanship.",
+    "cleanliness": "Maintained to a standard that borders on obsessive. Not a speck of dust. Not a hair. Not a fingerprint. Someone takes pride in this room.",
+    "pastry_box": "Pink cardboard tied with baker's twine, containing what appears to be Mendl's courtesan au chocolat. Or a very convincing replica."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "kill",
+  "type": "player",
+  "name": "Kill",
+  "passwordHash": "2bda9b4dfbabfdb17cd74d827768da5198ae2b8155002a494524bbeaf6f5cdba",
+  "hp": 100,
+  "maxHp": 100,
+  "level": 1,
+  "xp": 0,
+  "strength": 10,
+  "dexterity": 10,
+  "constitution": 10,
+  "intelligence": 10,
+  "wisdom": 10,
+  "charisma": 10,
+  "currentRoom": "test_room",
+  "chatEnabled": true,
+  "createdAt": "2025-11-14T23:52:34.778Z",
+  "modifiedAt": "2025-11-14T23:52:34.778Z"
+}

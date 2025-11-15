@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_207",
+  "type": "room",
+  "name": "Hotel Room 207 - The Maintenance Suite",
+  "description": "This room appears to be in the middle of renovation, or the beginning of abandonment, or possibly both simultaneously. Drop cloths cover furniture that may or may not exist. Paint cans line one wall like soldiers awaiting orders that never come. A ladder leans against the wall at an angle that suggests it's given up on being useful. The walls are half-painted in a cheerful yellow that stops abruptly at chest height, as if the painter suddenly remembered an urgent appointment. Despite the chaos, the bed is made, the bathroom works, and there's a certain charm to sleeping in what's essentially a time capsule of good intentions.",
+  "exits": {
+    "west": "hotel_floor_2_hall_4"
+  },
+  "features": {
+    "paint": "The walls transition from institutional beige to sunshine yellow at precisely 54 inches up, a line so straight it seems intentional.",
+    "drop_cloths": "Speckled with paint in various colors, each speck telling the story of a different optimistic renovation project.",
+    "ladder": "An aluminum step ladder that's achieved a stable resting position against the wall. Moving it seems like tempting fate.",
+    "cans": "Paint cans in 'Buttercup Dream,' 'Morning Glory,' and 'Regulatory Beige.' The dreams remain unrealized."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

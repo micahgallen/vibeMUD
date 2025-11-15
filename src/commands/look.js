@@ -38,10 +38,30 @@ module.exports = {
     output.push(colors.roomName(room.name));
     output.push(colors.line(colors.visibleLength(room.name), '=', colors.MUD_COLORS.ROOM_NAME));
 
-    // Wrapped room description
-    if (room.description) {
-      const wrappedDescription = colors.wrap(room.description, 80);
+    // Wrapped room description - use dynamic description if available
+    let description = room.description;
+
+    // Check if room has a definition with getDescription method
+    if (room.definition) {
+      try {
+        const def = require(`../lib/${room.definition}`);
+        if (def.getDescription && typeof def.getDescription === 'function') {
+          description = def.getDescription.call(room);
+        }
+      } catch (err) {
+        // Definition doesn't exist or has no getDescription, use static description
+      }
+    }
+
+    if (description) {
+      const wrappedDescription = colors.wrap(description, 80);
       output.push(wrappedDescription);
+    }
+
+    // Features (things you can examine)
+    if (room.features && Object.keys(room.features).length > 0) {
+      const featureNames = Object.keys(room.features).map(f => colors.hint(f.replace(/_/g, ' ')));
+      output.push('\n' + colors.dim('You notice: ') + featureNames.join(', '));
     }
 
     // Exits
@@ -82,9 +102,9 @@ module.exports = {
       }
     }
 
-    // Items in room (including booth portals and other special items)
+    // Items in room (including booth portals, elevator portals, hot tubs, and other special items)
     const itemsInRoom = Array.from(entityManager.objects.values()).filter(obj =>
-      (obj.type === 'item' || obj.type === 'booth_portal') &&
+      (obj.type === 'item' || obj.type === 'booth_portal' || obj.type === 'elevator_portal' || obj.type === 'hot_tub') &&
       obj.location?.type === 'room' &&
       obj.location?.room === room.id
     );

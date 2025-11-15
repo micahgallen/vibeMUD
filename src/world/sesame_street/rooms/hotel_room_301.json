@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_301",
+  "type": "room",
+  "name": "Hotel Room 301 - The Deluxe King",
+  "description": "The room sprawls with the confidence of spaces that know they're worth more per night. A king bed dominates the center, dressed in linens with a thread count high enough to require scientific notation. The headboard is genuine leather, possibly from cows who lived better lives than most people. A sitting area by the window features an actual couch, not a loveseat pretending to be furniture. Crown molding traces the ceiling's edge like expensive calligraphy. The bathroom visible through an open door gleams with marble and brass fixtures that suggest someone's definition of necessity differs significantly from yours.",
+  "exits": {
+    "east": "hotel_floor_3_hall_1"
+  },
+  "features": {
+    "bed": "The mattress is some kind of memory foam-pillowtop hybrid that remembers your sleep positions better than you do. Seven pillows of varying firmness offer choice.",
+    "linens": "Egyptian cotton with a thread count you could retire on. The duvet cover weighs more than most sleeping bags.",
+    "couch": "Leather seating for three, positioned to overlook the street. Throw pillows made from fabrics with names you can't pronounce.",
+    "bathroom": "Marble floors, rainfall shower, soaking tub, dual sinks. The towels are so fluffy they might be clouds that signed a hotel contract."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

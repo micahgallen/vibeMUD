@@ -58,6 +58,128 @@ module.exports = {
       }
     }
 
+    // Check if player is in elevator room and examining elevator-specific features
+    if (player.currentRoom === 'elevator_room') {
+      const elevatorRoom = entityManager.get('elevator_room');
+      if (elevatorRoom && elevatorRoom.features) {
+        // Examine panel
+        if (targetName === 'panel' || targetName === 'control panel') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('The Elevator Control Panel'));
+          session.sendLine(elevatorRoom.features.panel);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine mirrors
+        if (targetName === 'mirror' || targetName === 'mirrors') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('The Flattering Mirrors'));
+          session.sendLine(elevatorRoom.features.mirrors);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine sign
+        if (targetName === 'sign' || targetName === 'instructions') {
+          session.sendLine('');
+          session.sendLine(elevatorRoom.features.sign);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine buttons
+        if (targetName === 'buttons' || targetName === 'button') {
+          session.sendLine('');
+          session.sendLine('The elevator panel displays the following floors:\n');
+          elevatorRoom.features.buttons.forEach(btn => {
+            session.sendLine(` [ ${btn.number} ] ${btn.name}`);
+          });
+          session.sendLine('');
+          return;
+        }
+      }
+    }
+
+    // Check if player is in hot tub room and examining hot tub-specific features
+    if (player.currentRoom === 'hot_tub_room') {
+      const hotTubRoom = entityManager.get('hot_tub_room');
+      if (hotTubRoom && hotTubRoom.features) {
+        // Examine panel
+        if (targetName === 'panel' || targetName === 'control panel' || targetName === 'controls') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('Hot Tub Control Panel'));
+          session.sendLine(hotTubRoom.features.panel);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine water
+        if (targetName === 'water') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('The Perfectly Heated Water'));
+          session.sendLine(hotTubRoom.features.water);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine lights
+        if (targetName === 'lights' || targetName === 'light') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('Chromotherapy Lights'));
+          session.sendLine(hotTubRoom.features.lights);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine jets
+        if (targetName === 'jets' || targetName === 'jet') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('Massage Jets'));
+          session.sendLine(hotTubRoom.features.jets);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine sign
+        if (targetName === 'sign' || targetName === 'instructions') {
+          session.sendLine('');
+          session.sendLine(hotTubRoom.features.sign);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine buttons
+        if (targetName === 'buttons' || targetName === 'button') {
+          session.sendLine('');
+          session.sendLine('The hot tub control panel has the following buttons:\n');
+          hotTubRoom.features.buttons.forEach(btn => {
+            session.sendLine(` [ ${btn.number} ] ${btn.name.padEnd(10)} - ${btn.description}`);
+          });
+          session.sendLine('');
+          return;
+        }
+      }
+    }
+
+    // Check for general room features
+    const currentRoom = entityManager.get(player.currentRoom);
+    if (currentRoom && currentRoom.features) {
+      const featureKey = Object.keys(currentRoom.features).find(key =>
+        key.toLowerCase() === targetName ||
+        key.toLowerCase().includes(targetName) ||
+        targetName.includes(key.toLowerCase())
+      );
+
+      if (featureKey) {
+        const featureValue = currentRoom.features[featureKey];
+        session.sendLine('');
+        session.sendLine(featureValue);
+        session.sendLine('');
+        return;
+      }
+    }
+
     // Check inventory first
     let target = Array.from(entityManager.objects.values()).find(obj =>
       obj.type === 'item' &&
@@ -90,6 +212,28 @@ module.exports = {
     if (!target) {
       target = Array.from(entityManager.objects.values()).find(obj =>
         obj.type === 'booth_portal' &&
+        obj.location?.type === 'room' &&
+        obj.location?.room === player.currentRoom &&
+        (obj.name?.toLowerCase().includes(targetName) ||
+         obj.aliases?.some(alias => alias.toLowerCase().includes(targetName)))
+      );
+    }
+
+    // Check elevator portals in room
+    if (!target) {
+      target = Array.from(entityManager.objects.values()).find(obj =>
+        obj.type === 'elevator_portal' &&
+        obj.location?.type === 'room' &&
+        obj.location?.room === player.currentRoom &&
+        (obj.name?.toLowerCase().includes(targetName) ||
+         obj.aliases?.some(alias => alias.toLowerCase().includes(targetName)))
+      );
+    }
+
+    // Check hot tubs in room
+    if (!target) {
+      target = Array.from(entityManager.objects.values()).find(obj =>
+        obj.type === 'hot_tub' &&
         obj.location?.type === 'room' &&
         obj.location?.room === player.currentRoom &&
         (obj.name?.toLowerCase().includes(targetName) ||
@@ -134,6 +278,8 @@ module.exports = {
     } else if (target.type === 'item') {
       session.sendLine(colors.objectName(target.name));
     } else if (target.type === 'container') {
+      session.sendLine(colors.objectName(target.name));
+    } else if (target.type === 'booth_portal' || target.type === 'elevator_portal' || target.type === 'hot_tub') {
       session.sendLine(colors.objectName(target.name));
     } else {
       session.sendLine(colors.highlight(target.name));

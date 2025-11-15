@@ -1,0 +1,18 @@
+{
+  "id": "hotel_room_208",
+  "type": "room",
+  "name": "Hotel Room 208",
+  "description": "The room welcomes you with aggressive cheerfulness. Every surface has been decorated with motivational quotes in curly script: 'Live Laugh Love' over the bed, 'Dream Big' on the bathroom mirror, 'Seize the Day' above the dresser. Throw pillows multiply across the bed like enthusiastic rabbits, each proclaiming a different inspiring message. The curtains are aggressively floral, the kind of pattern that makes you consider photosynthesis. A diffuser on the nightstand emits a scent labeled 'Tranquil Optimism' that smells like artificial vanilla had an argument with lavender. It's the kind of room that really, really wants you to have a good time whether you're ready or not.",
+  "exits": {
+    "east": "hotel_floor_2_hall_4"
+  },
+  "features": {
+    "quotes": "Inspirational messages assault you from every angle. Even the bathroom has one: 'You're Beautiful Just The Way You Are' faces you while you sit on the toilet.",
+    "pillows": "Seven decorative pillows must be removed before you can access the actual sleeping pillows. This is apparently someone's idea of luxury.",
+    "diffuser": "Burbles away, releasing 'Tranquil Optimism' into the air with the determination of a scent that believes in itself.",
+    "curtains": "Roses the size of dinner plates bloom across fabric thick enough to double as emergency shelter. They keep out light and possibly radio waves."
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

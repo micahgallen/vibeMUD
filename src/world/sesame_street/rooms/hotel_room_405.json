@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_405",
+  "type": "room",
+  "name": "Hotel Room 405 - The Moulin Rouge",
+  "description": "The room explodes in shades of red and gold like a sunset had an affair with a jewelry box. Velvet curtains the color of desire cascade from ceiling to floor. The bed is circular, rotating slowly on a motor that hums with quiet suggestion. Mirrors cover the ceiling, the walls, creating infinite reflections of opulence and questionable decisions. A red chaise lounge poses in one corner, the kind where people recline dramatically while making confessions. Champagne glasses sit on the nightstand despite housekeeping's best efforts at removal. The whole affair smells of perfume, possibility, and the kind of luxury that doesn't ask questions about tomorrow.",
+  "exits": {
+    "west": "hotel_floor_4_hall_3"
+  },
+  "features": {
+    "red": "Every shade from burgundy to scarlet to cardinal to sins-we-don't-discuss-in-polite-company. The color scheme has opinions.",
+    "bed": "Circular and rotating. Why? Because someone could. Because excess is the point. The motor hums suggestions that are definitely not mechanical.",
+    "mirrors": "Everywhere. You, reflected infinitely, from every angle. This room wants you to see yourself. All of yourself.",
+    "chaise": "Red velvet curved in all the right places. You could recline here while dictating your memoirs to a scandalized biographer."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

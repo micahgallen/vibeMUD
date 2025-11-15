@@ -7,6 +7,10 @@
     "east": "sesame_street_03",
     "west": "hotel_room_01"
   },
+  "features": {
+    "desk": "The reception desk looms with dark mahogany authority and brass fittings. Behind it, a wall of cubbyholes holds room keys on brass tags, each one waiting for its next victim.",
+    "photographs": "Black and white photos in tarnished frames show guests from decades past. They're all smiling, but their eyes have that thousand-yard stare. In every photo, if you look closely, the same bellhop appears in the background. He hasn't aged."
+  },
   "preventWandering": true,
   "createdAt": "2025-11-12T10:00:00Z",
   "modifiedAt": "2025-11-12T10:00:00Z"

@@ -12,12 +12,10 @@
   "intelligence": 10,
   "wisdom": 10,
   "charisma": 10,
-  "currentRoom": "arena_main",
-  "inventory": [],
-  "equipped": {},
+  "currentRoom": "hot_tub_room",
   "chatEnabled": true,
   "createdAt": "2025-11-14T22:35:57.290Z",
-  "modifiedAt": "2025-11-14T22:35:57.290Z",
+  "modifiedAt": "2025-11-15T07:57:03.610Z",
   "purse": {
     "coins": {
       "platinum": 0,
@@ -27,5 +25,9 @@
     }
   },
   "bankAccount": 0,
-  "xp": 0
+  "xp": 0,
+  "location": {
+    "type": "room",
+    "room": "hot_tub_room"
+  }
 }

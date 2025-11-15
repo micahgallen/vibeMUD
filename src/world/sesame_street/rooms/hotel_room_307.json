@@ -1,0 +1,19 @@
+{
+  "id": "hotel_room_307",
+  "type": "room",
+  "name": "Hotel Room 307 - The Continental",
+  "description": "The room exudes the quiet menace of extremely expensive neutrality. Every surface is smooth, clean, and utterly without personality. The furniture is modern to the point of being timeless, or possibly ageless, existing in a style beyond trends. A sleek desk holds a fountain pen and heavy cardstock stationery embossed with a gold coin symbol. The bed's headboard features circular indentations at precise intervals, their purpose unclear but their precision undeniable. The bathroom contains amenities in unmarked bottles that smell like money and consequences. Everything suggests a level of service where questions are neither asked nor answered.",
+  "exits": {
+    "west": "hotel_floor_3_hall_4"
+  },
+  "features": {
+    "neutrality": "Beige and cream and taupe creating a palette that offends no one while implying everyone is being watched.",
+    "desk": "The fountain pen is solid gold. The stationery is made from trees that had good lives. The gold coin emblem catches the light knowingly.",
+    "headboard": "Circular indentations every six inches, leather stretched over steel. Could be decorative. Could be functional. You don't want to know which.",
+    "amenities": "Unmarked bottles of shampoo, conditioner, and what might be moral flexibility. They smell like cedar, gunpowder, and old blood. Metaphorically."
+  },
+  "locked": true,
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}

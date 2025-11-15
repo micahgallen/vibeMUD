@@ -1,0 +1,20 @@
+{
+  "id": "hotel_floor_4_hall_4",
+  "type": "room",
+  "name": "The Snuggly Sleeper - Penthouse Floor Hallway (End)",
+  "description": "The hallway concludes with a flourish of excess that borders on performance art. The dead end wall is entirely covered in a massive oil painting of a Renaissance feast, all roasted fowl and wine goblets and people who never worried about carbs. Doors 407 and 408 represent the culmination of Floor 4's architectural ambitions, their wood so dark and polished it seems to absorb light. A suit of armor stands guard in the corner, polished to mirror brightness, either decorative or functional depending on the hotel's insurance policy. French windows overlook the street below, their curtains pure silk in a deep burgundy that suggests someone's definition of 'essential' includes imported fabric. The marble staircase spirals upward to the rooftop, each step veined like expensive cheese.",
+  "exits": {
+    "south": "hotel_floor_4_hall_3",
+    "east": "hotel_room_407",
+    "west": "hotel_room_408"
+  },
+  "features": {
+    "painting": "An enormous oil rendering of a feast that probably never happened, featuring foods that probably shouldn't coexist. Everyone in it looks wealthy and vaguely dyspeptic.",
+    "armor": "Full plate armor polished to reflective perfection, empty inside unless you count the sense of unnecessary grandeur. The visor is up. Welcoming, or threatening. Hard to say.",
+    "windows": "Silk curtains frame a view of Sesame Street below. The fabric alone probably cost more than the average car. Definitely more than your car.",
+    "excess": "The hallway achieves levels of decoration that circle back around from tasteful to questionable to 'you know what, just commit to it.'"
+  },
+  "preventWandering": true,
+  "createdAt": "2025-11-15T14:00:00Z",
+  "modifiedAt": "2025-11-15T14:00:00Z"
+}
