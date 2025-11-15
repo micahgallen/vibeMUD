@@ -22,6 +22,42 @@ module.exports = {
     const player = session.player;
     const targetName = args.toLowerCase();
 
+    // Check if player is in booth room and examining booth-specific features
+    if (player.currentRoom === 'booth_room') {
+      const boothRoom = entityManager.get('booth_room');
+      if (boothRoom && boothRoom.features) {
+        // Examine camera
+        if (targetName === 'camera') {
+          session.sendLine('');
+          session.sendLine(colors.objectName('A Strange Camera'));
+          session.sendLine(boothRoom.features.camera);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine sign
+        if (targetName === 'sign' || targetName === 'instructions') {
+          session.sendLine('');
+          session.sendLine(boothRoom.features.sign);
+          session.sendLine('');
+          return;
+        }
+
+        // Examine buttons
+        if (targetName === 'buttons' || targetName === 'button') {
+          session.sendLine('');
+          session.sendLine('You see buttons for the following destinations:\n');
+          boothRoom.features.buttons.forEach(btn => {
+            session.sendLine(` +---+`);
+            session.sendLine(` | ${String(btn.number).padStart(2, ' ')}| ${btn.name.padEnd(14, ' ')}`);
+            session.sendLine(` +---+\n`);
+          });
+          session.sendLine('');
+          return;
+        }
+      }
+    }
+
     // Check inventory first
     let target = Array.from(entityManager.objects.values()).find(obj =>
       obj.type === 'item' &&
@@ -47,6 +83,17 @@ module.exports = {
         obj.location?.type === 'room' &&
         obj.location?.room === player.currentRoom &&
         obj.name.toLowerCase().includes(targetName)
+      );
+    }
+
+    // Check booth portals in room
+    if (!target) {
+      target = Array.from(entityManager.objects.values()).find(obj =>
+        obj.type === 'booth_portal' &&
+        obj.location?.type === 'room' &&
+        obj.location?.room === player.currentRoom &&
+        (obj.name?.toLowerCase().includes(targetName) ||
+         obj.aliases?.some(alias => alias.toLowerCase().includes(targetName)))
       );
     }
 

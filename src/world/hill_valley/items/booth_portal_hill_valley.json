@@ -1,0 +1,11 @@
+{
+  "id": "booth_portal_hill_valley",
+  "definition": "booth_portal",
+  "type": "booth_portal",
+  "location": {
+    "type": "room",
+    "room": "twin_pines_transit_hub"
+  },
+  "createdAt": "2025-11-15T00:00:00Z",
+  "modifiedAt": "2025-11-15T00:00:00Z"
+}

@@ -141,6 +141,36 @@ class EntityManager {
   }
 
   /**
+   * Recursively discover all world directories
+   */
+  discoverWorldDirectories(dir, locations) {
+    if (!fs.existsSync(dir)) return;
+
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+
+      const fullPath = path.join(dir, entry.name);
+
+      // Check if this directory has any content folders
+      const hasContent = ['items', 'containers', 'rooms', 'npcs'].some(type =>
+        fs.existsSync(path.join(fullPath, type))
+      );
+
+      if (hasContent) {
+        locations.push({
+          base: fullPath,
+          types: ['items', 'containers', 'rooms', 'npcs']
+        });
+      }
+
+      // Recursively check subdirectories
+      this.discoverWorldDirectories(fullPath, locations);
+    }
+  }
+
+  /**
    * Load all objects from disk
    * Supports prototypal inheritance via "definition" field
    * NEW: Separates templates (world items) from instances (player inventory)
@@ -148,13 +178,14 @@ class EntityManager {
   loadAll() {
     console.log('📂 Loading all objects...');
 
-    // Load from src/data/ (runtime save data - players only) and src/world/ (static world content)
+    // Build locations list: data directory + all world directories (auto-discovered)
     const locations = [
-      { base: this.dataDir, types: ['players'] }, // Runtime save data (players only)
-      { base: path.join(__dirname, '../world/newbie_realm'), types: ['items', 'containers', 'rooms', 'npcs'] }, // Newbie realm
-      { base: path.join(__dirname, '../world/sesame_street'), types: ['items', 'containers', 'rooms', 'npcs'] }, // Sesame Street realm
-      { base: path.join(__dirname, '../world/reality_street'), types: ['items', 'containers', 'rooms', 'npcs'] } // Reality Street realm
+      { base: this.dataDir, types: ['players'] } // Runtime save data (players only)
     ];
+
+    // Auto-discover all world directories recursively
+    const worldDir = path.join(__dirname, '../world');
+    this.discoverWorldDirectories(worldDir, locations);
 
     for (const location of locations) {
       for (const type of location.types) {
@@ -400,6 +431,11 @@ class EntityManager {
     // Step 2: Update location
     obj.location = newLocation;
     obj.modifiedAt = new Date().toISOString();
+
+    // Update currentRoom for players/NPCs when moving to a room
+    if ((obj.type === 'player' || obj.type === 'npc') && newLocation.type === 'room') {
+      obj.currentRoom = newLocation.room;
+    }
 
     // Step 3: Add to new location
     this.addToLocation(obj);

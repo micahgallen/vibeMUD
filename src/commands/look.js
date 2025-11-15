@@ -82,9 +82,9 @@ module.exports = {
       }
     }
 
-    // Items in room
+    // Items in room (including booth portals and other special items)
     const itemsInRoom = Array.from(entityManager.objects.values()).filter(obj =>
-      obj.type === 'item' &&
+      (obj.type === 'item' || obj.type === 'booth_portal') &&
       obj.location?.type === 'room' &&
       obj.location?.room === room.id
     );

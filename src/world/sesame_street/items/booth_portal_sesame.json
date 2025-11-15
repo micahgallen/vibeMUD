@@ -1,0 +1,11 @@
+{
+  "id": "booth_portal_sesame",
+  "definition": "booth_portal",
+  "type": "booth_portal",
+  "location": {
+    "type": "room",
+    "room": "sesame_street_south"
+  },
+  "createdAt": "2025-11-14T00:00:00Z",
+  "modifiedAt": "2025-11-14T00:00:00Z"
+}

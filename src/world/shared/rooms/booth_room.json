@@ -1,0 +1,27 @@
+{
+  "id": "booth_room",
+  "type": "room",
+  "name": "Inside the Transporter Booth",
+  "description": "The Transporter Booth.\nThis booth looks a lot like one of those picture-taking booths you see in malls and at fairs. Directly in front of you there is a strange looking camera. On the wall to your right there are lots of buttons, and a sign that contains instructions on how to use the booth.",
+  "exits": {
+    "out": "sesame_street_south"
+  },
+  "features": {
+    "camera": "It looks like an ordinary camera.",
+    "sign": "                    LOONEY TRANSPORTATION BOOTH\n\n                 This machine is very easy to use.\n 1. Examine the buttons and decide where you want to go.\n 2. Press the button that is beside the name of the place you want\n    to go.\n             Ex: 'press <num>' or press '<name of domain>'",
+    "buttons": [
+      {
+        "number": 1,
+        "name": "Sesame Street",
+        "destination": "sesame_street_south"
+      },
+      {
+        "number": 2,
+        "name": "Hill Valley",
+        "destination": "twin_pines_transit_hub"
+      }
+    ]
+  },
+  "createdAt": "2025-11-14T00:00:00Z",
+  "modifiedAt": "2025-11-14T00:00:00Z"
+}
