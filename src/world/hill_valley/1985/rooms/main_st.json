@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/main_st",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St, the bustling artery of Hill Valley. The street continues to the west, lined with shops and the occasional passing car. The iconic clock tower looms in the distance.",
+  "exits": {
+    "west": "hill_valley/1985/main_st1",
+    "south": "hill_valley/1985/hubbard_ave"
+  },
+  "items": []
+}

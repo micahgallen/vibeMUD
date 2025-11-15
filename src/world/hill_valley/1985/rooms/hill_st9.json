@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/hill_st9",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are at the southern end of Hill St. The road ends here, with a dense forest beginning just beyond. Hill St continues to the north.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st8"
+  },
+  "items": []
+}

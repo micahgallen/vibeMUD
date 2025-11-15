@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hubbard_ave7",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "You are on Hubbard Ave. The street is getting more rural, with fewer houses. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hubbard_ave6",
+    "south": "hill_valley/1985/hubbard_ave8"
+  },
+  "items": []
+}

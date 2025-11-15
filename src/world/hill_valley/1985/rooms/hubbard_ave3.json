@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hubbard_ave3",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "You are on Hubbard Ave. A few kids are playing street hockey, and they pause to let you pass. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hubbard_ave2",
+    "south": "hill_valley/1985/hubbard_ave4"
+  },
+  "items": []
+}

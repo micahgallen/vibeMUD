@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave8",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave. The houses are more spread out here, with larger yards. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave7",
+    "south": "hill_valley/1985/maple_ave9"
+  },
+  "items": []
+}

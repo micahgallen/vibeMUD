@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/maple_ave9",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are at the southern end of Maple Ave. The road turns into a dirt track here, leading into a thick forest. The street continues to the north.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave8"
+  },
+  "items": []
+}

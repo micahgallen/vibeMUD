@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/main_st7",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St. The sun reflects off the windows of the nearby buildings, creating a dazzling glare. The street continues to the east and west.",
+  "exits": {
+    "east": "hill_valley/1985/main_st6",
+    "west": "hill_valley/1985/main_st8",
+    "south": "hill_valley/1985/maple_ave"
+  },
+  "items": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/main_st9",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are at the western end of Main St. The street continues to the east, leading back toward the center of town.",
+  "exits": {
+    "east": "hill_valley/1985/main_st8"
+  },
+  "items": []
+}

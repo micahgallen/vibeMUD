@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave3",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave. The street is quiet and peaceful. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave2",
+    "south": "hill_valley/1985/maple_ave4"
+  },
+  "items": []
+}

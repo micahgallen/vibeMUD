@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave1",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave. The street is lined with charming, single-family homes. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave",
+    "south": "hill_valley/1985/maple_ave2"
+  },
+  "items": []
+}

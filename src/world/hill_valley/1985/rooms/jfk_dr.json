@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are on John F. Kennedy Dr, at the intersection with Main St. To the north is Main St, and John F. Kennedy Dr continues to the south.",
+  "exits": {
+    "north": "hill_valley/1985/main_st5",
+    "south": "hill_valley/1985/jfk_dr1"
+  },
+  "items": []
+}

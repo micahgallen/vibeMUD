@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/hubbard_ave9",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "You are at the southern end of Hubbard Ave. The road is blocked by a large pile of manure. The street continues to the north.",
+  "exits": {
+    "north": "hill_valley/1985/hubbard_ave8"
+  },
+  "items": []
+}

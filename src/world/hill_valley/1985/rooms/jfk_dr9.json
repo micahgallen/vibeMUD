@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/jfk_dr9",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are at the southern end of John F. Kennedy Dr. The road becomes a dirt path here, leading into the woods. The street continues to the north.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr8"
+  },
+  "items": []
+}

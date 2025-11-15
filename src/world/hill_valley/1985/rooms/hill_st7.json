@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hill_st7",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are on Hill St. The street here is lined with mature trees, providing ample shade. Hill St continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st6",
+    "south": "hill_valley/1985/hill_st8"
+  },
+  "items": []
+}

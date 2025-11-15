@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hill_st4",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are on Hill St. A small park is visible to the east, with a few children playing. Hill St continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st3",
+    "south": "hill_valley/1985/hill_st5"
+  },
+  "items": []
+}

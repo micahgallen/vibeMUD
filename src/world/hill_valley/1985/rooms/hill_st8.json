@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hill_st8",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are on Hill St. The houses here are set back from the road, with spacious yards. Hill St continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st7",
+    "south": "hill_valley/1985/hill_st9"
+  },
+  "items": []
+}

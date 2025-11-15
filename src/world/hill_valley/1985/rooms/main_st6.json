@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/main_st6",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St. A manhole cover is slightly ajar, and the faint sound of running water can be heard. The street continues to the east and west.",
+  "exits": {
+    "east": "hill_valley/1985/main_st5",
+    "west": "hill_valley/1985/main_st7"
+  },
+  "items": []
+}

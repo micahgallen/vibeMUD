@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave, at the intersection with Main St. To the north is Main St, and Maple Ave continues to the south.",
+  "exits": {
+    "north": "hill_valley/1985/main_st7",
+    "south": "hill_valley/1985/maple_ave1"
+  },
+  "items": []
+}

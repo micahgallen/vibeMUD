@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/hubbard_ave2",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "You are on Hubbard Ave. The street is a bit run-down here, with some potholes in the pavement. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hubbard_ave1",
+    "south": "hill_valley/1985/hubbard_ave3",
+    "west": "hill_valley/1985/first_st"
+  },
+  "items": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave4",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave. A cat sits on a fence, watching you with curiosity. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave3",
+    "south": "hill_valley/1985/maple_ave5"
+  },
+  "items": []
+}

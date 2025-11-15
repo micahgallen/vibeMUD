@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hill_st3",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are on Hill St. The air here is a little quieter, away from the main thoroughfare. Hill St continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/hill_st2",
+    "south": "hill_valley/1985/hill_st4"
+  },
+  "items": []
+}

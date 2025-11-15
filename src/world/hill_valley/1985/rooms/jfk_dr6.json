@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr6",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are on John F. Kennedy Dr. A group of teenagers are gathered on a nearby lawn, listening to music. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr5",
+    "south": "hill_valley/1985/jfk_dr7"
+  },
+  "items": []
+}

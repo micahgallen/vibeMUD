@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr8",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are on John F. Kennedy Dr. The road is cracked and uneven here. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr7",
+    "south": "hill_valley/1985/jfk_dr9"
+  },
+  "items": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr2",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are on John F. Kennedy Dr. A skateboarder zips past you, heading south. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr1",
+    "south": "hill_valley/1985/jfk_dr3"
+  },
+  "items": []
+}

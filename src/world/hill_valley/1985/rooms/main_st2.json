@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/main_st2",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St, roughly in the middle of the block. To the east and west, the street stretches out, with storefronts on either side.",
+  "exits": {
+    "east": "hill_valley/1985/main_st1",
+    "west": "hill_valley/1985/main_st3"
+  },
+  "items": []
+}

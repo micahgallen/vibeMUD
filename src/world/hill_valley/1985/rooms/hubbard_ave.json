@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hubbard_ave",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "You are on Hubbard Ave, at the intersection with Main St. To the north is Main St, and Hubbard Ave continues to the south.",
+  "exits": {
+    "north": "hill_valley/1985/main_st",
+    "south": "hill_valley/1985/hubbard_ave1"
+  },
+  "items": []
+}

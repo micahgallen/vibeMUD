@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/hill_st",
+  "type": "room",
+  "name": "Hill St",
+  "description": "You are on Hill St, at the intersection with Main St. To the north is Main St, and Hill St continues to the south.",
+  "exits": {
+    "north": "hill_valley/1985/main_st3",
+    "south": "hill_valley/1985/hill_st1"
+  },
+  "items": []
+}

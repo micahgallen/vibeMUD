@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/maple_ave2",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "You are on Maple Ave. A gentle breeze rustles the leaves of the maple trees that give this street its name. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/maple_ave1",
+    "south": "hill_valley/1985/maple_ave3"
+  },
+  "items": []
+}

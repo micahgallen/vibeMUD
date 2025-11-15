@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr5",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "You are on John F. Kennedy Dr. The road curves slightly here. The street continues to the north and south.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr4",
+    "south": "hill_valley/1985/jfk_dr6"
+  },
+  "items": []
+}

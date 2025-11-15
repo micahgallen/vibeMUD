@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/main_st4",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St, standing before the grand entrance to the Hill Valley Courthouse. The street continues to the east and west.",
+  "exits": {
+    "east": "hill_valley/1985/main_st3",
+    "west": "hill_valley/1985/main_st5"
+  },
+  "items": []
+}

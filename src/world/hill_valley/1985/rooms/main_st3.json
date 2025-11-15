@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/main_st3",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St. A lamppost flickers nearby, casting a warm glow on the sidewalk. The street continues to the east and west.",
+  "exits": {
+    "east": "hill_valley/1985/main_st2",
+    "west": "hill_valley/1985/main_st4",
+    "south": "hill_valley/1985/hill_st"
+  },
+  "items": []
+}

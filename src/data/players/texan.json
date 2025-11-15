@@ -14,11 +14,15 @@
   "wisdom": 10,
   "charisma": 10,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "currentRoom": "arena_main",
   "equipped": {},
   "inventory": [],
 =======
   "currentRoom": "main_strip_1985a",
+=======
+  "currentRoom": "hill_valley/1985/main_st3",
+>>>>>>> 9f32d7b (feat: Update Hill Valley 1985 map and player starting room)
   "inventory": [
     "dagger_001",
     "gem_001"

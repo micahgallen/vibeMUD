@@ -1,15 +1,11 @@
 {
-  "id": "first_st",
+  "id": "hill_valley/1985/first_st",
   "type": "room",
-  "definition": "room",
-  "name": "First Street",
-  "description": "First Street, despite its rather definitive name, is not actually the first street, nor is it particularly concerned with being first at anything. It's a modest thoroughfare, lined with shops that seem to exist in a state of perpetual, low-grade surprise that anyone actually walks in. The storefronts gaze blankly across at the square, like old men watching a particularly uninteresting game of chess. Here, the pursuit of commerce is less a roaring engine of capitalism and more a gentle hum of mild disappointment.",
+  "name": "First St",
+  "description": "You are on First St. Hill St is to the west and Hubbard Ave is to the east. This street connects the two main north-south arteries.",
   "exits": {
-    "west": "holts_diner",
-    "east": "main_st_west",
-    "south": "court_alley"
+    "west": "hill_valley/1985/hill_st2",
+    "east": "hill_valley/1985/hubbard_ave2"
   },
-  "tags": [
-    "shopping"
-  ]
+  "items": []
 }

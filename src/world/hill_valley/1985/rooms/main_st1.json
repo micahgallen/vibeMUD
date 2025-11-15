@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/main_st1",
+  "type": "room",
+  "name": "Main St",
+  "description": "You are on Main St. The street continues to the east and west. The pavement is worn, and a few stray newspapers blow by in the wind.",
+  "exits": {
+    "east": "hill_valley/1985/main_st",
+    "west": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}
