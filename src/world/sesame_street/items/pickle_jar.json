@@ -1,0 +1,10 @@
+{
+  "id": "pickle_jar",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Big Pickle from the Jar",
+  "description": "Fished straight from the giant jar behind the bar, this pickle is the size of a small baseball bat and probably just as effective as a weapon. It's sour, it's crunchy, it's swimming in brine, and it pairs surprisingly well with beer. The bartender charges you for it anyway despite the 'help yourself' sign.",
+  "value": 5,
+  "weight": 1,
+  "healAmount": 5
+}

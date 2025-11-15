@@ -1,0 +1,10 @@
+{
+  "id": "loaded_tater_tots",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Loaded Tater Tots",
+  "description": "Crispy potato nuggets loaded with cheese, bacon bits (allegedly), and green onions (definitely). This is what happens when someone asks 'what if we made tater tots BETTER?' and actually succeeded. A triumph of bar food engineering. Your cardiologist will hear about this.",
+  "value": 15,
+  "weight": 1,
+  "healAmount": 12
+}

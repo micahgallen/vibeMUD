@@ -1,0 +1,10 @@
+{
+  "id": "bar_nuts",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Complimentary Bar Nuts",
+  "description": "These peanuts have witnessed every conversation, argument, and bad decision made in this tavern. They've been in that bowl since the tavern opened. Possibly since before the tavern opened. They're free, which explains their consistency and flavor profile. Or lack thereof.",
+  "value": 1,
+  "weight": 0.5,
+  "healAmount": 3
+}

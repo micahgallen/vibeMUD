@@ -1,0 +1,12 @@
+{
+  "id": "existential_crisis_ipa",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Existential Crisis IPA",
+  "description": "This India Pale Ale is so hoppy it makes you question your life choices, starting with ordering this beer. It's the kind of drink that pairs well with staring into the middle distance and wondering what it all means. The label features a cartoon character having an anxiety attack. Very craft. Much artisanal. Wow alcoholic.",
+  "value": 30,
+  "weight": 2,
+  "healAmount": 1,
+  "alcoholic": true,
+  "alcoholStrength": 2
+}

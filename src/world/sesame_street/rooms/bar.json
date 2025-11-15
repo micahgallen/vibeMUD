@@ -1,15 +1,90 @@
 {
   "id": "bar",
   "type": "room",
-  "definition": "room",
+  "definition": "shop",
   "name": "The Furry Arms Tavern",
-  "description": "The tavern manages to be simultaneously wholesome and questionable, with sticky tables that have witnessed a thousand philosophical debates and probably a few minor crimes. Peanut shells crunch underfoot with satisfying authority. The bar itself is a magnificent slab of oak that could double as a life raft or a shield wall, currently serving its more important purpose of dispensing liquid courage and regret. A narrow staircase descends to the south, from which emanate sounds of enthusiastic combat and the occasional triumphant (or defeated) 'wump.'",
+  "description": "The tavern manages to be simultaneously wholesome and questionable, with sticky tables that have witnessed a thousand philosophical debates and probably a few minor crimes. Peanut shells crunch underfoot with satisfying authority. The bar itself is a magnificent slab of oak that could double as a life raft or a shield wall, currently serving its more important purpose of dispensing liquid courage and regret. Behind the bar, bottles of varying repute line shelves that look one sneeze away from collapse. A chalkboard lists the drinks and snacks available. A narrow staircase descends to the south, from which emanate sounds of enthusiastic combat and the occasional triumphant (or defeated) 'wump.'",
   "exits": {
     "east": "sesame_street_01",
     "south": "arena_lounge"
   },
   "npcs": ["bartender", "purple_wumpy"],
+  "isShop": true,
+  "merchantName": "Grover",
+  "keeperTemper": "polite",
+  "keeperCopper": 5000,
+  "bankCopper": 20000,
+  "merchandise": [
+    {
+      "itemId": "wumpy_ale",
+      "price": 15,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "liquid_courage_lager",
+      "price": 18,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "furry_navel",
+      "price": 20,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "purple_nurple",
+      "price": 25,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "existential_crisis_ipa",
+      "price": 30,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "bar_nuts",
+      "price": 1,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "pickle_jar",
+      "price": 5,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "mystery_meat_slider",
+      "price": 10,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "questionable_nachos",
+      "price": 12,
+      "stock": -1,
+      "maxStock": -1
+    },
+    {
+      "itemId": "loaded_tater_tots",
+      "price": 15,
+      "stock": -1,
+      "maxStock": -1
+    }
+  ],
+  "buyTypes": [],
+  "messages": {
+    "greeting": "Welcome to the Furry Arms! Your humble, lovable bartender Grover is here to serve you!",
+    "noSuchItem": "Oh dear! I am so sorry, but we do not have that item!",
+    "noSellItem": "I am very sorry, but I cannot buy that from you! This is a tavern, not a pawn shop!",
+    "cantAfford": "Oh no! You do not have enough coins for that! But Grover still likes you very much!",
+    "successBuy": "That will be %s! Thank you for your patronage! Grover hopes you enjoy!"
+  },
   "heartbeatInterval": 60,
   "createdAt": "2025-11-12T10:00:00Z",
-  "modifiedAt": "2025-11-12T10:00:00Z"
+  "modifiedAt": "2025-11-15T10:00:00Z"
 }

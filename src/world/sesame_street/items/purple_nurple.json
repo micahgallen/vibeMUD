@@ -1,0 +1,12 @@
+{
+  "id": "purple_nurple",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Purple Nurple",
+  "description": "This violently purple cocktail was either mixed by a professional bartender or someone who really likes the color purple and took a 'throw everything in and see what happens' approach. Small bubbles rise through the drink like tiny regrets ascending to freedom. It tastes like grape candy had a fistfight with a liquor store and everyone lost.",
+  "value": 25,
+  "weight": 1,
+  "healAmount": 1,
+  "alcoholic": true,
+  "alcoholStrength": 2
+}

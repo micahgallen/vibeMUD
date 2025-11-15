@@ -1,0 +1,10 @@
+{
+  "id": "mystery_meat_slider",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Mystery Meat Slider",
+  "description": "A miniature burger that raises more questions than it answers. What animal did this come from? When was it cooked? Why does it glow slightly in the dark? These are all questions you should probably ask BEFORE eating it, but here we are. Surprisingly tasty though.",
+  "value": 10,
+  "weight": 1,
+  "healAmount": 10
+}

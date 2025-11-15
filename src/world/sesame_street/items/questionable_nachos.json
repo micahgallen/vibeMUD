@@ -1,0 +1,10 @@
+{
+  "id": "questionable_nachos",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Questionable Nachos",
+  "description": "A heaping plate of tortilla chips drowning in cheese sauce that's either aged to perfection or just... aged. The jalapeños look like they've seen some things. The sour cream is definitely cream and probably sour. Perfect drunk food, questionable sober food.",
+  "value": 12,
+  "weight": 1,
+  "healAmount": 8
+}

@@ -1,0 +1,12 @@
+{
+  "id": "wumpy_ale",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Wumpy Ale",
+  "description": "A frothy mug of amber liquid that looks suspiciously wholesome for something that will make you forget your own name. The foam forms shapes that might be encouraging messages or possibly just foam doing foam things. It smells like questionable decisions and good times.",
+  "value": 15,
+  "weight": 2,
+  "healAmount": 2,
+  "alcoholic": true,
+  "alcoholStrength": 1
+}

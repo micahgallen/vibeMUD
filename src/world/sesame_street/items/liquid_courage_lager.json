@@ -1,0 +1,12 @@
+{
+  "id": "liquid_courage_lager",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Liquid Courage Lager",
+  "description": "A smooth, golden lager that promises to make you brave enough to finally tell your boss what you really think, confess your feelings to your crush, or challenge that guy who's clearly bigger than you. The brewery is not responsible for any consequences of said courage. Side effects may include poor decision-making, temporary invincibility delusions, and an inexplicable urge to karaoke.",
+  "value": 18,
+  "weight": 2,
+  "healAmount": 2,
+  "alcoholic": true,
+  "alcoholStrength": 1
+}
