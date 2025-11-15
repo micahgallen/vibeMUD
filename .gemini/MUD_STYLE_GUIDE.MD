@@ -10,7 +10,7 @@ When generating descriptions, write in a style that mixes:
 Use humor, but never too much. The world should feel alive, ironic, and lightly self-aware while never fully breaking immersion. The narrator notices strange things, but treats them like normal daily annoyances.
 
 Room descriptions should be sensory, vivid, ironic, and concise:
-- 1 quick orientation line (At a glance)
+- 1 quick orientation line (At a glance; do not actually use the phrase "At a glance")
 - 3–5 sentences of descriptive detail
 
 No fourth-wall breaks, no game-mechanics commentary.
@@ -89,7 +89,7 @@ Description Notes:
 ## Structure
 Each room description must contain:
 1. **At-a-Glance Line**  
-   A short, punchy summary in one sentence.
+   A short, punchy summary in one sentence. (Do not specifically use "At a glance:")
 2. **Main Description**  
    3–5 sentences describing environment, mood, sensory details, and satirical flavor.
 
