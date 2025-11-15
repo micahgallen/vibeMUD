@@ -1,0 +1,15 @@
+{
+    "id": "outskirts_1985a",
+    "name": "Town Outskirts (1985A)",
+    "description": "Sparse development and broken roads lead away from the city center.",
+    "exits": {
+        "south": "old_mill_ruins",
+        "east": "biff_garage_1985a"
+    },
+    "tags": [
+        "outskirt"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

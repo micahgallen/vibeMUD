@@ -1,0 +1,15 @@
+{
+    "id":  "back_lot_1985a",
+    "type": "room",
+    "name":  "Back Lot",
+    "description":  "A tangle of service roads and shipping containers, useful for getting around unnoticed.",
+    "exits":  {
+                  "east":  "lyon_estates_slum",
+                  "north":  "biffco_tower"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "alley"
+             ]
+}

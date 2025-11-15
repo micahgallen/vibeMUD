@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/essex_theater",
+  "type": "room",
+  "name": "Essex Theater",
+  "description": "A former grand theater, now a dimly lit temple to adult entertainment. The once-grand Essex Theater, a mainstream movie house in 1955, has fallen on hard times, much like the moral fabric of Hill Valley. Its marquee, now faded and peeling, advertises 'Orgy' and 'American Style XXX' in lurid red letters, a stark contrast to the wholesome fare it once offered. The air is thick with the smell of stale popcorn, cheap disinfectant, and something vaguely illicit, a potent cocktail of regret and desperation. The lobby is dimly lit, and the carpet is sticky underfoot, a testament to countless forgotten patrons. This is no longer a place for family entertainment, but rather a quiet refuge for those seeking a different kind of escape.",
+  "exits": {
+    "north": "hill_valley/1985/first_st",
+    "west": "hill_valley/1985/hill_st3"
+  },
+  "items": []
+}

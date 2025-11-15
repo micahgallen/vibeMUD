@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1985/jfk_dr3",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "A residential stretch of John F. Kennedy Drive, showcasing a mix of architectural styles. You are on John F. Kennedy Dr. The street is mostly residential here, with a mix of architectural styles that speak of different eras and different dreams, all slowly fading under the indifferent sun. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr2",
+    "south": "hill_valley/1985/jfk_dr4"
+  },
+  "items": []
+}

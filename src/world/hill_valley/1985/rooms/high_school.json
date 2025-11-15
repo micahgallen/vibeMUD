@@ -1,22 +1,14 @@
 {
-    "id":  "high_school",
-    "name":  "Hill Valley High School",
-    "description":  "The imposing red-brick facade of Hill Valley High School stands as a monument to teenage angst, budding romances, and, famously, the very spot where a timid George McFly found his courage and delivered a legendary punch to the perpetually menacing Biff Tannen. The echoes of lockers slamming, school bells ringing, and perhaps even a faint \u0027Hey, McFly!\u0027 seem to linger in the air.",
-    "exits":  {
-                  "west":  "holts_diner"
-              },
-    "tags":  [
-                 "school",
-                 "story_event"
-             ],
-    "type":  "room",
-    "items":  [
-
-              ],
-    "containers":  [
-
-                   ],
-    "npcs":  [
-
-             ]
+  "id": "hill_valley/1985/high_school",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley High School",
+  "description": "A brick edifice of enforced learning and adolescent angst. Hill Valley High School, a brick edifice of enforced learning, stands as a testament to the human capacity for both hope and utter bewilderment. Within these walls, the youth of Hill Valley are subjected to the peculiar ritual of 'education,' a process designed to prepare them for a future that, statistically speaking, will involve a great deal of paperwork and a surprising lack of dragons. The air hums with the ghosts of forgotten algebra equations and the faint scent of adolescent angst, a potent cocktail of hormones and unfulfilled potential. It is a place where dreams are both forged and, more often than not, quietly misplaced.",
+  "exits": {
+    "south": "hill_valley/1985/football_field",
+    "north": "hill_valley/1985/river_rd3"
+  },
+  "tags": [
+    "school"
+  ]
 }

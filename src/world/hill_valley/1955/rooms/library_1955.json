@@ -1,0 +1,17 @@
+{
+    "id":  "library_1955",
+    "definition": "room",
+    "name":  "Hill Valley Library (1955)",
+    "description":  "The Hill Valley Library of 1955, a veritable cathedral of knowledge and quiet contemplation, stands as a testament to humanity's enduring, if occasionally misguided, quest for information. Here, amidst the gleaming expanse of polished wooden shelves, each groaning under the weight of countless untold stories and the occasional misplaced bookmark, helpful librarians, those unsung heroes of the Dewey Decimal System, stand ready to guide the bewildered seeker through the labyrinthine corridors of literary endeavor. One might ponder the philosophical implications of a perfectly alphabetized collection, or the cosmic significance of a well-thumbed copy of 'How to Win Friends and Influence People.' It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of silent reading and the relentless pursuit of overdue fines.",
+    "exits":  {
+                  "south":  "courthouse_square_1955",
+                  "north":  "high_school_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "building"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

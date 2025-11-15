@@ -1,0 +1,17 @@
+{
+    "id":  "football_field_1955",
+    "definition": "room",
+    "name":  "Football Field (1955)",
+    "description":  "The Football Field of 1955, a verdant expanse of meticulously manicured grass, stands as a testament to humanity's enduring fascination with organized chaos and the pursuit of arbitrary victory. Wooden bleachers, groaning under the weight of countless forgotten cheers and the occasional bewildered squirrel, flank the field like ancient, silent spectators. The scoreboard, a stoic chronicler of past glories and ignominious defeats, still proudly displays the results of last week's game, a poignant reminder that even in the grand cosmic scheme of things, some scores are never truly settled. One might ponder the philosophical implications of a pigskin spheroid, or the cosmic significance of a perfectly executed touchdown. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of athletic prowess and the relentless pursuit of a good hot dog.",
+    "exits":  {
+                  "west":  "high_school_1955",
+                  "south":  "oak_park_cemetery_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "outdoor"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

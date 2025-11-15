@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1985/courthouse_square_south_parking_lot",
+  "type": "room",
+  "name": "Courthouse Square South Parking Lot",
+  "description": "A cracked and oil-stained expanse, once a vibrant green space. This is the south parking lot of Courthouse Square, a testament to urban decay. It was once a vibrant green space, now replaced by rows of parked cars, each one a silent witness to the slow decline of downtown. The air carries the faint, acrid scent of oil and forgotten dreams. To the north lies the North Parking Lot, a mirror image of this asphalt wasteland. To the west, Hill Street continues its weary journey, and to the south, First Street stretches out, leading to places unknown. The former courthouse, now the Department of Social Services, is visible to the northeast, its grim facade a stark contrast to the faded glory of the past.",
+  "exits": {
+    "north": "hill_valley/1985/courthouse_square_north_parking_lot",
+    "west": "hill_valley/1985/hill_st1",
+    "south": "hill_valley/1985/first_st",
+    "northeast": "hill_valley/1985/department_of_social_services"
+  },
+  "items": []
+}

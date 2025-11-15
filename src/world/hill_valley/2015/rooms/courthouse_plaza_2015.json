@@ -1,0 +1,18 @@
+{
+  "id": "courthouse_plaza_2015",
+  "type": "room",
+  "name": "Courthouse Plaza (2015)",
+  "description": "A restored, futuristic plaza with a monument honoring the town's history and a polished clocktower.",
+  "exits": {
+    "north": "holomemorial_library",
+    "south": "cafe_80s",
+    "east": "hover_tex",
+    "west": "skywalk_west"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "landmark",
+    "future"
+  ]
+}

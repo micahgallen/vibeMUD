@@ -1,0 +1,17 @@
+{
+    "id":  "downtown_backalley_1955",
+    "definition": "room",
+    "name":  "Downtown Back Alley (1955)",
+    "description":  "This particular downtown back alley, much like the universe itself, is mostly empty space, punctuated by the occasional overflowing dumpster and the faint, lingering scent of forgotten dreams and questionable culinary endeavors. It serves, rather ironically, as both a vital artery for the clandestine movement of goods and a philosophical cul-de-sac for those contemplating the true meaning of a discarded banana peel. One might even say it's a shortcut, but then, isn't all of existence just a series of increasingly convoluted shortcuts to an inevitable, yet entirely unpredictable, destination?",
+    "exits":  {
+                  "east":  "first_st_1955",
+                  "south":  "main_st_south_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "alley"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

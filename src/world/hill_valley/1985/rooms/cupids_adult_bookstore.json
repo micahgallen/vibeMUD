@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/cupids_adult_bookstore",
+  "type": "room",
+  "name": "Cupid's Adult Bookstore",
+  "description": "A temple of forbidden desires, flickering with neon promises. The neon sign for 'Cupid's Adult Bookstore' flickers erratically, casting a lurid pink glow on the sidewalk, a beacon for those seeking solace from the mundane. Inside, the air is thick with the scent of cheap paper, dust, and unspoken desires, a potent cocktail of human longing. Shelves are crammed with magazines and videos, their covers promising forbidden delights that are, more often than not, merely disappointing. A lone, trench-coated figure browses in a dark corner, a silent testament to the universal search for something, anything, to fill the void.",
+  "exits": {
+    "south": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}

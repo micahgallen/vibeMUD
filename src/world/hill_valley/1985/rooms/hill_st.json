@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1985/hill_st",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The northernmost stretch of Hill Street, intersecting with Main Street. You are on Hill St, at the intersection with Main St. To the north, Main St beckons with its fading glory, and Hill St continues its quiet descent to the south. To the east, the sprawling asphalt of the Courthouse Square North Parking Lot stretches out, a testament to progress, or perhaps, a lack thereof. The air here is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
+  "exits": {
+    "north": "hill_valley/1985/main_st3",
+    "south": "hill_valley/1985/hill_st1",
+    "east": "hill_valley/1985/courthouse_square_north_parking_lot"
+  },
+  "items": []
+}

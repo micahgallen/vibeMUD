@@ -1,22 +1,13 @@
 {
-    "id":  "texaco",
-    "name":  "Texaco Station",
-    "description":  "The Texaco Station, a gleaming beacon of 1980s automotive service, where friendly attendants in crisp uniforms still offer to clean your windshield and check your oil. The air hums with the gentle thrum of pumps and the occasional squeal of tires. It\u0027s a place where you might pull up in a beat-up truck, or perhaps a time-traveling sports car, and receive the same impeccable service, a true relic of a bygone era of personalized care.",
-    "exits":  {
-                  "east":  "courthouse_square",
-                  "south":  "brown_mansion"
-              },
-    "tags":  [
-                 "service"
-             ],
-    "type":  "room",
-    "items":  [
-
-              ],
-    "containers":  [
-
-                   ],
-    "npcs":  [
-
-             ]
+  "id": "hill_valley/1985/texaco",
+  "type": "room",
+  "definition": "room",
+  "name": "Texaco Station",
+  "description": "A beacon of fossil-fueled hope, smelling faintly of gasoline and desperation. The Texaco Station stands as a beacon of fossil-fueled hope in a world that, unbeknownst to most, is hurtling towards an uncertain future. Here, the internal combustion engine is king, and its loyal subjects bring their metal steeds for sustenance and minor surgical procedures in the 'small repair bay,' which is less a bay and more a suggestion of mechanical intervention. The air is a heady mix of gasoline fumes, oil, and the faint, lingering scent of desperation. It's a place where the universe conspires to keep you moving, even if you're not entirely sure where you're going, or why.",
+  "exits": {
+    "east": "hill_valley/1985/hill_st2"
+  },
+  "tags": [
+    "service"
+  ]
 }

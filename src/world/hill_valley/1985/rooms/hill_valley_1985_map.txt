@@ -1,0 +1,63 @@
+🗺️ Hill Valley (MUD Map Layout)
+
+                      [Biff's House]
+                           |
+                     ==== River Road ====
+                           |
+                      (Tunnel 1955)
+                           |
+                     [Bridge / Mill]
+                           |
+                           |
+                           |
+                  ----------------------
+                  |                    |
+                  |                    |
+            [Hill Valley High]    [Oak Park Cemetery]
+                  |                    |
+                  |                    |
+        ---- School St. ----   ---- South Ave. ----
+                  |                    |
+                  |                    |
+                  |      [Holts Diner] |
+                  |             |      |
+                  |        [First St.] |
+                  |             |      |
+                  |             |      |
+                  |         [Courthouse Square]
+                  |            /     |     \
+                  |      [Clocktower] |  [Hill Valley Bank]
+                  |         (1955)    |     (1985)
+                  |                   |
+          [Hill Valley Library]   [Texaco Station]
+                  |                   |
+        ---- Main St. ----   ---- Eastwood Blvd ----
+                  |                   |
+                  |                   |
+           [McFly Home]          [Brown Mansion]
+                  |                   |
+                  |                   |
+                  |                   |
+           [Baines Home]         [Lyon Estates Gate]
+                                        |
+                                        |
+                               ==== to Pine Mall ====
+                                        |
+                                        |
+                                 [Twin Pines Mall]
+                                        |
+                               ==== to Grass Valley ====
+
+🧭 Legend
+
+==== : Highway or long road
+
+---- : City street
+
+| : Vertical street
+
+[Name] : A location/room node
+
+/, \ : Diagonal road connection
+
+(xxxx) : Historical time variant markers

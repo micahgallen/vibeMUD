@@ -1,0 +1,15 @@
+{
+    "id": "police_hq_1985a",
+    "name": "Police HQ (Corrupt)",
+    "description": "A once-respected station now more of a private security outpost for the powerful.",
+    "exits": {
+        "west": "courthouse_square_burned",
+        "north": "market_row_1985a"
+    },
+    "tags": [
+        "law"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

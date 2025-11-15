@@ -1,0 +1,15 @@
+{
+  "id": "east_avenue_2015",
+  "type": "room",
+  "name": "East Avenue (2015)",
+  "description": "A broad boulevard lined with trees, cafes, and small parks.",
+  "exits": {
+    "east": "restored_cemetery_2015",
+    "west": "main_skywalk"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "boulevard"
+  ]
+}

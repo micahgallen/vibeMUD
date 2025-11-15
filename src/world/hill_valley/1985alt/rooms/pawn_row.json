@@ -1,0 +1,15 @@
+{
+    "id": "pawn_row",
+    "name": "Pawn Row",
+    "description": "A cramped row of pawn shops and secondhand dealers that thrive on desperation.",
+    "exits": {
+        "east": "main_strip_1985a",
+        "south": "river_waste"
+    },
+    "tags": [
+        "commerce"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

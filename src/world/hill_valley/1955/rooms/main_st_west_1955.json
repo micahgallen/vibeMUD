@@ -1,0 +1,17 @@
+{
+    "id":  "main_st_west_1955",
+    "definition": "room",
+    "name":  "Main Street (West) (1955)",
+    "description":  "The west side of Main Street, a veritable tableau of mid-century optimism, presents itself with an almost aggressive tidiness. Here, freshly painted signs, each a miniature masterpiece of persuasive typography, beckon the unsuspecting consumer into establishments promising everything from the perfect pie to a slightly less existential crisis. One might ponder the philosophical implications of a perfectly aligned picket fence, or the cosmic significance of a meticulously swept sidewalk. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of commercial persuasion and the relentless pursuit of suburban perfection.",
+    "exits":  {
+                  "west":  "first_st_1955",
+                  "east":  "texaco_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "commerce"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

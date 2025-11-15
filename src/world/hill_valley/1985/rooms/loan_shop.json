@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1985/loan_shop",
+  "type": "room",
+  "name": "Loan Shop",
+  "description": "A dimly lit establishment, a last resort for quick cash. The Loan Shop is a dimly lit establishment with bars on the windows and a thick pane of bulletproof glass separating you from the stern-faced clerk, whose eyes hold a weary resignation. Posters on the wall, faded and peeling, advertise 'Easy Cash Loans' and 'No Credit, No Problem!', promises that ring hollow in the heavy air. The air is heavy with the unspoken desperation of those seeking quick money, a palpable weight that settles on the few worn chairs lining the wall, occupied by anxious patrons. The only exit is back out to Main St., where the cycle of need and temporary relief continues.",
+  "exits": {
+    "south": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}

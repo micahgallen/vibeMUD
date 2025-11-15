@@ -1,0 +1,15 @@
+{
+    "id": "outdoor_arena",
+    "name": "Outdoor Arena",
+    "description": "A cracked concrete arena where crowds sometimes gather for illicit entertainment.",
+    "exits": {
+        "north": "biffco_tower",
+        "south": "reclaimed_park"
+    },
+    "tags": [
+        "event"
+    ],
+    "type": "room",
+    "items": [],
+    "npcs": []
+}

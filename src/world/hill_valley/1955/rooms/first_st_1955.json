@@ -1,0 +1,17 @@
+{
+    "id":  "first_st_1955",
+    "definition": "room",
+    "name":  "First Street (1955)",
+    "description":  "First Street, a vibrant artery of commerce, pulsates with the relentless rhythm of consumer desire. Here, new shops, gleaming with the promise of acquisition, proudly display their wares behind meticulously polished windows. Each display is a miniature universe of aspiration, a carefully curated tableau designed to convince the passerby that their very existence hinges upon the possession of a slightly shinier toaster or a more ergonomically designed garden gnome. One might ponder the philosophical implications of a society that defines itself by its possessions, or the cosmic significance of a perfectly arranged mannequin. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory. A truly profound experience, if one is inclined to find profundity in the subtle art of retail therapy and the relentless pursuit of material happiness.",
+    "exits":  {
+                  "west":  "holts_diner_1955",
+                  "east":  "main_st_west_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "shopping"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}
