@@ -1,0 +1,39 @@
+{
+  "id": "dark_mage",
+  "definition": "monster",
+  "name": "a dark mage",
+  "description": "A mysterious mage in flowing black robes stands here, arcane energy crackling around their hands.",
+  "currentRoom": "test_room",
+  "hp": 50,
+  "maxHp": 50,
+  "mp": 100,
+  "maxMp": 100,
+  "mpRegen": 2,
+  "level": 3,
+  "strength": 8,
+  "dexterity": 12,
+  "constitution": 10,
+  "intelligence": 16,
+  "wisdom": 14,
+  "charisma": 10,
+  "ac": 2,
+  "heartbeatInterval": 30,
+  "wanders": false,
+  "spells": ["magic_missile", "heal"],
+  "spellCastChance": 0.5,
+  "dialogue": [
+    "The arcane arts are not for the faint of heart.",
+    "Magic flows through all things... if you know how to harness it.",
+    "I sense great potential in you... or perhaps great danger.",
+    "The old ways of magic are dying. We must preserve them."
+  ],
+  "emoteActions": [
+    "waves their staff, sending sparks into the air",
+    "mutters incantations under their breath",
+    "studies an ancient tome",
+    "gazes into the distance with glowing eyes"
+  ],
+  "emoteChance": 0.3,
+  "dialogueChance": 0.4,
+  "wanderChance": 0.3
+}

@@ -21,6 +21,17 @@ module.exports = {
       return;
     }
 
+    // Deprecation notice - redirect to status command
+    session.sendLine('');
+    session.sendLine(colors.warning('⚠️  The "score" command is deprecated.'));
+    session.sendLine(colors.dim('Use "status" instead for a comprehensive character overview.'));
+    session.sendLine('');
+
+    // Execute status command instead
+    const statusCommand = require('./status.js');
+    statusCommand.execute(session, args, entityManager, colors);
+    return;
+
     // Get XP progress
     const xpInfo = leveling.getXPProgress(player);
 

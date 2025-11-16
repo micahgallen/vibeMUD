@@ -5,6 +5,8 @@
  */
 
 const leveling = require('./leveling');
+const magic = require('./magic');
+const mana = require('./mana');
 
 // Dice rolling helper
 function d20() {
@@ -192,8 +194,25 @@ function processCombatRound(encounter, entityManager) {
       // TODO: Phase 3 - execute queued actions
       attacker.combat.queuedAction = null;
     } else {
-      // Default action: attack
-      executeAttack(attackerId, defenderId, entityManager);
+      // NPCs with spells have a chance to cast instead of attacking
+      if (attacker.type === 'npc' && attacker.spells && attacker.spells.length > 0 && attacker.maxMp) {
+        const castChance = attacker.spellCastChance || 0.4; // 40% chance to cast by default
+
+        if (Math.random() < castChance) {
+          const spellCast = tryNPCSpellcast(attackerId, defenderId, entityManager);
+
+          // If spell cast failed, fall back to basic attack
+          if (!spellCast) {
+            executeAttack(attackerId, defenderId, entityManager);
+          }
+        } else {
+          // Chose to attack instead
+          executeAttack(attackerId, defenderId, entityManager);
+        }
+      } else {
+        // Default action: attack
+        executeAttack(attackerId, defenderId, entityManager);
+      }
     }
 
     // Check if defender died
@@ -754,6 +773,65 @@ function respawnNPC(respawnData, entityManager) {
   }
 
   console.log(`  ✨ NPC respawned: ${npc.id} at ${npc.currentRoom}`);
+}
+
+/**
+ * Attempt to cast a spell during NPC's combat turn
+ * @param {string} npcId - The NPC caster ID
+ * @param {string} targetId - The target ID
+ * @param {object} entityManager - The entity manager
+ * @returns {boolean} - Whether spell was successfully cast
+ */
+function tryNPCSpellcast(npcId, targetId, entityManager) {
+  const npc = entityManager.get(npcId);
+  const target = entityManager.get(targetId);
+
+  if (!npc || !target || !npc.spells || npc.spells.length === 0) {
+    return false;
+  }
+
+  // Select a random spell from NPC's spell list
+  const randomSpellId = npc.spells[Math.floor(Math.random() * npc.spells.length)];
+  const spell = magic.getSpell(randomSpellId);
+
+  if (!spell) {
+    console.warn(`  ⚠️  NPC ${npc.name} has unknown spell: ${randomSpellId}`);
+    return false;
+  }
+
+  // Check if NPC can cast this spell
+  const castCheck = magic.canCast(npc, spell);
+  if (!castCheck.canCast) {
+    // Not enough mana or other restriction - fall back to basic attack
+    return false;
+  }
+
+  // Determine target based on spell type
+  let spellTargetId = targetId;
+  if (spell.targetType === 'self') {
+    spellTargetId = npcId; // Cast on self (heal, buff, etc.)
+  }
+
+  // Cast the spell
+  const result = magic.cast(npcId, spell.id, spellTargetId, entityManager);
+
+  if (!result.success) {
+    return false;
+  }
+
+  // Spell was cast successfully
+  console.log(`  🔮 ${npc.name} cast ${spell.name} in combat!`);
+
+  // Check if spell killed the target
+  if (result.effects) {
+    for (const effect of result.effects) {
+      if (effect.type === 'damage' && effect.targetDied) {
+        handleDeath(targetId, npcId, entityManager);
+      }
+    }
+  }
+
+  return true;
 }
 
 module.exports = {

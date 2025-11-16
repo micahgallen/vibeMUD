@@ -1,0 +1,22 @@
+{
+  "id": "magic_missile",
+  "name": "Magic Missile",
+  "description": "A bolt of magical force that unerringly strikes your enemy, dealing damage based on your intelligence and level.",
+  "manaCost": 10,
+  "minLevel": 1,
+  "targetType": "other",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "effects": [
+    {
+      "type": "damage",
+      "amount": 15,
+      "levelScale": 2
+    }
+  ],
+  "messages": {
+    "caster": "You fire a glowing missile of magical force at {target}!",
+    "target": "{caster} fires a glowing missile of magical force at you!",
+    "room": "{caster} fires a glowing missile at {target}!"
+  }
+}

@@ -15,6 +15,9 @@ const LoginHandler = require('./LoginHandler');
 const colors = require('./colors');
 const { getBanner } = require('../banner');
 const leveling = require('../systems/leveling');
+const magic = require('../systems/magic');
+const mana = require('../systems/mana');
+const path = require('path');
 
 const PORT = 4000;
 
@@ -36,6 +39,11 @@ async function init() {
 
   // Load emotes (social commands)
   commandDispatcher.loadEmotes();
+
+  // Load spells
+  console.log('Loading spells...');
+  const spellsPath = path.join(__dirname, '../../data/guilds/global');
+  magic.loadSpells(spellsPath);
 
   // Load all game objects
   console.log('Loading entities...');
@@ -60,6 +68,12 @@ async function init() {
         player[stat] = 10;
         updated = true;
       }
+    }
+
+    // Initialize mana pool if not present
+    if (typeof player.maxMp !== 'number') {
+      mana.initializeMana(player, null, entityManager);
+      updated = true;
     }
 
     if (updated) {
@@ -253,6 +267,38 @@ function setupNetworkCallbacks() {
 function startHeartbeat() {
   setInterval(() => {
     entityManager.tick();
+
+    const now = Date.now();
+
+    // Regenerate mana and clean up expired buffs/debuffs
+    for (const entity of entityManager.objects.values()) {
+      if (entity.type === 'player' || entity.type === 'npc') {
+        // Regenerate mana
+        if (entity.maxMp && entity.mp < entity.maxMp) {
+          mana.regenerateMana(entity.id, entityManager);
+        }
+
+        // Clean up expired buffs
+        if (entity.activeBuffs && entity.activeBuffs.length > 0) {
+          const expiredBuffs = entity.activeBuffs.filter(b => b.endTime <= now);
+          if (expiredBuffs.length > 0) {
+            for (const buff of expiredBuffs) {
+              magic.removeBuff(entity.id, buff.id, entityManager);
+            }
+          }
+        }
+
+        // Clean up expired debuffs
+        if (entity.activeDebuffs && entity.activeDebuffs.length > 0) {
+          const expiredDebuffs = entity.activeDebuffs.filter(d => d.endTime <= now);
+          if (expiredDebuffs.length > 0) {
+            for (const debuff of expiredDebuffs) {
+              magic.removeDebuff(entity.id, debuff.id, entityManager);
+            }
+          }
+        }
+      }
+    }
   }, 1000);
 }
 

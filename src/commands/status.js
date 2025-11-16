@@ -3,6 +3,8 @@
  * Display player health, stats, and conditions
  */
 
+const leveling = require('../systems/leveling');
+
 module.exports = {
   id: "status",
   name: "status",
@@ -28,12 +30,23 @@ module.exports = {
 
     // Health
     const hpPercent = Math.round((player.hp / player.maxHp) * 100);
-    let hpColor = colors.success;
-    if (hpPercent < 30) hpColor = colors.error;
-    else if (hpPercent < 60) hpColor = colors.warning;
+    const hpColor = colors.magenta; // Magenta for health bar
 
-    const hpBar = this.createBar(player.hp, player.maxHp, 30);
-    output.push(colors.info('Health: ') + hpColor(`${player.hp}/${player.maxHp}`) + ` ${hpBar} ${hpPercent}%`);
+    const hpBar = this.createBar(player.hp, player.maxHp, 30, '█', '░');
+    const hpText = hpColor(`${player.hp}/${player.maxHp}`);
+    const paddedHpText = colors.pad(hpText, 10, 'left'); // Pad to 10 characters
+    output.push('❤️  ' + colors.dim('Health: ') + paddedHpText + ` ${hpColor(hpBar)} ${hpPercent}%`);
+
+    // Mana (if player has mana pool)
+    if (player.maxMp && player.maxMp > 0) {
+      const mpPercent = Math.round((player.mp / player.maxMp) * 100);
+      const mpBar = this.createBar(player.mp, player.maxMp, 30, '█', '░');
+      const mpColor = colors.info; // Blue for mana
+      const mpText = mpColor(`${player.mp}/${player.maxMp}`);
+      const paddedMpText = colors.pad(mpText, 10, 'left'); // Pad to 10 characters
+      output.push('✨ ' + colors.dim('Mana:   ') + paddedMpText + ` ${mpColor(mpBar)} ${mpPercent}%`);
+    }
+
     output.push('');
 
     // Ability Scores (D&D 5E)
@@ -52,10 +65,33 @@ module.exports = {
     output.push(colors.highlight('Combat Statistics:'));
     output.push(colors.line(60, '-'));
 
-    // Calculate AC from equipment
-    const totalAC = this.calculateTotalAC(player, entityManager);
-    output.push(colors.info('  Armor Class:  ') + colors.colorize(totalAC, colors.MUD_COLORS.INFO));
+    // Calculate AC from equipment and buffs
+    let totalAC = this.calculateTotalAC(player, entityManager);
+    if (player.buffedAC) {
+      totalAC += player.buffedAC;
+    }
+
+    const acDisplay = player.buffedAC
+      ? colors.colorize(totalAC, colors.MUD_COLORS.INFO) + colors.success(` (+${player.buffedAC} buff)`)
+      : colors.colorize(totalAC, colors.MUD_COLORS.INFO);
+
+    output.push(colors.info('  Armor Class:  ') + acDisplay);
     output.push(colors.info('  Level:        ') + colors.colorize(player.level || 1, colors.MUD_COLORS.WARNING));
+    output.push('');
+
+    // Experience & Leveling
+    const xpInfo = leveling.getXPProgress(player);
+    output.push(colors.highlight('Experience & Level Progress:'));
+    output.push(colors.line(60, '-'));
+
+    if (xpInfo.atMaxLevel) {
+      output.push(colors.info('  XP:           ') + colors.xpGain(`${xpInfo.currentXP.toLocaleString()} XP `) + colors.warning('(MAX LEVEL)'));
+    } else {
+      const xpBar = this.createBar(xpInfo.xpIntoLevel, xpInfo.xpNeededForLevel, 30, '=', ' ');
+      output.push(colors.info('  XP:           ') + colors.xpGain(`${xpInfo.currentXP.toLocaleString()}`) + colors.dim(` / ${xpInfo.xpForNextLevel.toLocaleString()}`));
+      output.push(colors.info('  Progress:     ') + colors.dim(xpBar) + ` ${xpInfo.percentToNext}%`);
+      output.push(colors.dim(`                ${xpInfo.xpIntoLevel.toLocaleString()} / ${xpInfo.xpNeededForLevel.toLocaleString()} to level ${xpInfo.currentLevel + 1}`));
+    }
     output.push('');
 
     // Conditions
@@ -75,6 +111,30 @@ module.exports = {
       const level = player.drunkState.level;
       const drunkLevel = level >= 3 ? 'Very Drunk' : level >= 2 ? 'Drunk' : 'Tipsy';
       conditions.push(colors.warning('🍺 ' + drunkLevel) + colors.dim(` (+STR/END, -INT/WIS)`));
+    }
+
+    // Active buffs
+    if (player.activeBuffs && player.activeBuffs.length > 0) {
+      for (const buff of player.activeBuffs) {
+        const timeLeft = Math.ceil((buff.endTime - Date.now()) / 1000);
+        // Only show buffs that haven't expired
+        if (timeLeft > 0) {
+          const statName = buff.stat.toUpperCase();
+          conditions.push(colors.success(`✨ ${statName} Buff`) + colors.dim(` (+${buff.amount}, ${timeLeft}s)`));
+        }
+      }
+    }
+
+    // Active debuffs
+    if (player.activeDebuffs && player.activeDebuffs.length > 0) {
+      for (const debuff of player.activeDebuffs) {
+        const timeLeft = Math.ceil((debuff.endTime - Date.now()) / 1000);
+        // Only show debuffs that haven't expired
+        if (timeLeft > 0) {
+          const statName = debuff.stat.toUpperCase();
+          conditions.push(colors.error(`💀 ${statName} Debuff`) + colors.dim(` (-${debuff.amount}, ${timeLeft}s)`));
+        }
+      }
     }
 
     if (conditions.length > 0) {
@@ -106,12 +166,12 @@ module.exports = {
   /**
    * Create a visual bar representation
    */
-  createBar: function(current, max, width) {
+  createBar: function(current, max, width, filledChar = '█', emptyChar = '░') {
     const percent = current / max;
     const filled = Math.round(percent * width);
     const empty = width - filled;
 
-    return '[' + '█'.repeat(filled) + '░'.repeat(empty) + ']';
+    return '[' + filledChar.repeat(filled) + emptyChar.repeat(empty) + ']';
   },
 
   /**
