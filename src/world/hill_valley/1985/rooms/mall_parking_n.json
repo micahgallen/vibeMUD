@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1985/mall_parking_n",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (North)",
+  "description": "The northern expanse of the mall's parking lot, a sea of asphalt under the indifferent sky. Faded yellow lines mark spaces for cars that are, for the most part, dented and slightly sad. A few rogue shopping carts stand abandoned, silent monuments to forgotten errands. The air smells of hot asphalt and the faint, sweet aroma of exhaust fumes.",
+  "exits": {
+    "north": "hill_valley/1985/jfk_dr9",
+    "south": "hill_valley/1985/twin_pines_mall",
+    "east": "hill_valley/1985/mall_parking_ne",
+    "west": "hill_valley/1985/mall_parking_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

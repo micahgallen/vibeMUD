@@ -5,8 +5,14 @@
   "name": "Twin Pines Mall",
   "description": "A sprawling cathedral of consumerism, a monument to 1980s excess. The Twin Pines Mall is a cathedral of consumerism, a sprawling monument to the 1980s, a decade that, in retrospect, was mostly about shoulder pads and questionable economic theories. Within its climate-controlled confines, a bewildering array of shops offer goods and services that are, for the most part, utterly superfluous to the continued functioning of the universe. It's a place where people wander, often aimlessly, in search of something they didn't know they needed, only to find they still don't. The air hums with Muzak and the faint, collective sigh of wallets being emptied. It is, of course, also a nexus of temporal anomalies, but nobody ever notices, because there's a sale on leg warmers.",
   "exits": {
-    "north": "hill_valley/1985/lyon_estates",
-    "east": "hill_valley/1985/mall_parking"
+    "north": "hill_valley/1985/mall_parking_n",
+    "northeast": "hill_valley/1985/mall_parking_ne",
+    "east": "hill_valley/1985/mall_parking_e",
+    "southeast": "hill_valley/1985/mall_parking_se",
+    "south": "hill_valley/1985/mall_parking_s",
+    "southwest": "hill_valley/1985/mall_parking_sw",
+    "west": "hill_valley/1985/mall_parking_w",
+    "northwest": "hill_valley/1985/mall_parking_nw"
   },
   "tags": [
     "shopping",

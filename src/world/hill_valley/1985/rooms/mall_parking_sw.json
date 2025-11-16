@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/mall_parking_sw",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (Southwest)",
+  "description": "The southwest corner of the parking lot, where teenagers come to smoke. The ground is littered with cigarette butts and discarded soda cans. Graffiti adorns a nearby wall, a colorful but ultimately meaningless declaration of youthful angst. The air is thick with the smell of cheap tobacco and rebellion.",
+  "exits": {
+    "northeast": "hill_valley/1985/twin_pines_mall",
+    "east": "hill_valley/1985/mall_parking_s",
+    "north": "hill_valley/1985/mall_parking_w"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

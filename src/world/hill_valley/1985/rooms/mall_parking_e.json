@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/mall_parking_e",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (East)",
+  "description": "The eastern side of the parking lot, closest to the main entrance. This area is slightly less desolate, with a few more cars and a designated 'expectant mothers' parking spot that has clearly been used by a monster truck. A faded sign points towards the mall entrance, its cheerful font a stark contrast to the general air of malaise.",
+  "exits": {
+    "west": "hill_valley/1985/twin_pines_mall",
+    "north": "hill_valley/1985/mall_parking_ne",
+    "south": "hill_valley/1985/mall_parking_se"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}
