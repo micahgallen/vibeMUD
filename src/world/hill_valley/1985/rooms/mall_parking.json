@@ -5,8 +5,8 @@
   "name": "Mall Parking Lot",
   "description": "A vast, asphalt monument to consumerism and the internal combustion engine. The Mall Parking Lot is a vast, flat expanse of asphalt, a monument to the internal combustion engine and the human desire to acquire things. The faded paint lines, like ancient hieroglyphs, once dictated order, but now merely suggest a vague sense of direction. It's a place where cars, those magnificent beasts of burden, are temporarily abandoned by their owners, who then venture into the retail labyrinth. On occasion, it transforms into a stage for events of dubious merit, like car washes or bake sales, reminding everyone that even in the most mundane of spaces, life, uh, finds a way, usually involving a sticky floor and a questionable hot dog.",
   "exits": {
-    "west": "hill_valley/1985/twin_pines_mall",
-    "south": "hill_valley/1985/biffs_garage"
+    "north": "hill_valley/1985/jfk_dr9",
+    "south": "hill_valley/1985/twin_pines_mall"
   },
   "tags": [
     "outdoor"
