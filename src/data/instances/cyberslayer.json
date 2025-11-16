@@ -6,6 +6,18 @@
   },
   "instances": [
     {
+      "id": "apple_001_1763291921671_7sdy67nbg",
+      "createdAt": "2025-11-16T11:18:41.671Z",
+      "modifiedAt": "2025-11-16T11:19:28.514Z",
+      "isInstance": true,
+      "quantity": 3,
+      "location": {
+        "type": "inventory",
+        "owner": "cyberslayer"
+      },
+      "templateId": "apple_001"
+    },
+    {
       "id": "wooden_shield_001_1763161780985_7p4y8jg1s",
       "createdAt": "2025-11-14T23:09:40.985Z",
       "modifiedAt": "2025-11-14T23:09:40.985Z",
@@ -39,40 +51,16 @@
       "templateId": "sword_001"
     },
     {
-      "id": "purple_nurple_1763191642871_3fp80yfdk",
-      "createdAt": "2025-11-15T07:27:22.871Z",
-      "modifiedAt": "2025-11-15T07:27:22.871Z",
+      "id": "dirty_martini_1763219294087_fqau71t2v",
+      "createdAt": "2025-11-15T15:08:14.087Z",
+      "modifiedAt": "2025-11-15T15:08:14.087Z",
       "isInstance": true,
       "quantity": 1,
       "location": {
         "type": "inventory",
         "owner": "cyberslayer"
       },
-      "templateId": "purple_nurple"
-    },
-    {
-      "id": "loaded_tater_tots_1763191761811_p1d007ee4",
-      "createdAt": "2025-11-15T07:29:21.812Z",
-      "modifiedAt": "2025-11-15T07:29:21.812Z",
-      "isInstance": true,
-      "quantity": 1,
-      "location": {
-        "type": "inventory",
-        "owner": "cyberslayer"
-      },
-      "templateId": "loaded_tater_tots"
-    },
-    {
-      "id": "classic_martini_1763193751336_hkb0mxng1",
-      "createdAt": "2025-11-15T08:02:31.336Z",
-      "modifiedAt": "2025-11-15T08:02:31.336Z",
-      "isInstance": true,
-      "quantity": 1,
-      "location": {
-        "type": "inventory",
-        "owner": "cyberslayer"
-      },
-      "templateId": "classic_martini"
+      "templateId": "dirty_martini"
     }
   ]
 }

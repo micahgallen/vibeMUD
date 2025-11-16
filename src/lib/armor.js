@@ -85,6 +85,15 @@ module.exports = Object.create(item, {
     configurable: true
   },
 
+  // Resistances provided by this armor
+  // Format: { "fire": 0.25, "cold": 0.5 }
+  resistances: {
+    value: null,
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+
   /**
    * Calculate effective AC provided by this armor
    * @param {number} wearerDex - The wearer's dexterity score

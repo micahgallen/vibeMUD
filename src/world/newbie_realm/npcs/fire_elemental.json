@@ -1,0 +1,26 @@
+{
+  "id": "fire_elemental_001",
+  "definition": "monster",
+  "name": "fire elemental",
+  "description": "A blazing humanoid figure made of pure flame crackles with intense heat.",
+  "currentRoom": "newbie_realm_training_ground",
+  "level": 5,
+  "hp": 80,
+  "maxHp": 80,
+  "strength": 14,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 8,
+  "wisdom": 10,
+  "charisma": 6,
+  "ac": 13,
+  "xpReward": 150,
+  "damageType": "fire",
+  "resistances": {
+    "fire": 1.0,
+    "poison": 0.5,
+    "cold": -0.5
+  },
+  "respawnTime": 300,
+  "aggressive": false
+}

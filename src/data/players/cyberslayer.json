@@ -2,10 +2,10 @@
   "id": "cyberslayer",
   "type": "player",
   "name": "Cyberslayer",
-  "hp": 108,
-  "maxHp": 130,
+  "hp": 80,
+  "maxHp": 150,
   "isAdmin": true,
-  "level": 4,
+  "level": 6,
   "strength": 10,
   "dexterity": 11,
   "constitution": 10,
@@ -31,7 +31,7 @@
   "capname": "\u001b[31m\u001b[1mCyBeR\u001b[34mSLAYER\u001b[0m",
   "isDead": false,
   "chatEnabled": true,
-  "xp": 2000,
+  "xp": 3750,
   "location": {
     "type": "room",
     "room": "hotel_floor_4"

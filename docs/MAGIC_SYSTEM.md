@@ -214,6 +214,80 @@ Moves caster or target to different room.
 }
 ```
 
+#### 7. DOT (Damage Over Time)
+Applies ongoing damage that ticks at regular intervals.
+
+```json
+{
+  "type": "dot",
+  "initialDamage": 8,
+  "damagePerTick": 5,
+  "tickInterval": 3,
+  "duration": 15,
+  "stackBehavior": "stack",
+  "maxStacks": 3,
+  "damageType": "fire",
+  "tickMessage": "🔥 {target} burns for {damage} fire damage from {spell}!"
+}
+```
+
+**DOT Properties:**
+- `initialDamage` - Upfront damage on cast (optional)
+- `damagePerTick` - Damage dealt each tick
+- `tickInterval` - Seconds between ticks
+- `duration` - Total duration in seconds
+- `stackBehavior` - How multiple casts stack (optional, default: "stack")
+- `maxStacks` - Maximum stacks allowed (optional, default: unlimited)
+- `damageType` - Type of damage for resistance checks (optional, default: "magical")
+- `tickMessage` - Custom message shown on each tick (optional)
+
+**Tick Message Placeholders:**
+- `{target}` - Target entity name
+- `{damage}` - Actual damage dealt (after resistances)
+- `{spell}` - Spell name
+
+**Stack Behaviors:**
+- `"stack"` (default) - Multiple casts stack, dealing damage separately
+- `"refresh"` - Recasting refreshes duration but doesn't add new stack
+- `"none"` - Can't cast while already active on target
+
+**Damage Types and Resistances:**
+The game supports a comprehensive damage type system that applies to both spells and physical combat.
+
+**Common Damage Types:**
+- `physical` - Normal melee/ranged attacks
+- `fire` - Fire-based attacks and spells
+- `poison` - Toxic damage
+- `force` - Pure magical force (like Magic Missile)
+- `magical` - General magical damage
+- `cold`, `lightning`, `acid` - Elemental damage types
+
+**Resistance Format:**
+Entities can have resistances to specific damage types (0.0 to 1.0):
+```json
+{
+  "resistances": {
+    "fire": 0.5,    // 50% fire resistance
+    "poison": 0.25, // 25% poison resistance
+    "force": 1.0    // Immune to force damage
+  }
+}
+```
+
+**How Resistances Work:**
+- `0.0` = No resistance (full damage)
+- `0.5` = 50% resistance (half damage)
+- `1.0` = Immune (no damage, shows immunity message)
+- Applies to ALL damage sources: spells, DOTs, and physical attacks
+
+**Physical Combat Integration:**
+- NPCs can have `"damageType": "fire"` to deal fire damage with melee
+- Weapons can specify `"damageType": "cold"` for elemental weapons
+- Default is `"physical"` if not specified
+
+**Example with max 3 stacks:**
+If you cast a 3-stack DOT four times, the oldest stack is removed and replaced with the new one.
+
 ### Multi-Effect Spells
 
 Spells can have multiple effects:

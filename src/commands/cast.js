@@ -93,9 +93,9 @@ module.exports = {
     // Check if spell is aggressive and should start combat
     const target = entityManager.get(targetId);
     if (target && target.type === 'npc' && !player.combat && !target.combat) {
-      // Check if spell has aggressive effects (damage or debuff)
+      // Check if spell has aggressive effects (damage, debuff, or dot)
       const hasAggressiveEffect = result.effects?.some(effect =>
-        effect.type === 'damage' || effect.type === 'debuff'
+        effect.type === 'damage' || effect.type === 'debuff' || effect.type === 'dot'
       );
 
       if (hasAggressiveEffect) {

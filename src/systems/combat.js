@@ -6,6 +6,7 @@
 
 const leveling = require('./leveling');
 const magic = require('./magic');
+const resistances = require('./resistances');
 const mana = require('./mana');
 
 // Dice rolling helper
@@ -251,23 +252,46 @@ function executeAttack(attackerId, defenderId, entityManager) {
   const hit = rollToHit(attacker, defender, entityManager);
 
   if (hit) {
-    // Calculate damage
-    const damage = calculateDamage(attacker, defender, entityManager);
+    // Calculate damage (returns object with amount, damageType, resisted info)
+    const damageInfo = calculateDamage(attacker, defender, entityManager);
+
+    // Check for immunity
+    if (damageInfo.immune) {
+      entityManager.notifyPlayer(attackerId,
+        `\x1b[90m${defender.name} is immune to ${damageInfo.damageType} damage!\x1b[0m`);
+      entityManager.notifyPlayer(defenderId,
+        `\x1b[90mYou are immune to ${attacker.name}'s ${damageInfo.damageType} attack!\x1b[0m`);
+
+      const room = attacker.currentRoom;
+      if (room) {
+        entityManager.notifyRoom(room,
+          `\x1b[90m${defender.name} is immune to ${attacker.name}'s attack!\x1b[0m`,
+          [attackerId, defenderId]);
+      }
+      return true;
+    }
 
     // Apply damage
-    applyDamage(defenderId, damage, attackerId, entityManager);
+    applyDamage(defenderId, damageInfo.amount, attackerId, entityManager);
+
+    // Build damage message with resistance info
+    let damageMsg = `${damageInfo.amount} damage`;
+    if (damageInfo.resisted) {
+      const resistPercent = Math.floor(damageInfo.resistanceAmount * 100);
+      damageMsg += ` \x1b[90m(${resistPercent}% resisted)\x1b[0m`;
+    }
 
     // Notify participants
     entityManager.notifyPlayer(attackerId,
-      `\x1b[32mYou hit ${defender.name} for \x1b[33m${damage}\x1b[32m damage!\x1b[0m`);
+      `\x1b[32mYou hit ${defender.name} for \x1b[33m${damageMsg}\x1b[32m!\x1b[0m`);
     entityManager.notifyPlayer(defenderId,
-      `\x1b[31m${attacker.name} hits you for \x1b[33m${damage}\x1b[31m damage!\x1b[0m`);
+      `\x1b[31m${attacker.name} hits you for \x1b[33m${damageMsg}\x1b[31m!\x1b[0m`);
 
     // Notify room
     const room = attacker.currentRoom;
     if (room) {
       entityManager.notifyRoom(room,
-        `\x1b[33m${attacker.name} hits ${defender.name} for ${damage} damage!\x1b[0m`,
+        `\x1b[33m${attacker.name} hits ${defender.name} for ${damageInfo.amount} damage!\x1b[0m`,
         [attackerId, defenderId]);
     }
 
@@ -392,9 +416,9 @@ function calculateAC(entity, entityManager) {
 /**
  * Calculate damage amount from equipped weapon or unarmed
  * @param {object} attacker - The attacker object
- * @param {object} defender - The defender object (for future armor calculations)
+ * @param {object} defender - The defender object (for resistance calculations)
  * @param {object} entityManager - The entity manager
- * @returns {number} - Damage amount
+ * @returns {object} - Damage info: {amount, damageType, resisted}
  */
 function calculateDamage(attacker, defender, entityManager) {
   const strengthMod = Math.floor(((attacker.strength || 10) - 10) / 2); // D&D-style modifier
@@ -402,19 +426,52 @@ function calculateDamage(attacker, defender, entityManager) {
 
   // Check for equipped weapon in main hand
   let weaponDamage = '1d4'; // Unarmed default
+  let damageType = attacker.damageType || 'physical'; // Default physical damage
+
   if (attacker.equipped && attacker.equipped.mainHand) {
     const weapon = entityManager.get(attacker.equipped.mainHand);
     if (weapon && weapon.itemType === 'weapon' && !weapon.broken) {
       weaponDamage = weapon.getDamage ? weapon.getDamage() : (weapon.damage || '1d4');
+      damageType = weapon.damageType || damageType; // Weapon can override damage type
     }
   }
 
   // Parse weapon damage (e.g., "1d6", "2d4", "1d8+2")
   const baseDamage = parseDamageRoll(weaponDamage);
+  let totalDamage = Math.max(1, baseDamage + strengthMod + levelBonus);
 
-  const totalDamage = Math.max(1, baseDamage + strengthMod + levelBonus);
+  // Calculate aggregated resistances (base + armor)
+  const defenderResistances = resistances.calculateResistances(defender, entityManager);
 
-  return totalDamage;
+  // Apply resistance
+  let resisted = false;
+  let resistanceAmount = 0;
+
+  if (defenderResistances[damageType] !== undefined) {
+    resistanceAmount = defenderResistances[damageType];
+
+    if (resistanceAmount >= 1.0) {
+      // Immune
+      return {
+        amount: 0,
+        damageType: damageType,
+        resisted: true,
+        immune: true
+      };
+    }
+
+    if (resistanceAmount !== 0) {
+      totalDamage = Math.floor(totalDamage * (1 - resistanceAmount));
+      resisted = true;
+    }
+  }
+
+  return {
+    amount: Math.max(0, totalDamage),
+    damageType: damageType,
+    resisted: resisted,
+    resistanceAmount: resistanceAmount
+  };
 }
 
 /**

@@ -1,0 +1,25 @@
+{
+  "id": "poison",
+  "name": "Poison",
+  "description": "Inject your enemy with a venomous toxin that courses through their veins. Recasting refreshes the poison's duration.",
+  "manaCost": 12,
+  "minLevel": 1,
+  "targetType": "other",
+  "effects": [
+    {
+      "type": "dot",
+      "initialDamage": 3,
+      "damagePerTick": 4,
+      "tickInterval": 4,
+      "duration": 20,
+      "stackBehavior": "refresh",
+      "damageType": "poison",
+      "tickMessage": "☠️ {target} writhes in pain from {spell}, taking {damage} poison damage!"
+    }
+  ],
+  "messages": {
+    "caster": "You poison {target} with venomous magic!",
+    "target": "{caster} poisons you with dark magic!",
+    "room": "{caster} poisons {target} with a venomous spell!"
+  }
+}

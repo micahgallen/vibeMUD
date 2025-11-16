@@ -297,6 +297,9 @@ function startHeartbeat() {
             }
           }
         }
+
+        // Process DOT ticks (delegated to magic system)
+        magic.processDotTicks(entity, entityManager);
       }
     }
   }, 1000);

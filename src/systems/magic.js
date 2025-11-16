@@ -12,6 +12,7 @@
  */
 
 const mana = require('./mana');
+const resistances = require('./resistances');
 const fs = require('fs');
 const path = require('path');
 
@@ -298,6 +299,9 @@ function executeEffect(caster, target, effect, spell, entityManager) {
     case 'teleport':
       return applyTeleport(caster, target, effect, entityManager);
 
+    case 'dot':
+      return applyDot(caster, target, effect, spell, entityManager);
+
     default:
       console.warn(`Unknown spell effect type: ${effectType}`);
       return { type: effectType, success: false, message: 'Unknown effect' };
@@ -317,11 +321,49 @@ function applyDamage(caster, target, effect, entityManager) {
     return { type: 'damage', success: false, message: 'No target' };
   }
 
-  // Calculate damage (base + intelligence modifier + level scaling)
+  // Calculate base damage (base + intelligence modifier + level scaling)
   const baseDamage = effect.amount || 10;
   const intMod = Math.floor(((caster.intelligence || 10) - 10) / 2);
   const levelBonus = (caster.level || 1) * (effect.levelScale || 0);
-  const totalDamage = Math.max(1, baseDamage + intMod + levelBonus);
+  let totalDamage = Math.max(1, baseDamage + intMod + levelBonus);
+
+  // Get damage type
+  const damageType = effect.damageType || 'magical';
+
+  // Calculate aggregated resistances (base + armor)
+  const targetResistances = resistances.calculateResistances(target, entityManager);
+
+  // Apply resistance modifier
+  let resistanceAmount = 0;
+  if (targetResistances[damageType] !== undefined) {
+    resistanceAmount = targetResistances[damageType]; // 0.0 to 1.0
+
+    if (resistanceAmount >= 1.0) {
+      // Immune - no damage
+      if (target.currentRoom) {
+        entityManager.notifyRoom(target.currentRoom,
+          `\x1b[90m${target.name} is immune to ${damageType} damage!\x1b[0m`);
+      }
+      return {
+        type: 'damage',
+        success: true,
+        amount: 0,
+        resisted: true,
+        damageType: damageType,
+        targetDied: false
+      };
+    }
+
+    // Apply partial resistance
+    const originalDamage = totalDamage;
+    totalDamage = Math.floor(totalDamage * (1 - resistanceAmount));
+
+    if (resistanceAmount > 0 && target.currentRoom) {
+      const resistPercent = Math.floor(resistanceAmount * 100);
+      entityManager.notifyRoom(target.currentRoom,
+        `\x1b[90m${target.name} resists ${resistPercent}% of the ${damageType} damage!\x1b[0m`);
+    }
+  }
 
   // Apply damage
   target.hp = Math.max(0, target.hp - totalDamage);
@@ -337,6 +379,8 @@ function applyDamage(caster, target, effect, entityManager) {
     type: 'damage',
     success: true,
     amount: totalDamage,
+    damageType: damageType,
+    resisted: resistanceAmount > 0,
     targetDied: target.hp <= 0
   };
 }
@@ -488,6 +532,102 @@ function applyDebuff(caster, target, effect, entityManager) {
 }
 
 /**
+ * Apply damage-over-time (DOT) effect
+ * @param {object} caster - The caster
+ * @param {object} target - The target
+ * @param {object} effect - The effect definition
+ * @param {object} spell - The spell definition (for messages)
+ * @param {object} entityManager - The entity manager
+ * @returns {object} - Effect result
+ */
+function applyDot(caster, target, effect, spell, entityManager) {
+  if (!target) {
+    return { type: 'dot', success: false, message: 'No target' };
+  }
+
+  // Initialize DOTs array if not exists
+  if (!target.activeDots) {
+    target.activeDots = [];
+  }
+
+  // Check for existing DOTs from this spell
+  const existingDots = target.activeDots.filter(d => d.spellId === spell.id);
+  const stackBehavior = effect.stackBehavior || 'stack'; // Default: stack
+  const maxStacks = effect.maxStacks || 999; // Default: unlimited
+
+  // Handle different stacking behaviors
+  if (stackBehavior === 'none' && existingDots.length > 0) {
+    // Can't apply - already active
+    return {
+      type: 'dot',
+      success: false,
+      message: `${target.name === caster.name ? 'You are' : target.name + ' is'} already affected by ${spell.name}!`
+    };
+  }
+
+  if (stackBehavior === 'refresh' && existingDots.length > 0) {
+    // Remove all existing DOTs from this spell and apply new one
+    for (const dot of existingDots) {
+      removeDot(target.id, dot.id, entityManager);
+    }
+    console.log(`  🔄 ${spell.name} DOT refreshed on ${target.name}`);
+  }
+
+  if (stackBehavior === 'stack' && existingDots.length >= maxStacks) {
+    // At max stacks - remove the oldest one
+    const oldest = existingDots.sort((a, b) => a.startTime - b.startTime)[0];
+    removeDot(target.id, oldest.id, entityManager);
+    console.log(`  ⚠️  ${spell.name} at max stacks (${maxStacks}), removing oldest`);
+  }
+
+  // Calculate initial damage
+  const initialDamage = effect.initialDamage || 0;
+  if (initialDamage > 0) {
+    const intMod = Math.floor(((caster.intelligence || 10) - 10) / 2);
+    const totalInitialDamage = Math.max(1, initialDamage + intMod);
+    target.hp = Math.max(0, target.hp - totalInitialDamage);
+    entityManager.markDirty(target.id);
+  }
+
+  // Create DOT object
+  const dot = {
+    id: `dot_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    spellId: spell.id, // Store spell ID for stacking checks
+    spellName: spell.name,
+    casterName: caster.name,
+    casterId: caster.id,
+    damagePerTick: effect.damagePerTick || 5,
+    tickInterval: effect.tickInterval || 3, // seconds between ticks
+    duration: effect.duration || 15, // total duration
+    tickMessage: effect.tickMessage || `🔥 {target} burns for {damage} damage from {spell}!`, // Customizable per spell
+    damageType: effect.damageType || 'magical', // fire, poison, magical, etc.
+    startTime: Date.now(),
+    endTime: Date.now() + ((effect.duration || 15) * 1000),
+    lastTick: Date.now()
+  };
+
+  target.activeDots.push(dot);
+  entityManager.markDirty(target.id);
+
+  // Schedule DOT removal
+  setTimeout(() => {
+    removeDot(target.id, dot.id, entityManager);
+  }, dot.duration * 1000);
+
+  const stackInfo = stackBehavior === 'stack' && maxStacks < 999 ? ` (${existingDots.length + 1}/${maxStacks} stacks)` : '';
+  console.log(`  🔥 ${spell.name} DOT applied to ${target.name} (${dot.damagePerTick} dmg every ${dot.tickInterval}s for ${dot.duration}s)${stackInfo}`);
+
+  return {
+    type: 'dot',
+    success: true,
+    initialDamage: initialDamage,
+    damagePerTick: dot.damagePerTick,
+    duration: dot.duration,
+    stacks: existingDots.length + 1
+  };
+}
+
+/**
  * Apply summon effect (spawn NPC helper)
  * @param {object} caster - The caster
  * @param {object} target - The target (unused for summons)
@@ -526,16 +666,26 @@ function applySummon(caster, target, effect, entityManager) {
     maxHp: effect.hp || 20,
     strength: effect.strength || 10,
     dexterity: effect.dexterity || 10,
-    intelligence: effect.intelligence || 10
+    intelligence: effect.intelligence || 10,
+    heartbeatInterval: 2, // Attack every 2 seconds
+    heartbeat: function(entityManager) {
+      // Attack summoner's combat opponent
+      const summoner = entityManager.get(this.summoner);
+      if (summoner && summoner.combat && summoner.combat.opponent) {
+        const opponent = entityManager.get(summoner.combat.opponent);
+        if (opponent && opponent.currentRoom === this.currentRoom) {
+          const combat = require('./combat');
+          combat.executeAttack(this.id, summoner.combat.opponent, entityManager);
+        }
+      }
+    }
   });
 
   // Register summon
   entityManager.objects.set(summonId, summon);
 
-  // Enable heartbeat if NPC has one
-  if (summon.heartbeatInterval) {
-    entityManager.enableHeartbeat(summonId, summon.heartbeatInterval);
-  }
+  // Enable heartbeat for attacking
+  entityManager.enableHeartbeat(summonId, summon.heartbeatInterval);
 
   // Notify room
   entityManager.notifyRoom(caster.currentRoom,
@@ -685,6 +835,115 @@ function removeDebuff(targetId, debuffId, entityManager) {
 }
 
 /**
+ * Remove a DOT from a target
+ * @param {string} targetId - The target entity ID
+ * @param {string} dotId - The DOT ID to remove
+ * @param {object} entityManager - The entity manager
+ */
+function removeDot(targetId, dotId, entityManager) {
+  const target = entityManager.get(targetId);
+
+  if (!target || !target.activeDots) {
+    return;
+  }
+
+  const dotIndex = target.activeDots.findIndex(d => d.id === dotId);
+  if (dotIndex === -1) {
+    return;
+  }
+
+  const dot = target.activeDots[dotIndex];
+  target.activeDots.splice(dotIndex, 1);
+  entityManager.markDirty(targetId);
+
+  // Notify room that the DOT has ended
+  if (target.currentRoom) {
+    entityManager.notifyRoom(target.currentRoom,
+      `\x1b[33mThe ${dot.spellName} effect on ${target.name} fades away.\x1b[0m`);
+  }
+
+  console.log(`  ⏱️  DOT expired: ${dot.spellName} on ${target.name}`);
+}
+
+/**
+ * Process DOT ticks for an entity
+ * @param {object} entity - The entity with active DOTs
+ * @param {object} entityManager - The entity manager
+ */
+function processDotTicks(entity, entityManager) {
+  if (!entity.activeDots || entity.activeDots.length === 0) {
+    return;
+  }
+
+  const now = Date.now();
+
+  for (const dot of entity.activeDots) {
+    const timeSinceLastTick = (now - dot.lastTick) / 1000;
+
+    if (timeSinceLastTick >= dot.tickInterval) {
+      // Calculate damage (potentially with resistances)
+      let damage = dot.damagePerTick;
+
+      // Calculate aggregated resistances (base + armor)
+      const entityResistances = resistances.calculateResistances(entity, entityManager);
+
+      // Check for resistance to this damage type
+      if (entityResistances[dot.damageType] !== undefined) {
+        const resistance = entityResistances[dot.damageType]; // 0.0 to 1.0
+        damage = Math.floor(damage * (1 - resistance));
+
+        if (resistance >= 1.0) {
+          // Immune - show special message
+          if (entity.currentRoom) {
+            entityManager.notifyRoom(entity.currentRoom,
+              `\x1b[90m${entity.name} resists the ${dot.spellName}!\x1b[0m`);
+          }
+          dot.lastTick = now;
+          continue; // Skip damage
+        }
+      }
+
+      // Apply damage
+      entity.hp = Math.max(0, entity.hp - damage);
+      entityManager.markDirty(entity.id);
+      dot.lastTick = now;
+
+      // Format and broadcast tick message
+      if (entity.currentRoom) {
+        const message = dot.tickMessage
+          .replace('{target}', entity.name)
+          .replace('{damage}', damage)
+          .replace('{spell}', dot.spellName);
+
+        entityManager.notifyRoom(entity.currentRoom, `\x1b[31m${message}\x1b[0m`);
+      }
+
+      // Check for death
+      if (entity.hp <= 0) {
+        entity.isDead = true;
+        entityManager.markDirty(entity.id);
+
+        // Handle death if there's a caster
+        if (dot.casterId) {
+          const combat = require('./combat');
+          combat.handleDeath(entity.id, dot.casterId, entityManager);
+        }
+
+        return; // Stop processing DOTs for dead entity
+      }
+    }
+  }
+
+  // Clean up expired DOTs
+  const expiredDots = entity.activeDots.filter(d => d.endTime <= now);
+  if (expiredDots.length > 0) {
+    for (const dot of expiredDots) {
+      removeDot(entity.id, dot.id, entityManager);
+    }
+  }
+}
+
+/**
  * Despawn a summoned creature
  * @param {string} summonId - The summon entity ID
  * @param {object} entityManager - The entity manager
@@ -787,7 +1046,9 @@ module.exports = {
   canCast,
   validateTarget,
   cast,
+  processDotTicks,
   removeBuff,
   removeDebuff,
+  removeDot,
   despawnSummon
 };

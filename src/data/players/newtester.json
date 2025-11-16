@@ -7,7 +7,6 @@
   "maxHp": 100,
   "level": 1,
   "currentRoom": "test_room",
-  "inventory": [],
   "createdAt": "2025-11-12T15:25:46.718Z",
   "modifiedAt": "2025-11-12T15:25:46.718Z",
   "purse": {
@@ -25,5 +24,8 @@
   "constitution": 10,
   "intelligence": 10,
   "wisdom": 10,
-  "charisma": 10
+  "charisma": 10,
+  "maxMp": 10,
+  "mp": 10,
+  "mpRegen": 1
 }

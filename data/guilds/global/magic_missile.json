@@ -11,7 +11,8 @@
     {
       "type": "damage",
       "amount": 15,
-      "levelScale": 2
+      "levelScale": 2,
+      "damageType": "force"
     }
   ],
   "messages": {
