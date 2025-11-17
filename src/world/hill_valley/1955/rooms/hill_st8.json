@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hill_st8",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A spacious, residential stretch of Hill Street, hinting at former grandeur. You are on Hill St. The houses here are set back from the road, with spacious yards that speak of a time when land was plentiful and dreams were big. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/hill_st7",
+    "south": "hill_valley/1955/hill_st9"
+  },
+  "items": []
+}

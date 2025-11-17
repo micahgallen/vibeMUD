@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/hilldale_culdesac",
+  "type": "room",
+  "name": "Hilldale Cul-de-Sac",
+  "description": "A perfectly circular cul-de-sac, the epitome of suburban planning. You find yourself in a perfectly circular cul-de-sac, the architectural embodiment of suburban planning, designed to keep through-traffic out and conformity in. Three identical, yet subtly different, brand-new homes face inward, their windows reflecting the bright, optimistic sky. A brand new basketball hoop stands proudly in one driveway, its net pristine, a silent testament to the promise of a perfect childhood. The air is still, heavy with the scent of fresh paint and the unspoken expectations of a perfect life. To the west, the main Hilldale Street offers the only escape from this loop of domestic bliss.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_st3"
+  },
+  "items": []
+}

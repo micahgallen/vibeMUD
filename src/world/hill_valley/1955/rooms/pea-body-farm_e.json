@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_e",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (East)",
+  "description": "The eastern side of the Peabody farm, closest to the main road. This area is a bit more organized, with a neatly painted fence and a designated spot for the family's brand new pickup truck. A faded sign points towards the farmhouse, its cheerful font a testament to the family's pride in their land.",
+  "exits": {
+    "west": "hill_valley/1955/twin_pines_farm",
+    "north": "hill_valley/1955/pea-body-farm_ne",
+    "south": "hill_valley/1955/pea-body-farm_se"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

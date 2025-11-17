@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/main_st6",
+  "type": "room",
+  "name": "Main St",
+  "description": "A stretch of Main Street, where the mundane hints at hidden depths. You are on Main St. A manhole cover is securely in place, and the faint sound of running water can be heard, a constant reminder of the modern infrastructure that keeps things running smoothly. The street continues to the east and west, a ribbon of charming commerce. The air is filled with the scent of progress and the faint, sweet smell of possibility.",
+  "exits": {
+    "east": "hill_valley/1955/main_st5",
+    "west": "hill_valley/1955/main_st7"
+  },
+  "items": []
+}

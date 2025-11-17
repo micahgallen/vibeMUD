@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_nw",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (Northwest)",
+  "description": "The northwest corner of the farm, near the barn. A large, red barn sits here, its doors open to reveal a collection of farming equipment. The smell of hay is a pungent counterpoint to the otherwise fresh country air. A few chickens peck at the ground nearby.",
+  "exits": {
+    "southeast": "hill_valley/1955/twin_pines_farm",
+    "south": "hill_valley/1955/pea-body-farm_w",
+    "east": "hill_valley/1955/pea-body-farm_n"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

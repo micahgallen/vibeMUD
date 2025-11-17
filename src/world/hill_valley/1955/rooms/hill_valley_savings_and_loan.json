@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/hill_valley_savings_and_loan",
+  "type": "room",
+  "name": "Hill Valley Savings and Loan",
+  "description": "A bastion of financial prudence and community trust. The Hill Valley Savings and Loan is a bright, welcoming space where the tellers know your name and the loan officers offer a firm, reassuring handshake. Sunlight streams through large plate-glass windows, illuminating polished wood and the hopeful faces of Hill Valley's citizens. The air smells of fresh ink, old money, and the quiet optimism of a town on the rise. This is where dreams are built, one sensible mortgage at a time.",
+  "exits": {
+    "south": "hill_valley/1955/main_st2"
+  },
+  "items": []
+}

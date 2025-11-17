@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/first_st",
+  "type": "room",
+  "name": "First St",
+  "description": "A charming street that connects the bustling downtown area with the quiet residential neighborhoods. You are on First St, a clean, tree-lined street that serves as a vital link in the heart of Hill Valley. To the west, Hill St disappears into a neighborhood of charming homes, while to the east, First St continues its journey towards Hubbard Ave. To the north, the beautiful Courthouse Square Park offers a place for rest and recreation. To the south, the grand Essex Theater promises a night of entertainment.",
+  "exits": {
+    "west": "hill_valley/1955/hill_st2",
+    "east": "hill_valley/1955/first_st1",
+    "north": "hill_valley/1955/courthouse_square_south",
+    "south": "hill_valley/1955/essex_theater",
+    "southeast": "hill_valley/1955/the_soda_fountain"
+  },
+  "items": []
+}

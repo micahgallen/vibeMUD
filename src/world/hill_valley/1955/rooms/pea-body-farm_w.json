@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_w",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (West)",
+  "description": "The western side of the farm, a desolate expanse of empty fields. This part of the farm is mostly empty, a testament to the challenges of farming. A lone, sun-bleached scarecrow stands in the middle of the field, its arms outstretched, its button eyes staring blankly at the sky. It looks like it's been here since the Great Depression.",
+  "exits": {
+    "east": "hill_valley/1955/twin_pines_farm",
+    "south": "hill_valley/1955/pea-body-farm_sw",
+    "north": "hill_valley/1955/pea-body-farm_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

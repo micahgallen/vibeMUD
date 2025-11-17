@@ -1,0 +1,21 @@
+{
+  "id": "hill_valley/1955/twin_pines_farm",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Farm",
+  "description": "A picturesque farm on the outskirts of town. Twin Pines Farm is a sprawling property with a charming farmhouse, a big red barn, and acres of rolling green pastures. A pair of majestic pine trees stand sentinel at the entrance, their branches reaching towards the sky. The air is filled with the scent of fresh hay, and the sound of cows mooing in the distance. This is a place of simple, honest work, where the rhythm of life is dictated by the changing of the seasons.",
+  "exits": {
+    "north": "hill_valley/1955/pea-body-farm_n",
+    "northeast": "hill_valley/1955/pea-body-farm_ne",
+    "east": "hill_valley/1955/pea-body-farm_e",
+    "southeast": "hill_valley/1955/pea-body-farm_se",
+    "south": "hill_valley/1955/pea-body-farm_s",
+    "southwest": "hill_valley/1955/pea-body-farm_sw",
+    "west": "hill_valley/1955/pea-body-farm_w",
+    "northwest": "hill_valley/1955/pea-body-farm_nw"
+  },
+  "tags": [
+    "farm",
+    "time_travel_site"
+  ]
+}

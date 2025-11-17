@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_st3",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "The final stretch of Hilldale Street before it curves into a cul-de-sac. You are on the last straight segment of Hilldale Street, where the houses begin to hint at a slight variation in their architectural perfection, as if the builders were experimenting with new ideas. A lone, perfectly spherical topiary stands guard at the entrance to a cul-de-sac, a silent sentinel of suburban order. The air is still, broken only by the distant, almost imperceptible hum of a brand new central air conditioning unit. To the west, the street continues its journey through Hilldale, and to the east, the cul-de-sac awaits.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_st2",
+    "east": "hill_valley/1955/hilldale_culdesac"
+  },
+  "items": []
+}

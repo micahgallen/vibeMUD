@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hubbard_ave9",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "The end of Hubbard Avenue, where the town gives way to open farmland. You are at the southern end of Hubbard Ave. The road ends here, not with a grand vista, but with a large, fragrant pile of hay, a subtle reminder of the agricultural roots of Hill Valley. Hubbard Ave continues its journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is thick with the smell of the farm, a stark contrast to the suburban aspirations of the town.",
+  "exits": {
+    "north": "hill_valley/1955/hubbard_ave8",
+    "west": "hill_valley/1955/lyon_estates"
+  },
+  "items": []
+}

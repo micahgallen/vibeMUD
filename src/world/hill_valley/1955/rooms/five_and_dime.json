@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/five_and_dime",
+  "type": "room",
+  "name": "Five and Dime",
+  "description": "A wonderland of affordable treasures, the Five and Dime is a beloved local institution. The shelves are stocked with everything from candy and toys to hardware and housewares. The air is filled with the scent of popcorn, bubblegum, and the boundless possibilities of a Saturday afternoon. Children gaze with wide-eyed wonder at the colorful displays, while their parents browse the aisles for bargains. This is a place where a nickel can still buy you a dream.",
+  "exits": {
+    "south": "hill_valley/1955/main_st1"
+  },
+  "items": []
+}

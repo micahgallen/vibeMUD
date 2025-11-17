@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/eisenhower_dr6",
+  "type": "room",
+  "name": "Eisenhower Dr",
+  "description": "A stretch of Eisenhower Drive, briefly enlivened by teenage activity. You are on Eisenhower Dr. A group of teenagers are gathered on a nearby lawn, their laughter a cheerful counterpoint to the quiet hum of the neighborhood. They are a fleeting burst of energy in the otherwise languid afternoon. Eisenhower Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr5",
+    "south": "hill_valley/1955/eisenhower_dr7"
+  },
+  "items": []
+}

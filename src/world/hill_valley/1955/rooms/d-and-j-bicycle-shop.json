@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/d-and-j-bicycle-shop",
+  "type": "room",
+  "definition": "room",
+  "name": "D&J Bicycle Shop",
+  "description": "A charming bicycle shop, where the promise of adventure is just a set of wheels away. D&J Bicycle Shop is a local institution, offering a wide selection of bicycles for all ages. Sunlight glints off the polished chrome of a brand-new Schwinn in the window display. The air is filled with the scent of new rubber and the faint, sweet smell of bubblegum. A friendly clerk is happy to help you find the perfect bike for your next adventure.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "bicycle"
+  ]
+}

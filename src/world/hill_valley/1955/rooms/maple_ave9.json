@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/maple_ave9",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "The southern terminus of Maple Avenue, where asphalt yields to wilderness. You are at the southern end of Maple Ave. The road turns into a dirt track here, leading into a thick forest that seems to swallow the last vestiges of civilization. Maple Ave continues its journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/maple_ave8"
+  },
+  "items": []
+}

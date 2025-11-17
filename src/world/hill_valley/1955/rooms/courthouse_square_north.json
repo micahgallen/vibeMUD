@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1955/courthouse_square_north",
+  "type": "room",
+  "name": "Courthouse Square North",
+  "description": "A beautiful, grassy park in the heart of Hill Valley. This is the north side of Courthouse Square, a vibrant green space where families gather for picnics and children play on the lush lawn. A majestic oak tree provides ample shade, and a flock of pigeons pecks at crumbs near a park bench. The air is filled with the scent of freshly cut grass and the happy laughter of children. To the north, Main Street beckons with its charming storefronts, and to the west, Hill Street leads to a quiet residential neighborhood. The south side of the square stretches directly south, and to the southeast, the magnificent Hill Valley Courthouse stands as a proud symbol of justice and community.",
+  "exits": {
+    "north": "hill_valley/1955/main_st2",
+    "west": "hill_valley/1955/hill_st",
+    "south": "hill_valley/1955/courthouse_square_south",
+    "southeast": "hill_valley/1955/courthouse"
+  },
+  "items": []
+}

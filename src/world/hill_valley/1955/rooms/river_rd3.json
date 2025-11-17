@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1955/river_rd3",
+  "type": "room",
+  "name": "River Road",
+  "description": "A secluded stretch of River Road, where the sounds of civilization are almost entirely absent. You are on River Road, a place where the distant hum of traffic has faded into a whisper, replaced by the chirping of unseen insects and the gentle rustle of leaves. The road here is well-maintained, a testament to the town's commitment to progress. The air is fresh, carrying the clean scent of pine and damp earth, a brief respite from the bustle of modern life.",
+  "exits": {
+    "west": "hill_valley/1955/river_rd2",
+    "east": "hill_valley/1955/river_rd4",
+    "south": "hill_valley/1955/high_school"
+  },
+  "items": []
+}

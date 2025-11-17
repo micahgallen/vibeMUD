@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1955/eisenhower_dr7",
+  "type": "room",
+  "name": "Eisenhower Dr",
+  "description": "A narrowing stretch of Eisenhower Drive, hinting at the edge of town. You are on Eisenhower Dr. The street is getting narrower here, as the town gives way to the surrounding countryside. Eisenhower Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr6",
+    "south": "hill_valley/1955/eisenhower_dr8",
+    "west": "hill_valley/1955/brown_mansion"
+  },
+  "items": []
+}

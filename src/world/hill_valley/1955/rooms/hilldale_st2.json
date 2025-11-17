@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_st2",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "Another pristine street in the heart of Hilldale. You are on another segment of Hilldale Street, where the illusion of suburban perfection is maintained with an almost religious fervor. The houses are slightly larger here, the landscaping even more elaborate, and the air carries a faint, expensive scent of chlorine from a hidden swimming pool. Children's toys are neatly put away, suggesting either impeccable tidiness or a complete lack of actual children. To the west and east, the street continues its relentless pursuit of flawlessness.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_st1",
+    "east": "hill_valley/1955/hilldale_st3"
+  },
+  "items": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/goldie_wilson_for_class_president_headquarters",
+  "type": "room",
+  "name": "Goldie Wilson for Class President Headquarters",
+  "description": "A hub of youthful ambition and political idealism. The Goldie Wilson for Class President Headquarters is a hive of activity, with teenagers making posters and planning campaign strategies. Banners proclaiming 'Goldie Wilson for Class President' and 'A Vote for Goldie is a Vote for Progress' adorn the walls. The air is filled with the scent of fresh paint, mimeograph ink, and the boundless optimism of youth. Goldie himself might even be here, shaking hands and charming his fellow students, a testament to the enduring belief that one person can make a difference.",
+  "exits": {
+    "south": "hill_valley/1955/main_st1"
+  },
+  "items": []
+}

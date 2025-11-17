@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/eisenhower_dr3",
+  "type": "room",
+  "name": "Eisenhower Dr",
+  "description": "A residential stretch of Eisenhower Drive, showcasing a mix of architectural styles. You are on Eisenhower Dr. The street is mostly residential here, with a mix of architectural styles that speak of the town's growing prosperity. Eisenhower Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr2",
+    "south": "hill_valley/1955/eisenhower_dr4"
+  },
+  "items": []
+}

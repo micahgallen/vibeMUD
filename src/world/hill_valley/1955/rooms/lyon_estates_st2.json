@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/lyon_estates_st2",
+  "type": "room",
+  "name": "Lyon Estates Street",
+  "description": "Another segment of Lyon Estates Street, where the houses are slightly larger. You are on another segment of Lyon Estates Street, where the houses, while still distinctly 1950s, are slightly larger, hinting at a subtle hierarchy of suburban success. A few children's bicycles are neatly parked on a lawn, a fleeting splash of color against the muted tones of the neighborhood. The air is still, broken only by the distant chirping of birds and the occasional, friendly bark of a dog. To the south and north, the street continues its quiet journey through this middle-class haven.",
+  "exits": {
+    "south": "hill_valley/1955/lyon_estates_st1",
+    "north": "hill_valley/1955/lyon_estates_st3"
+  },
+  "items": []
+}

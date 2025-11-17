@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/main_st1",
+  "type": "room",
+  "name": "Main St",
+  "description": "A vibrant stretch of Main Street, lined with a mix of new businesses and established shops. You are on Main St. The street continues to the east and west, its pavement clean and well-maintained. Several businesses line this stretch, including the gleaming facade of Statler Studebaker, the unassuming entrance to the Five and Dime, and the bustling Goldie Wilson for Class President Headquarters. The air is filled with the scent of new cars, popcorn, and the boundless optimism of a town on the move.",
+  "exits": {
+    "east": "hill_valley/1955/main_st",
+    "west": "hill_valley/1955/main_st2",
+    "northeast": "hill_valley/1955/statler_studebaker",
+    "north": "hill_valley/1955/five_and_dime",
+    "northwest": "hill_valley/1955/goldie_wilson_for_class_president_headquarters"
+  },
+  "items": []
+}

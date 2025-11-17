@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/hill_st2",
+  "type": "room",
+  "name": "Intersection of First St and Hill St",
+  "description": "The intersection of First and Hill Streets, a quiet residential corner. You are at the intersection of First St and Hill St, a peaceful residential corner where the houses are well-maintained and the lawns are perfectly manicured. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. First St stretches to the east, leading to other residential areas. To the west, the friendly neighborhood gas station offers service with a smile.",
+  "exits": {
+    "north": "hill_valley/1955/hill_st1",
+    "south": "hill_valley/1955/hill_st3",
+    "east": "hill_valley/1955/first_st",
+    "west": "hill_valley/1955/texaco",
+    "southwest": "hill_valley/1955/d-and-j-bicycle-shop"
+  },
+  "items": []
+}

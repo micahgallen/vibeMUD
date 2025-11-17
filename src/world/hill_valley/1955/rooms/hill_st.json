@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/hill_st",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The northernmost stretch of Hill Street, intersecting with Main Street. You are on Hill St, at the intersection with Main St. To the north, Main St beckons with its charming storefronts, and Hill St continues its quiet descent to the south. To the east, the beautiful Courthouse Square Park offers a place for rest and recreation. The air here is a blend of distant traffic and the faint, sweet scent of blooming flowers.",
+  "exits": {
+    "north": "hill_valley/1955/main_st3",
+    "south": "hill_valley/1955/hill_st1",
+    "east": "hill_valley/1955/courthouse_square_north",
+    "west": "hill_valley/1955/lous_cafe",
+    "southwest": "hill_valley/1955/the_soda_fountain"
+  },
+  "items": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/high_school",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley High School",
+  "description": "A beacon of learning and a hub of youthful energy. Hill Valley High School is a beautiful brick building, its halls echoing with the laughter and chatter of students. The air is filled with the scent of chalk dust, old books, and the boundless optimism of youth. In the classrooms, dedicated teachers strive to mold the minds of the next generation. In the gymnasium, athletes train for glory. This is a place where futures are forged, friendships are made, and the American dream is alive and well.",
+  "exits": {
+    "south": "hill_valley/1955/football_field",
+    "north": "hill_valley/1955/river_rd3"
+  },
+  "tags": [
+    "school"
+  ]
+}

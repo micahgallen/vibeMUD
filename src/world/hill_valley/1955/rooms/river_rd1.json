@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/river_rd1",
+  "type": "room",
+  "name": "River Road",
+  "description": "Another segment of River Road, where the distant hum of traffic fades into the rustle of leaves. You are on River Road, a path that feels increasingly isolated from the town's main arteries. The asphalt is smooth and well-maintained, and the sense of peace and tranquility is a welcome respite from the bustle of modern life. The air is cooler, carrying the scent of damp earth and the faint, almost imperceptible, whisper of the river nearby.",
+  "exits": {
+    "west": "hill_valley/1955/river_rd",
+    "east": "hill_valley/1955/river_rd2"
+  },
+  "items": []
+}

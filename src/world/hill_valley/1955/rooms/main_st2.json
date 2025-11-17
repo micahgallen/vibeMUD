@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/main_st2",
+  "type": "room",
+  "name": "Main St",
+  "description": "A central block of Main Street, a hub of commerce and community. You are on Main St, roughly in the middle of the block. To the east and west, the street stretches out, with storefronts on either side. Several businesses line this stretch, including the friendly neighborhood Western Auto, the trusted Hill Valley Savings and Loan, and the dusty old Pawn Shop. To the south, the beautiful Courthouse Square Park offers a place for rest and recreation.",
+  "exits": {
+    "east": "hill_valley/1955/main_st1",
+    "west": "hill_valley/1955/main_st3",
+    "south": "hill_valley/1955/courthouse_square_north",
+    "northeast": "hill_valley/1955/western_auto",
+    "north": "hill_valley/1955/hill_valley_savings_and_loan",
+    "northwest": "hill_valley/1955/pawn_shop"
+  },
+  "items": []
+}

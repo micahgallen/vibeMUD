@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1955/texaco",
+  "type": "room",
+  "definition": "room",
+  "name": "Texaco Station",
+  "description": "A beacon of fossil-fueled hope, smelling faintly of gasoline and progress. The Texaco Station stands as a beacon of fossil-fueled hope in a world that is hurtling towards a brighter future. Here, the internal combustion engine is king, and its loyal subjects bring their metal steeds for sustenance and a friendly chat with the attendant. The air is a heady mix of gasoline fumes, oil, and the faint, lingering scent of optimism. It's a place where the universe conspires to keep you moving, onward and upward.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st2"
+  },
+  "tags": [
+    "service"
+  ]
+}

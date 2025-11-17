@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_st1",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "A pristine street in the heart of Hilldale. You are on a quiet, tree-lined street in Hilldale, where every house looks like it was plucked from the pages of a home and garden magazine. The lawns are impossibly green, the cars in the driveways are brand new, and the silence is almost deafening, broken only by the distant whir of a lawnmower. It's the kind of place where nothing ever seems to go wrong, which, in Hill Valley, is usually a sign that something is about to. To the west, the entrance to Hilldale, and to the east, more of the same.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_entrance",
+    "east": "hill_valley/1955/hilldale_st2"
+  },
+  "items": []
+}

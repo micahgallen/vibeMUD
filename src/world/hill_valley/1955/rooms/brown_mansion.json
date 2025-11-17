@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/brown_mansion",
+  "type": "room",
+  "definition": "room",
+  "name": "Brown Mansion",
+  "description": "A grand, if slightly eccentric, mansion overlooking the town. The Brown Mansion is a marvel of modern architecture, a sprawling estate with a three-car garage and a state-of-the-art laboratory. The manicured lawns are a vibrant green, and the house itself is a testament to the inventive genius of its owner, Dr. Emmett Brown. The air is filled with the scent of freshly cut grass and the faint, almost imperceptible, hum of scientific progress. It's a place where the future is being invented today.",
+  "exits": {
+    "east": "hill_valley/1955/jfk_dr7"
+  },
+  "tags": [
+    "house",
+    "story_event"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/alleyway",
+  "type": "room",
+  "definition": "room",
+  "name": "Alleyway",
+  "description": "A clean, narrow alleyway where the only thing out of place is the occasional stray milk bottle. The brick walls are pristine, and the only scent is the faint, pleasant aroma of freshly baked bread from the nearby bakery. A friendly stray dog wags its tail, hoping for a pat on the head before trotting off. It's the kind of place where you could safely drop your wallet and expect to get it back with a friendly note.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st1"
+  },
+  "tags": [
+    "alley",
+    "urban"
+  ]
+}

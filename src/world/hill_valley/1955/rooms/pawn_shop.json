@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/pawn_shop",
+  "type": "room",
+  "name": "Pawn Shop",
+  "description": "A dusty old shop filled with forgotten treasures. The Pawn Shop is a dimly lit establishment, its shelves crammed with a bewildering assortment of items. A friendly old man with a magnifying glass peers at a pocket watch, his eyes twinkling with curiosity. The air is thick with the scent of old wood, brass, and the faint, sweet smell of pipe tobacco. This is a place where you can find anything from a rusty trumpet to a diamond ring, each with its own story to tell.",
+  "exits": {
+    "south": "hill_valley/1955/main_st2"
+  },
+  "items": []
+}

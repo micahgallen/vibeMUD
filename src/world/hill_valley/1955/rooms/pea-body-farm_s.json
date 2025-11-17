@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_s",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (South)",
+  "description": "The southern edge of the Peabody farm, bordering a dusty, unused field. The cornfields give way to dirt and weeds here. A sturdy 'No Trespassing' sign is posted on a wooden fence. The farmhouse seems distant from this vantage point, its welcoming porch light a tiny beacon in the vast expanse of the countryside.",
+  "exits": {
+    "north": "hill_valley/1955/twin_pines_farm",
+    "east": "hill_valley/1955/pea-body-farm_se",
+    "west": "hill_valley/1955/pea-body-farm_sw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

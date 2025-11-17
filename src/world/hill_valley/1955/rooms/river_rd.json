@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/river_rd",
+  "type": "room",
+  "name": "River Road",
+  "description": "A quiet stretch of River Road, where the asphalt meets the lush greenery of the surrounding countryside. You are on River Road, a ribbon of clean asphalt that winds its way through the beautiful landscape. To the west, the charming suburban sprawl of Hubbard Avenue beckons. The air here carries the faint scent of damp earth and blooming wildflowers, a testament to nature's beauty. The occasional rustle in the bushes hints at unseen wildlife, or perhaps just the wind playing tricks.",
+  "exits": {
+    "west": "hill_valley/1955/hubbard_ave1",
+    "east": "hill_valley/1955/river_rd1"
+  },
+  "items": []
+}

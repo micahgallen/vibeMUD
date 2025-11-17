@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_entrance",
+  "type": "room",
+  "name": "Hilldale Entrance",
+  "description": "The grand entrance to Hilldale, a brand new neighborhood of tomorrow. You stand at the threshold of Hilldale, a neighborhood that whispers 'the future is now' with the subtle grace of a freshly painted sign. Manicured lawns stretch towards meticulously maintained, brand-new homes, each a monument to post-war prosperity. The air here is thick with the scent of freshly cut grass and the faint, lingering aroma of new money. To the west, the sturdy Shonash Ravine Bridge looms, a gateway to the established parts of town. To the east, the perfectly paved streets of Hilldale beckon, promising a life of quiet, comfortable conformity.",
+  "exits": {
+    "west": "hill_valley/1955/shonash_bridge",
+    "east": "hill_valley/1955/hilldale_st1"
+  },
+  "items": []
+}

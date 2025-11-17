@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_n",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (North)",
+  "description": "The northern expanse of the Peabody farm, a sea of green under the bright blue sky. Rows of corn stretch as far as the eye can see, their stalks rustling in the gentle breeze. A few crows circle overhead, their calls a lonely counterpoint to the quiet hum of the countryside. The air smells of rich earth and the faint, sweet aroma of growing things.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr9",
+    "south": "hill_valley/1955/twin_pines_farm",
+    "east": "hill_valley/1955/pea-body-farm_ne",
+    "west": "hill_valley/1955/pea-body-farm_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

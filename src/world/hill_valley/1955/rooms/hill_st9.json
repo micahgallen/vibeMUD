@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hill_st9",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The abrupt end of Hill Street, where civilization gives way to wilderness. You are at the southern end of Hill St. The road ends here, giving way to a dense forest that begins just beyond the last paved asphalt. Hill St continues its journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/hill_st8",
+    "east": "hill_valley/1955/lyon_estates"
+  },
+  "items": []
+}

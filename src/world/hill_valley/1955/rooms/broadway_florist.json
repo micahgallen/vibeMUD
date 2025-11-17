@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/broadway_florist",
+  "type": "room",
+  "definition": "room",
+  "name": "Broadway Florist",
+  "description": "A delightful explosion of color and fragrance, the Broadway Florist is a feast for the senses. Sunlight streams through the large front window, illuminating buckets of fresh-cut roses, tulips, and daisies. The air is sweet with the scent of blossoms and damp earth. A cheerful woman in a floral apron hums a popular tune as she arranges a bouquet, her hands moving with practiced grace. This is where you come to celebrate life's special moments, one beautiful bloom at a time.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st3"
+  },
+  "tags": [
+    "shop",
+    "florist"
+  ]
+}

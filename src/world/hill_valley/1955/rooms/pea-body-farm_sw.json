@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/pea-body-farm_sw",
+  "type": "room",
+  "definition": "room",
+  "name": "Peabody Farm (Southwest)",
+  "description": "The southwest corner of the farm, where teenagers come to smoke. The ground is littered with empty cigarette packs and discarded soda bottles. A crude drawing of a heart with two sets of initials is carved into a nearby tree, a colorful but ultimately meaningless declaration of youthful romance. The air is thick with the smell of cheap tobacco and rebellion.",
+  "exits": {
+    "northeast": "hill_valley/1955/twin_pines_farm",
+    "east": "hill_valley/1955/pea-body-farm_s",
+    "north": "hill_valley/1955/pea-body-farm_w"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

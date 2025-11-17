@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/madam_ruths_palace_of_fortune",
+  "type": "room",
+  "definition": "room",
+  "name": "Madam Ruth's Palace of Fortune",
+  "description": "A small, dimly lit shop tucked away from the main street. The air inside 'Madam Ruth's Palace of Fortune' is thick with the scent of incense and mystery. Shelves are crammed with books on astrology, palmistry, and the occult, each promising a glimpse into the unknown. A beaded curtain separates the main shop from a back room where, presumably, futures are told and fortunes are revealed for a nominal fee. It's a place that feels unstuck in time, a haven for those seeking answers the modern world can't provide.",
+  "exits": {
+    "northeast": "hill_valley/1955/hill_st"
+  },
+  "tags": [
+    "shop",
+    "occult"
+  ]
+}

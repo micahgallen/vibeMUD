@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/eisenhower_dr9",
+  "type": "room",
+  "name": "Eisenhower Dr",
+  "description": "The southern terminus of Eisenhower Drive, where asphalt yields to wilderness. You are at the southern end of Eisenhower Dr. The road becomes a dirt path here, giving way to the encroaching woods. Eisenhower Dr continues its journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr8"
+  },
+  "items": []
+}

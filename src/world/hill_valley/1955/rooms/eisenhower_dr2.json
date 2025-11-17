@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/eisenhower_dr2",
+  "type": "room",
+  "name": "Eisenhower Dr",
+  "description": "A stretch of Eisenhower Drive, where youth still briefly asserts itself. You are on Eisenhower Dr. A teenager on a brand new Schwinn bicycle zips past you, heading south, a fleeting blur of youthful energy in the otherwise languid afternoon. Eisenhower Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/eisenhower_dr1",
+    "south": "hill_valley/1955/eisenhower_dr3"
+  },
+  "items": []
+}
