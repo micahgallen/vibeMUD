@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/river_rd_tunnel",
+  "type": "room",
+  "definition": "room",
+  "name": "River Road Tunnel",
+  "description": "A dark, damp tunnel bored through the heart of Deacon Hill. The air inside is cool and heavy with the smell of wet concrete and exhaust fumes, a stark contrast to the open air of River Road. The tunnel is a shortcut, a grimy passage that rumbles with the echo of every passing car. The walls are stained with years of grime, and the overhead lights flicker, casting long, dancing shadows. It's a place of transit, not lingering, a concrete artery connecting two sides of the hill, both equally worn down by time.",
+  "exits": {
+    "west": "hill_valley/1985/river_rd4",
+    "east": "hill_valley/1985/hilldale_entrance"
+  },
+  "tags": [
+    "tunnel",
+    "road"
+  ]
+}
