@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/clayton_bridge",
+  "type": "room",
+  "definition": "room",
+  "name": "Clayton Ravine Bridge",
+  "description": "A formidable concrete structure spanning a deep chasm, named after a tragedy. The Clayton Ravine Bridge stands as a testament to municipal engineering, a stark concrete ribbon stretched across the yawning maw of Clayton Ravine. Local legend, the kind whispered by bored teenagers and gossipy old-timers, claims the ravine is named for a schoolteacher who took a rather unfortunate and final plunge a century ago. Below, the river glints with a deceptive innocence, far from the mundane concerns of Hill Valley. To the east, the weary end of Main Street awaits.",
+  "exits": {
+    "east": "hill_valley/1985/main_st9"
+  },
+  "tags": [
+    "scenic",
+    "landmark"
+  ]
+}

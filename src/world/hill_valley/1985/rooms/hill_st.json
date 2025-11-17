@@ -6,7 +6,9 @@
   "exits": {
     "north": "hill_valley/1985/main_st3",
     "south": "hill_valley/1985/hill_st1",
-    "east": "hill_valley/1985/courthouse_square_north_parking_lot"
+    "east": "hill_valley/1985/courthouse_square_north_parking_lot",
+    "west": "hill_valley/1985/lous_fitness_aerobics_center",
+    "southwest": "hill_valley/1985/the_third_eye"
   },
   "items": []
 }

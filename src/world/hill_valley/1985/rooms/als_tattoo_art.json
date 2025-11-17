@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/als_tattoo_art",
+  "type": "room",
+  "definition": "room",
+  "name": "Al's Tattoo Art",
+  "description": "The buzz of a tattoo gun is the first thing you notice. Al's Tattoo Art is a small, slightly grimy parlor where questionable decisions are made permanent. The walls are covered in flash art—dragons, skulls, and the occasional poorly-rendered portrait of a rock star. The air smells of antiseptic, ink, and the faint, metallic tang of regret. Al, a large man with more tattoos than visible skin, looks up from his work, his eyes silently asking if you're here to make a mistake or just waste his time.",
+  "exits": {
+    "south": "hill_valley/1985/main_st3"
+  },
+  "tags": [
+    "service",
+    "shop"
+  ]
+}

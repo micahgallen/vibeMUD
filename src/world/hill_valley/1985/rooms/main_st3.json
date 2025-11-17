@@ -7,8 +7,9 @@
     "east": "hill_valley/1985/main_st2",
     "west": "hill_valley/1985/main_st4",
     "south": "hill_valley/1985/hill_st",
-    "northeast": "hill_valley/1985/ask_mr_foster_travel_service",
-    "north": "hill_valley/1985/bank_of_america"
+    "north": "hill_valley/1985/ask_mr_foster_travel_service",
+    "northwest": "hill_valley/1985/bank_of_america",
+    "northeast": "hill_valley/1985/als_tattoo_art"
   },
   "items": []
 }
