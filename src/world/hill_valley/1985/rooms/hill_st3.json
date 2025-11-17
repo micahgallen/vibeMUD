@@ -6,7 +6,8 @@
   "exits": {
     "north": "hill_valley/1985/hill_st2",
     "south": "hill_valley/1985/hill_st4",
-    "east": "hill_valley/1985/essex_theater"
+    "east": "hill_valley/1985/essex_theater",
+    "west": "hill_valley/1985/broadway_florist"
   },
   "items": []
 }

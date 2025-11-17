@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/broadway_florist",
+  "type": "room",
+  "definition": "room",
+  "name": "Broadway Florist",
+  "description": "A place where flowers come to wilt under the weary gaze of a flickering fluorescent light. The Broadway Florist shop is a riot of color and life, or at least it tries to be. Buckets of roses, carnations, and daisies line the walls, their vibrant petals a stark contrast to the shop's peeling paint and the general air of malaise that hangs over Hill Valley. The air is thick with the sweet, cloying scent of blossoms and the faint, almost imperceptible, hum of a dying refrigerator. It's a place where people come to buy apologies, congratulations, and last-ditch efforts to save a failing relationship, all wrapped in a cheerful, crinkly plastic that will outlive the sentiment by several centuries.",
+  "exits": {
+    "east": "hill_valley/1985/hill_st3"
+  },
+  "tags": [
+    "shop",
+    "florist"
+  ]
+}

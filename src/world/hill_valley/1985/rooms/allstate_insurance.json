@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/allstate_insurance",
+  "type": "room",
+  "definition": "room",
+  "name": "Allstate Insurance",
+  "description": "A beige office promising protection from a world that's slowly falling apart. The Allstate Insurance office is a monument to the mundane, a beige-carpeted purgatory where dreams of security go to be filed away. Fluorescent lights hum overhead, casting a pallid glow on framed certificates and a perpetually wilting plastic plant. A friendly, yet vaguely unsettling, agent sits behind a desk, ready to discuss your premiums and the ever-present threat of unforeseen circumstances. The air smells faintly of stale coffee and the unspoken anxieties of a suburban populace trying to hold onto what little they have.",
+  "exits": {
+    "north": "hill_valley/1985/first_st1"
+  },
+  "tags": [
+    "service",
+    "insurance"
+  ]
+}

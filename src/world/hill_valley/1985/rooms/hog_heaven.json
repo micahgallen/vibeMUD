@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/hog_heaven",
+  "type": "room",
+  "definition": "room",
+  "name": "Hog Heaven",
+  "description": "A greasy garage where dreams of the open road are assembled from spare parts. What was once a quaint bicycle shop now houses Hog Heaven, a motorcycle repair and custom shop. The air is thick with the scent of oil, gasoline, and the faint, metallic tang of ambition. Chrome gleams under the harsh fluorescent lights, reflecting rows of bikes in various states of repair, each a testament to a bygone era of freedom and rebellion. A radio in the corner plays classic rock, barely audible over the clang of wrenches and the occasional roar of an engine being tested.",
+  "exits": {
+    "east": "hill_valley/1985/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "motorcycle"
+  ]
+}
