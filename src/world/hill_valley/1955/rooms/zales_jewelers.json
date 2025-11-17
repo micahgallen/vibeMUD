@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/zales_jewelers",
+  "type": "room",
+  "name": "Zale's Jewelers",
+  "description": "A sparkling display of dreams and desires. Zale's Jewelers is a place where precious metals and glittering gemstones are transformed into symbols of love and commitment. The air is filled with the faint scent of polished silver and the quiet hum of anticipation. A friendly sales associate, with a keen eye for detail, is ready to help you find the perfect piece to mark life's special moments.",
+  "exits": {
+    "south": "hill_valley/1955/main_st2"
+  },
+  "items": []
+}

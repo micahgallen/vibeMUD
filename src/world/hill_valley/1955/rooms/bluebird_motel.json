@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/bluebird_motel",
+  "type": "room",
+  "name": "Bluebird Motel",
+  "description": "A charming roadside motel, offering a comfortable night's rest for weary travelers. The Bluebird Motel boasts a neon sign that flickers invitingly, promising 'Clean Rooms, Color TV, Air Conditioning'. The air is filled with the faint scent of fresh linen and the distant hum of traffic. A friendly proprietor, with a welcoming smile, is ready to hand you a key to your temporary home away from home.",
+  "exits": {
+    "south": "hill_valley/1955/main_st3"
+  },
+  "items": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/hals_bike_shop",
+  "type": "room",
+  "definition": "room",
+  "name": "Hal's Bike Shop",
+  "description": "A classic neighborhood bike shop, where the scent of grease and rubber mingles with the promise of open roads. Hal's Bike Shop is a local institution, offering everything from shiny new cruisers to sturdy repair services. The air is filled with the gentle whir of spokes and the friendly chatter of cycling enthusiasts. Hal, a man who knows bikes like the back of his hand, is always ready with a helpful tip or a perfectly inflated tire.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "bicycle"
+  ]
+}

@@ -2,7 +2,7 @@
   "id": "hill_valley/1955/town_theater",
   "type": "room",
   "name": "Town Theater",
-  "description": "The cultural heart of Hill Valley, the Town Theater is a grand old building with a rich history. The marquee proudly announces the latest community production, and the box office is doing a brisk business. Inside, the air is filled with the scent of fresh popcorn and the excited chatter of theatergoers. The plush red velvet seats have seen generations of Hill Valley residents enjoy everything from school plays to traveling vaudeville acts. This is a place where the community comes together to celebrate the magic of live performance.",
+  "description": "The grand dame of Hill Valley's entertainment scene. The Town Theater is a beautiful movie palace, its marquee ablaze with the title of the latest Hollywood blockbuster, 'The Atomic Kid'. The air is filled with the scent of fresh popcorn and the excited chatter of moviegoers. A friendly usher in a smart uniform tears your ticket with a smile, and the plush red velvet seats promise a comfortable escape into a world of adventure and romance. This is where dreams come to life on the silver screen.",
   "exits": {
     "west": "hill_valley/1955/main_st"
   },

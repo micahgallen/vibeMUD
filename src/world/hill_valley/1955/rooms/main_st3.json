@@ -8,8 +8,8 @@
     "west": "hill_valley/1955/main_st4",
     "south": "hill_valley/1955/hill_st",
     "north": "hill_valley/1955/ask_mr_foster_travel_service",
-    "northwest": "hill_valley/1955/bank_of_hill_valley",
-    "northeast": "hill_valley/1955/als_barber_shop"
+    "northwest": "hill_valley/1955/bank_of_america",
+    "northeast": "hill_valley/1955/bluebird_motel"
   },
   "items": []
 }

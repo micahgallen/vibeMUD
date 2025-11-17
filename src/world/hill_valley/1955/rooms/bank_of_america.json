@@ -1,9 +1,9 @@
 {
-  "id": "hill_valley/1955/bank_of_hill_valley",
+  "id": "hill_valley/1955/bank_of_america",
   "type": "room",
   "definition": "bank",
-  "name": "Bank of Hill Valley",
-  "description": "A pillar of the community, the Bank of Hill Valley stands as a testament to the town's prosperity. The polished marble floors and high ceilings exude an air of quiet confidence. Friendly tellers in crisp uniforms greet you with a warm smile, and the bank manager is always ready to offer a word of advice or a sensible loan to a promising young entrepreneur. The air smells of old money, new opportunities, and the faint, reassuring scent of lemon polish.",
+  "name": "Bank of America",
+  "description": "A modern financial institution, gleaming with chrome and the promise of prosperity. The Bank of America stands as a symbol of progress, its polished floors reflecting the bright, optimistic future of Hill Valley. Friendly tellers in crisp uniforms greet you with a warm smile, ready to assist with your financial needs. The air smells of fresh paper, new money, and the reassuring scent of economic growth.",
   "exits": {
     "south": "hill_valley/1955/main_st3"
   },
@@ -36,7 +36,7 @@
   "tellerPersonality": "friendly",
   "tellerName": "a friendly teller with a bright smile",
   "messages": {
-    "greeting": "Welcome to the Bank of Hill Valley! How can we help you today? You can check your 'balance', 'deposit' funds, or 'withdraw' them.",
+    "greeting": "Welcome to the Bank of America! How can we help you today? You can check your 'balance', 'deposit' funds, or 'withdraw' them.",
     "noAccess": "I'm sorry, our services aren't available to you. It's a corporate policy thing, you understand.",
     "closed": "We're closed. Come back during banking hours. We'll be here, bright and early!",
     "depositSuccess": "Deposited %s. It's safe with us!",

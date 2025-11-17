@@ -7,9 +7,9 @@
     "east": "hill_valley/1955/main_st1",
     "west": "hill_valley/1955/main_st3",
     "south": "hill_valley/1955/courthouse_square_north",
-    "northeast": "hill_valley/1955/western_auto",
-    "north": "hill_valley/1955/hill_valley_savings_and_loan",
-    "northwest": "hill_valley/1955/pawn_shop"
+    "northeast": "hill_valley/1955/hill_valley_stationers",
+    "north": "hill_valley/1955/zales_jewelers",
+    "northwest": "hill_valley/1955/jd_armstrong_realty"
   },
   "items": []
 }
