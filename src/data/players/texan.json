@@ -14,15 +14,7 @@
   "intelligence": 10,
   "wisdom": 10,
   "charisma": 10,
-<<<<<<< HEAD
-  "currentRoom": "hill_valley/1955/eisenhower_dr5",
-  "inventory": [
-    "dagger_001",
-    "gem_001"
-  ],
-=======
   "currentRoom": "hotel_floor_4_hall_4",
->>>>>>> main
   "purse": {
     "coins": {
       "platinum": 0,
