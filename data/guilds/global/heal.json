@@ -1,0 +1,22 @@
+{
+  "id": "heal",
+  "name": "Heal",
+  "description": "Channel healing energy to restore hit points to yourself or an ally.",
+  "manaCost": 15,
+  "minLevel": 1,
+  "targetType": "any",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "effects": [
+    {
+      "type": "heal",
+      "amount": 20,
+      "levelScale": 3
+    }
+  ],
+  "messages": {
+    "caster": "You channel healing energy into {target}!",
+    "target": "{caster} channels healing energy into you!",
+    "room": "{caster} glows with healing light as they tend to {target}."
+  }
+}

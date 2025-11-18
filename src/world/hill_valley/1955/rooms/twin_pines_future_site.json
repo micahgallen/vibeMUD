@@ -1,0 +1,16 @@
+{
+    "id":  "twin_pines_future_site",
+    "definition": "room",
+    "name":  "Wooded Lot (Future Twin Pines Site)",
+    "description":  "This unassuming wooded lot, currently boasting a pair of rather earnest young pine trees and a scattering of boulders that seem to have been dropped by a giant playing a particularly dull game of marbles, holds a secret. It is, in fact, the future site of the Twin Pines Mall, a retail behemoth destined to rise from this pastoral tranquility like a consumerist phoenix. One can almost hear the faint, ghostly jingle of cash registers and the distant cries of shoppers, a symphony of capitalism yet to be composed. For now, however, it remains a quiet testament to the universe's peculiar sense of humor, a place where the future is merely a whisper among the rustling leaves, and the only real urgency is the slow, inexorable march of geological time.",
+    "exits":  {
+                  "north":  "lyon_estates_future_path"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "wooded"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

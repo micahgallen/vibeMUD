@@ -60,6 +60,13 @@ module.exports = Object.create(item, {
     configurable: true
   },
 
+  damageType: {
+    value: 'physical',  // physical, fire, cold, lightning, poison, etc.
+    writable: true,
+    enumerable: true,
+    configurable: true
+  },
+
   /**
    * Get the damage dice for this weapon
    * @returns {string} Damage dice (e.g., "1d8+2")

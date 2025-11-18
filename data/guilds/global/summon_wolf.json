@@ -1,0 +1,29 @@
+{
+  "id": "summon_wolf",
+  "name": "Summon Wolf",
+  "description": "Call forth a spectral wolf to fight by your side for a limited time.",
+  "manaCost": 25,
+  "minLevel": 3,
+  "targetType": "self",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "effects": [
+    {
+      "type": "summon",
+      "npcDefinition": "monster",
+      "name": "spectral wolf",
+      "description": "A ghostly wolf with glowing blue eyes prowls here.",
+      "duration": 300,
+      "level": 3,
+      "hp": 30,
+      "strength": 12,
+      "dexterity": 14,
+      "intelligence": 6
+    }
+  ],
+  "messages": {
+    "caster": "You summon a spectral wolf to fight by your side!",
+    "target": "",
+    "room": "{caster} gestures and a spectral wolf materializes from magical energy!"
+  }
+}

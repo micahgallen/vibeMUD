@@ -4,7 +4,7 @@
   "name": "Inside the Transporter Booth",
   "description": "The Transporter Booth.\nThis booth looks a lot like one of those picture-taking booths you see in malls and at fairs. Directly in front of you there is a strange looking camera. On the wall to your right there are lots of buttons, and a sign that contains instructions on how to use the booth.",
   "exits": {
-    "out": "sesame_street_south"
+    "out": "hill_valley/1985/courthouse_square_south_parking_lot"
   },
   "features": {
     "camera": "It looks like an ordinary camera.",
@@ -18,7 +18,7 @@
       {
         "number": 2,
         "name": "Hill Valley",
-        "destination": "twin_pines_transit_hub"
+        "destination": "hill_valley/1985/courthouse_square_south_parking_lot"
       }
     ]
   },

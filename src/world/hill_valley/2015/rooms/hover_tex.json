@@ -1,0 +1,16 @@
+{
+  "id": "hover_tex",
+  "type": "room",
+  "name": "Hover-Tex Service (2015)",
+  "description": "A hover-vehicle service station with automated bays and a charging depot.",
+  "exits": {
+    "west": "courthouse_plaza_2015",
+    "south": "transport_hub_2015"
+  },
+  "items": [],
+  "npcs": [],
+  "tags": [
+    "service",
+    "transport"
+  ]
+}

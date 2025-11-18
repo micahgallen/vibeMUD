@@ -16,5 +16,17 @@
   "currentRoom": "test_room",
   "chatEnabled": true,
   "createdAt": "2025-11-14T23:52:34.778Z",
-  "modifiedAt": "2025-11-14T23:52:34.778Z"
+  "modifiedAt": "2025-11-14T23:52:34.778Z",
+  "purse": {
+    "coins": {
+      "platinum": 0,
+      "gold": 6,
+      "silver": 5,
+      "copper": 0
+    }
+  },
+  "bankAccount": 0,
+  "maxMp": 10,
+  "mp": 10,
+  "mpRegen": 1
 }

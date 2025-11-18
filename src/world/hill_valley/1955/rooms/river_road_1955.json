@@ -1,0 +1,17 @@
+{
+    "id":  "river_road_1955",
+    "definition": "room",
+    "name":  "River Road (1955)",
+    "description":  "River Road, a ribbon of asphalt unfurling beside the river, exists in a state of perpetual, gentle contemplation. Here, the water flows with an almost philosophical indifference to the passage of time, and the road itself seems to whisper tales of countless journeys, both momentous and utterly trivial. Families, those curious collections of individuals bound by genetics and a shared appreciation for sandwiches, occasionally gather near the bank, engaging in the ancient ritual of picnicking. One might observe a child chasing a butterfly, a fleeting moment of joy against the backdrop of the river's eternal flow, and ponder the cosmic significance of a dropped potato salad. It's a place where the universe, in its infinite wisdom, occasionally allows for a brief, idyllic pause before resuming its relentless, often bewildering, trajectory.",
+    "exits":  {
+                  "west":  "future_lyon_site",
+                  "north":  "bridge_mill_1955"
+              },
+    "items": [],
+    "npcs": [],
+    "tags":  [
+                 "scenic"
+             ],
+    "createdAt": "2025-11-14T00:00:00Z",
+    "modifiedAt": "2025-11-14T00:00:00Z"
+}

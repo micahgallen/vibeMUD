@@ -29,5 +29,8 @@
   "location": {
     "type": "room",
     "room": "hot_tub_room"
-  }
+  },
+  "maxMp": 10,
+  "mp": 10,
+  "mpRegen": 1
 }

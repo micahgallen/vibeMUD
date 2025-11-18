@@ -8,7 +8,6 @@
   "isAdmin": true,
   "level": 1,
   "currentRoom": "arena_main",
-  "inventory": [],
   "createdAt": "2025-11-12T22:08:55.184Z",
   "modifiedAt": "2025-11-12T22:08:55.185Z",
   "chatEnabled": true,
@@ -27,5 +26,8 @@
   "constitution": 10,
   "intelligence": 10,
   "wisdom": 10,
-  "charisma": 10
+  "charisma": 10,
+  "maxMp": 10,
+  "mp": 10,
+  "mpRegen": 1
 }

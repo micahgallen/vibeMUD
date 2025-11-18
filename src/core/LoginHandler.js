@@ -3,6 +3,7 @@
  * Part of the vibeMUD core infrastructure
  */
 const { hashPassword, verifyPassword } = require('../utils/password');
+const mana = require('../systems/mana');
 
 class LoginHandler {
   constructor(entityManager, colors) {
@@ -176,6 +177,9 @@ class LoginHandler {
       createdAt: new Date().toISOString(),
       modifiedAt: new Date().toISOString()
     };
+
+    // Initialize mana pool based on intelligence and level
+    mana.initializeMana(newPlayer);
 
     try {
       this.entityManager.register(newPlayer);

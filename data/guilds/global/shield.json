@@ -1,0 +1,23 @@
+{
+  "id": "shield",
+  "name": "Shield",
+  "description": "Conjure a magical shield that increases armor class for a limited time.",
+  "manaCost": 12,
+  "minLevel": 2,
+  "targetType": "any",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "effects": [
+    {
+      "type": "buff",
+      "stat": "ac",
+      "amount": 3,
+      "duration": 120
+    }
+  ],
+  "messages": {
+    "caster": "You conjure a shimmering magical shield around {target}!",
+    "target": "{caster} conjures a shimmering magical shield around you!",
+    "room": "{caster} gestures and a shimmering shield appears around {target}."
+  }
+}

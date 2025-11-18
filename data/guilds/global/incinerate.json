@@ -1,0 +1,26 @@
+{
+  "id": "incinerate",
+  "name": "Incinerate",
+  "description": "Set your enemy ablaze with searing magical flames that burn over time.",
+  "manaCost": 18,
+  "minLevel": 2,
+  "targetType": "other",
+  "effects": [
+    {
+      "type": "dot",
+      "initialDamage": 8,
+      "damagePerTick": 5,
+      "tickInterval": 3,
+      "duration": 15,
+      "stackBehavior": "stack",
+      "maxStacks": 3,
+      "damageType": "fire",
+      "tickMessage": "🔥 {target} burns for {damage} fire damage from {spell}!"
+    }
+  ],
+  "messages": {
+    "caster": "You incinerate {target} with searing magical flames!",
+    "target": "{caster} sets you ablaze with magical fire!",
+    "room": "{caster} incinerates {target} with a blast of magical fire!"
+  }
+}

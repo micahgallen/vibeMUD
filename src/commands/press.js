@@ -115,16 +115,20 @@ module.exports = {
       return;
     }
 
-    // Transport sequence with flavor
+    // Transport sequence with flavor - broadcast to room
+    entityManager.notifyRoom(boothRoom.id, `${player.name} presses the button for ${destination.name}.`);
     session.send(`You press the button for ${destination.name}.\n`);
 
     await this.delay(1000);
+    entityManager.notifyRoom(boothRoom.id, colors.info("The camera begins to hum softly."));
     session.send(colors.info("The camera begins to hum softly.") + "\n\n");
 
     await this.delay(3000);
+    entityManager.notifyRoom(boothRoom.id, colors.warning(`${player.name} begins to shimmer and break down into small particles!`));
     session.send(colors.warning("As you look down, you then notice that you are being broken down into\nsmall particles.") + "\n\n");
 
     await this.delay(2000);
+    entityManager.notifyRoom(boothRoom.id, colors.highlight(`${player.name} is sucked into the camera with a WHOOSH!`));
     session.send(colors.highlight("You then feel a strange pulling sensation as you are sucked into the camera.") + "\n\n");
 
     await this.delay(1000);
@@ -133,6 +137,7 @@ module.exports = {
     boothRoom.exits.out = destination.destination;
     entityManager.markDirty('booth_room');
 
+    entityManager.notifyRoom(boothRoom.id, colors.success(`${player.name} materializes in the booth!`));
     session.send(colors.success("Suddenly you are standing in a different booth.") + "\n\n");
     session.send(boothRoom.description + "\n");
   },

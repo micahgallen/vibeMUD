@@ -1,0 +1,23 @@
+{
+  "id": "weaken",
+  "name": "Weaken",
+  "description": "Sap your enemy's strength with dark magic, reducing their attack power.",
+  "manaCost": 8,
+  "minLevel": 2,
+  "targetType": "other",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "effects": [
+    {
+      "type": "debuff",
+      "stat": "strength",
+      "amount": 3,
+      "duration": 90
+    }
+  ],
+  "messages": {
+    "caster": "You curse {target} with weakening magic!",
+    "target": "{caster} curses you with weakening magic! You feel your strength drain away.",
+    "room": "{caster} gestures at {target}, who staggers as dark energy washes over them."
+  }
+}
