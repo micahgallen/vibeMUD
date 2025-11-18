@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/sherwin_williams",
+  "type": "room",
+  "definition": "room",
+  "name": "Sherwin-Williams",
+  "description": "A vibrant facade of color, promising to cover up the cracks of reality. The Sherwin-Williams paint store is a deceptive oasis of color in a world of fading hues. Walls are lined with endless swatches, each promising a fresh start, a brighter future, or at least a decent coat of \"Harvest Gold\" to hide the peeling wallpaper. The air is thick with the chemical tang of paint and the faint, hopeful scent of renovation. A bored clerk leans against the counter, waiting for someone to believe that a new shade of \"Seafoam Green\" can truly change anything.",
+  "exits": {
+    "north": "hill_valley/1985/first_st1"
+  },
+  "tags": [
+    "shop",
+    "paint"
+  ]
+}

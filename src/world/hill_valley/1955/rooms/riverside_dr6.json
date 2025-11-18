@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr6",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A stretch of Riverside Drive, briefly enlivened by the joyful sounds of teenage activity. A group of youngsters are gathered on a nearby, perfectly manicured lawn, their laughter a cheerful counterpoint to the quiet hum of the neighborhood. They are a fleeting burst of youthful energy in the otherwise languid, sun-drenched afternoon. Riverside Drive continues its gentle descent, a pristine ribbon of asphalt winding through charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr5",
+    "south": "hill_valley/1955/riverside_dr7"
+  },
+  "items": []
+}

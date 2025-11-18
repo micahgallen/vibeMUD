@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1955/riverside_dr7",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A narrowing stretch of Riverside Drive, gently hinting at the town's peaceful edge. The street, a pristine ribbon of asphalt, begins to subtly yield to the surrounding, verdant countryside. Riverside Drive continues its quiet descent both north and south, winding through charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird, a perfect symphony of suburban tranquility.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr6",
+    "south": "hill_valley/1955/riverside_dr8",
+    "west": "hill_valley/1955/brown_mansion"
+  },
+  "items": []
+}

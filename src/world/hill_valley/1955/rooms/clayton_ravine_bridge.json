@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/clayton_ravine_bridge",
+  "type": "room",
+  "definition": "room",
+  "name": "Clayton Ravine Bridge",
+  "description": "The sturdy Clayton Ravine Bridge, a marvel of engineering and a testament to Hill Valley's pioneering spirit, gracefully spans the deep Clayton Ravine. Its wooden planks hum a reassuring tune under the weight of passing automobiles, a familiar melody to the locals. Below, the river flows peacefully, a shimmering ribbon of blue winding its way through the lush green landscape. To the east, the promising expanse of Hill Valley beckons, a vision of idyllic suburban growth.",
+  "exits": {
+    "east": "hill_valley/1955/main_st9"
+  },
+  "tags": [
+    "scenic",
+    "landmark"
+  ]
+}

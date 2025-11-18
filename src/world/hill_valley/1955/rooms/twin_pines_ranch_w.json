@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_w",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (West)",
+  "description": "The western side of the Twin Pines Ranch, a serene expanse of fields, patiently awaiting the Peabody family's next planting. A lone, sun-bleached scarecrow stands proudly in the middle of the field, its arms outstretched in a welcoming gesture, its button eyes gazing optimistically at the sky. It looks as though it has stood here since the dawn of time, a silent guardian of the ranch's enduring spirit.",
+  "exits": {
+    "east": "hill_valley/1955/twin_pines_ranch",
+    "south": "hill_valley/1955/twin_pines_ranch_sw",
+    "north": "hill_valley/1955/twin_pines_ranch_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

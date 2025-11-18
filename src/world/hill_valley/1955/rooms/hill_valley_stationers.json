@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/hill_valley_stationers",
+  "type": "room",
+  "name": "Hill Valley Stationers",
+  "description": "A quiet shop filled with the pleasant scent of paper and ink. Hill Valley Stationers offers a wide selection of writing materials, from elegant fountain pens to practical notebooks. The air is filled with the promise of untold stories and heartfelt letters. A friendly clerk is happy to help you find the perfect paper for your correspondence.",
+  "exits": {
+    "south": "hill_valley/1955/main_st2"
+  },
+  "items": []
+}

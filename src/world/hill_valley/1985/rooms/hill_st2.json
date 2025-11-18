@@ -7,7 +7,8 @@
     "north": "hill_valley/1985/hill_st1",
     "south": "hill_valley/1985/hill_st3",
     "east": "hill_valley/1985/first_st",
-    "west": "hill_valley/1985/texaco"
+    "west": "hill_valley/1985/texaco",
+    "southwest": "hill_valley/1985/hog_heaven"
   },
   "items": []
 }

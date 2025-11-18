@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_n",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (North)",
+  "description": "The northern expanse of the Twin Pines Ranch, a verdant sea of green under the bright blue sky, meticulously tended by the Peabody family. Rows of corn stretch as far as the eye can see, their stalks rustling a gentle, contented symphony in the breeze. A few crows circle overhead, their calls a harmonious counterpoint to the wholesome hum of the countryside. The air smells of rich, fertile earth and the faint, sweet aroma of growing things, a promise of bountiful harvests.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr9",
+    "south": "hill_valley/1955/twin_pines_ranch",
+    "east": "hill_valley/1955/twin_pines_ranch_ne",
+    "west": "hill_valley/1955/twin_pines_ranch_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

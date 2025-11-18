@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/ask_mr_foster_travel_service",
+  "type": "room",
+  "name": "Ask Mr. Foster Travel Service",
+  "description": "A gateway to the world, where adventure awaits! The 'Ask Mr. Foster Travel Service' office is a bright and modern establishment, filled with the promise of exciting journeys to faraway lands. Gleaming posters of exotic destinations adorn the walls, showcasing a world of possibilities. A friendly, sharply dressed agent sits behind a large metal desk, ready to help you plan the trip of a lifetime. The air is filled with the scent of fresh ink from newly printed tickets and the palpable excitement of a world waiting to be explored.",
+  "exits": {
+    "south": "hill_valley/1955/main_st3"
+  },
+  "items": []
+}

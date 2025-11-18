@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/main_st3",
+  "type": "room",
+  "name": "Intersection of Main St and Hill St",
+  "description": "The intersection of Main Street and Hill Street, a hub of charming commerce. You are at the intersection of Main St and Hill St. Main St continues to the east and west, a ribbon of charming commerce. Hill St stretches to the south, disappearing into a neighborhood of charming homes. A friendly police officer directs traffic with a smile and a wave. Several businesses line this stretch, including the quaint Ask Mr. Foster Travel Service and the imposing Bank of Hill Valley. The air is filled with the scent of blooming flowers from the nearby florist and the faint, sweet smell of cherry pipe tobacco from the barber shop.",
+  "exits": {
+    "east": "hill_valley/1955/main_st2",
+    "west": "hill_valley/1955/main_st4",
+    "south": "hill_valley/1955/hill_st",
+    "north": "hill_valley/1955/ask_mr_foster_travel_service",
+    "northwest": "hill_valley/1955/bank_of_america",
+    "northeast": "hill_valley/1955/bluebird_motel"
+  },
+  "items": []
+}

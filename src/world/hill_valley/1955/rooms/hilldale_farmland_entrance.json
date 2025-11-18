@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_farmland_entrance",
+  "type": "room",
+  "name": "Hilldale Farmland Entrance",
+  "description": "The grand entrance to Hilldale Farmland, a vast expanse of fertile earth that whispers promises of bountiful harvests. You stand at the threshold of what will one day be a bustling neighborhood, but for now, it is a serene landscape of meticulously tilled fields, each a monument to agricultural prosperity. The air here is thick with the wholesome scent of rich soil and the faint, lingering aroma of honest labor. To the south, Main Street beckons with its charming commerce, while to the east, the perfectly tilled fields of Hilldale stretch towards the horizon, promising a life of quiet, comfortable abundance.",
+  "exits": {
+    "east": "hill_valley/1955/hilldale_farmland_field1",
+    "south": "hill_valley/1955/main_st9"
+  },
+  "items": []
+}

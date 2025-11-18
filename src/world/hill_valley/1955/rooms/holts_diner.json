@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/holts_diner",
+  "type": "room",
+  "name": "Holt's Diner",
+  "description": "A classic American diner, gleaming with chrome and the aroma of fresh coffee. Holt's Diner is a bustling hub of activity, where the clatter of plates and the friendly chatter of patrons create a lively atmosphere. The air is thick with the scent of sizzling bacon, sweet pancakes, and endless possibilities. A friendly waitress, with a pencil tucked behind her ear, is always ready to refill your coffee and offer a slice of homespun wisdom. This is where the day begins, one hearty breakfast at a time.",
+  "exits": {
+    "west": "hill_valley/1955/hubbard_ave"
+  },
+  "items": []
+}

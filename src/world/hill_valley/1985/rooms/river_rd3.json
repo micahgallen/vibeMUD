@@ -5,7 +5,8 @@
   "description": "A secluded stretch of River Road, where the sounds of civilization are almost entirely absent. You are on River Road, a place where the distant hum of traffic has faded into a whisper, replaced by the chirping of unseen insects and the gentle rustle of leaves. The road here is barely maintained, with cracks and potholes hinting at a forgotten past. The air is fresh, carrying the clean scent of pine and damp earth, a brief respite from the urban decay.",
   "exits": {
     "west": "hill_valley/1985/river_rd2",
-    "east": "hill_valley/1985/river_rd4"
+    "east": "hill_valley/1985/river_rd4",
+    "south": "hill_valley/1985/high_school"
   },
   "items": []
 }

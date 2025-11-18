@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/jd_armstrong_realty",
+  "type": "room",
+  "name": "J. D. Armstrong Realty",
+  "description": "A bustling office where dreams of homeownership take flight. J. D. Armstrong Realty is a place of crisp suits, firm handshakes, and the scent of fresh coffee. The walls are adorned with framed photographs of happy families in front of their new Hill Valley homes. A friendly agent, with a reassuring smile, is ready to guide you through the exciting journey of buying or selling property.",
+  "exits": {
+    "south": "hill_valley/1955/main_st2"
+  },
+  "items": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/ruths_frock_shop",
+  "type": "room",
+  "name": "Ruth's Frock Shop",
+  "description": "A quaint boutique where the latest fashions are displayed with tasteful elegance. Ruth's Frock Shop is a haven of style, offering a curated selection of dresses, hats, and accessories for the discerning woman. The air is filled with the scent of lavender and new fabric. A friendly proprietor with a keen eye for fashion is ready to help you find the perfect ensemble for any occasion.",
+  "exits": {
+    "south": "hill_valley/1955/main_st1"
+  },
+  "items": []
+}

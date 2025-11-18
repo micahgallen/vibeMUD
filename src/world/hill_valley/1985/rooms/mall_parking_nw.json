@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/mall_parking_nw",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (Northwest)",
+  "description": "The northwest corner of the parking lot, near the service entrance. A large, green dumpster sits here, overflowing with cardboard boxes and other retail detritus. The smell of garbage is a pungent counterpoint to the otherwise sterile environment. A few bored-looking employees are taking a smoke break nearby.",
+  "exits": {
+    "southeast": "hill_valley/1985/twin_pines_mall",
+    "south": "hill_valley/1985/mall_parking_w",
+    "east": "hill_valley/1985/mall_parking_n"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

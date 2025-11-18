@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_farmland_field3",
+  "type": "room",
+  "name": "Hilldale Farmland (Field 3)",
+  "description": "The final stretch of Hilldale Farmland (Field 3), a vast expanse of fertile earth before it gives way to another field. The rich, dark soil, meticulously tilled, hints at the bountiful harvests to come. A lone, perfectly formed hay bale stands proudly, a silent sentinel of agricultural abundance. The air is still, broken only by the distant, contented hum of a tractor in a neighboring field. To the west, the farmland continues its peaceful journey, and to the east, another field awaits.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_farmland_field2",
+    "east": "hill_valley/1955/hilldale_farmland_field4"
+  },
+  "items": []
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_farmland_field2",
+  "type": "room",
+  "name": "Hilldale Farmland (Field 2)",
+  "description": "Another vast expanse of Hilldale Farmland (Field 2), where the illusion of agricultural perfection is maintained with an almost religious fervor. The fields here are slightly larger, the rows of crops even more meticulously aligned, and the air carries a faint, wholesome scent of freshly turned earth. A few well-maintained farm implements are neatly parked, suggesting either impeccable tidiness or a complete lack of actual children. To the west and east, the farmland continues its relentless pursuit of bountiful harvests.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_farmland_field1",
+    "east": "hill_valley/1955/hilldale_farmland_field3"
+  },
+  "items": []
+}

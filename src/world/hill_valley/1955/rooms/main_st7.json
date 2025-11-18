@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1955/main_st7",
+  "type": "room",
+  "name": "Intersection of Main St and Maple Ave",
+  "description": "The intersection of Main Street and Maple Avenue, a place of dazzling sunlight and bright futures. You are at the intersection of Main St and Maple Ave. Main St continues its journey to the east and west, a ribbon of charming commerce. Maple Ave stretches to the south, disappearing into a neighborhood of charming homes. The sun reflects off the windows of the nearby buildings, creating a dazzling glare that momentarily blinds you to the boundless optimism of the town.",
+  "exits": {
+    "east": "hill_valley/1955/main_st6",
+    "west": "hill_valley/1955/main_st8",
+    "south": "hill_valley/1955/maple_ave"
+  },
+  "items": []
+}

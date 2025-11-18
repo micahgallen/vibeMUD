@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/alleyway",
+  "type": "room",
+  "definition": "room",
+  "name": "Alleyway",
+  "description": "A narrow, garbage-strewn alley that smells of damp cardboard and regret. The brick walls are covered in a tapestry of faded graffiti, and a single, flickering bulb in a wire cage does a poor job of illuminating the shadows. A stray cat hisses from atop a dented dumpster before disappearing into the gloom. It's the kind of place where you wouldn't want to drop your keys, or your guard.",
+  "exits": {
+    "east": "hill_valley/1985/hill_st1"
+  },
+  "tags": [
+    "alley",
+    "urban"
+  ]
+}

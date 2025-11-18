@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hill_st9",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The serene southern terminus of Hill Street, where the gentle hum of civilization gracefully yields to the tranquil countryside. The road ends here, not with an abrupt halt, but with a seamless transition into the newly paved Lyon Drive, a smooth ribbon of asphalt leading towards future developments. Hill Street continues its journey to the north, a pristine ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird, a perfect harmony of progress and nature.",
+  "exits": {
+    "north": "hill_valley/1955/hill_st8",
+    "east": "hill_valley/1955/lyon_drive"
+  },
+  "items": []
+}

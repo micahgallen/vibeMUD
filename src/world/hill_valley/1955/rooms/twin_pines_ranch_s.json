@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_s",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (South)",
+  "description": "The southern edge of the Twin Pines Ranch, where the Peabody family's thriving cornfields gracefully transition into a dusty, unused field. A sturdy 'No Trespassing' sign, a polite but firm declaration, is posted on a wooden fence. The charming farmhouse seems distant from this vantage point, its welcoming porch light a tiny, comforting beacon in the vast, peaceful expanse of the countryside.",
+  "exits": {
+    "north": "hill_valley/1955/twin_pines_ranch",
+    "east": "hill_valley/1955/twin_pines_ranch_se",
+    "west": "hill_valley/1955/twin_pines_ranch_sw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

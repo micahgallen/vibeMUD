@@ -1,7 +1,7 @@
 {
   "id": "hill_valley/1985/bank_of_america",
   "type": "room",
-  "definition": "room",
+  "definition": "bank",
   "name": "Bank of America",
   "description": "A temple of finance, where dreams are made and broken with equal efficiency. The Bank of America branch in Hill Valley is a modern, if somewhat sterile, establishment. The polished floors reflect the harsh fluorescent lights, and the hushed tones of transactions fill the air, punctuated by the rhythmic whir of money counters. Tellers in crisp uniforms efficiently handle deposits and withdrawals, their smiles as practiced as their counting. In glass-walled offices, loan officers discuss futures and finances, deciding who gets to chase their dreams and whose aspirations are, for now, politely declined. It's a place where money changes hands, dreams are financed, and sometimes, shattered.",
   "exits": {
@@ -10,5 +10,45 @@
   "tags": [
     "service",
     "finance"
-  ]
+  ],
+  "isBank": true,
+  "services": {
+    "deposit": true,
+    "withdraw": true,
+    "balance": true,
+    "transfer": false
+  },
+  "depositFee": 0.0,
+  "withdrawFee": 0.0,
+  "minimumFee": 0,
+  "maxBalance": null,
+  "minDeposit": 1,
+  "minWithdraw": 1,
+  "openHours": null,
+  "accessRestrictions": {
+    "minLevel": 0,
+    "maxLevel": 999,
+    "allowedGuilds": [],
+    "bannedGuilds": [],
+    "allowedRaces": [],
+    "bannedRaces": []
+  },
+  "tellerPersonality": "professional",
+  "tellerName": "a teller with a practiced smile",
+  "messages": {
+    "greeting": "Welcome to the Bank of America. Your future is our interest. You can check your 'balance', 'deposit' funds, or 'withdraw' them. Try not to do it all at once.",
+    "noAccess": "I'm sorry, our services aren't available to you. It's a corporate policy thing, you understand.",
+    "closed": "We're closed. Come back during banking hours. Assuming we're all still here tomorrow.",
+    "depositSuccess": "Deposited %s. It's safe with us. Probably.",
+    "withdrawSuccess": "Here's your %s. Spend it wisely. Or don't. It's your money.",
+    "balanceCheck": "Your current balance is %s. Make of that what you will.",
+    "insufficientFunds": "You don't have that much in your account. We've all been there.",
+    "insufficientPurse": "You're not carrying that much cash. Check your pockets again.",
+    "amountTooLow": "The minimum transaction is %s. We have to draw the line somewhere.",
+    "accountFull": "Your account is full. Congratulations, I guess. Max balance is %s.",
+    "invalidAmount": "That's not a real number. Please be serious, I've got a long day ahead of me.",
+    "emptyAccount": "Your account is empty. Next.",
+    "serviceFee": "(A %s service fee has been deducted. The wheels of progress need greasing, after all.)"
+  },
+  "securityLevel": 5
 }

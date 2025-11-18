@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/roys_record_store",
+  "type": "room",
+  "name": "Roy's Record Store",
+  "description": "A vibrant hub of musical discovery, where the latest hits spin on the turntable. Roy's Record Store is a treasure trove of vinyl, from rock and roll to rhythm and blues. The air is filled with the crackle of records and the sweet sound of youthful rebellion. A friendly proprietor, with an encyclopedic knowledge of music, is always ready to recommend the perfect tune to soundtrack your life.",
+  "exits": {
+    "northeast": "hill_valley/1955/hill_st"
+  },
+  "items": []
+}

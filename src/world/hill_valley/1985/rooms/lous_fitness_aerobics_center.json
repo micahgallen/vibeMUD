@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/lous_fitness_aerobics_center",
+  "type": "room",
+  "definition": "room",
+  "name": "Lou's Fitness Aerobics Center",
+  "description": "A temple to the 80s fitness craze, pulsating with the relentless beat of synth-pop. The air in Lou's Fitness Aerobics Center is thick with the smell of sweat, spandex, and ambition. Mirrored walls reflect a sea of determined faces and brightly colored leotards, all moving in semi-unison to the commands of a relentlessly cheerful instructor. It's a place where people come to sculpt their bodies and chase the elusive promise of physical perfection, one grapevine at a time. The only escape from the rhythm is back out to the street.",
+  "exits": {
+    "north": "hill_valley/1985/main_st4",
+    "east": "hill_valley/1985/hill_st"
+  },
+  "tags": [
+    "fitness",
+    "shop"
+  ]
+}

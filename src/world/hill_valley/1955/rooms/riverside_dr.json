@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "The northern end of Riverside Drive, where it gracefully meets Main Street. This is a pristine stretch of road, lined with blossoming trees and the promise of a perfect afternoon. To the north, Main Street hums with cheerful commerce, while Riverside Drive gently curves south, inviting you into Hill Valley's sun-drenched suburban embrace. The air here is a delightful blend of distant, contented traffic and the sweet perfume of blooming flowers.",
+  "exits": {
+    "north": "hill_valley/1955/main_st5",
+    "south": "hill_valley/1955/riverside_dr1"
+  },
+  "items": []
+}

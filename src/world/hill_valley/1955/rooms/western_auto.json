@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/western_auto",
+  "type": "room",
+  "name": "Western Auto",
+  "description": "A wonderland of gleaming chrome and the smell of fresh rubber. Western Auto is a treasure trove for the modern man, offering everything from bicycles and auto parts to the latest in home appliances. Sunlight glints off the polished fenders of a brand-new Schwinn bicycle in the window display. The air is filled with the scent of new tires, motor oil, and the boundless optimism of the post-war boom. A friendly clerk in a crisp, white shirt is happy to help you find just what you need to keep your life running smoothly.",
+  "exits": {
+    "south": "hill_valley/1955/main_st1"
+  },
+  "items": []
+}

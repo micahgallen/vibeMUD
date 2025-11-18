@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/statler_studebaker",
+  "type": "room",
+  "name": "Statler Studebaker",
+  "description": "A gleaming showroom, promising a future of freedom and adventure. Inside Statler Studebaker, the showroom gleams with the latest models, their chrome reflecting the bright afternoon sun, a stark contrast to the quaint downtown outside. A friendly, sharply dressed salesman approaches you, his smile as polished as the cars. The scent of new car upholstery and ambition hangs in the air, a potent cocktail of consumerism and aspiration. A large banner proclaims 'Statler Studebaker: The Future is Now!', a promise that feels both exciting and liberating. The only exit is back out to Main St., where the future is just beginning.",
+  "exits": {
+    "south": "hill_valley/1955/main_st1"
+  },
+  "items": []
+}

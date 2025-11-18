@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/courthouse",
+  "type": "room",
+  "name": "Hill Valley Courthouse",
+  "description": "A grand and imposing symbol of justice and civic pride. The Hill Valley Courthouse is a magnificent building, its tall white columns reaching towards the sky. The sound of a gavel echoes from an upstairs courtroom, a reassuring reminder that order prevails in this idyllic town. The air is filled with the scent of old books, floor wax, and the quiet dignity of the law. Lawyers in sharp suits converse in hushed tones in the hallway, their faces a mixture of hope and determination.",
+  "exits": {
+    "northwest": "hill_valley/1955/courthouse_square_north",
+    "southwest": "hill_valley/1955/courthouse_square_south"
+  },
+  "items": []
+}

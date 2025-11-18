@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/hilldale_farmland_field4",
+  "type": "room",
+  "name": "Hilldale Farmland (Field 4)",
+  "description": "A vast, circular field, once destined to be a cul-de-sac, now lies fallow, awaiting the spring planting. This is Hilldale Farmland (Field 4), a testament to the rich agricultural heritage of Hill Valley. The fertile earth, a deep, promising brown, stretches towards the horizon, reflecting the bright, optimistic sky. The air is still, heavy with the wholesome scent of rich soil and the unspoken promise of a bountiful harvest. To the west, a well-worn farm track offers the only path through this peaceful expanse.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_farmland_field3"
+  },
+  "items": []
+}

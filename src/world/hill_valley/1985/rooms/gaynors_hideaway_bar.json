@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/gaynors_hideaway_bar",
+  "type": "room",
+  "definition": "room",
+  "name": "Gaynor's Hideaway Bar",
+  "description": "A dimly lit bar where secrets are currency and the drinks are strong enough to make you forget your own name. Gaynor's Hideaway is less a bar and more a collective agreement to ignore the outside world. The air is thick with the smell of stale beer, cheap whiskey, and the kind of quiet desperation that only a Tuesday night can inspire. A few solitary figures are hunched over the bar, their faces illuminated by the sickly glow of a jukebox that seems to only play songs about regret. The bartender, a man who has seen it all and is profoundly unimpressed, polishes a glass with a rag that has seen better decades.",
+  "exits": {
+    "north": "hill_valley/1985/first_st"
+  },
+  "tags": [
+    "bar",
+    "urban"
+  ]
+}

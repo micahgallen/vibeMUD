@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/mall_parking_w",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (West)",
+  "description": "The western side of the parking lot, a desolate expanse of empty spaces. This part of the lot is mostly empty, a testament to the mall's waning popularity. A lone, sun-bleached sedan sits in the middle of the asphalt, its tires flat, its windows dusty. It looks like it's been here since the Carter administration.",
+  "exits": {
+    "east": "hill_valley/1985/twin_pines_mall",
+    "south": "hill_valley/1985/mall_parking_sw",
+    "north": "hill_valley/1985/mall_parking_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

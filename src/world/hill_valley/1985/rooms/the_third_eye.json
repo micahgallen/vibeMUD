@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/the_third_eye",
+  "type": "room",
+  "definition": "room",
+  "name": "The Third Eye",
+  "description": "A small, dimly lit shop tucked away from the main street. The air inside 'The Third Eye' is thick with the scent of incense and old paper. Shelves are crammed with books on astrology, crystals, and conspiracy theories, each promising a truth more convoluted than the last. A beaded curtain separates the main shop from a back room where, presumably, futures are told and chakras are aligned for a nominal fee. It's a place that feels unstuck in time, a haven for those seeking answers the mundane world can't provide.",
+  "exits": {
+    "northeast": "hill_valley/1985/hill_st"
+  },
+  "tags": [
+    "shop",
+    "occult"
+  ]
+}

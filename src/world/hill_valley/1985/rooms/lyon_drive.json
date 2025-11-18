@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1985/lyon_drive",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Drive",
+  "description": "A worn stretch of road, connecting the weary ends of Hill Street and Hubbard Avenue. Lyon Drive, once a symbol of suburban expansion, now shows the subtle signs of neglect. The asphalt is cracked in places, and weeds bravely push through the fissures, a quiet rebellion against the concrete. To the north, the entrance to Lyon Estates looms, a monument to a dream that has settled into comfortable, if slightly faded, reality. The air is a blend of distant traffic and the faint, lingering scent of exhaust fumes, a testament to the relentless march of time.",
+  "exits": {
+    "east": "hill_valley/1985/hubbard_ave9",
+    "west": "hill_valley/1985/hill_st9",
+    "north": "hill_valley/1985/lyon_estates_entrance"
+  },
+  "tags": [
+    "road",
+    "suburban"
+  ]
+}

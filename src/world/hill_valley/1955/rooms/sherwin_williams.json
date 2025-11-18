@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/sherwin_williams",
+  "type": "room",
+  "definition": "room",
+  "name": "Sherwin-Williams",
+  "description": "A vibrant facade of color, promising to brighten up your world. The Sherwin-Williams paint store is a dazzling oasis of color in a world of black and white. Walls are lined with endless swatches, each promising a fresh start, a brighter future, or at least a decent coat of 'Sunshine Yellow' to hide the drab wallpaper. The air is thick with the chemical tang of paint and the faint, hopeful scent of renovation. A friendly clerk in a crisp, white shirt is happy to help you choose the perfect shade to make your dreams a reality.",
+  "exits": {
+    "north": "hill_valley/1955/first_st1"
+  },
+  "tags": [
+    "shop",
+    "paint"
+  ]
+}

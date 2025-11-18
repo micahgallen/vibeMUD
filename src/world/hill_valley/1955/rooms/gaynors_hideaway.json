@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1955/gaynors_hideaway",
+  "type": "room",
+  "name": "Gaynor's Hideaway",
+  "description": "A dimly lit, cozy lounge, a perfect escape from the bright lights of Main Street. Gaynor's Hideaway is a place of hushed conversations and clinking glasses, where the jazz music is smooth and the drinks are strong. The air is thick with the scent of pipe tobacco and unspoken secrets. A friendly bartender, with a knowing smile, is always ready to mix your favorite cocktail and lend a sympathetic ear. This is where the adults of Hill Valley unwind, far from the innocent gaze of the youth.",
+  "exits": {
+    "north": "hill_valley/1955/first_st"
+  },
+  "items": []
+}

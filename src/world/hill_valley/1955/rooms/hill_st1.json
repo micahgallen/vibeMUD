@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1955/hill_st1",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A gently sloping stretch of Hill Street, lined with charming homes. You are on Hill St. The road slopes gently downwards here, a pleasant stroll towards the heart of town. To the north, Hill St ascends towards Main Street, while to the south, it continues its quiet journey. To the east, the beautiful Courthouse Square Park offers a place for rest and recreation. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/hill_st",
+    "south": "hill_valley/1955/hill_st2",
+    "east": "hill_valley/1955/courthouse_square_south",
+    "west": "hill_valley/1955/alleyway"
+  },
+  "items": []
+}

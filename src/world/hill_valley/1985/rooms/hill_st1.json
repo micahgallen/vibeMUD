@@ -6,7 +6,8 @@
   "exits": {
     "north": "hill_valley/1985/hill_st",
     "south": "hill_valley/1985/hill_st2",
-    "east": "hill_valley/1985/courthouse_square_south_parking_lot"
+    "east": "hill_valley/1985/courthouse_square_south_parking_lot",
+    "west": "hill_valley/1985/alleyway"
   },
   "items": []
 }

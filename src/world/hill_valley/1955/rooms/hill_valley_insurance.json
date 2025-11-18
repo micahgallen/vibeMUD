@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/hill_valley_insurance",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Insurance",
+  "description": "A place of quiet confidence, where your future is secured with a smile and a firm handshake. The Hill Valley Insurance office is a bright, welcoming space, with polished wooden floors and a comfortable seating area. Sunlight streams through the large front window, illuminating a collection of cheerful calendars and a thriving potted fern. A friendly agent in a crisp suit is happy to discuss your policy, offering peace of mind with a reassuring nod. The air smells of fresh paper and the quiet satisfaction of a well-planned future.",
+  "exits": {
+    "north": "hill_valley/1955/first_st1"
+  },
+  "tags": [
+    "service",
+    "insurance"
+  ]
+}

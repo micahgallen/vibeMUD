@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hilldale_farmland_field1",
+  "type": "room",
+  "name": "Hilldale Farmland (Field 1)",
+  "description": "A pristine field in the heart of Hilldale Farmland (Field 1), where every row of crops looks like it was meticulously painted onto the earth. The soil is impossibly rich, the nascent sprouts are vibrant green, and the silence is almost deafening, broken only by the distant, contented hum of a tractor. It's the kind of place where nothing ever seems to go wrong, which, in Hill Valley, is usually a sign that something is about to. To the west, the entrance to the farmland beckons, and to the east, more of the same.",
+  "exits": {
+    "west": "hill_valley/1955/hilldale_farmland_entrance",
+    "east": "hill_valley/1955/hilldale_farmland_field2"
+  },
+  "items": []
+}

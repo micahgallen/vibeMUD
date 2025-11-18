@@ -13,35 +13,35 @@
       "You taunt {target}: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
       "You shout at {target}: \"Go and boil your bottom, you son of a silly person!\"",
       "You wave rudely at {target}: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
-      "You warn {target}: \"Go away or I shall taunt you again!\""
+      "You warn {target}: \"Go away or I shall taunt you a second time!\""
     ],
     "secondPerson": [
       "{actor} taunts you: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
       "{actor} taunts you: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
       "{actor} shouts at you: \"Go and boil your bottom, you son of a silly person!\"",
       "{actor} waves rudely at you: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
-      "{actor} warns you: \"Go away or I shall taunt you again!\""
+      "{actor} warns you: \"Go away or I shall taunt you a second time!\""
     ],
     "thirdPerson": [
       "{actor} taunts {target}: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
       "{actor} taunts {target}: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
       "{actor} shouts at {target}: \"Go and boil your bottom, you son of a silly person!\"",
       "{actor} waves rudely at {target}: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
-      "{actor} warns {target}: \"Go away or I shall taunt you again!\""
+      "{actor} warns {target}: \"Go away or I shall taunt you a second time!\""
     ],
     "untargeted": [
       "I don't want to talk to you no more, you empty-headed animal food trough water!",
       "I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!",
       "Go and boil your bottoms, sons of a silly person!",
       "I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!",
-      "Go away or I shall taunt you again!"
+      "Go away or I shall taunt you a second time!"
     ],
     "untargetedRoom": [
       "{actor} hurls insults at everyone: \"I don't want to talk to you no more, you empty-headed animal food trough water!\"",
       "{actor} taunts: \"I fart in your general direction! Your mother was a hamster and your father smelt of elderberries!\"",
       "{actor} shouts: \"Go and boil your bottoms, sons of a silly person!\"",
       "{actor} waves rudely: \"I wave my private parts at your aunties, you cheesy lot of second-hand electric donkey-bottom biters!\"",
-      "{actor} warns: \"Go away or I shall taunt you again!\""
+      "{actor} warns: \"Go away or I shall taunt you a second time!\""
     ]
   }
 }

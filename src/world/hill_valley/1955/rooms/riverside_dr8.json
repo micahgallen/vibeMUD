@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr8",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A pristine stretch of Riverside Drive, where the subtle signs of new construction hint at Hill Valley's bright future. The road, a smooth ribbon of asphalt, continues its gentle descent both north and south, winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird, a perfect soundtrack to progress.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr7",
+    "south": "hill_valley/1955/riverside_dr9"
+  },
+  "items": []
+}

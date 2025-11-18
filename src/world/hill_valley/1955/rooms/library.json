@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/library",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Library",
+  "description": "A quiet, unassuming building, a repository of human knowledge and occasional misfilings. The Hill Valley Library is a quiet, unassuming building, a place of learning and contemplation. It houses not just books, but the accumulated wisdom, folly, and occasional misfilings of generations. The air here is thick with the scent of old paper, and the faint, metallic tang of knowledge. Every book is a universe, every shelf a galaxy, and the librarians are the silent, all-knowing navigators of this cosmic archive, quietly stamping your due date card.",
+  "exits": {
+    "east": "hill_valley/1955/hill_st5",
+    "west": "hill_valley/1955/riverside_dr5"
+  },
+  "tags": [
+    "building",
+    "research"
+  ]
+}

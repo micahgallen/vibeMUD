@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_nw",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (Northwest)",
+  "description": "The northwest corner of the Twin Pines Ranch, where the Peabody family's iconic red barn proudly stands, its doors open to reveal a collection of well-maintained farming equipment. The wholesome smell of hay is a comforting counterpoint to the fresh country air. A few contented chickens peck at the ground nearby, adding to the serene tableau of ranch life.",
+  "exits": {
+    "southeast": "hill_valley/1955/twin_pines_ranch",
+    "south": "hill_valley/1955/twin_pines_ranch_w",
+    "east": "hill_valley/1955/twin_pines_ranch_n"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

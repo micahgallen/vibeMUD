@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1985/mall_parking_se",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (Southeast)",
+  "description": "The southeast corner of the lot, a graveyard for shopping carts. A dozen or more shopping carts are gathered here, their wheels locked in a silent, metallic embrace. A large puddle of indeterminate origin reflects the grey sky. The smell of stale rainwater and rust hangs in the air.",
+  "exits": {
+    "northwest": "hill_valley/1985/twin_pines_mall",
+    "north": "hill_valley/1985/mall_parking_e",
+    "west": "hill_valley/1985/mall_parking_s"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

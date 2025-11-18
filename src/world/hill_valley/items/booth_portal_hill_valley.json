@@ -4,7 +4,7 @@
   "type": "booth_portal",
   "location": {
     "type": "room",
-    "room": "hill_valley/1985/courthouse_square_south_parking_lot"
+    "room": "twin_pines_transit_hub"
   },
   "createdAt": "2025-11-15T00:00:00Z",
   "modifiedAt": "2025-11-15T00:00:00Z"

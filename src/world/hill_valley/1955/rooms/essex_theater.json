@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/essex_theater",
+  "type": "room",
+  "name": "Essex Theater",
+  "description": "The grand dame of Hill Valley's entertainment scene. The Essex Theater is a beautiful movie palace, its marquee ablaze with the title of the latest Hollywood blockbuster. The air is filled with the scent of fresh popcorn and the excited chatter of moviegoers. A friendly usher in a smart uniform tears your ticket with a smile, and the plush red velvet seats promise a comfortable escape into a world of adventure and romance. This is where dreams come to life on the silver screen.",
+  "exits": {
+    "north": "hill_valley/1955/first_st",
+    "west": "hill_valley/1955/hill_st3"
+  },
+  "items": []
+}

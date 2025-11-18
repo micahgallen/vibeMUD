@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1955/lous_cafe",
+  "type": "room",
+  "definition": "room",
+  "name": "Lou's Cafe",
+  "description": "The heart of Hill Valley's social scene, Lou's Cafe is the place to be. The cheerful chatter of teenagers and the sizzle of burgers on the grill create a lively atmosphere. The air is thick with the aroma of coffee, milkshakes, and the boundless optimism of youth. A jukebox in the corner plays the latest rock and roll hits, and a friendly waitress with a bright smile is always ready to take your order. This is where friendships are forged, romances blossom, and the future seems as bright as the gleaming chrome on the counter.",
+  "exits": {
+    "north": "hill_valley/1955/main_st4",
+    "east": "hill_valley/1955/hill_st"
+  },
+  "tags": [
+    "restaurant"
+  ]
+}

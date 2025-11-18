@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1955/football_field",
+  "type": "room",
+  "definition": "room",
+  "name": "High School Football Field",
+  "description": "A field of dreams for the youth of Hill Valley. This is the High School Football Field, a hallowed ground where boys become men and legends are born. The perfectly manicured grass is a vibrant green, and the bleachers are filled with cheering fans on Friday nights. The air is filled with the scent of popcorn, hot dogs, and the electric excitement of a town united in support of its team. It's a place of community pride, where the future of Hill Valley is forged in the crucible of friendly competition.",
+  "exits": {
+    "north": "hill_valley/1955/high_school"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

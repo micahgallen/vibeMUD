@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/hubbard_ave6",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "A residential stretch of Hubbard Avenue, marked by a brand new car. You are on Hubbard Ave. A brand new car is parked on the side of the road, its chrome gleaming in the afternoon sun. Hubbard Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/hubbard_ave5",
+    "south": "hill_valley/1955/hubbard_ave7"
+  },
+  "items": []
+}

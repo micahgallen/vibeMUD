@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr9",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "The southern terminus of Riverside Drive, where the pristine asphalt gracefully yields to the gentle wilderness. The road becomes a charming dirt path here, inviting you into the serene embrace of the encroaching woods. Riverside Drive continues its journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird, a perfect farewell to the suburban dream.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr8",
+    "south": "hill_valley/1955/twin_pines_ranch_n"
+  },
+  "items": []
+}

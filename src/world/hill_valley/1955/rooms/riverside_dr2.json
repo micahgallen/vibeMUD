@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr2",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A stretch of Riverside Drive, where the boundless energy of youth briefly asserts itself. A teenager on a gleaming new Schwinn bicycle zips past, a fleeting blur of joyful motion in the otherwise serene afternoon. Riverside Drive continues its gentle descent, a pristine ribbon of asphalt winding through perfectly manicured lawns and charming homes. The air is still, punctuated only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr1",
+    "south": "hill_valley/1955/riverside_dr3"
+  },
+  "items": []
+}
