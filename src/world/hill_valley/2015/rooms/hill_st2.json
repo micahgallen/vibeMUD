@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/hill_st2",
+  "type": "room",
+  "name": "Intersection of First St and Hill St",
+  "description": "The intersection of First and Hill Streets, a quiet residential corner. You are at the intersection of First St and Hill St, a quiet residential corner where the illusion of suburban tranquility is still somewhat intact. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. First St stretches to the east, leading to places unknown. To the west, the glowing sign of the 7-Eleven beckons, a beacon of instant gratification. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st1",
+    "south": "hill_valley/2015/hill_st3",
+    "east": "hill_valley/2015/first_st",
+    "west": "hill_valley/2015/seven_eleven_texaco",
+    "southwest": "hill_valley/2015/the_bot_shoppe"
+  },
+  "items": []
+}

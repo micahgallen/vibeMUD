@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/hilldale_culdesac",
+  "type": "room",
+  "name": "Hilldale Cul-de-Sac",
+  "description": "A dead end in a dead neighborhood. The houses in the cul-de-sac are in even worse shape than the rest of Hilldale, with some of them completely collapsed. A gang of cybernetically enhanced punks have made this their territory, and they don't look friendly. The air is thick with the smell of smoke and cheap booze, and the sound of loud, angry music. To the west, the main Hilldale Street offers the only escape from this cul-de-sac of despair.",
+  "exits": {
+    "west": "hill_valley/2015/hilldale_st3"
+  },
+  "items": []
+}

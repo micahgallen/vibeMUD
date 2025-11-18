@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/2015/courthouse_square",
+  "type": "room",
+  "name": "Courthouse Square",
+  "description": "A tranquil oasis in the heart of the city, where a sprawling pond and lush green space have replaced the cracked asphalt of a forgotten parking lot. The water is a startlingly clear blue, and the grass is a vibrant, almost artificial, green. A few families enjoy picnics on the grass, their laughter echoing in the clean, filtered air. A holographic swan glides across the pond, its movements graceful and unnervingly perfect. It's a place of serene beauty, but you can't shake the feeling that the perfection is just a little too perfect, a little too clean, a little too... manufactured.",
+  "exits": {
+    "north": "hill_valley/2015/main_st2",
+    "west": "hill_valley/2015/hill_st",
+    "south": "hill_valley/2015/first_st",
+    "east": "hill_valley/2015/courthouse_mall"
+  },
+  "items": []
+}

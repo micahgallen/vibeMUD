@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/maple_ave6",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "A quiet stretch of Maple Avenue, where the only sounds are natural. You are on Maple Ave. The street is quiet, with only the sound of birds chirping, a brief respite from the constant hum of modern life. Maple Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/maple_ave5",
+    "south": "hill_valley/2015/maple_ave7"
+  },
+  "items": []
+}

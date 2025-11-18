@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/maple_ave2",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "A serene stretch of Maple Avenue, where a gentle breeze rustles the leaves. You are on Maple Ave. A gentle breeze rustles the leaves of the maple trees that give this street its name, a fleeting moment of natural beauty in the otherwise mundane suburban landscape. Maple Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/maple_ave1",
+    "south": "hill_valley/2015/maple_ave3"
+  },
+  "items": []
+}

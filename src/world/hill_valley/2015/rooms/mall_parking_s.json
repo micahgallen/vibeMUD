@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/mall_parking_s",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (South)",
+  "description": "The southern edge of the parking lot, bordering a dusty, unused field. The asphalt gives way to dirt and weeds here. A faded 'No Trespassing' sign leans tiredly against a chain-link fence. The mall seems distant from this vantage point, its consumerist siren song muffled by the wind.",
+  "exits": {
+    "north": "hill_valley/2015/twin_pines_mall",
+    "east": "hill_valley/2015/mall_parking_se",
+    "west": "hill_valley/2015/mall_parking_sw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

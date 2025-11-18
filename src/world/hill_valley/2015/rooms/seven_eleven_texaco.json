@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/seven_eleven_texaco",
+  "type": "room",
+  "definition": "room",
+  "name": "7-Eleven / Texaco Automated Station",
+  "description": "A combination convenience store and automated gas station. The first floor is a 7-Eleven, where you can get a Slurpee, a hot dog, and a lottery ticket, all served by a cheerful but slightly malfunctioning robot. The second floor is a fully automated Texaco Havoline station, where robotic arms refuel your car with a startling efficiency. The air is a strange mix of sugary syrup and high-octane gasoline. It's a place where you can get everything you need for the road, but you might leave with the unsettling feeling that you're living in a world run by machines that are just a little too good at their jobs.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st2"
+  },
+  "tags": [
+    "service",
+    "food"
+  ]
+}

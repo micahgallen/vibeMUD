@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/the_bot_shoppe",
+  "type": "room",
+  "definition": "room",
+  "name": "The Bot Shoppe",
+  "description": "A chaotic workshop where custom-built robots are assembled and repaired. Robotic arms hang from the ceiling, and spare parts are strewn across every available surface. A friendly but slightly manic robot with mismatched optic sensors greets you, offering to build you a 'custom companion bot, guaranteed to be your best friend, or at least not actively try to kill you.' The air is thick with the smell of ozone and hot metal. It's a place where you can create the robot of your dreams, but you might leave with the unsettling feeling that your new best friend is one software glitch away from a murderous rampage.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "robotics"
+  ]
+}

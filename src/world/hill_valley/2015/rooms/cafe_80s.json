@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/cafe_80s",
+  "type": "room",
+  "definition": "room",
+  "name": "Cafe 80s",
+  "description": "A retro-themed cafe that is a little too obsessed with the 1980s. The walls are adorned with neon geometric shapes and posters of movies you've never heard of. A robotic waiter with a bad Michael Jackson impression glides over to your table, offering you a menu of food that has been rehydrated to perfection. The air is thick with the scent of hairspray and the faint, almost imperceptible, hum of a flux capacitor. It's a place where you can experience the 80s without actually having to live through them, which is probably for the best.",
+  "exits": {
+    "north": "hill_valley/2015/main_st4",
+    "east": "hill_valley/2015/hill_st"
+  },
+  "tags": [
+    "cafe",
+    "80s"
+  ]
+}

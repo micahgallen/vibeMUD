@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/true_blues",
+  "type": "room",
+  "name": "True Blues",
+  "description": "A nostalgia shop for the truly desperate. 'True Blues' sells vintage, pre-fusion jazz records and memorabilia from a time when music was 'authentic' and 'real.' A holographic recreation of a blues singer perpetually weeps in the corner, a poignant and commercially licensed performance. The air is thick with the scent of artificially aged paper and the faint, almost imperceptible, hum of the hologram projector. It's a place where you can buy a piece of the past, a fleeting moment of 'true' emotion, before stepping back out into the bright, shiny, and utterly soulless future.",
+  "exits": {
+    "south": "hill_valley/2015/main_st2"
+  },
+  "items": []
+}

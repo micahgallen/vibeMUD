@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/jfk_dr9",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "The southern terminus of John F. Kennedy Drive, where asphalt yields to wilderness. You are at the southern end of John F. Kennedy Dr. The road becomes a dirt path here, not with a grand vista, but with a whimper, giving way to the encroaching woods. John F. Kennedy Dr continues its weary journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/jfk_dr8"
+  },
+  "items": []
+}

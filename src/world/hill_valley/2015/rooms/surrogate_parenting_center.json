@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/surrogate_parenting_center",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Surrogate Parenting Center",
+  "description": "A sterile and eerily quiet facility where the future of family is assembled. Rows of incubation pods line the walls, each containing a developing fetus, its vital signs displayed on a softly glowing monitor. A friendly but unnervingly detached robotic nurse glides silently between the pods, its metallic fingers making delicate adjustments. The air is thick with the scent of antiseptic and the faint, almost imperceptible, hum of life support systems. It's a place where you can have the perfect child, genetically engineered to your exact specifications, but you might leave with the unsettling feeling that you've just outsourced the most human of experiences to a machine.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st3"
+  },
+  "tags": [
+    "service",
+    "medical"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/hubbard_ave2",
+  "type": "room",
+  "name": "Intersection of First St and Hubbard Ave",
+  "description": "The intersection of First Street and Hubbard Avenue, a slightly dilapidated corner. You are at the intersection of First St and Hubbard Ave. Hubbard Ave continues its quiet descent to the north and south, a testament to suburban sprawl. First St stretches to the west, leading to places unknown. The street is a bit run-down here, with some potholes in the pavement, a subtle metaphor for the slow decay of the American dream. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/hubbard_ave1",
+    "south": "hill_valley/2015/hubbard_ave3",
+    "west": "hill_valley/2015/first_st1"
+  },
+  "items": []
+}

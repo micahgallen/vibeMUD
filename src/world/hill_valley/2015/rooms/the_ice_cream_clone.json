@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/the_ice_cream_clone",
+  "type": "room",
+  "definition": "room",
+  "name": "The Ice Cream Clone",
+  "description": "An ice cream parlor that serves 'cloned' ice cream, perfectly replicating any flavor you can imagine. A cheerful robotic scooper with a friendly, feminine voice asks for your order, its metallic claws surprisingly gentle as it scoops a perfect sphere of 'peanut butter and regret' ice cream into a cone. The air is thick with the scent of sugar and the faint, almost imperceptible, hum of the flavor replicator. It's a place where you can have any ice cream you desire, but you might leave with the unsettling feeling that you've just eaten a delicious, and slightly unsettling, lie.",
+  "exits": {
+    "north": "hill_valley/2015/first_st1"
+  },
+  "tags": [
+    "shop",
+    "food"
+  ]
+}

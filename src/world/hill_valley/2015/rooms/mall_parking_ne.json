@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/mall_parking_ne",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (Northeast)",
+  "description": "The northeast corner of the parking lot, where the asphalt begins to crack. Weeds poke through the fissures in the pavement, a quiet rebellion against the concrete expanse. A single, flickering lamp post casts a sickly yellow glow, even during the day. The distant hum of the mall's air conditioning units is the only sound.",
+  "exits": {
+    "southwest": "hill_valley/2015/twin_pines_mall",
+    "west": "hill_valley/2015/mall_parking_n",
+    "south": "hill_valley/2015/mall_parking_e"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

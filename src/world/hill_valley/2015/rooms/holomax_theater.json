@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/holomax_theater",
+  "type": "room",
+  "name": "Holomax Theater",
+  "description": "A dazzling Holomax theater, where movies are not just seen, but experienced. A massive holographic shark lunges out from the marquee, its teeth glistening, advertising the premiere of 'Jaws 19.' Inside, the air is thick with the scent of synth-popcorn and the faint, almost imperceptible, hum of the holographic projectors. It's a place where you can immerse yourself in the movie, to the point where you might forget that the shark isn't real. Or is it? The line between reality and illusion is getting awfully blurry these days.",
+  "exits": {
+    "north": "hill_valley/2015/first_st",
+    "west": "hill_valley/2015/hill_st3"
+  },
+  "items": []
+}

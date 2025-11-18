@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hill_st7",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A tree-lined stretch of Hill Street, offering a brief respite from the sun. You are on Hill St. The street here is lined with mature trees, their branches forming a leafy canopy that provides ample shade, a small mercy in the relentless march of time. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st6",
+    "south": "hill_valley/2015/hill_st8"
+  },
+  "items": []
+}

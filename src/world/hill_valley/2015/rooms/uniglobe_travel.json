@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/uniglobe_travel",
+  "type": "room",
+  "name": "Uniglobe Travel",
+  "description": "A travel agency that offers trips to anywhere, anytime. A holographic globe spins in the center of the room, displaying a bewildering array of destinations, from the beaches of Mars to the floating cities of Venus. A cheerful robot assistant glides over, offering you a brochure for a 'pre-historic safari' or a 'relaxing weekend in the Cretaceous period.' The air is thick with the scent of ozone and the faint, almost imperceptible, hum of a temporal displacement unit. It's a place where you can book the vacation of a lifetime, as long as you're willing to sign a waiver that absolves them of all responsibility for paradoxes, dinosaur-related injuries, or accidental erasure from existence.",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "items": []
+}

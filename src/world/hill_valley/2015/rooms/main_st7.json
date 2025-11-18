@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/main_st7",
+  "type": "room",
+  "name": "Intersection of Main St and Maple Ave",
+  "description": "The intersection of Main Street and Maple Avenue, a place of dazzling glare and fading dreams. You are at the intersection of Main St and Maple Ave. Main St continues its weary journey to the east and west, a ribbon of fading commerce. Maple Ave stretches to the south, disappearing into residential anonymity. The sun reflects off the windows of the nearby buildings, creating a dazzling glare that momentarily blinds you to the subtle decay of the town.",
+  "exits": {
+    "east": "hill_valley/2015/main_st6",
+    "west": "hill_valley/2015/main_st8",
+    "south": "hill_valley/2015/maple_ave"
+  },
+  "items": []
+}

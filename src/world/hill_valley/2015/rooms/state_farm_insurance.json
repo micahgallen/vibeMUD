@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/state_farm_insurance",
+  "type": "room",
+  "definition": "room",
+  "name": "State Farm Insurance",
+  "description": "A sleek, sterile office promising coverage for everything from hoverboard accidents to temporal paradoxes. A friendly holographic agent shimmers behind a minimalist desk, its smile never faltering as it explains the benefits of 'catastrophic de-aging' insurance. The air is scented with a calming lavender fragrance, a futile attempt to mask the underlying anxiety of a world where the future is both brighter and infinitely more dangerous. It's a place where you can insure your destiny, as long as you can afford the monthly premium.",
+  "exits": {
+    "north": "hill_valley/2015/first_st1"
+  },
+  "tags": [
+    "service",
+    "insurance"
+  ]
+}

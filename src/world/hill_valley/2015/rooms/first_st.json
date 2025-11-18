@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/first_st",
+  "type": "room",
+  "name": "First St",
+  "description": "A connecting street, bridging the gap between Hill and Hubbard. You are on First St, a utilitarian stretch of asphalt that serves as a vital, if uninspired, connector between the two main north-south arteries of Hill Valley. To the west, Hill St disappears into a residential haze, while to the east, First St continues its journey towards Hubbard Ave. To the north, the serene Courthouse Square offers a stark contrast to the urban landscape. To the south, the dazzling marquee of the Holomax Theater promises a different kind of escape.",
+  "exits": {
+    "west": "hill_valley/2015/hill_st2",
+    "east": "hill_valley/2015/first_st1",
+    "north": "hill_valley/2015/courthouse_square",
+    "south": "hill_valley/2015/holomax_theater",
+    "southeast": "hill_valley/2015/fusion_bar"
+  },
+  "items": []
+}

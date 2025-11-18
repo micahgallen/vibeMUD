@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hill_st4",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A residential stretch of Hill Street, bordering a small, unassuming park. You are on Hill St. A small park is visible to the east, a patch of green amidst the encroaching asphalt, where a few children play, their laughter a fleeting counterpoint to the general weariness of the neighborhood. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st3",
+    "south": "hill_valley/2015/hill_st5"
+  },
+  "items": []
+}

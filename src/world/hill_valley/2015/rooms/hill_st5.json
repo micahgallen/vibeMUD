@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/hill_st5",
+  "type": "room",
+  "name": "Hill St",
+  "description": "An older, more established section of Hill Street, with well-tended gardens. You are on Hill St. The houses here are a bit older, with well-tended gardens that stubbornly resist the encroaching weariness of the neighborhood. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st4",
+    "south": "hill_valley/2015/hill_st6",
+    "west": "hill_valley/2015/library"
+  },
+  "items": []
+}

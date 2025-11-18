@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hilldale_st2",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "Another dark and foreboding street in Hilldale. The houses are larger here, but they are also more dilapidated, with boarded-up windows and caved-in roofs. A pack of stray dogs, with glowing red eyes, snarls at you from a distance. The air is thick with the smell of garbage and despair. To the west and east, the street continues its descent into urban decay.",
+  "exits": {
+    "west": "hill_valley/2015/hilldale_st1",
+    "east": "hill_valley/2015/hilldale_st3"
+  },
+  "items": []
+}

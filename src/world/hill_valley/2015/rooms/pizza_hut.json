@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/pizza_hut",
+  "type": "room",
+  "name": "Pizza Hut",
+  "description": "A fully-automated Pizza Hut, where the future of dining is sterile, efficient, and slightly unsettling. A robotic arm expertly tosses dough behind a sterile plexiglass window, while a disembodied voice politely asks you to 'state your desired toppings in a calm and clear tone.' The air is thick with the scent of synthetic cheese and the faint, almost imperceptible, hum of servo-motors. It's a place where you can get a perfectly good pizza in under five minutes, but you might leave with the unsettling feeling that you've just been served by a machine that is quietly judging your life choices.",
+  "exits": {
+    "south": "hill_valley/2015/main_st2"
+  },
+  "items": []
+}

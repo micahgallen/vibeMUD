@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/bus_stop",
+  "type": "room",
+  "name": "Hill Valley Transit Bus Stop",
+  "description": "A sleek, automated bus stop, where public transportation is a smooth, if slightly impersonal, experience. A holographic display shows the current location of all buses in the city, their arrival times calculated down to the second. A robotic arm extends to collect your fare, its metallic fingers surprisingly gentle. The air is thick with the scent of ozone and the faint, almost imperceptible, hum of the anti-gravity buses as they glide silently to a stop. It's a place where you can get anywhere in the city in minutes, but you might leave with the unsettling feeling that you're just another cog in a perfectly efficient, and soulless, machine.",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "items": []
+}

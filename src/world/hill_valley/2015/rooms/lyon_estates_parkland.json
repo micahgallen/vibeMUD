@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/lyon_estates_parkland",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Estates Parkland",
+  "description": "A sprawling park where a suburban neighborhood once stood. The houses are gone, replaced by a pristine green space and a serene, man-made lake. The only remnants of the past are a pair of white lion statues, their paint now gleaming and fresh, standing sentinel at the entrance. The air is thick with the scent of freshly cut grass and the faint, almost imperceptible, hum of the weather-control system that keeps the park in a state of perpetual spring. It's a place of tranquil beauty, but you can't shake the feeling that you're standing on the ghost of a thousand forgotten memories.",
+  "exits": {
+    "south": "hill_valley/2015/lyon_drive"
+  },
+  "tags": [
+    "park",
+    "outdoors"
+  ]
+}

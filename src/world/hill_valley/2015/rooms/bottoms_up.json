@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/bottoms_up",
+  "type": "room",
+  "definition": "room",
+  "name": "Bottoms Up",
+  "description": "A chic and unnervingly clean plastic surgery clinic, where perfection is just a few thousand dollars away. A holographic receptionist with an unnervingly perfect smile greets you, offering a brochure for the latest in body modification. A prominent display advertises a '2 for 1 sale' on their most popular breast implant models: the 'Super Inflatable TIT' and the 'Headlight TIT'. The air is thick with the scent of antiseptic and the faint, almost imperceptible, hum of medical equipment, a place where you can buy a new you, as long as you don't read the fine print.",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "tags": [
+    "service",
+    "shop"
+  ]
+}

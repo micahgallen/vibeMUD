@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/jfk_dr4",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "A quiet stretch of John F. Kennedy Drive, where the only sound is a distant dog. You are on John F. Kennedy Dr. A dog barks in the distance, a lonely sound that echoes in the quiet afternoon. Otherwise, it is quiet, a stillness that borders on oppressive. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/jfk_dr3",
+    "south": "hill_valley/2015/jfk_dr5"
+  },
+  "items": []
+}

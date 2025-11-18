@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/museum_of_art",
+  "type": "room",
+  "name": "Hill Valley Museum of Art",
+  "description": "A museum where the art is as confusing as the future itself. The exhibits are a bewildering mix of interactive holograms, kinetic sculptures that seem to have a mind of their own, and paintings that change based on your emotional state. A robotic curator glides silently through the gallery, offering cryptic explanations of the art that only seem to deepen the confusion. The air is thick with the scent of ozone and the faint, almost imperceptible, hum of the museum's environmental controls. It's a place where you can ponder the meaning of art, or just get a headache trying to figure out which way is up.",
+  "exits": {
+    "west": "hill_valley/2015/main_st",
+    "east": "hill_valley/2015/museum_cafe"
+  },
+  "items": []
+}

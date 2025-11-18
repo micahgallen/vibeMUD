@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/gifts_and_gardner",
+  "type": "room",
+  "name": "Hill Valley Gifts / The Hydroponic Gardner",
+  "description": "A bizarre combination of a gift shop and a hydroponic gardening store. One side of the room is filled with shelves of cheesy souvenirs, from 'I visited the future and all I got was this lousy t-shirt' to snow globes containing a miniature, perpetually smiling holographic family. The other side is a lush, green oasis of hydroponic plants, their leaves a vibrant, almost unnatural, green. The air is a strange mix of plastic and fresh basil. It's a place where you can buy a commemorative plate and a genetically modified tomato in the same transaction, a perfect metaphor for the glorious, and slightly terrifying, future.",
+  "exits": {
+    "south": "hill_valley/2015/main_st1"
+  },
+  "items": []
+}

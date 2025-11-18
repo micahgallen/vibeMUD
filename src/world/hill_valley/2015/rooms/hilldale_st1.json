@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hilldale_st1",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "A dark and foreboding street in the heart of Hilldale. The once-pristine houses are now dilapidated and covered in graffiti. The lawns are overgrown, and the cars in the driveways are rusted and stripped for parts. The silence is broken only by the sound of a distant siren and the scuttling of unseen things in the shadows. It's the kind of place where you lock your doors and hope for the best. To the west, the entrance to Hilldale, and to the east, more of the same.",
+  "exits": {
+    "west": "hill_valley/2015/hilldale_entrance",
+    "east": "hill_valley/2015/hilldale_st2"
+  },
+  "items": []
+}

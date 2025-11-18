@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/maple_ave4",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "A residential stretch of Maple Avenue, under the watchful eye of a feline observer. You are on Maple Ave. A cat sits on a fence, watching you with an unnerving curiosity, its gaze a silent judgment on your presence. Maple Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "exits": {
+    "north": "hill_valley/2015/maple_ave3",
+    "south": "hill_valley/2015/maple_ave5"
+  },
+  "items": []
+}

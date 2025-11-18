@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/fusion_bar",
+  "type": "room",
+  "definition": "room",
+  "name": "Fusion Bar",
+  "description": "A trendy 'fusion' bar where the food is confusing and the drinks are overpriced. The decor is a bewildering mix of industrial chic and rustic charm, with exposed brick walls and Edison bulbs hanging from the ceiling. A robotic bartender, with a handlebar mustache inexplicably welded to its face, mixes cocktails with a bewildering array of exotic ingredients. The air is thick with the scent of truffle oil and the faint, almost imperceptible, hum of a sous-vide machine. It's a place where you can get a deconstructed Caesar salad and a cocktail that tastes vaguely of regret, all for the low, low price of your entire paycheck.",
+  "exits": {
+    "north": "hill_valley/2015/first_st"
+  },
+  "tags": [
+    "bar",
+    "urban"
+  ]
+}
