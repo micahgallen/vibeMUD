@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/pontiac_hover_conversions",
   "type": "room",
   "name": "Pontiac Sales and Hover Conversions",
-  "description": "A dealership that sells the cars of the future, and converts the cars of the past. The showroom is a bizarre mix of sleek, modern hover cars and beat-up, 80s-era jalopies, all waiting to be retrofitted with the latest in anti-gravity technology. A holographic salesman with a cheesy grin and a bad toupee tries to sell you a 'slightly used' 2012 Pontiac Aztek, now with 'state-of-the-art hover capabilities.' The air is thick with the smell of ozone and the faint, almost imperceptible, hum of the hover converters. It's a place where you can buy the future, or at least a heavily modified, and probably dangerous, version of the past.",
+  "description": "A dynamic automotive nexus, specializing in 'temporal vehicle integration' and advanced grav-lev retrofits. The showroom is a carefully curated paradox: gleaming, self-driving aerocars from the present share floor space with meticulously restored, internal-combustion 'heritage vehicles,' all awaiting their anti-gravity upgrades. A perpetually cheerful holographic 'sales-bot,' its digital grin unnervingly fixed, attempts to interest you in a 'lightly pre-owned' 2012 Pontiac Aztek, now equipped with 'state-of-the-art grav-repulsion modules' and 'enhanced chrono-stability.' The air is thick with the synthetic scent of ozone and the subtle, disconcerting hum of active grav-converters. It's a place where one can acquire a slice of the future, or at least a meticulously re-contextualized, and potentially volatile, version of the past.",
   "exits": {
     "south": "hill_valley/2015/main_st1"
   },

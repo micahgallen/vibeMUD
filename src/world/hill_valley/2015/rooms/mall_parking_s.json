@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (South)",
-  "description": "The southern edge of the parking lot, bordering a dusty, unused field. The asphalt gives way to dirt and weeds here. A faded 'No Trespassing' sign leans tiredly against a chain-link fence. The mall seems distant from this vantage point, its consumerist siren song muffled by the wind.",
+  "description": "The southern perimeter of the Mall's exterior transit zone, bordering a meticulously simulated 'wild-space' re-terraformed to resemble a pre-urban landscape. The self-repairing chrono-pavement seamlessly transitions into bio-engineered flora, creating an aesthetically pleasing, yet strictly controlled, natural barrier. A dynamically re-configuring holo-sign, projecting 'ecological preservation directives,' leans at a carefully calculated angle against a bio-luminescent fence. From this vantage point, the Mall's hyper-efficient consumerist symphony is subtly dampened, its algorithmic siren song momentarily absorbed by the simulated rustling of bio-engineered leaves.",
   "exits": {
     "north": "hill_valley/2015/twin_pines_mall",
     "east": "hill_valley/2015/mall_parking_se",

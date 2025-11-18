@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Clayton Ravine Bridge",
-  "description": "A formidable concrete structure spanning a deep chasm, named after a tragedy. The Clayton Ravine Bridge stands as a testament to municipal engineering, a stark concrete ribbon stretched across the yawning maw of Clayton Ravine. Local legend, the kind whispered by bored teenagers and gossipy old-timers, claims the ravine is named for a schoolteacher who took a rather unfortunate and final plunge a century ago. Below, the river glints with a deceptive innocence, far from the mundane concerns of Hill Valley. To the east, the weary end of Main Street awaits.",
+  "description": "A gleaming, reinforced bridge of recycled composites spanning a geo-sculpted chasm, officially designated 'Clayton Memorial Skywalk,' though local data-feeds still reference its tragic namesake. The Skywalk stands as a triumph of eco-engineering, a minimalist ribbon against the backdrop of Hill Valley's re-terraformed skyline. Sub-vocalized historical data, accessible via personal comm-implants, mentions a schoolteacher's 'unfortunate gravitational discharge' centuries ago. Below, the bio-luminescent river shimmers with deceptive innocence, its surface far from the optimized concerns of Hill Valley. To the east, the vibrant Main Street district hums with curated activity.",
   "exits": {
     "east": "hill_valley/2015/main_st9"
   },

@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "State Farm Insurance",
-  "description": "A sleek, sterile office promising coverage for everything from hoverboard accidents to temporal paradoxes. A friendly holographic agent shimmers behind a minimalist desk, its smile never faltering as it explains the benefits of 'catastrophic de-aging' insurance. The air is scented with a calming lavender fragrance, a futile attempt to mask the underlying anxiety of a world where the future is both brighter and infinitely more dangerous. It's a place where you can insure your destiny, as long as you can afford the monthly premium.",
+  "description": "A gleaming, bio-luminescent 'Risk Mitigation & Actuarial Optimization Centre,' promising comprehensive data-coverage for all eventualities, from grav-vehicle malfunctions to unexpected temporal divergences. A perpetually serene holographic agent shimmers behind a minimalist, self-cleaning console, its smile never faltering as it articulates the nuanced benefits of 'catastrophic de-aging' or 'identity fragmentation' insurance. The air is diffused with a precisely calibrated, calming lavender pheromone, a subtle, yet ultimately futile, attempt to mask the pervasive, underlying algorithmic anxiety of a world where futures are simultaneously brighter and infinitely more statistically complex. It's a space where one can attempt to insure one's destiny, provided one's credit-score allocation aligns with the meticulously calculated monthly premium.",
   "exits": {
     "north": "hill_valley/2015/first_st1"
   },

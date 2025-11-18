@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hilldale_entrance",
   "type": "room",
   "name": "Hilldale Entrance",
-  "description": "The once-grand entrance to Hilldale is now a grim warning. The manicured lawns are overgrown with weeds, and the once-gleaming sign is now covered in graffiti. A burnt-out hovercar sits on the curb, a monument to a joyride gone wrong. The air is thick with the smell of decay and the faint, almost imperceptible, hum of police drones patrolling the sky. To the west, the imposing Clayton Ravine Bridge looms, a gateway to a world that suddenly seems much safer. To the east, the darkened streets of Hilldale beckon, promising a life of quiet desperation.",
+  "description": "The once-grand Hilldale Gateway, now a stark, bio-luminescent warning sign, its 'welcome' message fractured by a cascade of glitching holo-tags. The manicured bio-lawns are aggressively reclaimed by self-replicating, genetically modified weeds, and the gleaming chrome signage is etched with the crude, yet vibrant, graffiti of an emergent sub-culture. A derelict grav-car, its anti-gravity units fused, sits half-submerged in a sinkhole of toxic runoff, a monument to a data-corrupted joyride. The air is thick with the metallic tang of urban decay and the omnipresent, yet strangely comforting, hum of autonomous security drones patrolling the stratified air corridors. To the west, the imposing Clayton Ravine Bridge, now a designated 'Safe Passage Zone,' offers egress to marginally less volatile sectors. To the east, the shadowed, data-scrambled streets of Hilldale beckon, promising a life of quiet desperation, perpetually monitored.",
   "exits": {
     "south": "hill_valley/2015/main_st9",
     "east": "hill_valley/2015/hilldale_st1"

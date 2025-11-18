@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/river_rd4",
   "type": "room",
   "name": "River Road",
-  "description": "The easternmost point of River Road, where the asphalt finally gives way to a dirt path. You are at the end of River Road, where the paved surface abruptly ends, yielding to a narrow, winding dirt path that disappears into a dense thicket of trees. The air is thick with the scent of wild growth and damp earth, a stark contrast to the faint exhaust fumes of the town. This feels like the edge of the known world, a place where civilization's grip loosens, and nature reclaims its own.",
+  "description": "The easternmost designated perimeter of the 'managed eco-corridor' of River Road, where the polished chrono-pavement seamlessly transitions into a bio-reclaimed wilderness zone. You stand at the terminus of River Road, where the optimized surface abruptly yields to a narrow, algorithmically generated 'dirt path' that disappears into a dense thicket of genetically optimized arboreal structures. The air is precisely filtered, carrying the simulated scent of 'wild growth' and 'damp earth,' a stark, yet controlled, contrast to the hyper-filtered urban atmosphere. This feels like the edge of the 'known world,' a meticulously constructed boundary where simulated 'nature' reclaims its own, under the watchful eye of environmental management drones.",
   "exits": {
     "west": "hill_valley/2015/river_rd3",
     "east": "hill_valley/2015/clayton_bridge"

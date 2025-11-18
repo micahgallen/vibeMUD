@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/jfk_dr3",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "A residential stretch of John F. Kennedy Drive, showcasing a mix of architectural styles. You are on John F. Kennedy Dr. The street is mostly residential here, with a mix of architectural styles that speak of different eras and different dreams, all slowly fading under the indifferent sun. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A residential segment of the John F. Kennedy Skyway, presenting a curated 'architectural evolution' exhibit, where various habitat unit designs from different eras are meticulously preserved. You cruise along John F. Kennedy Dr. The residential units here, a mélange of 'historical' and 'neo-functionalist' styles, reflect the iterative development of idealized living, all subtly fading under the indifferent, yet perfectly simulated, solar output. The wide thoroughfare, a testament to optimized civic design, extends seamlessly, a polished synth-ribbon winding through augmented green spaces. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/jfk_dr2",
     "south": "hill_valley/2015/jfk_dr4"

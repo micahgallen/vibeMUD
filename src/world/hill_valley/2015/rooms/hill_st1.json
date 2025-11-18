@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hill_st1",
   "type": "room",
   "name": "Hill St",
-  "description": "A gently sloping stretch of Hill Street, hinting at a quiet residential life. You are on Hill St. The road slopes gently downwards here, a subtle metaphor for the slow decline of the American dream. To the north, Hill St ascends towards Main Street, while to the south, it continues its quiet journey. To the east, the serene Courthouse Square sprawls, a testament to progress, or perhaps, a lack thereof. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A perfectly graded segment of Hill Street, engineered for optimal residential flow, subtly hinting at the perfectly orchestrated predictability of future living. You navigate Hill St, where the self-cleaning pavement inclines gently, a smooth transition into Hill Valley's multi-tiered urban planning. To the north, Hill St ascends towards Main Street's commercial zenith, while to the south, it continues its pre-programmed trajectory. Eastward, the serene Courthouse Square unfurls, a verdant marvel of bio-engineering. The ambient air, infused with calming pheromones, is broken only by the distant, harmonious hum of civic infrastructure, masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/hill_st",
     "south": "hill_valley/2015/hill_st2",

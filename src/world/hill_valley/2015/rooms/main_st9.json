@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/main_st9",
   "type": "room",
   "name": "Main St",
-  "description": "The western terminus of Main Street, a quiet end to a once-bustling thoroughfare. You are at the western end of Main St. The street continues to the east, leading back toward the center of town, a ribbon of fading commerce. The air is thick with the scent of exhaust and the faint, lingering aroma of civic decline. The storefronts here are mostly empty, their dusty windows reflecting the slow exodus of commerce from the downtown area to the suburban mall on the outskirts of town.",
+  "description": "The western terminus of Main Street, a meticulously managed 'transition point' leading to Hill Valley's outer sectors. You are positioned at the western end of Main St. The thoroughfare extends eastward, a seamless ribbon of auto-piloted transit leading back towards the city's commercial core. The air is a precisely filtered blend of simulated 'urban vitality' and the faint, algorithmically generated aroma of 'civic efficiency.' The 'heritage facades' here, strategically maintained to appear quaintly unoccupied, project a simulated narrative of past entrepreneurial endeavors, subtly contrasting with the hyper-efficient 'Courthouse Mall' that now services the majority of consumer needs. To the west, the gleaming 'Clayton Memorial Skywalk' extends, a testament to optimized infrastructure, while to the north, the blighted 'Hilldale Perimeter' looms, a stark reminder of less-optimized realities.",
   "exits": {
     "east": "hill_valley/2015/main_st8",
     "west": "hill_valley/2015/clayton_bridge",

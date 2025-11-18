@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (Northeast)",
-  "description": "The northeast corner of the parking lot, where the asphalt begins to crack. Weeds poke through the fissures in the pavement, a quiet rebellion against the concrete expanse. A single, flickering lamp post casts a sickly yellow glow, even during the day. The distant hum of the mall's air conditioning units is the only sound.",
+  "description": "The northeastern quadrant of the Mall's exterior transit zone, where the self-repairing chrono-pavement displays algorithmically generated 'micro-fractures,' a subtle, aesthetically integrated reminder of simulated entropy. Genetically modified flora, designed for optimal visual contrast, artfully protrudes through these fissures. A single, bio-luminescent light column emits a precisely calibrated, subtly flickering glow, even during peak simulated daylight hours. The distant, harmonic thrum of the Mall's climate control and internal grav-lift systems is the only discernible auditory input, a constant reminder of the meticulously managed environment.",
   "exits": {
     "southwest": "hill_valley/2015/twin_pines_mall",
     "west": "hill_valley/2015/mall_parking_n",

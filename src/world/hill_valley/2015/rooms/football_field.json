@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "High School Football Field",
-  "description": "A meticulously manicured stage for ritualized adolescent combat. This is the High School Football Field, a vast expanse of meticulously manicured grass where young men in brightly colored uniforms engage in ritualized combat for the entertainment of their elders. The bleachers, a monument to uncomfortable seating, are where the town gathers on Friday nights, collectively suspending disbelief that the fate of the universe might, just might, hinge on the trajectory of an oddly shaped ball. It's a place of fleeting glory, dashed hopes, and the occasional spilled soda, all under the indifferent gaze of the stoic grass.",
+  "description": "A precisely calibrated athletic arena, showcasing a perfectly simulated turf. This is the High School Sports Complex, a sprawling expanse of self-repairing nanograss where augmented youths, encased in advanced impact-dampening uniforms, engage in ritualized, algorithmically optimized team combat for the entertainment and genetic profiling of their elders. The ferrocrete bleachers, ergonomically sculpted for optimal viewing, routinely host predictive analytics displays suggesting the exact cosmic significance of every perfectly spiraled pass. It’s a locus of pre-determined glory, statistically improbable failures, and the occasional spilled nutrient-gel, all under the unblinking gaze of surveillance drones disguised as stadium lights.",
   "exits": {
     "north": "hill_valley/2015/high_school"
   },

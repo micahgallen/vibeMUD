@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hilldale_st2",
   "type": "room",
   "name": "Hilldale Street",
-  "description": "Another dark and foreboding street in Hilldale. The houses are larger here, but they are also more dilapidated, with boarded-up windows and caved-in roofs. A pack of stray dogs, with glowing red eyes, snarls at you from a distance. The air is thick with the smell of garbage and despair. To the west and east, the street continues its descent into urban decay.",
+  "description": "A deeper penetration into the blighted heart of Hilldale. The residential units here, once symbols of affluence, are now colossal monuments to systemic failure, their reinforced windows caked with grime and their automated ingress points crudely welded shut. Packs of feral, bio-augmented canine units, their optical sensors glowing with malevolent intelligence, patrol the perimeter. The atmosphere is a dense miasma of decomposing organics and a palpable, low-frequency hum of communal despair. Both west and east, the thoroughfare continues its descent into the ever-expanding data-shadow of urban decay.",
   "exits": {
     "west": "hill_valley/2015/hilldale_st1",
     "east": "hill_valley/2015/hilldale_st3"

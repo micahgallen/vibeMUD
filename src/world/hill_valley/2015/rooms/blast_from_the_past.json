@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Blast From The Past",
-  "description": "An antique store that specializes in artifacts from the late 20th century. The shelves are filled with a bizarre collection of items, from dusty video game cartridges to faded band t-shirts. A holographic recreation of a surly, flannel-clad store clerk silently judges your purchases. The air is thick with the scent of dust and the faint, almost imperceptible, hum of the hologram projector. It's a place where you can buy a piece of your own history, a tangible reminder of a time before hoverboards and self-lacing shoes, but you might leave with the unsettling feeling that your youth is now considered an 'antique.'",
+  "description": "An antique store, now more of a curated historical archive, specializing in 'analog artifacts' from the late 20th century. The gleaming, transparent display cases hold items like dusty video game cartridges and faded band t-shirts, presented with an almost reverent air. A holographic recreation of a surly, flannel-clad store clerk offers historical context with a hint of condescension. The air is filtered and ionized, yet still carries the ghost of ancient plastic and forgotten dreams, a tangible reminder of a simpler, less optimized time.",
   "exits": {
     "northeast": "hill_valley/2015/hill_st"
   },

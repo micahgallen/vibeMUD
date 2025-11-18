@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/jfk_dr",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "The northern end of John F. Kennedy Drive, intersecting with Main Street. You are on John F. Kennedy Dr, at the intersection with Main St. To the north, Main St stretches out, a ribbon of fading commerce. John F. Kennedy Dr continues its quiet descent to the south, a testament to suburban sprawl. The air is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
+  "description": "The northern access point of the John F. Kennedy Skyway, seamlessly interfacing with Main Street's dynamic thoroughfare. You ascend onto John F. Kennedy Dr, where grav-vehicles hum with civic purpose. To the north, Main Street's meticulously curated commercial facades extend, an endless ribbon of simulated prosperity. John F. Kennedy Dr continues its graceful descent southward, dissolving into a network of residential habitat zones. The air is a precise blend of distant grav-vehicle harmonics and the faint, algorithmically generated scent of 'suburban dreams,' subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/main_st5",
     "south": "hill_valley/2015/jfk_dr1"

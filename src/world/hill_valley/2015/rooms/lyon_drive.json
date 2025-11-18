@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Lyon Drive",
-  "description": "A worn stretch of road, connecting the weary ends of Hill Street and Hubbard Avenue. Lyon Drive, once a symbol of suburban expansion, now shows the subtle signs of neglect. The asphalt is cracked in places, and weeds bravely push through the fissures, a quiet rebellion against the concrete. To the north, the entrance to Lyon Estates looms, a monument to a dream that has settled into comfortable, if slightly faded, reality. The air is a blend of distant traffic and the faint, lingering scent of exhaust fumes, a testament to the relentless march of time.",
+  "description": "A 'scheduled degradation' sector of the urban grid, connecting the perfectly optimized thoroughfares of Hill Street and Hubbard Avenue. Lyon Drive, once a symbol of unbridled suburban expansion, now serves as a controlled aesthetic reminder of 'the past,' subtly integrated into the present. The chrono-pavement displays algorithmically generated 'wear patterns,' while genetically modified weeds stage a picturesque, yet controlled, rebellion against the synth-concrete. To the north, the entrance to Lyon Estates Parkland, a monument to a dream re-engineered into a serene, yet carefully managed, reality. The air is a precise blend of distant grav-vehicle harmonics and the faint, algorithmically generated scent of 'nostalgic exhaust fumes,' a testament to the relentless, yet controlled, march of progress.",
   "exits": {
     "east": "hill_valley/2015/hubbard_ave9",
     "west": "hill_valley/2015/hill_st9",

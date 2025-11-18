@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hill_st8",
   "type": "room",
   "name": "Hill St",
-  "description": "A spacious, residential stretch of Hill Street, hinting at former grandeur. You are on Hill St. The houses here are set back from the road, with spacious yards that speak of a time when land was less precious and dreams were bigger. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A spacious, algorithmically optimized residential stretch of Hill Street, hinting at an era when individual land ownership was a quaint, yet persistent, social construct. You glide along Hill St. The 'habitat units' here are strategically recessed from the thoroughfare, their expansive bio-sculpted plots speaking of a time when spatial resources were less centrally managed and aspirations were, perhaps, less data-driven. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/hill_st7",
     "south": "hill_valley/2015/hill_st9"

@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/museum_cafe",
   "type": "room",
   "name": "Museum Cafe",
-  "description": "A chic, minimalist cafe attached to the Hill Valley Museum of Art. The menu is projected onto your table, offering a variety of overpriced and underwhelming food. A robotic barista, with a surprisingly judgmental tone, takes your order. The air is thick with the scent of burnt coffee and the faint, almost imperceptible, hum of the museum's climate control. It's a place where you can get a lukewarm latte and a stale pastry, all while contemplating the profound emptiness of modern art.",
+  "description": "A chic, hyper-minimalist 'nutri-dispensary' seamlessly integrated with the Hill Valley Museum of Art. The menu, a dynamic bio-luminescent projection directly onto your personal table surface, offers a curated selection of 'art-inspired' nutrient pastes and 'emotionally resonant' synthetic beverages. A gleaming, multi-articulated barista-bot, its optical sensors calibrated to detect even the slightest hint of 'sub-optimal emotional states,' processes your order with an almost unnerving efficiency. The air, perpetually purified, carries the faint, nostalgic scent of simulated freshly roasted beans and the subtle, disconcerting hum of the atmospheric regulators. It’s a space where one can acquire a perfectly lukewarm, yet aesthetically pleasing, nutri-latte and a bio-stabilized protein bar, all while engaging in a profound contemplation of the curated emptiness of post-modern existence.",
   "exits": {
     "west": "hill_valley/2015/museum_of_art"
   },

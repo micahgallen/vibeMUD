@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/main_st2",
   "type": "room",
   "name": "Main St",
-      "description": "A central block of Main Street, a mix of adult entertainment, bail bonds, and quick cash. You are on Main St, roughly in the middle of the block. To the east and west, the street stretches out, with storefronts on either side. Several businesses line this stretch, including the gleaming facade of Pizza Hut, the neon glow of Mr. Perfect, and the nostalgic charm of True Blues. Interspersed among them are numerous empty storefronts, their dusty windows reflecting the slow exodus of commerce from the downtown area to the suburban mall on the outskirts of town. To the south, the serene Courthouse Square sprawls, a testament to progress, or perhaps, a lack thereof.",
+      "description": "A bustling central thoroughfare of Main Street, presenting a carefully curated blend of 'lifestyle enhancement' providers and 'wellness optimization' centers. You navigate Main St, a dynamic ribbon extending east and west, flanked by sleek, transparent storefronts. Prominently featured are the gleaming, fully automated 'Pizza Hut,' the bio-luminescent glow of 'Mr. Perfect's Genetic Enhancement Clinic,' and the meticulously recreated 'True Blues' nostalgia emporium. Interspersed are atmospheric projections of 'thriving independent businesses,' subtly masking the calculated centralization of commerce within the hyper-efficient 'Courthouse Mall' further south, a gleaming testament to algorithmic urban planning and managed consumer flow.",
   "exits": {
     "east": "hill_valley/2015/main_st1",
     "west": "hill_valley/2015/main_st3",

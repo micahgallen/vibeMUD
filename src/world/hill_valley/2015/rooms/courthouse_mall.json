@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/courthouse_mall",
   "type": "room",
   "name": "Courthouse Mall",
-  "description": "A gleaming, multi-level shopping mall, where the pursuit of happiness is just a credit card swipe away. The former courthouse has been transformed into a temple of consumerism, with holographic advertisements shimmering in the air and robotic shopping assistants gliding silently through the pristine corridors. The air is thick with the scent of freshly baked cinnamon rolls and the faint, almost imperceptible, hum of a climate-control system that keeps the temperature at a perpetually perfect 72 degrees. It's a place where you can buy anything you could ever want, but you might leave with the unsettling feeling that you've just been sold a very expensive illusion.",
+  "description": "A dazzling, multi-tiered retail complex, where the elusive promise of 'consumer fulfillment' is always just one frictionless transaction away. The grand civic building has been repurposed into a shrine of commerce, with dynamic holographic billboards aggressively vying for your attention and gleaming chrome service-drones anticipating your every unspoken desire. The air, perpetually conditioned to optimal comfort, carries a synthetic aroma of 'Fresh Baked Goods' and the subliminal whisper of targeted marketing algorithms. It's a place designed for effortless acquisition, yet one often departs with a vague sense of having traded something intangible for a meticulously crafted illusion.",
   "exits": {
     "west": "hill_valley/2015/courthouse_square"
   },

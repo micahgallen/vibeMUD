@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Bottoms Up",
-  "description": "A chic and unnervingly clean plastic surgery clinic, where perfection is just a few thousand dollars away. A holographic receptionist with an unnervingly perfect smile greets you, offering a brochure for the latest in body modification. A prominent display advertises a '2 for 1 sale' on their most popular breast implant models: the 'Super Inflatable TIT' and the 'Headlight TIT'. The air is thick with the scent of antiseptic and the faint, almost imperceptible, hum of medical equipment, a place where you can buy a new you, as long as you don't read the fine print.",
+  "description": "A chic and unnervingly sterile 'aesthetic enhancement' clinic, where self-optimization is merely a credit-chip transaction away. A shimmering holographic receptionist, whose smile never quite reaches its hyper-realistic eyes, presents personalized brochures for bio-sculpting and chromosomal tuning. Prominent display screens cycle through 'Before & After' simulations, highlighting their popular 'Super Inflatable TIT' and 'Headlight TIT' models, currently on a 'two-for-one' quantum entanglement special. The air hums with the soft thrum of dermal regenerators and the faint, unsettlingly sweet scent of synthesized collagen.",
   "exits": {
     "south": "hill_valley/2015/main_st3"
   },

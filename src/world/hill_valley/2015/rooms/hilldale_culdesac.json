@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hilldale_culdesac",
   "type": "room",
   "name": "Hilldale Cul-de-Sac",
-  "description": "A dead end in a dead neighborhood. The houses in the cul-de-sac are in even worse shape than the rest of Hilldale, with some of them completely collapsed. A gang of cybernetically enhanced punks have made this their territory, and they don't look friendly. The air is thick with the smell of smoke and cheap booze, and the sound of loud, angry music. To the west, the main Hilldale Street offers the only escape from this cul-de-sac of despair.",
+  "description": "A terminal loop in a blighted district. The once-aspirational domiciles of this cul-de-sac are now mere skeletal husks, their structural integrity compromised by neglect and repurposed components. A self-declared 'Autonomous Zone' of cybernetically augmented youth maintains a perpetual occupation around a central, glowing refuse pyre, their bio-luminescent tattoos pulsing in defiance. The air, thick with the acrid tang of synthetic combustibles and fermented synth-ale, vibrates with the distorted frequencies of illicit data-streams. To the west, the decayed arterial of Hilldale Street offers the only ingress to this cul-de-sac of calculated despair.",
   "exits": {
     "west": "hill_valley/2015/hilldale_st3"
   },

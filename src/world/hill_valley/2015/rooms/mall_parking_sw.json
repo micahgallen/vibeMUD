@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (Southwest)",
-  "description": "The southwest corner of the parking lot, where teenagers come to smoke. The ground is littered with cigarette butts and discarded soda cans. Graffiti adorns a nearby wall, a colorful but ultimately meaningless declaration of youthful angst. The air is thick with the smell of cheap tobacco and rebellion.",
+  "description": "The southwestern quadrant of the Mall's exterior transit zone, unofficially designated as a 'Youthful Disengagement Zone.' The self-repairing chrono-pavement is subtly discolored with the residue of bio-degradable 'flavor-sticks' and discarded 'nutrient-gel' packets. A section of the nearby architectural facade is adorned with dynamically shifting, algorithmically generated 'graffiti,' its vibrant, yet ultimately meaningless, declarations a testament to programmed adolescent angst. The air is precisely filtered, yet carries the synthetic scent of ozone and the faint, algorithmically generated aroma of 'rebellion,' subtly masking any inconvenient realities.",
   "exits": {
     "northeast": "hill_valley/2015/twin_pines_mall",
     "east": "hill_valley/2015/mall_parking_s",

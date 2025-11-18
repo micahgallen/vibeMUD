@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/first_st1",
   "type": "room",
   "name": "First St",
-  "description": "A quiet, unassuming residential stretch of First Street. You are on First St, a quiet residential street where the houses are mostly indistinguishable and the lawns are just green enough to avoid suspicion. To the west, First St continues its monotonous journey, and to the east, it meets the slightly more bustling Hubbard Ave. The air is thick with the scent of freshly cut grass and the faint, lingering aroma of suburban ennui.",
+  "description": "A meticulously planned residential artery of First Street, where every domicile projects an aura of tranquil conformity, its perfectly manicured synth-lawns just verdant enough to deflect suspicion. To the west, First St glides onward, a seamless extension of urban infrastructure, while to the east, it converges with the slightly more bustling Hubbard Avenue. The air, perpetually purified, carries the faint, nostalgic scent of simulated freshly-cut grass, an olfactory echo of a suburban ideal diligently maintained.",
   "exits": {
     "west": "hill_valley/2015/first_st",
     "east": "hill_valley/2015/hubbard_ave2",

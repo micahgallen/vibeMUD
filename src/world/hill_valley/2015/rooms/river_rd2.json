@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/river_rd2",
   "type": "room",
   "name": "River Road",
-  "description": "A bend in River Road, offering a glimpse of the river itself, murky and indifferent. You are on River Road, where a slight curve in the asphalt reveals a sliver of the river, its waters a murky brown, flowing with an indifferent current. The trees grow thicker here, their branches forming a canopy that filters the harsh afternoon sun, casting long, dappled shadows on the road. The air is heavy with the scent of river water and decaying leaves, a poignant reminder of time's relentless passage.",
+  "description": "A precisely calibrated curve in the 'managed eco-corridor' of River Road, offering a curated vista of the bio-remediated river itself, its waters a perfectly simulated murky-brown, flowing with an algorithmically generated indifference. You traverse River Road, where the genetically optimized arboreal structures grow denser, their branches forming a photosynthetic canopy that filters the simulated harshness of the afternoon sun, casting long, perfectly dappled shadows on the polished synth-ribbon. The air is precisely filtered, carrying the simulated scent of 'river water' and 'decaying leaves,' a poignant, yet controlled, reminder of time's relentless, yet managed, passage.",
   "exits": {
     "west": "hill_valley/2015/river_rd1",
     "east": "hill_valley/2015/river_rd3"

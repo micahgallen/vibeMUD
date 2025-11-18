@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hilldale_st3",
   "type": "room",
   "name": "Hilldale Street",
-  "description": "The final stretch of Hilldale Street before it curves into a cul-de-sac. The houses here are barely standing, their walls crumbling and their roofs collapsing. A group of tough-looking cyborgs are gathered around a bonfire in the middle of the street, their cybernetic eyes glowing in the dark. The air is thick with the smell of smoke and cheap booze. To the west, the street continues its journey through the ruins of Hilldale, and to the east, the cul-de-sac awaits, a dead end in a dead neighborhood.",
+  "description": "The terminal segment of Hilldale Street, culminating just before its data-corrupted cul-de-sac. The structural integrity of the habitat units here is severely compromised, their self-repairing nanite systems long since depleted, resulting in collapsing walls and exposed conduit arrays. A provisional encampment of heavily augmented cyber-punks occupies the central thoroughfare, their optical implants glowing ominously in the perpetual twilight. The atmosphere is a dense haze of low-grade synth-smoke and the reek of unregulated bio-fermentation. To the west, the arterial continues its fractured trajectory through the decaying sectors of Hilldale, while to the east, the cul-de-sac promises a definitive, and perhaps irreversible, dead end.",
   "exits": {
     "west": "hill_valley/2015/hilldale_st2",
     "east": "hill_valley/2015/hilldale_culdesac"

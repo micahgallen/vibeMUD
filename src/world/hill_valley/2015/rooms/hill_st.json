@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hill_st",
   "type": "room",
   "name": "Hill St",
-  "description": "The northernmost stretch of Hill Street, intersecting with Main Street. You are on Hill St, at the intersection with Main St. To the north, Main St beckons with its fading glory, and Hill St continues its quiet descent to the south. To the east, the serene Courthouse Square stretches out, a testament to progress, or perhaps, a lack thereof. The air here is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
+  "description": "The meticulously maintained northern stretch of Hill Street, seamlessly interfacing with Main Street's primary traffic flow. You glide along Hill St, where self-navigating transit pods hum silently. To the north, Main Street's pulsating commercial core beckons with its meticulously curated historical facades, while Hill St itself descends gracefully southward into residential zones. Eastward, the serene, bio-engineered expanse of Courthouse Square unfolds, a testament to urban renewal, or perhaps, architectural overcompensation. The air is a filtered blend of distant sonic traffic and the faint, unsettlingly sweet aroma of manufactured nostalgia.",
   "exits": {
     "north": "hill_valley/2015/main_st3",
     "south": "hill_valley/2015/hill_st1",

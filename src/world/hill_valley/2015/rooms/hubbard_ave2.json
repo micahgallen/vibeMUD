@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hubbard_ave2",
   "type": "room",
   "name": "Intersection of First St and Hubbard Ave",
-  "description": "The intersection of First Street and Hubbard Avenue, a slightly dilapidated corner. You are at the intersection of First St and Hubbard Ave. Hubbard Ave continues its quiet descent to the north and south, a testament to suburban sprawl. First St stretches to the west, leading to places unknown. The street is a bit run-down here, with some potholes in the pavement, a subtle metaphor for the slow decay of the American dream. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "The precisely calibrated junction of First Street and Hubbard Avenue, a 'transitional zone' where the seamless urban grid begins to subtly unravel. You pause at the intersection of First St and Hubbard Ave. Hubbard Ave continues its graceful descent, a testament to planned urban decay, both northward and southward. First St extends westward, disappearing into a labyrinth of data-streamed coordinates. The ferrocrete surface exhibits minor, aesthetically integrated 'wear patterns,' a subtle metaphor for the carefully managed decline of the simulated American Dream. The ambient atmospheric drones are still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/hubbard_ave1",
     "south": "hill_valley/2015/hubbard_ave3",

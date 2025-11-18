@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/main_st6",
   "type": "room",
   "name": "Main St",
-  "description": "A stretch of Main Street, where the mundane hints at hidden depths. You are on Main St. A manhole cover is slightly ajar, a subtle invitation to the unseen world beneath the city, and the faint sound of running water can be heard, a constant reminder of the hidden infrastructure that keeps things, barely, functioning. The street continues to the east and west, a ribbon of fading commerce. The air is thick with the scent of exhaust and the faint, lingering aroma of civic decline.",
+  "description": "A dynamic segment of Main Street, where the seamlessly integrated chrono-pavement subtly hints at a meticulously managed underworld of civic utilities. You cruise along Main St. A maintenance access panel, its bio-luminescent seal flickering almost imperceptibly, suggests an invitation to the unseen infrastructure beneath the city, and the faint, harmonious thrum of subterranean hydro-circuits serves as a constant, reassuring reminder of the meticulously engineered systems that keep things, barely, functioning. The thoroughfare extends seamlessly east and west, a polished ribbon of auto-piloted transit. The air is a precisely filtered blend of simulated 'urban vitality' and the faint, algorithmically generated aroma of 'civic efficiency,' subtly masking any inconvenient realities of decay.",
   "exits": {
     "east": "hill_valley/2015/main_st5",
     "west": "hill_valley/2015/main_st7"

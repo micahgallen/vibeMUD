@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (West)",
-  "description": "The western side of the parking lot, a desolate expanse of empty spaces. This part of the lot is mostly empty, a testament to the mall's waning popularity. A lone, sun-bleached sedan sits in the middle of the asphalt, its tires flat, its windows dusty. It looks like it's been here since the Carter administration.",
+  "description": "The western quadrant of the Mall's exterior transit zone, an expansive, meticulously maintained expanse of chrono-pavement, yet curiously devoid of actively utilized grav-vehicle spaces. This sector serves as a subtle, yet stark, visual representation of the Mall's declining 'consumer engagement metrics.' A single, sun-bleached 'heritage vehicle,' its tires deflated with programmed realism and its chrono-glass subtly dust-filmed, is strategically placed, a poignant artifact from what historical data-feeds refer to as 'the Pre-Optimization Era.' The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
   "exits": {
     "east": "hill_valley/2015/twin_pines_mall",
     "south": "hill_valley/2015/mall_parking_sw",

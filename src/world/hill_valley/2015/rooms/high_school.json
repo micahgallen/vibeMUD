@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Hill Valley High School",
-  "description": "A brick edifice of enforced learning and adolescent angst. Hill Valley High School, a brick edifice of enforced learning, stands as a testament to the human capacity for both hope and utter bewilderment. Within these walls, the youth of Hill Valley are subjected to the peculiar ritual of 'education,' a process designed to prepare them for a future that, statistically speaking, will involve a great deal of paperwork and a surprising lack of dragons. The air hums with the ghosts of forgotten algebra equations and the faint scent of adolescent angst, a potent cocktail of hormones and unfulfilled potential. It is a place where dreams are both forged and, more often than not, quietly misplaced.",
+  "description": "A gleaming, bio-luminescent learning matrix, where the youth of Hill Valley are meticulously guided through 'optimized cognitive development programs.' This institution, now known as the Hill Valley Youth Enrichment Centre, stands as a monument to algorithmic education, designed to prepare its charges for a future statistically devoid of dragons, but brimming with compliance protocols. The air, perpetually conditioned to stimulate peak neuro-activity, still carries the ghost of forgotten data-streams and the faint scent of adolescent angst, a potent cocktail of genetically pre-disposed potential and subtly enforced conformity.",
   "exits": {
     "south": "hill_valley/2015/football_field",
     "north": "hill_valley/2015/river_rd3"

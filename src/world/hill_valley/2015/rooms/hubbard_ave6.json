@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hubbard_ave6",
   "type": "room",
   "name": "Hubbard Ave",
-  "description": "A residential stretch of Hubbard Avenue, marked by an idling car. You are on Hubbard Ave. A car is parked on the side of the road, its engine idling, a silent sentinel in the quiet suburban afternoon. Hubbard Ave continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A residential segment of Hubbard Avenue, featuring a stationary, autonomous transport pod, its grav-lev engines in passive standby mode, a silent sentinel in the algorithmically serene suburban afternoon. You traverse Hubbard Ave, a polished synth-ribbon continuing its designated trajectory north and south, winding past augmented green spaces and 'legacy' architectural residences. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/hubbard_ave5",
     "south": "hill_valley/2015/hubbard_ave7"

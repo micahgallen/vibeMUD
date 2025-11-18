@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/river_rd1",
   "type": "room",
   "name": "River Road",
-  "description": "Another segment of River Road, where the distant hum of traffic fades into the rustle of leaves. You are on River Road, a path that feels increasingly isolated from the town's main arteries. The asphalt is less cracked here, but the sense of quiet decay persists, a subtle reminder of Hill Valley's fading glory. The air is cooler, carrying the scent of damp earth and the faint, almost imperceptible, whisper of the river nearby.",
+  "description": "Another segment of the 'managed eco-corridor' of River Road, where the distant, harmonious thrum of civic utilities is artfully blended with the algorithmically generated rustling of bio-engineered leaves. You traverse River Road, a polished synth-ribbon that feels increasingly detached from the city's hyper-efficient core. The chrono-pavement here exhibits fewer 'wear patterns,' yet the subtle, pervasive sense of 'managed entropy' persists, a gentle reminder of Hill Valley's carefully curated, yet ultimately fading, narrative of progress. The air is precisely filtered, carrying the simulated scent of 'damp earth' and the faint, algorithmically generated murmur of the bio-remediated river nearby.",
   "exits": {
     "west": "hill_valley/2015/river_rd",
     "east": "hill_valley/2015/river_rd2"

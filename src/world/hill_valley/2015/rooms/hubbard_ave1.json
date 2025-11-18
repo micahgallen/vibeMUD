@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hubbard_ave1",
   "type": "room",
   "name": "Intersection of Hubbard Ave and River Rd",
-  "description": "A residential stretch of Hubbard Avenue, now intersecting with the River Road. You are on Hubbard Ave, where it meets the River Road. The street is mostly residential, with a few small apartment buildings that seem to have been dropped here as an afterthought. Hubbard Ave continues its quiet descent to the north and south, a testament to suburban sprawl. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "The precise junction of Hubbard Avenue and the re-terraformed River Road. You cruise along Hubbard Ave, where it seamlessly merges with the bio-filtered River Road. The residential units here, mostly modular 'habitat pods,' appear to have been deployed with calculated efficiency. Hubbard Ave continues its graceful descent, a testament to urban planning, both northward and southward. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities of decay.",
   "exits": {
     "north": "hill_valley/2015/hubbard_ave",
     "south": "hill_valley/2015/hubbard_ave2",

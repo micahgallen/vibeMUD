@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hubbard_ave",
   "type": "room",
   "name": "Hubbard Ave",
-  "description": "The northern end of Hubbard Avenue, intersecting with Main Street. You are on Hubbard Ave, at the intersection with Main St. To the north, Main St stretches out, a ribbon of fading commerce. Hubbard Ave continues its quiet descent to the south, a testament to suburban sprawl. To the east, the aroma of burnt coffee wafts from the Museum Cafe, a beacon of lukewarm lattes. The air is a blend of distant traffic and the faint, lingering scent of suburban dreams.",
+  "description": "The northern nexus of Hubbard Avenue, seamlessly intersecting with Main Street's dynamic thoroughfare. You navigate Hubbard Ave, where self-optimizing transit lanes hum with civic purpose. To the north, Main Street's meticulously curated commercial facades extend, an endless ribbon of simulated prosperity. Hubbard Ave continues its graceful descent southward, dissolving into a network of residential habitat zones. Eastward, the bio-filtered aroma of perfectly roasted, ethically sourced synth-coffee emanates from the Museum Cafe, a beacon of lukewarm, yet aesthetically pleasing, caffeination. The air is a precise blend of distant grav-vehicle harmonics and the faint, algorithmically generated scent of 'suburban dreams,' subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/main_st",
     "south": "hill_valley/2015/hubbard_ave1",

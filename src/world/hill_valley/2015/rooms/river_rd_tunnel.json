@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "River Road Tunnel",
-  "description": "A dark, damp tunnel bored through the heart of Deacon Hill. The air inside is cool and heavy with the smell of wet concrete and exhaust fumes, a stark contrast to the open air of River Road. The tunnel is a shortcut, a grimy passage that rumbles with the echo of every passing car. The walls are stained with years of grime, and the overhead lights flicker, casting long, dancing shadows. It's a place of transit, not lingering, a concrete artery connecting two sides of the hill, both equally worn down by time.",
+  "description": "A dark, yet hyper-efficient 'sub-surface transit tube' bored through the geo-sculpted heart of Deacon Hill. The atmospherically controlled air within is cool and heavy with the synthesized scent of 'fresh ferrocrete' and a subtle, algorithmically generated hint of 'historic exhaust.' This tube serves as a critical, auto-piloted shortcut, its seamless passage echoing with the precisely calibrated hum of passing grav-vehicles. The interior surfaces are coated with a self-cleaning nano-material that subtly simulates 'years of grime,' while the bio-luminescent overhead lighting pulsates with a rhythm designed to create 'long, dancing shadows,' an aesthetically integrated element of the urban experience. It's a space optimized for rapid transit, not lingering, a vital, yet slightly unsettling, neural pathway connecting two sides of the hill, both meticulously maintained by ceaseless algorithmic oversight.",
   "exits": {
     "west": "hill_valley/2015/river_rd4"
   },

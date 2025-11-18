@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/river_rd",
   "type": "room",
   "name": "River Road",
-  "description": "A quiet stretch of River Road, where the asphalt meets the encroaching weeds. You are on River Road, a ribbon of cracked asphalt that seems to be losing its battle with the persistent flora. To the west, the familiar, if slightly worn, suburban sprawl of Hubbard Avenue beckons. The air here carries the faint scent of damp earth and forgotten dreams, a testament to nature's slow, inevitable reclamation. The occasional rustle in the overgrown bushes hints at unseen wildlife, or perhaps just the wind playing tricks.",
+  "description": "A 'managed eco-corridor' section of River Road, where the self-repairing chrono-pavement seamlessly interfaces with a meticulously cultivated, genetically optimized 'wild-flora.' You traverse River Road, a polished synth-ribbon that appears to be in a perpetual, yet controlled, struggle with its persistent, bio-engineered counterpart. To the west, the meticulously ordered residential zones of Hubbard Avenue beckon, a familiar, if slightly over-optimized, suburban landscape. The air is a precisely filtered blend of simulated 'natural forest' and the faint, algorithmically generated aroma of 'ecological renewal,' subtly masking any inconvenient realities of decay.",
   "exits": {
     "west": "hill_valley/2015/hubbard_ave1",
     "east": "hill_valley/2015/river_rd1"

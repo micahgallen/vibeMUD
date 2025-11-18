@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/jfk_dr5",
   "type": "room",
   "name": "John F. Kennedy Dr",
-  "description": "A gently curving stretch of John F. Kennedy Drive. You are on John F. Kennedy Dr. The road curves slightly here, a subtle deviation in the otherwise straight path of suburban life. John F. Kennedy Dr continues its quiet descent to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A gracefully arcing segment of the John F. Kennedy Skyway, its trajectory a subtle deviation in the otherwise linear, algorithmically planned urban experience. You cruise along John F. Kennedy Dr. The wide thoroughfare, a testament to optimized civic design, extends seamlessly, a polished synth-ribbon winding through augmented green spaces and 'legacy' architectural residences. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/jfk_dr4",
     "south": "hill_valley/2015/jfk_dr6",

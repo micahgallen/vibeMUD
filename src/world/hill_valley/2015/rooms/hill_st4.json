@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hill_st4",
   "type": "room",
   "name": "Hill St",
-  "description": "A residential stretch of Hill Street, bordering a small, unassuming park. You are on Hill St. A small park is visible to the east, a patch of green amidst the encroaching asphalt, where a few children play, their laughter a fleeting counterpoint to the general weariness of the neighborhood. Hill St continues its journey to the north and south, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "A residential quadrant of Hill Street, seamlessly integrated with a compact, bio-engineered recreational zone to the east. You traverse Hill St, where self-cleaning pedestrian pathways wind through hyper-real synth-foliage. A few child-drones engage in 'simulated play scenarios,' their pre-recorded laughter echoing with programmed innocence, a fleeting auditory counterpoint to the neighborhood's subtle existential hum. Hill St continues its designated trajectory north and south, a polished synth-ribbon winding past meticulously maintained 'legacy' housing units. The atmospherically controlled air, subtly scented with ozone, is broken only by the distant, harmonious thrum of civic utilities, masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/hill_st3",
     "south": "hill_valley/2015/hill_st5"

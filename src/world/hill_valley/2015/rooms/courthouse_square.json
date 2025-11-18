@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/courthouse_square",
   "type": "room",
   "name": "Courthouse Square",
-  "description": "A tranquil oasis in the heart of the city, where a sprawling pond and lush green space have replaced the cracked asphalt of a forgotten parking lot. The water is a startlingly clear blue, and the grass is a vibrant, almost artificial, green. A few families enjoy picnics on the grass, their laughter echoing in the clean, filtered air. A holographic swan glides across the pond, its movements graceful and unnervingly perfect. It's a place of serene beauty, but you can't shake the feeling that the perfection is just a little too perfect, a little too clean, a little too... manufactured.",
+  "description": "A meticulously engineered 'eco-recreational zone' replacing the archaic 'parking lot,' now a sprawling, bio-filtered pond and immaculately manicured green space. The hydro-aerated water shimmers with an impossible sapphire luminescence, while the genetically optimized grass displays a vibrant, almost aggressive, verdancy. Families, perfectly composed, engage in 'leisure-programmed' picnics, their laughter echoing with pre-approved joy in the atmospherically controlled air. A holographic swan, flawlessly rendered, performs perpetual, graceful circuits across the pond, an unnervingly perfect symbol of manufactured serenity. It’s a place of breathtaking, if slightly unsettling, beauty, where every blade of grass and ripple of water is a testament to meticulous design.",
   "exits": {
     "north": "hill_valley/2015/main_st2",
     "west": "hill_valley/2015/hill_st",

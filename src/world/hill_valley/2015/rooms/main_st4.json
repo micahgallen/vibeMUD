@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/main_st4",
   "type": "room",
   "name": "Main St",
-  "description": "A stretch of Main Street, facing the former courthouse, now the Department of Social Services. You are on Main St, standing before the grand, albeit chipped and stained, facade of what was once the Hill Valley Courthouse, now the Department of Social Services. The street continues to the east and west, a ribbon of fading commerce. The air is thick with the scent of exhaust and the faint, lingering aroma of civic decline.",
+  "description": "A dynamic segment of Main Street, directly facing the imposing, re-purposed edifice of what was once the Hill Valley Courthouse, now known as the 'Civic Services Optimization Hub.' You navigate Main St, positioned before the grand, yet algorithmically maintained, facade, its historical elements augmented with bio-luminescent trim and self-cleaning nano-coatings. The thoroughfare extends seamlessly east and west, a polished ribbon of auto-piloted transit. The air is a meticulously filtered blend of simulated 'urban vitality' and the faint, algorithmically generated aroma of 'civic efficiency,' subtly masking any inconvenient realities of decay.",
   "exits": {
     "east": "hill_valley/2015/main_st3",
     "west": "hill_valley/2015/main_st5",

@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (Southeast)",
-  "description": "The southeast corner of the lot, a graveyard for shopping carts. A dozen or more shopping carts are gathered here, their wheels locked in a silent, metallic embrace. A large puddle of indeterminate origin reflects the grey sky. The smell of stale rainwater and rust hangs in the air.",
+  "description": "The southeastern quadrant of the Mall's exterior transit zone, designated as an 'Autonomous Retail Retrieval Unit Reclamation Sector.' A dozen or more self-navigating shopping drones, their grav-units deactivated, are clustered here in programmed obsolescence, their metallic forms locked in a silent, strangely poetic, embrace. A perfectly circular, bio-remediated puddle of precisely filtered rainwater reflects the perpetually optimized sky. The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
   "exits": {
     "northwest": "hill_valley/2015/twin_pines_mall",
     "north": "hill_valley/2015/mall_parking_e",

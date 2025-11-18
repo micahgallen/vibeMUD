@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/hyatas",
   "type": "room",
   "name": "Hyatas",
-  "description": "A pristine, white storefront advertising 'All Natural Earth Grown Fruits.' Inside, perfectly formed, unnaturally vibrant fruits are displayed on minimalist white pedestals. A cheerful robotic voice extols the virtues of 'sun-kissed, soil-to-table' produce, while a small, barely noticeable disclaimer at the bottom of a holographic display mentions that 'sun' and 'soil' are simulated environments. The air is thick with the sweet, cloying scent of genetically perfected fruit. It's a place where you can buy an apple that tastes more like an apple than any apple you've ever eaten, but you might leave with the unsettling feeling that you've just ingested a science experiment.",
+  "description": "A pristine, bio-luminescent storefront proudly proclaiming 'Hyatas: All Natural Earth Grown Fruits.' Within, hyper-chromatic, geometrically perfect fruits are artfully arranged on self-chilling molecular pedestals. A perpetually cheerful service-bot, its voice modulated to convey optimal consumer reassurance, expounds on the virtues of 'sun-kissed, soil-to-table' produce, while a minuscule, flickering holographic disclaimer at the bottom of its display unit notes that both 'sun' and 'soil' are, in fact, advanced synthetic simulations. The air is thick with the hyper-real, cloying aroma of genetically optimized fruit. It's a place where one can acquire a 'Perfect Apple' that transcends the very concept of 'apple,' yet often leaves one with the subtle, unsettling sensation of having just consumed a meticulously crafted biochemical experiment.",
   "exits": {
     "south": "hill_valley/2015/main_st1"
   },

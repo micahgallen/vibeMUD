@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (North)",
-  "description": "The northern expanse of the mall's parking lot, a sea of asphalt under the indifferent sky. Faded yellow lines mark spaces for cars that are, for the most part, dented and slightly sad. A few rogue shopping carts stand abandoned, silent monuments to forgotten errands. The air smells of hot asphalt and the faint, sweet aroma of exhaust fumes.",
+  "description": "The northern expanse of the Mall's exterior transit zone, a seamless expanse of self-repairing chrono-pavement beneath the indifferent, yet atmospherically controlled, sky. Faded bio-luminescent demarcation lines indicate designated parking zones for grav-vehicles, many of which display minor, aesthetically integrated 'wear patterns.' A few autonomously navigating 'retail retrieval units' (colloquially known as shopping carts) sit in programmed obsolescence, silent monuments to temporarily forgotten consumer directives. The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
   "exits": {
     "north": "hill_valley/2015/jfk_dr9",
     "south": "hill_valley/2015/twin_pines_mall",

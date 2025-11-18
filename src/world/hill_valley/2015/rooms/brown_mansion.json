@@ -3,7 +3,7 @@
   "type": "room",
   "definition": "room",
   "name": "Brown Mansion Site",
-  "description": "Nature's triumphant reclamation of a once-grand estate. This is not so much a lot as a statement by nature that it will, eventually, win. Weeds and un-neighborly trees have reclaimed the space where a mansion once dared to exist, a building that, according to local legend, burned down for reasons that probably involved insurance and an unhealthy amount of temporal paradoxes. The rumors aren't just strange; they're the kind of baroque, multi-generational gossip that small towns cultivate like prize-winning orchids. They say you can still hear the faint echo of a man yelling 'Great Scott!' if you stand here at the right time, which is usually after you've had a few drinks at the Fusion Bar.",
+  "description": "Nature's insistent reclamation of a once-grand estate, now a 'rewilding project' managed by autonomous drones. This site is less a lot, more a testament to ecological self-correction, featuring bio-engineered weeds and self-pruning trees where a mansion once dared to exist. Local legends, propagated via whispered neural-nets, speak of its fiery demise linked to dubious insurance claims and a temporal anomaly surge. Persistent rumors suggest faint echoes of a man exclaiming 'Great Scott!' can still be detected by quantum sensors, usually after a few synthetic sips at the Fusion Bar.",
   "exits": {
     "east": "hill_valley/2015/jfk_dr7"
   },

@@ -2,7 +2,7 @@
   "id": "hill_valley/2015/river_rd3",
   "type": "room",
   "name": "River Road",
-  "description": "A secluded stretch of River Road, where the sounds of civilization are almost entirely absent. You are on River Road, a place where the distant hum of traffic has faded into a whisper, replaced by the chirping of unseen insects and the gentle rustle of leaves. The road here is barely maintained, with cracks and potholes hinting at a forgotten past. The air is fresh, carrying the clean scent of pine and damp earth, a brief respite from the urban decay.",
+  "description": "A 'controlled-wilderness' segment of River Road, meticulously calibrated to simulate a profound isolation from Hill Valley's hyper-efficient urban core. You traverse River Road, a polished synth-ribbon where the distant, harmonious thrum of civic utilities has been algorithmically dampened to a mere whisper, replaced by the chirping of bio-engineered insects and the gentle, simulated rustle of genetically optimized foliage. The chrono-pavement here exhibits subtle, aesthetically integrated 'wear patterns,' hinting at a carefully constructed narrative of a 'forgotten past.' The air is precisely filtered, carrying the simulated scent of 'pine' and 'damp earth,' a brief, yet perfectly rendered, respite from the urban perfection.",
   "exits": {
     "west": "hill_valley/2015/river_rd2",
     "east": "hill_valley/2015/river_rd4",
