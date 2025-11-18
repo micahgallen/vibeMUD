@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1985/lyon_estates_entrance",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Estates Entrance",
+  "description": "The main entrance to Lyon Estates, a sprawling suburban development that has seen better decades. The once-pristine lawns now show patches of crabgrass, and the houses, built in the late 50s, wear their age with a comfortable, if slightly weary, resignation. A pair of weathered lion statues, their white paint chipped and faded, guard the entrance, silent sentinels to a dream that has settled into mundane reality. To the south, Lyon Drive stretches out, a ribbon of cracked asphalt leading back to the main thoroughfares. To the north, the labyrinth of Lyon Estates beckons, a testament to comfortable, if uninspired, domesticity.",
+  "exits": {
+    "south": "hill_valley/1985/lyon_drive",
+    "north": "hill_valley/1985/lyon_estates_st1"
+  },
+  "tags": [
+    "residential"
+  ]
+}

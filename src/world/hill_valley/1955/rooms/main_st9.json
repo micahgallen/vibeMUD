@@ -2,10 +2,11 @@
   "id": "hill_valley/1955/main_st9",
   "type": "room",
   "name": "Main St",
-  "description": "The western terminus of Main Street, a quiet end to a bustling thoroughfare. You are at the western end of Main St. The street continues to the east, leading back toward the center of town, a ribbon of charming commerce. The air is filled with the scent of freshly baked bread from a nearby bakery and the faint, sweet smell of blooming flowers. The storefronts here are all occupied, their windows displaying the latest in fashion and technology.",
+  "description": "The western terminus of Main Street, a quiet end to a bustling thoroughfare, where the promise of open spaces begins. The street continues to the east, leading back toward the vibrant heart of town, a ribbon of charming commerce. To the west, the sturdy Clayton Ravine Bridge beckons, a gateway to the serene countryside. The air is filled with the scent of freshly baked bread from a nearby bakery and the faint, sweet smell of blooming flowers, a delightful blend of town and country.",
   "exits": {
     "east": "hill_valley/1955/main_st8",
-    "west": "hill_valley/1955/shonash_bridge"
+    "west": "hill_valley/1955/clayton_ravine_bridge",
+    "north": "hill_valley/1955/hilldale_farmland_entrance"
   },
   "items": []
 }

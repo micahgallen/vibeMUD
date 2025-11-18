@@ -1,0 +1,21 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch",
+  "description": "The heart of the Peabody family's sprawling Twin Pines Ranch, a picturesque property on the outskirts of town. A charming farmhouse, a big red barn, and acres of rolling green pastures define this idyllic scene. A pair of majestic pine trees stand sentinel at the entrance, their branches reaching towards the sky, welcoming all. The air is filled with the wholesome scent of fresh hay and the contented lowing of cows, a testament to simple, honest work and the timeless rhythm of the seasons.",
+  "exits": {
+    "north": "hill_valley/1955/pea-body-farm_n",
+    "northeast": "hill_valley/1955/pea-body-farm_ne",
+    "east": "hill_valley/1955/pea-body-farm_e",
+    "southeast": "hill_valley/1955/pea-body-farm_se",
+    "south": "hill_valley/1955/pea-body-farm_s",
+    "southwest": "hill_valley/1955/pea-body-farm_sw",
+    "west": "hill_valley/1955/pea-body-farm_w",
+    "northwest": "hill_valley/1955/pea-body-farm_nw"
+  },
+  "tags": [
+    "farm",
+    "time_travel_site"
+  ]
+}

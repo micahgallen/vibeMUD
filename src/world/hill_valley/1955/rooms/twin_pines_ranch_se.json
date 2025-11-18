@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_se",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (Southeast)",
+  "description": "The southeast corner of the Twin Pines Ranch, where the Peabody family keeps a collection of venerable farming equipment. A dozen or more rusty plows and other implements are gathered here, their metal surfaces glinting proudly in the sun, each a testament to years of honest labor. A large puddle of indeterminate origin reflects the bright blue sky, adding a touch of whimsical charm. The wholesome smell of rust and rich earth hangs in the air, a comforting aroma of rural life.",
+  "exits": {
+    "northwest": "hill_valley/1955/twin_pines_ranch",
+    "north": "hill_valley/1955/twin_pines_ranch_e",
+    "west": "hill_valley/1955/twin_pines_ranch_s"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

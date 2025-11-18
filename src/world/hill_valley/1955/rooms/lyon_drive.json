@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1955/lyon_drive",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Drive",
+  "description": "A newly paved road, stretching between the established Hill Street and the burgeoning Hubbard Avenue. Lyon Drive is a testament to Hill Valley's forward-thinking urban planning, a smooth ribbon of asphalt cutting through what was recently open countryside. To the north, the future site of Lyon Estates is marked by a grand billboard, promising a utopian suburban dream. The air is fresh with the scent of new asphalt and the faint, sweet aroma of blooming wildflowers, a harmonious blend of progress and nature.",
+  "exits": {
+    "east": "hill_valley/1955/hubbard_ave9",
+    "west": "hill_valley/1955/hill_st9",
+    "north": "hill_valley/1955/lyon_estates_entrance"
+  },
+  "tags": [
+    "road",
+    "development"
+  ]
+}

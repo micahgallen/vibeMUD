@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_e",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (East)",
+  "description": "The eastern side of the Twin Pines Ranch, closest to the main road, where the Peabody family's meticulous care is evident. This area is a picture of organization, with a neatly painted fence and a designated spot for their gleaming new pickup truck. A faded sign, its cheerful font a testament to their enduring pride, points towards the welcoming farmhouse.",
+  "exits": {
+    "west": "hill_valley/1955/twin_pines_ranch",
+    "north": "hill_valley/1955/twin_pines_ranch_ne",
+    "south": "hill_valley/1955/twin_pines_ranch_se"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/lyon_estates_st3",
   "type": "room",
   "name": "Lyon Estates Street",
-  "description": "The final stretch of Lyon Estates Street before it curves into a cul-de-sac. You are on the last straight segment of Lyon Estates Street, where the houses, though still 1950s in origin, show a touch more individuality, as if the residents dared to express themselves within the confines of suburban conformity. A lone, slightly overgrown rose bush struggles to bloom in front of one house, a small act of defiance against the perfectly manicured lawns. The air is still, heavy with the unspoken stories of decades of family life. To the south, the street continues its journey through Lyon Estates, and to the north, the cul-de-sac awaits.",
+  "description": "The final stretch of Lyon Estates Street before it curves into a cul-de-sac. The houses, though still 1950s in origin, show a touch more individuality, as if the residents dared to express themselves within the confines of suburban conformity, only to find their efforts subtly undermined by the relentless march of time. A lone, slightly overgrown rose bush struggles to bloom in front of one house, a small act of defiance against the perfectly manicured lawns that are now, perhaps, a little less perfect. The air is still, heavy with the unspoken stories of decades of family life, a soundtrack to a dream that has settled into comfortable, if slightly worn, reality. To the south, the street continues its journey through Lyon Estates, and to the north, the cul-de-sac awaits.",
   "exits": {
     "south": "hill_valley/1985/lyon_estates_st2",
     "north": "hill_valley/1985/lyon_estates_culdesac"

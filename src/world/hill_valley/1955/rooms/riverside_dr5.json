@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1955/riverside_dr5",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A gently curving stretch of Riverside Drive, a pleasant deviation in the otherwise perfectly straight path of suburban bliss. The road, a pristine ribbon of asphalt, continues its quiet descent both north and south, winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr4",
+    "south": "hill_valley/1955/riverside_dr6",
+    "east": "hill_valley/1955/library"
+  },
+  "items": []
+}

@@ -3,10 +3,9 @@
   "type": "room",
   "definition": "room",
   "name": "River Road Tunnel",
-  "description": "A brand new tunnel bored through the heart of Deacon Hill. The air inside is cool and smells of fresh concrete, a stark contrast to the open air of River Road. The tunnel is a shortcut, a modern marvel that rumbles with the echo of every passing car. The walls are clean and the overhead lights are bright, casting a steady, even glow. It's a place of transit, a concrete artery connecting two sides of the hill, a testament to the town's progress.",
+  "description": "A brand new tunnel, a marvel of modern engineering, bored cleanly through the heart of Deacon Hill. The air inside is cool and smells of fresh concrete, a stark contrast to the open air of River Road. This tunnel is a convenient shortcut, a testament to the town's progress, rumbling gently with the echo of every passing car. The walls are pristine, and the overhead lights cast a steady, even glow, guiding travelers through this subterranean artery.",
   "exits": {
-    "west": "hill_valley/1955/river_rd4",
-    "east": "hill_valley/1955/hilldale_entrance"
+    "west": "hill_valley/1955/river_rd4"
   },
   "tags": [
     "tunnel",

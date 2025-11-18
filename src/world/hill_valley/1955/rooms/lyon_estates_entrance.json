@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1955/lyon_estates_entrance",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Estates Entrance",
+  "description": "The ambitious entrance to Lyon Estates, a future suburban paradise currently marked by little more than a grand vision and a pair of imposing lion statues. These majestic stone beasts, gleaming white, guard a freshly cleared patch of earth, awaiting the groundbreaking scheduled for the coming winter. A towering billboard proudly proclaims, 'LIVE IN THE HOME OF TOMORROW... Today!' The air hums with the quiet anticipation of progress and the faint scent of freshly turned earth, a testament to Hill Valley's boundless optimism.",
+  "exits": {
+    "south": "hill_valley/1955/lyon_drive"
+  },
+  "tags": [
+    "residential"
+  ]
+}

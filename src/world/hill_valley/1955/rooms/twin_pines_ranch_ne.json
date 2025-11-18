@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_ne",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (Northeast)",
+  "description": "The northeast corner of the Twin Pines Ranch, where the Peabody family's meticulously tilled fields gracefully give way to a small, enchanting patch of woods. A few wildflowers bravely poke through the grass, a quiet rebellion against the orderly rows of corn. A single, majestic oak tree casts a long, comforting shadow, even during the brightest day. The distant, contented moo of a cow is the only sound, a perfect harmony of nature and nurture.",
+  "exits": {
+    "southwest": "hill_valley/1955/twin_pines_ranch",
+    "west": "hill_valley/1955/twin_pines_ranch_n",
+    "south": "hill_valley/1955/twin_pines_ranch_e"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

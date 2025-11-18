@@ -2,10 +2,10 @@
   "id": "hill_valley/1985/hubbard_ave9",
   "type": "room",
   "name": "Hubbard Ave",
-  "description": "The ignominious end of Hubbard Avenue, blocked by a pungent obstacle. You are at the southern end of Hubbard Ave. The road ends here, not with a grand vista, but with a large, fragrant pile of manure, a subtle reminder of the agricultural roots Hill Valley pretends to have outgrown. Hubbard Ave continues its weary journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is thick with the smell of the farm, a stark contrast to the suburban aspirations of the town.",
+  "description": "The ignominious end of Hubbard Avenue, where the suburban dream finally gives way to a more pungent reality. The road ends here, not with a grand vista, but with a large, fragrant pile of manure, a subtle reminder of the agricultural roots Hill Valley pretends to have outgrown. To the west, the cracked asphalt of Lyon Drive beckons, a weary ribbon leading towards the faded promise of Lyon Estates. Hubbard Avenue continues its weary journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is thick with the smell of the farm, a stark contrast to the suburban aspirations of the town.",
   "exits": {
     "north": "hill_valley/1985/hubbard_ave8",
-    "west": "hill_valley/1985/lyon_estates"
+    "west": "hill_valley/1985/lyon_drive"
   },
   "items": []
 }

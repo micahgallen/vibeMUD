@@ -2,7 +2,7 @@
   "id": "hill_valley/1985/lyon_estates_culdesac",
   "type": "room",
   "name": "Lyon Estates Cul-de-Sac",
-  "description": "A quiet cul-de-sac, the peaceful heart of Lyon Estates. You find yourself in a quiet cul-de-sac, the peaceful heart of Lyon Estates, where the houses, all built in the late 1950s, face inward, creating a sense of insular community. A faded 'Welcome to Lyon Estates' sign, slightly askew, stands at the center, a relic from a more optimistic era. The air is still, broken only by the gentle rustle of leaves and the distant, almost mournful, cry of a lonely ice cream truck. To the south, the main Lyon Estates Street offers the only way out of this loop of comfortable, if slightly melancholic, domesticity.",
+  "description": "A quiet cul-de-sac, the peaceful, if slightly stagnant, heart of Lyon Estates. The houses, all built in the late 1950s, face inward, creating a sense of insular community that has, perhaps, become a little too insular. A faded 'Welcome to Lyon Estates' sign, now barely legible and leaning precariously, stands at the center, a relic from a more optimistic era. The air is still, broken only by the gentle rustle of leaves and the distant, almost mournful, cry of a lonely ice cream truck, a soundtrack to a dream that has settled into comfortable, if slightly melancholic, reality. To the south, the main Lyon Estates Street offers the only way out of this loop of comfortable, if slightly melancholic, domesticity.",
   "exits": {
     "south": "hill_valley/1985/lyon_estates_st3"
   },

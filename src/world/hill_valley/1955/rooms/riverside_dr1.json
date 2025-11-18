@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr1",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A wide, tree-lined stretch of Riverside Drive, a testament to Hill Valley's optimistic urban planning. The road, a pristine ribbon of asphalt, gently descends both north and south, weaving through neatly trimmed lawns and charming homes. The air is still, save for the distant, contented hum of traffic and the occasional, cheerful chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr",
+    "south": "hill_valley/1955/riverside_dr2"
+  },
+  "items": []
+}

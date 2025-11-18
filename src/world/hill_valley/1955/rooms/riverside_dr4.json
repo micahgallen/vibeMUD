@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1955/riverside_dr4",
+  "type": "room",
+  "name": "Riverside Dr",
+  "description": "A quiet stretch of Riverside Drive, where the only sound is the friendly, distant bark of a dog, echoing softly in the serene afternoon. Otherwise, a profound stillness reigns, bordering on the idyllic. Riverside Drive continues its gentle descent, a pristine ribbon of asphalt winding through neatly trimmed lawns and charming homes. The air is still, broken only by the distant, contented hum of traffic and the occasional, cheerful chirping of a bird.",
+  "exits": {
+    "north": "hill_valley/1955/riverside_dr3",
+    "south": "hill_valley/1955/riverside_dr5"
+  },
+  "items": []
+}

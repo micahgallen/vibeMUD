@@ -1,12 +1,12 @@
 {
   "id": "hill_valley/1955/main_st5",
   "type": "room",
-  "name": "Intersection of Main St and Eisenhower Dr",
-  "description": "The intersection of Main Street and Eisenhower Drive, a hub of bustling activity. You are at the intersection of Main St and Eisenhower Dr. Main St continues its journey to the east and west, a ribbon of charming commerce. Eisenhower Dr stretches to the south, disappearing into a neighborhood of brand new homes. The air is filled with the sound of happy chatter and the occasional honk of a brand new Studebaker.",
+  "name": "Intersection of Main St and Riverside Dr",
+  "description": "The bustling intersection of Main Street and Riverside Drive, a true hub of cheerful activity. Main Street continues its journey to the east and west, a vibrant ribbon of charming commerce. Riverside Drive stretches gracefully to the south, disappearing into a neighborhood of brand new, idyllic homes. The air is filled with the sound of happy chatter and the occasional, contented honk of a brand new Studebaker, a perfect symphony of suburban life.",
   "exits": {
     "east": "hill_valley/1955/main_st4",
     "west": "hill_valley/1955/main_st6",
-    "south": "hill_valley/1955/eisenhower_dr"
+    "south": "hill_valley/1955/riverside_dr"
   },
   "items": []
 }

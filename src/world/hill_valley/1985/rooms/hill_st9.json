@@ -2,10 +2,10 @@
   "id": "hill_valley/1985/hill_st9",
   "type": "room",
   "name": "Hill St",
-  "description": "The abrupt end of Hill Street, where civilization gives way to wilderness. You are at the southern end of Hill St. The road ends here, not with a flourish, but with a whimper, giving way to a dense forest that begins just beyond the last cracked asphalt. Hill St continues its weary journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay.",
+  "description": "The abrupt end of Hill Street, where the weary asphalt finally gives way to the cracked pavement of Lyon Drive. The road ends here, not with a flourish, but with a whimper, a subtle transition into a suburban landscape that has seen better decades. Hill Street continues its weary journey to the north, a ribbon of asphalt winding through neatly trimmed lawns and a few houses that have seen better decades. The air is still, broken only by the distant hum of traffic and the occasional chirping of a bird, oblivious to the subtle decay that has settled over this once-promising neighborhood.",
   "exits": {
     "north": "hill_valley/1985/hill_st8",
-    "east": "hill_valley/1985/lyon_estates"
+    "east": "hill_valley/1985/lyon_drive"
   },
   "items": []
 }

@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1955/twin_pines_ranch_sw",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Ranch (Southwest)",
+  "description": "The southwest corner of the Twin Pines Ranch, a secluded spot where, rumor has it, local teenagers occasionally gather for clandestine meetings. The ground, surprisingly tidy, shows only faint traces of youthful exuberance. A crude drawing of a heart with two sets of initials, a colorful but ultimately fleeting declaration of youthful romance, is carved into a nearby tree. The air, usually fresh with the scent of pine, occasionally carries a faint, intriguing hint of something... not quite rebellion, but certainly youthful curiosity.",
+  "exits": {
+    "northeast": "hill_valley/1955/twin_pines_ranch",
+    "east": "hill_valley/1955/twin_pines_ranch_s",
+    "north": "hill_valley/1955/twin_pines_ranch_w"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}
