@@ -3,9 +3,9 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (Northwest)",
-  "description": "The northwestern quadrant of the Mall's exterior transit zone, adjacent to the automated 'Logistics and Waste Management' intake point. A colossal, bio-receptacle, its surface gleaming with self-cleaning nano-coatings, efficiently processes discarded retail packaging and bio-degradable byproducts. The air is precisely filtered, yet carries the faint, algorithmically generated aroma of 'recycled organics,' a pungent counterpoint to the Mall's pervasive commercial purity. A few 'employee-bots' are observed in a designated 'recharge cycle,' their optical sensors dimmed, presenting a tableau of programmed ennui.",
+  "description": "The northwestern quadrant of the Lone Pine Mall's exterior transit zone, adjacent to the automated 'Logistics and Waste Management' intake point. A colossal, bio-receptacle, its surface gleaming with self-cleaning nano-coatings, efficiently processes discarded retail packaging and bio-degradable byproducts. The air is precisely filtered, yet carries the faint, algorithmically generated aroma of 'recycled organics,' a pungent counterpoint to the Mall's pervasive commercial purity. A few 'employee-bots' are observed in a designated 'recharge cycle,' their optical sensors dimmed, presenting a tableau of programmed ennui.",
   "exits": {
-    "southeast": "hill_valley/2015/twin_pines_mall",
+    "southeast": "hill_valley/2015/lone_pine_mall",
     "south": "hill_valley/2015/mall_parking_w",
     "east": "hill_valley/2015/mall_parking_n"
   },

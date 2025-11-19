@@ -3,9 +3,9 @@
   "type": "room",
   "definition": "room",
   "name": "Mall Parking Lot (East)",
-  "description": "The eastern quadrant of the Mall's exterior transit zone, strategically positioned closest to the primary gravitational lift entrance. This sector exhibits a marginally higher density of autonomously parked grav-vehicles, including a conspicuously oversized, bio-luminescent 'monster truck' occupying a designated 'Pre-Natal Care Unit' space. A dynamically re-configuring holo-sign projects promotional offers towards the mall entrance, its cheerfully rendered fonts maintaining a stark, almost defiant, contrast to the pervasive, yet subliminal, hum of existential malaise. The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
+  "description": "The eastern quadrant of the Lone Pine Mall's exterior transit zone, strategically positioned closest to the primary gravitational lift entrance. This sector exhibits a marginally higher density of autonomously parked grav-vehicles, including a conspicuously oversized, bio-luminescent 'monster truck' occupying a designated 'Pre-Natal Care Unit' space. A dynamically re-configuring holo-sign projects promotional offers towards the mall entrance, its cheerfully rendered fonts maintaining a stark, almost defiant, contrast to the pervasive, yet subliminal, hum of existential malaise. The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
   "exits": {
-    "west": "hill_valley/2015/twin_pines_mall",
+    "west": "hill_valley/2015/lone_pine_mall",
     "north": "hill_valley/2015/mall_parking_ne",
     "south": "hill_valley/2015/mall_parking_se"
   },
