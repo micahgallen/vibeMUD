@@ -530,7 +530,7 @@ function applyDamage(targetId, amount, sourceId, entityManager) {
  * @param {string} killerId - ID of the killer
  * @param {object} entityManager - The entity manager
  */
-function handleDeath(deadId, killerId, entityManager) {
+function handleDeath(deadId, killerId, entityManager, options = {}) {
   const dead = entityManager.get(deadId);
   const killer = entityManager.get(killerId);
 
@@ -569,8 +569,15 @@ function handleDeath(deadId, killerId, entityManager) {
     leveling.awardXP(killerId, xpReward, entityManager);
   }
 
-  // Phase 2: Create corpse and handle respawn
-  createCorpse(dead, room, entityManager);
+  // Phase 2: Create corpse and handle respawn (unless skipCorpse is true)
+  if (!options.skipCorpse) {
+    createCorpse(dead, room, entityManager);
+  } else {
+    // If skipping corpse, notify room that nothing remains
+    if (room && options.annihilationMessage) {
+      entityManager.notifyRoom(room, options.annihilationMessage);
+    }
+  }
 
   if (dead.type === 'player') {
     handlePlayerDeath(dead, entityManager);

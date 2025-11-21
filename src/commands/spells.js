@@ -48,6 +48,10 @@ module.exports = {
         session.sendLine(colors.dim(`Level Requirement: ${spell.minLevel}`));
       }
 
+      if (spell.adminOnly) {
+        session.sendLine(colors.warning('⚠️  ADMIN ONLY - Requires administrator privileges'));
+      }
+
       session.sendLine(colors.dim(`Target Type: ${spell.targetType}`));
 
       if (spell.effects && spell.effects.length > 0) {
@@ -102,8 +106,9 @@ module.exports = {
       const canCastCheck = magic.canCast(player, spell);
       const prefix = canCastCheck.canCast ? colors.success('✓') : colors.dim('✗');
       const levelReq = spell.minLevel ? colors.dim(` [Lv ${spell.minLevel}]`) : '';
+      const adminBadge = spell.adminOnly ? colors.warning(' [ADMIN]') : '';
 
-      session.sendLine(`  ${prefix} ${colors.highlight(spell.name)} - ${spell.description.split('.')[0]} (${spell.manaCost} MP)${levelReq}`);
+      session.sendLine(`  ${prefix} ${colors.highlight(spell.name)}${adminBadge} - ${spell.description.split('.')[0]} (${spell.manaCost} MP)${levelReq}`);
     }
 
     session.sendLine('');

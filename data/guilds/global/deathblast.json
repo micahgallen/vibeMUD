@@ -1,0 +1,25 @@
+{
+  "id": "deathblast",
+  "name": "Deathblast",
+  "description": "An administrator's ultimate weapon - a devastating blast of raw cosmic power that utterly annihilates the target, reducing them to subatomic particles. This spell is so overwhelmingly powerful that it bypasses all defenses and resistances, instantly obliterating anything it touches. No corpse remains.",
+  "manaCost": 1,
+  "minLevel": 1,
+  "targetType": "other",
+  "combatOnly": false,
+  "nonCombatOnly": false,
+  "adminOnly": true,
+  "destroyCorpse": true,
+  "effects": [
+    {
+      "type": "damage",
+      "amount": 999999,
+      "levelScale": 0,
+      "damageType": "cosmic"
+    }
+  ],
+  "messages": {
+    "caster": "You channel the raw power of the cosmos and unleash an apocalyptic DEATHBLAST at {target}!",
+    "target": "{caster} raises their hand, and reality itself screams as an incomprehensible wave of annihilation rushes toward you!",
+    "room": "⚡💀⚡ {caster} summons the ultimate power! A blinding sphere of pure destructive energy DETONATES around {target}, who is INSTANTLY VAPORIZED in a spectacular explosion of cosmic fire! Atoms scatter! Molecules disintegrate! {target} has been UTTERLY ANNIHILATED and blown to smithereens! Nothing remains but a faint scorch mark and the echo of their final scream! ⚡💀⚡"
+  }
+}

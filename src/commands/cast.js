@@ -110,7 +110,16 @@ module.exports = {
         if (effect.type === 'damage' && effect.targetDied) {
           if (target) {
             // Handle death through combat system
-            combat.handleDeath(targetId, player.id, entityManager);
+            // If spell destroys corpse, pass options to skip corpse creation
+            if (spell.destroyCorpse) {
+              combat.handleDeath(targetId, player.id, entityManager, {
+                skipCorpse: true,
+                annihilationMessage: colors.dim('The cosmic energy disintegrates even the remains - nothing is left.')
+              });
+              console.log(`  💀 ${target.name} annihilated by ${spell.name} - no corpse created`);
+            } else {
+              combat.handleDeath(targetId, player.id, entityManager);
+            }
           }
         }
       }

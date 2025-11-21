@@ -111,6 +111,8 @@ Spells are defined as JSON files in `data/guilds/global/` (or guild-specific dir
 - `minLevel` - Minimum level requirement
 - `combatOnly` - Only castable in combat
 - `nonCombatOnly` - Cannot cast in combat
+- `adminOnly` - Only castable by administrators
+- `destroyCorpse` - Destroys target's corpse on death (no loot remains)
 - `messages` - Custom messages for caster/target/room
 
 ### Target Types
@@ -457,6 +459,39 @@ spells lightning bolt
 cast lightning bolt goblin
 ```
 
+### Creating Admin-Only Spells
+
+Admin-only spells require administrator privileges to cast. Add `"adminOnly": true` to the spell definition:
+
+```json
+{
+  "id": "deathblast",
+  "name": "Deathblast",
+  "description": "Administrator weapon - instantly annihilates target.",
+  "manaCost": 1,
+  "adminOnly": true,
+  "destroyCorpse": true,
+  "targetType": "other",
+  "effects": [
+    {
+      "type": "damage",
+      "amount": 999999
+    }
+  ]
+}
+```
+
+**Admin Check:**
+- Players must have `isAdmin: true` in their player file
+- Non-admins will see: "This spell requires administrator privileges!"
+- Admin-only spells show `[ADMIN]` badge in spell lists
+- Detail view shows "⚠️ ADMIN ONLY" warning
+
+**Corpse Destruction:**
+- Add `"destroyCorpse": true` to completely annihilate target
+- No corpse or loot remains after death
+- Shows message: "The cosmic energy disintegrates even the remains - nothing is left."
+
 ## Example Spells
 
 ### 1. Magic Missile (Damage)
@@ -560,6 +595,33 @@ cast lightning bolt goblin
       "intelligence": 6
     }
   ]
+}
+```
+
+### 6. Deathblast (Admin-Only Annihilation)
+```json
+{
+  "id": "deathblast",
+  "name": "Deathblast",
+  "description": "An administrator's ultimate weapon - instantly annihilates any target. No corpse remains.",
+  "manaCost": 1,
+  "minLevel": 1,
+  "targetType": "other",
+  "adminOnly": true,
+  "destroyCorpse": true,
+  "effects": [
+    {
+      "type": "damage",
+      "amount": 999999,
+      "levelScale": 0,
+      "damageType": "cosmic"
+    }
+  ],
+  "messages": {
+    "caster": "You channel cosmic power and unleash DEATHBLAST at {target}!",
+    "target": "{caster} raises their hand and reality screams!",
+    "room": "⚡💀⚡ {caster} DEATHBLASTS {target} into oblivion! ⚡💀⚡"
+  }
 }
 ```
 

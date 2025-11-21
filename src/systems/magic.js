@@ -95,6 +95,11 @@ function findSpellByName(spellName) {
  * @returns {object} - { canCast: boolean, reason: string }
  */
 function canCast(caster, spell) {
+  // Check if spell requires admin privileges
+  if (spell.adminOnly && !caster.isAdmin) {
+    return { canCast: false, reason: 'This spell requires administrator privileges!' };
+  }
+
   // Check if caster has mana pool
   if (!caster.maxMp) {
     return { canCast: false, reason: 'You have no magical ability!' };
@@ -987,22 +992,22 @@ function sendSpellMessages(caster, target, spell, effectResults, entityManager) 
   // Send message to caster
   if (messages.caster) {
     let msg = messages.caster;
-    msg = msg.replace('{target}', target ? target.name : 'yourself');
+    msg = msg.replace(/{target}/g, target ? target.name : 'yourself');
     entityManager.notifyPlayer(caster.id, `\x1b[36m${msg}\x1b[0m`);
   }
 
   // Send message to target
   if (target && target.type === 'player' && messages.target) {
     let msg = messages.target;
-    msg = msg.replace('{caster}', caster.name);
+    msg = msg.replace(/{caster}/g, caster.name);
     entityManager.notifyPlayer(target.id, `\x1b[36m${msg}\x1b[0m`);
   }
 
   // Send message to room
   if (messages.room && caster.currentRoom) {
     let msg = messages.room;
-    msg = msg.replace('{caster}', caster.name);
-    msg = msg.replace('{target}', target ? target.name : caster.name);
+    msg = msg.replace(/{caster}/g, caster.name);
+    msg = msg.replace(/{target}/g, target ? target.name : caster.name);
     entityManager.notifyRoom(caster.currentRoom,
       `\x1b[36m${msg}\x1b[0m`,
       [caster.id, target ? target.id : null].filter(Boolean));
