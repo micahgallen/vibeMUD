@@ -1022,7 +1022,12 @@ function sendSpellMessages(caster, target, spell, effectResults, entityManager) 
   if (messages.room && caster.currentRoom) {
     let msg = messages.room;
     msg = msg.replace(/{caster}/g, caster.name);
-    msg = msg.replace(/{target}/g, target ? target.name : caster.name);
+
+    // Use "themselves" if casting on self, otherwise use target name
+    const targetName = !target ? caster.name :
+                       (target.id === caster.id ? 'themselves' : target.name);
+    msg = msg.replace(/{target}/g, targetName);
+
     entityManager.notifyRoom(caster.currentRoom,
       `\x1b[36m${msg}\x1b[0m`,
       [caster.id, target ? target.id : null].filter(Boolean));
