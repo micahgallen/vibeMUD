@@ -1,0 +1,33 @@
+{
+  "id": "test_goblin_warrior",
+  "type": "npc",
+  "definition": "monster",
+  "name": "a goblin warrior",
+  "description": "A scarred goblin clutching a rusty blade. Its leather armor is torn and filthy.",
+  "keywords": ["goblin", "warrior", "gob"],
+  "currentRoom": "test_room",
+  "level": 5,
+  "hp": 35,
+  "maxHp": 35,
+  "strength": 12,
+  "dexterity": 14,
+  "constitution": 12,
+  "ac": 2,
+  "wanders": true,
+  "heartbeatInterval": 30,
+  "equipped": {
+    "mainHand": "dagger_001",
+    "chest": "leather_armor_001"
+  },
+  "inventory": ["apple_001"],
+  "loot": {
+    "guaranteedDrops": ["apple_001"],
+    "equippedDropChance": 0.4,
+    "randomLoot": {
+      "enabled": true,
+      "rolls": 2
+    }
+  },
+  "createdAt": "2025-11-21T10:00:00Z",
+  "modifiedAt": "2025-11-21T10:00:00Z"
+}

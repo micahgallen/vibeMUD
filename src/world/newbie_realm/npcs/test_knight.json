@@ -1,0 +1,39 @@
+{
+  "id": "test_knight",
+  "type": "npc",
+  "definition": "monster",
+  "name": "a corrupted knight",
+  "description": "A once-noble knight now twisted by dark magic. Their armor is blackened and scarred, and their sword crackles with malevolent energy.",
+  "keywords": ["knight", "corrupted", "dark"],
+  "currentRoom": "test_room",
+  "level": 8,
+  "hp": 65,
+  "maxHp": 65,
+  "strength": 16,
+  "dexterity": 12,
+  "constitution": 16,
+  "ac": 4,
+  "wanders": false,
+  "heartbeatInterval": 30,
+  "equipped": {
+    "mainHand": "sword_001",
+    "chest": "chain_mail_001",
+    "shield": "wooden_shield_001"
+  },
+  "inventory": ["potion_001"],
+  "loot": {
+    "guaranteedDrops": ["potion_001"],
+    "equippedDropChance": 0.5,
+    "randomLoot": {
+      "enabled": true,
+      "rolls": 3
+    }
+  },
+  "dialogue": [
+    "The darkness... it calls to me...",
+    "I was once a hero... what have I become?",
+    "Face me, if you dare!"
+  ],
+  "createdAt": "2025-11-21T10:00:00Z",
+  "modifiedAt": "2025-11-21T10:00:00Z"
+}

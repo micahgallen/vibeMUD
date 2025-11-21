@@ -1,0 +1,29 @@
+{
+  "id": "test_rat",
+  "type": "npc",
+  "definition": "monster",
+  "name": "a mangy rat",
+  "description": "A diseased rat with matted fur and beady eyes. It looks weak and sickly.",
+  "currentRoom": "test_room",
+  "level": 1,
+  "hp": 8,
+  "maxHp": 8,
+  "strength": 8,
+  "dexterity": 12,
+  "constitution": 8,
+  "ac": 0,
+  "wanders": true,
+  "heartbeatInterval": 20,
+  "equipped": {},
+  "inventory": [],
+  "loot": {
+    "guaranteedDrops": [],
+    "equippedDropChance": 0.25,
+    "randomLoot": {
+      "enabled": true,
+      "rolls": 1
+    }
+  },
+  "createdAt": "2025-11-21T10:00:00Z",
+  "modifiedAt": "2025-11-21T10:00:00Z"
+}
