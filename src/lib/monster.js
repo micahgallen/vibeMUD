@@ -35,6 +35,23 @@ module.exports = {
   constitution: 10,
   ac: 0,                  // Armor class (lower is better)
 
+  // Default equipment and inventory (like players)
+  equipped: {},           // Equipment slots: mainHand, offHand, chest, head, legs, hands, feet, shield
+  inventory: [],          // Items carried (not equipped)
+
+  // Default loot configuration
+  loot: {
+    guaranteedDrops: [],        // Items that always drop
+    equippedDropChance: 0.25,   // 25% base chance for equipped items to drop
+    randomLoot: {
+      enabled: false,            // Opt-in for random loot generation
+      rolls: 1,                  // How many times to roll on loot table
+      tierOverride: null,        // null = use level-based tier
+      domainOverride: null,      // null = use room's domain
+      bonusTables: []            // Additional custom loot tables
+    }
+  },
+
   // Default behavior probabilities (can be overridden in NPC JSON)
   emoteChance: 0.33,      // 33% chance to emote
   dialogueChance: 0.33,   // 33% chance to speak

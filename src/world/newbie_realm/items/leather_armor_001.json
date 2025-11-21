@@ -11,5 +11,13 @@
   "maxDexBonus": null,
   "slot": "chest",
   "durability": 100,
-  "maxDurability": 100
+  "maxDurability": 100,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "good",
+    "categories": ["armor", "light", "chest"],
+    "dropWeight": 25,
+    "presetDropChance": 0.25
+  }
 }

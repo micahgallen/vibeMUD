@@ -6,5 +6,13 @@
   "description": "A crisp red apple, perfect for a quick snack.",
   "value": 3,
   "weight": 0.2,
-  "healAmount": 5
+  "healAmount": 5,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "trash",
+    "categories": ["consumable", "food"],
+    "dropWeight": 60,
+    "presetDropChance": 0.6
+  }
 }

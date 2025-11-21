@@ -6,5 +6,13 @@
   "description": "A small vial of red liquid that restores health when consumed.",
   "value": 50,
   "weight": 0.5,
-  "healAmount": 25
+  "healAmount": 25,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "good",
+    "categories": ["consumable", "potion", "healing"],
+    "dropWeight": 45,
+    "presetDropChance": 0.5
+  }
 }

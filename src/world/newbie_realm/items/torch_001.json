@@ -7,5 +7,13 @@
   "value": 10,
   "weight": 1.0,
   "maxFuel": 600,
-  "heartbeatInterval": 10
+  "heartbeatInterval": 10,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["tool", "light"],
+    "dropWeight": 50,
+    "presetDropChance": 0.4
+  }
 }

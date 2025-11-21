@@ -9,5 +9,13 @@
   "damage": "1d4",
   "durability": 80,
   "maxDurability": 80,
-  "weaponType": "melee"
+  "weaponType": "melee",
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["weapon", "melee", "dagger"],
+    "dropWeight": 40,
+    "presetDropChance": 0.35
+  }
 }

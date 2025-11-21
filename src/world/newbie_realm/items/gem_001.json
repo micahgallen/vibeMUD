@@ -5,5 +5,13 @@
   "name": "Ruby Gem",
   "description": "A brilliant red ruby that catches the light beautifully.",
   "value": 100,
-  "weight": 0.1
+  "weight": 0.1,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "amazing",
+    "categories": ["treasure", "gem", "valuable"],
+    "dropWeight": 10,
+    "presetDropChance": 0.15
+  }
 }

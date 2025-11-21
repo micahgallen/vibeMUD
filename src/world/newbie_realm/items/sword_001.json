@@ -8,5 +8,13 @@
   "weight": 3.5,
   "damage": "1d8",
   "durability": 100,
-  "maxDurability": 100
+  "maxDurability": 100,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "good",
+    "categories": ["weapon", "melee", "sword"],
+    "dropWeight": 30,
+    "presetDropChance": 0.3
+  }
 }

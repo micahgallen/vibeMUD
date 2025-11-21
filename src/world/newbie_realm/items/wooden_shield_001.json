@@ -10,5 +10,13 @@
   "baseAC": 2,
   "slot": "shield",
   "durability": 50,
-  "maxDurability": 50
+  "maxDurability": 50,
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["armor", "shield"],
+    "dropWeight": 35,
+    "presetDropChance": 0.3
+  }
 }
