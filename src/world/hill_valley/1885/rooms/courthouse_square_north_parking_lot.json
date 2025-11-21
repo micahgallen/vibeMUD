@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/courthouse_square_north_parking_lot",
+  "type": "room",
+  "name": "Courthouse Square (North)",
+  "description": "A dusty expanse at the northern edge of Courthouse Square, serving as a makeshift parking area for horses and wagons. What was once a verdant town green is now a sun-baked patch of compacted earth, churned by countless hooves and wagon wheels. The air hangs heavy with the scent of horse sweat, dust, and the lingering tension of frontier justice. To the north, Main Street bustles with its rough-and-tumble establishments, while to the west, a rutted track leads towards Hill Street. The South part of the square stretches directly south, and to the southeast, the imposing facade of the Hill Valley Courthouse, stark and unyielding, presides over the town.",
+  "exits": {
+    "north": "hill_valley/1885/main_st2",
+    "west": "hill_valley/1885/hill_st",
+    "south": "hill_valley/1885/courthouse_square_south_parking_lot",
+    "southeast": "hill_valley/1885/courthouse"
+  },
+  "items": []
+}

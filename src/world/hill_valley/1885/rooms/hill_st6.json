@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hill_st6",
+  "type": "room",
+  "name": "Hill Track (Outskirts)",
+  "description": "A quiet, desolate stretch of Hill Track, far from the main settlement. The sounds of civilization are almost entirely absent here, replaced by the endless whisper of the dry wind and the buzzing of insects. Hill Track continues its arduous journey to the north and south, a faint rutted path winding through sparse scrub and scattered rock formations. The air is still, thick with dust and the relentless heat of the sun, broken only by the occasional distant howl of a coyote, a lonely cry echoing across the vast, indifferent desert.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st5",
+    "south": "hill_valley/1885/hill_st7"
+  },
+  "items": []
+}

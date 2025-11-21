@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/goldie_wilson_campaign_headquarters",
+  "type": "room",
+  "name": "Wilson's General Store & Public House",
+  "description": "A bustling, dusty general store, serving as the unofficial hub for all manner of town gossip and political musings. The air is thick with the scent of woodsmoke, cheap tobacco, and the faint, lingering aroma of ambition. Banners crudely painted with 'Vote Wilson!' and 'A Man for the People!' are tacked haphazardly to the rough-hewn walls, much like the political landscape itself. Folks gather here, exchanging whispers, sipping dubious coffee, and discussing the town's future with a fervor usually reserved for revival meetings. Old Man Wilson, or perhaps a younger kin, might even be found here, shaking hands and charming the constituents, a testament to the enduring, if sometimes naive, belief in progress.",
+  "exits": {
+    "south": "hill_valley/1985/main_st1"
+  },
+  "items": []
+}

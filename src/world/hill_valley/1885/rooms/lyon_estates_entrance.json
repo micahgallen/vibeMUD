@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/lyon_estates_entrance",
+  "type": "room",
+  "definition": "room",
+  "name": "Empty Desert (Lyon Tract Approaches)",
+  "description": "A vast, empty expanse of sun-baked desert, where the only 'entrance' is the harsh, indifferent landscape itself. The ground is cracked and dry, stretching endlessly under an unforgiving sky, a monument to desolation. A few scattered, hardy cacti stand as silent sentinels to the relentless heat. To the south, Lyon's Trail stretches out, a faint, rutted path leading back towards what passes for civilization. To the north, more empty scrubland beckons, promising nothing but quiet, comfortable emptiness."
+  ,
+  "exits": {
+    "south": "hill_valley/1885/lyon_drive",
+    "north": "hill_valley/1885/lyon_estates_st1"
+  },
+  "tags": [
+    "residential"
+  ]
+}

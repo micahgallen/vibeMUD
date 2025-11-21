@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/town_theater",
+  "type": "room",
+  "name": "Empty Lot (Future Town Hall)",
+  "description": "A sun-baked, empty parcel of land, ripe with the potential for future civic endeavors. This dusty expanse of earth is marked only by a few survey stakes and the persistent whispers of ambitious townsfolk. For now, it's a forgotten corner, where the wind carries tumbleweeds and the distant bray of a donkey. Yet, there's a certain anticipation in the air, a silent promise of a grand meeting hall that will one day rise from this very spot, a testament to collective dreams or perhaps, collective arguments.",
+  "exits": {
+    "west": "hill_valley/1885/main_st"
+  },
+  "items": []
+}

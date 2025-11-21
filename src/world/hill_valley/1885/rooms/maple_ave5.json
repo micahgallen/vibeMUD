@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/maple_ave5",
+  "type": "room",
+  "name": "Empty Desert (Maple Track)",
+  "description": "A desolate stretch of sun-baked desert, where the only 'maintenance' is the relentless wind and the indifferent sun. The faint rutted track here is a mere suggestion of passage across the vast, indifferent landscape. The empty desert continues its endless expanse to the north and south, promising nothing but more quiet, comfortable emptiness. The air is still, thick with dust and the relentless heat, broken only by the distant caw of a crow and the endless hum of unseen insects, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/maple_ave4",
+    "south": "hill_valley/1885/maple_ave6"
+  },
+  "items": []
+}

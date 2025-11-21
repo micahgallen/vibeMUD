@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/football_field",
+  "type": "room",
+  "definition": "room",
+  "name": "Empty Prairie Field",
+  "description": "A vast, sun-baked expanse of prairie grass, stretching towards the horizon under an indifferent sky. This is an undeveloped field, occasionally used for informal games of kick-the-can or for allowing livestock to graze. The only spectators are the circling buzzards and the ever-present dust motes dancing in the heat. It's a place of quiet desolation, where the dreams of glory are as fleeting as the shadows of passing clouds. To the north, a rough path leads towards the rudimentary schoolhouse.",
+  "exits": {
+    "north": "hill_valley/1885/high_school"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

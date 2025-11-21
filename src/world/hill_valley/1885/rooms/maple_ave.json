@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/maple_ave",
+  "type": "room",
+  "name": "Maple Track",
+  "description": "The northern end of Maple Track, a rutted path intersecting with Main Street. You are on Maple Track, at the juncture with Main Street. To the north, Main Street stretches out, a rough-hewn path of nascent commerce. Maple Track continues its dusty descent to the south, disappearing into the nascent residential district. The air is a blend of distant horse whinnies and the faint, lingering scent of dry earth and sagebrush."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/main_st7",
+    "south": "hill_valley/1885/maple_ave1"
+  },
+  "items": []
+}

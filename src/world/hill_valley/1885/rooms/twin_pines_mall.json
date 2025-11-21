@@ -1,0 +1,22 @@
+{
+  "id": "hill_valley/1885/twin_pines_mall",
+  "type": "room",
+  "definition": "room",
+  "name": "Twin Pines Tract",
+  "description": "A vast, empty expanse of sun-baked desert, marked by two ancient, towering pine trees that seem out of place in the desolate landscape. This 'Twin Pines Tract' is nothing but cracked earth and hardy scrub now, but there's a strange, almost imperceptible hum in the air, a whisper of something vast and impossible that might one day stand here. The ground is cracked and dry, stretching endlessly under an indifferent sky. A few scattered, hardy cacti stand as silent sentinels to the relentless heat and desolation. The surrounding scrubland stretches in all directions, promising nothing but quiet, comfortable emptiness. The air is still, thick with dust and the relentless heat, broken only by the distant caw of a crow and the endless hum of unseen insects, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/mall_parking_n",
+    "northeast": "hill_valley/1885/mall_parking_ne",
+    "east": "hill_valley/1885/mall_parking_e",
+    "southeast": "hill_valley/1885/mall_parking_se",
+    "south": "hill_valley/1885/mall_parking_s",
+    "southwest": "hill_valley/1885/mall_parking_sw",
+    "west": "hill_valley/1885/mall_parking_w",
+    "northwest": "hill_valley/1885/mall_parking_nw"
+  },
+  "tags": [
+    "shopping",
+    "time_travel_site"
+  ]
+}

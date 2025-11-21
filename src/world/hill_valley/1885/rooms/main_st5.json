@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/main_st5",
+  "type": "room",
+  "name": "Main Street & Wagon Road Junction",
+  "description": "The dusty intersection of Main Street and a rough wagon road, a nascent hub of frontier travel. You are at the crossroads of Main Street and a dusty wagon road. Main Street continues its rough-hewn journey to the east and west, a path of nascent commerce. The wagon road stretches to the south, disappearing into the vast, empty desert. The air is thick with the scent of horseflesh and dry earth, a testament to the relentless march of time across the frontier, a constant reminder of the town's slow expansion."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st4",
+    "west": "hill_valley/1885/main_st6",
+    "south": "hill_valley/1885/jfk_dr"
+  },
+  "items": []
+}

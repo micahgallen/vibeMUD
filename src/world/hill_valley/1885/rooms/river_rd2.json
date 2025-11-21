@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/river_rd2",
+  "type": "room",
+  "name": "River Trail",
+  "description": "A bend in the River Trail, offering a glimpse of the river itself, murky and indifferent. You are on the River Trail, where a slight curve in the packed earth reveals a sliver of the river, its waters a murky brown, flowing with an indifferent current. The cottonwoods grow thicker here, their branches forming a canopy that filters the harsh afternoon sun, casting long, dappled shadows on the path. The air is heavy with the scent of river water and decaying leaves, a poignant reminder of time's relentless passage on the frontier."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/river_rd1",
+    "east": "hill_valley/1885/river_rd3"
+  },
+  "items": []
+}

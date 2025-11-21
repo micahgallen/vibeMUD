@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hill_st7",
+  "type": "room",
+  "name": "Hill Track (Scrubland)",
+  "description": "A sun-baked stretch of Hill Track, where scattered, scraggly mesquite trees offer meager shade from the relentless sun, a small mercy in the vast indifference of the desert. Hill Track continues its arduous journey to the north and south, a faint rutted path winding through sparse scrub and scattered rock formations. The air is still, thick with dust and the relentless heat, broken only by the distant caw of a crow and the endless hum of unseen insects, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st6",
+    "south": "hill_valley/1885/hill_st8"
+  },
+  "items": []
+}

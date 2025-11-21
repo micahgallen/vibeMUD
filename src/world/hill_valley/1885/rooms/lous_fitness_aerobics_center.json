@@ -1,0 +1,17 @@
+{
+  "id": "hill_valley/1885/lous_fitness_aerobics_center",
+  "type": "room",
+  "definition": "room",
+  "name": "Palace Saloon & Hotel",
+  "description": "A grand, if slightly faded, establishment, offering the weary traveler both strong spirits and a soft, if not entirely clean, bed. The Palace Saloon & Hotel is Hill Valley's premier stop for indulgence and respite. The air is thick with the smell of whiskey, cigar smoke, and the faint, enticing aroma of cooked food. The long, polished bar gleams under the gaslight, and the tables are scattered with cards and empty glasses. Upstairs, the promise of a private room and a momentary escape from the frontier's harsh realities beckons. It's a place where fortunes are made and lost, secrets are whispered, and the night often ends with a bang, or a whimper, depending on your luck."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/main_st4",
+    "east": "hill_valley/1885/hill_st"
+  },
+  "tags": [
+    "saloon",
+    "hotel",
+    "service"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hilldale_st3",
+  "type": "room",
+  "name": "Empty Desert (Hilldale Tract)",
+  "description": "The final stretch of empty desert before it gives way to even more empty desert. You are on the last straight segment of desolate scrubland, where the only 'variation' is the subtle shift in the relentless wind. A lone, sun-baked rock formation stands guard, a silent sentinel of geological order. The air is still, broken only by the distant, almost imperceptible buzz of flies. To the west, more empty scrubland stretches, and to the east, the 'cul-de-sac' of the desert awaits, promising nothing but quiet, comfortable emptiness.",
+  "exits": {
+    "west": "hill_valley/1885/hilldale_st2",
+    "east": "hill_valley/1885/hilldale_culdesac"
+  },
+  "items": []
+}

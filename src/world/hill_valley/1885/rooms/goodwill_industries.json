@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/goodwill_industries",
+  "type": "room",
+  "name": "Frontier Trading Post",
+  "description": "A cluttered, dusty trading post, a repository of forgotten dreams and hard-used necessities. This Frontier Trading Post is a treasure trove where the discarded fragments of one person's journey become another's potential salvation. Stacks of worn blankets, shelves of mismatched tools, and a corner filled with rusty implements create a unique aroma of aged leather and desperate hope, a scent that speaks of countless untold stories. A few prospectors, with the keen eye of seasoned scavengers, rummage through the offerings, hoping to unearth a hidden gem amidst the flotsam and jetsam of frontier life. The only exit is back out to the dusty Main Street, where the cycle of acquisition and disposal continues under the indifferent sun.",
+  "exits": {
+    "south": "hill_valley/1985/main_st1"
+  },
+  "items": []
+}

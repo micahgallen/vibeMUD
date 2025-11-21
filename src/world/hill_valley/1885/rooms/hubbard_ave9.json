@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hubbard_ave9",
+  "type": "room",
+  "name": "End of Hubbard Track",
+  "description": "The ignominious end of Hubbard Track, where the dusty path finally gives way to a more pungent reality. The track ends here, not with a grand vista, but with a large, fragrant pile of horse manure, a subtle reminder of the harsh realities of frontier life. To the west, a faint, rutted trail beckons, a weary ribbon leading towards the untamed wilderness. Hubbard Track continues its arduous journey to the north, a rutted path through sparse scrub and scattered rock formations. The air is thick with the smell of the stable, a stark contrast to the vague aspirations of civilization.",
+  "exits": {
+    "north": "hill_valley/1885/hubbard_ave8",
+    "west": "hill_valley/1885/lyon_drive"
+  },
+  "items": []
+}

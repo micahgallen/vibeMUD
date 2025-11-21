@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hill_st9",
+  "type": "room",
+  "name": "End of Hill Track",
+  "description": "The abrupt end of the Hill Track, where the faint rutted path finally gives way to the untouched, sun-scorched earth of the vast desert. The track ends here, not with a flourish, but with a whimper, a subtle transition into an unforgiving landscape that has seen countless sunrises and sunsets. Hill Track continues its arduous journey to the north, a faint rutted path winding through sparse scrub and scattered rock formations. The air is still, broken only by the distant howl of the wind, echoing across the vast, indifferent desert.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st8",
+    "east": "hill_valley/1885/lyon_drive"
+  },
+  "items": []
+}

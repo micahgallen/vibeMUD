@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/main_st8",
+  "type": "room",
+  "name": "Main Street",
+  "description": "Main Street, nearing the western edge of the nascent town, a place of quiet, dusty commerce. You are on Main Street, nearing the western edge of the developing town. The path continues to the east and west, a rough-hewn ribbon of nascent commerce. The air is thick with the scent of horseflesh and the faint, lingering aroma of pioneer ambition. The rough-hewn storefronts here are mostly simple wooden structures, their dusty windows reflecting the slow, hard growth of commerce from the nascent town into the wider, wild frontier."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st7",
+    "west": "hill_valley/1885/main_st9"
+  },
+  "items": []
+}

@@ -35,5 +35,4 @@ temp/
 Thumbs.db
 .DS_Store
 
-# Gemini temporary directory
-.gemini/
+

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/hill_st",
+  "type": "room",
+  "name": "Hill Track",
+  "description": "The northernmost stretch of Hill Track, a rutted path of packed earth intersecting with Main Street. You are on Hill Track, at the juncture with Main Street. To the north, Main Street beckons with its rough-and-tumble establishments, and Hill Track continues its dusty descent to the south. To the east, the sprawling, sun-baked expanse of Courthouse Square (North) stretches out, a testament to raw frontier ambition. The air here is a blend of distant horse whinnies and the faint, lingering scent of pioneer aspirations. To the west, a rough lean-to for frontier healing, and to the southwest, a curious tent promising unusual wares.",
+  "exits": {
+    "north": "hill_valley/1885/main_st3",
+    "south": "hill_valley/1885/hill_st1",
+    "east": "hill_valley/1885/courthouse_square_north_parking_lot",
+    "west": "hill_valley/1885/lous_fitness_aerobics_center",
+    "southwest": "hill_valley/1885/the_third_eye"
+  },
+  "items": []
+}

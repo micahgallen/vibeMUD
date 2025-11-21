@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/ask_mr_foster_travel_service",
+  "type": "room",
+  "name": "Foster's Frontier Passage & Provisions",
+  "description": "A ramshackle lean-to offering passage on the occasional stagecoach and hard-earned advice for those foolhardy enough to venture beyond Hill Valley. The air is thick with dust, the faint scent of horseflesh, and the unspoken anxieties of long, arduous journeys. Behind a splintered counter, a grizzled man with a faraway look in his eyes gestures vaguely at a worn map, detailing routes fraught with peril and promise. His 'brochures' are crudely drawn sketches of distant, barely civilized settlements. This establishment is not for the faint of heart, but for those with coin and a desperate need to be somewhere else.",
+  "exits": {
+    "south": "hill_valley/1985/main_st3"
+  },
+  "items": []
+}

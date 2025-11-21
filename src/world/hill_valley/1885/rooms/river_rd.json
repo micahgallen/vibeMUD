@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/river_rd",
+  "type": "room",
+  "name": "River Trail",
+  "description": "A quiet stretch of River Trail, where the faint path of packed earth meets the encroaching riverine flora. You are on the River Trail, a narrow track that seems to be losing its battle with the persistent willows and cattails. To the west, the rough-hewn Hubbard Track beckons. The air here carries the faint scent of damp earth and the distant call of a heron, a testament to nature's slow, inevitable reclamation. The occasional rustle in the reeds hints at unseen wildlife, or perhaps just the wind playing tricks."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/hubbard_ave1",
+    "east": "hill_valley/1885/river_rd1"
+  },
+  "items": []
+}

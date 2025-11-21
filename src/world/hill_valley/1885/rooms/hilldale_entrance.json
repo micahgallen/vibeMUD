@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hilldale_entrance",
+  "type": "room",
+  "name": "Empty Desert (Hilldale Approaches)",
+  "description": "A barren stretch of sun-baked desert, where the only 'entrance' is the harsh, indifferent landscape itself. The ground is cracked and dry, stretching endlessly under an unforgiving sky, a monument to desolation. A few scattered, hardy cacti stand as silent sentinels to the relentless heat. To the west, the rickety Clayton Ravine Crossing looms, a perilous gateway to what passes for civilization. To the east, more of the same empty scrubland stretches, promising nothing but quiet, comfortable emptiness.",
+  "exits": {
+    "south": "hill_valley/1885/main_st9",
+    "east": "hill_valley/1885/hilldale_st1"
+  },
+  "items": []
+}
