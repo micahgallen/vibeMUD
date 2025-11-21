@@ -907,10 +907,17 @@ function tryNPCSpellcast(npcId, targetId, entityManager) {
     return false;
   }
 
-  // Determine target based on spell type
+  // Determine target based on spell type and effects
   let spellTargetId = targetId;
-  if (spell.targetType === 'self') {
-    spellTargetId = npcId; // Cast on self (heal, buff, etc.)
+
+  // Check if spell is beneficial (heal, buff) or offensive (damage, debuff)
+  const isBeneficial = spell.effects && spell.effects.some(effect =>
+    effect.type === 'heal' || effect.type === 'buff' || effect.type === 'restore_mana'
+  );
+
+  if (spell.targetType === 'self' || isBeneficial) {
+    // Beneficial spells should target self, not enemies
+    spellTargetId = npcId;
   }
 
   // Cast the spell
