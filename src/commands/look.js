@@ -87,40 +87,6 @@ module.exports = {
       output.push('');
       for (const npcObj of npcsInRoom) {
         output.push(colors.npc(npcObj.name) + ' is here.');
-
-        // Show equipped items
-        if (npcObj.equipped && Object.keys(npcObj.equipped).length > 0) {
-          const equippedItems = [];
-
-          if (npcObj.equipped.mainHand) {
-            const weapon = entityManager.get(npcObj.equipped.mainHand);
-            if (weapon) equippedItems.push(`wielding ${colors.objectName(weapon.name)}`);
-          }
-
-          if (npcObj.equipped.offHand) {
-            const offhand = entityManager.get(npcObj.equipped.offHand);
-            if (offhand) equippedItems.push(`holding ${colors.objectName(offhand.name)}`);
-          }
-
-          if (npcObj.equipped.chest) {
-            const armor = entityManager.get(npcObj.equipped.chest);
-            if (armor) equippedItems.push(`wearing ${colors.objectName(armor.name)}`);
-          }
-
-          if (npcObj.equipped.shield) {
-            const shield = entityManager.get(npcObj.equipped.shield);
-            if (shield) equippedItems.push(`carrying ${colors.objectName(shield.name)}`);
-          }
-
-          if (npcObj.equipped.head) {
-            const helmet = entityManager.get(npcObj.equipped.head);
-            if (helmet) equippedItems.push(`wearing ${colors.objectName(helmet.name)} on their head`);
-          }
-
-          if (equippedItems.length > 0) {
-            output.push(colors.dim(`  ${npcObj.name} is ${equippedItems.join(', ')}.`));
-          }
-        }
       }
     }
 

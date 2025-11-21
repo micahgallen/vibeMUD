@@ -380,6 +380,57 @@ module.exports = {
         else if (hpPercent < 60) hpColor = colors.warning;
         session.sendLine(hpColor(`Health: ${target.hp}/${target.maxHp}`));
       }
+
+      // Show equipped items
+      if (target.equipped && Object.keys(target.equipped).length > 0) {
+        session.sendLine('');
+        session.sendLine(colors.info('Equipment:'));
+        const equippedItems = [];
+
+        if (target.equipped.mainHand) {
+          const weapon = entityManager.get(target.equipped.mainHand);
+          if (weapon) equippedItems.push(`  Main Hand: ${colors.objectName(weapon.name)}`);
+        }
+
+        if (target.equipped.offHand) {
+          const offhand = entityManager.get(target.equipped.offHand);
+          if (offhand) equippedItems.push(`  Off Hand: ${colors.objectName(offhand.name)}`);
+        }
+
+        if (target.equipped.head) {
+          const helmet = entityManager.get(target.equipped.head);
+          if (helmet) equippedItems.push(`  Head: ${colors.objectName(helmet.name)}`);
+        }
+
+        if (target.equipped.chest) {
+          const armor = entityManager.get(target.equipped.chest);
+          if (armor) equippedItems.push(`  Chest: ${colors.objectName(armor.name)}`);
+        }
+
+        if (target.equipped.hands) {
+          const gloves = entityManager.get(target.equipped.hands);
+          if (gloves) equippedItems.push(`  Hands: ${colors.objectName(gloves.name)}`);
+        }
+
+        if (target.equipped.legs) {
+          const legs = entityManager.get(target.equipped.legs);
+          if (legs) equippedItems.push(`  Legs: ${colors.objectName(legs.name)}`);
+        }
+
+        if (target.equipped.feet) {
+          const boots = entityManager.get(target.equipped.feet);
+          if (boots) equippedItems.push(`  Feet: ${colors.objectName(boots.name)}`);
+        }
+
+        if (target.equipped.shield) {
+          const shield = entityManager.get(target.equipped.shield);
+          if (shield) equippedItems.push(`  Shield: ${colors.objectName(shield.name)}`);
+        }
+
+        if (equippedItems.length > 0) {
+          equippedItems.forEach(item => session.sendLine(item));
+        }
+      }
     }
 
     if (target.type === 'player') {
