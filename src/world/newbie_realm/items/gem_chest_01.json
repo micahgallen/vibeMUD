@@ -1,0 +1,23 @@
+{
+  "id": "gem_chest_01",
+  "type": "item",
+  "definition": "item",
+  "name": "Ruby Gem",
+  "description": "A brilliant red ruby that catches the light beautifully.",
+  "value": 100,
+  "weight": 0.1,
+  "location": {
+    "type": "container",
+    "owner": "forest_chest_02"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "amazing",
+    "categories": ["treasure", "gem", "valuable"],
+    "dropWeight": 10,
+    "presetDropChance": 0.15
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

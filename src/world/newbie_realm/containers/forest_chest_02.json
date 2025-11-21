@@ -12,9 +12,9 @@
   "isOpen": true,
   "isLocked": false,
   "inventory": [
-    "torch_001",
-    "dagger_001",
-    "gem_001"
+    "torch_chest_01",
+    "dagger_chest_01",
+    "gem_chest_01"
   ],
   "capacity": 20,
   "createdAt": "2025-11-21T00:00:00Z",

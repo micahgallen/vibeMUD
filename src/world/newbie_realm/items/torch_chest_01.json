@@ -1,0 +1,25 @@
+{
+  "id": "torch_chest_01",
+  "type": "item",
+  "definition": "torch",
+  "name": "Torch",
+  "description": "A wooden torch wrapped in oil-soaked cloth. Can be lit to provide light.",
+  "value": 10,
+  "weight": 1.0,
+  "maxFuel": 600,
+  "heartbeatInterval": 10,
+  "location": {
+    "type": "container",
+    "owner": "forest_chest_02"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["tool", "light"],
+    "dropWeight": 50,
+    "presetDropChance": 0.4
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}
