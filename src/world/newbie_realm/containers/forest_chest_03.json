@@ -4,7 +4,6 @@
   "name": "Toy Box",
   "short": "a weathered toy box",
   "description": "This toy box was once painted in cheerful primary colors, but weather and time have reduced it to flaking remnants. The lid is carved with images of children playing—or possibly dancing, or possibly running from something just out of frame. The hinges squeak when you open it, a sound like a small animal in distress. Inside, beneath a layer of what you hope is just dust, you can see various items nestled among broken toys: a one-eyed doll, wooden blocks with letters that don't form words in any language you know, and a wind-up monkey that occasionally clicks even though no one has wound it.",
-  "definition": "treasure_chest",
   "location": {
     "type": "room",
     "room": "forest_3_4"

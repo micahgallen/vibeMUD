@@ -4,7 +4,6 @@
   "name": "Berry-Stained Basket",
   "short": "a wicker basket stained with berry juice",
   "description": "This wicker basket looks like it was woven by someone with more enthusiasm than skill. The weave is uneven, the handle is slightly crooked, and the entire thing is stained with juice from the electric blue berries that once filled it. The stains form patterns that look almost deliberate—swirls and spirals that make your eyes water if you stare too long. A small tag tied to the handle reads 'FOR SPECIAL FRIENDS' in childish handwriting.",
-  "definition": "treasure_chest",
   "location": {
     "type": "room",
     "room": "forest_5_1"

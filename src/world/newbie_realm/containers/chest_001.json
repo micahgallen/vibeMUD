@@ -2,7 +2,6 @@
   "id": "chest_001",
   "type": "container",
   "name": "Treasure Chest",
-  "definition": "treasure_chest",
   "location": {
     "type": "room",
     "room": "test_room"
