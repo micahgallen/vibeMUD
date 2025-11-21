@@ -47,12 +47,13 @@ module.exports = {
 
     const oldRoomId = player.currentRoom;
     const oldRoom = entityManager.get(oldRoomId);
+    const name = player.capname || player.name;
 
     // Notify old room (use custom exit message if set)
     if (oldRoom) {
       const exitMessage = player.tpExitMessage
-        ? player.tpExitMessage.replace('{name}', player.name)
-        : `${player.name} disappears in a flash of light!`;
+        ? player.tpExitMessage.replace('{name}', name)
+        : `${name} disappears in a flash of light!`;
 
       entityManager.notifyRoom(oldRoomId,
         colors.info(exitMessage),
@@ -65,8 +66,8 @@ module.exports = {
 
     // Notify new room (use custom enter message if set)
     const enterMessage = player.tpEnterMessage
-      ? player.tpEnterMessage.replace('{name}', player.name)
-      : `${player.name} appears in a flash of light!`;
+      ? player.tpEnterMessage.replace('{name}', name)
+      : `${name} appears in a flash of light!`;
 
     entityManager.notifyRoom(targetRoomId,
       colors.info(enterMessage),
