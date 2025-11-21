@@ -3,7 +3,8 @@
   "definition": "monster",
   "name": "a dark mage",
   "description": "A mysterious mage in flowing black robes stands here, arcane energy crackling around their hands.",
-  "currentRoom": "test_room",
+  "keywords": ["dark", "mage", "wizard", "sorcerer"],
+  "currentRoom": "forest_1_4",
   "hp": 50,
   "maxHp": 50,
   "mp": 100,
@@ -21,17 +22,33 @@
   "wanders": false,
   "spells": ["magic_missile", "heal"],
   "spellCastChance": 0.5,
+  "equipped": {
+    "mainHand": "torch_001"
+  },
+  "inventory": ["potion_001"],
+  "loot": {
+    "guaranteedDrops": ["potion_001"],
+    "equippedDropChance": 0.3,
+    "randomLoot": {
+      "enabled": true,
+      "rolls": 2
+    }
+  },
   "dialogue": [
     "The arcane arts are not for the faint of heart.",
     "Magic flows through all things... if you know how to harness it.",
     "I sense great potential in you... or perhaps great danger.",
-    "The old ways of magic are dying. We must preserve them."
+    "The old ways of magic are dying. We must preserve them.",
+    "This place... it remembers things. Dark things.",
+    "The shadows here are alive. Can't you feel them watching?"
   ],
   "emoteActions": [
     "waves their staff, sending sparks into the air",
     "mutters incantations under their breath",
     "studies an ancient tome",
-    "gazes into the distance with glowing eyes"
+    "gazes into the distance with glowing eyes",
+    "traces arcane symbols in the air that linger for a moment",
+    "shivers despite the warmth, looking around nervously"
   ],
   "emoteChance": 0.3,
   "dialogueChance": 0.4,
