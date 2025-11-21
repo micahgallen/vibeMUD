@@ -22,6 +22,11 @@ module.exports = {
     );
 
     for (const player of players) {
+      // Ghosts cannot be healed
+      if (player.isGhost) {
+        continue;
+      }
+
       if (player.hp < player.maxHp) {
         const healAmount = this.healAmount || 5;
         const oldHp = player.hp;

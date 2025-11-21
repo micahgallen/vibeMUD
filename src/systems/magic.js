@@ -95,6 +95,11 @@ function findSpellByName(spellName) {
  * @returns {object} - { canCast: boolean, reason: string }
  */
 function canCast(caster, spell) {
+  // Check if caster is a ghost
+  if (caster.isGhost) {
+    return { canCast: false, reason: 'You are a ghost and cannot cast spells until you respawn!' };
+  }
+
   // Check if spell requires admin privileges
   if (spell.adminOnly && !caster.isAdmin) {
     return { canCast: false, reason: 'This spell requires administrator privileges!' };
@@ -162,6 +167,11 @@ function validateTarget(caster, target, spell) {
       return { valid: false, reason: 'You cannot cast this spell on yourself.' };
     }
 
+    // Cannot target ghosts
+    if (target.isGhost) {
+      return { valid: false, reason: `${target.name} is a ghost and cannot be targeted!` };
+    }
+
     // Target must be in same room
     if (target.currentRoom !== caster.currentRoom) {
       return { valid: false, reason: 'Your target is not here.' };
@@ -174,6 +184,11 @@ function validateTarget(caster, target, spell) {
     // Can target self or others, but must have a target
     if (!target) {
       return { valid: false, reason: 'You must specify a target for this spell.' };
+    }
+
+    // Cannot target ghosts (unless targeting self and caster is ghost, which is blocked by canCast)
+    if (target.isGhost && target.id !== caster.id) {
+      return { valid: false, reason: `${target.name} is a ghost and cannot be targeted!` };
     }
 
     // Target must be in same room (unless it's self)

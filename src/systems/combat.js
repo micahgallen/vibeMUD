@@ -38,6 +38,18 @@ function engage(attackerId, defenderId, entityManager) {
     return;
   }
 
+  // Check if attacker is a ghost
+  if (attacker.isGhost) {
+    entityManager.notifyPlayer(attackerId, 'You are a ghost and cannot fight until you respawn!');
+    return;
+  }
+
+  // Check if defender is a ghost
+  if (defender.isGhost) {
+    entityManager.notifyPlayer(attackerId, `${defender.name} is a ghost and cannot be attacked!`);
+    return;
+  }
+
   // Check if either participant is already in combat
   if (attacker.combat) {
     entityManager.notifyPlayer(attackerId, 'You are already in combat!');

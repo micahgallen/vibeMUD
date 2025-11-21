@@ -273,6 +273,11 @@ function startHeartbeat() {
     // Regenerate mana and clean up expired buffs/debuffs
     for (const entity of entityManager.objects.values()) {
       if (entity.type === 'player' || entity.type === 'npc') {
+        // Skip ghosts - they cannot gain/lose mana or be affected by buffs/debuffs/DOTs
+        if (entity.isGhost) {
+          continue;
+        }
+
         // Regenerate mana
         if (entity.maxMp && entity.mp < entity.maxMp) {
           mana.regenerateMana(entity.id, entityManager);
