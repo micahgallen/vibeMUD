@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/maple_ave1",
+  "type": "room",
+  "name": "Maple Track Homesteads",
+  "description": "A residential stretch of Maple Track, lined with a few rudimentary cabins and rough-hewn shacks. The structures here are simple, their raw timber weathered, their plots a mix of cleared earth and stubbornly persistent weeds. Maple Track continues its arduous journey to the north and south, a rutted path through sparse settlements. The air is still, broken only by the distant creak of a wagon wheel and the occasional chirp of a desert bird, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/maple_ave",
+    "south": "hill_valley/1885/maple_ave2"
+  },
+  "items": []
+}

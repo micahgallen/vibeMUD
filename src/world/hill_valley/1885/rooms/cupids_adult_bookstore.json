@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/cupids_adult_bookstore",
+  "type": "room",
+  "name": "Cupid's Discreet Reading Room",
+  "description": "A secluded, dimly lit alcove tucked away from prying eyes, hinting at whispers and clandestine desires. The air is heavy with the scent of cheap tobacco, lamp oil, and the faint, lingering aroma of secrets. A few worn, dog-eared pamphlets and scandalous dime novels are hidden beneath a dusty counter, their covers hinting at forbidden passions rather than explicitly displaying them. A shadowy figure lurks in a corner, pretending to read a newspaper, a silent testament to the universal search for something, anything, to stir the imagination in this dusty frontier town.",
+  "exits": {
+    "south": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}

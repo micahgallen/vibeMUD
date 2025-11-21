@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/jfk_dr3",
+  "type": "room",
+  "name": "Dusty Wagon Road (Outskirts)",
+  "description": "A residential stretch of dusty wagon road, where a few scattered, rudimentary homesteads cling to existence. You are on this wagon road. The area is mostly undeveloped, with a few rough-hewn cabins that speak of different dreams, all slowly fading under the indifferent sun. The wagon road continues its quiet descent to the north and south, a testament to the vast, undeveloped frontier. The air is still, broken only by the distant bray of a donkey and the occasional chirp of a desert bird, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr2",
+    "south": "hill_valley/1885/jfk_dr4"
+  },
+  "items": []
+}

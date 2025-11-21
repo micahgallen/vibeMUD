@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/river_rd4",
+  "type": "room",
+  "name": "End of River Trail",
+  "description": "The easternmost point of the River Trail, where the faint path finally gives way to untouched wilderness. You are at the very edge of the known frontier. The path here becomes a mere suggestion of passage, disappearing into a dense thicket of untamed woods. The air is thick with the scent of wild growth and damp earth, a stark contrast to the dust and grit of Hill Valley. This feels like the edge of the world, a place where civilization's grip loosens, and nature reclaims its own. To the east, the rickety Clayton Ravine Crossing beckons."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/river_rd3",
+    "east": "hill_valley/1885/clayton_bridge"
+  },
+  "items": []
+}

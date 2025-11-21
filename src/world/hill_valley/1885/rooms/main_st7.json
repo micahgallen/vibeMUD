@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/main_st7",
+  "type": "room",
+  "name": "Main Street & Maple Track Junction",
+  "description": "The dusty intersection of Main Street and Maple Track, a nascent hub of frontier travel. You are at the crossroads of Main Street and Maple Track. Main Street continues its rough-hewn journey to the east and west, a path of nascent commerce. Maple Track stretches to the south, disappearing into the dusty plains and rudimentary homesteads. The sun glares fiercely off the dusty, unpainted facades of the nearby buildings, creating a blinding haze that momentarily obscures the subtle grit of the west."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st6",
+    "west": "hill_valley/1885/main_st8",
+    "south": "hill_valley/1885/maple_ave"
+  },
+  "items": []
+}

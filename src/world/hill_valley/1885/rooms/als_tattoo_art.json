@@ -1,0 +1,56 @@
+{
+  "id": "hill_valley/1885/als_tattoo_art",
+  "type": "room",
+  "definition": "bank",
+  "name": "Wells Fargo Stage & Bank",
+  "description": "A sturdy edifice of commerce and communication on the burgeoning frontier. This is the Hill Valley branch of Wells Fargo, where the clatter of incoming stagecoaches mixes with the weighty silence of financial transactions. Dust motes dance in the shafts of light filtering through barred windows, illuminating a worn counter behind which a stoic clerk handles both gold deposits and manifests for perilous journeys. The air is thick with the scent of leather, ink, and the unspoken hopes of pioneers seeking their fortunes, or merely safe passage. It's a place where dreams are funded and entrusted to the open road, both equally prone to banditry and the whims of fate.",
+  "exits": {
+    "south": "hill_valley/1885/main_st3"
+  },
+  "tags": [
+    "service",
+    "bank",
+    "transport"
+  ]
+,
+  "isBank": true,
+  "services": {
+    "deposit": true,
+    "withdraw": true,
+    "balance": true,
+    "transfer": false
+  },
+  "depositFee": 0.0,
+  "withdrawFee": 0.0,
+  "minimumFee": 0,
+  "maxBalance": null,
+  "minDeposit": 1,
+  "minWithdraw": 1,
+  "openHours": null,
+  "accessRestrictions": {
+    "minLevel": 0,
+    "maxLevel": 999,
+    "allowedGuilds": [],
+    "bannedGuilds": [],
+    "allowedRaces": [],
+    "bannedRaces": []
+  },
+  "tellerPersonality": "professional",
+  "tellerName": "a stoic clerk",
+  "messages": {
+    "greeting": "Welcome to Wells Fargo. We handle your coin, and your passage. You may 'balance' your accounts, 'deposit' your earnings, or 'withdraw' what's yours. Speak plain, but brief.",
+    "noAccess": "I reckon our services ain't for your kind. Company rules, you understand.",
+    "closed": "We're shut. Come back during proper business hours. Reckon we'll still be here, if the dust don't claim us.",
+    "depositSuccess": "Tendered %s. It's safe as houses, for now. Next!",
+    "withdrawSuccess": "Here's your %s. Spend it wisely, or get robbed. It's your gamble.",
+    "balanceCheck": "Your ledger shows %s. Make of that what you will. Anything else?",
+    "insufficientFunds": "You ain't got that much in your coffers. We've all seen leaner days.",
+    "insufficientPurse": "You're not carryin' that much coin. Check your pouches again.",
+    "amountTooLow": "The smallest transaction we handle is %s. Ain't got all day for penny-ante business.",
+    "accountFull": "Your account is brimming. A rare sight indeed. Max balance is %s.",
+    "invalidAmount": "That ain't a number. Don't waste my time, I've got manifests to write.",
+    "emptyAccount": "Your account's dry. Next one up!",
+    "serviceFee": "(A %s service charge has been tallied. The wheels of commerce turn slowly, but they do turn.)"
+  },
+  "securityLevel": 7
+}

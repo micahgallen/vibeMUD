@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/courthouse",
+  "type": "room",
+  "name": "Hill Valley Courthouse",
+  "description": "The nascent Hill Valley Courthouse, a sturdy stone edifice still very much under construction, yet already projecting an air of grim authority. Its unfinished facade, raw stone and scaffolding reaching towards the sky, hints at a future testament to frontier law and order. Dust and the clang of hammers fill the air, mingling with the scent of fresh-cut timber and the faint, metallic tang of ambition. Even in its incomplete state, it's a place where the promise of justice, or at least a reckoning, is slowly being chiseled into being.",
+  "exits": {
+    "northwest": "hill_valley/1885/courthouse_square_north_parking_lot",
+    "southwest": "hill_valley/1885/courthouse_square_south_parking_lot"
+  },
+  "items": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/sherwin_williams",
+  "type": "room",
+  "definition": "room",
+  "name": "Frontier Pigments & Oils",
+  "description": "A crude lean-to, offering basic pigments and oils to cover up the raw timber and harsh realities of frontier life. This Frontier Pigments & Oils stand is a deceptive oasis of muted colors in a world of dust and sun-baked browns. Buckets of whitewash, barrels of linseed oil, and sacks of various mineral pigments line the rough-hewn walls, each promising a fresh start, a protective coat, or at least a decent layer to hide the raw wood. The air is thick with the chemical tang of turpentine and the faint, hopeful scent of fresh paint. A gruff proprietor leans against the counter, waiting for someone to believe that a new coat of 'Prairie Sky Blue' can truly change anything."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/first_st1"
+  },
+  "tags": [
+    "shop",
+    "paint"
+  ]
+}

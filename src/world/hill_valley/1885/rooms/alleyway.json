@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/alleyway",
+  "type": "room",
+  "definition": "room",
+  "name": "Dusty Alley",
+  "description": "A narrow, refuse-choked alley, smelling of stale sweat and desperate secrets. The rough-hewn wooden walls are scarred with age, and the only light filtering in comes from the harsh midday sun, casting long, unsettling shadows. A mangy dog gnaws on a discarded bone before slinking away into the deeper gloom. It's the kind of place where fortunes are lost and reputations are broken, and you'd be wise to keep your hand on your purse.",
+  "exits": {
+    "east": "hill_valley/1885/hill_st1"
+  },
+  "tags": [
+    "alley",
+    "urban"
+  ]
+}

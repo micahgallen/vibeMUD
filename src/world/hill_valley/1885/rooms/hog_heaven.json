@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/hog_heaven",
+  "type": "room",
+  "definition": "room",
+  "name": "Hog Heaven Stables",
+  "description": "A dusty, pungent stable where the dreams of the open prairie are broken and trained into submission. What was once a quaint general store now houses Hog Heaven Stables, a rough-hewn corral and livery for weary mounts and unbroken mustangs. The air is thick with the scent of horseflesh, manure, and the faint, metallic tang of sweat. Bridles and saddles hang from rough wooden pegs, reflecting the dim light from oil lamps, each a testament to a bygone era of freedom and untamed spirit. The only sound is the rhythmic stomp of hooves and the occasional whinny, barely audible over the distant clang of a blacksmith's hammer.",
+  "exits": {
+    "east": "hill_valley/1885/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "motorcycle"
+  ]
+}

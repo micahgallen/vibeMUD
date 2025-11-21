@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/hill_st1",
+  "type": "room",
+  "name": "Hill Track",
+  "description": "A gently sloping stretch of Hill Track, hinting at a quiet existence on the edge of the burgeoning settlement. The rutted path slopes gently downwards here, a subtle reminder of the harsh realities of frontier life. To the north, Hill Track ascends towards Main Street, while to the south, it continues its dusty journey. To the east, the sun-baked expanse of Courthouse Square (South) sprawls, a testament to raw frontier ambition. The air is still, broken only by the distant whinny of a horse and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st",
+    "south": "hill_valley/1885/hill_st2",
+    "east": "hill_valley/1885/courthouse_square_south_parking_lot",
+    "west": "hill_valley/1885/alleyway"
+  },
+  "items": []
+}

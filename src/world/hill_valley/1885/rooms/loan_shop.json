@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/loan_shop",
+  "type": "room",
+  "name": "Frontier Money Lender",
+  "description": "A dimly lit, smoke-filled establishment, a last resort for those desperate for quick coin. The Frontier Money Lender's office is a rough-hewn shack with crude wooden shutters covering the windows, separating you from the stern-faced proprietor, whose eyes hold a weary resignation. Scrawled signs on the wall, faded and peeling, advertise 'Fast Coin for Gold!' and 'No Questions Asked!', promises that ring hollow in the heavy air. The atmosphere is thick with the unspoken desperation of those seeking a lifeline, a palpable weight that settles on the few worn crates lining the wall, occupied by anxious patrons. The only exit is back out to the dusty Main Street, where the cycle of need and temporary relief continues under the indifferent sun.",
+  "exits": {
+    "south": "hill_valley/1885/main_st2"
+  },
+  "items": []
+}

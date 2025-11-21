@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/hubbard_ave1",
+  "type": "room",
+  "name": "Hubbard Track & River Trail Junction",
+  "description": "The dusty crossroads of Hubbard Track and the River Trail, a rugged path leading towards the river. You are on Hubbard Track, where it meets the winding River Trail. The area is mostly undeveloped, with only a few scattered, rudimentary lean-tos hinting at habitation. Hubbard Track continues its arduous journey to the north and south, a testament to the slow expansion of the frontier. The air is still, broken only by the distant murmur of the river and the occasional cry of a hawk, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hubbard_ave",
+    "south": "hill_valley/1885/hubbard_ave2",
+    "east": "hill_valley/1885/river_rd"
+  },
+  "items": []
+}

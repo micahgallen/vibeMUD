@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/first_st1",
+  "type": "room",
+  "name": "First Street Homesteads",
+  "description": "A quiet, dusty stretch of First Street, lined with a handful of rudimentary cabins and small homesteads, barely distinguishable from the surrounding scrub. To the west, First Street continues its meandering, unpaved journey, while to the east, it approaches the slightly more established trading posts near Hubbard Avenue. The air is thick with the scent of dry earth, woodsmoke, and the faint, lingering aroma of hard labor. To the southwest, the makeshift General Store & Surety Office offers dubious protection, and to the south, a rough lean-to promises paint and supplies.",
+  "exits": {
+    "west": "hill_valley/1885/first_st",
+    "east": "hill_valley/1885/hubbard_ave2",
+    "southwest": "hill_valley/1885/allstate_insurance",
+    "south": "hill_valley/1885/sherwin_williams"
+  },
+  "items": []
+}

@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/elmos_rib_cafe",
+  "type": "room",
+  "definition": "room",
+  "name": "Empty Lot (Future Cookhouse)",
+  "description": "A dusty, unremarkable patch of land, silently awaiting a future filled with the aroma of cooked meats. This barren plot sits unassuming, a stark contrast to the lively establishment it will one day become. For now, only the occasional tumbleweed rolls across its cracked earth, disturbed by the persistent whispers of a culinary future. The air carries only the faint scent of dry earth and distant sagebrush, completely devoid of the promised sizzle and spice. It's a testament to the fact that even the most legendary cookhouses must start somewhere, often as nothing more than an empty dream under a relentless sun.",
+  "exits": {
+    "west": "hill_valley/1885/hubbard_ave"
+  },
+  "tags": [
+    "empty_lot"
+  ]
+}

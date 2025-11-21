@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/the_third_eye",
+  "type": "room",
+  "definition": "room",
+  "name": "The Barber's Sharp Edge",
+  "description": "A rough-hewn shed offering relief from the wild west's shaggy embrace. The scent of lye soap, stale pipe tobacco, and a hint of antiseptic hangs heavy in the air of this modest barber shop. A few well-worn wooden chairs face a smudged mirror, reflecting the stern gaze of the barber, whose hands are as steady with a straight razor as they are with a deck of cards. Scattered on a rickety shelf are various tonics and potions, promising everything from a thicker beard to a cure for baldness, each with dubious efficacy. It's a place where a man can find a moment of civility, or at least a clean shave, before returning to the dusty chaos of Hill Valley.",
+  "exits": {
+    "northeast": "hill_valley/1885/hill_st"
+  },
+  "tags": [
+    "service",
+    "barber"
+  ]
+}

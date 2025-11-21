@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/essex_theater",
+  "type": "room",
+  "name": "Essex Theater (Under Construction)",
+  "description": "The skeletal framework of what promises to be Hill Valley's grandest, albeit only, place of entertainment. The Essex Theater, currently a collection of raw timbers and half-raised walls, hints at a future filled with dubious theatricals and perhaps even a bit of dancing. The air is thick with the scent of fresh-cut pine, sawdust, and the faint, hopeful aroma of showmanship. A few rough-hewn signs, hastily nailed to posts, proclaim 'Coming Soon: Grand Opening!' to an audience of dust and indifferent tumbleweeds. Even in its incomplete state, it's a place where the promise of a good time, or at least a distraction from frontier life, is slowly being hammered into existence.",
+  "exits": {
+    "north": "hill_valley/1885/first_st",
+    "west": "hill_valley/1885/hill_st3"
+  },
+  "items": []
+}

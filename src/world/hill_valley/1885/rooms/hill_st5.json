@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/hill_st5",
+  "type": "room",
+  "name": "Hill Track Homesteads",
+  "description": "An older, more established section of Hill Track, with rudimentary plots of crops stubbornly resisting the encroaching desert. Hill Track continues its arduous journey to the north and south, a rutted path winding through simple homesteads and a few cabins that have seen better seasons. To the west, a weathered structure hints at a place of learning or records. The air is still, broken only by the distant bray of a donkey and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st4",
+    "south": "hill_valley/1885/hill_st6",
+    "west": "hill_valley/1885/library"
+  },
+  "items": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/jfk_dr2",
+  "type": "room",
+  "name": "Dusty Wagon Road",
+  "description": "A stretch of dusty wagon road, where the raw energy of youth briefly asserts itself. You are on this wagon road. A child, kicking at a tumbleweed, zips past you, heading south, a fleeting blur of boundless energy in the otherwise languid afternoon. The wagon road continues its quiet descent to the north and south, a testament to the vast, undeveloped frontier. The air is still, broken only by the distant creak of a wagon wheel and the occasional chirp of a desert bird, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr1",
+    "south": "hill_valley/1885/jfk_dr3"
+  },
+  "items": []
+}

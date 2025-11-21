@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/river_rd3",
+  "type": "room",
+  "name": "River Trail",
+  "description": "A secluded stretch of the River Trail, where the distant sounds of the nascent settlement are almost entirely absent. You are on the River Trail, a place where the faint murmurs of civilization have faded into a whisper, replaced by the chirping of unseen insects and the gentle rustle of river reeds. The path here is barely maintained, with ruts and loose stones hinting at a forgotten past. The air is fresh, carrying the clean scent of damp earth and river water, a brief respite from the dust and grit of Hill Valley. To the south, a rough path leads towards the rudimentary schoolhouse."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/river_rd2",
+    "east": "hill_valley/1885/river_rd4",
+    "south": "hill_valley/1885/high_school"
+  },
+  "items": []
+}

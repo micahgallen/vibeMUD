@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hill_st8",
+  "type": "room",
+  "name": "Hill Track (Abandoned Claim)",
+  "description": "A spacious, desolate stretch of Hill Track, where the skeletal remains of a few abandoned claims hint at forgotten dreams and dashed hopes. The land here, vast and unforgiving, speaks of a time when dreams were bigger and prospects brighter, now only a testament to the harsh realities of the frontier. Hill Track continues its arduous journey to the north and south, a faint rutted path winding through sparse scrub and scattered rock formations. The air is still, thick with dust and the relentless heat, broken only by the distant howl of the wind, echoing across the vast, indifferent desert.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st7",
+    "south": "hill_valley/1885/hill_st9"
+  },
+  "items": []
+}

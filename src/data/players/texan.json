@@ -6,14 +6,13 @@
   "maxHp": 100,
   "level": 1,
   "gold": 100,
-  "isAdmin": true,
   "strength": 10,
   "dexterity": 10,
   "constitution": 10,
   "intelligence": 10,
   "wisdom": 10,
   "charisma": 10,
-  "currentRoom": "hotel_floor_4_hall_4",
+  "currentRoom": "hill_valley/2015/jfk_dr9",
   "purse": {
     "coins": {
       "platinum": 0,

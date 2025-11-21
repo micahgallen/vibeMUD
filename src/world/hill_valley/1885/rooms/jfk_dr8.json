@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/jfk_dr8",
+  "type": "room",
+  "name": "Empty Desert (Wagon Road)",
+  "description": "A cracked and uneven stretch of dusty wagon road, showing signs of relentless sun and neglect. The path here is faint and rutted, a mere suggestion of passage across the vast, indifferent desert. The wagon road continues its quiet descent to the north and south, a testament to the endless expanse of the undeveloped frontier. The air is still, thick with dust and the scent of dry sagebrush, broken only by the distant cry of a hawk, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr7",
+    "south": "hill_valley/1885/jfk_dr9"
+  },
+  "items": []
+}

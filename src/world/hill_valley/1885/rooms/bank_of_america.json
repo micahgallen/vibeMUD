@@ -1,0 +1,54 @@
+{
+  "id": "hill_valley/1885/bank_of_america",
+  "type": "room",
+  "definition": "bank",
+  "name": "Hill Valley Savings & Loan",
+  "description": "A sturdy, if somewhat plain, building promising safekeeping for coin and collateral. The Hill Valley Savings & Loan is a bastion of tentative financial security in an uncertain world. The wooden floors are worn smooth, reflecting the dim light from gas lamps, and the hushed whispers of transactions are punctuated by the heavy clink of coinage. A dour-faced clerk, whose patience seems as thin as his ledger, efficiently handles deposits and withdrawals, his gaze sharp enough to spot a counterfeit at twenty paces. This is a place where futures are mortgaged, dreams are deferred, and sometimes, just sometimes, a fortune is made.",
+  "exits": {
+    "south": "hill_valley/1885/main_st3"
+  },
+  "tags": [
+    "service",
+    "finance"
+  ],
+  "isBank": true,
+  "services": {
+    "deposit": true,
+    "withdraw": true,
+    "balance": true,
+    "transfer": false
+  },
+  "depositFee": 0.0,
+  "withdrawFee": 0.0,
+  "minimumFee": 0,
+  "maxBalance": null,
+  "minDeposit": 1,
+  "minWithdraw": 1,
+  "openHours": null,
+  "accessRestrictions": {
+    "minLevel": 0,
+    "maxLevel": 999,
+    "allowedGuilds": [],
+    "bannedGuilds": [],
+    "allowedRaces": [],
+    "bannedRaces": []
+  },
+  "tellerPersonality": "professional",
+  "tellerName": "a dour clerk",
+  "messages": {
+    "greeting": "Welcome to the Hill Valley Savings & Loan. We hold your coin, and perhaps your destiny. You may 'balance' your accounts, 'deposit' your earnings, or 'withdraw' what's rightfully yours. Mind the dust on your boots.",
+    "noAccess": "I reckon our services ain't for your kind. Town rules, you understand.",
+    "closed": "We're shut. Come back during proper business hours. Reckon we'll still be here, if the dust don't claim us.",
+    "depositSuccess": "Tendered %s. It's safe as houses, for now.",
+    "withdrawSuccess": "Here's your %s. Spend it wisely, or don't. It's your gamble.",
+    "balanceCheck": "Your ledger shows %s. Make of that what you will.",
+    "insufficientFunds": "You ain't got that much in your coffers. We've all seen leaner days.",
+    "insufficientPurse": "You're not carryin' that much coin. Check your pouches again.",
+    "amountTooLow": "The smallest transaction we handle is %s. Ain't got all day for penny-ante business.",
+    "accountFull": "Your account is brimming. A rare sight indeed. Max balance is %s.",
+    "invalidAmount": "That ain't a number. Don't waste my time, I've got ledgers to balance.",
+    "emptyAccount": "Your account's dry. Next one up!",
+    "serviceFee": "(A %s service charge has been tallied. The wheels of commerce turn slowly, but they do turn.)"
+  },
+  "securityLevel": 5
+}

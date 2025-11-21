@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/main_st4",
+  "type": "room",
+  "name": "Main Street",
+  "description": "A stretch of Main Street, facing the imposing Hill Valley Courthouse. You are on Main Street, standing before the grand, albeit sun-baked and weathered, facade of the Hill Valley Courthouse. The path continues to the east and west, a rough-hewn ribbon of nascent commerce. The air is thick with the scent of horseflesh and the faint, lingering aroma of frontier justice. To the south, Lou's Frontier Remedies offers dubious cures."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st3",
+    "west": "hill_valley/1885/main_st5",
+    "south": "hill_valley/1885/lous_fitness_aerobics_center"
+  },
+  "items": []
+}

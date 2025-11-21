@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1885/main_st2",
+  "type": "room",
+  "name": "Main Street",
+      "description": "A central block of Main Street, a rough-and-tumble mix of dubious services and desperate opportunities. You are on Main Street, roughly in the middle of the block. To the east and west, the path stretches out, with rough-hewn storefronts on either side. Several businesses line this stretch, including the discreet entrance to Cupid's Discreet Reading Room, the grim facade of Abrams & Son's Law & Order Office, and the desperate promises of the Frontier Money Lender. Interspersed among them are numerous empty plots, their dusty fronts reflecting the slow, hard growth of commerce from the nascent town into the wider, wild frontier. To the south, the sun-baked expanse of Courthouse Square (North) sprawls, a testament to raw frontier ambition."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st1",
+    "west": "hill_valley/1885/main_st3",
+    "south": "hill_valley/1885/courthouse_square_north_parking_lot",
+    "northeast": "hill_valley/1885/cupids_adult_bookstore",
+    "north": "hill_valley/1885/abrams_brokerage_corporation",
+    "northwest": "hill_valley/1885/loan_shop"
+  },
+  "items": []
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/hilldale_culdesac",
+  "type": "room",
+  "name": "Empty Desert (Hilldale Tract)",
+  "description": "A vast, empty expanse of sun-baked desert, where the only 'planning' is the harsh hand of nature. The ground is cracked and dry, stretching endlessly under an indifferent sky. A few scattered, hardy cacti stand as silent sentinels to the relentless heat and desolation. To the west, a faint, barely discernible trail leads further into the empty scrubland. The air is still, heavy with the scent of dry earth and the unspoken promise of nothing but more emptiness.",
+  "exits": {
+    "west": "hill_valley/1885/hilldale_st3"
+  },
+  "items": []
+}

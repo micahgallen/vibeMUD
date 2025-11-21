@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/clayton_bridge",
+  "type": "room",
+  "definition": "room",
+  "name": "Clayton Ravine Crossing",
+  "description": "A rickety wooden bridge, barely clinging to the sheer cliffs of Clayton Ravine, named after a local tragedy. This precarious crossing, a testament to frontier ingenuity and sheer desperation, groans underfoot with every step, a constant reminder of the yawning chasm below. Local whispers, the kind exchanged around campfires and in hushed tones, claim the ravine bears the name of a schoolmarm who met an untimely end here, a century or so past. Below, the river glints with a dark, deceptive current, far from the petty squabbles of Hill Valley. To the east, the dusty tracks leading to Main Street await, if you dare cross.",
+  "exits": {
+    "east": "hill_valley/1885/main_st9"
+  },
+  "tags": [
+    "scenic",
+    "landmark"
+  ]
+}

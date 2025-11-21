@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/gaynors_hideaway_bar",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Telegraph Office",
+  "description": "A small, bustling office, tucked away from the main thoroughfare, where the latest news and gossip are painstakingly set to type. The Hill Valley Telegraph Office is the town's window to the world, a cramped space filled with the rhythmic click-clack of the telegraph machine and the hurried scratching of pens. The air is thick with the smell of ink, cheap paper, and the faint, exciting aroma of fresh news. A harried editor, perpetually smudged with ink, barks orders at a young typesetter, ensuring the frontier's stories are told, for better or worse. This is where truths are occasionally stretched, rumors are often confirmed, and the pulse of Hill Valley beats, albeit in grainy print.",
+  "exits": {
+    "north": "hill_valley/1885/first_st"
+  },
+  "tags": [
+    "service",
+    "information",
+    "newspaper"
+  ]
+}

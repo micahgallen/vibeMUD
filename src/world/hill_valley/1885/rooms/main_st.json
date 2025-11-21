@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/main_st",
+  "type": "room",
+  "name": "Main Street & Hubbard Track Junction",
+  "description": "The dusty intersection of Main Street and Hubbard Track, a central hub of activity in nascent Hill Valley. You are at the crossroads of Main Street and Hubbard Track, a place where the past and present seem to converge with the distant creak of wagon wheels. Main Street continues its rough-hewn journey to the west, a path of nascent commerce. Hubbard Track stretches to the south, disappearing into the dusty plains. The imposing clock tower, still under construction but already a landmark, looms in the distance, its unfinished face a silent promise of future punctuality. To the east, a rough-hewn meeting hall, serving as the town's social and spiritual center, stands as a testament to pioneer resolve."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/main_st1",
+    "south": "hill_valley/1885/hubbard_ave",
+    "east": "hill_valley/1885/town_theater"
+  },
+  "items": []
+}

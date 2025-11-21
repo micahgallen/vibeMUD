@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/hubbard_ave",
+  "type": "room",
+  "name": "Hubbard Track",
+  "description": "The northern end of Hubbard Track, a rutted path of packed earth intersecting with Main Street. You are on Hubbard Track, at the juncture with Main Street. To the north, Main Street stretches out, a rough-and-tumble path of nascent commerce. Hubbard Track continues its dusty descent to the south, a testament to the slow expansion of the frontier. To the east, the hearty aroma of cooking meat wafts from Elmo's Cookhouse, a beacon of simple sustenance. The air is a blend of distant horse whinnies and the faint, lingering scent of pioneer aspirations.",
+  "exits": {
+    "north": "hill_valley/1885/main_st",
+    "south": "hill_valley/1885/hubbard_ave1",
+    "east": "hill_valley/1885/elmos_rib_cafe"
+  },
+  "items": []
+}

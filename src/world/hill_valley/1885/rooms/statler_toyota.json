@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/statler_toyota",
+  "type": "room",
+  "name": "Statler's Wagon & Supply",
+  "description": "A rough-hewn shed and dusty corral, promising passage to the future, or at least to the next town. Inside Statler's Wagon & Supply, the air is thick with the scent of horseflesh, new leather, and ambition. A few sturdy wagons and buggies, their spokes gleaming dully, stand ready for purchase or repair. A grizzled man named Statler, his smile as worn as his boots, approaches you, eager to sell you a reliable steed or a wagon sturdy enough for the trail. A hand-painted sign proclaims 'Statler's: Your Future is on Wheels!', a promise that feels both exciting and vaguely threatening. The only exit is back out to the dusty Main Street, where the future is decidedly less shiny."
+  ,
+  "exits": {
+    "south": "hill_valley/1885/main_st1"
+  },
+  "items": []
+}

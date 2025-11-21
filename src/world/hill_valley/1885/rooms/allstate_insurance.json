@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/allstate_insurance",
+  "type": "room",
+  "definition": "room",
+  "name": "General Store & Surety Office",
+  "description": "A makeshift storefront offering dubious 'surety' against the harsh realities of frontier life, alongside sundry goods. The air is thick with the scent of dried herbs, dust, and unfulfilled promises. Behind a crude wooden counter, a stern-faced proprietor, whose own fortunes seem as uncertain as his clientele's, dispenses advice and small favors, for a price. Faded posters advertising patent medicines and rewards for lost livestock adorn the walls. This establishment acknowledges that life is a gamble, and here, you can place your bets on a sliver of peace of mind.",
+  "exits": {
+    "north": "hill_valley/1885/first_st1"
+  },
+  "tags": [
+    "service",
+    "insurance"
+  ]
+}
