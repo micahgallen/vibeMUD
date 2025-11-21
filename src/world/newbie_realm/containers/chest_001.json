@@ -9,8 +9,8 @@
   "isOpen": true,
   "isLocked": false,
   "inventory": [
-    "potion_001",
-    "dagger_001"
+    "potion_chest_test",
+    "dagger_chest_test"
   ],
   "capacity": 20,
   "createdAt": "2025-11-12T10:00:00Z",

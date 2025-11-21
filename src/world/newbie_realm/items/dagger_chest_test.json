@@ -1,0 +1,27 @@
+{
+  "id": "dagger_chest_test",
+  "type": "item",
+  "definition": "weapon",
+  "name": "Steel Dagger",
+  "description": "A well-balanced steel dagger with a sharp edge.",
+  "value": 40,
+  "weight": 1.0,
+  "damage": "1d4",
+  "durability": 80,
+  "maxDurability": 80,
+  "weaponType": "melee",
+  "location": {
+    "type": "container",
+    "owner": "chest_001"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["weapon", "melee", "dagger"],
+    "dropWeight": 40,
+    "presetDropChance": 0.35
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}
