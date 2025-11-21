@@ -5,7 +5,7 @@
   "name": "a corrupted knight",
   "description": "A once-noble knight now twisted by dark magic. Their armor is blackened and scarred, and their sword crackles with malevolent energy.",
   "keywords": ["knight", "corrupted", "dark"],
-  "currentRoom": "test_room",
+  "currentRoom": "forest_3_4",
   "level": 8,
   "hp": 65,
   "maxHp": 65,

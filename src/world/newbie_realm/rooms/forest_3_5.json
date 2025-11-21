@@ -1,0 +1,16 @@
+{
+  "id": "forest_3_5",
+  "type": "room",
+  "name": "The Lullaby",
+  "description": "Someone is singing. It's a lullaby, sweet and gentle, the kind a mother might sing to soothe a restless child. But there's no one here. The voice seems to come from the trees themselves, from the shadows between them, from the air and the earth and the darkness that presses in from all sides. The melody is beautiful and ancient and wrong in ways you can't articulate. Cradles hang from tree branches, each one rocking gently in the absent wind, each one containing a bundle wrapped in blankets that might be a child or might be something else. You do not want to look closer. The ground here is soft with pine needles that smell of cinnamon and formaldehyde. Teddy bears are nailed to the trees at regular intervals, their button eyes removed, dark hollows staring at nothing.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_3_4",
+    "east": "forest_4_5",
+    "west": "forest_2_5"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "forest_5_5",
+  "type": "room",
+  "name": "Where the Lost Things Go",
+  "description": "This is the southeast corner of the forest, and it feels like an ending. The trees here are dead or dying, their branches bare, their bark peeling away to reveal wood the color of old bones. The ground is carpeted with children's toys, thousands of them, scattered as if by some great explosion of innocence—dolls and action figures and stuffed animals and wooden blocks and plastic dinosaurs and jump ropes and jacks and marbles and toy soldiers. All of them are broken, faded, worn, loved and abandoned and lost. They crunch under your feet as you walk. In the center of this graveyard of childhood, a single swing hangs from a dead tree branch, swaying back and forth, back and forth, as if someone just got off. The seat is still warm. In the far corner, barely visible through the gloom, you can see what might be a small door built into the base of a massive tree. Above it, carved into the bark in unsteady letters: 'THEY ALL PLAY DOWN HERE.'",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_5_4",
+    "west": "forest_4_5"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

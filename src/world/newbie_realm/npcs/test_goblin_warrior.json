@@ -5,7 +5,7 @@
   "name": "a goblin warrior",
   "description": "A scarred goblin clutching a rusty blade. Its leather armor is torn and filthy.",
   "keywords": ["goblin", "warrior", "gob"],
-  "currentRoom": "test_room",
+  "currentRoom": "forest_3_2",
   "level": 5,
   "hp": 35,
   "maxHp": 35,

@@ -1,0 +1,16 @@
+{
+  "id": "forest_1_2",
+  "type": "room",
+  "name": "Honeysuckle Bend",
+  "description": "The overwhelming scent of honeysuckle fills the air here, so sweet it's almost nauseating. Vines heavy with white and yellow blossoms drape from every tree, creating curtains of flowers that sway without any discernible breeze. Bees the size of walnuts drift between blooms, their buzzing harmonizing into something that sounds almost like humming. Children's humming. The flowers themselves seem to lean toward you as you pass, their stamens trembling with what might be eagerness. A worn path winds through the undergrowth, lined with smooth river stones arranged in patterns that shift when you're not looking directly at them.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_1_1",
+    "south": "forest_1_3",
+    "east": "forest_2_2"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

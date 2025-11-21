@@ -1,0 +1,16 @@
+{
+  "id": "forest_2_5",
+  "type": "room",
+  "name": "Carousel of Dreams",
+  "description": "A carousel stands in this clearing, its paint flaking, its music box mechanism playing a distorted version of a children's song you almost recognize. The horses are carved from dark wood, their eyes too large, their mouths open in silent screams or ecstatic laughter—it's impossible to tell which. They move up and down on their poles even though the carousel isn't turning. Or is it? You could swear it wasn't moving a moment ago, but now it's completing lazy rotations, each circuit accompanied by the grinding of gears that need oil and the tinkling of music that needs to stop. Stuffed animals are tied to the horses—bears and rabbits and things that might once have been either. Their fur is matted with something dark. The ground around the carousel is worn smooth by thousands of small feet dancing, dancing, always dancing.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_2_4",
+    "east": "forest_3_5",
+    "west": "forest_1_5"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

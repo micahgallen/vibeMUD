@@ -1,0 +1,16 @@
+{
+  "id": "forest_1_3",
+  "type": "room",
+  "name": "The Singing Stones",
+  "description": "Large, smooth stones rise from the forest floor like ancient monuments, each one humming at a different pitch. Together they create a harmony that would be beautiful if it didn't sound quite so much like a choir of voices singing backwards. Moss covers the stones in intricate patterns that look suspiciously like faces when caught in your peripheral vision—faces that smile too wide, with too many teeth. The ground around each stone is bare earth, packed hard as concrete, worn smooth by what must be centuries of... something. Dancing? Pacing? The trees here lean away from the stones, as if reluctant to grow too close.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_1_2",
+    "south": "forest_1_4",
+    "east": "forest_2_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

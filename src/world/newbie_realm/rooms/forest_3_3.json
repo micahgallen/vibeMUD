@@ -1,0 +1,17 @@
+{
+  "id": "forest_3_3",
+  "type": "room",
+  "name": "The Heart of Happiness",
+  "description": "This is the center of the forest, and it wants you to know it. A massive oak tree dominates the clearing, its trunk wider than a house, its branches spreading in perfect symmetry overhead. The bark is carved with thousands of smiling faces, each one slightly different, each one watching you with hollow eyes. Garlands of flowers hang from every branch, fresh and vibrant despite having no visible means of attachment. The ground here is soft with moss that feels like carpet—expensive carpet, the kind that makes you wonder if you should take off your shoes. A transporter booth stands incongruously against the tree, looking simultaneously out of place and like it's been here forever. Birds nest in the upper branches, singing their perfect songs. If you listen very carefully, you can hear them harmonizing words: 'Stay. Stay. Stay forever. Stay.'",
+  "items": ["booth_portal_newbie"],
+  "containers": ["forest_chest_02"],
+  "npcs": [],
+  "exits": {
+    "north": "forest_3_2",
+    "south": "forest_3_4",
+    "east": "forest_4_3",
+    "west": "forest_2_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

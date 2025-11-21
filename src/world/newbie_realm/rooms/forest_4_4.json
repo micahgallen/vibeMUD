@@ -1,0 +1,17 @@
+{
+  "id": "forest_4_4",
+  "type": "room",
+  "name": "Mirror Grove",
+  "description": "Dozens of mirrors hang from the trees here, each one a different size, a different shape, framed in tarnished silver or rotting wood or what might be bone. They reflect the forest, but not quite right—the reflections show trees that aren't there, paths that don't exist, and occasionally, faces watching from the undergrowth. Your own reflection is subtly wrong in each mirror: too pale, too thin, too many teeth when you smile. In one mirror, your reflection isn't looking at you—it's looking at something behind you. You turn. There's nothing there. When you look back at the mirror, your reflection is smiling. The ground beneath the mirrors is littered with broken glass, each shard reflecting fragments of scenes you don't remember witnessing.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_4_3",
+    "south": "forest_4_5",
+    "east": "forest_5_4",
+    "west": "forest_3_4"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

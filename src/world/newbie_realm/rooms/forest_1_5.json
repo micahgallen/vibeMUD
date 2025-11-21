@@ -1,0 +1,15 @@
+{
+  "id": "forest_1_5",
+  "type": "room",
+  "name": "The Smiling Dark",
+  "description": "What little light penetrates here seems actively reluctant to do so, pooling in small puddles of illumination that leave most of the clearing in deep shadow. The trees are ancient here, their bark black with age, their branches twisted into shapes that from certain angles look like reaching hands, grasping claws, screaming faces. Flowers still grow—obscenely cheerful daisies and buttercups pushing up through soil that smells of old graves and older secrets. They glow faintly in the darkness, their luminescence making them look even more wrong. Something has carved smiley faces into the tree trunks, hundreds of them, at every height, each one slightly different, each one seeming to track your movement as you pass. The silence here is oppressive, broken only by dripping sounds from somewhere you can't quite locate.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_1_4",
+    "east": "forest_2_5"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

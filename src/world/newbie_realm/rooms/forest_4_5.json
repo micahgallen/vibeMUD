@@ -1,0 +1,16 @@
+{
+  "id": "forest_4_5",
+  "type": "room",
+  "name": "The Birthday Party",
+  "description": "A picnic table sits in the center of this clearing, set for a birthday party. There's a cake—chocolate with pink frosting, decorated with flowers and seven candles that burn with steady flames despite the wind that's suddenly picked up. Paper plates are arranged around the table, each one holding a slice of cake that hasn't been touched. Party hats sit at each place setting, and streamers hang from the tree branches in loops of primary colors. Balloons float in the air, their strings tied to nothing, bobbing in place. 'HAPPY BIRTHDAY' is spelled out in banner letters strung between trees, though some of the letters are backwards, and there might be too many Ps. A pile of presents sits beside the table, wrapped in bright paper, some of them moving slightly as if something inside is trying to get out. Or trying to get comfortable. The cake's frosting glistens. It might be sweating.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_4_4",
+    "east": "forest_5_5",
+    "west": "forest_3_5"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

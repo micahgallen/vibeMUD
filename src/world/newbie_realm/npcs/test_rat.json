@@ -4,7 +4,7 @@
   "definition": "monster",
   "name": "a mangy rat",
   "description": "A diseased rat with matted fur and beady eyes. It looks weak and sickly.",
-  "currentRoom": "test_room",
+  "currentRoom": "forest_3_1",
   "level": 1,
   "hp": 8,
   "maxHp": 8,

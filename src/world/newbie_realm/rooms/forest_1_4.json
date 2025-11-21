@@ -1,0 +1,16 @@
+{
+  "id": "forest_1_4",
+  "type": "room",
+  "name": "Twilight Glade",
+  "description": "The light here is wrong. It's perpetual dusk, even though you can see full sunlight in the clearings to the north. Shadows stretch long and thin, reaching toward you like grasping fingers. The flowers here still bloom in cheerful colors, but they're starting to wilt at the edges, their petals browning, their stems bending. The sweet smell of nectar is cut through with decay—not overwhelming, just a hint, like fruit left too long in the sun. Trees groan and creak even when there's no wind, their branches scritching against each other in rhythms that sound almost like Morse code. A child's doll lies abandoned on a moss-covered rock, its painted smile fading, one glass eye missing, the other staring up at the darkening sky.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_1_3",
+    "south": "forest_1_5",
+    "east": "forest_2_4"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

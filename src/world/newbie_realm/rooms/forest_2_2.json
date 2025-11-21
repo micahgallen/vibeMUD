@@ -1,0 +1,17 @@
+{
+  "id": "forest_2_2",
+  "type": "room",
+  "name": "The Laughing Meadow",
+  "description": "Wildflowers bloom in riotous profusion across this sun-dappled meadow. Dandelions, poppies, and something that looks like a cross between a rose and a Venus flytrap compete for space in the thick grass. Somewhere in the distance, you hear laughter—the high, tinkling laughter of children at play. It's a sound that should be comforting. Should be. The grass here grows in spiral patterns, each whorl centered on a bare patch of earth that looks disturbed, as if something recently dug its way out. Or in. A wooden signpost points in multiple directions, each arrow labeled 'FUN!' in increasingly manic handwriting.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_2_1",
+    "south": "forest_2_3",
+    "east": "forest_3_2",
+    "west": "forest_1_2"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "forest_chest_02",
+  "type": "container",
+  "name": "Hollow Tree Trunk",
+  "short": "a hollow in the massive oak",
+  "description": "A cavity in the great oak's trunk forms a natural storage space, its interior smooth and dark. The wood around the opening is carved with those same smiling faces that adorn the rest of the tree, though these ones seem to be watching the hollow's contents rather than you. The space inside smells of old wood and older secrets, with an undertone of something sweet that might be tree sap or might be something else entirely. Someone has clearly used this as a cache—there are scratches on the wood inside, marks that might spell words in some forgotten alphabet.",
+  "definition": "treasure_chest",
+  "location": {
+    "type": "room",
+    "room": "forest_3_3"
+  },
+  "isOpen": true,
+  "isLocked": false,
+  "inventory": [
+    "torch_001",
+    "dagger_001",
+    "gem_001"
+  ],
+  "capacity": 20,
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

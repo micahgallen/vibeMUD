@@ -1,0 +1,17 @@
+{
+  "id": "forest_3_2",
+  "type": "room",
+  "name": "Toadstool Circle",
+  "description": "A perfect ring of luminous toadstools dominates this clearing, each cap pulsing with soft pink and blue light. The mushrooms are arranged with geometric precision, their gills facing inward toward the circle's center, where the grass grows darker and thicker than elsewhere. If you stand still, you can feel a faint vibration through your feet—rhythmic, patient, waiting. The trees surrounding the circle are covered in bark that looks like it's been clawed by something large, the marks forming patterns that could be decorative or could be warnings. A hedge of roses blooms nearby, their perfume sweet but underlaid with the unmistakable scent of turned earth and old copper.",
+  "items": [],
+  "containers": [],
+  "npcs": ["test_goblin_warrior"],
+  "exits": {
+    "north": "forest_3_1",
+    "south": "forest_3_3",
+    "east": "forest_4_2",
+    "west": "forest_2_2"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

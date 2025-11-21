@@ -1,0 +1,11 @@
+{
+  "id": "booth_portal_newbie",
+  "definition": "booth_portal",
+  "type": "booth_portal",
+  "location": {
+    "type": "room",
+    "room": "forest_3_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

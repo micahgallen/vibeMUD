@@ -1,0 +1,17 @@
+{
+  "id": "forest_2_4",
+  "type": "room",
+  "name": "The Whispering Dark",
+  "description": "The canopy is thicker here, blocking out most of the light. What sun does filter through comes in sickly green shafts, stained by passage through leaves that are perhaps a bit too thick, a bit too waxy. Mushrooms glow with sputtering bioluminescence, their light pulsing irregularly like a failing fluorescent bulb. The whispers you've heard throughout the forest are louder here, more distinct, forming almost-words in languages you almost-understand. Vines hang from the trees like nooses, swaying in patterns that suggest recent disturbance. A ring of stones surrounds a patch of ground where nothing grows—no grass, no moss, no mushrooms. The earth there is darker than the surrounding soil, and slightly warm to the touch.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_2_3",
+    "south": "forest_2_5",
+    "east": "forest_3_4",
+    "west": "forest_1_4"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

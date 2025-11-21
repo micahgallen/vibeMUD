@@ -1,0 +1,17 @@
+{
+  "id": "forest_4_3",
+  "type": "room",
+  "name": "Garden of Delights",
+  "description": "Someone has clearly tended this garden with obsessive care. Flowers grow in perfect rows, each bloom identical to its neighbors, each petal arranged with mathematical precision. The colors are almost painfully bright—reds that hurt to look at, blues that seem to vibrate, yellows that leave afterimages. A white picket fence surrounds the garden beds, each picket topped with what might be decorative finials or might be tiny skulls. It's hard to tell at this distance, and something inside you doesn't want to look closer. A scarecrow stands guard in one corner, dressed in clothes that look far too nice for a scarecrow, its button eyes catching the light in ways buttons shouldn't. You're almost certain it was facing a different direction a moment ago.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_4_2",
+    "south": "forest_4_4",
+    "east": "forest_5_3",
+    "west": "forest_3_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

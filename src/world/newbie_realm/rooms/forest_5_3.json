@@ -1,0 +1,16 @@
+{
+  "id": "forest_5_3",
+  "type": "room",
+  "name": "Squirrel Parliament",
+  "description": "Squirrels. Dozens of them. Maybe hundreds. They sit on every branch, every stump, every rock, watching you with unblinking intensity. None of them are eating. None of them are moving. They simply watch. A massive oak stump in the center of the clearing serves as what you can only describe as a throne, upon which sits the largest squirrel you've ever seen. Its fur is silver-grey, its tail impossibly bushy, its eyes ancient and knowing. The other squirrels face it in concentric circles, like an audience awaiting a performance. Or a congregation awaiting a sermon. Acorns are piled in neat pyramids around the clearing, each pyramid exactly seven acorns high. You have no idea how you know it's exactly seven. You just know.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_5_2",
+    "south": "forest_5_4",
+    "west": "forest_4_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

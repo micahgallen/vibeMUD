@@ -1,0 +1,16 @@
+{
+  "id": "forest_5_4",
+  "type": "room",
+  "name": "The Dollhouse",
+  "description": "A massive dollhouse sits in this clearing, easily the size of a real house, its paint peeling, its shutters hanging crooked. Through the windows you can see tiny furniture, tiny dishes on tiny tables, tiny beds with tiny occupants tucked beneath tiny blankets. The dolls are porcelain, their faces painted with expressions of frozen joy, their glass eyes catching what little light penetrates the canopy. One window is broken. The doll that was in that room is missing. The dollhouse's front door is sized for something human, and it stands slightly ajar. A welcome mat reads 'COME PLAY' in faded letters. Around the dollhouse, regular-sized children's toys are scattered—wooden blocks, plastic animals, a rocking horse with most of its paint worn away and one eye socket empty and dark.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_5_3",
+    "south": "forest_5_5",
+    "west": "forest_4_4"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

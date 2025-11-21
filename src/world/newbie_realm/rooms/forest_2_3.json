@@ -1,0 +1,17 @@
+{
+  "id": "forest_2_3",
+  "type": "room",
+  "name": "Puddle Hollow",
+  "description": "Rain puddles dot this depression in the forest floor, though you're fairly certain it hasn't rained recently. The puddles are unnaturally still, their surfaces perfect mirrors that reflect the sky above—except the reflections show stars even in broad daylight. Tadpoles swim in lazy circles in the larger puddles, their developing legs already too long, their heads too angular. A family of frogs watches from a log, croaking in turn: one-two-three-four-five-six-seven-eight-nine-ten. They pause. Then start again. One-two-three... The log they sit on is definitely not rotten, but it smells of age and earth and endings. Cattails grow along the edges, their seed pods split open to reveal fluff that drifts on wind that doesn't exist.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_2_2",
+    "south": "forest_2_4",
+    "east": "forest_3_3",
+    "west": "forest_1_3"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

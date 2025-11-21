@@ -1,0 +1,16 @@
+{
+  "id": "forest_4_1",
+  "type": "room",
+  "name": "Dewdrop Dell",
+  "description": "Morning dew clings to every surface here, sparkling like diamonds in the filtered sunlight. The droplets are perfectly spherical and seem to hover just above the grass rather than sitting on it. A babbling brook runs through the clearing, its water crystal clear and singing—quite literally singing—a children's nursery rhyme. 'Ring around the roses, pocket full of posies...' You notice the water sometimes flows uphill for a moment before correcting itself. Forget-me-nots bloom along the banks, their blue petals arranged in spirals that make your eyes water if you stare too long. A dragonfly hovers nearby, its compound eyes reflecting your face back at you dozens of times, each reflection showing a slightly different expression.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "south": "forest_4_2",
+    "east": "forest_5_1",
+    "west": "forest_3_1"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

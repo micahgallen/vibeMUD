@@ -1,0 +1,16 @@
+{
+  "id": "forest_2_1",
+  "type": "room",
+  "name": "Sunbeam Hollow",
+  "description": "Shafts of golden sunlight pierce through the canopy above, creating pools of warmth that feel almost liquid on your skin. Butterflies the size of your palm drift lazily through the beams, their wings adorned with patterns that look disturbingly like tiny watching eyes. A ring of cheerful daisies grows in a perfect circle, their white petals pristine except for the single drop of something dark at each center. The grass here is so green it nearly hurts to look at, and so soft it seems to whisper as you walk. Or maybe that's actual whispering. It's hard to tell.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "south": "forest_2_2",
+    "east": "forest_3_1",
+    "west": "forest_1_1"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

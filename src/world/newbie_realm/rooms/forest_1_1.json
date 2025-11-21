@@ -1,0 +1,15 @@
+{
+  "id": "forest_1_1",
+  "type": "room",
+  "name": "The Giggling Glade",
+  "description": "You stand at the northwestern edge of a peculiarly cheerful forest. Buttercup-yellow flowers carpet the ground, their petals shimmering with an almost crystalline sheen. The air smells of honey and vanilla, with just the faintest undertone of copper. A painted wooden sign declares 'WELCOME FRIENDS!' in aggressively jovial letters. When you're not looking directly at it, you could swear the exclamation mark twitches. Birds sing overhead in perfect harmony—perhaps too perfect, as if they've rehearsed this exact melody ten thousand times. A family of rabbits watches you from beneath a bush. You count seven pairs of ears. Then eight. Then seven again.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "south": "forest_1_2",
+    "east": "forest_2_1"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

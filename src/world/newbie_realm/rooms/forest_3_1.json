@@ -1,0 +1,16 @@
+{
+  "id": "forest_3_1",
+  "type": "room",
+  "name": "The Whistling Grove",
+  "description": "The trees here lean inward, forming a natural archway overhead. Their leaves whistle in the breeze—a cheerful, tuneless melody that occasionally forms what might be words if you listen too carefully. Pink and purple mushrooms dot the forest floor in artistic clusters, glowing faintly with bioluminescent charm. They pulse in rhythm. One-two-three-pause. One-two-three-pause. Like a heartbeat. A wooden bench sits invitingly against one tree, its surface worn smooth by countless occupants you can't quite see. The bark of the trees is carved with hearts and initials, though some of the names aren't in any alphabet you recognize.",
+  "items": [],
+  "containers": [],
+  "npcs": ["test_rat"],
+  "exits": {
+    "south": "forest_3_2",
+    "east": "forest_4_1",
+    "west": "forest_2_1"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

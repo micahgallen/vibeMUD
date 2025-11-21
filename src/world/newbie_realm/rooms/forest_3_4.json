@@ -1,0 +1,17 @@
+{
+  "id": "forest_3_4",
+  "type": "room",
+  "name": "The Forgetting Place",
+  "description": "You can't quite remember how you got here. You can't quite remember what the last room looked like. The trees here are thick and gnarled, their bark peeling in long strips that reveal wood underneath that looks disturbingly like muscle tissue, pale and striated. Flowers still bloom, but they're the wrong colors now—purples that shade into ultraviolet, reds that look black in the dim light, whites that glow with their own luminescence. A playground sits in the center of the clearing: swings that move in the windless air, a merry-go-round that creaks as it spins slowly on its own, a slide that seems to go down much farther than it should. Children's laughter echoes from nowhere and everywhere. You still can't see any children.",
+  "items": [],
+  "containers": ["forest_chest_03"],
+  "npcs": ["test_knight"],
+  "exits": {
+    "north": "forest_3_3",
+    "south": "forest_3_5",
+    "east": "forest_4_4",
+    "west": "forest_2_4"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

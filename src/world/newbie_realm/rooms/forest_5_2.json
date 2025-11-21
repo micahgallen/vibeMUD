@@ -1,0 +1,16 @@
+{
+  "id": "forest_5_2",
+  "type": "room",
+  "name": "Rabbit Warren",
+  "description": "Dozens of rabbit holes dot the ground here, each entrance ringed with small white stones and what appear to be tiny, hand-carved wooden signs reading 'Welcome!' in various scripts. Fat, fluffy rabbits sit at the mouth of each burrow, grooming themselves with mechanical precision. They watch you with eyes that reflect too much intelligence, too much awareness. One rabbit sits perfectly still on a tree stump, its mouth working as if chewing, though it holds nothing. The sound it makes is rhythmic. Methodical. Almost like counting. The warren smells of fresh grass and earth, with underneath that something else—something that reminds you of a dentist's office, all antiseptic and wrong.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_5_1",
+    "south": "forest_5_3",
+    "west": "forest_4_2"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

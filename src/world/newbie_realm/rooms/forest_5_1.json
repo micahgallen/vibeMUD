@@ -1,0 +1,15 @@
+{
+  "id": "forest_5_1",
+  "type": "room",
+  "name": "The Friendly Thicket",
+  "description": "Friendly is certainly a word you could use. The bushes here are laden with berries in impossible colors—electric blue, neon pink, shimmering gold. A helpful wooden sign promises 'DELICIOUS TREATS FOR WEARY TRAVELERS!' though you notice small bones scattered beneath the berry bushes. Probably from birds. Probably. The undergrowth is dense but somehow arranged to create perfect little pathways, as if the forest itself is trying very hard to be accommodating. Wind chimes hang from branches overhead, tinkling sweetly despite the complete absence of wind. A squirrel sits on a stump, perfectly motionless, watching you with eyes that might blink vertically if you watched long enough.",
+  "items": [],
+  "containers": ["forest_chest_01"],
+  "npcs": [],
+  "exits": {
+    "south": "forest_5_2",
+    "west": "forest_4_1"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "forest_4_2",
+  "type": "room",
+  "name": "Butterfly Sanctuary",
+  "description": "Butterflies. So many butterflies. They fill the air in swirling clouds of color—orange monarchs, blue morphos, yellow swallowtails, and species you're certain don't exist in any taxonomy. They land on your arms, your shoulders, your face, their tiny feet tickling your skin. Their wings beat in perfect synchronization, creating a whisper that sounds like words if you listen closely. Don't listen closely. A statue of a child stands at the clearing's center, arms outstretched, covered in resting butterflies. The statue's expression is one of joy. Or terror. Possibly both. The butterflies never land on its face.",
+  "items": [],
+  "containers": [],
+  "npcs": [],
+  "exits": {
+    "north": "forest_4_1",
+    "south": "forest_4_3",
+    "east": "forest_5_2",
+    "west": "forest_3_2"
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}
