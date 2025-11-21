@@ -19,6 +19,11 @@
         "number": 2,
         "name": "Hill Valley",
         "destination": "hill_valley/1985/courthouse_square_south_parking_lot"
+      },
+      {
+        "number": 3,
+        "name": "Newbie Forest",
+        "destination": "forest_3_3"
       }
     ]
   },
