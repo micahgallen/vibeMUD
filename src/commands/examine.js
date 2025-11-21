@@ -265,6 +265,21 @@ module.exports = {
       });
     }
 
+    // Check if examining self
+    if (!target) {
+      if (targetName === 'self' || targetName === 'me') {
+        target = player;
+      } else {
+        // Check if the target name matches the player's own name
+        const playerDisplayName = (player.title ? `${player.title} ${player.name}` : player.name).toLowerCase();
+        const playerUsername = player.username ? player.username.toLowerCase() : player.name.toLowerCase();
+
+        if (playerDisplayName.includes(targetName) || playerUsername.includes(targetName)) {
+          target = player;
+        }
+      }
+    }
+
     // Check other players in room
     if (!target) {
       target = Array.from(entityManager.objects.values()).find(obj => {
@@ -368,19 +383,98 @@ module.exports = {
     }
 
     if (target.type === 'player') {
-      if (target.level !== undefined) {
-        session.sendLine(colors.info(`Level: ${target.level}`));
+      // Use the description system to generate rich player descriptions
+      const descSystem = require('../systems/descriptions');
+      const desc = descSystem.generateCompletePlayerDescription(target, entityManager, colors);
+
+      const lineWidth = 60; // Optimal width for readability
+
+      // Helper function to wrap text to specified width
+      const wrapText = (text, width) => {
+        const words = text.split(' ');
+        const lines = [];
+        let currentLine = '';
+
+        for (const word of words) {
+          // Check if adding this word would exceed width
+          const testLine = currentLine ? `${currentLine} ${word}` : word;
+          if (testLine.length <= width) {
+            currentLine = testLine;
+          } else {
+            if (currentLine) lines.push(currentLine);
+            currentLine = word;
+          }
+        }
+        if (currentLine) lines.push(currentLine);
+        return lines.join('\n');
+      };
+
+      // Helper function to add color tags to level descriptions
+      const addLevelColorTags = (text) => {
+        // Wrap level-related words in yellow tags, then wrap whole thing in blue
+        const tagged = text.replace(/(bewildered|confidence|competence|veteran|legend|experience|gravitas|cautionary tale)/gi,
+          (match) => `<yellow>${match}</>`);
+        return `<bright_blue>${tagged}</>`;
+      };
+
+      // Helper function to add color tags to health descriptions
+      const addHealthColorTags = (text) => {
+        // Wrap health-related words in magenta tags, then wrap whole thing in blue
+        const tagged = text.replace(/(healthy|hale|vigor|hit points|wear|scuffs|bruises|healer|determination|bandaging|battered|breeze|stubborn)/gi,
+          (match) => `<magenta>${match}</>`);
+        return `<bright_blue>${tagged}</>`;
+      };
+
+      // Header with player name
+      session.sendLine('');
+      session.sendLine(colors.highlight('═'.repeat(lineWidth)));
+      session.sendLine(colors.highlight(`  ${target.name}`));
+      session.sendLine(colors.highlight('═'.repeat(lineWidth)));
+      session.sendLine('');
+
+      // Base appearance (wrapped)
+      session.sendLine(colors.dim(wrapText(desc.base, lineWidth)));
+      session.sendLine('');
+
+      // Section break
+      session.sendLine(colors.dim('─'.repeat(lineWidth)));
+      session.sendLine('');
+
+      // Level descriptor with color tags (wrapped then parsed)
+      const levelText = wrapText(desc.level, lineWidth);
+      const levelColored = colors.parseColorTags(addLevelColorTags(levelText));
+      session.sendLine(levelColored);
+
+      // Equipment (if any)
+      if (desc.equipment) {
+        session.sendLine('');
+        const equipText = colors.parseColorTags(wrapText(desc.equipment, lineWidth));
+        session.sendLine(equipText);
       }
-      if (target.hp !== undefined && target.maxHp !== undefined) {
-        const hpPercent = Math.round((target.hp / target.maxHp) * 100);
-        let hpColor = colors.success;
-        if (hpPercent < 30) hpColor = colors.error;
-        else if (hpPercent < 60) hpColor = colors.warning;
-        session.sendLine(hpColor(`Health: ${target.hp}/${target.maxHp}`));
+
+      // Health descriptor with color tags (wrapped then parsed)
+      session.sendLine('');
+      const healthText = wrapText(desc.health, lineWidth);
+      const healthColored = colors.parseColorTags(addHealthColorTags(healthText));
+      session.sendLine(healthColored);
+
+      // Section break
+      session.sendLine('');
+      session.sendLine(colors.dim('─'.repeat(lineWidth)));
+      session.sendLine('');
+
+      // Guild affiliation (wrapped)
+      session.sendLine(colors.warning(wrapText(desc.guild, lineWidth)));
+
+      // Ghost status (if applicable, wrapped)
+      if (desc.ghost) {
+        session.sendLine('');
+        session.sendLine(desc.ghost);
       }
-      if (target.isGhost) {
-        session.sendLine(colors.dim('(This player is a ghost)'));
-      }
+
+      // Footer
+      session.sendLine('');
+      session.sendLine(colors.highlight('═'.repeat(lineWidth)));
     }
 
     session.sendLine('');
