@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hubbard_ave3",
+  "type": "room",
+  "name": "Hubbard Track Homesteads",
+  "description": "A residential stretch of Hubbard Track, where the untamed spirit of childhood still briefly asserts itself. You are on Hubbard Track. A few kids are kicking at dust or chasing a stray dog, their shouts and laughter a fleeting counterpoint to the quiet struggle of the frontier. They pause, briefly, their eyes holding a mixture of curiosity and mild annoyance at the interruption. Hubbard Track continues its arduous journey to the north and south, a rutted path through sparse settlements. The air is still, broken only by the distant creak of a wagon wheel and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hubbard_ave2",
+    "south": "hill_valley/1885/hubbard_ave4"
+  },
+  "items": []
+}

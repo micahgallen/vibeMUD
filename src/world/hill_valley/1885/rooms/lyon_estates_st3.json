@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/lyon_estates_st3",
+  "type": "room",
+  "name": "Empty Desert (Lyon Tract)",
+  "description": "The final stretch of empty desert before it gives way to even more empty desert. You are on the last straight segment of desolate scrubland, where the only 'individuality' is the unique patterns formed by the shifting sands. A lone, sun-baked rock formation stands guard, a silent sentinel of geological order. The air is still, broken only by the distant, almost imperceptible buzz of flies. To the south, more empty scrubland stretches, and to the north, the 'cul-de-sac' of the desert awaits, promising nothing but quiet, comfortable emptiness."
+  ,
+  "exits": {
+    "south": "hill_valley/1885/lyon_estates_st2",
+    "north": "hill_valley/1885/lyon_estates_culdesac"
+  },
+  "items": []
+}

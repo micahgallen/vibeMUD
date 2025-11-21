@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/jfk_dr4",
+  "type": "room",
+  "name": "Empty Desert (Wagon Road)",
+  "description": "A quiet stretch of dusty wagon road, where the only sound is the distant, mournful howl of a coyote. The path here is faint, a mere suggestion of passage across the vast, indifferent desert. Otherwise, it is quiet, a stillness that borders on oppressive, broken only by the relentless heat. The wagon road continues its quiet descent to the north and south, a testament to the vast, undeveloped frontier. The air is thick with dust and the scent of dry sagebrush, broken only by the distant cry of a hawk, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr3",
+    "south": "hill_valley/1885/jfk_dr5"
+  },
+  "items": []
+}

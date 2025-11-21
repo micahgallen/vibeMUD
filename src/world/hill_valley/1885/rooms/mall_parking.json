@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/mall_parking",
+  "type": "room",
+  "definition": "room",
+  "name": "Empty Desert (Pine Ridge Tract)",
+  "description": "A vast, empty expanse of sun-baked desert, stretching towards a distant ridge under an indifferent sky. The ground is cracked and dry, dotted with sparse, hardy scrub that clings stubbornly to life. A few scattered, hardy cacti stand as silent sentinels to the relentless heat and desolation. To the west, more empty scrubland stretches, and to the south, a similar desolate expanse, promising nothing but quiet, comfortable emptiness. The air is still, thick with dust and the relentless heat, broken only by the distant caw of a crow and the endless hum of unseen insects, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/twin_pines_mall",
+    "south": "hill_valley/1885/biffs_garage"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

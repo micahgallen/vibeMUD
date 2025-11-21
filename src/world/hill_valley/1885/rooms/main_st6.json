@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/main_st6",
+  "type": "room",
+  "name": "Main Street",
+  "description": "A stretch of Main Street, where the mundane hints at hidden depths. You are on Main Street. A loose plank in the wooden boardwalk is slightly ajar, a subtle invitation to the unseen world beneath the nascent town, and the faint gurgle of a nearby spring can be heard, a constant reminder of the raw, untamed forces that keep things, barely, functioning. The path continues to the east and west, a rough-hewn ribbon of nascent commerce. The air is thick with the scent of horseflesh and the faint, lingering aroma of pioneer grit."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st5",
+    "west": "hill_valley/1885/main_st7"
+  },
+  "items": []
+}

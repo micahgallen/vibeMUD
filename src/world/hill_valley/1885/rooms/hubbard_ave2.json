@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/hubbard_ave2",
+  "type": "room",
+  "name": "First Street & Hubbard Track Junction",
+  "description": "The dusty crossroads of First Street and Hubbard Track, a slightly more settled corner of the burgeoning frontier. You are at the intersection of First Street and Hubbard Track. Hubbard Track continues its arduous journey to the north and south, a rutted path through sparse settlements. First Street stretches to the west, leading to rudimentary homesteads. The paths are well-worn here, a subtle testament to the slow grind of pioneer life. The air is still, broken only by the distant creak of a wagon wheel and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hubbard_ave1",
+    "south": "hill_valley/1885/hubbard_ave3",
+    "west": "hill_valley/1885/first_st1"
+  },
+  "items": []
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/library",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Scribe's Post",
+  "description": "A small, unassuming cabin, serving as a repository for valuable documents and the occasional tattered book. The Hill Valley Scribe's Post is a quiet, unassuming structure, much like a sleeping badger that, if roused, could reveal a trove of land deeds, mining claims, and surprisingly detailed accounts of local cattle rustling. It houses not just legal documents, but the scant accumulated wisdom, folly, and occasional misplaced letters of generations. The air here is thick with the scent of old paper, lamp oil, and the faint, metallic tang of ink. Every ledger is a small universe, every shelf a history, and the lone scribe is the silent, often exasperated, keeper of this frontier archive, quietly lamenting missing entries.",
+  "exits": {
+    "east": "hill_valley/1885/hill_st5",
+    "west": "hill_valley/1885/jfk_dr5"
+  },
+  "tags": [
+    "building",
+    "research"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/river_rd1",
+  "type": "room",
+  "name": "River Trail",
+  "description": "Another segment of the River Trail, where the distant sounds of the nascent settlement fade into the rustle of reeds. You are on the River Trail, a path that feels increasingly isolated from the rough-hewn tracks leading to Hill Valley. The packed earth is less churned here, but the sense of quiet wildness persists, a subtle reminder of the untamed frontier. The air is cooler, carrying the scent of damp earth and the faint, almost imperceptible, whisper of the river nearby."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/river_rd",
+    "east": "hill_valley/1885/river_rd2"
+  },
+  "items": []
+}

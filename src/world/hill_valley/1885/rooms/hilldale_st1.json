@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/hilldale_st1",
+  "type": "room",
+  "name": "Empty Desert (Hilldale Tract)",
+  "description": "A desolate stretch of sun-baked desert, where the only 'street' is the endless, featureless expanse of sand and rock. The ground is cracked and dry, stretching endlessly under an indifferent sky. A few scattered, hardy cacti stand as silent sentinels to the relentless heat and desolation. To the west, more empty scrubland stretches, and to the east, more of the same, promising nothing but quiet, comfortable emptiness.",
+  "exits": {
+    "west": "hill_valley/1885/hilldale_entrance",
+    "east": "hill_valley/1885/hilldale_st2"
+  },
+  "items": []
+}

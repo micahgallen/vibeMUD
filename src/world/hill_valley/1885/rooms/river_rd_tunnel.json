@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/1885/river_rd_tunnel",
+  "type": "room",
+  "definition": "room",
+  "name": "Deacon Hill Pass",
+  "description": "A dark, damp, natural pass carved through the heart of Deacon Hill. The air inside is cool and heavy with the smell of damp earth and bat guano, a stark contrast to the open air of the River Trail. The pass is a shortcut, a grimy passage that echoes with the drip of unseen water and the occasional scurrying of unseen creatures. The walls are stained with years of mineral seepage, and the light from the entrance barely penetrates the gloom, casting long, dancing shadows. It's a place of transit, not lingering, a rugged artery connecting two sides of the hill, both equally weathered by time and the elements."
+  ,
+  "exits": {
+    "west": "hill_valley/1885/river_rd4"
+  },
+  "tags": [
+    "tunnel",
+    "road"
+  ]
+}

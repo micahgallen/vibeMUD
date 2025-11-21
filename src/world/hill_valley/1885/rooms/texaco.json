@@ -1,0 +1,17 @@
+{
+  "id": "hill_valley/1885/texaco",
+  "type": "room",
+  "definition": "room",
+  "name": "Brown's Livery, Stable & Blacksmith",
+  "description": "A dusty, bustling hub of horseflesh and ingenuity, smelling faintly of hay, hot metal, and ozone. Brown's Livery, Stable & Blacksmith stands as a testament to frontier self-reliance and peculiar genius. Here, weary horses find rest and sustenance, while a crude forge in the corner sparks with inexplicable energy, hinting at more than just horseshoeing. This is the residence and workshop of a certain 'Doc' Brown, whose loyal subjects bring their wooden and flesh steeds for sustenance and minor surgical procedures. The air is a heady mix of horse sweat, coal smoke, and the faint, lingering scent of ambition, mixed with an occasional whiff of something chemical. It's a place where the universe conspires to keep you moving, even if you're not entirely sure where you're going, or why, under the watchful, if often confused, eye of its eccentric proprietor."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/hill_st2"
+  },
+  "tags": [
+    "service",
+    "stable",
+    "blacksmith",
+    "residence"
+  ]
+}

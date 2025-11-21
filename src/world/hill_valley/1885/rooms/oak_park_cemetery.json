@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/oak_park_cemetery",
+  "type": "room",
+  "definition": "room",
+  "name": "Oak Grove Graveyard",
+  "description": "A quiet, unassuming patch of ground where the residents are, by and large, extremely quiet. Oak Grove Graveyard is a place where the residents are, by and large, extremely quiet and have very few complaints. The crude wooden crosses and scattered fieldstones, weathered by the relentless march of time and the occasional desert wind, stand as silent testimonials to lives lived, loved, and ultimately, concluded on the harsh frontier. A few gnarled oaks, ancient and wise, cast long, dappled shadows, providing a sense of peace that is both profound and utterly meaningless in the grand cosmic scheme of things. It's a good place for contemplation, or simply resting your weary bones.",
+  "exits": {
+    "west": "hill_valley/1885/hubbard_ave5"
+  },
+  "tags": [
+    "quiet"
+  ]
+}

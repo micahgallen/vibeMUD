@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/main_st9",
+  "type": "room",
+  "name": "Main Street Terminus",
+  "description": "The western terminus of Main Street, a quiet end to the nascent frontier thoroughfare. You are at the westernmost edge of Main Street. The path continues to the east, leading back toward the rough-hewn heart of Hill Valley, a ribbon of nascent commerce. The air is thick with the scent of horseflesh and the faint, lingering aroma of pioneer grit. The rough-hewn storefronts here are mostly simple wooden structures, their dusty windows reflecting the slow, hard growth of commerce into the wider, wild frontier. To the west, the rickety Clayton Ravine Crossing beckons, and to the north, the vast, empty desert stretches."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st8",
+    "west": "hill_valley/1885/clayton_bridge",
+    "north": "hill_valley/1885/hilldale_entrance"
+  },
+  "items": []
+}

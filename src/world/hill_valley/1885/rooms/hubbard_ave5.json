@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/hubbard_ave5",
+  "type": "room",
+  "name": "Hubbard Track (Outskirts)",
+  "description": "An unremarkable stretch of Hubbard Track, where the quiet is broken only by the whispers of the dry wind. Hubbard Track continues its arduous journey to the north and south, a rutted path through sparse scrub and scattered rock formations. To the east, a somber patch of ground, marked by a few crude wooden crosses, hints at the final resting place of early settlers. The air is still, thick with dust and the relentless heat, broken only by the distant caw of a crow and the endless hum of unseen insects, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hubbard_ave4",
+    "south": "hill_valley/1885/hubbard_ave6",
+    "east": "hill_valley/1885/oak_park_cemetery"
+  },
+  "items": []
+}

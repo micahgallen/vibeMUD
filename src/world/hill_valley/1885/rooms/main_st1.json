@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/main_st1",
+  "type": "room",
+  "name": "Main Street",
+      "description": "A worn stretch of Main Street, lined with a mix of rough-hewn establishments and empty, dusty plots. You are on Main Street. The path continues to the east and west, its packed earth worn smooth by countless boots and wagon wheels. A few stray tumbleweeds, ghosts of the untamed plains, blow by in the wind. Several businesses line this stretch, including a crude livery or general supply, the unassuming entrance to the Frontier Trading Post, and the bustling Wilson's General Store & Public House. Interspersed among them are numerous empty plots, their dusty fronts reflecting the slow, hard growth of commerce from the nascent town into the wider, wild frontier.",
+  "exits": {
+    "east": "hill_valley/1885/main_st",
+    "west": "hill_valley/1885/main_st2",
+    "northeast": "hill_valley/1885/statler_toyota",
+    "north": "hill_valley/1885/goodwill_industries",
+    "northwest": "hill_valley/1885/goldie_wilson_campaign_headquarters"
+  },
+  "items": []
+}

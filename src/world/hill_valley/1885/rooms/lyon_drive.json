@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1885/lyon_drive",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon's Trail",
+  "description": "A faint, rutted trail, barely connecting the weary ends of Hill Track and Hubbard Track to the vast, empty desert. Lyon's Trail, once perhaps a hopeful path for early prospectors, now shows the subtle signs of abandonment. The earth is cracked in places, and hardy weeds bravely push through the fissures, a quiet rebellion against the passage of man. To the north, the untamed desert stretches, promising only the endless expanse. The air is thick with dust and the faint, lingering scent of dry sagebrush, a testament to the relentless march of time and the indifference of the frontier.",
+  "exits": {
+    "east": "hill_valley/1885/hubbard_ave9",
+    "west": "hill_valley/1885/hill_st9",
+    "north": "hill_valley/1885/lyon_estates_entrance"
+  },
+  "tags": [
+    "road",
+    "suburban"
+  ]
+}

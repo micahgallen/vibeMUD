@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/broadway_florist",
+  "type": "room",
+  "definition": "room",
+  "name": "Broadway Bloom & Herbalist",
+  "description": "A small, unassuming shed bursting with the earthy scent of wild flora and dried herbs. The Broadway Bloom & Herbalist, such as it is, offers a fleeting glimpse of natural beauty amidst the dusty frontier. Buckets of freshly cut wildflowers and hanging bunches of fragrant herbs line the rough-hewn shelves, their vibrant colors a stark contrast to the plain wooden walls. The air is thick with the sweet, pungent aroma of blossoms and curative concoctions. Folks come here to mend fences, soothe ailments, or mark a passing with a sprig of something green, hoping it outlasts the sentiment.",
+  "exits": {
+    "east": "hill_valley/1885/hill_st3"
+  },
+  "tags": [
+    "shop",
+    "florist"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/brown_mansion",
+  "type": "room",
+  "definition": "room",
+  "name": "Vacant Lot (Brown Claim)",
+  "description": "A sun-baked, empty plot of land, marked by surveyor's stakes and a lone, gnarled oak. This desolate stretch of prairie is rumored to be the future site of some grand folly, though for now, it's nothing but dust and scrub. Whispers abound of a peculiar fellow, a 'Doc' Brown, who claims this parcel for some inscrutable purpose. The air is still, save for the dry rustle of tumbleweeds, and the faint, persistent murmur of the wind, carrying tales of what might one day be, or perhaps, what never truly was.",
+  "exits": {
+    "east": "hill_valley/1885/jfk_dr7"
+  },
+  "tags": [
+    "ruins",
+    "story_event"
+  ]
+}

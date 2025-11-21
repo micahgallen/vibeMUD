@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/1885/abrams_brokerage_corporation",
+  "type": "room",
+  "name": "Abrams & Son's Law & Order Office",
+  "description": "A dusty, cramped office offering legal assistance and bail services. The air is thick with the scent of cheap tobacco, desperation, and the faint, unsettling aroma of stale whiskey. Behind a heavy, scarred wooden counter sits a gaunt man with eyes that have seen too much, silently assessing every soul who dares darken his doorway. This establishment is less about justice and more about finding a way around it, for a fee that always seems to be just out of reach.",
+  "exits": {
+    "south": "hill_valley/1985/main_st2"
+  },
+  "items": []
+}

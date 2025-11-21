@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/1885/main_st3",
+  "type": "room",
+  "name": "Main Street & Hill Track Junction",
+  "description": "The dusty intersection of Main Street and Hill Track, a nascent hub of frontier commerce. You are at the crossroads of Main Street and Hill Track. Main Street continues its rough-hewn journey to the east and west, a path of nascent commerce. Hill Track stretches to the south, disappearing into the dusty plains and rudimentary homesteads. An oil lamp flickers nearby, casting a warm, unsteady glow on the packed earth, a small comfort in the encroaching gloom. Several businesses line this stretch, including Foster's Frontier Passage & Provisions and the imposing Hill Valley Savings & Loan. To the northeast, Al's Ink & Scarification offers its dubious services."
+  ,
+  "exits": {
+    "east": "hill_valley/1885/main_st2",
+    "west": "hill_valley/1885/main_st4",
+    "south": "hill_valley/1885/hill_st",
+    "north": "hill_valley/1885/ask_mr_foster_travel_service",
+    "northwest": "hill_valley/1885/bank_of_america",
+    "northeast": "hill_valley/1885/als_tattoo_art"
+  },
+  "items": []
+}

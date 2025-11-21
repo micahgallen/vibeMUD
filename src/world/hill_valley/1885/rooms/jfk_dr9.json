@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/jfk_dr9",
+  "type": "room",
+  "name": "End of Wagon Road",
+  "description": "The southern terminus of the dusty wagon road, where the faint track finally yields to untouched wilderness. You are at the very edge of the known frontier. The path here becomes a mere suggestion of passage, disappearing into the vast, indifferent desert, not with a grand vista, but with a whimper. The wagon road continues its weary journey to the north, a faint rutted path winding through sparse scrub and scattered rock formations. The air is still, thick with dust and the scent of dry sagebrush, broken only by the distant cry of a hawk, oblivious to the subtle grit of the west."
+  ,
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr8"
+  },
+  "items": []
+}

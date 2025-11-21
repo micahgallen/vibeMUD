@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/high_school",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Schoolhouse",
+  "description": "A modest wooden schoolhouse, a single room of enforced learning and childish mischief, standing as a testament to the frontier's tentative grasp on civilization. Within these rough-hewn walls, the youth of Hill Valley are subjected to the peculiar ritual of 'cipherin' and readin',' a process designed to prepare them for a future that, statistically speaking, will involve a great deal of hard labor and a surprising lack of dragons. The air smells of chalk dust, old books, and the faint scent of youthful rebellion, a potent cocktail of rudimentary education and unfulfilled potential. It is a place where dreams are both whispered and, more often than not, quietly forgotten.",
+  "exits": {
+    "south": "hill_valley/1885/football_field",
+    "north": "hill_valley/1885/river_rd3"
+  },
+  "tags": [
+    "school"
+  ]
+}

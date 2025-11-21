@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/1885/lyon_estates_st1",
+  "type": "room",
+  "name": "Empty Desert (Lyon Tract)",
+  "description": "A desolate stretch of sun-baked desert, where the only 'street' is the endless, featureless expanse of sand and rock. The ground is cracked and dry, stretching endlessly under an indifferent sky. A few scattered, hardy cacti stand as silent sentinels to the relentless heat and desolation. To the south, the empty approaches to the Lyon Tract beckon, while to the north, more of the same empty scrubland stretches, promising nothing but quiet, comfortable emptiness."
+  ,
+  "exits": {
+    "south": "hill_valley/1885/lyon_estates_entrance",
+    "north": "hill_valley/1885/lyon_estates_st2"
+  },
+  "items": []
+}

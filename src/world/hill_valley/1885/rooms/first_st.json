@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/1885/first_st",
+  "type": "room",
+  "name": "First Street",
+  "description": "A well-worn track of packed earth, connecting the rough-and-tumble Hill Street to the burgeoning settlement further east on Hubbard Avenue. To the west, Hill Street's dusty path meanders into the nascent residential district. To the east, First Street continues its journey towards Hubbard's trading posts. To the north, the dusty expanse of Courthouse Square (South) looms, a stark reminder of where justice is meted out. To the south, the boisterous sounds of the Essex Saloon & Stage promise a different kind of escape, and to the southeast, Gaynor's Hideaway beckons those seeking a quieter vice.",
+  "exits": {
+    "west": "hill_valley/1885/hill_st2",
+    "east": "hill_valley/1885/first_st1",
+    "north": "hill_valley/1885/courthouse_square_south_parking_lot",
+    "south": "hill_valley/1885/essex_theater",
+    "southeast": "hill_valley/1885/gaynors_hideaway_bar"
+  },
+  "items": []
+}

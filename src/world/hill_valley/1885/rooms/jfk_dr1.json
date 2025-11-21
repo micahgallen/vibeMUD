@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/1885/jfk_dr1",
+  "type": "room",
+  "name": "Dusty Wagon Road",
+  "description": "A wide, sun-baked stretch of dusty wagon road, a testament to the harsh realities of frontier expansion. The road is wide, though unpaved, winding through sparse scrub and scattered rock formations. The wagon road continues its quiet descent to the north and south, a testament to the vast, undeveloped frontier. The air is still, broken only by the distant creak of a wagon wheel and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/jfk_dr",
+    "south": "hill_valley/1885/jfk_dr2"
+  },
+  "items": []
+}

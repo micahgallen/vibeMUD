@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/1885/hill_st3",
+  "type": "room",
+  "name": "Hill Track",
+  "description": "A quieter stretch of Hill Track, away from the main bustle, offering a brief respite from the dust and din of the nascent town. Hill Track continues its arduous journey to the north and south, a rutted path winding through rudimentary cabins and scrub. To the east, the raucous sounds of the Essex Saloon & Stage promise a different kind of escape. To the west, the earthy scent of the Broadway Bloom & Herbalist drifts on the dry air. The air is still, broken only by the distant bray of a donkey and the occasional chirp of a desert bird, oblivious to the subtle grit of the west.",
+  "exits": {
+    "north": "hill_valley/1885/hill_st2",
+    "south": "hill_valley/1885/hill_st4",
+    "east": "hill_valley/1885/essex_theater",
+    "west": "hill_valley/1885/broadway_florist"
+  },
+  "items": []
+}
