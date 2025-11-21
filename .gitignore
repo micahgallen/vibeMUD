@@ -37,3 +37,7 @@ Thumbs.db
 
 # Gemini temporary directory
 .gemini/
+
+# Player runtime data (save files)
+src/data/players/
+src/data/instances/
