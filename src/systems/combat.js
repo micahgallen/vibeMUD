@@ -667,9 +667,34 @@ function createCorpse(dead, roomId, entityManager) {
   // Register corpse
   entityManager.objects.set(corpseId, corpse);
 
-  // Transfer inventory to corpse
+  // === LOOT SYSTEM INTEGRATION ===
+  // Generate and transfer loot for NPCs
+  if (dead.type === 'npc') {
+    const loot = require('../systems/loot');
+    const generatedLoot = loot.generateLoot(dead.id, entityManager);
+
+    for (const itemId of generatedLoot) {
+      try {
+        entityManager.move(itemId, {
+          type: 'container',
+          owner: corpseId
+        });
+        const item = entityManager.get(itemId);
+        console.log(`  💎 Added loot to corpse: ${item ? item.name : itemId}`);
+      } catch (error) {
+        console.error(`  ⚠️  Failed to add loot ${itemId} to corpse:`, error.message);
+      }
+    }
+  }
+
+  // Transfer remaining inventory to corpse (for items not handled by loot system)
   if (dead.inventory && dead.inventory.length > 0) {
     for (const itemId of [...dead.inventory]) {
+      // Skip if already in corpse (from loot generation)
+      if (corpse.inventory.includes(itemId)) {
+        continue;
+      }
+
       try {
         entityManager.move(itemId, {
           type: 'container',

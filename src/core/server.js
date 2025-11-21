@@ -17,6 +17,7 @@ const { getBanner } = require('../banner');
 const leveling = require('../systems/leveling');
 const magic = require('../systems/magic');
 const mana = require('../systems/mana');
+const loot = require('../systems/loot');
 const path = require('path');
 
 const PORT = 4000;
@@ -49,6 +50,9 @@ async function init() {
   console.log('Loading entities...');
   entityManager.loadAll();
   console.log(`Loaded ${entityManager.objects.size} entities`);
+
+  // Initialize loot system (index items by tags)
+  loot.initialize(entityManager);
 
   // Initialize XP for existing players (migration)
   console.log('Initializing player stats...');
