@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/2015/oak_park_cemetery",
+  "type": "room",
+  "definition": "room",
+  "name": "Oak Park Cemetery",
+  "description": "A 'bio-sanctuary of historical remembrance,' meticulously maintained to project an aura of serene finality. The residents here are, by carefully calibrated design, perpetually tranquil and remarkably devoid of complaints. The 'heritage markers,' weathered by the relentless, yet simulated, march of time and the occasional bio-engineered avian unit, stand as silent, data-logged testimonials to lives lived, loved, and efficiently concluded. The genetically optimized oaks, ancient and algorithmically wise, cast long, perfectly dappled shadows, providing a sense of peace that is both profound and subtly, existentially meaningless in the grand cosmic scheme of things. It's an ideal location for contemplative data-meditation, or for evading intrusive social credit scans, depending on your immediate biometric needs.",
+  "exits": {
+    "west": "hill_valley/2015/hubbard_ave5"
+  },
+  "tags": [
+    "quiet"
+  ]
+}

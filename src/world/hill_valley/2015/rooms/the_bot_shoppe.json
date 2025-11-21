@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/the_bot_shoppe",
+  "type": "room",
+  "definition": "room",
+  "name": "The Bot Shoppe",
+  "description": "A dynamic 'Personalized Synthetics Fabrication Lab,' where bespoke autonomous units are meticulously assembled and rigorously maintained. Multi-articulated robotic arms, suspended from the bio-luminescent ceiling, choreograph a perpetual ballet of precision engineering, while component schematics are projected across every available surface. A perpetually cheerful, yet subtly manic, 'customer interface bot,' its optical sensors cycling through a mesmerizing spectrum of emotive expressions, greets you, offering to design a 'bespoke companion unit,' statistically guaranteed to be your 'optimal synergistic partner,' or at least 'non-lethal within controlled parameters.' The air is thick with the hyper-real scent of ozone and the subtle, disconcerting hum of active servo-motors. It's a space where one can acquire the perfect synthetic companion, yet often departs with the profound, unsettling sensation that one's new 'best friend' is merely a single, critical software patch away from a profoundly inconvenient, and potentially homicidal, existential crisis.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st2"
+  },
+  "tags": [
+    "shop",
+    "robotics"
+  ]
+}

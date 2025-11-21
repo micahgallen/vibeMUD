@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/courthouse_mall",
+  "type": "room",
+  "name": "Courthouse Mall",
+  "description": "A dazzling, multi-tiered retail complex, where the elusive promise of 'consumer fulfillment' is always just one frictionless transaction away. The grand civic building has been repurposed into a shrine of commerce, with dynamic holographic billboards aggressively vying for your attention and gleaming chrome service-drones anticipating your every unspoken desire. The air, perpetually conditioned to optimal comfort, carries a synthetic aroma of 'Fresh Baked Goods' and the subliminal whisper of targeted marketing algorithms. It's a place designed for effortless acquisition, yet one often departs with a vague sense of having traded something intangible for a meticulously crafted illusion.",
+  "exits": {
+    "west": "hill_valley/2015/courthouse_square"
+  },
+  "items": []
+}

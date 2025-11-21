@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hubbard_ave3",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "A residential segment of Hubbard Avenue, where 'spontaneous recreational simulations' are observed, often involving pre-programmed child-bots engaging in 'street hockey.' Their algorithmically generated shouts and laughter provide a fleeting, yet precisely measured, counterpoint to the neighborhood's subtle existential hum. They momentarily pause, their optical sensors tracking your presence with a mixture of programmed curiosity and mild, simulated annoyance. Hubbard Ave continues its graceful descent, a testament to planned urban development, both northward and southward. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/hubbard_ave2",
+    "south": "hill_valley/2015/hubbard_ave4"
+  },
+  "items": []
+}

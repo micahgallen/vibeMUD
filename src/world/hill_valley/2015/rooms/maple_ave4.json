@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/maple_ave4",
+  "type": "room",
+  "name": "Maple Ave",
+  "description": "A residential segment of Maple Avenue, under the meticulously programmed surveillance of an autonomous bio-feline unit. You traverse Maple Ave. A sleek, bio-engineered cat unit, its optical sensors glowing with programmed curiosity, perches on a modular fence, its presence a subtle, yet omnipresent, reminder of pervasive monitoring. The thoroughfare continues its pre-programmed trajectory north and south, a polished synth-ribbon winding past augmented green spaces and 'legacy' architectural residences. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity, subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/maple_ave3",
+    "south": "hill_valley/2015/maple_ave5"
+  },
+  "items": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/alleyway",
+  "type": "room",
+  "definition": "room",
+  "name": "Alleyway",
+  "description": "A narrow service corridor, surprisingly clean due to automated sanitation drones, yet it somehow still exudes an aura of vague regret. Holographic ads for 'Nutri-Synth Algae Paste' flicker on the pristine brick walls, momentarily illuminating a stray, cybernetically enhanced cat that glides silently into the shadows. It’s the kind of place where even the garbage bins are self-compacting, leaving you with nothing but the lingering scent of recycled dreams.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st1"
+  },
+  "tags": [
+    "alley",
+    "urban"
+  ]
+}

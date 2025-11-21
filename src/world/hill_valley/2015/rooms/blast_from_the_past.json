@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/blast_from_the_past",
+  "type": "room",
+  "definition": "room",
+  "name": "Blast From The Past",
+  "description": "An antique store, now more of a curated historical archive, specializing in 'analog artifacts' from the late 20th century. The gleaming, transparent display cases hold items like dusty video game cartridges and faded band t-shirts, presented with an almost reverent air. A holographic recreation of a surly, flannel-clad store clerk offers historical context with a hint of condescension. The air is filtered and ionized, yet still carries the ghost of ancient plastic and forgotten dreams, a tangible reminder of a simpler, less optimized time.",
+  "exits": {
+    "northeast": "hill_valley/2015/hill_st"
+  },
+  "tags": [
+    "shop",
+    "antique"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/high_school",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley High School",
+  "description": "A gleaming, bio-luminescent learning matrix, where the youth of Hill Valley are meticulously guided through 'optimized cognitive development programs.' This institution, now known as the Hill Valley Youth Enrichment Centre, stands as a monument to algorithmic education, designed to prepare its charges for a future statistically devoid of dragons, but brimming with compliance protocols. The air, perpetually conditioned to stimulate peak neuro-activity, still carries the ghost of forgotten data-streams and the faint scent of adolescent angst, a potent cocktail of genetically pre-disposed potential and subtly enforced conformity.",
+  "exits": {
+    "south": "hill_valley/2015/football_field",
+    "north": "hill_valley/2015/river_rd3"
+  },
+  "tags": [
+    "school"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/bus_stop",
+  "type": "room",
+  "name": "Hill Valley Transit Bus Stop",
+  "description": "A gleaming, autonomous transit hub, where public transportation functions with a disconcerting, almost alien, precision. A translucent chrono-display projects the city's entire transit network, predicting arrivals with infallible temporal accuracy. A frictionless robotic arm discreetly scans your retinal payment, its multi-jointed digits surprisingly dexterous. The air, perpetually purified and oxygenated, carries the faint, harmonic hum of grav-lev modules approaching, giving the impression that Hill Valley is a perfectly synchronized machine, and you are but a single, interchangeable component.",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "items": []
+}

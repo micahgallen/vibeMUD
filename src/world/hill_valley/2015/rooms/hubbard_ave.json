@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/hubbard_ave",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "The northern nexus of Hubbard Avenue, seamlessly intersecting with Main Street's dynamic thoroughfare. You navigate Hubbard Ave, where self-optimizing transit lanes hum with civic purpose. To the north, Main Street's meticulously curated commercial facades extend, an endless ribbon of simulated prosperity. Hubbard Ave continues its graceful descent southward, dissolving into a network of residential habitat zones. Eastward, the bio-filtered aroma of perfectly roasted, ethically sourced synth-coffee emanates from the Museum Cafe, a beacon of lukewarm, yet aesthetically pleasing, caffeination. The air is a precise blend of distant grav-vehicle harmonics and the faint, algorithmically generated scent of 'suburban dreams,' subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/main_st",
+    "south": "hill_valley/2015/hubbard_ave1",
+    "east": "hill_valley/2015/museum_cafe"
+  },
+  "items": []
+}

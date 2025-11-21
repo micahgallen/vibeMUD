@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/hill_st2",
+  "type": "room",
+  "name": "Intersection of First St and Hill St",
+  "description": "The meticulously designed junction of First and Hill Streets, a quiet residential quadrant where the illusion of suburban harmony is perpetually maintained. Hill St continues its auto-piloted trajectory both north and south, a polished synth-ribbon winding through neatly augmented green spaces and a few 'heritage' domiciles preserved for aesthetic continuity. First St extends eastward, disappearing into the city's integrated transit network. To the west, the pulsing luminescence of the '7-Eleven & Texaco Automated Station' offers instant, algorithmically-determined gratification. The ambient soundscape is an artfully crafted blend of distant urban harmonics and the chirping of bio-engineered avians, meticulously obscuring any hint of inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st1",
+    "south": "hill_valley/2015/hill_st3",
+    "east": "hill_valley/2015/first_st",
+    "west": "hill_valley/2015/seven_eleven_texaco",
+    "southwest": "hill_valley/2015/the_bot_shoppe"
+  },
+  "items": []
+}

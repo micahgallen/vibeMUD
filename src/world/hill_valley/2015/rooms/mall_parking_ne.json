@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/mall_parking_ne",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (Northeast)",
+  "description": "The northeastern quadrant of the Lone Pine Mall's exterior transit zone, where the self-repairing chrono-pavement displays algorithmically generated 'micro-fractures,' a subtle, aesthetically integrated reminder of simulated entropy. Genetically modified flora, designed for optimal visual contrast, artfully protrudes through these fissures. A single, bio-luminescent light column emits a precisely calibrated, subtly flickering glow, even during peak simulated daylight hours. The distant, harmonic thrum of the Lone Pine Mall's climate control and internal grav-lift systems is the only discernible auditory input, a constant reminder of the meticulously managed environment.",
+  "exits": {
+    "southwest": "hill_valley/2015/lone_pine_mall",
+    "west": "hill_valley/2015/mall_parking_n",
+    "south": "hill_valley/2015/mall_parking_e"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/pizza_hut",
+  "type": "room",
+  "name": "Pizza Hut",
+  "description": "A gleaming, fully automated 'Pizza Replicatory Unit,' where the future of expedited nutrition is impeccably sterile, hyper-efficient, and subtly soul-crushing. A multi-articulated robotic arm precisely sculpts bio-dough behind a transparent, contaminant-free nutrient-shield, while a disembodied, algorithmically optimized voice, modulated to project optimal customer satisfaction, requests your 'nutritional preferences' in a 'calm and clear tone.' The air is thick with the synthetic scent of bio-cheese analogues and the faint, almost imperceptible, hum of countless servo-motors. It's a space where one can acquire a calorically perfect 'Pizza-Slice Simulation' in under 90 seconds, yet often departs with the profound, unsettling suspicion that the automated culinary unit is silently, yet thoroughly, data-mining and judging one's entire dietary consumption history.",
+  "exits": {
+    "south": "hill_valley/2015/main_st2"
+  },
+  "items": []
+}

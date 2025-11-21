@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/fusion_bar",
+  "type": "room",
+  "definition": "room",
+  "name": "Fusion Bar",
+  "description": "A 'molecular gastronomy' bar, where the edibles are scientifically perplexing and the elixirs are astronomically priced. The interior design, a bewildering pastiche of 'post-industrial bio-minimalism' and 'reclaimed artisanal rusticity,' features exposed conduit arteries and luminescent algae-panels. A bio-engineered mixologist, sporting a perfectly replicated, yet utterly anachronistic, handlebar mustache, crafts bespoke libations with a dazzling array of synthetic essences. The air, perpetually ionized, carries the subtle tang of liquid nitrogen and the subliminal thrum of quantum chilling units. It’s a venue where one might acquire a deconstructed, aerogel-infused Caesar salad and a cocktail that evokes the precise chemical signature of existential ennui, all for a sum equivalent to a month's data stipend.",
+  "exits": {
+    "north": "hill_valley/2015/first_st"
+  },
+  "tags": [
+    "bar",
+    "urban"
+  ]
+}

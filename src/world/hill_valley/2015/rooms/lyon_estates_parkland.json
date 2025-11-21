@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/lyon_estates_parkland",
+  "type": "room",
+  "definition": "room",
+  "name": "Lyon Estates Parkland",
+  "description": "A sprawling 'eco-recreational zone' where a suburban habitation cluster once stood. The modular housing units have been efficiently recycled, replaced by a pristine, bio-engineered green space and a serene, hydro-filtered, man-made lake. The only preserved 'heritage artifacts' are a pair of gleaming white lion statues, their nano-paint perpetually refreshed, standing sentinel at the automated entrance. The air is thick with the bio-filtered scent of genetically optimized grass and the faint, almost imperceptible, hum of the climate-control system that maintains a state of perpetual, idealized spring. It's a place of meticulously crafted tranquility, yet one often experiences the subtle, unsettling sensation of traversing the data-ghosts of a thousand efficiently processed memories.",
+  "exits": {
+    "south": "hill_valley/2015/lyon_drive"
+  },
+  "tags": [
+    "park",
+    "outdoors"
+  ]
+}

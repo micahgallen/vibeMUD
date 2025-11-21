@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/main_st2",
+  "type": "room",
+  "name": "Main St",
+      "description": "A bustling central thoroughfare of Main Street, presenting a carefully curated blend of 'lifestyle enhancement' providers and 'wellness optimization' centers. You navigate Main St, a dynamic ribbon extending east and west, flanked by sleek, transparent storefronts. Prominently featured are the gleaming, fully automated 'Pizza Hut,' the bio-luminescent glow of 'Mr. Perfect's Genetic Enhancement Clinic,' and the meticulously recreated 'True Blues' nostalgia emporium. Interspersed are atmospheric projections of 'thriving independent businesses,' subtly masking the calculated centralization of commerce within the hyper-efficient 'Courthouse Mall' further south, a gleaming testament to algorithmic urban planning and managed consumer flow.",
+  "exits": {
+    "east": "hill_valley/2015/main_st1",
+    "west": "hill_valley/2015/main_st3",
+    "south": "hill_valley/2015/courthouse_square",
+    "northeast": "hill_valley/2015/mr_perfect",
+    "north": "hill_valley/2015/pizza_hut",
+    "northwest": "hill_valley/2015/true_blues"
+  },
+  "items": []
+}

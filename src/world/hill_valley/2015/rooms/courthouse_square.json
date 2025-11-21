@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/2015/courthouse_square",
+  "type": "room",
+  "name": "Courthouse Square",
+  "description": "A meticulously engineered 'eco-recreational zone' replacing the archaic 'parking lot,' now a sprawling, bio-filtered pond and immaculately manicured green space. The hydro-aerated water shimmers with an impossible sapphire luminescence, while the genetically optimized grass displays a vibrant, almost aggressive, verdancy. Families, perfectly composed, engage in 'leisure-programmed' picnics, their laughter echoing with pre-approved joy in the atmospherically controlled air. A holographic swan, flawlessly rendered, performs perpetual, graceful circuits across the pond, an unnervingly perfect symbol of manufactured serenity. It’s a place of breathtaking, if slightly unsettling, beauty, where every blade of grass and ripple of water is a testament to meticulous design.",
+  "exits": {
+    "north": "hill_valley/2015/main_st2",
+    "west": "hill_valley/2015/hill_st",
+    "south": "hill_valley/2015/first_st",
+    "east": "hill_valley/2015/courthouse_mall"
+  },
+  "items": []
+}

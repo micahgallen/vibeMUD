@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/surrogate_parenting_center",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Surrogate Parenting Center",
+  "description": "A gleaming, bio-luminescent 'Progenitor Optimization & Nurturing Nexus,' where the future of familial units is meticulously synthesized. Rows of hyper-advanced gestational pods line the sterile, atmospherically controlled walls, each containing a developing bio-form, its vital signs displayed on a softly pulsating neural-monitor. A perpetually serene, multi-articulated 'care-bot' glides silently between the pods, its precision manipulators making infinitesimal, algorithmic adjustments to the nascent life. The air is thick with the hyper-real scent of synthesized amniotic fluid and the subtle, disconcerting hum of the atmospheric regulators. It's a space where one can acquire the 'Perfect Offspring,' genetically tailored to precise specifications, yet often departs with the profound, unsettling sensation of having outsourced the very essence of procreation to a flawlessly executed, yet subtly soul-crushing, logistical matrix.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st3"
+  },
+  "tags": [
+    "service",
+    "medical"
+  ]
+}

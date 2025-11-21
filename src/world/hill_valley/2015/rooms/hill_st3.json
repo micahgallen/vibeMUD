@@ -1,0 +1,13 @@
+{
+  "id": "hill_valley/2015/hill_st3",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A 'tranquility-zoned' segment of Hill Street, offering a brief, algorithmically-generated respite from the hyper-efficient bustle of the commercial districts. You traverse Hill St, where atmospheric processors maintain an optimal quietude. The thoroughfare extends north and south, a gleaming synth-ribbon winding through augmented botanical displays and a few 'legacy' architectural residences. To the east, the dazzling, multi-sensory marquee of the Holomax Theater pulsates with promises of immersive escapism. The air is still, save for the distant, harmonious thrum of city services and the chirping of bio-engineered avians, meticulously designed to evoke a sense of nostalgic serenity.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st2",
+    "south": "hill_valley/2015/hill_st4",
+    "east": "hill_valley/2015/holomax_theater",
+    "west": "hill_valley/2015/surrogate_parenting_center"
+  },
+  "items": []
+}

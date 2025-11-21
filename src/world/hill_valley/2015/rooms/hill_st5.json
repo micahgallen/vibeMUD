@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/hill_st5",
+  "type": "room",
+  "name": "Hill St",
+  "description": "A 'heritage preservation' sector of Hill Street, showcasing meticulously maintained original 20th-century residences. You traverse Hill St, where these older structures, with their perfectly tended bio-gardens, seem to exert a subtle, almost defiant, resistance against the relentless march of algorithmic urban planning. The thoroughfare continues its pre-programmed trajectory north and south, a polished synth-ribbon winding past these curated examples of 'decades past' living. The air, perpetually filtered, carries the faint, nostalgic scent of simulated petrichor and the distant hum of civic maintenance drones, subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st4",
+    "south": "hill_valley/2015/hill_st6",
+    "west": "hill_valley/2015/library"
+  },
+  "items": []
+}

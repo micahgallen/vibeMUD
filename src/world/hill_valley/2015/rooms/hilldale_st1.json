@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hilldale_st1",
+  "type": "room",
+  "name": "Hilldale Street",
+  "description": "A perpetually shadowed thoroughfare, slicing through the blighted heart of Hilldale. The once-aspirational domiciles are now structural echoes, their facades obscured by bio-luminescent graffiti and makeshift armor plating. The meticulously curated bio-lawns are aggressively reclaimed by self-replicating, genetically modified weeds, while the skeletal remains of grav-cars, stripped of their power cores, litter the driveways. The pervasive silence is punctuated only by the distant, melancholic wail of a security drone and the unseen scuttling of bio-engineered vermin. It’s a place where personal security protocols are perpetually active, and hope is a low-frequency hum on a dying power grid. To the west, the decayed arterial of Hilldale Street offers ingress, and to the east, merely more of the same, but potentially worse.",
+  "exits": {
+    "west": "hill_valley/2015/hilldale_entrance",
+    "east": "hill_valley/2015/hilldale_st2"
+  },
+  "items": []
+}

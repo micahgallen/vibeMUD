@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/main_st",
+  "type": "room",
+  "name": "Intersection of Main St and Hubbard Ave",
+  "description": "The meticulously managed nexus of Main Street and Hubbard Avenue, where algorithmic traffic flow orchestrates a seamless, yet subtly disorienting, collision of optimized past and present. You are positioned at the intersection of Main St and Hubbard Ave. Main St extends westward, a dynamic ribbon of synchronized commercial holograms. Hubbard Ave stretches southward, dissolving into the precisely segmented residential zones. The iconic clock tower, now a shimmering bio-luminescent data-monument, its chrono-projection perpetually fixed at 10:04, stands as a silent testament to a statistically significant temporal event. To the east, the gleaming edifice of the Hill Valley Museum of Art stands as a beacon of carefully curated cultural evolution.",
+  "exits": {
+    "west": "hill_valley/2015/main_st1",
+    "south": "hill_valley/2015/hubbard_ave",
+    "east": "hill_valley/2015/museum_of_art"
+  },
+  "items": []
+}

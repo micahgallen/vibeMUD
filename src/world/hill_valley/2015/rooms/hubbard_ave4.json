@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hubbard_ave4",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "A 'heritage preservation' sector of Hubbard Avenue, showcasing meticulously maintained, original 20th-century residential units. You traverse Hubbard Ave, where these older structures, with their self-repairing synth-paint and bio-sculpted gardens, represent a curated blend of historical authenticity and optimized efficiency. Hubbard Ave continues its graceful descent, a testament to planned urban development, both northward and southward. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/hubbard_ave3",
+    "south": "hill_valley/2015/hubbard_ave5"
+  },
+  "items": []
+}

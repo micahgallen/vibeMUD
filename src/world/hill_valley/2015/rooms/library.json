@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/library",
+  "type": "room",
+  "definition": "room",
+  "name": "Hill Valley Library",
+  "description": "A gleaming, bio-luminescent data-repository, masquerading as a 'library,' a tranquil edifice housing the entirety of human knowledge, meticulously curated and occasionally redacted. The Hill Valley Data-Archive is a silent monolith, much like a sleeping dragon of pure information, capable of unleashing torrents of perfectly optimized facts, figures, and surprisingly detailed historical simulations of local bio-agriculture. It stores not just 'books,' but the aggregated wisdom, folly, and strategically misfiled data-fragments of countless generations. The atmospherically controlled air is permeated with the synthesized scent of antique paper and the subtle, metallic tang of pure information. Each data-crystal is a universe, each server rack a galaxy, and the librarian-AI, a silently omnipresent and omnisciscient digital entity, perpetually analyzes your late fees in real-time.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st5",
+    "west": "hill_valley/2015/jfk_dr5"
+  },
+  "tags": [
+    "building",
+    "research"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/seven_eleven_texaco",
+  "type": "room",
+  "definition": "room",
+  "name": "7-Eleven / Texaco Automated Station",
+  "description": "A 'Multi-Tiered Automated Service Nexus,' efficiently blending a retail and a transit-fueling experience. The ground level houses a '7-Eleven Automated Dispensing Unit,' offering bio-stabilized 'Slurp-Synth Refreshments,' nutrient-dense 'Protein Sticks,' and 'Algorithmically-Generated Chance Modules,' all presented by a perpetually cheerful, yet subtly glitching, service bot. The upper level is a fully automated 'Texaco Havoline Grav-Fueling Station,' where multi-articulated robotic arms efficiently replenish your grav-vehicle with hyper-optimized energy cells. The air is a peculiar blend of hyper-synthetic fruit concentrate and refined plasma fuel. It's a space where one can acquire all 'essential' transit and nutritional needs, yet often departs with the subtle, unsettling sensation of being a mere data-point in a flawlessly executed, yet profoundly impersonal, logistical matrix.",
+  "exits": {
+    "east": "hill_valley/2015/hill_st2"
+  },
+  "tags": [
+    "service",
+    "food"
+  ]
+}

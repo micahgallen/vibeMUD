@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/true_blues",
+  "type": "room",
+  "name": "True Blues",
+  "description": "A 'curated nostalgia experience' for the algorithmically disaffected. 'True Blues' specializes in high-fidelity, bio-replicated 'vintage' audio recordings and meticulously restored 'cultural artifacts' from a pre-fusion era, a time when 'authenticity' was a verifiable data-point. A perpetually weeping holographic simulation of a blues vocalist, her performance meticulously licensed and eternally looping, projects a profound, yet commercially optimized, emotional resonance. The air is thick with the synthetic scent of aged cellulose and the subtle, disconcerting hum of the psycho-acoustic projectors. It's a space where one can acquire a perfectly preserved fragment of 'the past,' a fleeting moment of 'true' simulated emotion, before re-engaging with the hyper-real, perpetually optimized, and subtly soul-crushing present.",
+  "exits": {
+    "south": "hill_valley/2015/main_st2"
+  },
+  "items": []
+}

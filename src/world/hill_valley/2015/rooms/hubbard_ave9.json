@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hubbard_ave9",
+  "type": "room",
+  "name": "Hubbard Ave",
+  "description": "The abrupt, pre-calculated terminus of Hubbard Avenue, where the seamlessly integrated chrono-pavement yields to a bio-fertile, though aesthetically unappealing, agricultural processing zone. The thoroughfare concludes here, not with a dramatic vista, but with a vast, aerated compost heap, a pungent reminder of Hill Valley's carefully managed eco-cycle. To the west, the still-functional, though aesthetically archaic, Lyon Drive offers transit towards the meticulously manicured Lyon Estates Parkland. Hubbard Avenue continues its algorithmically defined trajectory northward, a polished synth-ribbon winding past augmented green spaces and 'legacy' architectural residences. The atmospherically controlled air is thick with the bio-filtered scent of processed nutrients, a stark contrast to the aspirational purity of the urban core.",
+  "exits": {
+    "north": "hill_valley/2015/hubbard_ave8",
+    "west": "hill_valley/2015/lyon_drive"
+  },
+  "items": []
+}

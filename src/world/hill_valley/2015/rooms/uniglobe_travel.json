@@ -1,0 +1,10 @@
+{
+  "id": "hill_valley/2015/uniglobe_travel",
+  "type": "room",
+  "name": "Uniglobe Travel",
+  "description": "A gleaming, bio-luminescent 'Chronospatial Travel Consultancy,' offering meticulously curated 'temporal displacement packages' to any desired epoch or exoplanetary destination. A shimmering holographic chrono-globe, perpetually recalibrating, projects a dizzying array of potential itineraries, from the 'Marsian Riviera' to the 'Floating Cities of Venus.' A perpetually cheerful, multi-articulated 'consultant-bot' glides over, its optical sensors programmed for optimal client engagement, offering a dynamically generated brochure for a 'pre-historic photo-safari' or a 'relaxing long weekend in a bio-engineered Cretaceous ecosystem.' The air is thick with the hyper-real scent of ozone and the subtle, disconcerting hum of the localized temporal displacement field generator. It's a space where one can meticulously plan the 'vacation of a lifetime,' provided one's liability waiver has been digitally signed, absolving the corporation of all responsibility for 'causal paradoxes,' 'dino-faunal-related trauma,' or 'unforeseen existential erasure.'",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "items": []
+}

@@ -1,0 +1,12 @@
+{
+  "id": "hill_valley/2015/main_st5",
+  "type": "room",
+  "name": "Intersection of Main St and John F. Kennedy Dr",
+  "description": "The meticulously managed junction of Main Street and the John F. Kennedy Skyway, a dynamic nexus where hyper-efficient civic flow reigns supreme. You are positioned at the intersection of Main St and John F. Kennedy Dr. Main St continues its seamless trajectory both east and west, a polished ribbon of auto-piloted transit. John F. Kennedy Dr extends southward, dissolving into carefully segmented residential zones. The air is a precisely filtered blend of simulated 'urban vitality' and the faint, algorithmically generated scent of 'optimized transit flow,' subtly masking any inconvenient realities of decay.",
+  "exits": {
+    "east": "hill_valley/2015/main_st4",
+    "west": "hill_valley/2015/main_st6",
+    "south": "hill_valley/2015/jfk_dr"
+  },
+  "items": []
+}

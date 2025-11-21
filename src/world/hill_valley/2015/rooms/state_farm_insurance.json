@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/state_farm_insurance",
+  "type": "room",
+  "definition": "room",
+  "name": "State Farm Insurance",
+  "description": "A gleaming, bio-luminescent 'Risk Mitigation & Actuarial Optimization Centre,' promising comprehensive data-coverage for all eventualities, from grav-vehicle malfunctions to unexpected temporal divergences. A perpetually serene holographic agent shimmers behind a minimalist, self-cleaning console, its smile never faltering as it articulates the nuanced benefits of 'catastrophic de-aging' or 'identity fragmentation' insurance. The air is diffused with a precisely calibrated, calming lavender pheromone, a subtle, yet ultimately futile, attempt to mask the pervasive, underlying algorithmic anxiety of a world where futures are simultaneously brighter and infinitely more statistically complex. It's a space where one can attempt to insure one's destiny, provided one's credit-score allocation aligns with the meticulously calculated monthly premium.",
+  "exits": {
+    "north": "hill_valley/2015/first_st1"
+  },
+  "tags": [
+    "service",
+    "insurance"
+  ]
+}

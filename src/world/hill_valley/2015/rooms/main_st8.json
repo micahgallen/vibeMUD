@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/main_st8",
+  "type": "room",
+  "name": "Main St",
+  "description": "Main Street, approaching the western boundary of the meticulously re-designed civic plaza, a zone of carefully managed historical simulation. You traverse Main St, a seamless ribbon extending east and west, its surface optimized for both grav-vehicle and pedestrian flow. The air is a precisely filtered blend of simulated 'urban vitality' and the faint, algorithmically generated aroma of 'civic efficiency.' The 'heritage facades' here, strategically maintained to appear quaintly unoccupied, project a simulated narrative of past entrepreneurial endeavors, subtly contrasting with the hyper-efficient 'Courthouse Mall' that now services the majority of consumer needs.",
+  "exits": {
+    "east": "hill_valley/2015/main_st7",
+    "west": "hill_valley/2015/main_st9"
+  },
+  "items": []
+}

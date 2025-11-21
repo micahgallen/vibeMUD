@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/brown_mansion",
+  "type": "room",
+  "definition": "room",
+  "name": "Brown Mansion Site",
+  "description": "Nature's insistent reclamation of a once-grand estate, now a 'rewilding project' managed by autonomous drones. This site is less a lot, more a testament to ecological self-correction, featuring bio-engineered weeds and self-pruning trees where a mansion once dared to exist. Local legends, propagated via whispered neural-nets, speak of its fiery demise linked to dubious insurance claims and a temporal anomaly surge. Persistent rumors suggest faint echoes of a man exclaiming 'Great Scott!' can still be detected by quantum sensors, usually after a few synthetic sips at the Fusion Bar.",
+  "exits": {
+    "east": "hill_valley/2015/jfk_dr7"
+  },
+  "tags": [
+    "ruins",
+    "story_event"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/hill_st",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The meticulously maintained northern stretch of Hill Street, seamlessly interfacing with Main Street's primary traffic flow. You glide along Hill St, where self-navigating transit pods hum silently. To the north, Main Street's pulsating commercial core beckons with its meticulously curated historical facades, while Hill St itself descends gracefully southward into residential zones. Eastward, the serene, bio-engineered expanse of Courthouse Square unfolds, a testament to urban renewal, or perhaps, architectural overcompensation. The air is a filtered blend of distant sonic traffic and the faint, unsettlingly sweet aroma of manufactured nostalgia.",
+  "exits": {
+    "north": "hill_valley/2015/main_st3",
+    "south": "hill_valley/2015/hill_st1",
+    "east": "hill_valley/2015/courthouse_square",
+    "west": "hill_valley/2015/cafe_80s",
+    "southwest": "hill_valley/2015/blast_from_the_past"
+  },
+  "items": []
+}

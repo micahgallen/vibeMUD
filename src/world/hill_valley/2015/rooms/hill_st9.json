@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/hill_st9",
+  "type": "room",
+  "name": "Hill St",
+  "description": "The precise, pre-calculated terminus of Hill Street, where the seamlessly integrated chrono-pavement gracefully yields to the still-functional, though aesthetically archaic, Lyon Drive. The thoroughfare concludes here, not with a dramatic flourish, but with a data-log entry, a subtle topological transition into a residential zone that has undergone iterative, yet ultimately conservative, upgrades. Hill Street continues its algorithmically defined trajectory northward, a polished synth-ribbon winding past augmented green spaces and a few 'legacy' architectural residences. The atmospherically controlled air is still, save for the distant, harmonious thrum of civic utilities and the chirping of bio-engineered avians, subtly masking any inconvenient realities of decay.",
+  "exits": {
+    "north": "hill_valley/2015/hill_st8",
+    "east": "hill_valley/2015/lyon_drive"
+  },
+  "items": []
+}

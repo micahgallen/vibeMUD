@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/bottoms_up",
+  "type": "room",
+  "definition": "room",
+  "name": "Bottoms Up",
+  "description": "A chic and unnervingly sterile 'aesthetic enhancement' clinic, where self-optimization is merely a credit-chip transaction away. A shimmering holographic receptionist, whose smile never quite reaches its hyper-realistic eyes, presents personalized brochures for bio-sculpting and chromosomal tuning. Prominent display screens cycle through 'Before & After' simulations, highlighting their popular 'Super Inflatable TIT' and 'Headlight TIT' models, currently on a 'two-for-one' quantum entanglement special. The air hums with the soft thrum of dermal regenerators and the faint, unsettlingly sweet scent of synthesized collagen.",
+  "exits": {
+    "south": "hill_valley/2015/main_st3"
+  },
+  "tags": [
+    "service",
+    "shop"
+  ]
+}

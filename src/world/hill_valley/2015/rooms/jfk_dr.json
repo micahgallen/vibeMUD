@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/jfk_dr",
+  "type": "room",
+  "name": "John F. Kennedy Dr",
+  "description": "The northern access point of the John F. Kennedy Skyway, seamlessly interfacing with Main Street's dynamic thoroughfare. You ascend onto John F. Kennedy Dr, where grav-vehicles hum with civic purpose. To the north, Main Street's meticulously curated commercial facades extend, an endless ribbon of simulated prosperity. John F. Kennedy Dr continues its graceful descent southward, dissolving into a network of residential habitat zones. The air is a precise blend of distant grav-vehicle harmonics and the faint, algorithmically generated scent of 'suburban dreams,' subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/main_st5",
+    "south": "hill_valley/2015/jfk_dr1"
+  },
+  "items": []
+}

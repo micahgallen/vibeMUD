@@ -1,0 +1,15 @@
+{
+  "id": "hill_valley/2015/main_st3",
+  "type": "room",
+  "name": "Intersection of Main St and Hill St",
+      "description": "The meticulously designed junction of Main Street and Hill Street, a dynamic nexus where hyper-efficient civic flow meets optimized personal services. You are positioned at the intersection of Main St and Hill St. Main St continues its seamless trajectory both east and west, a polished ribbon of auto-piloted transit. Hill St extends southward, dissolving into carefully segmented residential zones. A bio-luminescent street-lamp, its glow perfectly calibrated for optimal visibility, casts a comforting aura on the polished ferrocrete, a subtle psychological anchor in the ceaseless urban rhythm. Prominently featured are the gleaming facade of 'Uniglobe Travel,' promising instant temporal displacement, and the precisely synchronized 'Hill Valley Transit Bus Stop.' Interspersed are atmospheric projections of 'thriving independent businesses,' subtly masking the calculated centralization of commerce. The entire scene hums with an almost imperceptible, yet omnipresent, undercurrent of algorithmic control.",
+  "exits": {
+    "east": "hill_valley/2015/main_st2",
+    "west": "hill_valley/2015/main_st4",
+    "south": "hill_valley/2015/hill_st",
+    "north": "hill_valley/2015/uniglobe_travel",
+    "northwest": "hill_valley/2015/bus_stop",
+    "northeast": "hill_valley/2015/bottoms_up"
+  },
+  "items": []
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hill_valley/2015/main_st1",
+  "type": "room",
+  "name": "Main St",
+      "description": "A meticulously preserved 'heritage' segment of Main Street, its ferrocrete surface displaying algorithmically generated 'patina' to evoke a sense of bygone eras. You traverse Main St, a seamless ribbon extending east and west, its surface optimized for both grav-vehicle and pedestrian flow. Scattered across this stretch are gleaming new 'retail experiences' alongside strategically preserved 'heritage facades,' their transparent displays showcasing simulated historical commerce. Prominently featured are the pulsating holo-sign of 'Pontiac Sales & Hover Conversions,' the bio-luminescent entrance to 'Hyatas,' and the multi-sensory 'Hill Valley Gifts / Hydroponic Gardner' nexus. Interspersed are atmospheric projections of 'vintage' storefronts, subtly hinting at the orchestrated decline of localized retail in favor of the hyper-efficient 'Courthouse Mall' further afield.",
+  "exits": {
+    "east": "hill_valley/2015/main_st",
+    "west": "hill_valley/2015/main_st2",
+    "northeast": "hill_valley/2015/pontiac_hover_conversions",
+    "north": "hill_valley/2015/hyatas",
+    "northwest": "hill_valley/2015/gifts_and_gardner"
+  },
+  "items": []
+}

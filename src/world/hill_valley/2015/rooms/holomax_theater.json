@@ -1,0 +1,11 @@
+{
+  "id": "hill_valley/2015/holomax_theater",
+  "type": "room",
+  "name": "Holomax Theater",
+  "description": "A dazzling, multi-sensory Holomax Theater, where cinematic narratives are not merely consumed, but dynamically interwoven with your neural pathways. A colossal, hyper-realistic holographic leviathan breaches from the marquee, its bio-luminescent teeth glistening with a pre-programmed menace, perpetually advertising the 'immersive experience' of 'Jaws 19.' Inside, the atmospherically controlled air carries the synthesized scent of 'artisanal synth-popcorn' and the subtle, almost subliminal, thrum of the neural-interfacing projectors. It's a sanctuary where one can fully actualize the cinematic narrative, blurring the lines between fabricated reality and implanted memory. The distinction between 'real' and 'simulation' has become a delightfully ambiguous marketing strategy.",
+  "exits": {
+    "north": "hill_valley/2015/first_st",
+    "west": "hill_valley/2015/hill_st3"
+  },
+  "items": []
+}

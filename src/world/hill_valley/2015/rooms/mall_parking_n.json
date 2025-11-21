@@ -1,0 +1,16 @@
+{
+  "id": "hill_valley/2015/mall_parking_n",
+  "type": "room",
+  "definition": "room",
+  "name": "Mall Parking Lot (North)",
+  "description": "The northern expanse of the Lone Pine Mall's exterior transit zone, a seamless expanse of self-repairing chrono-pavement beneath the indifferent, yet atmospherically controlled, sky. Faded bio-luminescent demarcation lines indicate designated parking zones for grav-vehicles, many of which display minor, aesthetically integrated 'wear patterns.' A few autonomously navigating 'retail retrieval units' (colloquially known as shopping carts) sit in programmed obsolescence, silent monuments to temporarily forgotten consumer directives. The air is precisely filtered, carrying the synthetic scent of ozone and the faint, algorithmically generated aroma of 'commercial prosperity,' subtly masking any inconvenient realities.",
+  "exits": {
+    "north": "hill_valley/2015/jfk_dr9",
+    "south": "hill_valley/2015/lone_pine_mall",
+    "east": "hill_valley/2015/mall_parking_ne",
+    "west": "hill_valley/2015/mall_parking_nw"
+  },
+  "tags": [
+    "outdoor"
+  ]
+}
