@@ -265,6 +265,30 @@ module.exports = {
       });
     }
 
+    // Check other players in room
+    if (!target) {
+      target = Array.from(entityManager.objects.values()).find(obj => {
+        if (obj.type !== 'player' || obj.currentRoom !== player.currentRoom || obj.id === player.id) {
+          return false;
+        }
+
+        // Only find players with active sessions
+        if (!entityManager.sessions.has(obj.id)) {
+          return false;
+        }
+
+        // Check name (both display name and username)
+        const displayName = (obj.title ? `${obj.title} ${obj.name}` : obj.name).toLowerCase();
+        const username = obj.username ? obj.username.toLowerCase() : obj.name.toLowerCase();
+
+        if (displayName.includes(targetName) || username.includes(targetName)) {
+          return true;
+        }
+
+        return false;
+      });
+    }
+
     if (!target) {
       session.sendLine('You don\'t see that here.');
       return;
@@ -275,6 +299,10 @@ module.exports = {
     // Display name with appropriate color based on type
     if (target.type === 'npc') {
       session.sendLine(colors.npcName(target.name));
+    } else if (target.type === 'player') {
+      const { getDisplayName } = require('../utils/playerDisplay');
+      const displayName = getDisplayName(target);
+      session.sendLine(colors.playerName(displayName));
     } else if (target.type === 'item') {
       session.sendLine(colors.objectName(target.name));
     } else if (target.type === 'container') {
@@ -336,6 +364,22 @@ module.exports = {
         if (hpPercent < 30) hpColor = colors.error;
         else if (hpPercent < 60) hpColor = colors.warning;
         session.sendLine(hpColor(`Health: ${target.hp}/${target.maxHp}`));
+      }
+    }
+
+    if (target.type === 'player') {
+      if (target.level !== undefined) {
+        session.sendLine(colors.info(`Level: ${target.level}`));
+      }
+      if (target.hp !== undefined && target.maxHp !== undefined) {
+        const hpPercent = Math.round((target.hp / target.maxHp) * 100);
+        let hpColor = colors.success;
+        if (hpPercent < 30) hpColor = colors.error;
+        else if (hpPercent < 60) hpColor = colors.warning;
+        session.sendLine(hpColor(`Health: ${target.hp}/${target.maxHp}`));
+      }
+      if (target.isGhost) {
+        session.sendLine(colors.dim('(This player is a ghost)'));
       }
     }
 
