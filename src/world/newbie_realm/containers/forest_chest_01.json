@@ -11,8 +11,8 @@
   "isOpen": false,
   "isLocked": false,
   "inventory": [
-    "apple_001",
-    "potion_001"
+    "apple_chest_01",
+    "potion_chest_01"
   ],
   "capacity": 15,
   "createdAt": "2025-11-21T00:00:00Z",

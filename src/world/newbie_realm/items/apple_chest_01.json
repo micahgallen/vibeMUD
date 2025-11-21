@@ -1,0 +1,24 @@
+{
+  "id": "apple_chest_01",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Red Apple",
+  "description": "A crisp red apple, perfect for a quick snack.",
+  "value": 3,
+  "weight": 0.2,
+  "healAmount": 5,
+  "location": {
+    "type": "container",
+    "owner": "forest_chest_01"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "trash",
+    "categories": ["consumable", "food"],
+    "dropWeight": 60,
+    "presetDropChance": 0.6
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

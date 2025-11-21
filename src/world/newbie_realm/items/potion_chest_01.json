@@ -1,0 +1,24 @@
+{
+  "id": "potion_chest_01",
+  "type": "item",
+  "definition": "consumable",
+  "name": "Health Potion",
+  "description": "A small vial of red liquid that restores health when consumed.",
+  "value": 50,
+  "weight": 0.5,
+  "healAmount": 25,
+  "location": {
+    "type": "container",
+    "owner": "forest_chest_01"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "good",
+    "categories": ["consumable", "potion", "healing"],
+    "dropWeight": 45,
+    "presetDropChance": 0.5
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}

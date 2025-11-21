@@ -11,8 +11,8 @@
   "isOpen": false,
   "isLocked": false,
   "inventory": [
-    "leather_armor_001",
-    "wooden_shield_001"
+    "leather_armor_chest_03",
+    "wooden_shield_chest_03"
   ],
   "capacity": 20,
   "createdAt": "2025-11-21T00:00:00Z",

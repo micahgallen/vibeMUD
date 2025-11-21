@@ -1,0 +1,28 @@
+{
+  "id": "wooden_shield_chest_03",
+  "type": "item",
+  "definition": "armor",
+  "name": "Wooden Shield",
+  "description": "A simple wooden shield reinforced with iron bands.",
+  "value": 10,
+  "weight": 6,
+  "armorType": "shield",
+  "baseAC": 2,
+  "slot": "shield",
+  "durability": 50,
+  "maxDurability": 50,
+  "location": {
+    "type": "container",
+    "owner": "forest_chest_03"
+  },
+  "lootTags": {
+    "domain": "newbie_realm",
+    "subdomain": "general",
+    "tier": "poor",
+    "categories": ["armor", "shield"],
+    "dropWeight": 35,
+    "presetDropChance": 0.3
+  },
+  "createdAt": "2025-11-21T00:00:00Z",
+  "modifiedAt": "2025-11-21T00:00:00Z"
+}
