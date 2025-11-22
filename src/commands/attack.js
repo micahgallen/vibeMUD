@@ -4,6 +4,7 @@
  */
 
 const combat = require('../systems/combat');
+const display = require('../utils/display');
 
 module.exports = {
   id: "attack",
@@ -76,8 +77,9 @@ module.exports = {
         entityManager.sessions.has(obj.id)
       );
 
+      // Use display.matchesName for color-aware player matching
       for (const otherPlayer of playersInRoom) {
-        if (otherPlayer.name.toLowerCase().includes(targetName)) {
+        if (display.matchesName(targetName, otherPlayer)) {
           target = otherPlayer;
           break;
         }
@@ -92,13 +94,15 @@ module.exports = {
 
     // Check if target is already in combat
     if (target.combat) {
-      session.sendLine(colors.error(`${target.name} is already in combat!`));
+      const targetName = target.type === 'player' ? display.getDisplayName(target) : target.name;
+      session.sendLine(colors.error(`${targetName} is already in combat!`));
       return;
     }
 
     // Check if target is dead
     if (target.isDead) {
-      session.sendLine(colors.error(`${target.name} is already dead!`));
+      const targetName = target.type === 'player' ? display.getDisplayName(target) : target.name;
+      session.sendLine(colors.error(`${targetName} is already dead!`));
       return;
     }
 
