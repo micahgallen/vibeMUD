@@ -117,8 +117,15 @@ const Command = {
       const isTemplate = colorOrTemplate.includes('<') && colorOrTemplate.includes('>');
 
       if (isTemplate) {
+        // Safety: Ensure template ends with </> to prevent color bleeding
+        let template = colorOrTemplate;
+        if (!template.endsWith('</>')) {
+          template = template + '</>';
+          session.sendLine(colors.warning(`Auto-added </> to prevent color bleeding`));
+        }
+
         // Validate template by extracting plain text
-        const plainText = colors.stripColors(colors.parseColorTags(colorOrTemplate));
+        const plainText = colors.stripColors(colors.parseColorTags(template));
 
         // Check if plain text matches the word
         if (plainText.toLowerCase() !== word.toLowerCase()) {
@@ -128,7 +135,7 @@ const Command = {
         }
 
         // Add as word template
-        colorization.addWordTemplate(word, colorOrTemplate);
+        colorization.addWordTemplate(word, template);
 
         // Save templates
         try {
