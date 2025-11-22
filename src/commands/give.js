@@ -4,6 +4,7 @@
  */
 
 const Currency = require('../systems/currency');
+const display = require('../utils/display');
 
 module.exports = {
   id: 'give',
@@ -57,7 +58,8 @@ module.exports = {
 
     // Check if in same room
     if (targetPlayer.currentRoom !== player.currentRoom) {
-      session.sendLine(`${targetPlayer.name} is not in this room.`);
+      const targetDisplayName = display.getDisplayName(targetPlayer);
+      session.sendLine(`${targetDisplayName} is not in this room.`);
       return;
     }
 
@@ -103,15 +105,19 @@ module.exports = {
       player.removeCoins(coinsToGive, entityManager);
       targetPlayer.addCoins(coinsToGive, entityManager);
 
+      // Get display names
+      const playerDisplayName = display.getDisplayName(player);
+      const targetDisplayName = display.getDisplayName(targetPlayer);
+
       // Notify both players
-      session.sendLine(colors.success(`You give ${Currency.format(coinsToGive)} to ${targetPlayer.name}.`));
+      session.sendLine(colors.success(`You give ${Currency.format(coinsToGive)} to ${targetDisplayName}.`));
 
       const targetSession = Array.from(entityManager.sessions.values()).find(s =>
         s.state === 'playing' && s.player && s.player.id === targetPlayer.id
       );
 
       if (targetSession) {
-        targetSession.sendLine(colors.success(`${player.name} gives you ${Currency.format(coinsToGive)}.`));
+        targetSession.sendLine(colors.success(`${playerDisplayName} gives you ${Currency.format(coinsToGive)}.`));
       }
 
       // Notify room (excluding the two players involved)
@@ -124,7 +130,7 @@ module.exports = {
 
       for (const otherPlayer of playersInRoom) {
         entityManager.notifyPlayer(otherPlayer.id,
-          colors.dim(`${player.name} gives some coins to ${targetPlayer.name}.`)
+          colors.dim(`${playerDisplayName} gives some coins to ${targetDisplayName}.`)
         );
       }
 
@@ -159,20 +165,24 @@ module.exports = {
         owner: targetPlayer.id
       });
 
+      // Get display names
+      const playerDisplayName = display.getDisplayName(player);
+      const targetDisplayName = display.getDisplayName(targetPlayer);
+
       // Notify both players
-      session.sendLine(colors.success(`You give ${item.name} to ${targetPlayer.name}.`));
+      session.sendLine(colors.success(`You give ${item.name} to ${targetDisplayName}.`));
 
       const targetSession = Array.from(entityManager.sessions.values()).find(s =>
         s.state === 'playing' && s.player && s.player.id === targetPlayer.id
       );
 
       if (targetSession) {
-        targetSession.sendLine(colors.success(`${player.name} gives you ${item.name}.`));
+        targetSession.sendLine(colors.success(`${playerDisplayName} gives you ${item.name}.`));
       }
 
       // Notify room (excluding the two players involved)
       entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${player.name} gives something to ${targetPlayer.name}.`),
+        colors.dim(`${playerDisplayName} gives something to ${targetDisplayName}.`),
         [player.id, targetPlayer.id]  // Exclude both players
       );
 
