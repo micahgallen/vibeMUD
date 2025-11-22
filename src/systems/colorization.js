@@ -31,7 +31,11 @@ const GLOBAL_KEYWORDS = {
 
   // Admin/system keywords
   'admin': 'bright_yellow',
-  'Admin': 'bright_yellow'
+  'Admin': 'bright_yellow',
+
+  // Example global keywords
+  'warm': 'red',
+  'cold': 'cyan'
 };
 
 /**
