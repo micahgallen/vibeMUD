@@ -3,6 +3,8 @@
  * Exit the game
  */
 
+const display = require('../utils/display');
+
 module.exports = {
   id: "quit",
   name: "quit",
@@ -30,8 +32,9 @@ module.exports = {
 
     // Notify room of departure
     if (player.currentRoom) {
+      const playerDisplayName = display.getDisplayName(player);
       entityManager.notifyRoom(player.currentRoom,
-        `\x1b[90m${player.name} has left the game.\x1b[0m`,
+        `\x1b[90m${playerDisplayName} has left the game.\x1b[0m`,
         player.id);
     }
 
