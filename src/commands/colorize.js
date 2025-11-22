@@ -1,0 +1,214 @@
+/**
+ * colorize.js
+ *
+ * Admin command to manage global keyword colorization
+ * Allows adding, removing, and listing keywords that will be automatically colored throughout the MUD
+ */
+
+const colorization = require('../systems/colorization');
+const colors = require('../core/colors');
+const fs = require('fs');
+const path = require('path');
+
+// File to persist custom keywords
+const KEYWORDS_FILE = path.join(__dirname, '../data/custom_keywords.json');
+
+/**
+ * Load custom keywords from file
+ */
+function loadCustomKeywords() {
+  try {
+    if (fs.existsSync(KEYWORDS_FILE)) {
+      const data = fs.readFileSync(KEYWORDS_FILE, 'utf8');
+      const keywords = JSON.parse(data);
+
+      // Apply them to the colorization system
+      for (const [word, color] of Object.entries(keywords)) {
+        colorization.addGlobalKeyword(word, color);
+      }
+
+      return keywords;
+    }
+  } catch (error) {
+    console.error('Error loading custom keywords:', error);
+  }
+  return {};
+}
+
+/**
+ * Save custom keywords to file
+ */
+function saveCustomKeywords(keywords) {
+  try {
+    // Ensure data directory exists
+    const dataDir = path.dirname(KEYWORDS_FILE);
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    fs.writeFileSync(KEYWORDS_FILE, JSON.stringify(keywords, null, 2));
+    return true;
+  } catch (error) {
+    console.error('Error saving custom keywords:', error);
+    return false;
+  }
+}
+
+// Load keywords on module load
+const customKeywords = loadCustomKeywords();
+
+const Command = {
+  id: 'colorize',
+  name: 'colorize',
+  aliases: ['setcolor', 'keyword'],
+  category: 'Admin',
+  description: 'Manage global keyword colorization (admin only)',
+  usage: 'colorize <add|remove|list> [word] [color]',
+  requiresLogin: true,
+  adminOnly: true,
+
+  execute: function(session, args, entityManager, colors) {
+    const player = session.player;
+
+    // Check if player is admin
+    if (!player.isAdmin) {
+      session.sendLine(colors.error('This command is only available to administrators.'));
+      return;
+    }
+
+    if (!args) {
+      session.sendLine('');
+      session.sendLine(colors.highlight('Keyword Colorization Management'));
+      session.sendLine(colors.dim('='.repeat(50)));
+      session.sendLine('');
+      session.sendLine('Usage:');
+      session.sendLine('  colorize add <word> <color>    - Add a global keyword');
+      session.sendLine('  colorize remove <word>         - Remove a keyword');
+      session.sendLine('  colorize list                  - List all keywords');
+      session.sendLine('  colorize test <text>           - Test colorization');
+      session.sendLine('');
+      session.sendLine('Available colors:');
+      session.sendLine('  ' + colors.red('red') + ', ' + colors.green('green') + ', ' + colors.yellow('yellow') + ', ' + colors.cyan('cyan'));
+      session.sendLine('  ' + colors.magenta('magenta') + ', ' + colors.dim('dim') + ', ' + colors.grey('grey'));
+      session.sendLine('  bright_red, bright_green, bright_yellow, bright_cyan');
+      session.sendLine('  bright_magenta, bright_blue, bright_white');
+      session.sendLine('');
+      return;
+    }
+
+    const parts = args.split(' ');
+    const action = parts[0].toLowerCase();
+
+    if (action === 'add') {
+      if (parts.length < 3) {
+        session.sendLine(colors.error('Usage: colorize add <word> <color>'));
+        return;
+      }
+
+      const word = parts[1];
+      const colorName = parts[2];
+
+      // Validate color name
+      const validColors = [
+        'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'black',
+        'bright_red', 'bright_green', 'bright_yellow', 'bright_blue',
+        'bright_magenta', 'bright_cyan', 'bright_white', 'bright_black',
+        'dim', 'grey', 'gray'
+      ];
+
+      if (!validColors.includes(colorName)) {
+        session.sendLine(colors.error(`Invalid color: ${colorName}`));
+        session.sendLine('Valid colors: ' + validColors.join(', '));
+        return;
+      }
+
+      // Add to colorization system
+      colorization.addGlobalKeyword(word, colorName);
+
+      // Save to custom keywords
+      customKeywords[word] = colorName;
+      if (saveCustomKeywords(customKeywords)) {
+        // Show preview
+        const preview = colorization.processText(`The word ${word} is now colorized!`, 'global');
+        session.sendLine(colors.success(`✓ Added keyword: "${word}" → ${colorName}`));
+        session.sendLine('Preview: ' + preview);
+      } else {
+        session.sendLine(colors.error('Failed to save keywords to file.'));
+      }
+    }
+    else if (action === 'remove') {
+      if (parts.length < 2) {
+        session.sendLine(colors.error('Usage: colorize remove <word>'));
+        return;
+      }
+
+      const word = parts[1];
+
+      if (customKeywords[word]) {
+        delete customKeywords[word];
+
+        // Note: We can't easily remove from GLOBAL_KEYWORDS at runtime,
+        // but we can remove from our custom list. A server restart will
+        // reload only the custom keywords.
+        if (saveCustomKeywords(customKeywords)) {
+          session.sendLine(colors.success(`✓ Removed keyword: "${word}"`));
+          session.sendLine(colors.warning('Note: Restart server for full effect.'));
+        } else {
+          session.sendLine(colors.error('Failed to save keywords to file.'));
+        }
+      } else {
+        session.sendLine(colors.error(`Keyword "${word}" not found in custom keywords.`));
+      }
+    }
+    else if (action === 'list') {
+      session.sendLine('');
+      session.sendLine(colors.highlight('Global Keywords'));
+      session.sendLine(colors.dim('='.repeat(50)));
+      session.sendLine('');
+
+      // Show built-in keywords
+      session.sendLine(colors.cyan('Built-in Keywords:'));
+      const builtIn = colorization.GLOBAL_KEYWORDS;
+      let count = 0;
+      for (const [word, colorName] of Object.entries(builtIn)) {
+        const preview = colorization.processText(word, 'global');
+        session.sendLine(`  ${preview} (${colorName})`);
+        count++;
+      }
+      session.sendLine(colors.dim(`  ${count} built-in keywords`));
+      session.sendLine('');
+
+      // Show custom keywords
+      session.sendLine(colors.cyan('Custom Keywords:'));
+      const customCount = Object.keys(customKeywords).length;
+      if (customCount > 0) {
+        for (const [word, colorName] of Object.entries(customKeywords)) {
+          const preview = colorization.processText(word, 'global');
+          session.sendLine(`  ${preview} (${colorName})`);
+        }
+        session.sendLine(colors.dim(`  ${customCount} custom keywords`));
+      } else {
+        session.sendLine(colors.dim('  No custom keywords defined'));
+      }
+      session.sendLine('');
+    }
+    else if (action === 'test') {
+      if (parts.length < 2) {
+        session.sendLine(colors.error('Usage: colorize test <text>'));
+        return;
+      }
+
+      const testText = parts.slice(1).join(' ');
+      session.sendLine('');
+      session.sendLine('Original: ' + testText);
+      session.sendLine('Colorized: ' + colorization.processText(testText, 'global'));
+      session.sendLine('');
+    }
+    else {
+      session.sendLine(colors.error(`Unknown action: ${action}`));
+      session.sendLine('Valid actions: add, remove, list, test');
+    }
+  }
+};
+
+module.exports = Command;
