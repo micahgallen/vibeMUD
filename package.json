@@ -4,7 +4,10 @@
   "description": "vibeMUD engine prototype - The Wumpy and Grift MUD",
   "main": "src/core/EntityManager.js",
   "scripts": {
-    "start": "node src/core/server.js"
+    "start": "node src/core/server.js",
+    "test-server": "PORT=4001 node src/core/server.js",
+    "test-server:4002": "PORT=4002 node src/core/server.js",
+    "test-server:4003": "PORT=4003 node src/core/server.js"
   },
   "keywords": ["mud", "entity-manager", "lpmud", "vibemud", "wumpy"],
   "author": "",

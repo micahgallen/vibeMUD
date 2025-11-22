@@ -21,7 +21,10 @@ const loot = require('../systems/loot');
 const colorization = require('../systems/colorization');
 const path = require('path');
 
-const PORT = 4000;
+// Port configuration - can be overridden via PORT environment variable
+// Default: 4000 (production)
+// Test servers: use PORT=4001, PORT=4002, etc.
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
 
 // Initialize core systems
 const entityManager = new EntityManager();
