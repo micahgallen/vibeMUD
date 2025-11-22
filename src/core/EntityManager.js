@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const display = require('../utils/display');
 
 class EntityManager {
   constructor(dataDir = null) {
@@ -1048,15 +1049,15 @@ class EntityManager {
   }
 
   /**
-   * Find a player by name (case-insensitive)
+   * Find a player by name (case-insensitive, color-aware)
    * Only searches online players
+   * Uses display.matchesName for capname support
    */
   findPlayerByName(name) {
-    const lowerName = name.toLowerCase();
     for (const session of this.sessions.values()) {
       if (session.state === 'playing' &&
           session.player &&
-          session.player.name.toLowerCase() === lowerName) {
+          display.matchesName(name, session.player)) {
         return session.player;
       }
     }

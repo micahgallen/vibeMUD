@@ -1,4 +1,4 @@
-const { getDisplayName } = require('../utils/playerDisplay');
+const { getDisplayName } = require('../utils/display');
 
 module.exports = {
     id: 'say',

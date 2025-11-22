@@ -18,6 +18,7 @@ const leveling = require('../systems/leveling');
 const magic = require('../systems/magic');
 const mana = require('../systems/mana');
 const loot = require('../systems/loot');
+const colorization = require('../systems/colorization');
 const path = require('path');
 
 const PORT = 4000;
@@ -45,6 +46,10 @@ async function init() {
   console.log('Loading spells...');
   const spellsPath = path.join(__dirname, '../../data/guilds/global');
   magic.loadSpells(spellsPath);
+
+  // Load word templates for global colorization
+  console.log('Loading word templates...');
+  colorization.loadWordTemplates();
 
   // Load all game objects
   console.log('Loading entities...');

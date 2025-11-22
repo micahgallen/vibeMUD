@@ -1,4 +1,5 @@
-const { getDisplayName } = require('../utils/playerDisplay');
+const { getDisplayName } = require('../utils/display');
+const { matchesName } = require('../utils/display');
 
 /**
  * Custom Emote Command
@@ -63,7 +64,7 @@ module.exports = {
       );
 
       const playerTarget = playersInRoom.find(s =>
-        s.player.name.toLowerCase().startsWith(targetName)
+        matchesName(targetName, s.player)
       );
 
       if (playerTarget) {
