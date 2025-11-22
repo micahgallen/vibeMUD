@@ -27,9 +27,17 @@ class Session {
    * @param {object} options - Options for colorization
    * @param {string} options.context - Context for keyword colorization
    * @param {boolean} options.colorize - Whether to apply keyword colorization (default: false)
+   * @param {boolean} options._templateProcessed - Internal flag to prevent double-processing
    */
   sendLine(message = '', options = {}) {
     let output = message;
+
+    // Apply global word templates first (unless already processed)
+    if (!options._templateProcessed && typeof output === 'string') {
+      output = colorization.processGlobalTemplates(output);
+      // Mark as processed to prevent double-application
+      options._templateProcessed = true;
+    }
 
     // Apply keyword colorization if requested
     if (options.colorize && options.context) {
