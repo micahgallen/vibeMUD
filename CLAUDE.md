@@ -23,12 +23,19 @@ This architecture eliminates item duplication bugs by maintaining a single sourc
 npm run demo
 # or: node demo.js
 
-# Run the MUD server (telnet server on port 4000)
+# PRODUCTION SERVER (port 4000)
 npm start
 # or: node src/core/server.js
 
+# TEST SERVERS (different ports - use these for testing!)
+npm run test-server          # Port 4001
+npm run test-server:4002     # Port 4002
+npm run test-server:4003     # Port 4003
+# or custom port: PORT=5000 node src/core/server.js
+
 # Connect as a client
-telnet localhost 4000
+telnet localhost 4000   # Production
+telnet localhost 4001   # Test server
 ```
 
 ### Testing
@@ -38,6 +45,81 @@ The system includes validation to check consistency:
 - Every item appears in exactly ONE location
 - Every reference points to a real object
 - Parent inventories match child locations
+
+### Live Testing Protocol
+
+**CRITICAL: Always use test servers (ports 4001+) for testing. NEVER test on port 4000 (production).**
+
+#### Starting a Test Server
+
+```bash
+# Method 1: Use npm scripts (recommended)
+npm run test-server              # Starts on port 4001
+
+# Method 2: Use custom port
+PORT=4001 node src/core/server.js
+
+# Method 3: Run in background for monitoring
+PORT=4001 node src/core/server.js &
+```
+
+#### Live Testing Workflow
+
+1. **Start test server on port 4001+**
+   ```bash
+   npm run test-server
+   ```
+
+2. **Monitor server logs** - Watch for:
+   - ERROR or WARNING messages
+   - Heartbeat activity (🚶 wandering, 💬 dialogue, 🎭 emotes)
+   - Combat messages (⚔️ combat, 💀 deaths)
+   - Movement broadcasts
+
+3. **Connect and test** (in another terminal):
+   ```bash
+   telnet localhost 4001
+   ```
+
+4. **Test specific scenarios**:
+   - NPC interactions (movement, dialogue, combat)
+   - Player commands (look, get, drop, say, emote)
+   - Magic system (cast spells, check mana)
+   - Combat system (attack, spells, death/respawn)
+
+5. **Check server logs** for errors after testing
+
+6. **Stop test server when done**:
+   ```bash
+   pkill -f "PORT=4001"
+   # or if running in foreground: Ctrl+C
+   ```
+
+#### What to Look For
+
+**In Server Logs:**
+- ✅ No ERROR or WARNING from Session.sendLine
+- ✅ Heartbeat messages (🚶 💬 🎭 ⚔️ 💀)
+- ✅ Combat messages showing player/NPC names
+- ✅ Movement broadcasts when NPCs wander
+
+**In Client (telnet):**
+- ✅ All messages displaying correctly
+- ✅ Colors rendering properly
+- ✅ No duplicate messages
+- ✅ Combat messages appearing during fights
+- ✅ NPC movement/speech visible when in same room
+
+#### Common Issues
+
+**Problem:** Test server won't start ("Address already in use")
+- **Solution:** Port is occupied. Try different port (4002, 4003) or kill existing process
+
+**Problem:** No messages appearing in client
+- **Solution:** Check server logs for ERROR/WARNING messages from Session.sendLine
+
+**Problem:** Messages appearing twice
+- **Solution:** Check if array exclusion is working in EntityManager.notifyRoom
 
 ## Architecture
 
@@ -348,4 +430,14 @@ Remember the architecture hierarchy when adding features:
 2. **SYSTEMS**: Game-wide rules (combat, magic, economy) - defines "how the game works"
 3. **LIB**: Object behaviors (monster, torch, room definitions) - reusable templates
 4. **WORLD**: Specific instances (The Wumpy and Grift content) - actual game content
-- always remember to stop the server before testing it, and also to stop the test server when done testing
+
+### Testing Protocol (CRITICAL)
+
+**ALWAYS use test servers (port 4001+) for live testing. NEVER test on port 4000.**
+
+- **Before testing:** Start test server with `PORT=4001 node src/core/server.js` or `npm run test-server`
+- **After testing:** Stop test server with `pkill -f "PORT=4001"` or Ctrl+C
+- **Production server (port 4000):** Must remain running and untouched during testing
+- **Test connection:** Use `telnet localhost 4001` (not 4000) when testing
+
+This ensures the production server stays running for users while you test changes.
