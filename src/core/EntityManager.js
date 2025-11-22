@@ -1227,10 +1227,18 @@ class EntityManager {
 
   /**
    * Notify all players in a room
+   * @param {string} roomId - The room ID
+   * @param {string} message - The message to send
+   * @param {string|string[]|null} excludePlayerId - Player ID(s) to exclude (can be single ID, array of IDs, or null)
    */
   notifyRoom(roomId, message, excludePlayerId = null) {
+    // Convert excludePlayerId to array for consistent handling
+    const excludeIds = excludePlayerId
+      ? (Array.isArray(excludePlayerId) ? excludePlayerId : [excludePlayerId])
+      : [];
+
     const players = Array.from(this.objects.values()).filter(obj =>
-      obj.type === 'player' && obj.currentRoom === roomId && obj.id !== excludePlayerId
+      obj.type === 'player' && obj.currentRoom === roomId && !excludeIds.includes(obj.id)
     );
 
     for (const player of players) {

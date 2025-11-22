@@ -1,1 +1,11 @@
-{}
+{
+  "test": "<red>t<blue>e<green>s<yellow>t</>",
+  "fire": "<red>F<yellow>i<red>R<yellow>e</>",
+  "blue": "<bright_blue>blue</>",
+  "red": "<bright_red>red</>",
+  "green": "<bright_green>green</>",
+  "refreshed": "<bright_blue>refreshed</>",
+  "healthy": "<magenta>he<bright_red>al<bright_magenta>th<red>y</>",
+  "waters": "<bright_blue>w<bright_cyan>a<cyan>t<blue>e<bright_cyan>r<bright_blue>s</>",
+  "pink": "<magenta>pink</>"
+}

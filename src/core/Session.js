@@ -31,26 +31,62 @@ class Session {
    * @param {boolean} options._templateProcessed - Internal flag to prevent double-processing
    */
   sendLine(message = '', options = {}) {
-    let output = message;
+    try {
+      let output = message;
 
-    // Apply global word templates first (unless already processed)
-    if (!options._templateProcessed && typeof output === 'string') {
-      output = colorization.processGlobalTemplates(output);
-      // Mark as processed to prevent double-application
-      options._templateProcessed = true;
+      // Apply global word templates first (unless already processed)
+      if (!options._templateProcessed && typeof output === 'string') {
+        output = colorization.processGlobalTemplates(output);
+        // Mark as processed to prevent double-application
+        options._templateProcessed = true;
+      }
+
+      // Safety check: ensure output is still a string after template processing
+      if (typeof output !== 'string') {
+        console.error('WARNING: processGlobalTemplates returned non-string:', typeof output, output);
+        output = String(message); // Fallback to original message
+      }
+
+      // Apply keyword colorization if requested
+      if (options.colorize && options.context) {
+        output = colorization.processText(output, options.context);
+      }
+
+      // Safety check after processText
+      if (typeof output !== 'string') {
+        console.error('WARNING: processText returned non-string:', typeof output, output);
+        output = String(message);
+      }
+
+      // Parse color tags to ANSI codes
+      output = parseColorTags(output);
+
+      // Safety check after parseColorTags
+      if (typeof output !== 'string') {
+        console.error('WARNING: parseColorTags returned non-string:', typeof output, output);
+        output = String(message);
+      }
+
+      // Ensure clean line ending (prevent color bleeding)
+      output = display.ensureReset(output);
+
+      // Final safety check
+      if (typeof output !== 'string') {
+        console.error('WARNING: ensureReset returned non-string:', typeof output, output);
+        output = String(message);
+      }
+
+      this.socket.write(output + '\r\n');
+    } catch (error) {
+      console.error('ERROR in Session.sendLine:', error);
+      console.error('Original message:', message);
+      // Try to send the original message without processing
+      try {
+        this.socket.write(String(message) + '\r\n');
+      } catch (fallbackError) {
+        console.error('CRITICAL: Failed to send even fallback message:', fallbackError);
+      }
     }
-
-    // Apply keyword colorization if requested
-    if (options.colorize && options.context) {
-      output = colorization.processText(output, options.context);
-    }
-
-    // Parse color tags to ANSI codes
-    output = parseColorTags(output);
-
-    // Ensure clean line ending (prevent color bleeding)
-    output = display.ensureReset(output);
-    this.socket.write(output + '\r\n');
   }
 
   /**
