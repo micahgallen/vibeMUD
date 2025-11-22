@@ -4,6 +4,7 @@
 
 const display = require('../utils/display');
 const colorization = require('../systems/colorization');
+const { parseColorTags } = require('./colors');
 
 class Session {
   constructor(socket) {
@@ -43,6 +44,9 @@ class Session {
     if (options.colorize && options.context) {
       output = colorization.processText(output, options.context);
     }
+
+    // Parse color tags to ANSI codes
+    output = parseColorTags(output);
 
     // Ensure clean line ending (prevent color bleeding)
     output = display.ensureReset(output);
