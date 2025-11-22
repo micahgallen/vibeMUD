@@ -611,5 +611,8 @@ module.exports = {
   grey: (text) => colorize(text, ANSI.BRIGHT_BLACK),  // British spelling
   cyan: (text) => colorize(text, ANSI.CYAN),
   magenta: (text) => colorize(text, ANSI.MAGENTA),
-  green: (text) => colorize(text, ANSI.GREEN)
+  green: (text) => colorize(text, ANSI.GREEN),
+  red: (text) => colorize(text, ANSI.RED),
+  yellow: (text) => colorize(text, ANSI.YELLOW),
+  blue: (text) => colorize(text, ANSI.BLUE)
 };
