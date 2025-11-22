@@ -82,10 +82,15 @@ const Command = {
       session.sendLine(colors.dim('='.repeat(50)));
       session.sendLine('');
       session.sendLine('Usage:');
-      session.sendLine('  colorize add <word> <color>    - Add a global keyword');
-      session.sendLine('  colorize remove <word>         - Remove a keyword');
-      session.sendLine('  colorize list                  - List all keywords');
-      session.sendLine('  colorize test <text>           - Test colorization');
+      session.sendLine('  colorize add <word> <color|template>  - Add a keyword or template');
+      session.sendLine('  colorize remove <word>                - Remove a keyword/template');
+      session.sendLine('  colorize list                         - List all keywords');
+      session.sendLine('  colorize templates                    - List all word templates');
+      session.sendLine('  colorize test <text>                  - Test colorization');
+      session.sendLine('');
+      session.sendLine('Examples:');
+      session.sendLine('  colorize add magic bright_magenta     - Single color');
+      session.sendLine('  colorize add fire <red>f<yellow>i<red>r<yellow>e</>  - Per-letter template');
       session.sendLine('');
       session.sendLine('Available colors:');
       session.sendLine('  ' + colors.red('red') + ', ' + colors.green('green') + ', ' + colors.yellow('yellow') + ', ' + colors.cyan('cyan'));
@@ -101,39 +106,76 @@ const Command = {
 
     if (action === 'add') {
       if (parts.length < 3) {
-        session.sendLine(colors.error('Usage: colorize add <word> <color>'));
+        session.sendLine(colors.error('Usage: colorize add <word> <color|template>'));
         return;
       }
 
       const word = parts[1];
-      const colorName = parts[2];
+      const colorOrTemplate = parts.slice(2).join(' '); // Join to handle templates with spaces
 
-      // Validate color name
-      const validColors = [
-        'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'black',
-        'bright_red', 'bright_green', 'bright_yellow', 'bright_blue',
-        'bright_magenta', 'bright_cyan', 'bright_white', 'bright_black',
-        'dim', 'grey', 'gray'
-      ];
+      // Check if it's a template (contains < and >)
+      const isTemplate = colorOrTemplate.includes('<') && colorOrTemplate.includes('>');
 
-      if (!validColors.includes(colorName)) {
-        session.sendLine(colors.error(`Invalid color: ${colorName}`));
-        session.sendLine('Valid colors: ' + validColors.join(', '));
-        return;
-      }
+      if (isTemplate) {
+        // Validate template by extracting plain text
+        const plainText = colors.stripColors(colors.parseColorTags(colorOrTemplate));
 
-      // Add to colorization system
-      colorization.addGlobalKeyword(word, colorName);
+        // Check if plain text matches the word
+        if (plainText.toLowerCase() !== word.toLowerCase()) {
+          session.sendLine(colors.error(`Template plain text "${plainText}" doesn't match word "${word}"`));
+          session.sendLine('Example: colorize add fire <red>f<yellow>i<red>r<yellow>e</>');
+          return;
+        }
 
-      // Save to custom keywords
-      customKeywords[word] = colorName;
-      if (saveCustomKeywords(customKeywords)) {
-        // Show preview
-        const preview = colorization.processText(`The word ${word} is now colorized!`, 'global');
-        session.sendLine(colors.success(`✓ Added keyword: "${word}" → ${colorName}`));
-        session.sendLine('Preview: ' + preview);
+        // Add as word template
+        colorization.addWordTemplate(word, colorOrTemplate);
+
+        // Save templates
+        try {
+          colorization.saveWordTemplates();
+          // Show preview with case variations
+          const preview1 = colorization.processGlobalTemplates(word);
+          const preview2 = colorization.processGlobalTemplates(word.charAt(0).toUpperCase() + word.slice(1));
+          const preview3 = colorization.processGlobalTemplates(word.toUpperCase());
+
+          session.sendLine(colors.success(`✓ Added word template: "${word}"`));
+          session.sendLine('Preview: ' + colors.parseColorTags(preview1) + ' / ' +
+                                       colors.parseColorTags(preview2) + ' / ' +
+                                       colors.parseColorTags(preview3));
+        } catch (error) {
+          session.sendLine(colors.error('Failed to save word template: ' + error.message));
+        }
       } else {
-        session.sendLine(colors.error('Failed to save keywords to file.'));
+        // Handle as single-color keyword (existing logic)
+        const colorName = colorOrTemplate;
+
+        // Validate color name
+        const validColors = [
+          'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white', 'black',
+          'bright_red', 'bright_green', 'bright_yellow', 'bright_blue',
+          'bright_magenta', 'bright_cyan', 'bright_white', 'bright_black',
+          'dim', 'grey', 'gray'
+        ];
+
+        if (!validColors.includes(colorName)) {
+          session.sendLine(colors.error(`Invalid color: ${colorName}`));
+          session.sendLine('Valid colors: ' + validColors.join(', '));
+          return;
+        }
+
+        // Add to colorization system
+        colorization.addGlobalKeyword(word, colorName);
+
+        // Save to custom keywords
+        customKeywords[word] = colorName;
+        if (saveCustomKeywords(customKeywords)) {
+          // Show preview
+          const preview = colorization.processText(`The word ${word} is now colorized!`, 'global');
+          session.sendLine(colors.success(`✓ Added keyword: "${word}" → ${colorName}`));
+          session.sendLine('Preview: ' + preview);
+        } else {
+          session.sendLine(colors.error('Failed to save keywords to file.'));
+        }
       }
     }
     else if (action === 'remove') {
@@ -143,7 +185,21 @@ const Command = {
       }
 
       const word = parts[1];
+      let removed = false;
 
+      // Try removing from word templates first
+      if (colorization.removeWordTemplate(word)) {
+        try {
+          colorization.saveWordTemplates();
+          session.sendLine(colors.success(`✓ Removed word template: "${word}"`));
+          removed = true;
+        } catch (error) {
+          session.sendLine(colors.error('Failed to save word templates: ' + error.message));
+          return;
+        }
+      }
+
+      // Try removing from keywords
       if (customKeywords[word]) {
         delete customKeywords[word];
 
@@ -152,12 +208,15 @@ const Command = {
         // reload only the custom keywords.
         if (saveCustomKeywords(customKeywords)) {
           session.sendLine(colors.success(`✓ Removed keyword: "${word}"`));
-          session.sendLine(colors.warning('Note: Restart server for full effect.'));
+          session.sendLine(colors.warning('Note: Restart server for full effect on keywords.'));
+          removed = true;
         } else {
           session.sendLine(colors.error('Failed to save keywords to file.'));
         }
-      } else {
-        session.sendLine(colors.error(`Keyword "${word}" not found in custom keywords.`));
+      }
+
+      if (!removed) {
+        session.sendLine(colors.error(`Word "${word}" not found in templates or keywords.`));
       }
     }
     else if (action === 'list') {
@@ -192,6 +251,36 @@ const Command = {
       }
       session.sendLine('');
     }
+    else if (action === 'templates') {
+      session.sendLine('');
+      session.sendLine(colors.highlight('Word Templates'));
+      session.sendLine(colors.dim('='.repeat(50)));
+      session.sendLine('');
+
+      const templates = colorization.getAllWordTemplates();
+      const count = Object.keys(templates).length;
+
+      if (count > 0) {
+        for (const [word, template] of Object.entries(templates)) {
+          // Show three case variations
+          const lower = colorization.processGlobalTemplates(word);
+          const cap = colorization.processGlobalTemplates(word.charAt(0).toUpperCase() + word.slice(1));
+          const upper = colorization.processGlobalTemplates(word.toUpperCase());
+
+          session.sendLine(`  ${word}:`);
+          session.sendLine(`    ${colors.parseColorTags(lower)} / ${colors.parseColorTags(cap)} / ${colors.parseColorTags(upper)}`);
+          session.sendLine(colors.dim(`    Template: ${template}`));
+          session.sendLine('');
+        }
+        session.sendLine(colors.dim(`  ${count} word templates`));
+      } else {
+        session.sendLine(colors.dim('  No word templates defined'));
+        session.sendLine('');
+        session.sendLine('Create templates with:');
+        session.sendLine('  colorize add fire <red>f<yellow>i<red>r<yellow>e</>');
+      }
+      session.sendLine('');
+    }
     else if (action === 'test') {
       if (parts.length < 2) {
         session.sendLine(colors.error('Usage: colorize test <text>'));
@@ -201,12 +290,18 @@ const Command = {
       const testText = parts.slice(1).join(' ');
       session.sendLine('');
       session.sendLine('Original: ' + testText);
-      session.sendLine('Colorized: ' + colorization.processText(testText, 'global'));
+
+      // Apply both templates and keywords
+      const withTemplates = colorization.processGlobalTemplates(testText);
+      const withBoth = colorization.processText(withTemplates, 'global');
+
+      session.sendLine('With templates: ' + colors.parseColorTags(withTemplates));
+      session.sendLine('With both: ' + withBoth);
       session.sendLine('');
     }
     else {
       session.sendLine(colors.error(`Unknown action: ${action}`));
-      session.sendLine('Valid actions: add, remove, list, test');
+      session.sendLine('Valid actions: add, remove, list, templates, test');
     }
   }
 };
