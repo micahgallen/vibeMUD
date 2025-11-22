@@ -8,6 +8,7 @@ const leveling = require('./leveling');
 const magic = require('./magic');
 const resistances = require('./resistances');
 const mana = require('./mana');
+const display = require('../utils/display');
 
 // Dice rolling helper
 function d20() {
@@ -16,6 +17,24 @@ function d20() {
 
 function d6() {
   return Math.floor(Math.random() * 6) + 1;
+}
+
+/**
+ * Helper function to get display name for combat entity
+ * Returns capname for players, plain name for NPCs
+ */
+function getCombatDisplayName(entity) {
+  if (!entity) return 'Unknown';
+  return entity.type === 'player' ? display.getDisplayName(entity) : entity.name;
+}
+
+/**
+ * Helper function to get plain name for storage/logs
+ * Always returns base name without ANSI codes
+ */
+function getCombatPlainName(entity) {
+  if (!entity) return 'Unknown';
+  return entity.type === 'player' ? display.getPlainName(entity) : entity.name;
 }
 
 // Generate unique combat ID
@@ -46,7 +65,7 @@ function engage(attackerId, defenderId, entityManager) {
 
   // Check if defender is a ghost
   if (defender.isGhost) {
-    entityManager.notifyPlayer(attackerId, `${defender.name} is a ghost and cannot be attacked!`);
+    entityManager.notifyPlayer(attackerId, `${getCombatDisplayName(defender)} is a ghost and cannot be attacked!`);
     return;
   }
 
@@ -57,7 +76,7 @@ function engage(attackerId, defenderId, entityManager) {
   }
 
   if (defender.combat) {
-    entityManager.notifyPlayer(attackerId, `${defender.name} is already in combat!`);
+    entityManager.notifyPlayer(attackerId, `${getCombatDisplayName(defender)} is already in combat!`);
     return;
   }
 
@@ -83,13 +102,13 @@ function engage(attackerId, defenderId, entityManager) {
   entityManager.markDirty(defenderId);
 
   // Notify participants and room
-  entityManager.notifyPlayer(attackerId, `\x1b[31mYou attack ${defender.name}!\x1b[0m`);
-  entityManager.notifyPlayer(defenderId, `\x1b[31m${attacker.name} attacks you!\x1b[0m`);
+  entityManager.notifyPlayer(attackerId, `\x1b[31mYou attack ${getCombatDisplayName(defender)}!\x1b[0m`);
+  entityManager.notifyPlayer(defenderId, `\x1b[31m${getCombatDisplayName(attacker)} attacks you!\x1b[0m`);
 
   const room = attacker.currentRoom;
   if (room) {
     entityManager.notifyRoom(room,
-      `\x1b[31m${attacker.name} attacks ${defender.name}!\x1b[0m`,
+      `\x1b[31m${getCombatDisplayName(attacker)} attacks ${getCombatDisplayName(defender)}!\x1b[0m`,
       [attackerId, defenderId]);
   }
 
@@ -113,7 +132,7 @@ function engage(attackerId, defenderId, entityManager) {
   // Enable heartbeat for this encounter (2 second interval)
   entityManager.enableHeartbeat(combatId, 2);
 
-  console.log(`  ⚔️  Combat started: ${attacker.name} vs ${defender.name} (${combatId})`);
+  console.log(`  ⚔️  Combat started: ${getCombatPlainName(attacker)} vs ${getCombatDisplayName(defender)} (${combatId})`);
 }
 
 /**
@@ -190,7 +209,7 @@ function processCombatRound(encounter, entityManager) {
 
     // Skip turn if attacker is disconnected (NPC pauses during player DC)
     if (encounter.disconnectedParticipants?.has(attackerId)) {
-      console.log(`  ⏸️  ${attacker.name} skipped turn (disconnected)`);
+      console.log(`  ⏸️  ${getCombatPlainName(attacker)} skipped turn (disconnected)`);
       continue;
     }
 
@@ -270,14 +289,14 @@ function executeAttack(attackerId, defenderId, entityManager) {
     // Check for immunity
     if (damageInfo.immune) {
       entityManager.notifyPlayer(attackerId,
-        `\x1b[90m${defender.name} is immune to ${damageInfo.damageType} damage!\x1b[0m`);
+        `\x1b[90m${getCombatDisplayName(defender)} is immune to ${damageInfo.damageType} damage!\x1b[0m`);
       entityManager.notifyPlayer(defenderId,
-        `\x1b[90mYou are immune to ${attacker.name}'s ${damageInfo.damageType} attack!\x1b[0m`);
+        `\x1b[90mYou are immune to ${getCombatDisplayName(attacker)}'s ${damageInfo.damageType} attack!\x1b[0m`);
 
       const room = attacker.currentRoom;
       if (room) {
         entityManager.notifyRoom(room,
-          `\x1b[90m${defender.name} is immune to ${attacker.name}'s attack!\x1b[0m`,
+          `\x1b[90m${getCombatDisplayName(defender)} is immune to ${getCombatDisplayName(attacker)}'s attack!\x1b[0m`,
           [attackerId, defenderId]);
       }
       return true;
@@ -295,15 +314,15 @@ function executeAttack(attackerId, defenderId, entityManager) {
 
     // Notify participants
     entityManager.notifyPlayer(attackerId,
-      `\x1b[32mYou hit ${defender.name} for \x1b[33m${damageMsg}\x1b[32m!\x1b[0m`);
+      `\x1b[32mYou hit ${getCombatDisplayName(defender)} for \x1b[33m${damageMsg}\x1b[32m!\x1b[0m`);
     entityManager.notifyPlayer(defenderId,
-      `\x1b[31m${attacker.name} hits you for \x1b[33m${damageMsg}\x1b[31m!\x1b[0m`);
+      `\x1b[31m${getCombatDisplayName(attacker)} hits you for \x1b[33m${damageMsg}\x1b[31m!\x1b[0m`);
 
     // Notify room
     const room = attacker.currentRoom;
     if (room) {
       entityManager.notifyRoom(room,
-        `\x1b[33m${attacker.name} hits ${defender.name} for ${damageInfo.amount} damage!\x1b[0m`,
+        `\x1b[33m${getCombatDisplayName(attacker)} hits ${getCombatDisplayName(defender)} for ${damageInfo.amount} damage!\x1b[0m`,
         [attackerId, defenderId]);
     }
 
@@ -311,15 +330,15 @@ function executeAttack(attackerId, defenderId, entityManager) {
   } else {
     // Miss
     entityManager.notifyPlayer(attackerId,
-      `\x1b[90mYou miss ${defender.name}!\x1b[0m`);
+      `\x1b[90mYou miss ${getCombatDisplayName(defender)}!\x1b[0m`);
     entityManager.notifyPlayer(defenderId,
-      `\x1b[90m${attacker.name} misses you!\x1b[0m`);
+      `\x1b[90m${getCombatDisplayName(attacker)} misses you!\x1b[0m`);
 
     // Notify room
     const room = attacker.currentRoom;
     if (room) {
       entityManager.notifyRoom(room,
-        `\x1b[90m${attacker.name} misses ${defender.name}!\x1b[0m`,
+        `\x1b[90m${getCombatDisplayName(attacker)} misses ${getCombatDisplayName(defender)}!\x1b[0m`,
         [attackerId, defenderId]);
     }
 
@@ -652,7 +671,7 @@ function createCorpse(dead, roomId, entityManager) {
   const corpse = Object.create(corpseDef);
   Object.assign(corpse, {
     id: corpseId,
-    name: `the corpse of ${dead.name}`,
+    name: `the corpse of ${getCombatPlainName(dead)}`,
     description: dead.type === 'player'
       ? `The lifeless body of ${dead.name} lies here.`
       : `The remains of ${dead.name} lie here.`,
@@ -740,7 +759,7 @@ function handlePlayerDeath(player, entityManager) {
     `You will respawn in 30 seconds...\n` +
     `${'='.repeat(60)}\x1b[0m\n`);
 
-  console.log(`  👻 ${player.name} became a ghost`);
+  console.log(`  👻 ${getCombatPlainName(player)} became a ghost`);
 
   // Schedule respawn after 30 seconds
   setTimeout(() => {
@@ -817,7 +836,7 @@ function respawnPlayer(playerId, entityManager) {
     `\x1b[36m${player.name} materializes from the void.\x1b[0m`,
     playerId);
 
-  console.log(`  ✨ ${player.name} respawned at ${respawnRoom}`);
+  console.log(`  ✨ ${getCombatPlainName(player)} respawned at ${respawnRoom}`);
 
   // Auto-look at new location
   const lookCommand = require('../commands/look.js');
