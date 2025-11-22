@@ -162,13 +162,18 @@ module.exports = {
       // Notify player
       session.sendLine(colors.warning(`You drop ${Currency.format(coinsToRemove)}.`));
 
-      // Notify room
-      entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${player.name} drops some coins.`),
-        player.id);
+            // Notify room
 
-    } catch (error) {
-      session.sendLine(colors.error(`Error: ${error.message}`));
-    }
+            entityManager.notifyRoom(player.currentRoom,
+
+              colors.dim(`${(player.capname || player.name)} drops some coins.`),
+
+              player.id);
+
+          } catch (error) {
+
+            session.sendLine(colors.error(`Error: ${error.message}`));
+
+          }
   }
 };

@@ -107,7 +107,8 @@ module.exports = {
     // If target is provided, find them
     if (targetName) {
       // Check for self-emote
-      if (targetName === 'self' || targetName === 'me' || targetName === player.name.toLowerCase()) {
+      const capname = (player.capname || '').toLowerCase();
+      if (targetName === 'self' || targetName === 'me' || targetName === player.name.toLowerCase() || (capname && targetName === capname)) {
         const selfMsg = this._getMessage('self', player, entityManager);
         if (selfMsg) {
           session.sendLine('');
@@ -140,9 +141,12 @@ module.exports = {
         s.player.id !== player.id
       );
 
-      const playerTarget = playersInRoom.find(s =>
-        s.player.name.toLowerCase().startsWith(targetName)
-      );
+      const playerTarget = playersInRoom.find(s => {
+        const p = s.player;
+        const capname = (p.capname || '').toLowerCase();
+        const name = p.name.toLowerCase();
+        return capname.startsWith(targetName) || name.startsWith(targetName);
+      });
 
       if (playerTarget) {
         target = playerTarget;

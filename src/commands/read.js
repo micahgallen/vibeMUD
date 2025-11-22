@@ -90,7 +90,7 @@ module.exports = {
     if (room) {
       entityManager.notifyRoom(
         player.currentRoom,
-        colors.dim(`${player.name} reads ${target.name}.`),
+        colors.dim(`${(player.capname || player.name)} reads ${target.name}.`),
         player.id
       );
     }

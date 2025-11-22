@@ -77,7 +77,9 @@ module.exports = {
       );
 
       for (const otherPlayer of playersInRoom) {
-        if (otherPlayer.name.toLowerCase().includes(targetName)) {
+        const capname = (otherPlayer.capname || '').toLowerCase();
+        const name = otherPlayer.name.toLowerCase();
+        if (name.includes(targetName) || (capname && capname.includes(targetName))) {
           target = otherPlayer;
           break;
         }
@@ -90,15 +92,17 @@ module.exports = {
       return;
     }
 
+    const targetDisplayName = (target.type === 'player' ? (target.capname || target.name) : target.name);
+
     // Check if target is already in combat
     if (target.combat) {
-      session.sendLine(colors.error(`${target.name} is already in combat!`));
+      session.sendLine(colors.error(`${targetDisplayName} is already in combat!`));
       return;
     }
 
     // Check if target is dead
     if (target.isDead) {
-      session.sendLine(colors.error(`${target.name} is already dead!`));
+      session.sendLine(colors.error(`${targetDisplayName} is already dead!`));
       return;
     }
 

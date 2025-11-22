@@ -150,7 +150,7 @@ function levelUp(playerId, entityManager) {
   // Notify room
   if (player.currentRoom) {
     entityManager.notifyRoom(player.currentRoom,
-      `\x1b[33m${player.name} shimmers with newfound power!\x1b[0m`,
+      `\x1b[33m${(player.capname || player.name)} shimmers with newfound power!\x1b[0m`,
       playerId);
   }
 

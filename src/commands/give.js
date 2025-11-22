@@ -57,7 +57,7 @@ module.exports = {
 
     // Check if in same room
     if (targetPlayer.currentRoom !== player.currentRoom) {
-      session.sendLine(`${targetPlayer.name} is not in this room.`);
+      session.sendLine(`${(targetPlayer.capname || targetPlayer.name)} is not in this room.`);
       return;
     }
 
@@ -104,14 +104,14 @@ module.exports = {
       targetPlayer.addCoins(coinsToGive, entityManager);
 
       // Notify both players
-      session.sendLine(colors.success(`You give ${Currency.format(coinsToGive)} to ${targetPlayer.name}.`));
+      session.sendLine(colors.success(`You give ${Currency.format(coinsToGive)} to ${(targetPlayer.capname || targetPlayer.name)}.`));
 
       const targetSession = Array.from(entityManager.sessions.values()).find(s =>
         s.state === 'playing' && s.player && s.player.id === targetPlayer.id
       );
 
       if (targetSession) {
-        targetSession.sendLine(colors.success(`${player.name} gives you ${Currency.format(coinsToGive)}.`));
+        targetSession.sendLine(colors.success(`${(player.capname || player.name)} gives you ${Currency.format(coinsToGive)}.`));
       }
 
       // Notify room (excluding the two players involved)
@@ -124,7 +124,7 @@ module.exports = {
 
       for (const otherPlayer of playersInRoom) {
         entityManager.notifyPlayer(otherPlayer.id,
-          colors.dim(`${player.name} gives some coins to ${targetPlayer.name}.`)
+          colors.dim(`${(player.capname || player.name)} gives some coins to ${(targetPlayer.capname || targetPlayer.name)}.`)
         );
       }
 
@@ -160,19 +160,19 @@ module.exports = {
       });
 
       // Notify both players
-      session.sendLine(colors.success(`You give ${item.name} to ${targetPlayer.name}.`));
+      session.sendLine(colors.success(`You give ${item.name} to ${(targetPlayer.capname || targetPlayer.name)}.`));
 
       const targetSession = Array.from(entityManager.sessions.values()).find(s =>
         s.state === 'playing' && s.player && s.player.id === targetPlayer.id
       );
 
       if (targetSession) {
-        targetSession.sendLine(colors.success(`${player.name} gives you ${item.name}.`));
+        targetSession.sendLine(colors.success(`${(player.capname || player.name)} gives you ${item.name}.`));
       }
 
       // Notify room (excluding the two players involved)
       entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${player.name} gives something to ${targetPlayer.name}.`),
+        colors.dim(`${(player.capname || player.name)} gives something to ${(targetPlayer.capname || targetPlayer.name)}.`),
         [player.id, targetPlayer.id]  // Exclude both players
       );
 

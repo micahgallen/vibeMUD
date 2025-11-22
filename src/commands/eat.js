@@ -56,7 +56,7 @@ module.exports = {
       if (player.currentRoom) {
         entityManager.notifyRoom(
           player.currentRoom,
-          `${colors.cyan(player.name)} eats ${item.name}.`,
+          `${colors.cyan(player.capname || player.name)} eats ${item.name}.`,
           player.id
         );
       }

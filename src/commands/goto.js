@@ -29,23 +29,28 @@ module.exports = {
       return;
     }
 
-    const targetName = args.trim();
+    const targetName = args.trim().toLowerCase();
 
     // Find the target player (case-insensitive search)
-    const targetPlayer = Array.from(entityManager.objects.values()).find(obj =>
-      obj.type === 'player' &&
-      (obj.name.toLowerCase() === targetName.toLowerCase() || obj.id.toLowerCase() === targetName.toLowerCase())
-    );
+    const targetPlayer = Array.from(entityManager.objects.values()).find(obj => {
+      if (obj.type !== 'player') return false;
+      const capname = (obj.capname || '').toLowerCase();
+      const name = obj.name.toLowerCase();
+      const id = obj.id.toLowerCase();
+      return name === targetName || id === targetName || (capname && capname === targetName);
+    });
 
     // Validate target player exists
     if (!targetPlayer) {
-      session.sendLine(colors.error(`Player '${targetName}' does not exist.`));
+      session.sendLine(colors.error(`Player '${args.trim()}' does not exist.`));
       return;
     }
 
+    const targetDisplayName = (targetPlayer.capname || targetPlayer.name);
+
     // Check if target player is online
     if (!entityManager.sessions.has(targetPlayer.id)) {
-      session.sendLine(colors.error(`${targetPlayer.name} is not currently online.`));
+      session.sendLine(colors.error(`${targetDisplayName} is not currently online.`));
       return;
     }
 
@@ -59,18 +64,19 @@ module.exports = {
     const targetRoom = entityManager.get(targetRoomId);
 
     if (!targetRoom) {
-      session.sendLine(colors.error(`${targetPlayer.name}'s current room does not exist.`));
+      session.sendLine(colors.error(`${targetDisplayName}'s current room does not exist.`));
       return;
     }
 
     const oldRoomId = player.currentRoom;
     const oldRoom = entityManager.get(oldRoomId);
+    const playerDisplayName = (player.capname || player.name);
 
     // Notify old room (use custom exit message if set)
     if (oldRoom) {
       const exitMessage = player.tpExitMessage
-        ? player.tpExitMessage.replace('{name}', player.name)
-        : `${player.name} disappears in a flash of light!`;
+        ? player.tpExitMessage.replace('{name}', playerDisplayName)
+        : `${playerDisplayName} disappears in a flash of light!`;
 
       entityManager.notifyRoom(oldRoomId,
         colors.info(exitMessage),
@@ -83,15 +89,15 @@ module.exports = {
 
     // Notify new room (use custom enter message if set)
     const enterMessage = player.tpEnterMessage
-      ? player.tpEnterMessage.replace('{name}', player.name)
-      : `${player.name} appears in a flash of light!`;
+      ? player.tpEnterMessage.replace('{name}', playerDisplayName)
+      : `${playerDisplayName} appears in a flash of light!`;
 
     entityManager.notifyRoom(targetRoomId,
       colors.info(enterMessage),
       player.id);
 
     // Show the player their new location
-    session.sendLine(colors.success(`You teleport to ${targetPlayer.name}'s location!`));
+    session.sendLine(colors.success(`You teleport to ${targetDisplayName}'s location!`));
     session.sendLine('');
 
     // Auto-look at new room

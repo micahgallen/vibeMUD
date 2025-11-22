@@ -95,6 +95,7 @@ module.exports = {
     }
 
     const buttons = boothRoom.features.buttons;
+    const playerDisplayName = (player.capname || player.name);
 
     // Find destination by number or name
     let destination = null;
@@ -116,7 +117,7 @@ module.exports = {
     }
 
     // Transport sequence with flavor - broadcast to room
-    entityManager.notifyRoom(boothRoom.id, `${player.name} presses the button for ${destination.name}.`);
+    entityManager.notifyRoom(boothRoom.id, `${playerDisplayName} presses the button for ${destination.name}.`);
     session.send(`You press the button for ${destination.name}.\n`);
 
     await this.delay(1000);
@@ -124,11 +125,11 @@ module.exports = {
     session.send(colors.info("The camera begins to hum softly.") + "\n\n");
 
     await this.delay(3000);
-    entityManager.notifyRoom(boothRoom.id, colors.warning(`${player.name} begins to shimmer and break down into small particles!`));
+    entityManager.notifyRoom(boothRoom.id, colors.warning(`${playerDisplayName} begins to shimmer and break down into small particles!`));
     session.send(colors.warning("As you look down, you then notice that you are being broken down into\nsmall particles.") + "\n\n");
 
     await this.delay(2000);
-    entityManager.notifyRoom(boothRoom.id, colors.highlight(`${player.name} is sucked into the camera with a WHOOSH!`));
+    entityManager.notifyRoom(boothRoom.id, colors.highlight(`${playerDisplayName} is sucked into the camera with a WHOOSH!`));
     session.send(colors.highlight("You then feel a strange pulling sensation as you are sucked into the camera.") + "\n\n");
 
     await this.delay(1000);
@@ -137,7 +138,7 @@ module.exports = {
     boothRoom.exits.out = destination.destination;
     entityManager.markDirty('booth_room');
 
-    entityManager.notifyRoom(boothRoom.id, colors.success(`${player.name} materializes in the booth!`));
+    entityManager.notifyRoom(boothRoom.id, colors.success(`${playerDisplayName} materializes in the booth!`));
     session.send(colors.success("Suddenly you are standing in a different booth.") + "\n\n");
     session.send(boothRoom.description + "\n");
   },
@@ -155,6 +156,7 @@ module.exports = {
     }
 
     const buttons = hotTubRoom.features.buttons;
+    const playerDisplayName = (player.capname || player.name);
 
     // Find button by number or name
     let button = null;
@@ -192,14 +194,14 @@ module.exports = {
       if (hotTubRoom.activeEffects.jets.active) {
         // Turn OFF
         hotTubRoom.activeEffects.jets.active = false;
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the jets button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the jets button.`);
         await this.delay(500);
         entityManager.notifyRoom(hotTubRoom.id, colors.info("The massage jets slowly wind down and shut off."));
       } else {
         // Turn ON
         hotTubRoom.activeEffects.jets.active = true;
         hotTubRoom.activeEffects.jets.startTime = Date.now();
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the jets button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the jets button.`);
         await this.delay(800);
         entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The hot tub comes alive with a deep mechanical WHIRRRRR..."));
         await this.delay(1200);
@@ -211,14 +213,14 @@ module.exports = {
       if (hotTubRoom.activeEffects.bubbles.active) {
         // Turn OFF
         hotTubRoom.activeEffects.bubbles.active = false;
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the bubbles button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the bubbles button.`);
         await this.delay(500);
         entityManager.notifyRoom(hotTubRoom.id, colors.info("The bubbles gradually subside to a gentle fizz, then stop."));
       } else {
         // Turn ON
         hotTubRoom.activeEffects.bubbles.active = true;
         hotTubRoom.activeEffects.bubbles.startTime = Date.now();
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the bubbles button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the bubbles button.`);
         await this.delay(800);
         entityManager.notifyRoom(hotTubRoom.id, colors.highlight("A soft gurgling rises from the depths..."));
         await this.delay(1200);
@@ -230,14 +232,14 @@ module.exports = {
       if (hotTubRoom.activeEffects.steam.active) {
         // Turn OFF
         hotTubRoom.activeEffects.steam.active = false;
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the steam button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the steam button.`);
         await this.delay(500);
         entityManager.notifyRoom(hotTubRoom.id, colors.info("The steam generator shuts off, and the fog slowly dissipates."));
       } else {
         // Turn ON
         hotTubRoom.activeEffects.steam.active = true;
         hotTubRoom.activeEffects.steam.startTime = Date.now();
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the steam button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the steam button.`);
         await this.delay(800);
         entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The water temperature increases ever so slightly..."));
         await this.delay(1200);
@@ -249,13 +251,13 @@ module.exports = {
       if (hotTubRoom.activeEffects.lights.active) {
         // Turn OFF
         hotTubRoom.activeEffects.lights.active = false;
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the lights button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the lights button.`);
         await this.delay(500);
         entityManager.notifyRoom(hotTubRoom.id, colors.info("The chromotherapy lights fade out, returning the water to its natural color."));
       } else {
         // Turn ON
         hotTubRoom.activeEffects.lights.active = true;
-        entityManager.notifyRoom(hotTubRoom.id, `${player.name} presses the lights button.`);
+        entityManager.notifyRoom(hotTubRoom.id, `${playerDisplayName} presses the lights button.`);
         await this.delay(800);
         entityManager.notifyRoom(hotTubRoom.id, colors.highlight("The underwater lights begin to pulse through a mesmerizing sequence..."));
         await this.delay(1000);

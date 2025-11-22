@@ -1054,10 +1054,16 @@ class EntityManager {
   findPlayerByName(name) {
     const lowerName = name.toLowerCase();
     for (const session of this.sessions.values()) {
-      if (session.state === 'playing' &&
-          session.player &&
-          session.player.name.toLowerCase() === lowerName) {
-        return session.player;
+      if (session.state === 'playing' && session.player) {
+        const playerName = session.player.name.toLowerCase();
+        // Remove color tags for comparison
+        const playerCapName = session.player.capname 
+          ? session.player.capname.replace(/<[^>]+>/g, '').toLowerCase() 
+          : '';
+
+        if (playerName === lowerName || (playerCapName && playerCapName === lowerName)) {
+          return session.player;
+        }
       }
     }
     return null;

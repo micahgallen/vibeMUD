@@ -24,7 +24,7 @@ module.exports = {
     // Header
     output.push('');
     output.push(colors.highlight('='.repeat(60)));
-    output.push(colors.highlight(`  ${player.name}'s Status`));
+    output.push(colors.highlight(`  ${(player.capname || player.name)}'s Status`));
     output.push(colors.highlight('='.repeat(60)));
     output.push('');
 
@@ -103,7 +103,7 @@ module.exports = {
 
     if (player.combat) {
       const target = entityManager.get(player.combat.targetId);
-      const targetName = target ? target.name : 'Unknown';
+      const targetName = target ? (target.type === 'player' ? (target.capname || target.name) : target.name) : 'Unknown';
       conditions.push(colors.error('⚔️  In Combat') + colors.dim(` (fighting ${targetName})`));
     }
 

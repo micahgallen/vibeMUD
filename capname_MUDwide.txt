@@ -1,0 +1,48 @@
+1.  **Investigate `capname` and Player Initialization:**
+    *   Examine `src/commands/capname.js` to understand how `capname` is stored on the player object.
+    *   Review `src/core/Session.js` and `src/core/LoginHandler.js` to see how player objects are created and loaded, and ensure `capname` is initialized correctly. If `capname` doesn't exist, it should default to the player's name.
+
+2.  **Update `teleport` Command:**
+    *   Modify `src/commands/teleport.js` to use the player's `capname` in the `tpenter` and `tpexit` messages broadcast to rooms.
+
+3.  **Update `status` Command:**
+    *   Modify `src/commands/status.js` to display the player's `capname` instead of their raw name.
+
+4.  **Update `equipment` Command:**
+    *   Modify `src/commands/equipment.js` to display the player's `capname` in the header.
+
+5.  **Update `look` Command:**
+    *   Modify `src/commands/look.js` to use the target player's `capname` when a player is being looked at.
+
+6.  **Update Login/Connection Messages:**
+    *   In `src/core/Session.js` or `src/core/LoginHandler.js`, find and update the "Welcome back" message to use the player's `capname`.
+    *   Update the "entered the game" and "lost connection" messages broadcast to other players to use the `capname`.
+
+7.  **Update `who` Command:**
+    *   Modify `src/commands/who.js` to list players by their `capname`.
+
+8.  **Update `say` Command:**
+    *   Modify `src/commands/say.js` so that the speaking player's name is their `capname`.
+
+9.  **Update `emote` Command:**
+    *   Examine `src/commands/emote.js` and the emote files in `src/emotes/`. Update the emote messaging to use the `capname` of the emoting player and any target player.
+
+10. **Update `chat` Command:**
+    *   Modify `src/commands/chat.js` to use the player's `capname` in the chat message.
+
+11. **Update `give` Command:**
+    *   Modify `src/commands/give.js` to use `capname` in messages for the giver, receiver, and observers.
+
+12. **Update `flee` Command:**
+    *   Modify `src/commands/flee.js` to use `capname` in messages about who fled from combat.
+
+13. **Update `kill` and `attack` Commands:**
+    *   Review `src/commands/kill.js`, `src/commands/attack.js` and the combat system (`src/systems/combat.js`) to ensure `capname` is used in all combat messages (e.g., "Player A attacks Player B").
+
+14. **Update `loot` Command:**
+    *   Modify `src/commands/loot.js` to use `capname` in messages about who is looting a corpse.
+
+15. **System-wide Audit:**
+    *   Perform a global search for `.name` on variables that represent a player (e.g., `player.name`, `user.name`, `character.name`) in the `src/commands`, `src/systems`, and `src/core` directories.
+    *   Replace instances in user-facing strings with a call to a utility function or a direct reference to the `capname` property (e.g., `player.capname`).
+    *   Ensure a fallback to the base name if `capname` is not set. A good pattern would be `(player.capname || player.name)`.

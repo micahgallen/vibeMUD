@@ -30,7 +30,7 @@ module.exports = {
         return;
       }
 
-      session.sendLine(colors.info(`Resetting stats for ${targetPlayer.name}...`));
+      session.sendLine(colors.info(`Resetting stats for ${(targetPlayer.capname || targetPlayer.name)}...`));
     } else {
       session.sendLine(colors.info('Resetting your stats to baseline...'));
     }

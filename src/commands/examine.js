@@ -271,10 +271,11 @@ module.exports = {
         target = player;
       } else {
         // Check if the target name matches the player's own name
+        const playerCapname = (player.capname || '').toLowerCase();
         const playerDisplayName = (player.title ? `${player.title} ${player.name}` : player.name).toLowerCase();
         const playerUsername = player.username ? player.username.toLowerCase() : player.name.toLowerCase();
 
-        if (playerDisplayName.includes(targetName) || playerUsername.includes(targetName)) {
+        if (playerCapname.includes(targetName) || playerDisplayName.includes(targetName) || playerUsername.includes(targetName)) {
           target = player;
         }
       }
@@ -293,10 +294,11 @@ module.exports = {
         }
 
         // Check name (both display name and username)
+        const capname = (obj.capname || '').toLowerCase();
         const displayName = (obj.title ? `${obj.title} ${obj.name}` : obj.name).toLowerCase();
         const username = obj.username ? obj.username.toLowerCase() : obj.name.toLowerCase();
 
-        if (displayName.includes(targetName) || username.includes(targetName)) {
+        if (capname.includes(targetName) || displayName.includes(targetName) || username.includes(targetName)) {
           return true;
         }
 
@@ -479,7 +481,7 @@ module.exports = {
       // Header with player name
       session.sendLine('');
       session.sendLine(colors.highlight('═'.repeat(lineWidth)));
-      session.sendLine(colors.highlight(`  ${target.name}`));
+      session.sendLine(colors.highlight(`  ${(target.capname || target.name)}`));
       session.sendLine(colors.highlight('═'.repeat(lineWidth)));
       session.sendLine('');
 

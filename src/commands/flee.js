@@ -40,7 +40,7 @@ module.exports = {
     const room = entityManager.get(player.currentRoom);
     if (room) {
       entityManager.notifyRoom(room.id,
-        `\x1b[33m${player.name} flees from combat!\x1b[0m`,
+        `\x1b[33m${(player.capname || player.name)} flees from combat!\x1b[0m`,
         [player.id]);
     }
   }

@@ -92,7 +92,7 @@ module.exports = {
     const room = entityManager.get(player.currentRoom);
     if (room) {
       entityManager.notifyRoom(room.id,
-        colors.action(`${player.name} puts on ${foundArmor.name}.`),
+        colors.action(`${(player.capname || player.name)} puts on ${foundArmor.name}.`),
         player.id);
     }
 

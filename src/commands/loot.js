@@ -122,7 +122,7 @@ module.exports = {
 
         // Notify room
         entityManager.notifyRoom(player.currentRoom,
-          colors.dim(`${player.name} reclaims their possessions from ${targetCorpse.name}, which crumbles to dust.`),
+          colors.dim(`${(player.capname || player.name)} reclaims their possessions from ${targetCorpse.name}, which crumbles to dust.`),
           player.id);
       } else {
         // Looting someone else's corpse - leave it there
@@ -134,7 +134,7 @@ module.exports = {
 
         // Notify room
         entityManager.notifyRoom(player.currentRoom,
-          colors.dim(`${player.name} loots ${targetCorpse.name}.`),
+          colors.dim(`${(player.capname || player.name)} loots ${targetCorpse.name}.`),
           player.id);
       }
 

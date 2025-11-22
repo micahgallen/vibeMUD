@@ -69,7 +69,7 @@ const Command = {
         session.player.tpEnterMessage = convertedTpEnter;
         entityManager.markDirty(session.player.id);
 
-        const previewEnter = convertedTpEnter.replace('{name}', session.player.name);
+        const previewEnter = convertedTpEnter.replace('{name}', (session.player.capname || session.player.name));
         session.sendLine(colors.success('Your teleport enter message has been set to:'));
         session.sendLine(colors.info(previewEnter));
         break;
@@ -98,7 +98,7 @@ const Command = {
         session.player.tpExitMessage = convertedTpExit;
         entityManager.markDirty(session.player.id);
 
-        const previewExit = convertedTpExit.replace('{name}', session.player.name);
+        const previewExit = convertedTpExit.replace('{name}', (session.player.capname || session.player.name));
         session.sendLine(colors.success('Your teleport exit message has been set to:'));
         session.sendLine(colors.info(previewExit));
         break;

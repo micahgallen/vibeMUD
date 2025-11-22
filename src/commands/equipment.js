@@ -19,7 +19,7 @@ module.exports = {
     let output = [];
     output.push('');
     output.push(colors.highlight('='.repeat(60)));
-    output.push(colors.highlight(`  ${player.name}'s Equipment`));
+    output.push(colors.highlight(`  ${(player.capname || player.name)}'s Equipment`));
     output.push(colors.highlight('='.repeat(60)));
     output.push('');
 

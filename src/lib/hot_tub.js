@@ -57,7 +57,7 @@ module.exports = {
       success: true,
       destination: 'hot_tub_room',
       enterMessage: "You ease yourself into the steaming water with a contented sigh.",
-      roomMessage: `${player.name} climbs into the hot tub.`
+      roomMessage: `${(player.capname || player.name)} climbs into the hot tub.`
     };
   }
 };

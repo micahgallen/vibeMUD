@@ -195,7 +195,7 @@ function setupNetworkCallbacks() {
           // Notify room of disconnect
           if (player.currentRoom) {
             entityManager.notifyRoom(player.currentRoom,
-              `\x1b[90m${player.name} has lost connection.\x1b[0m`,
+              `\x1b[90m${(player.capname || player.name)} has lost connection.\x1b[0m`,
               player.id);
           }
 
@@ -224,7 +224,7 @@ function setupNetworkCallbacks() {
               // Notify opponent if online
               if (opponent) {
                 entityManager.notifyPlayer(opponent.id,
-                  `\x1b[33m${player.name} has disconnected and fled from combat!\x1b[0m`);
+                  `\x1b[33m${(player.capname || player.name)} has disconnected and fled from combat!\x1b[0m`);
               }
 
               // Save after auto-flee
@@ -247,7 +247,7 @@ function setupNetworkCallbacks() {
       // Notify room of disconnect if not already notified (non-combat disconnect)
       if (!player.combat && player.currentRoom) {
         entityManager.notifyRoom(player.currentRoom,
-          `\x1b[90m${player.name} has lost connection.\x1b[0m`,
+          `\x1b[90m${(player.capname || player.name)} has lost connection.\x1b[0m`,
           player.id);
       }
 

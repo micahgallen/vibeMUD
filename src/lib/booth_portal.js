@@ -53,7 +53,7 @@ module.exports = {
       success: true,
       destination: 'booth_room',
       enterMessage: "You step into the booth.",
-      roomMessage: `${player.name} enters the booth.`
+      roomMessage: `${(player.capname || player.name)} enters the booth.`
     };
   }
 };

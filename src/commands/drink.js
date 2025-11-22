@@ -57,7 +57,7 @@ module.exports = {
         const action = item.alcoholic ? "downs" : "drinks";
         entityManager.notifyRoom(
           player.currentRoom,
-          `${colors.cyan(player.name)} ${action} ${item.name}.`,
+          `${colors.cyan(player.capname || player.name)} ${action} ${item.name}.`,
           player.id
         );
       }

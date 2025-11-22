@@ -332,7 +332,7 @@ class LoginHandler {
         // Notify opponent
         const opponentId = player.combat.opponent;
         this.entityManager.notifyPlayer(opponentId,
-          `\x1b[36m${player.name} has reconnected to combat!\x1b[0m`);
+          `\x1b[36m${(player.capname || player.name)} has reconnected to combat!\x1b[0m`);
 
       } else {
         // Combat ended while offline - clean up
@@ -361,7 +361,7 @@ class LoginHandler {
     // Notify room of arrival (unless reconnecting to combat)
     if (player.currentRoom && !player.combat) {
       this.entityManager.notifyRoom(player.currentRoom,
-        `\x1b[36m${player.name} has entered the game.\x1b[0m`,
+        `\x1b[36m${(player.capname || player.name)} has entered the game.\x1b[0m`,
         player.id);
     }
 
@@ -378,7 +378,7 @@ class LoginHandler {
       session.sendLine('');
     }
 
-    session.sendLine(`Welcome back, ${player.name}!`);
+    session.sendLine(`Welcome back, ${(player.capname || player.name)}!`);
     session.sendLine(this.colors.hint('Type "help" for a list of commands.'));
     session.sendLine('');
   }

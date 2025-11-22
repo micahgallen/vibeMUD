@@ -38,6 +38,9 @@ function engage(attackerId, defenderId, entityManager) {
     return;
   }
 
+  const attackerDisplayName = (attacker.type === 'player' ? (attacker.capname || attacker.name) : attacker.name);
+  const defenderDisplayName = (defender.type === 'player' ? (defender.capname || defender.name) : defender.name);
+
   // Check if attacker is a ghost
   if (attacker.isGhost) {
     entityManager.notifyPlayer(attackerId, 'You are a ghost and cannot fight until you respawn!');
@@ -46,7 +49,7 @@ function engage(attackerId, defenderId, entityManager) {
 
   // Check if defender is a ghost
   if (defender.isGhost) {
-    entityManager.notifyPlayer(attackerId, `${defender.name} is a ghost and cannot be attacked!`);
+    entityManager.notifyPlayer(attackerId, `${defenderDisplayName} is a ghost and cannot be attacked!`);
     return;
   }
 
@@ -57,7 +60,7 @@ function engage(attackerId, defenderId, entityManager) {
   }
 
   if (defender.combat) {
-    entityManager.notifyPlayer(attackerId, `${defender.name} is already in combat!`);
+    entityManager.notifyPlayer(attackerId, `${defenderDisplayName} is already in combat!`);
     return;
   }
 
@@ -83,13 +86,13 @@ function engage(attackerId, defenderId, entityManager) {
   entityManager.markDirty(defenderId);
 
   // Notify participants and room
-  entityManager.notifyPlayer(attackerId, `\x1b[31mYou attack ${defender.name}!\x1b[0m`);
-  entityManager.notifyPlayer(defenderId, `\x1b[31m${attacker.name} attacks you!\x1b[0m`);
+  entityManager.notifyPlayer(attackerId, `\x1b[31mYou attack ${defenderDisplayName}!\x1b[0m`);
+  entityManager.notifyPlayer(defenderId, `\x1b[31m${attackerDisplayName} attacks you!\x1b[0m`);
 
   const room = attacker.currentRoom;
   if (room) {
     entityManager.notifyRoom(room,
-      `\x1b[31m${attacker.name} attacks ${defender.name}!\x1b[0m`,
+      `\x1b[31m${attackerDisplayName} attacks ${defenderDisplayName}!\x1b[0m`,
       [attackerId, defenderId]);
   }
 
@@ -150,7 +153,8 @@ function disengage(participantId, entityManager) {
     delete opponent.combat;
     delete opponent.isDisconnected;
     entityManager.markDirty(opponentId);
-    entityManager.notifyPlayer(opponentId, `\x1b[33m${participant.name} has fled from combat!\x1b[0m`);
+    const participantDisplayName = (participant.type === 'player' ? (participant.capname || participant.name) : participant.name);
+    entityManager.notifyPlayer(opponentId, `\x1b[33m${participantDisplayName} has fled from combat!\x1b[0m`);
   }
 
   // Remove combat heartbeat and encounter object
@@ -260,6 +264,9 @@ function executeAttack(attackerId, defenderId, entityManager) {
     return false;
   }
 
+  const attackerDisplayName = (attacker.type === 'player' ? (attacker.capname || attacker.name) : attacker.name);
+  const defenderDisplayName = (defender.type === 'player' ? (defender.capname || defender.name) : defender.name);
+
   // Roll to hit
   const hit = rollToHit(attacker, defender, entityManager);
 
@@ -270,14 +277,14 @@ function executeAttack(attackerId, defenderId, entityManager) {
     // Check for immunity
     if (damageInfo.immune) {
       entityManager.notifyPlayer(attackerId,
-        `\x1b[90m${defender.name} is immune to ${damageInfo.damageType} damage!\x1b[0m`);
+        `\x1b[90m${defenderDisplayName} is immune to ${damageInfo.damageType} damage!\x1b[0m`);
       entityManager.notifyPlayer(defenderId,
-        `\x1b[90mYou are immune to ${attacker.name}'s ${damageInfo.damageType} attack!\x1b[0m`);
+        `\x1b[90mYou are immune to ${attackerDisplayName}'s ${damageInfo.damageType} attack!\x1b[0m`);
 
       const room = attacker.currentRoom;
       if (room) {
         entityManager.notifyRoom(room,
-          `\x1b[90m${defender.name} is immune to ${attacker.name}'s attack!\x1b[0m`,
+          `\x1b[90m${defenderDisplayName} is immune to ${attackerDisplayName}'s attack!\x1b[0m`,
           [attackerId, defenderId]);
       }
       return true;
@@ -295,15 +302,15 @@ function executeAttack(attackerId, defenderId, entityManager) {
 
     // Notify participants
     entityManager.notifyPlayer(attackerId,
-      `\x1b[32mYou hit ${defender.name} for \x1b[33m${damageMsg}\x1b[32m!\x1b[0m`);
+      `\x1b[32mYou hit ${defenderDisplayName} for \x1b[33m${damageMsg}\x1b[32m!\x1b[0m`);
     entityManager.notifyPlayer(defenderId,
-      `\x1b[31m${attacker.name} hits you for \x1b[33m${damageMsg}\x1b[31m!\x1b[0m`);
+      `\x1b[31m${attackerDisplayName} hits you for \x1b[33m${damageMsg}\x1b[31m!\x1b[0m`);
 
     // Notify room
     const room = attacker.currentRoom;
     if (room) {
       entityManager.notifyRoom(room,
-        `\x1b[33m${attacker.name} hits ${defender.name} for ${damageInfo.amount} damage!\x1b[0m`,
+        `\x1b[33m${attackerDisplayName} hits ${defenderDisplayName} for ${damageInfo.amount} damage!\x1b[0m`,
         [attackerId, defenderId]);
     }
 
@@ -311,15 +318,15 @@ function executeAttack(attackerId, defenderId, entityManager) {
   } else {
     // Miss
     entityManager.notifyPlayer(attackerId,
-      `\x1b[90mYou miss ${defender.name}!\x1b[0m`);
+      `\x1b[90mYou miss ${defenderDisplayName}!\x1b[0m`);
     entityManager.notifyPlayer(defenderId,
-      `\x1b[90m${attacker.name} misses you!\x1b[0m`);
+      `\x1b[90m${attackerDisplayName} misses you!\x1b[0m`);
 
     // Notify room
     const room = attacker.currentRoom;
     if (room) {
       entityManager.notifyRoom(room,
-        `\x1b[90m${attacker.name} misses ${defender.name}!\x1b[0m`,
+        `\x1b[90m${attackerDisplayName} misses ${defenderDisplayName}!\x1b[0m`,
         [attackerId, defenderId]);
     }
 
@@ -549,6 +556,8 @@ function handleDeath(deadId, killerId, entityManager, options = {}) {
   if (!dead) return;
 
   const room = dead.currentRoom;
+  const deadDisplayName = (dead.type === 'player' ? (dead.capname || dead.name) : dead.name);
+  const killerDisplayName = killer ? (killer.type === 'player' ? (killer.capname || killer.name) : killer.name) : 'unknown';
 
   // Clear combat state
   if (dead.combat) {
@@ -564,13 +573,13 @@ function handleDeath(deadId, killerId, entityManager, options = {}) {
   // Notify room of death
   if (room) {
     entityManager.notifyRoom(room,
-      `\x1b[31m${dead.name} has been slain!\x1b[0m`);
+      `\x1b[31m${deadDisplayName} has been slain!\x1b[0m`);
   }
 
   // Notify killer
   if (killer) {
     entityManager.notifyPlayer(killerId,
-      `\x1b[32mYou have slain ${dead.name}!\x1b[0m`);
+      `\x1b[32mYou have slain ${deadDisplayName}!\x1b[0m`);
   }
 
   console.log(`  💀 ${dead.name} was slain by ${killer ? killer.name : 'unknown'}`);
@@ -647,15 +656,16 @@ function createCorpse(dead, roomId, entityManager) {
 
   // Generate unique corpse ID
   const corpseId = `corpse_${dead.id}_${Date.now()}`;
+  const deadDisplayName = (dead.type === 'player' ? (dead.capname || dead.name) : dead.name);
 
   // Create corpse object with prototypal inheritance
   const corpse = Object.create(corpseDef);
   Object.assign(corpse, {
     id: corpseId,
-    name: `the corpse of ${dead.name}`,
+    name: `the corpse of ${deadDisplayName}`,
     description: dead.type === 'player'
-      ? `The lifeless body of ${dead.name} lies here.`
-      : `The remains of ${dead.name} lie here.`,
+      ? `The lifeless body of ${deadDisplayName} lies here.`
+      : `The remains of ${deadDisplayName} lie here.`,
     location: { type: 'room', room: roomId },
     inventory: [],
     createdAt: Date.now(),
@@ -814,7 +824,7 @@ function respawnPlayer(playerId, entityManager) {
 
   // Notify respawn room
   entityManager.notifyRoom(respawnRoom,
-    `\x1b[36m${player.name} materializes from the void.\x1b[0m`,
+    `\x1b[36m${(player.capname || player.name)} materializes from the void.\x1b[0m`,
     playerId);
 
   console.log(`  ✨ ${player.name} respawned at ${respawnRoom}`);

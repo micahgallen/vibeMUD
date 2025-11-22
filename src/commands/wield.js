@@ -104,7 +104,7 @@ module.exports = {
     const room = entityManager.get(player.currentRoom);
     if (room) {
       entityManager.notifyRoom(room.id,
-        colors.action(`${player.name} wields ${foundItem.name}.`),
+        colors.action(`${(player.capname || player.name)} wields ${foundItem.name}.`),
         player.id);
     }
 

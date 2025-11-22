@@ -54,7 +54,7 @@ module.exports = {
       success: true,
       destination: 'elevator_room',
       enterMessage: "The brass doors slide open with a dignified wheeze, and you step inside.",
-      roomMessage: `${player.name} enters the elevator.`
+      roomMessage: `${(player.capname || player.name)} enters the elevator.`
     };
   }
 };

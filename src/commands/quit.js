@@ -28,12 +28,12 @@ module.exports = {
     session.sendLine('');
     session.sendLine('Saving and disconnecting...');
 
-    // Notify room of departure
-    if (player.currentRoom) {
-      entityManager.notifyRoom(player.currentRoom,
-        `\x1b[90m${player.name} has left the game.\x1b[0m`,
-        player.id);
-    }
+      // Notify room
+      if (player.currentRoom) {
+        entityManager.notifyRoom(player.currentRoom,
+          `\x1b[90m${(player.capname || player.name)} has left the game.\x1b[0m`,
+          player.id);
+      }
 
     // Unregister session before closing socket
     entityManager.unregisterSession(player.id);

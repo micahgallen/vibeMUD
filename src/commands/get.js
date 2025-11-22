@@ -193,7 +193,7 @@ module.exports = {
 
       // Notify room
       entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${player.name} picks up some coins.`),
+        colors.dim(`${(player.capname || player.name)} picks up some coins.`),
         player.id);
 
     } catch (error) {
@@ -232,7 +232,7 @@ module.exports = {
 
       // Notify room
       entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${player.name} reclaims their possessions from ${corpse.name}, which crumbles to dust.`),
+        colors.dim(`${(player.capname || player.name)} reclaims their possessions from ${corpse.name}, which crumbles to dust.`),
         player.id);
 
     } catch (error) {

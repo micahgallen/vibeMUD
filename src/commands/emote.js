@@ -62,9 +62,12 @@ module.exports = {
         s.player.id !== player.id
       );
 
-      const playerTarget = playersInRoom.find(s =>
-        s.player.name.toLowerCase().startsWith(targetName)
-      );
+      const playerTarget = playersInRoom.find(s => {
+        const p = s.player;
+        const capname = (p.capname || '').toLowerCase();
+        const name = p.name.toLowerCase();
+        return capname.startsWith(targetName) || name.startsWith(targetName);
+      });
 
       if (playerTarget) {
         target = playerTarget;

@@ -294,12 +294,12 @@ module.exports = Object.create(item, {
           // Also notify the room
           if (player.currentRoom) {
             const roomEmotes = [
-              `${player.name} hiccups loudly.`,
-              `${player.name} stumbles about with a goofy grin.`,
-              `${player.name} burps magnificently.`,
-              `${player.name} sways dangerously.`,
-              `${player.name} giggles at something only they find funny.`,
-              `${player.name} looks like they're having a GREAT time.`
+              `${(player.capname || player.name)} hiccups loudly.`,
+              `${(player.capname || player.name)} stumbles about with a goofy grin.`,
+              `${(player.capname || player.name)} burps magnificently.`,
+              `${(player.capname || player.name)} sways dangerously.`,
+              `${(player.capname || player.name)} giggles at something only they find funny.`,
+              `${(player.capname || player.name)} looks like they're having a GREAT time.`
             ];
             const roomEmote = roomEmotes[Math.floor(Math.random() * roomEmotes.length)];
             entityManager.notifyRoom(player.currentRoom, `\x1b[33m${roomEmote}\x1b[0m`, player.id);
