@@ -88,4 +88,24 @@ telnet localhost 4000
 *   `docs/SYSTEM_DESIGN.md`: Detailed architecture documentation.
 *   `docs/design_quick.md`: Quick reference guide.
 
+**7. File Placement Rules (CRITICAL):**
+
+**NEVER create files in the root directory except:**
+*   `CLAUDE.md`, `GEMINI.md`, `README.md` (core documentation)
+*   `package.json`, `package-lock.json` (npm configuration)
+*   `.gitignore` (git configuration)
+
+**Always use the appropriate directories:**
+*   **Documentation files**: `docs/` - All planning documents, system designs, maps, summaries, implementation plans, READMEs
+*   **Test files**: `utils/tests/` - All test scripts (test_*.js), validation scripts (validate_*.js), verification scripts (verify_*.js)
+*   **Utility scripts**: `utils/` - Migration scripts, helper scripts, one-off utilities
+*   **Source code**: `src/` - All production code (commands, systems, lib definitions, world content)
+*   **AI agent definitions**: `.claude/agents/` - Specialized agent definitions
+
+**Common mistakes to avoid:**
+*   ❌ Creating `test_something.js` in root → ✅ Create in `utils/tests/`
+*   ❌ Creating `PLAN.md` in root → ✅ Create in `docs/`
+*   ❌ Creating `validate_data.js` in root → ✅ Create in `utils/tests/`
+*   ❌ Creating `migrate_items.js` in root → ✅ Create in `utils/`
+
 This `GEMINI.md` will serve as a foundational document for understanding the `vibeMUD` project and guiding future interactions.

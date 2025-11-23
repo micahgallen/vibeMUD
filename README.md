@@ -101,11 +101,14 @@ src/
 ├── banner.js               # Welcome screen
 └── colors.js               # Color system
 
-docs/
+docs/                       # Documentation
 ├── SYSTEM_DESIGN.md        # Detailed architecture docs
 └── design_quick.md         # Quick reference guide
 
-demo.js                     # Demonstration script
+utils/                      # Utilities and tests
+├── tests/                  # Test and validation scripts
+└── migrate_inventories.js  # Migration utilities
+
 package.json
 ```
 
@@ -480,9 +483,6 @@ WORLD (instances)
 ## Testing
 
 ```bash
-# Run the demo script
-node demo.js
-
 # Start the server
 npm start
 
@@ -491,6 +491,13 @@ telnet localhost 4000
 
 # Or use any MUD client
 ```
+
+**Test Scripts:**
+All test and validation scripts are located in `utils/tests/`:
+- `test_integration.js` - Integration tests
+- `test_combat.js` - Combat system tests
+- `validate_json.js` - JSON validation
+- And more...
 
 ### Validation
 
@@ -561,6 +568,32 @@ For larger scales, add database layer (same architecture applies).
 - `CLAUDE.md` - Instructions for AI assistants working on this codebase
 - `docs/SYSTEM_DESIGN.md` - Detailed architecture documentation
 - `docs/design_quick.md` - Quick reference guide
+
+---
+
+## File Organization Rules
+
+**IMPORTANT: Keep the root directory clean!**
+
+Only these files belong in the root directory:
+- `CLAUDE.md`, `GEMINI.md`, `README.md` - Core documentation
+- `package.json`, `package-lock.json` - npm configuration
+- `.gitignore` - Git configuration
+
+**All other files must go in appropriate subdirectories:**
+
+| File Type | Correct Location | Examples |
+|-----------|-----------------|----------|
+| Documentation | `docs/` | System designs, plans, maps, guides |
+| Tests | `utils/tests/` | test_*.js, validate_*.js, verify_*.js |
+| Utilities | `utils/` | Migration scripts, helper tools |
+| Source Code | `src/` | Commands, systems, lib definitions |
+| AI Agents | `.claude/agents/` | Specialized agent definitions |
+
+**Examples:**
+- ❌ `test_combat.js` in root → ✅ `utils/tests/test_combat.js`
+- ❌ `COMBAT_PLAN.md` in root → ✅ `docs/COMBAT_PLAN.md`
+- ❌ `migrate_items.js` in root → ✅ `utils/migrate_items.js`
 
 ---
 

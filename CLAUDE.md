@@ -513,6 +513,32 @@ The server auto-saves dirty objects every second.
 - **Rich command set**: 59 commands covering movement, combat, shopping, banking, inventory management
 - **Emote system**: 43 social emotes for player expression
 
+### File Placement Rules (CRITICAL)
+
+**NEVER place files in the root directory except:**
+- `CLAUDE.md`, `GEMINI.md`, `README.md` (documentation)
+- `package.json`, `package-lock.json` (npm configuration)
+- `.gitignore` (git configuration)
+
+**Always use proper directories:**
+- **Documentation**: `docs/` - All planning docs, system designs, maps, summaries, READMEs, implementation plans
+- **Tests**: `utils/tests/` - All test scripts, validation scripts, verification scripts
+- **Utilities**: `utils/` - Migration scripts, helper scripts, one-off utilities
+- **Source code**: `src/` - All production code (commands, systems, lib definitions, world content)
+- **Claude agents**: `.claude/agents/` - Specialized agent definitions
+
+**Examples of what NOT to do:**
+- ❌ Creating `test_feature.js` in root
+- ❌ Creating `FEATURE_PLAN.md` in root
+- ❌ Creating `validate_data.js` in root
+- ❌ Creating `migrate_items.js` in root
+
+**Examples of correct placement:**
+- ✅ `utils/tests/test_feature.js`
+- ✅ `docs/FEATURE_PLAN.md`
+- ✅ `utils/tests/validate_data.js`
+- ✅ `utils/migrate_items.js`
+
 ### Technical Details
 
 - Player authentication uses SHA-256 password hashing (see `src/utils/password.js`)
