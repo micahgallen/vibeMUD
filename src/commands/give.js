@@ -121,18 +121,10 @@ module.exports = {
       }
 
       // Notify room (excluding the two players involved)
-      const playersInRoom = Array.from(entityManager.objects.values()).filter(obj =>
-        obj.type === 'player' &&
-        obj.currentRoom === player.currentRoom &&
-        obj.id !== player.id &&
-        obj.id !== targetPlayer.id
+      entityManager.notifyRoom(player.currentRoom,
+        colors.dim(`${playerDisplayName} gives ${Currency.format(coinsToGive)} to ${targetDisplayName}.`),
+        [player.id, targetPlayer.id]  // Exclude both players
       );
-
-      for (const otherPlayer of playersInRoom) {
-        entityManager.notifyPlayer(otherPlayer.id,
-          colors.dim(`${playerDisplayName} gives some coins to ${targetDisplayName}.`)
-        );
-      }
 
     } catch (error) {
       session.sendLine(colors.error(`Error: ${error.message}`));
@@ -165,24 +157,25 @@ module.exports = {
         owner: targetPlayer.id
       });
 
-      // Get display names
+      // Get display names and item name
       const playerDisplayName = display.getDisplayName(player);
       const targetDisplayName = display.getDisplayName(targetPlayer);
+      const itemDisplayName = item.getDisplayName ? item.getDisplayName() : item.name;
 
       // Notify both players
-      session.sendLine(colors.success(`You give ${item.name} to ${targetDisplayName}.`));
+      session.sendLine(colors.success(`You give ${itemDisplayName} to ${targetDisplayName}.`));
 
       const targetSession = Array.from(entityManager.sessions.values()).find(s =>
         s.state === 'playing' && s.player && s.player.id === targetPlayer.id
       );
 
       if (targetSession) {
-        targetSession.sendLine(colors.success(`${playerDisplayName} gives you ${item.name}.`));
+        targetSession.sendLine(colors.success(`${playerDisplayName} gives you ${itemDisplayName}.`));
       }
 
       // Notify room (excluding the two players involved)
       entityManager.notifyRoom(player.currentRoom,
-        colors.dim(`${playerDisplayName} gives something to ${targetDisplayName}.`),
+        colors.dim(`${playerDisplayName} gives ${itemDisplayName} to ${targetDisplayName}.`),
         [player.id, targetPlayer.id]  // Exclude both players
       );
 

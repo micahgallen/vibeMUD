@@ -70,14 +70,17 @@ module.exports = {
 
     // Handle stack splitting if quantity specified and item is stackable
     try {
+      let droppedDisplayName = null;
+
       if (dropQuantity && item.stackable && item.quantity > 1) {
         if (dropQuantity >= item.quantity) {
           // Dropping entire stack
+          droppedDisplayName = item.getDisplayName();
           entityManager.move(item.id, {
             type: 'room',
             room: player.currentRoom
           });
-          session.sendLine(colors.warning(`You drop ${item.getDisplayName()}.`));
+          session.sendLine(colors.warning(`You drop ${droppedDisplayName}.`));
         } else if (dropQuantity < 1) {
           session.sendLine('You must drop at least 1.');
           return;
@@ -85,24 +88,32 @@ module.exports = {
           // Split the stack
           const splitStack = item.split(dropQuantity, entityManager);
           if (splitStack) {
+            droppedDisplayName = splitStack.getDisplayName();
             // Move the split stack to the room
             entityManager.move(splitStack.id, {
               type: 'room',
               room: player.currentRoom
             });
-            session.sendLine(colors.warning(`You drop ${splitStack.getDisplayName()}.`));
+            session.sendLine(colors.warning(`You drop ${droppedDisplayName}.`));
           } else {
             session.sendLine(colors.error('Unable to split that item.'));
           }
         }
       } else {
         // Drop entire item/stack
+        droppedDisplayName = item.getDisplayName ? item.getDisplayName() : item.name;
         entityManager.move(item.id, {
           type: 'room',
           room: player.currentRoom
         });
-        const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
-        session.sendLine(colors.warning(`You drop ${displayName}.`));
+        session.sendLine(colors.warning(`You drop ${droppedDisplayName}.`));
+      }
+
+      // Notify room if something was actually dropped
+      if (droppedDisplayName) {
+        entityManager.notifyRoom(player.currentRoom,
+          colors.dim(`${player.name} drops ${droppedDisplayName}.`),
+          player.id);
       }
     } catch (error) {
       session.sendLine(colors.error(`Error: ${error.message}`));

@@ -118,6 +118,12 @@ module.exports = {
           const success = existingStack.stackWith(item, entityManager);
           if (success) {
             session.sendLine(colors.success(`You pick up ${displayName}.`));
+
+            // Notify room
+            entityManager.notifyRoom(player.currentRoom,
+              colors.dim(`${player.name} picks up ${displayName}.`),
+              player.id);
+
             stacked = true;
           }
         }
@@ -131,6 +137,11 @@ module.exports = {
         });
         const displayName = item.getDisplayName ? item.getDisplayName() : item.name;
         session.sendLine(colors.success(`You pick up ${displayName}.`));
+
+        // Notify room
+        entityManager.notifyRoom(player.currentRoom,
+          colors.dim(`${player.name} picks up ${displayName}.`),
+          player.id);
       }
     } catch (error) {
       session.sendLine(colors.error(`Error: ${error.message}`));
