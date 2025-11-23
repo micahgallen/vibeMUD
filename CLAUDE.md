@@ -193,30 +193,57 @@ src/
   │   ├── Session.js          # Player connections
   │   └── colors.js           # ANSI colors
   │
-  ├── lib/                    # Object Definitions (behavior)
+  ├── lib/                    # Object Definitions (19 total)
   │   ├── monster.js          # Base monster
   │   ├── torch.js            # Torch with burning heartbeat
-  │   ├── room.js
-  │   └── healing_room.js
+  │   ├── room.js, healing_room.js, hot_tub_room.js
+  │   ├── item.js, weapon.js, armor.js, consumable.js
+  │   ├── coin.js, corpse.js, emote.js, signs.js
+  │   ├── shop.js, bank.js
+  │   ├── booth_portal.js, elevator_portal.js, haunted_elevator.js
+  │   └── hot_tub.js
   │
-  ├── commands/               # Command Definitions
-  │   ├── look.js             # Each exports { name, aliases, execute() }
-  │   ├── get.js
-  │   ├── drop.js
-  │   ├── put.js
-  │   └── ... (16 total)
+  ├── commands/               # Command Definitions (59 total)
+  │   ├── look.js, get.js, drop.js, put.js
+  │   ├── attack.js, cast.js, flee.js, kill.js
+  │   ├── buy.js, sell.js, list.js, value.js
+  │   ├── wear.js, wield.js, equipment.js
+  │   ├── eat.js, drink.js, loot.js
+  │   ├── deposit.js, withdraw.js, balance.js, coins.js
+  │   └── ... (see src/commands/ for full list)
   │
-  ├── systems/                # Game-Wide Rules (directory exists)
-  │   └── guilds/             # Guild system structure
+  ├── emotes/                 # Emote Definitions (43 total)
+  │   ├── applaud.json, bow.json, cheer.json
+  │   ├── dance.json, laugh.json, smile.json
+  │   └── ... (see src/emotes/ for full list)
   │
-  ├── spells/                 # Universal Spells (directory exists, empty)
+  ├── systems/                # Game-Wide Rules (11 systems)
+  │   ├── combat.js           # Combat mechanics
+  │   ├── magic.js            # Magic system
+  │   ├── mana.js             # Mana management
+  │   ├── leveling.js         # XP and leveling
+  │   ├── loot.js             # Loot generation
+  │   ├── currency.js         # Currency system
+  │   ├── weight.js           # Weight/encumbrance
+  │   ├── resistances.js      # Damage resistances
+  │   ├── movement.js         # Movement mechanics
+  │   ├── descriptions.js     # Description system
+  │   └── colorization.js     # Text colorization
+  │
+  ├── spells/                 # Universal Spells (directory exists)
   │
   ├── world/                  # Game World (static content)
-  │   └── newbie_realm/
-  │       ├── rooms/
-  │       ├── npcs/
-  │       ├── items/
-  │       └── containers/
+  │   ├── newbie_realm/       # Tutorial area
+  │   │   ├── rooms/, npcs/, items/, containers/
+  │   ├── sesame_street/      # Sesame Street themed area
+  │   │   ├── rooms/, npcs/, items/
+  │   ├── reality_street/     # Reality-themed area
+  │   │   ├── rooms/, npcs/
+  │   ├── hill_valley/        # Back to the Future area
+  │   │   ├── 1885/, 1955/, 1985/, 1985alt/, 2015/
+  │   │   └── items/
+  │   └── shared/             # Shared rooms
+  │       └── rooms/
   │
   ├── data/                   # Runtime Save Data
   │   └── players/            # Player save files ONLY
@@ -226,6 +253,14 @@ src/
   │
   ├── banner.js
   └── colors.js
+
+.claude/                      # Claude Code Agents
+  └── agents/
+      ├── mud-coder.md        # Implementation specialist
+      ├── mud-architect.md    # System designer
+      ├── mud-world-builder.md # Content creator
+      ├── mud-spatial-mapper.md # Spatial layout
+      └── wumpy-content-porter.md # Legacy content migration
 
 demo.js                       # Demonstration script
 docs/                         # Documentation
@@ -273,6 +308,29 @@ module.exports = {
 ```
 
 Commands are automatically loaded by the server at startup.
+
+### Emote System
+
+The emote system allows players to express actions and emotions. Emotes are JSON files in `src/emotes/`:
+
+```json
+{
+  "id": "dance",
+  "name": "dance",
+  "category": "social",
+  "first": "You dance around happily!",
+  "third": "{actor} dances around happily!",
+  "targetFirst": "You dance with {target}!",
+  "targetSecond": "{actor} dances with you!",
+  "targetThird": "{actor} dances with {target}!"
+}
+```
+
+Players can use emotes via the `emote` command (e.g., `emote dance` or `emote dance bob`). The system supports:
+- **43 emotes** including: applaud, bow, cheer, dance, laugh, smile, etc.
+- **Self emotes**: Message to actor and room when no target
+- **Targeted emotes**: Messages to actor, target, and room when targeting someone
+- **Dynamic templates**: `{actor}` and `{target}` are replaced with actual names
 
 ### Heartbeat System
 
@@ -379,6 +437,21 @@ The server auto-saves dirty objects every second.
 2. Define exits: `{ "exits": { "north": "other_room_id" } }`
 3. Optional: Add `items` array for objects on the floor
 
+### Adding a New World/Realm
+
+1. Create directory structure in `src/world/[realm_name]/`
+2. Add subdirectories: `rooms/`, `npcs/`, `items/`, `containers/` as needed
+3. Create room JSON files with unique IDs across all realms
+4. Link realms via room exits or portal objects
+5. Consider using themed naming (e.g., `sesame_street_*`, `hill_valley_*`)
+
+**Existing realms**:
+- `newbie_realm` - Tutorial area
+- `sesame_street` - Sesame Street themed world
+- `reality_street` - Reality-themed area
+- `hill_valley` - Back to the Future world (1885, 1955, 1985, 1985alt, 2015)
+- `shared` - Common/shared rooms
+
 ### Adding Dynamic Behavior
 
 1. Create definition in `src/lib/objectname.js`
@@ -386,18 +459,39 @@ The server auto-saves dirty objects every second.
 3. Set `heartbeatInterval` in object JSON instance
 4. Heartbeat executes periodically after `initializeHeartbeats()`
 
-### Adding Game Systems (Planned)
+### Adding Game Systems
 
 1. Create system file in `src/systems/systemname.js`
 2. Export module with system functions
-3. Systems provide game-wide rules (combat, magic, economy, guilds)
+3. Systems provide game-wide rules (combat, magic, economy, leveling, etc.)
 4. Can be called from commands, heartbeats, or other systems
 
-### Adding Spells (Planned)
+**Implemented systems** (11 total):
+- `combat.js` - Combat mechanics and damage calculation
+- `magic.js` - Spell casting and magic system
+- `mana.js` - Mana management and regeneration
+- `leveling.js` - Experience points and character progression
+- `loot.js` - Loot generation and drops
+- `currency.js` - Money and currency handling
+- `weight.js` - Weight and encumbrance system
+- `resistances.js` - Damage type resistances
+- `movement.js` - Movement mechanics and restrictions
+- `descriptions.js` - Dynamic description generation
+- `colorization.js` - Text colorization utilities
+
+### Adding Emotes
+
+1. Create JSON file in `src/emotes/emotename.json`
+2. Define `first`, `third`, `targetFirst`, `targetSecond`, `targetThird` messages
+3. Use `{actor}` and `{target}` placeholders for dynamic names
+4. Server auto-loads on startup
+
+### Adding Spells
 
 1. Universal spells: `src/spells/spellname.js`
 2. Guild-specific spells: `src/systems/guilds/[guild]/spells/spellname.js`
-3. Include `cast(caster, target, entityManager, power)` function
+3. Include appropriate casting logic and effects
+4. Integrate with magic.js and mana.js systems
 
 ## Important Notes
 
@@ -413,8 +507,11 @@ The server auto-saves dirty objects every second.
 - **All legacy files removed**: No more root-level EntityManager.js, HeartbeatHandlers.js, or server.js
 - **Unified structure**: All code now lives in `src/` following the design_quick.md architecture
 - **Data consolidated**: Runtime save data (players only) in `src/data/players/`, world content in `src/world/`
-- **Systems ready**: `src/systems/` and `src/spells/` directories exist and ready for implementation
+- **Systems implemented**: 11 game systems in `src/systems/` (combat, magic, leveling, currency, loot, etc.)
 - **Heartbeats modernized**: Heartbeat functions are in object definitions (see `src/lib/torch.js`)
+- **Multiple worlds**: newbie_realm, sesame_street, reality_street, hill_valley (BTTF themed)
+- **Rich command set**: 59 commands covering movement, combat, shopping, banking, inventory management
+- **Emote system**: 43 social emotes for player expression
 
 ### Technical Details
 
@@ -430,6 +527,22 @@ Remember the architecture hierarchy when adding features:
 2. **SYSTEMS**: Game-wide rules (combat, magic, economy) - defines "how the game works"
 3. **LIB**: Object behaviors (monster, torch, room definitions) - reusable templates
 4. **WORLD**: Specific instances (The Wumpy and Grift content) - actual game content
+
+### Specialized Claude Agents
+
+This repository includes specialized agents in `.claude/agents/` for different development tasks:
+
+- **mud-coder.md**: Implementation specialist - Use when implementing features, systems, or objects based on architectural plans. Handles creating lib definitions, commands, world content, and system implementations.
+
+- **mud-architect.md**: System designer - Use for architectural decisions and high-level system design.
+
+- **mud-world-builder.md**: Content creator - Use when creating new game world content, areas, and narrative elements.
+
+- **mud-spatial-mapper.md**: Spatial layout specialist - Use for designing room layouts and spatial relationships.
+
+- **wumpy-content-porter.md**: Legacy migration expert - Use when porting content from /home/micah/wumpy to the new vibeMUD architecture. Handles careful translation while preserving descriptions and gameplay.
+
+These agents are designed to work together: architect designs systems, coder implements them, world-builder creates content, spatial-mapper organizes geography, and content-porter migrates legacy material.
 
 ### Testing Protocol (CRITICAL)
 
