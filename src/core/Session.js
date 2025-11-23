@@ -36,7 +36,18 @@ class Session {
 
       // Apply global word templates first (unless already processed)
       if (!options._templateProcessed && typeof output === 'string') {
-        output = colorization.processGlobalTemplates(output);
+        // Detect context color from start of message to preserve base color after template resets
+        let contextColor = null;
+
+        // Check if message starts with an ANSI color code
+        // eslint-disable-next-line no-control-regex
+        const ansiMatch = output.match(/^\x1b\[(\d+)m/);
+        if (ansiMatch) {
+          const ansiCode = `\x1b[${ansiMatch[1]}m`;
+          contextColor = Session._ansiToTagName(ansiCode);
+        }
+
+        output = colorization.processGlobalTemplates(output, contextColor);
         // Mark as processed to prevent double-application
         options._templateProcessed = true;
       }
@@ -117,6 +128,38 @@ class Session {
     if (this.player) {
       this.socket.write('> ');
     }
+  }
+
+  /**
+   * Map ANSI color codes to tag names for context color restoration
+   * This is used to detect the base color of messages so templates can restore it
+   *
+   * @param {string} ansiCode - ANSI color code (e.g., '\x1b[95m')
+   * @returns {string|null} Tag name (e.g., 'bright_magenta') or null if unmapped
+   * @private
+   */
+  static _ansiToTagName(ansiCode) {
+    // Map common ANSI codes to their tag names
+    const ANSI_TO_TAG = {
+      '\x1b[30m': 'black',
+      '\x1b[31m': 'red',
+      '\x1b[32m': 'green',
+      '\x1b[33m': 'yellow',
+      '\x1b[34m': 'blue',
+      '\x1b[35m': 'magenta',
+      '\x1b[36m': 'cyan',
+      '\x1b[37m': 'white',
+      '\x1b[90m': 'bright_black',
+      '\x1b[91m': 'bright_red',
+      '\x1b[92m': 'bright_green',
+      '\x1b[93m': 'bright_yellow',
+      '\x1b[94m': 'bright_blue',
+      '\x1b[95m': 'bright_magenta',  // Emote color
+      '\x1b[96m': 'bright_cyan',
+      '\x1b[97m': 'bright_white'
+    };
+
+    return ANSI_TO_TAG[ansiCode] || null;
   }
 }
 

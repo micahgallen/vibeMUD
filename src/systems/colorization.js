@@ -381,9 +381,10 @@ function buildTemplateRegex() {
  * Finds all words with templates and replaces them with case-aware colorized versions
  *
  * @param {string} text - Text to process
+ * @param {string|null} contextColor - Optional context color tag name to restore after template closes
  * @returns {string} Text with templates applied
  */
-function processGlobalTemplates(text) {
+function processGlobalTemplates(text, contextColor = null) {
   if (!text || typeof text !== 'string') return text;
 
   // Early exit if no templates
@@ -451,7 +452,14 @@ function processGlobalTemplates(text) {
 
     if (template) {
       // Apply case from matched word to template
-      const colorizedWord = applyCaseToTemplate(template, matchedWord);
+      let colorizedWord = applyCaseToTemplate(template, matchedWord);
+
+      // If contextColor is provided, append it after closing tags to restore context
+      // This fixes the issue where template closing tags reset to white instead of base color
+      if (contextColor) {
+        // Replace all closing tags (</> or </tagname>) with closing tag + context restore
+        colorizedWord = colorizedWord.replace(/(<\/[\w_]*>)/g, `$1<${contextColor}>`);
+      }
 
       // Store replacement (we'll apply them in reverse order to preserve positions)
       replacements.push({
