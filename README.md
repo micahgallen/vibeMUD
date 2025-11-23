@@ -53,44 +53,59 @@ src/
 │   ├── LoginHandler.js     # Authentication
 │   └── colors.js           # ANSI color utilities
 │
-├── lib/                    # Object Definitions (behavior)
+├── lib/                    # Object Definitions (19 total)
 │   ├── monster.js          # Base monster template
 │   ├── torch.js            # Torch with burning heartbeat
-│   ├── room.js             # Base room
-│   └── healing_room.js     # Room with healing heartbeat
+│   ├── room.js, healing_room.js, hot_tub_room.js
+│   ├── item.js, weapon.js, armor.js, consumable.js
+│   ├── coin.js, corpse.js, emote.js, signs.js
+│   ├── shop.js, bank.js
+│   ├── booth_portal.js, elevator_portal.js, haunted_elevator.js
+│   └── hot_tub.js
 │
-├── commands/               # Command Definitions
-│   ├── look.js             # Look at surroundings
-│   ├── get.js              # Pick up items
-│   ├── drop.js             # Drop items
-│   ├── inventory.js        # Check inventory
-│   ├── north.js, south.js, east.js, west.js  # Movement
-│   ├── open.js, close.js   # Container interaction
-│   ├── put.js              # Put items in containers
-│   ├── examine.js          # Detailed examination
-│   ├── help.js             # Command list
-│   ├── who.js              # Online players
-│   ├── save.js             # Manual save
-│   └── quit.js             # Exit game
+├── commands/               # Command Definitions (59 total)
+│   ├── look.js, get.js, drop.js, inventory.js
+│   ├── north.js, south.js, east.js, west.js, up.js, down.js
+│   ├── open.js, close.js, put.js, examine.js
+│   ├── attack.js, cast.js, flee.js, kill.js
+│   ├── buy.js, sell.js, list.js, value.js
+│   ├── wear.js, wield.js, equipment.js
+│   ├── eat.js, drink.js, loot.js
+│   ├── deposit.js, withdraw.js, balance.js, coins.js
+│   ├── say.js, chat.js, emote.js
+│   ├── help.js, who.js, save.js, quit.js
+│   └── ... (see src/commands/ for full list)
 │
-├── systems/                # Game-Wide Rules (planned)
+│── emotes/                 # Emote Definitions (43 total)
+│   ├── applaud.json, bow.json, cheer.json
+│   ├── dance.json, laugh.json, smile.json
+│   └── ... (see src/emotes/ for full list)
+│
+├── systems/                # Game-Wide Rules (11 implemented)
 │   ├── combat.js           # Combat mechanics
 │   ├── magic.js            # Magic system
-│   ├── economy.js          # Currency/trading
-│   └── guilds/             # Guild systems
-│       ├── warriors/
-│       └── mages/
+│   ├── mana.js             # Mana management
+│   ├── leveling.js         # XP and progression
+│   ├── loot.js             # Loot generation
+│   ├── currency.js         # Currency system
+│   ├── weight.js           # Encumbrance
+│   ├── resistances.js      # Damage resistances
+│   ├── movement.js         # Movement mechanics
+│   ├── descriptions.js     # Dynamic descriptions
+│   └── colorization.js     # Text colorization
 │
-├── spells/                 # Universal Spells (planned)
-│   ├── fireball.js
-│   └── heal.js
+├── spells/                 # Universal Spells
 │
-├── world/                  # Game World (instances)
-│   └── newbie_realm/
-│       ├── rooms/          # Room instances
-│       ├── npcs/           # NPC instances
-│       ├── items/          # Item instances
-│       └── containers/     # Container instances
+├── world/                  # Game World (5 realms)
+│   ├── newbie_realm/       # Tutorial area
+│   │   ├── rooms/, npcs/, items/, containers/
+│   ├── sesame_street/      # Sesame Street themed
+│   │   ├── rooms/, npcs/, items/
+│   ├── reality_street/     # Reality-themed area
+│   │   ├── rooms/, npcs/
+│   ├── hill_valley/        # Back to the Future
+│   │   ├── 1885/, 1955/, 1985/, 1985alt/, 2015/
+│   └── shared/             # Shared rooms
 │
 ├── data/                   # Runtime Save Data
 │   └── players/            # Player save files (ONLY)
@@ -447,22 +462,35 @@ WORLD (instances)
 ## Current Status
 
 **✅ Fully Implemented**:
-- Unified entity management
-- Heartbeat system with per-object intervals
-- Telnet multiplayer server
-- 16 modular commands
-- Prototypal inheritance (definitions + instances)
-- Auto-save with dirty tracking
-- Player authentication (SHA-256 password hashing)
-- Location system (rooms, inventories, containers)
-- Session management
-- ANSI color system
+- **Core Engine**: Unified entity management with single `move()` function
+- **Heartbeat System**: Per-object intervals with definition-based behavior
+- **Multiplayer Server**: Telnet protocol with session management
+- **Commands**: 59 modular commands (movement, combat, inventory, shopping, banking, social)
+- **Emotes**: 43 social emotes for player expression
+- **Game Systems**: 11 implemented systems:
+  - Combat system with damage calculation
+  - Magic system with spell casting
+  - Mana management and regeneration
+  - Leveling system with XP progression
+  - Loot generation and drops
+  - Currency system (coins, banking)
+  - Weight and encumbrance
+  - Damage resistances
+  - Movement mechanics
+  - Dynamic description generation
+  - Text colorization utilities
+- **Object Definitions**: 19 lib definitions (monsters, weapons, armor, shops, banks, portals, etc.)
+- **Multiple Worlds**: 5 realms (newbie_realm, sesame_street, reality_street, hill_valley with time periods, shared)
+- **Prototypal Inheritance**: Definitions + instances pattern
+- **Auto-save**: Dirty tracking with per-second saves
+- **Authentication**: SHA-256 password hashing
+- **Location System**: Unified tracking (rooms, inventories, containers)
+- **ANSI Colors**: Full colorization support
 
 **🚧 In Development**:
-- Combat system
-- Magic/spell system
-- Guild system
-- World content (porting from /home/micah/wumpy)
+- Guild system expansion
+- Additional spell content
+- World content (actively porting from /home/micah/wumpy)
 
 ---
 
