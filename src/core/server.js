@@ -184,6 +184,15 @@ function setupNetworkCallbacks() {
     if (session.player) {
       const player = session.player;
 
+      // CRITICAL: Only unregister if this is the CURRENT session for this player
+      // This prevents a race condition where reconnecting boots the old session,
+      // but the old session's disconnect event fires and unregisters the NEW session
+      const currentSession = entityManager.sessions.get(player.id);
+      if (currentSession !== session) {
+        console.log(`  🔄 Ignoring disconnect for ${player.name} (already reconnected)`);
+        return;
+      }
+
       // Handle combat disconnect with grace period
       if (player.combat) {
         const combatId = player.combat.combatId;

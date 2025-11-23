@@ -7,5 +7,6 @@
   "refreshed": "<bright_blue>refreshed</>",
   "healthy": "<magenta>he<bright_red>al<bright_magenta>th<red>y</>",
   "waters": "<bright_blue>w<bright_cyan>a<cyan>t<blue>e<bright_cyan>r<bright_blue>s</>",
-  "pink": "<magenta>pink</>"
+  "pink": "<magenta>pink</>",
+  "void": "<grey>v<bright_magenta>O<grey>id</>"
 }
