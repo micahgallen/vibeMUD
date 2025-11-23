@@ -152,7 +152,7 @@ async function shutdown() {
   console.log('👋 Closing all player connections...');
   for (const session of networkDriver.getSessions()) {
     if (session.player) {
-      session.sendLine('\n\n' + colors.bright + colors.yellow + 'Server is shutting down. Goodbye!' + colors.reset + '\n');
+      session.sendLine('\n\n' + colors.colorize('Server is shutting down. Goodbye!', colors.ANSI.BRIGHT_YELLOW) + '\n');
     }
   }
 
